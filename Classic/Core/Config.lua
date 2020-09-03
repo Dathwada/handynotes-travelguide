@@ -125,6 +125,7 @@ config.options = {
 					type = "execute",
 					name = L["Reset hidden nodes"],
 					desc = L["Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."],
+					width = "full",
 					func = function()
 						for map,coords in pairs(private.hidden) do
 							wipe(coords)
