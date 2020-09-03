@@ -11,14 +11,16 @@
 	* ![](https://i.imgur.com/HQLt4uh.png)Horde Zepplins (If you play Alliance, it displays the Horde zepplins.)
 	* ![](https://i.imgur.com/VYJ1NaJ.png)Deeprun Tram
 	* Notes
-  ![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
+	
+![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
     
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * notes for the portals, zepplins and boats.
 * Level, quest  and time travel (i.e. Tirisfal Glades) check.
 	* ![](https://i.imgur.com/bOL9btW.png) / ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest or time travel requirement are unfulfilled)
-  ![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png)
+
+![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png)
 
 ## Localization
 * `enUS` - default
