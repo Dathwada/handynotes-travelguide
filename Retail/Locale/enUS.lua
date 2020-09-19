@@ -46,15 +46,24 @@ L["Show the node's additional notes when it's available."] = true
 L["Easy waypoints"] = true
 L["easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 
-L["Others"] = true
-L["Show all the other POIs."] = true
+L["gate"] = "Gates"
+L["gate_desc"] = "Show the gate locations."
+
+L["teleport_platform"] = "Teleport platforms"
+L["teleport_platform_desc"] = "Show the teleport plattform locations."
+
+L["anima_gateway"] = "Anima Gateways"
+L["anima_gateway_desc"] = "Show the anima gatway locations."
+
+--L["Others"] = true
+--L["Show all the other POIs."] = true
 
 --Plugin_config
 L["AddOn Settings"] = true
-L["Query from server"] = true
-L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = true
+--L["Query from server"] = true
+--L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = true
 L["Restore hidden nodes"] = true
-L["Show all nodes that you have manually hidden by right-clicking on them and choosing \"Hide this node\"."] = true
+L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."] = true
 L["All hidden nodes have been restored"] = true
 
 --Handler
@@ -71,15 +80,25 @@ L["Requires"] = true
 --Shadowlands
 L["Shadowlands"] = true
 L["Portal to Oribos"] = true
-L["inside the Seat of the Primus"] = true
+L["Waystone to Oribos"] = true
+L["Oribos"] = true
+L["To Ring of Transference"] = true
+L["To Ring of Fates"] = true
+L["Into the Maw"] = true
+L["Portal to Thorghast"] = true
+L["Reavendreath"] = true
+L["Bastion"] = true
+L["Maldraxxus"] = true
+L["Ardenweald"] = true
+L["The Maw"] = true
+
+--L["inside the Seat of the Primus"] = true
 L["Gate to Revendreth"] = true
 L["Gate to Maldraxxus"] = true
 L["Gate to Ardenweald"] = true
 L["Gate to Bastion"] = true
-L["Anima Gateway to Hero's rest"] = "Anima Gateway to Hero's rest"
+L["Anima Gateway to Hero's rest"] = true
 
-L["wyrm"] = true
-L["wyrm_desc"] = true
 --BFA
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true

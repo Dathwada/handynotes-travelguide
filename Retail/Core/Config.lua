@@ -9,173 +9,171 @@ local config = {}
 private.config = config
 
 config.options = {
-	type = "group",
-	name = addon.pluginName,
-	desc = addon.description,
-	get = function(info) return private.db[info[#info]] end,
-	set = function(info, v)
-		private.db[info[#info]] = v
-		addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
-	end,
-	args = {
-		icon = {
-			type = "group",
-			name = L["Icon settings"],
-			inline = true,
-			order = 10,
-			args = {
-				desc = {
-					name = L["These settings control the look and feel of the icon."],
-					type = "description",
-					order = 0,
-				},
-				icon_scale = {
-					type = "range",
-					name = L["Icon Scale"],
-					desc = L["The scale of the icons"],
-					min = 0.25, max = 2, step = 0.01,
-					order = 20,
-				},
-				icon_alpha = {
-					type = "range",
-					name = L["Icon Alpha"],
-					desc = L["The alpha transparency of the icons"],
-					min = 0, max = 1, step = 0.01,
-					order = 30,
-				},
-			},
-		},
-		display = {
-			type = "group",
-			name = L["What to display?"],
-			inline = true,
-			order = 20,
-			args = {
-				desc = {
-					name = L["These settings control what type of icons to be displayed."],
-					type = "description",
-					order = 0,
-				},
-				show_boat = {
-					type = "toggle",
-					name = L["Boat"],
-					desc = L["Show the boat locations."],
-					order = 20,
-				},
-				show_aboat = {
-					type = "toggle",
-					name = L["Alliance Boat"],
-					desc = L["Show the Alliance boat locations."],
-					order = 22,
-				},
-				show_zepplin = {
-					type = "toggle",
-					name = L["Zeppelin"],
-					desc = L["Show the Zeppelin locations."],
-					order = 23,
-				},	
-				show_hzepplin = {
-					type = "toggle",
-					name = L["Horde Zeppelin"],
-					desc = L["Show the Horde Zeppelin locations."],
-					order = 24,
-				},
-				show_portal = {
-					type = "toggle",
-					name = L["Portal"],
-					desc = L["Show the portal locations."],
-					order = 25,
-				},
-				show_orderhall = {
-					type = "toggle",
-					name = L["Order Hall portal"],
-					desc = L["Show the Order Hall portal locations."],
-					order = 26,
-				},
-				show_warfront = {
-					type = "toggle",
-					name = L["Warfront portal"],
-					desc = L["Show the Warfront portal locations."],
-					order = 27,
-				},
-				show_tram = {
-					type = "toggle",
-					name = L["Deeprun Tram"],
-					desc = L["Show the Deeprun Tram locations in Stormwind and Ironforge."],
-					order = 28,
-				},
-				show_note = {
-					type = "toggle",
-					name = L["Note"],
-					desc = L["Show the node's additional notes when it's available."],
-					order = 29,
-				},
-				show_wyrm = {
-					type = "toggle",
-					name = L["wyrm"],
-					desc = L["wyrm_desc"],
-					order = 29,
-				},
-				easy_waypoint = {
-					type = "toggle",
-					name = L["Easy waypoints"],
-					desc = L["easy_waypoints_desc"],
-					order = 30,
-				},
---[[				
-				show_others = {
-					type = "toggle",
-					name = L["Others"],
-					desc = L["Show all the other POIs."],
-					order = 30,
-				},
-]]--				
-			},
-		},
-		plugin_config = {
-			type = "group",
-			name = L["AddOn Settings"],
-			inline = true,
-			order = 30,
-			args = {
---[[				query_server = {
-					type = "toggle",
-					name = L["Query from server"],
-					desc = L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."],
-					order = 10,
-				},
-]]--				
-				unhide = {
-					type = "execute",
-					name = L["Restore hidden nodes"],
-					desc = L["Show all nodes that you have manually hidden by right-clicking on them and choosing \"Hide this node\"."],
-					width = "full",
-					func = function()
-						for map,coords in pairs(private.hidden) do
-							wipe(coords)
-						end
-						addon:Refresh()
-						print("TravelGuide: "..L["All hidden nodes have been restored"])
-					end,
-					order = 50,
-				},
-			},
-		},
---[[		credits = {
-			type = "group",
-			name = L["Credits"],
-			inline = true,
-			order = 30,
-			args = {
-				desc = {
-					type = "description",
-					name = "|cFFFF8C00deDE - Dathwada EU-Eredar|r \nptBR - angel333119* \nzhCN - mmk5* \n\n\n*Curseforge.com Username",
-					order = 0,
-				},
-		
-	
-			},
-		},
-]]--		
-	},
+    type = "group",
+    name = addon.pluginName,
+    desc = addon.description,
+    get = function(info) return private.db[info[#info]] end,
+    set = function(info, v)
+        private.db[info[#info]] = v
+        addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
+    end,
+    args = {
+        icon = {
+            type = "group",
+            name = L["Icon settings"],
+            inline = true,
+            order = 0,
+            args = {
+                desc = {
+                    type = "description",
+                    name = L["These settings control the look and feel of the icon."],
+                    order = 1,
+                },
+                icon_scale = {
+                    type = "range",
+                    name = L["Icon Scale"],
+                    desc = L["The scale of the icons"],
+                    min = 0.25, max = 2, step = 0.01,
+                    order = 2,
+                },
+                icon_alpha = {
+                    type = "range",
+                    name = L["Icon Alpha"],
+                    desc = L["The alpha transparency of the icons"],
+                    min = 0, max = 1, step = 0.01,
+                    order = 3,
+                },
+            },
+        },
+        display = {
+            type = "group",
+            name = L["What to display?"],
+            inline = true,
+            order = 10,
+            args = {
+                desc = {
+                    type = "description",
+                    name = L["These settings control what type of icons to be displayed."],
+                    order = 11,
+                },
+                show_portal = {
+                    type = "toggle",
+                    name = L["Portal"],
+                    desc = L["Show the portal locations."],
+                    order = 12,
+                },
+                show_orderhall = {
+                    type = "toggle",
+                    name = L["Order Hall portal"],
+                    desc = L["Show the Order Hall portal locations."],
+                    order = 13,
+                },
+                show_warfront = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["Warfront portal"],
+                    desc = L["Show the Warfront portal locations."],
+                    order = 14,
+                },
+                show_boat = {
+                    type = "toggle",
+                    name = L["Boat"],
+                    desc = L["Show the boat locations."],
+                    order = 15,
+                },
+                show_aboat = {
+                    type = "toggle",
+                    name = L["Alliance Boat"],
+                    desc = L["Show the Alliance boat locations."],
+                    order = 16,
+                },
+                show_zepplin = {
+                    type = "toggle",
+                    name = L["Zeppelin"],
+                    desc = L["Show the Zeppelin locations."],
+                    order = 17,
+                },	
+                show_hzepplin = {
+                    type = "toggle",
+                    name = L["Horde Zeppelin"],
+                    desc = L["Show the Horde Zeppelin locations."],
+                    order = 18,
+                },
+                show_tram = {
+                    type = "toggle",
+                    name = L["Deeprun Tram"],
+                    desc = L["Show the Deeprun Tram locations in Stormwind and Ironforge."],
+                    order = 19,
+                },
+                show_note = {
+                    type = "toggle",
+                    name = L["Note"],
+                    desc = L["Show the node's additional notes when it's available."],
+                    order = 20,
+                },
+                other_line = {
+                    type = "header",
+                    name = "",
+                    order = 21,
+                },
+                easy_waypoint = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["Easy waypoints"],
+                    desc = L["easy_waypoints_desc"],
+                    order = 22,
+                },
+                oribos_line = {
+                    type = "header",
+                    name = L["Oribos"],
+                    order = 23,
+                },
+                show_tpplatform = {
+                    type = "toggle",
+                    name = L["teleport_platform"],
+                    desc = L["teleport_platform_desc"],
+                    order = 24,
+                },
+                show_gate = {
+                    type = "toggle",
+                    name = L["gate"],
+                    desc = L["gate_desc"],
+                    order = 25,
+                },
+                bastion_line = {
+                    type = "header",
+                    name = L["Bastion"],
+                    order = 28,
+                },
+                show_herorestgate = {
+                    type = "toggle",
+                    name = L["anima_gateway"],
+                    desc = L["anima_gateway_desc"],
+                    order = 29,
+                },		
+            },
+        },
+        plugin_config = {
+            type = "group",
+            name = L["AddOn Settings"],
+            inline = true,
+            order = 40,
+            args = {
+                unhide = {
+                    type = "execute",
+                    width = "full",
+                    name = L["Restore hidden nodes"],
+                    desc = L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."],
+                    func = function()
+                        for map,coords in pairs(private.hidden) do
+                            wipe(coords)
+                        end
+                        addon:Refresh()
+                        print("TravelGuide: "..L["All hidden nodes have been restored"])
+                    end,
+                    order = 50,
+                },
+            },
+        },	
+    },
 }

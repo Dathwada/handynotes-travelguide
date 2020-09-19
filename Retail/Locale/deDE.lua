@@ -46,15 +46,24 @@ L["Show the node's additional notes when it's available."] = "Zeigt zusätzliche
 L["Easy waypoints"] = "Vereinfachte Wegpunkte"
 L["easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 
-L["Others"] = "Anderes"
-L["Show all the other POIs."] = "Zeige alle anderen POIs."
+L["gate"] = "Tore"
+L["gate_desc"] = "Zeigt die Positionen von Toren an."
+
+L["teleport_platform"] = "Teleportplattformen"
+L["teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen an."
+
+L["anima_gateway"] = "Animaportale"
+L["anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen an."
+
+--L["Others"] = "Anderes"
+--L["Show all the other POIs."] = "Zeige alle anderen POIs."
 
 --Plugin_config
 L["AddOn Settings"] = "AddOn Einstellungen"
-L["Query from server"] = "Abfrage vom Server"
-L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Senden Sie eine Abfrageanforderung an den Server, um den lokalisierten Namen zu suchen. Kann beim ersten Mal ein wenig langsamer sein, ist aber schneller sobald der Name gefunden und zwischengespeichert wurde."
+--L["Query from server"] = "Abfrage vom Server"
+--L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Senden Sie eine Abfrageanforderung an den Server, um den lokalisierten Namen zu suchen. Kann beim ersten Mal ein wenig langsamer sein, ist aber schneller sobald der Name gefunden und zwischengespeichert wurde."
 L["Restore hidden nodes"] = "Versteckte Punkte wiederherstellen"
-L["Show all nodes that you have manually hidden by right-clicking on them and choosing \"Hide this node\"."] = "Zeigt wieder alle Symbole an die mit rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
+L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
 L["All hidden nodes have been restored"] = "Alle Versteckten Punkte wurden wiederhergestellt."
 
 --Handler
@@ -71,15 +80,25 @@ L["Requires"] = "Benötigt"
 --Shadowlands
 L["Shadowlands"] = "Schattenlande"
 L["Portal to Oribos"] = "Portal nach Oribos"
---L["inside the Seat of the Primus"] = "innerhalb vom Sitz des Primus"
-L["Gate to Revendreth"] = "Tor nach Revendreth" --review Blizzard translation
-L["Gate to Maldraxxus"] = "Tor nach Maldraxxus" --review Blizzard translation
-L["Gate to Ardenweald"] = "Tor in den Ardenwald" --review Blizzard translation
-L["Gate to Bastion"] = "Tor nach Bastion" --review Blizzard translation
-L["Anima Gateway to Hero's rest"] = "Animator nach Heldenrast" --review Blizzard translation
+L["Waystone to Oribos"] = "Portalstein nach Oribos"
+L["Oribos"] = true
+L["To Ring of Transference"] = "Zum Ring der Übertragung"
+L["To Ring of Fates"] = "Zum Ring der Schicksale"
+L["Into the Maw"] = "In den Schlund"
+L["Portal to Thorghast"] = "Portal nach Thorghast"
+L["Reavendreath"] = true
+L["Bastion"] = true
+L["Maldraxxus"] = true
+L["Ardenweald"] = "Ardenwald"
+L["The Maw"] = "Der Schlund"
 
-L["wyrm"] = true
-L["wyrm_desc"] = true
+--L["inside the Seat of the Primus"] = "innerhalb vom Sitz des Primus"
+L["Gate to Revendreth"] = "Tor nach Revendreth"
+L["Gate to Maldraxxus"] = "Tor nach Maldraxxus"
+L["Gate to Ardenweald"] = "Tor zum Ardenwald"
+L["Gate to Bastion"] = "Tor zur Bastion"
+L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast" --Blizzard marked
+
 --BFA
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true
