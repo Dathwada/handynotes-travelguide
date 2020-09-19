@@ -17,12 +17,17 @@
 embeds.xml
 #@end-no-lib-strip@
 
+# LOCAL FILES
 Locale\Locales.xml
 Locale\deDE.lua
 Locale\enUS.lua
 Locale\ptBR.lua
 Locale\zhCN.lua
+
+# CORE FILES
 Core\Constants.lua
 Core\Handler.lua
 Core\Config.lua
+
+# DATABASE
 Data\DB.lua
