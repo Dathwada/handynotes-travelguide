@@ -3,81 +3,102 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "deDE", f
 if not L then return end
 --German Translation by Dathwada EU-Eredar
 if L then
---config.options
-L["HandyNotes: TravelGuide"] = true
-L["Icon settings"] = "Symboleinstellungen"
-L["These settings control the look and feel of the icon."] = "Diese Einstellungen legen das Aussehen der Symbole fest."
-L["Icon Scale"] = "Symbolgröße"
-L["The scale of the icons"] = "Die größe der Symbole"
-L["Icon Alpha"] = "Symboltranzparenz"
-L["The alpha transparency of the icons"] = "Die Transparenz der Symbole"
-L["What to display?"] = "Was soll angezeigt werden?"
-L["These settings control what type of icons to be displayed."] = "Diese Einstellungen legen fest welche Symbole auf der Welt- und Minimap angezeigt werden sollen."
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------CONFIG-----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
-L["Boat"] = "Schiffe"
-L["Show the boat locations."] = "Zeigt die Positionen von Schiffen an."
-L["Horde Boat"] = "Horde Schiffe"
-L["Show the Horde boat locations."] = "Zeigt die Positionen von Horde Schiffen an."
-L["Alliance Boat"] = "Allianz Schiffe"
-L["Show the Alliance boat locations."] = "Zeigt die Positionen von Allianz Schiffen an."
+L["config_general"] = "Allgemein"
+L["config_scale_alpha"] = "Größe / Transparenz"
+--L["config_scale_alpha_desc"] = "PH"
+--L["Icon settings"] = "Symboleinstellungen"
+--L["These settings control the look and feel of the icon."] = "Diese Einstellungen legen das Aussehen der Symbole fest."
+L["config_icon_scale"] = "Symbolgröße"
+L["config_icon_scale_desc"] = "Die größe der Symbole"
+L["config_icon_alpha"] = "Symboltranzparenz"
+L["config_icon_alpha_desc"] = "Die Transparenz der Symbole"
+L["config_what_to_display"] = "Was soll angezeigt werden?"
+L["config_what_to_display_desc"] = "Diese Einstellungen legen fest welche Symbole auf der Welt- und Minimap angezeigt werden sollen."
 
-L["Zeppelin"] = "Zeppeline"
-L["Show the Zeppelin locations."] = "Zeigt die Positionen von Zeppelinen an."
-L["Horde Zeppelin"] = "Horde Zeppeline"
-L["Show the Horde Zeppelin locations."] = "Zeigt die Positionen von Horde Zeppelinen an."
-L["Alliance Zeppelin"] = "Allianz Zeppeline"
-L["Show the Alliance Zeppelin locations."] = "Zeigt die Positionen von Allianz Zeppelinen an."
+L["config_portal"] = "Portale"
+L["config_portal_desc"] = "Zeigt die Positionen von Portalen an."
 
-L["Portal"] = "Portale"
-L["Show the portal locations."] = "Zeigt die Positionen von Portalen an."
+L["config_order_hall_portal"] = "Ordenshallenportale"
+L["config_order_hall_portal_desc"] = "Zeigt die Positionen von Ordenshallenportalen an."
 
-L["Order Hall portal"] = "Ordenshallenportale"
-L["Show the Order Hall portal locations."] = "Zeigt die Positionen von Ordenshallenportalen an."
+L["config_warfront_portal"] = "Kriegsfrontportale"
+L["config_warfront_portal_desc"] = "Zeigt die Positionen von Kriegsfrontportalen an."
 
-L["Warfront portal"] = "Kriegsfrontportale"
-L["Show the Warfront portal locations."] = "Zeigt die Positionen von Kriegsfrontportalen an."
+L["config_boat"] = "Schiffe"
+L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
+L["config_boat_horde"] = "Horde Schiffe"
+L["config_boat_horde_desc"] = "Zeigt die Positionen von Horde Schiffen an."
+L["config_boat_alliance"] = "Allianz Schiffe"
+L["config_boat_alliance_desc"] = "Zeigt die Positionen von Allianz Schiffen an."
 
-L["Deeprun Tram"] = "Tiefenbahn"
-L["Show the Deeprun Tram locations in Stormwind and Ironforge."] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
+L["config_zeppelin"] = "Zeppeline"
+L["config_zeppelin_desc"] = "Zeigt die Positionen von Zeppelinen an."
+L["config_zeppelin_horde"] = "Horde Zeppeline"
+L["config_zeppelin_horde_desc"] = "Zeigt die Positionen von Horde Zeppelinen an."
+L["config_zeppelin_alliance"] = "Allianz Zeppeline"
+L["config_zeppelin_alliance_desc"] = "Zeigt die Positionen von Allianz Zeppelinen an."
 
-L["Note"] = "Notizen"
-L["Show the node's additional notes when it's available."] = "Zeigt zusätzliche Notizen an wenn diese verfügbar sind."
+L["config_deeprun_tram"] = "Tiefenbahn"
+L["config_deeprun_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
 
-L["Easy waypoints"] = "Vereinfachte Wegpunkte"
-L["easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
+L["config_note"] = "Notizen"
+L["config_note_desc"] = "Zeigt zusätzliche Notizen an wenn diese verfügbar sind."
 
-L["gate"] = "Tore"
-L["gate_desc"] = "Zeigt die Positionen von Toren an."
+L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
+L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 
-L["teleport_platform"] = "Teleportplattformen"
-L["teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen an."
+L["config_teleport_platform"] = "Teleportplattformen"
+L["config_teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen an."
 
-L["anima_gateway"] = "Animaportale"
-L["anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen an."
+L["config_anima_gateway"] = "Animaportale"
+L["config_anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen an."
 
---L["Others"] = "Anderes"
---L["Show all the other POIs."] = "Zeige alle anderen POIs."
+L["config_covenant"] = "Pakt Reisenetzwerk"
+L["config_covenant_desc"] = "Zeigt die Positionen von Zugangspunkten für das Pakt Reisenetzwerk an."
 
---Plugin_config
-L["AddOn Settings"] = "AddOn Einstellungen"
+L["config_others"] = "Anderes"
+L["config_others_desc"] = "Zeige alle anderen POIs."
+
+--L["AddOn Settings"] = "AddOn Einstellungen"
 --L["Query from server"] = "Abfrage vom Server"
 --L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Senden Sie eine Abfrageanforderung an den Server, um den lokalisierten Namen zu suchen. Kann beim ersten Mal ein wenig langsamer sein, ist aber schneller sobald der Name gefunden und zwischengespeichert wurde."
-L["Restore hidden nodes"] = "Versteckte Punkte wiederherstellen"
-L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
-L["All hidden nodes have been restored"] = "Alle Versteckten Punkte wurden wiederhergestellt."
+L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"
+L["config_restore_nodes_desc"] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
+L["config_restore_nodes_print"] = "Alle Versteckten Punkte wurden wiederhergestellt."
 
---Handler
-L["Shows the portal, zepplin and boat locations on the World Map and the MiniMap."] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
-L["TravelGuide"] = "TravelGuide"
-L["Requires at least player level: "] = "Benötigt min. Spielerlevel: "
-L["Unlocked with quest: ["] = "Freigeschaltet mit der Quest: ["
-L["RETRIEVING DATA..."] = "DATEN ABRUFEN..."
-L["Add to TomTom"] = "Zu TomTom hinzufügen"
-L["Hide this node"] = "Verstecke diesen Punkt"
-L["Requires"] = "Benötigt"
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------HANDLER----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
---DB
---Shadowlands
+L["handler_addon_name"] = "HandyNotes: TravelGuide"
+L["handler_plugin_name"] = "TravelGuide"
+L["handler_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
+
+--==========================================CONTEXT_MENU==========================================--
+
+L["handler_context_menu_add_tomtom"] = "Zu TomTom hinzufügen"
+L["handler_context_menu_hide_node"] = "Verstecke diesen Punkt"
+
+--============================================TOOLTIPS============================================--
+
+L["handler_tooltip_requires"] = "Benötigt"
+L["handler_tooltip_sanctum_feature"] = "eine Sanktumaufwertung"
+L["handler_tooltip_data"] = "DATEN ABRUFEN..."
+L["handler_tooltip_quest"] = "Freigeschaltet mit der Quest"
+L["handler_tooltip_requires_level"] = "Benötigt min. Spielerlevel"
+L["handler_tooltip_TNTIER"] = "Stufe %s des Reisenetzwerks."
+L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
+--L["currently available"] = "zurzeit Verfügbar"
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------DATABASE----------------------------------------------
+----------------------------------------------------------------------------------------------------
+--------------------------------------------SHADOWLANDS---------------------------------------------
+
 L["Shadowlands"] = "Schattenlande"
 L["Portal to Oribos"] = "Portal nach Oribos"
 L["Waystone to Oribos"] = "Portalstein nach Oribos"
@@ -92,14 +113,40 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = "Ardenwald"
 L["The Maw"] = "Der Schlund"
 
---L["inside the Seat of the Primus"] = "innerhalb vom Sitz des Primus"
-L["Gate to Revendreth"] = "Tor nach Revendreth"
-L["Gate to Maldraxxus"] = "Tor nach Maldraxxus"
-L["Gate to Ardenweald"] = "Tor zum Ardenwald"
-L["Gate to Bastion"] = "Tor zur Bastion"
-L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast" --Blizzard marked
+--==========================================Ardenweald============================================--
 
---BFA
+--L[""] = "Schimmerkaskadenbecken"
+
+
+
+--============================================Bastion=============================================--
+
+L["Eternal Gateway"] = "Ewiges Tor"
+L["Anima Gateway"] = "Animaportal"
+L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast"
+
+--==========================================Reavendreath==========================================--
+
+L["Sanctuary of the Mad"] = "Refugium des Wahnsinnigen"
+L["Ember Ward"] = "Glutdistrikt"
+L["Sinfall"] = "Sündensturz"
+L["The Eternal Terrace"] = "Die Ewige Terrasse"
+L["Pridefall Hamlet"] = "Stolzsturzweiler"
+L["The Banewood"] = "Fresserdickicht"
+L["Halls of Atonement"] = "Hallen der Sühne"
+L["Dominance Keep"] = "Herrschaftsburg"
+L["Feeder's Thicket"] = "Der Fluchwald"
+
+--===========================================Maldraxxus===========================================--
+
+L["Nurakkir, House of Eyes"] = "Nurakkir, Haus der Augen"
+L["Exoramas, House of Rituals"] = "Exoramas, Haus der Rituale"
+L["Overlook, Seat of the Primus"] = "Warte, Sitz des Primus"
+L["Main Hall, Seat of the Primus"] = "Haupthalle, Sitz des Primus"
+L["Zerekriss: Maldraxxus"] = true
+L["Seat of the Primus"] = "Sitz des Primus"
+
+-------------------------------------------------BfA------------------------------------------------
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true
 L["Portal to Zuldazar"] = "Portal nach Zuldazar"
@@ -124,10 +171,9 @@ L["Portal to Arathi Highlands"] = "Portal ins Arathihochland"
 L["Portal to Port of Zandalar"] = "Portal zum Hafen von Zandalar"
 L["Portal to Darkshore"] = "Portal zur Dunkelküste"
 L["Portal to Port of Boralus"] = "Portal zum Hafen von Boralus"
-L["currently NOT available"] = "zurzeit NICHT Verfügbar"--"ZURZEIT NICHT VERFÜGBAR"
---L["currently available"] = "zurzeit Verfügbar"--"ZURZEIT VERFÜGBAR"
 
---Legion
+-----------------------------------------------LEGION-----------------------------------------------
+
 L["Broken Isles"] = "Die Verheerten Inseln"
 L["Broken Isles, Stormheim"] = "Die Verheerten Inseln, Sturmheim"
 L["Portal to Stormheim"] = "Portal nach Sturmheim"
@@ -148,7 +194,8 @@ L["Highmountain"] = "Hochberg"
 L["Stormheim"] = "Sturmheim"
 L["Broken Shore"] = "Die Verheerte Küste"
 
---WoD
+-------------------------------------------------WoD------------------------------------------------
+
 L["Portal to Warspear"] = "Portal nach Kriegsspeer"
 L["Portal to Stormshield"] = "Portal zum Sturmschild"
 L["Portal to Vol'mar"] = "Portal nach Vol'mar"
@@ -156,7 +203,8 @@ L["Portal to Lion's watch"] = "Portal zur Löwenwacht"
 L["Draenor, Tanaan Jungle"] = "Draenor, Tanaandschungel"
 L["Draenor, Ashran"] = true
 
---MoP
+-------------------------------------------------MoP------------------------------------------------
+
 L["Pandaria"] = true
 L["Pandaria, Kun-Lai Summit"] = "Pandaria, Kun-Lai Gipfel"
 L["Pandaria, Townlong Steppes"] = "Pandaria, Tonlongsteppe"
@@ -166,7 +214,8 @@ L["Portal to Isle of Thunder"] = "Portal zur Insel des Donners"
 L["Portal to Shado-Pan Garrison"] = "Portal zur Shado-Pan Garnision"
 L["Portal to Peak of Serenity"] = "Portal zum Gipfel der Ruhe"
 
---Cata
+-------------------------------------------------CATA-----------------------------------------------
+
 L["Maelstrom"] = "Mahlstrom"
 L["Maelstrom, Deepholm"] = "Mahlstrom, Tiefenheim"
 L["Portal to Deepholm"] = "Portal nach Tiefenheim"
@@ -178,7 +227,8 @@ L["Portal to Uldum"] = "Portal nach Uldum"
 L["Portal to Vashj'ir"] = "Portal nach Vashj'ir"
 L["Portal to Hyjal"] = "Portal zum Hyjal"
 
---WotLK
+------------------------------------------------WotLK-----------------------------------------------
+
 L["Northrend, Crystalsong Forest"] = "Nordend, Kristallsangwald"
 L["Portal to the Purple Parlor"] = "Portal zum Purpursalon"
 L["Northrend, Howling Fjord"] = "Nordend, Heulender Fjord"
@@ -196,7 +246,8 @@ L["Zeppelin to Borean Tundra"] = "Zeppelin in die Boreanische Tundra"
 L["Northrend, Dragonblight"] = "Nordend, Drachenöde"
 L["Boat to Moa'Ki Harbor"] = "Schiff zum Hafen Moa'ki"
 
---BC
+-------------------------------------------------BC-------------------------------------------------
+
 L["Outland"] = "Scherbenwelt"
 L["Outland, Terokkar Forest"] = "Scherbenwelt, Wälder von Terokkar"
 L["Portal to Hellfire Peninsula"] = "Portal zur Höllenfeuerhalbinsel"
@@ -207,7 +258,8 @@ L["Portal to Exodar"] = "Portal zur Exodar"
 L["in Exodar"] = true
 L["Boat to Exodar"] = "Schiff zur Exodar"
 
---Vanilla
+-----------------------------------------------VANILLA----------------------------------------------
+
 L["Eastern Kingdoms"] = "Die Östlichen Königreiche"
 L["Eastern Kingdoms, Wetlands"] = "Die Östlichen Königreiche, Sumpfland"
 L["Boat to Menethil Harbor"] = "Schiff zum Hafen von Menethil"

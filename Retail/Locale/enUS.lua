@@ -3,81 +3,102 @@ local L = AceLocale:NewLocale("HandyNotes_TravelGuide", "enUS", true, true)
 
 
 if L then
---config.options
-L["HandyNotes: TravelGuide"] = true
-L["Icon settings"] = true
-L["These settings control the look and feel of the icon."] = true
-L["Icon Scale"] = true
-L["The scale of the icons"] = true
-L["Icon Alpha"] = true
-L["The alpha transparency of the icons"] = true
-L["What to display?"] = true
-L["These settings control what type of icons to be displayed."] = true
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------CONFIG-----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
-L["Boat"] = true
-L["Show the boat locations."] = true
-L["Horde Boat"] = true
-L["Show the Horde boat locations."] = true
-L["Alliance Boat"] = true
-L["Show the Alliance boat locations."] = true
+L["config_general"] = "General"
+L["config_scale_alpha"] = "Scale / Alpha"
+--L["config_scale_alpha_desc"] = "PH"
+--L["Icon settings"] = true
+--L["These settings control the look and feel of the icon."] = true
+L["config_icon_scale"] = "Icon Scale"
+L["config_icon_scale_desc"] = "The scale of the icons"
+L["config_icon_alpha"] = "Icon Alpha"
+L["config_icon_alpha_desc"] = "The alpha transparency of the icons"
+L["config_what_to_display"] = "What to display?"
+L["config_what_to_display_desc"] = "These settings control what type of icons to be displayed."
 
-L["Zeppelin"] = true
-L["Show the Zeppelin locations."] = true
-L["Horde Zeppelin"] = true
-L["Show the Horde Zeppelin locations."] = true
-L["Alliance Zeppelin"] = true
-L["Show the Alliance Zeppelin locations."] = true
+L["config_portal"] = "Portal"
+L["config_portal_desc"] = "Show the portal locations."
 
-L["Portal"] = true
-L["Show the portal locations."] = true
+L["config_order_hall_portal"] = "Order Hall Portal"
+L["config_order_hall_portal_desc"] = "Show the Order Hall portal locations."
 
-L["Order Hall portal"] = true
-L["Show the Order Hall portal locations."] = true
+L["config_warfront_portal"] = "Warfront Portal"
+L["config_warfront_portal_desc"] = "Show the Warfront portal locations."
 
-L["Warfront portal"] = true
-L["Show the Warfront portal locations."] = true
+L["config_boat"] = "Boat"
+L["config_boat_desc"] = "Show the boat locations."
+L["config_boat_horde"] = "Horde Boat"
+L["config_boat_horde_desc"] = "Show the Horde boat locations."
+L["config_boat_alliance"] = "Alliance Boat"
+L["config_boat_alliance_desc"] = "Show the Alliance boat locations."
 
-L["Deeprun Tram"] = true
-L["Show the Deeprun Tram locations in Stormwind and Ironforge."] = true
+L["config_zeppelin"] = "Zeppelin"
+L["config_zeppelin_desc"] = "Show the Zeppelin locations."
+L["config_zeppelin_horde"] = "Horde Zeppelin"
+L["config_zeppelin_horde_desc"] = "Show the Horde Zeppelin locations."
+L["config_zeppelin_alliance"] = "Allianze Zeppelin"
+L["config_zeppelin_alliance_desc"] = "Show the Alliance Zeppelin locations."
 
-L["Note"] = true
-L["Show the node's additional notes when it's available."] = true
+L["config_deeprun_tram"] = "Deerun Tram"
+L["config_deeprun_tram_desc"] = "Show the Deeprun Tram locations in Stormwind and Ironforge."
 
-L["Easy waypoints"] = true
-L["easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
+L["config_note"] = "Note"
+L["config_note_desc"] = "Show the node's additional notes when it's available."
 
-L["gate"] = "Gates"
-L["gate_desc"] = "Show the gate locations."
+L["config_easy_waypoints"] = "Easy Waypoints"
+L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 
-L["teleport_platform"] = "Teleport platforms"
-L["teleport_platform_desc"] = "Show the teleport plattform locations."
+L["config_teleport_platform"] = "Teleport platforms"
+L["config_teleport_platform_desc"] = "Show the teleport plattform locations."
 
-L["anima_gateway"] = "Anima Gateways"
-L["anima_gateway_desc"] = "Show the anima gatway locations."
+L["config_anima_gateway"] = "Anima Gateways"
+L["config_anima_gateway_desc"] = "Show the anima gatway locations."
 
---L["Others"] = true
---L["Show all the other POIs."] = true
+L["config_covenant"] = "Covenant Travel Network"
+L["config_covenant_desc"] = "Show locations of access points for the Covenant Travel Network."
 
---Plugin_config
-L["AddOn Settings"] = true
+L["config_others"] = "Others"
+L["config_others_desc"] = "Show all the other POIs."
+
+--L["AddOn Settings"] = true
 --L["Query from server"] = true
 --L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = true
-L["Restore hidden nodes"] = true
-L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."] = true
-L["All hidden nodes have been restored"] = true
+L["config_restore_nodes"] = "Restore hidden nodes"
+L["config_restore_nodes_desc"] = "Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."
+L["config_restore_nodes_print"] = "All hidden nodes have been restored"
 
---Handler
-L["Shows the portal, zepplin and boat locations on the World Map and the MiniMap."] = true
-L["TravelGuide"] = true
-L["Requires at least player level: "] = true
-L["Unlocked with quest: ["] = true
-L["RETRIEVING DATA..."] = true
-L["Add to TomTom"] = true
-L["Hide this node"] = true
-L["Requires"] = true
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------HANDLER----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
---DB
---Shadowlands
+L["handler_addon_name"] = "HandyNotes: TravelGuide"
+L["handler_plugin_name"] = "TravelGuide"
+L["handler_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
+
+--==========================================CONTEXT_MENU==========================================--
+
+L["handler_context_menu_add_tomtom"] = "Add to TomTom"
+L["handler_context_menu_hide_node"] = "Hide this node"
+
+--============================================TOOLTIPS============================================--
+
+L["handler_tooltip_requires"] = "Requires"
+L["handler_tooltip_sanctum_feature"] = "Sanctum Upgrade"
+L["handler_tooltip_data"] = "RETRIEVING DATA..."
+L["handler_tooltip_quest"] = "Unlocked with quest"
+L["handler_tooltip_requires_level"] = "Requires at least player level"
+L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
+L["handler_tooltip_not_available"] = "currently NOT available"
+--L["handler_tooltip_available"] = "currently available"
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------DATABASE----------------------------------------------
+----------------------------------------------------------------------------------------------------
+--------------------------------------------SHADOWLANDS---------------------------------------------
+
 L["Shadowlands"] = true
 L["Portal to Oribos"] = true
 L["Waystone to Oribos"] = true
@@ -92,14 +113,34 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = true
 L["The Maw"] = true
 
---L["inside the Seat of the Primus"] = true
-L["Gate to Revendreth"] = true
-L["Gate to Maldraxxus"] = true
-L["Gate to Ardenweald"] = true
-L["Gate to Bastion"] = true
+--============================================Bastion=============================================--
+
+L["Eternal Gateway"] = true
+L["Anima Gateway"] = true
 L["Anima Gateway to Hero's rest"] = true
 
---BFA
+--==========================================Reavendreath==========================================--
+
+L["Sanctuary of the Mad"] = true
+L["Ember Ward"] = true
+L["Sinfall"] = true
+L["The Eternal Terrace"] = true
+L["Pridefall Hamlet"] = true
+L["The Banewood"] = true
+L["Halls of Atonement"] = true
+L["Dominance Keep"] = true
+L["Feeder's Thicket"] = true
+
+--===========================================Maldraxxus===========================================--
+
+L["Nurakkir, House of Eyes"] = true
+L["Overlook, Seat of the Primus"] = true
+L["Main Hall, Seat of the Primus"] = true
+L["Zerekriss: Maldraxxus"] = true
+L["Seat of the Primus"] = true
+
+-------------------------------------------------BfA------------------------------------------------
+
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true
 L["Portal to Zuldazar"] = true
@@ -124,10 +165,9 @@ L["Portal to Arathi Highlands"] = true
 L["Portal to Port of Zandalar"] = true
 L["Portal to Darkshore"] = true
 L["Portal to Port of Boralus"] = true
-L["currently NOT available"] = true
---L["currently available"] = true
 
---Legion
+-----------------------------------------------LEGION-----------------------------------------------
+
 L["Broken Isles"] = true
 L["Broken Isles, Stormheim"] = true
 L["Portal to Stormheim"] = true
@@ -148,7 +188,8 @@ L["Highmountain"] = true
 L["Stormheim"] = true
 L["Broken Shore"] = true
 
---WoD
+-------------------------------------------------WoD------------------------------------------------
+
 L["Portal to Warspear"] = true
 L["Portal to Stormshield"] = true
 L["Portal to Vol'mar"] = true
@@ -156,7 +197,8 @@ L["Portal to Lion's watch"] = true
 L["Draenor, Tanaan Jungle"] = true
 L["Draenor, Ashran"] = true
 
---MoP
+-------------------------------------------------MoP------------------------------------------------
+
 L["Pandaria"] = true
 L["Pandaria, Kun-Lai Summit"] = true
 L["Pandaria, Townlong Steppes"] = true
@@ -166,7 +208,8 @@ L["Portal to Isle of Thunder"] = true
 L["Portal to Shado-Pan Garrison"] = true
 L["Portal to Peak of Serenity"]= true
 
---Cata
+-------------------------------------------------CATA-----------------------------------------------
+
 L["Maelstrom"] = true
 L["Maelstrom, Deepholm"] = true
 L["Portal to Deepholm"] = true
@@ -178,7 +221,8 @@ L["Portal to Uldum"] = true
 L["Portal to Vashj'ir"] = true
 L["Portal to Hyjal"] = true
 
---WotLK
+------------------------------------------------WotLK-----------------------------------------------
+
 L["Northrend, Crystalsong Forest"] = true
 L["Portal to the Purple Parlor"] = true
 L["Northrend, Howling Fjord"] = true
@@ -196,7 +240,8 @@ L["Zeppelin to Borean Tundra"] = true
 L["Northrend, Dragonblight"] = true
 L["Boat to Moa'Ki Harbor"] = true
 
---BC
+-------------------------------------------------BC-------------------------------------------------
+
 L["Outland"] = true
 L["Outland, Terokkar Forest"] = true
 L["Portal to Hellfire Peninsula"] = true
@@ -207,7 +252,8 @@ L["Portal to Exodar"] = true
 L["in Exodar"] = true
 L["Boat to Exodar"] = true
 
---Vanilla
+-----------------------------------------------VANILLA----------------------------------------------
+
 L["Eastern Kingdoms"] = true
 L["Eastern Kingdoms, Wetlands"] = true
 L["Boat to Menethil Harbor"] = true

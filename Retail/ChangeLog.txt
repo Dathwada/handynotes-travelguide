@@ -1,21 +1,25 @@
 Revision History:
 =================
-* v2.1.6 (August 30, 2020)
+* v2.2.0 (November 27, 2020)
 -----------------------
 - Added Simplified Chinese (zhCN) localization from mmk5 ( https://www.curseforge.com/members/mmk5 )
 - Finally found a way to track the timezones for Darkshore, Arathi Highlands, Tirisfal Glades and Sillithus and if they are not available in your current timezone the portals are red with a note in the tooltip
-- Added some new Shadowlands things
-    - Portals in Orgrimmar and Sturmwind
+- Added some new Shadowlands stuff
+    - Portal to Oribos in Orgrimmar and Stormwind
     - Portal and Teleport platforms in Oribos
-    - Elevators in Revendreath
+    - Covenant Transportation Network (some new icons)
     - Anima gates to Hero's rest in Bastion
 - Added new icons for the new stuff
 - Added new options to toggle the new stuff
+- Added more scale and alpha options for portals, boats, zeppelins, covenant, others 
 - Tooltip should now refresh after RETRIEVING DATA... (for quest names)
 
 
-TODO befor releas:
-	- .toc Datum
+TODO befor release:
+	- Stufe 3 Venthyr / Revendreath
+    - Stufe 3 Necrolords / Maldraxxus
+    - 
+    - .toc Datum
 	- Config.lua rework or delete credits
 	- add * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!) on the addon website.
 

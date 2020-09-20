@@ -6,10 +6,14 @@ local next, wipe, pairs, select, type = next, wipe, pairs, select, type
 local GameTooltip, WorldMapTooltip, GetSpellInfo, CreateFrame, UnitClass = _G.GameTooltip, _G.WorldMapTooltip, _G.GetSpellInfo, _G.CreateFrame, _G.UnitClass
 local UIDropDownMenu_CreateInfo, CloseDropDownMenus, UIDropDownMenu_AddButton, ToggleDropDownMenu = _G.UIDropDownMenu_CreateInfo, _G.CloseDropDownMenus, _G.UIDropDownMenu_AddButton, _G.ToggleDropDownMenu
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
--- ----------------------------------------------------------------------------
--- AddOn namespace.
--- ----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+------------------------------------------AddOn NAMESPACE-------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 local FOLDER_NAME, private = ...
+local constantsicon = private.constants.icon
+
 
 local LibStub = _G.LibStub
 local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name)
@@ -21,20 +25,25 @@ local addon = LibStub("AceAddon-3.0"):NewAddon(private.addon_name, "AceEvent-3.0
 addon.constants = private.constants;
 addon.constants.addon_name = private.addon_name;
 
-addon.descName = L["HandyNotes: TravelGuide"]
-addon.description = L["Shows the portal, zepplin and boat locations on the World Map and the MiniMap."]
-addon.pluginName = L["TravelGuide"]
+addon.descName    = L["handler_addon_name"]
+addon.pluginName  = L["handler_plugin_name"]
+addon.description = L["handler_plugin_desc"]
 
 addon.Name = FOLDER_NAME;
 _G.HandyNotes_TravelGuide = addon;
 
-local requires = L["Requires"]
-local notavailable = L["currently NOT available"]
---local available = L["currently available"] -- not in use
+local requires          = L["handler_tooltip_requires"]
+local notavailable      = L["handler_tooltip_not_available"]
+--local available       = L["handler_tooltip_available"] -- not in use
+local RequiresPlayerLvl = L["handler_tooltip_requires_level"]
+local RequiresQuest     = L["handler_tooltip_quest"]
+local RetrievindData    = L["handler_tooltip_data"]
+local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
+local TNRank            = L["handler_tooltip_TNTIER"]
 
--- //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------------------
 -- get creature's name from server
-local mcache_tooltip = CreateFrame("GameTooltip", private.addon_name.."_mcacheToolTip", UIParent, "GameTooltipTemplate")
+local mcache_tooltip = CreateFrame("GameTooltip", id , UIParent, "GameTooltipTemplate")
 local creature_cache
 
 -- activation code
@@ -44,8 +53,8 @@ local function getCreatureNamebyID(id)
     creature_cache = _G[private.addon_name.."_mcacheToolTipTextLeft1"]:GetText()
 end
 
--- //////////////////////////////////////////////////////////////////////////
-local function work_out_texture(point)
+----------------------------------------------------------------------------------------------------
+local function work_out_icon(point)
     local icon_key
 
     if (point.boat) then icon_key = "boat" end
@@ -57,14 +66,17 @@ local function work_out_texture(point)
     if (point.worderhall) then icon_key = "worderhall" end
     if (point.tram) then icon_key = "tram" end
     if (point.flightmaster) then icon_key = "flightmaster" end
-    if (point.gate) then icon_key = "gate" end
     if (point.herosrestgate) then icon_key = "herosrestgate" end
     if (point.tpplatform) then icon_key = "tpplatform" end
+    if (point.platform) then icon_key = "platform" end
+    if (point.mirror) then icon_key = "mirror" end
+    if (point.mushroom) then icon_key = "mushroom" end
+    if (point.necroportal) then icon_key = "necroportal" end
     
-    if (icon_key and private.constants.icon_texture[icon_key]) then
-        return private.constants.icon_texture[icon_key]
-    elseif (point.type and private.constants.icon_texture[point.type]) then
-        return private.constants.icon_texture[point.type]
+    if (icon_key and constantsicon[icon_key]) then
+        return constantsicon[icon_key]
+    elseif (point.type and constantsicon[point.type]) then
+        return constantsicon[point.type]
     -- use the icon specified in point data
     elseif (point.icon) then
         return point.icon
@@ -73,73 +85,86 @@ local function work_out_texture(point)
     end
 end
 
-local left, right, top, bottom = GetObjectIconTextureCoords("4773") --MagePortalHorde
-MagePortalHorde = {
-    icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
-    tCoordLeft = left,
-    tCoordRight = right,
-    tCoordTop = top,
-    tCoordBottom = bottom,
-}
-
 local get_point_info = function(point)
     local icon
+    local MagePortalHorde = constantsicon.MagePortalHorde
     if point then
-        local label = point.label or point.label2 or UNKNOWN
-        if ((point.portal or point.orderhall or point.boat or point.gate) == true and (point.lvl or point.quest or point.timetravel or point.spell)) then
+        local spellName = GetSpellInfo(point.spell)
+        local label = point.label or point.label2 or spellName or UNKNOWN
+        if ((point.portal or point.orderhall or point.boat or point.mirror or point.mushroom or point.platform or point.necroportal) == true and (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell)) then
         if (point.portal and point.timetravel) then
             if UnitLevel("player") == 50 then
                 if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
                     icon = MagePortalHorde
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
-                    icon = MagePortalHorde				
+                    icon = MagePortalHorde
                 elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
                     icon = MagePortalHorde
                 else
-                    icon = work_out_texture(point)
+                    icon = work_out_icon(point)
                 end
             else
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             end	
         end
         if (point.portal and point.quest) then
             if IsQuestCompleted(point.quest) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
             end
         end
         if (point.orderhall and point.spell) then
             if IsSpellKnown(point.spell) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
             end
         end
         if (point.boat and point.quest) then
             if IsQuestCompleted(point.quest) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             else
-                icon = "Interface\\AddOns\\HandyNotes_TravelGuide\\Images\\Boat_grey_X"
+                icon = constantsicon.boat_X
             end
         end
-        if (point.gate and point.quest) then
+        if (point.covenant and point.sanctumtalent) then
+            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
+            if TALENT["researched"] then
+                icon = work_out_icon(point)
+            elseif point.platform then
+                icon = constantsicon.platform_X
+            elseif point.mirror then
+                icon = constantsicon.mirror_X
+            elseif point.mushroom then
+                icon = constantsicon.mushroom_X
+            elseif point.necroportal then
+                icon = constantsicon.necroportal_X
+            end
+        end
+        if (point.covenant and point.quest) then
             if IsQuestCompleted(point.quest) then
-                icon = work_out_texture(point)
-            else
-                icon = "Interface\\AddOns\\HandyNotes_TravelGuide\\Images\\Wyrm_grey_X"
+                icon = work_out_icon(point)
+            elseif point.platform then
+                icon = constantsicon.platform_X
+            elseif point.mirror then
+                icon = constantsicon.mirror_X
+            elseif point.mushroom then
+                icon = constantsicon.mushroom_X
+            elseif point.necroportal then
+                icon = constantsicon.necroportal_X
             end
         end
         if point.lvl then
             if point.quest then
                 if IsQuestCompleted(point.quest) then
-                    icon = work_out_texture(point)
+                    icon = work_out_icon(point)
                 else
                     icon = MagePortalHorde
                 end
             else
                 if (UnitLevel("player") >= point.lvl) then
-                    icon = work_out_texture(point)
+                    icon = work_out_icon(point)
                 else
                     icon = MagePortalHorde
                 end
@@ -147,25 +172,25 @@ local get_point_info = function(point)
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
             if ((astate == 1 or astate == 2) and point.faction == "Alliance" and IsQuestCompleted(point.timetravel) == false) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and IsQuestCompleted(point.timetravel) == false) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
             end
         end
         if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
             if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and IsQuestCompleted(point.timetravel) == false) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde"and IsQuestCompleted(point.timetravel)== false) then
-                icon = work_out_texture(point)
+                icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
             end
         end
-            else icon = work_out_texture(point)		
+            else icon = work_out_icon(point)		
         end
-            return label, label2, icon, point.scale, point.alpha
+            return label, label2, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
     end
 end 
 
@@ -202,17 +227,21 @@ end
 
     if point then
         if (point.label) then
-            if (point.npc) then
+            tooltip:AddLine(point.label)
+        end
+        if (point.npc) then
+            local spellName = GetSpellInfo(point.spell)
+            if point.spell and point.npc == true then
+                tooltip:AddLine(spellName)
+            else    
                 tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
-            else
-                tooltip:AddLine(point.label)
             end
         end
 		if (point.mixedportal) then
 			if (profile.show_note) then
-				tooltip:AddDoubleLine(point.label1, warfrontnote, nil,nil,nil,1,0,0)
+				tooltip:AddDoubleLine(point.label1, warfrontnote, nil,nil,nil,1) -- only the second line is red
 			elseif (not profile.show_note) then
-				tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1,0,0)
+				tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1) -- only the second line is red
             end
 		end
 		if (point.label1 and profile.show_note and not point.mixedportal) then
@@ -221,19 +250,23 @@ end
 				tooltip:AddLine(point.label2)
 		end
         if (point.note and profile.show_note) then
-            tooltip:AddLine("("..point.note..")", nil, nil, nil, false) --when true text is wrapping
+            tooltip:AddLine("("..point.note..")")
+        end
+        if point.achievement then
+            local criteriaString = GetAchievementCriteriaInfo(point.achievement["id"], point.achievement["criteria"])
+            tooltip:AddLine("("..criteriaString..")")
         end
         if (point.warfront and (point.warfront == "arathi" and asetnote == 1) or (point.warfront == "darkshore" and dsetnote == 1)) then
-            tooltip:AddLine(notavailable, 1, 0, 0)
+            tooltip:AddLine(notavailable, 1) --red
         end
         if (point.lvl and UnitLevel("player") < point.lvl) then
-            tooltip:AddLine(L["Requires at least player level: "]..point.lvl, 1, 0, 0, true)
+            tooltip:AddLine(RequiresPlayerLvl..": "..point.lvl, 1) -- red
         end
         if (point.quest and IsQuestCompleted(point.quest) == false) then
             if C_QuestLog.GetTitleForQuestID(point.quest) ~= nil then
-                tooltip:AddLine(L["Unlocked with quest: ["]..C_QuestLog.GetTitleForQuestID(point.quest).."] (ID: "..point.quest..")",1,0,0)
+                tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(point.quest).."] (ID: "..point.quest..")",1,0,0)
             else
-                tooltip:AddLine(L["RETRIEVING DATA..."],1,0,1)
+                tooltip:AddLine(RetrievindData,1,0,1) -- pink
                 C_Timer.After(1, function() addon:Refresh() end) -- Refresh
 --                print("refreshed")
             end
@@ -242,20 +275,33 @@ end
             local spellName = GetSpellInfo(point.spell)
         if spellName then
             if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1, 0, 0) --text red / uncompleted
+                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1, 0, 0) --text red / uncompleted				
+                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted				
                 elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1, 0, 0) --text red / uncompleted
+                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
                 end
             end
         end
-        if (point.spell and not point.timetravel) then
+        if (point.spell and not point.timetravel and not point.npc == true) then
             local spellName = GetSpellInfo(point.spell)
-        if spellName then
-            tooltip:AddLine(requires..': '..spellName, 1, 0, 0)
+            if spellName then
+                tooltip:AddLine(requires..': '..spellName, 1) --red
+            end
         end
+        if point.covenant and point.sanctumtalent then
+            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
+            if TALENT["researched"] == false then
+                L["Tier0"] = TNRank:format('1')
+                L["Tier1"] = TNRank:format('2')
+                L["Tier2"] = TNRank:format('3')
+                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) --red
+                tooltip:AddLine(TALENT["name"], 1, 1, 1) --white
+                tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
+                tooltip:AddLine("   •"..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) --grey
+            end
         end
+                
     else
         tooltip:SetText(UNKNOWN)
     end
@@ -266,7 +312,8 @@ local handle_tooltip_by_coord = function(tooltip, uMapID, coord)
     return handle_tooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
--- //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------------------
+
 local PluginHandler = {}
 local info = {}
 
@@ -329,7 +376,7 @@ do
             if TomTom and not profile.easy_waypoint then
                 -- Waypoint menu item
                 info = UIDropDownMenu_CreateInfo()
-                info.text = L["Add to TomTom"]
+                info.text = L["handler_context_menu_add_tomtom"]
                 info.notCheckable = true
                 info.func = addTomTomWaypoint
                 info.arg1 = currentMapID
@@ -339,7 +386,7 @@ do
 
             -- Hide menu item
             info = UIDropDownMenu_CreateInfo()
-            info.text		= L["Hide this node"] 
+            info.text		= L["handler_context_menu_hide_node"] 
             info.notCheckable 	= true
             info.func		= hideNode
             info.arg1		= currentMapID
@@ -390,9 +437,23 @@ local currentMapID = nil
         local state, value = next(t, prestate)
         while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local label, label2, icon, quest, lvl, scale, alpha = get_point_info(value)
-                scale = (scale or 1) * (icon and icon.scale or 1) * profile.icon_scale
-                alpha = (alpha or 1) * (icon and icon.alpha or 1) * profile.icon_alpha
+                local label, label2, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
+                if portal or orderhall or mixedportal then
+                scale = (scale or 1) * (icon and icon.scale_config_portal or 1) * profile.icon_scale_config_portal
+                alpha = (alpha or 1) * (icon and icon.alpha_config_portal or 1) * profile.icon_alpha_config_portal
+                elseif boat or aboat then
+                scale = (scale or 1) * (icon and icon.scale_config_boat or 1) * profile.icon_scale_config_boat
+                alpha = (alpha or 1) * (icon and icon.alpha_config_boat or 1) * profile.icon_alpha_config_boat
+                elseif zeppelin or hzeppelin then
+                scale = (scale or 1) * (icon and icon.scale_config_zeppelin or 1) * profile.icon_scale_config_zeppelin
+                alpha = (alpha or 1) * (icon and icon.alpha_config_zeppelin or 1) * profile.icon_alpha_config_zeppelin
+                elseif covenant then
+                scale = (scale or 1) * (icon and icon.scale_config_covenant or 1) * profile.icon_scale_config_covenant
+                alpha = (alpha or 1) * (icon and icon.alpha_config_covenant or 1) * profile.icon_alpha_config_covenant
+                else
+                scale = (scale or 1) * (icon and icon.scale_config_others or 1) * profile.icon_scale_config_others
+                alpha = (alpha or 1) * (icon and icon.alpha_config_others or 1) * profile.icon_alpha_config_others
+                end
                 return state, nil, icon, scale, alpha
             end
             state, value = next(t, state)
@@ -415,6 +476,9 @@ local currentMapID = nil
         if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
             return false
         end
+--        if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
+--            return false
+--        end
         if (point.portal and not private.db.show_portal) then return false; end
         if (point.orderhall and not private.db.show_orderhall) then return false; end
         if (point.worderhall and not private.db.show_orderhall) then return false; end
@@ -424,16 +488,18 @@ local currentMapID = nil
         if (point.tram and not private.db.show_tram) then return false; end
         if (point.boat and not private.db.show_boat) then return false; end
         if (point.aboat and not private.db.show_aboat) then return false; end
-        if (point.zeppelin and not private.db.show_zepplin) then return false; end
-        if (point.hzeppelin and not private.db.show_hzepplin) then return false; end
-        if (point.gate and not private.db.show_gate) then return false; end
+        if (point.zeppelin and not private.db.show_zeppelin) then return false; end
+        if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
+--        if (point.gate and not private.db.show_gate) then return false; end
         if (point.herosrestgate and not private.db.show_herorestgate) then return false; end
         if (point.tpplatform and not private.db.show_tpplatform) then return false; end
+        if (point.covenant and not private.db.show_covenant) then return false; end -- platform, mirror, mushroom, necroportal
         return true
     end
 end
 
--- //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------------------
+
 function addon:OnInitialize()
     self.db = AceDB:New(private.addon_name.."DB", private.constants.defaults)
 
@@ -483,14 +549,16 @@ end
 function addon:QUEST_FINISHED()
     addon:Refresh()
 end
---[[
-function addon:CLOSE_WORLD_MAP()
-    closeAllDropdowns()
-end
 
 SLASH_TGREFRESH1 = "/tgrefresh"
 SlashCmdList["TGREFRESH"] = function(msg)
     addon:Refresh()
     print("TravelGuide refreshed");
 end
-]]-- //////////////////////////////////////////////////////////////////////////
+--[[
+function addon:CLOSE_WORLD_MAP()
+    closeAllDropdowns()
+end
+
+
+]]

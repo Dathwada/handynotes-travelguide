@@ -1,29 +1,55 @@
--- Functions
+
+----------------------------------------------Functions---------------------------------------------
 local _G = getfenv(0)
 local pairs = _G.pairs;
--- Libraries
--- -----------------------------------------------------------------------------
--- AddOn namespace.
--- -----------------------------------------------------------------------------
+----------------------------------------------Libraries---------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+------------------------------------------AddOn NAMESPACE-------------------------------------------
+----------------------------------------------------------------------------------------------------
 local FOLDER_NAME, private = ...
 local LibStub = _G.LibStub
 local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name);
---SHADOWLANDS-------------------------------------------------------------------
+
+----------------------------------------------COVENANT----------------------------------------------
+
+local Kyrian    = 1
+local Venthyr   = 2
+local Nightfae  = 3
+local Necrolord = 4
+local PH = L["PH"] -- PLACEHOLDER
+
+--------------------------------------------SHADOWLANDS---------------------------------------------
+
 local Shadowlands = L["Shadowlands"]
 local PtoOribos = L["Portal to Oribos"]
-local WstoOribos= L["Waystone to Oribos"]
---local SeatofthePrimus = L["inside the Seat of the Primus"]
-local GatetoRevendreth = L["Gate to Revendreth"]
-local GatetoMaldraxxus = L["Gate to Maldraxxus"]
-local GatetoArdenweald = L["Gate to Ardenweald"]
-local GatetoBastion = L["Gate to Bastion"]
+local WstoOribos = L["Waystone to Oribos"]
 local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
 local RingTransference= L["To Ring of Transference"]
-local RingFates= L["To Ring of Fates"]
-local IntoTheMaw= L["Into the Maw"]
-local PtoThorghast= L["Portal to Thorghast"]
+local RingFates = L["To Ring of Fates"]
+local IntoTheMaw = L["Into the Maw"]
+local PtoThorghast = L["Portal to Thorghast"]
+local Sinfall = L["Sinfall"]
+local TheEternalTerrace = L["The Eternal Terrace"]
+local PridefallHamlet = L["Pridefall Hamlet"]
+local FeedersThicket = L["Feeder's Thicket"]
+local TheBanewood = L["The Banewood"]
+local HallsofAtonement = L["Halls of Atonement"]
+local DominanceKeep = L["Dominance Keep"]
+local Sanctuary = L["Sanctuary of the Mad"]
+local EmberWard = L["Ember Ward"]
+local EternalGateway = L["Eternal Gateway"]
+local AnimaGateway = L["Anima Gateway"]
 
---BFA---------------------------------------------------------------------------
+local Nurakkir = L["Nurakkir, House of Eyes"]
+local Exoramas = L["Exoramas, House of Rituals"]
+local Overlook = L["Overlook, Seat of the Primus"]
+local Mainhall = L["Main Hall, Seat of the Primus"]
+local Zerekriss = L["Zerekriss: Maldraxxus"]
+local SeatofthePrimus = L["Seat of the Primus"]
+
+-------------------------------------------------BfA------------------------------------------------
+
 local Zandalar = L["Zandalar"]
 local Zuldazar = L["Zandalar, Zuldazar"]
 local PtoZuldazar = L["Portal to Zuldazar"]
@@ -49,7 +75,8 @@ local PtoPortofZandalar = L["Portal to Port of Zandalar"]
 local PtoDarkshore = L["Portal to Darkshore"]
 local PtoPortofBoralus = L["Portal to Port of Boralus"]
 
---LEGION------------------------------------------------------------------------
+-----------------------------------------------LEGION-----------------------------------------------
+
 local BrokenIsles = L["Broken Isles"]
 local Stormheim = L["Broken Isles, Stormheim"]
 local PtoStormheim = L["Portal to Stormheim"]
@@ -70,7 +97,8 @@ local highmountain = L["Highmountain"]
 local stormheim = L["Stormheim"]
 local brokenshore = L["Broken Shore"]
 
---WOD---------------------------------------------------------------------------
+-------------------------------------------------WoD------------------------------------------------
+
 local PtoStormshield = L["Portal to Stormshield"]
 local PtoLionswatch = L["Portal to Lion's watch"]
 local PtoWarspear = L["Portal to Warspear"]
@@ -78,7 +106,8 @@ local PtoVolmar = L["Portal to Vol'mar"]
 local Ashran = L["Draenor, Ashran"]
 local TanaanJungle = L["Draenor, Tanaan Jungle"]
 
---MOP---------------------------------------------------------------------------
+-------------------------------------------------MoP------------------------------------------------
+
 local Pandaria = L["Pandaria"]
 local TownlongSteppes = L["Pandaria, Townlong Steppes"]
 local PtoIofT =	 L["Portal to Isle of Thunder"]
@@ -87,7 +116,8 @@ local PtoJadeForest = L["Portal to Jade Forest"]
 local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
 local KunLaiSummit = L["Pandaria, Kun-Lai Summit"]
 
---CATA--------------------------------------------------------------------------
+-------------------------------------------------CATA-----------------------------------------------
+
 local Maelstrom = L["Maelstrom"]
 local Deepholm = L["Maelstrom, Deepholm"]
 local PtoTolBarad = L["Portal to Tol Barad"]
@@ -99,7 +129,8 @@ local PtoTwilightHighlands = L["Portal to Twilight Highlands"]
 local PtoTempleofEarth = L["Portal to Temple of Earth"]
 local PtoTherazanesThrone = L["Portal to Therazane's Throne"]
 
---WOTLK-------------------------------------------------------------------------
+------------------------------------------------WotLK-----------------------------------------------
+
 local CrystalsongForest = L["Northrend, Crystalsong Forest"]
 local PtotPurpleParlor = L["Portal to the Purple Parlor"]
 local BoreanTundra = L["Northrend, Borean Tundra"]
@@ -117,7 +148,7 @@ local BtoHowlingFjord = L["Boat to Howling Fjord"]
 local Valgarde = L["Northrend, Valgarde"]
 local BtoKamagua = L["Boat to Kamagua"]
 
---BC----------------------------------------------------------------------------
+-------------------------------------------------BC-------------------------------------------------
 local AzuremystIsle = L["Kalimdor, Azuremyst Isle"]
 local PtoExodar = L["Portal to Exodar"]
 local inExodar = L["in Exodar"]
@@ -127,7 +158,7 @@ local PtoIofQD = L["Portal to Isle of Quel'Danas"]
 local PtoShattrath = L["Portal to Shattrath"]
 local TerokkarForest = L["Outland, Terokkar Forest"]
 
---VANILLA-----------------------------------------------------------------------
+-----------------------------------------------VANILLA----------------------------------------------
 local Durotar = L["Kalimdor, Durotar"]
 local PtoOG = L["Portal to Orgrimmar"]
 local ZtoOG = L["Zeppelin to Orgrimmar"]
@@ -170,7 +201,8 @@ local PtoDalaCrater = L["Portal to Dalaran Crater"]
 local HillsbradFoothills = L["Eastern Kingdoms, Hillsbrad Foothills"]
 local Ptotomb = L["Portal to Tombs"]
 local SilverpineForest = L["Eastern Kingdoms, Silverpine Forest"]
---LOCAL END--------------------------------------------------------------------------------
+
+----------------------------------------------LOCALEND----------------------------------------------
 
 local DB = {}
 private.DB = DB
@@ -182,19 +214,23 @@ DB.points = {
 --[[ structure:
     [UiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
         [coord] = {
-            spell= [ID]				-- show spell in the tooltip
-            label= [string],		-- label: text that'll be the label, optional
-            note= [string],			-- additional notes for this node
-            lvl = [PLAYERlvl],
-            faction= [FACTION],		-- shows only for selected faction
-            class= [CLASS NAME],	-- specified the class name so that this node will only be availabel for this class
-            npc= [id],				-- related npc id, used to display names in tooltip
-            type= [string],			-- the pre-define icon type which can be found in Constant.lua
+            spell         = [ID]		    -- show spell in the tooltip
+            label         = ["string"],	    -- label: text that'll be the label, optional
+            note          = ["string"],	    -- additional notes for this node
+            lvl           = [PLAYERlvl],    -- additional notes for required PLAYERLEVEL
+            quest         = [ID],           -- additional notes for required QUEST
+            timetravel    = [ID]            -- additional notes for required timetravel
+            sanctumtalent = [ID]            -- additional notes for required sanctum upgrade
+            faction       = ["FACTION"],    -- shows only for selected faction
+            class         = [CLASS NAME],	-- shows only for selected class
+            covenant      = [COVENAT NAME]  -- shows only for selected covenant
+            npc           = [id],			-- related npc id, used to display names in tooltip
+            type          = ["string"],	    -- the pre-define icon type which can be found in Constant.lua
         },
     },
 --]]
-    
---SHADOWLANDS--------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------SHADOWLANDS------------------------------------------------------------------------------------------
 
     [1550] = { -- Shadowlands
 -- only a beta thing ?    [29426064] = { portal=true, label=PtoOribos, note=Shadowlands }, --Revendreth, Both fractions ? --videocoord
@@ -207,52 +243,142 @@ DB.points = {
 --Blizzard marked		[72545516] = { herosrestgate=true, label=AGtoHerosrest }, --3
         [45665085] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
         [45665054] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", quest=60151 },
-        [20131380] = { portal=true, label=WstoOribos }, --located by 23291066
+        [20131380] = { portal=true, label=WstoOribos, lvl=60 }, --located by 23291066
         },
     
     [1565] = { -- Ardenweald
 -- only a beta thing ?        [68361725] = { portal=true, label=PtoOribos, note=Shadowlands }, --Both fractions ?
+        [46365116] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [65736026] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [29513463] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [57504259] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [44575584] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [53287905] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [26445125] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [49392755] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [20286695] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [41116950] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [54229363] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [73712521] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
         },
+    [1701] = { -- Hearth of the Forest - The Trunk
+--        [55442673] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+--        [54134136] = { mushroom=true, covenant=Nightfae, npc=true, spell=335702 }, -- Nightfae
+        },
+    [1702] = { -- Hearth of the Forest - The Roots
+        [55442673] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [57516562] = { mushroom=true, covenant=Nightfae, npc=true, spell=335702, quest=62624 }, -- Nightfae The Queen's Conservatory
+        },
+    [1819] = { -- Ardenweald_Mushroom_A
+        [58896232] = { mushroom=true, covenant=Nightfae, npc=true, spell=325602, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1 --
+        [41936098] = { mushroom=true, covenant=Nightfae, npc=true, spell=325621, quest=57583, sanctumtalent=1053, note="RANDOM LOCATION" }, -- Nightfae Reisenetzwerk Stufe 1
+        [41273983] = { mushroom=true, covenant=Nightfae, npc=true, spell=308436, quest=57583, sanctumtalent=1053, achievement={id=14304, criteria=2} }, -- Nightfae Reisenetzwerk Stufe 1
+        [56383740] = { mushroom=true, covenant=Nightfae, npc=true, spell=325614, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [59965292] = { mushroom=true, covenant=Nightfae, npc=true, spell=325657, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [51853564] = { mushroom=true, covenant=Nightfae, npc=true, spell=325620, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [38424806] = { mushroom=true, covenant=Nightfae, npc=true, spell=325616, quest=57583, sanctumtalent=1054, achievement={id=14304, criteria=9} }, -- Nightfae Reisenetzwerk Stufe 2
+        [52696820] = { mushroom=true, covenant=Nightfae, npc=true, spell=325618, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [58894369] = { mushroom=true, covenant=Nightfae, npc=true, spell=325619, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3 --
+        [46703589] = { mushroom=true, covenant=Nightfae, npc=true, spell=325617, quest=57583, sanctumtalent=1055, achievement={id=14304, criteria=11} }, -- Nightfae Reisenetzwerk Stufe 3
+        [38875544] = { mushroom=true, covenant=Nightfae, npc=true, spell=325627, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [45756677] = { mushroom=true, covenant=Nightfae, npc=true, spell=325607, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        },
+    [1825] = { -- Ardenweald_Mushroom_B
+        [50437614] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+    },
+    [1826] = { -- Ardenweald_Mushroom_C
+        [50187317] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+    },
+    [1827] = { -- Ardenweald_Mushroom_C
+        [48247310] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+    },
     [1533] = { -- Bastion
 -- only a beta thing ?      [37157609] = { portal=true, label=PtoOribos, note=Shadowlands }, --not availabel / https://www.youtube.com/watch?v=r90pwgp-8oA
         [55985276] = { herosrestgate=true, label=AGtoHerosrest }, --1 --Blizzard marked		
         [46964891] = { herosrestgate=true, label=AGtoHerosrest }, --2 --Blizzard marked		
         [52983802] = { herosrestgate=true, label=AGtoHerosrest }, --3 --Blizzard marked		
+        [65951932] = { platform=true, covenant=Kyrian, label=EternalGateway, npc=171036, sanctumtalent=1056 },  -- Kyrian Reisenetzwerk Stufe 1
+        [51754681] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171037, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1
+        [48337285] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171091, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1
+        [40715521] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171097, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1
+        [44163302] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171101, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2
+        [59427711] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171102, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2
+        [58373098] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171103, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2
+        [66594790] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171104, sanctumtalent=1058 },    -- Kyrian Reisenetzwerk Stufe 3
+        [32322045] = { platform=true, covenant=Kyrian, label=AnimaGateway, npc=171105, sanctumtalent=1058 },    -- Kyrian Reisenetzwerk Stufe 3
+        },
+    [1707] = { -- Elysisan Hold
+        [48606168] = { platform=true, covenant=Kyrian, label=EternalGateway, npc=171036, sanctumtalent=1056 }, -- Kyrian Reisenetzwerk Stufe 1
         },
     [1536] = { -- Maldraxxus
 -- only a beta thing ?   [50677269] = { portal=true, label=PtoOribos, note=Shadowlands..")\n("..SeatofthePrimus.."" }, --Both fractions ?
 -- only a beta thing ?   [49935340] = { portal=true, label=PtoOribos, note=Shadowlands }, --Both fractions ? videocoord
+      --[51397066] Portalraum
+        [50407397] = { necroportal=true, covenant=Necrolord, label=Mainhall, sanctumtalent=1050 },          -- Necrolord Reisenetzwerk Stuf 1
+        [51631638] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1050 },   -- Necrolord Reisenetzwerk Stuf 1
+        [28614470] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1051 },   -- Necrolord Reisenetzwerk Stuf 2
+        [74473364] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1052 },   -- Necrolord Reisenetzwerk Stuf 3
+        [51407067] = { necroportal=true, covenant=Necrolord, label=Nurakkir.."\n"..format(Overlook.."\n"..Zerekriss.."\n"..Exoramas), multisanctumtalent={1050, 1050, 1051, 1052} },
         },
-    [1670] = { -- Oribos - Ring der Schicksale
+    [1698] = { -- Seat of the Primus
+        [61673783] = { necroportal=true, covenant=Necrolord, label=Nurakkir, sanctumtalent=1050 },  -- Necrolord Reisenetzwerk Stuf 1
+        [58812304] = { necroportal=true, covenant=Necrolord, label=Overlook, sanctumtalent=1050 },  -- Necrolord Reisenetzwerk Stuf 1
+        [62993430] = { necroportal=true, covenant=Necrolord, label=Zerekriss, sanctumtalent=1051 }, -- Necrolord Reisenetzwerk Stuf 2
+        [61593043] = { necroportal=true, covenant=Necrolord, label=Exoramas, sanctumtalent=1052 },  -- Necrolord Reisenetzwerk Stuf 3
+        [56373149] = { necroportal=true, covenant=Necrolord, label=PH, sanctumtalent=nil },        -- Necrolord Reisenetzwerk Stuf ?
+        [56433702] = { necroportal=true, covenant=Necrolord, label=PH, sanctumtalent=nil },        -- Necrolord Reisenetzwerk Stuf ? 
+    },
+    [1525] = { -- Revendreth
+        [24855026] = { mirror=true, label=Sanctuary, covenant=Venthyr, quest=57536, sanctumtalent=1047 }, -- Venthyr Reisenetzwerk Stufe 1 spell=329427
+        [31964670] = { mirror=true, label=EmberWard, covenant=Venthyr, quest=57536, sanctumtalent=1047 },       -- Venthyr Reisenetzwerk Stufe 1 spell=329427
+        [70757546] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60060, sanctumtalent=1047 },         -- Venthyr Reisenetzwerk Stufe 1
+        [56743250] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60147, sanctumtalent=1047 },         -- Venthyr Reisenetzwerk Stufe 1
+        [73624393] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60159, sanctumtalent=1048 },         -- Venthyr Reisenetzwerk Stufe 2
+        [43485709] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60160, sanctumtalent=1048 },         -- Venthyr Reisenetzwerk Stufe 2
+        [25472685] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60164, sanctumtalent=1049 },         -- Venthyr Reisenetzwerk Stufe 3
+        [58246275] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60165, sanctumtalent=1049 },         -- Venthyr Reisenetzwerk Stufe 3
+        },
+    [1699] = { -- Sinfall Reaches
+        [46054944] = { mirror=true, label=TheEternalTerrace, covenant=Venthyr, quest=60147, sanctumtalent=1047 },   -- Venthyr Reisenetzwerk Stufe 1
+        [42073630] = { mirror=true, label=PridefallHamlet, covenant=Venthyr, quest=60060, sanctumtalent=1047 },     -- Venthyr Reisenetzwerk Stufe 1
+    },
+    [1700] = { -- Sinfall Depths
+        [63625343] = { mirror=true, label=HallsofAtonement, covenant=Venthyr, quest=60159, sanctumtalent=1048 }, -- Venthyr Reisenetzwerk Stufe 2        
+        [58383662] = { mirror=true, label=TheBanewood, covenant=Venthyr, quest=60160, sanctumtalent=1048 },      -- Venthyr Reisenetzwerk Stufe 2
+        [80984895] = { mirror=true, label=DominanceKeep, covenant=Venthyr, quest=60164, sanctumtalent=1049 },    -- Venthyr Reisenetzwerk Stufe 3
+        [71841967] = { mirror=true, label=FeedersThicket, covenant=Venthyr, quest=60165, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
+    },
+    [1670] = { -- Oribos - Ring of Fates
         [20835477] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
         [20894567] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", quest=60151 },
         [52095784] = { tpplatform=true, label=RingTransference },
         [52094278] = { tpplatform=true, label=RingTransference },
         },
-    [1671] = { -- Oribos - Ring der Übertragung
+    [1671] = { -- Oribos - Ring of Transference
 -- NOT USEABLE ANYMORE        [32015156] = { gate=true, label=GatetoRevendreth, note=Shadowlands, quest=57025 },
 -- NOT USEABLE ANYMORE        [62183266] = { gate=true, label=GatetoMaldraxxus, note=Shadowlands, quest=61107 },
 -- NOT USEABLE ANYMORE        [49587788] = { gate=true, label=GatetoArdenweald, note=Shadowlands, quest=60338 },
 -- NOT USEABLE ANYMORE        [67345157] = { gate=true, label=GatetoBastion, note=Shadowlands, quest=59773 },--60156
         --60916868 Flightmaster
-        [49525107] = { portal=true, label=IntoTheMaw },
+        [49525107] = { portal=true, label=IntoTheMaw, lvl=60 },
         [49506073] = { tpplatform=true, label=RingFates },
         [49504243] = { tpplatform=true, label=RingFates },
         },
     [1543] = { -- Der Schlund
-        [42374215] = { portal=true, label=WstoOribos },
-        [48183943] = { portal=true, label=PtoThorghast },
+        [42374215] = { portal=true, label=WstoOribos, lvl=60 },
+        [48183943] = { portal=true, label=PtoThorghast, lvl=60 },
         -- Betretet Thorghast, Turm der Verdammten
         },
 
---BFA----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
+
     [875] = { -- Zandalar
         [58206200] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""), 
                                     label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
         [56307065] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
-        [33201921] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51229, faction="Alliance" }, --quest=51229, Vol'Dun Barnard "The Smasher" Baysworth
-        [62492642] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51088, faction="Alliance" }, --quest=51088, Nazmir Desha Stormwallow
-        [47137856] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51359, faction="Alliance" }, --quest=51359, Zuldazar Daria Smithson
+        [33201921] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51229, faction="Alliance" }, -- Vol'Dun Barnard "The Smasher" Baysworth
+        [62492642] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51088, faction="Alliance" }, -- Nazmir Desha Stormwallow
+        [47137856] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51359, faction="Alliance" }, -- Zuldazar Daria Smithson
         [58287605] = { boat=true, label1=BtoDrustvar.." ("..KulTiras..")\n"..format(BtoStormsongValley.." ("..KulTiras..")\n"..BtoTiragardeSound.." ("..KulTiras..")"), 
                                   label2=BtoDrustvar.."\n"..format(BtoStormsongValley.."\n"..BtoTiragardeSound..""),faction="Horde" },
         [58367208] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
@@ -270,7 +396,7 @@ DB.points = {
     [1165] = { -- Dazar'alor
         [51004600] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
                                     label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
-        [41808760] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" }, --quest=55651,
+        [41808760] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
         [51859453] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
                                          label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
         },
@@ -282,17 +408,17 @@ DB.points = {
         [63008530] = { portal=true, label=PtoNazjatar, quest=55053, faction="Horde" },
         },
     [1355] = { -- Nazjatar
-        [47286278] = { portal=true, label=PtoZuldazar, note=Zandalar, quest=55053, faction="Horde" }, --quest=55053,
-        [40005260] = { portal=true, label=PtoBoralus, note=KulTiras, quest=54972, faction="Alliance" }, --quest=54972,
+        [47286278] = { portal=true, label=PtoZuldazar, note=Zandalar, quest=55053, faction="Horde" },
+        [40005260] = { portal=true, label=PtoBoralus, note=KulTiras, quest=54972, faction="Alliance" },
         },	
     [876] = { -- Kul Tiras
         [61404950] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
                                     label2=PtoSW.."\n"..format(PtoIF.."\n"..PtoExodar.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Alliance" },
-        [69046516] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51438, faction="Horde" }, --quest=51438, Tiragarde Sound speak: Erul Dawnbrook
-        [25936716] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51340, faction="Horde" }, --quest=51340, Drustvar
-        [54371416] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, --quest=51696, Stormsong valley 51902450 boat Grok Seahandler
-        [54141818] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, --quest=51696, Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
-        [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, --quest=55651, Mechagon 
+        [69046516] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51438, faction="Horde" }, -- Tiragarde Sound speak: Erul Dawnbrook
+        [25936716] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51340, faction="Horde" }, -- Drustvar
+        [54371416] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51902450 boat Grok Seahandler
+        [54141818] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
+        [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, -- Mechagon 
 --noboat		[20742783] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
         [62095274] = { boat=true, label1=BtoVolDun.." ("..Zandalar..")\n"..format(BtoNazmir.." ("..Zandalar..")\n"..BtoZuldazar.." ("..Zandalar..")"),
                                   label2=BtoVolDun.."\n"..format(BtoNazmir.."\n"..BtoZuldazar..""),		faction="Alliance" },
@@ -321,7 +447,8 @@ DB.points = {
                                          label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Alliance", warfront="both" }, --quest=53194,
         },	
 
---Legion----------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------LEGION---------------------------------------------------------------------------------------------
+
     [619] = { -- Broken Isles
         [30712543] = { orderhall=true, label1=PtoDala.." ("..BrokenIsles..")\n"..format(PtoEmeraldDreamway),
                                        label2=PtoDala.."\n"..format(PtoEmeraldDreamway), class="DRUID" },
@@ -397,7 +524,8 @@ DB.points = {
         [33785600] = { portal=true, label=PtoDala, note=BrokenIsles },
         },
 
---ORDERHALL------------------------------------------------------------------------------------		
+-------------------------------------------------------------------------------------------ORDERHALL-------------------------------------------------------------------------------------------
+
     [747] = { -- The Dreamgrove	 *DRUID*
         [56604310] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DRUID" },
         [55502200] = { orderhall=true, label=PtoEmeraldDreamway, class="DRUID" },
@@ -405,7 +533,7 @@ DB.points = {
     [648] = { -- Acherus: The Ebon Hold - Hall of Command  *DEATHKNIGHT*
         [24703370] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" },
         },
-    [720] = { --	Mardum, the Shattered Abyss - Upper Command Center	*DEMONHUNTER*
+    [720] = { -- Mardum, the Shattered Abyss - Upper Command Center	*DEMONHUNTER*
         [59269182] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" }, --quest=42872, access to orderhall
         [58361658] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" },
         },	
@@ -422,7 +550,7 @@ DB.points = {
         },
     [24] = { -- Light's Hope Chapel	 *PALADIN*
         [37646407] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
---		in Eastern Plaguelands and Eastern Kingdoms another portal POI
+--      in Eastern Plaguelands and Eastern Kingdoms another portal POI
         },
     [717] = { -- Dreadscar Rift	 *WARLOCK*
         [74333750] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="WARLOCK" },
@@ -442,7 +570,8 @@ DB.points = {
         [48634352] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, access to orderhall ???
         },		
         
---Warlords of Draenor----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------WoD----------------------------------------------------------------------------------------------
+
     [572] = { -- Draenor
         [73004300] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoVolmar.." ("..TanaanJungle..")"),
                                     label2=PtoOG.."\n"..format(PtoVolmar..""), faction="Horde"},
@@ -484,12 +613,13 @@ DB.points = {
         [36314116] = { portal=true, label=PtoLionswatch, note=TanaanJungle, quest=38445, faction="Alliance"},
         },	
         
---Mists of Pandaria-------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------MoP----------------------------------------------------------------------------------------------
+
     [424] = { -- Pandaria
-        [29534767] = { portal=true, label=PtoIofT, note=Pandaria, quest=32680, faction="Horde" }, --quest=32680,
-        [29144595] = { portal=true, label=PtoIofT, note=Pandaria, quest=32681, faction="Alliance" }, --quest=32681,
-        [19100943] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32212, faction="Horde" }, --quest=32212,
-        [24331611] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32644, faction="Alliance" }, --quest=32644,
+        [29534767] = { portal=true, label=PtoIofT, note=Pandaria, quest=32680, faction="Horde" },
+        [29144595] = { portal=true, label=PtoIofT, note=Pandaria, quest=32681, faction="Alliance" },
+        [19100943] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32212, faction="Horde" },
+        [24331611] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32644, faction="Alliance" },
         [55215658] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [67816760] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59883557] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
@@ -512,8 +642,8 @@ DB.points = {
         [71703570] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         },		
     [388] = { -- Townlong Steppes
-        [49746867] = { portal=true, label=PtoIofT, note=Pandaria, quest=32681, faction="Alliance" }, --quest=32681,
-        [50607340] = { portal=true, label=PtoIofT, note=Pandaria, quest=32680, faction="Horde" }, --quest=32680,
+        [49746867] = { portal=true, label=PtoIofT, note=Pandaria, quest=32681, faction="Alliance" },
+        [50607340] = { portal=true, label=PtoIofT, note=Pandaria, quest=32680, faction="Horde" },
         },
     [379] = { -- Kun-Lai Summit
         [48534357] = { orderhall=true, label=PtoOG, note=Durotar, class="MONK", faction="Horde" },
@@ -525,11 +655,12 @@ DB.points = {
         },
 ]]--		
     [504] = { -- Isle of Thunder
-        [64707348] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32644, faction="Alliance" }, --quest=32644,
-        [33213269] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32212, faction="Horde" }, --quest=32212,
+        [64707348] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32644, faction="Alliance" },
+        [33213269] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32212, faction="Horde" },
         },
         
---Cataclysm---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------CATA----------------------------------------------------------------------------------------------
+
     [198] = { -- Mount Hyjal
         [62602310] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [63492444] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
@@ -537,16 +668,16 @@ DB.points = {
     [207] = { -- Deepholm
         [48515381] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [50935310] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
-        [49325034] = { portal=true, label=PtoTherazanesThrone, note=Deepholm, quest=26709 }, --quest=26709
-        [57211352] = { portal=true, label=PtoTempleofEarth, note=Deepholm, quest=26971 }, --quest=26971
+        [49325034] = { portal=true, label=PtoTherazanesThrone, note=Deepholm, quest=26709 },
+        [57211352] = { portal=true, label=PtoTempleofEarth, note=Deepholm, quest=26971 },
         },
     [948] = { -- Maelstrom
         [51182842] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [51172840] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         },
     [241] = { -- Twilight Highlands
-        [79517782] = { portal=true, label=PtoSW, note=ElwynnForest, quest=27537, faction="Alliance" }, --quest=27537,
-        [73625351] = { portal=true, label=PtoOG, note=Durotar, quest=26798, faction="Horde" }, --quest=26798,
+        [79517782] = { portal=true, label=PtoSW, note=ElwynnForest, quest=27537, faction="Alliance" },
+        [73625351] = { portal=true, label=PtoOG, note=Durotar, quest=26798, faction="Horde" },
         },
     [244] = { -- Tol Barad
         [47115193] = { portal=true, label=PtoSW, note=ElwynnForest, lvl=30, faction="Alliance" },
@@ -557,7 +688,8 @@ DB.points = {
         [56277966] = { portal=true, label=PtoOG, note=Durotar, lvl=30, faction="Horde" },
         },
         
---Wrath of the Lich King-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------WotLK---------------------------------------------------------------------------------------------
+
     [125] = { -- Dalaran Northrend
         [40086282] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302542] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
@@ -598,7 +730,8 @@ DB.points = {
         [77612813] = { portal=true, label=PtoUC, note=Tirisfal, faction="Horde" },
         },
 
---The Burning Crusade-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------BC-----------------------------------------------------------------------------------------------
+
     [100] = { -- Hellfire Peninsula
         [89225101] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [89234946] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
@@ -616,7 +749,7 @@ DB.points = {
         [69075236] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [69075190] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         },
-    [108] = { --Terokkar Forest
+    [108] = { -- Terokkar Forest
         [30252350] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
                                     label2=PtoSW.."\n"..format(PtoIofQD..""), faction="Alliance" },
         [30252350] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
@@ -637,12 +770,9 @@ DB.points = {
         [52803270] = { portal=true, label1=PtoUC.." ("..Tirisfal..")\n"..format(PtoOG.." ("..Durotar..")"),
                                     label2=PtoUC.."\n"..format(PtoOG..""), faction="Horde" },
         },
---[[	[17] = { -- Blasted Lands
---		[72644947] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
-        },
-]]--
 
---Vanilla-------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------Vanilla--------------------------------------------------------------------------------------------
+
     [12] = { -- Kalimdor
         [59236650] = { aboat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [59246651] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
@@ -698,8 +828,8 @@ DB.points = {
         [50103773] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
                                     label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands..""), faction="Horde", },
                                     -- Vashj'ir complete quest 25924
-                                    -- TolBarad at lvl 85
-                                    -- other portals at lvl 80
+                                    -- TolBarad at lvl 30
+                                    -- other portals at lvl ?? Shadowlands
         [45306178] = { hzeppelin=true, label=ZtoBoreanTundra, note=WarsongHold, faction="Alliance" },
         [52885242] = { hzeppelin=true, label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         },		
@@ -738,7 +868,7 @@ DB.points = {
         [04415718] = { aboat=true, label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
         },
 --[[	NOT USED
-    [10] = { --Northern Barrens 
+    [10] = { -- Northern Barrens 
         [70307341] = { boat=true, label=format(BtoBootyBay) },
         },
     [210] = { -- Cape of Stranglethorn
@@ -823,7 +953,7 @@ DB.points = {
     [50] = { -- Northern Stranglethorn
         [37195161] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
         },
-    [224] = { --Stranglethorn Vale
+    [224] = { -- Stranglethorn Vale
         [41403390] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
         },
     [23] = { -- Eastern Plaguelands

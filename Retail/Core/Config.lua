@@ -12,168 +12,187 @@ config.options = {
     type = "group",
     name = addon.pluginName,
     desc = addon.description,
+    childGroups = "tab",
     get = function(info) return private.db[info[#info]] end,
     set = function(info, v)
         private.db[info[#info]] = v
         addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
     end,
     args = {
-        icon = {
+    ICONDISPLAY = {
+        type = "group",
+        name = L["config_general"],
+--        desc = L[""],
+        order = 0,
+        args = {
+            display = {
             type = "group",
-            name = L["Icon settings"],
-            inline = true,
-            order = 0,
-            args = {
-                desc = {
-                    type = "description",
-                    name = L["These settings control the look and feel of the icon."],
-                    order = 1,
-                },
-                icon_scale = {
-                    type = "range",
-                    name = L["Icon Scale"],
-                    desc = L["The scale of the icons"],
-                    min = 0.25, max = 2, step = 0.01,
-                    order = 2,
-                },
-                icon_alpha = {
-                    type = "range",
-                    name = L["Icon Alpha"],
-                    desc = L["The alpha transparency of the icons"],
-                    min = 0, max = 1, step = 0.01,
-                    order = 3,
-                },
-            },
-        },
-        display = {
-            type = "group",
-            name = L["What to display?"],
+            name = L["config_what_to_display"],
             inline = true,
             order = 10,
             args = {
                 desc = {
                     type = "description",
-                    name = L["These settings control what type of icons to be displayed."],
+                    name = L["config_what_to_display_desc"],
                     order = 11,
-                },
+                    },
                 show_portal = {
                     type = "toggle",
-                    name = L["Portal"],
-                    desc = L["Show the portal locations."],
+                    name = L["config_portal"],
+                    desc = L["config_portal_desc"],
                     order = 12,
                 },
                 show_orderhall = {
                     type = "toggle",
-                    name = L["Order Hall portal"],
-                    desc = L["Show the Order Hall portal locations."],
+                    name = L["config_order_hall_portal"],
+                    desc = L["config_order_hall_portal_desc"],
                     order = 13,
                 },
                 show_warfront = {
                     type = "toggle",
                     width = "full",
-                    name = L["Warfront portal"],
-                    desc = L["Show the Warfront portal locations."],
+                    name = L["config_warfront_portal"],
+                    desc = L["config_warfront_portal_desc"],
                     order = 14,
                 },
                 show_boat = {
                     type = "toggle",
-                    name = L["Boat"],
-                    desc = L["Show the boat locations."],
+                    name = L["config_boat"],
+                    desc = L["config_boat_desc"],
                     order = 15,
                 },
                 show_aboat = {
                     type = "toggle",
-                    name = L["Alliance Boat"],
-                    desc = L["Show the Alliance boat locations."],
+                    name = L["config_boat_alliance"],
+                    desc = L["config_boat_alliance_desc"],
                     order = 16,
                 },
-                show_zepplin = {
+                show_zeppelin = {
                     type = "toggle",
-                    name = L["Zeppelin"],
-                    desc = L["Show the Zeppelin locations."],
+                    name = L["config_zeppelin"],
+                    desc = L["config_zeppelin_desc"],
                     order = 17,
                 },	
-                show_hzepplin = {
+                show_hzeppelin = {
                     type = "toggle",
-                    name = L["Horde Zeppelin"],
-                    desc = L["Show the Horde Zeppelin locations."],
+                    name = L["config_zeppelin_horde"],
+                    desc = L["config_zeppelin_horde_desc"],
                     order = 18,
                 },
                 show_tram = {
                     type = "toggle",
-                    name = L["Deeprun Tram"],
-                    desc = L["Show the Deeprun Tram locations in Stormwind and Ironforge."],
+                    name = L["config_deeprun_tram"],
+                    desc = L["config_deeprun_tram_desc"],
                     order = 19,
                 },
                 show_note = {
                     type = "toggle",
-                    name = L["Note"],
-                    desc = L["Show the node's additional notes when it's available."],
+                    name = L["config_note"],
+                    desc = L["config_note_desc"],
                     order = 20,
-                },
-                other_line = {
-                    type = "header",
-                    name = "",
-                    order = 21,
-                },
-                easy_waypoint = {
-                    type = "toggle",
-                    width = "full",
-                    name = L["Easy waypoints"],
-                    desc = L["easy_waypoints_desc"],
-                    order = 22,
                 },
                 oribos_line = {
                     type = "header",
                     name = L["Oribos"],
-                    order = 23,
+                    order = 21,
                 },
                 show_tpplatform = {
                     type = "toggle",
-                    name = L["teleport_platform"],
-                    desc = L["teleport_platform_desc"],
-                    order = 24,
-                },
-                show_gate = {
-                    type = "toggle",
-                    name = L["gate"],
-                    desc = L["gate_desc"],
-                    order = 25,
+                    name = L["config_teleport_platform"],
+                    desc = L["config_teleport_platform_desc"],
+                    order = 22,
                 },
                 bastion_line = {
                     type = "header",
                     name = L["Bastion"],
-                    order = 28,
+                    order = 23,
                 },
                 show_herorestgate = {
                     type = "toggle",
-                    name = L["anima_gateway"],
-                    desc = L["anima_gateway_desc"],
-                    order = 29,
-                },		
-            },
-        },
-        plugin_config = {
-            type = "group",
-            name = L["AddOn Settings"],
-            inline = true,
-            order = 40,
-            args = {
+                    name = L["config_anima_gateway"],
+                    desc = L["config_anima_gateway_desc"],
+                    order = 24,
+                },
+                unhide_line = {
+                    type = "header",
+                    name = "",
+                    order = 25,
+                },
+                show_covenant = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["config_covenant"],
+                    desc = L["config_covenant_desc"],
+                    order = 26,
+                },
+                other_line = {
+                    type = "header",
+                    name = "",
+                    order = 27,
+                },
+                easy_waypoint = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["config_easy_waypoints"],
+                    desc = L["config_easy_waypoints_desc"],
+                    order = 28,
+                },
                 unhide = {
                     type = "execute",
                     width = "full",
-                    name = L["Restore hidden nodes"],
-                    desc = L["Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."],
+                    name = L["config_restore_nodes"],
+                    desc = L["config_restore_nodes_desc"],
                     func = function()
                         for map,coords in pairs(private.hidden) do
                             wipe(coords)
                         end
                         addon:Refresh()
-                        print("TravelGuide: "..L["All hidden nodes have been restored"])
+                        print("TravelGuide: "..L["config_restore_nodes_print"])
                     end,
-                    order = 50,
+                    order = 29,
                 },
+            },
             },
         },	
     },
+    SCALEALPHA = {
+        type = "group",
+        name = L["config_scale_alpha"],
+--        desc = L["config_scale_alpha_desc"],
+        order = 1,
+        args = {
+        
+        },
+    },
+    },
 }
+
+icongroup = {"config_portal", "config_boat", "config_zeppelin", "config_covenant", "config_others"}
+
+for i, icongroup in ipairs({"config_portal", "config_boat", "config_zeppelin", "config_covenant", "config_others"}) do
+    config.options.args.SCALEALPHA.args['name_'..icongroup] = {
+        type = "header",
+        name = L[icongroup],
+        order = i *10,
+    }
+
+    config.options.args.SCALEALPHA.args['icon_scale_'..icongroup] = {
+        type = "range",
+        name = L["config_icon_scale"],
+        desc = L["config_icon_scale_desc"],
+        min = 0.25, max = 3, step = 0.01,
+        arg = "icon_scale_"..icongroup,
+        width = 1.13,
+        order = i *10 + 1,
+    }
+
+    config.options.args.SCALEALPHA.args['icon_alpha_'..icongroup] = {
+        type = "range",
+        name = L["config_icon_alpha"],
+        desc = L["config_icon_alpha_desc"],
+        min = 0, max = 1, step = 0.01,
+        arg = "icon_alpha_"..icongroup,
+        width = 1.13,
+        order = i *10 + 2,
+    }
+end
