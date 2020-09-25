@@ -1,5 +1,6 @@
-#### Revision History:
-=================
+## Revision History:
+--------------------
+
 #### v2.2.0 (November 27, 2020)
 -------------------------------
 * Added Simplified Chinese (zhCN) localization from [mmk5](https://www.curseforge.com/members/mmk5)
