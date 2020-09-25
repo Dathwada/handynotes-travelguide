@@ -28,6 +28,7 @@ Locale\zhCN.lua
 Core\Constants.lua
 Core\Handler.lua
 Core\Config.lua
+Core\Dev.lua
 
 # DATABASE
 Data\DB.lua

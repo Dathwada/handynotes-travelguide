@@ -16,11 +16,7 @@ Revision History:
 
 
 TODO befor release:
-	- Stufe 3 Venthyr / Revendreath
-    - Stufe 3 Necrolords / Maldraxxus
-    - 
     - .toc Datum
-	- Config.lua rework or delete credits
 	- add * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!) on the addon website.
 
 * v2.1.5 (August 26, 2020)

@@ -7,8 +7,11 @@ if L then
 -----------------------------------------------CONFIG-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["config_general"] = "General"
-L["config_scale_alpha"] = "Scale / Alpha"
+L["config_plugin_name"] = "TravelGuide"
+L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
+
+L["config_tab_general"] = "General"
+L["config_tab_scale_alpha"] = "Scale / Alpha"
 --L["config_scale_alpha_desc"] = "PH"
 --L["Icon settings"] = true
 --L["These settings control the look and feel of the icon."] = true
@@ -70,23 +73,23 @@ L["config_restore_nodes"] = "Restore hidden nodes"
 L["config_restore_nodes_desc"] = "Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."
 L["config_restore_nodes_print"] = "All hidden nodes have been restored"
 
+L["dev_config_force_nodes"] = "Force Nodes"
+L["dev_config_force_nodes_desc"] = "Force the display of all nodes regardless of class, faction or covenant."
+
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------HANDLER----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["handler_addon_name"] = "HandyNotes: TravelGuide"
-L["handler_plugin_name"] = "TravelGuide"
-L["handler_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
-
 --==========================================CONTEXT_MENU==========================================--
 
+L["handler_context_menu_addon_name"] = "HandyNotes: TravelGuide"
 L["handler_context_menu_add_tomtom"] = "Add to TomTom"
 L["handler_context_menu_hide_node"] = "Hide this node"
 
 --============================================TOOLTIPS============================================--
 
 L["handler_tooltip_requires"] = "Requires"
-L["handler_tooltip_sanctum_feature"] = "Sanctum Upgrade"
+L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
 L["handler_tooltip_data"] = "RETRIEVING DATA..."
 L["handler_tooltip_quest"] = "Unlocked with quest"
 L["handler_tooltip_requires_level"] = "Requires at least player level"
@@ -97,7 +100,8 @@ L["handler_tooltip_not_available"] = "currently NOT available"
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
---------------------------------------------SHADOWLANDS---------------------------------------------
+
+--==========================================SHADOWLANDS===========================================--
 
 L["Shadowlands"] = true
 L["Portal to Oribos"] = true
@@ -113,11 +117,31 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = true
 L["The Maw"] = true
 
+--===========================================Maldraxxus===========================================--
+
+L["Nurakkir, House of Eyes"] = true
+L["Exoramas, House of Rituals"] = true
+L["Overlook, Seat of the Primus"] = true
+L["Main Hall, Seat of the Primus"] = true
+L["Zerekriss: Maldraxxus"] = true
+L["Seat of the Primus"] = true
+
 --============================================Bastion=============================================--
 
 L["Eternal Gateway"] = true
 L["Anima Gateway"] = true
 L["Anima Gateway to Hero's rest"] = true
+
+--==========================================Ardenweald============================================--
+
+L["RANDOM LOCATION"] = true
+L["near Tirna Vaal"] = true
+L["near Tirna Scithe"] = true
+L["near Dreamsang Fenn"] = true
+L["Darkreach"] = true
+L["Shimmerbough"] = true
+L["Heartwoodgrove"] = true
+L["near Hibernal Hollow"] = true
 
 --==========================================Reavendreath==========================================--
 
@@ -129,15 +153,7 @@ L["Pridefall Hamlet"] = true
 L["The Banewood"] = true
 L["Halls of Atonement"] = true
 L["Dominance Keep"] = true
-L["Feeder's Thicket"] = true
-
---===========================================Maldraxxus===========================================--
-
-L["Nurakkir, House of Eyes"] = true
-L["Overlook, Seat of the Primus"] = true
-L["Main Hall, Seat of the Primus"] = true
-L["Zerekriss: Maldraxxus"] = true
-L["Seat of the Primus"] = true
+L["Feeders' Thicket"] = true
 
 -------------------------------------------------BfA------------------------------------------------
 
@@ -285,7 +301,6 @@ L["Kalimdor"] = true
 L["Kalimdor, Durotar"] = true
 L["Portal to Orgrimmar"] = true
 L["Zeppelin to Orgrimmar"] = true
-
 
 L["Kalimdor, Mulgore"] = true
 L["Portal to Thunder Bluff"] = true

@@ -1,9 +1,17 @@
-local _G = getfenv(0)
-local pairs = _G.pairs
+----------------------------------------------------------------------------------------------------
+------------------------------------------AddOn NAMESPACE-------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 local FOLDER_NAME, private = ...
-local LibStub = _G.LibStub;
-local addon = LibStub("AceAddon-3.0"):GetAddon(private.addon_name)
-local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name);
+local addon = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
+local L = private.locale
+
+addon.pluginName  = L["config_plugin_name"]
+addon.description = L["config_plugin_desc"]
+
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------CONFIG-----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 local config = {}
 private.config = config
@@ -21,8 +29,8 @@ config.options = {
     args = {
     ICONDISPLAY = {
         type = "group",
-        name = L["config_general"],
---        desc = L[""],
+        name = L["config_tab_general"],
+--      desc = L[""],
         order = 0,
         args = {
             display = {
@@ -35,7 +43,7 @@ config.options = {
                     type = "description",
                     name = L["config_what_to_display_desc"],
                     order = 11,
-                    },
+                },
                 show_portal = {
                     type = "toggle",
                     name = L["config_portal"],
@@ -72,7 +80,7 @@ config.options = {
                     name = L["config_zeppelin"],
                     desc = L["config_zeppelin_desc"],
                     order = 17,
-                },	
+                },
                 show_hzeppelin = {
                     type = "toggle",
                     name = L["config_zeppelin_horde"],
@@ -157,8 +165,8 @@ config.options = {
     },
     SCALEALPHA = {
         type = "group",
-        name = L["config_scale_alpha"],
---        desc = L["config_scale_alpha_desc"],
+        name = L["config_tab_scale_alpha"],
+--      desc = L["config_scale_alpha_desc"],
         order = 1,
         args = {
         
@@ -167,16 +175,15 @@ config.options = {
     },
 }
 
-icongroup = {"config_portal", "config_boat", "config_zeppelin", "config_covenant", "config_others"}
+for i, icongroup in ipairs({"portal", "boat", "zeppelin", "covenant", "others"}) do
 
-for i, icongroup in ipairs({"config_portal", "config_boat", "config_zeppelin", "config_covenant", "config_others"}) do
-    config.options.args.SCALEALPHA.args['name_'..icongroup] = {
+    config.options.args.SCALEALPHA.args["name_"..icongroup] = {
         type = "header",
-        name = L[icongroup],
+        name = L["config_"..icongroup],
         order = i *10,
     }
 
-    config.options.args.SCALEALPHA.args['icon_scale_'..icongroup] = {
+    config.options.args.SCALEALPHA.args["icon_scale_"..icongroup] = {
         type = "range",
         name = L["config_icon_scale"],
         desc = L["config_icon_scale_desc"],
@@ -186,7 +193,7 @@ for i, icongroup in ipairs({"config_portal", "config_boat", "config_zeppelin", "
         order = i *10 + 1,
     }
 
-    config.options.args.SCALEALPHA.args['icon_alpha_'..icongroup] = {
+    config.options.args.SCALEALPHA.args["icon_alpha_"..icongroup] = {
         type = "range",
         name = L["config_icon_alpha"],
         desc = L["config_icon_alpha_desc"],

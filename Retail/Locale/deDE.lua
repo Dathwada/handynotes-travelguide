@@ -7,8 +7,11 @@ if L then
 -----------------------------------------------CONFIG-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["config_general"] = "Allgemein"
-L["config_scale_alpha"] = "Größe / Transparenz"
+L["config_plugin_name"] = "TravelGuide"
+L["config_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
+
+L["config_tab_general"] = "Allgemein"
+L["config_tab_scale_alpha"] = "Größe / Transparenz"
 --L["config_scale_alpha_desc"] = "PH"
 --L["Icon settings"] = "Symboleinstellungen"
 --L["These settings control the look and feel of the icon."] = "Diese Einstellungen legen das Aussehen der Symbole fest."
@@ -70,16 +73,16 @@ L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"
 L["config_restore_nodes_desc"] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
 L["config_restore_nodes_print"] = "Alle Versteckten Punkte wurden wiederhergestellt."
 
+L["dev_config_force_nodes"] = "Erzwinge Punkte"
+L["dev_config_force_nodes_desc"] = "Erzwingt die Anzeige aller Punkte unabhängig von Klasse, Fraktion oder Pakt."
+
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------HANDLER----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["handler_addon_name"] = "HandyNotes: TravelGuide"
-L["handler_plugin_name"] = "TravelGuide"
-L["handler_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
-
 --==========================================CONTEXT_MENU==========================================--
 
+L["handler_context_menu_addon_name"] = "HandyNotes: TravelGuide"
 L["handler_context_menu_add_tomtom"] = "Zu TomTom hinzufügen"
 L["handler_context_menu_hide_node"] = "Verstecke diesen Punkt"
 
@@ -97,7 +100,8 @@ L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
---------------------------------------------SHADOWLANDS---------------------------------------------
+
+--==========================================SHADOWLANDS===========================================--
 
 L["Shadowlands"] = "Schattenlande"
 L["Portal to Oribos"] = "Portal nach Oribos"
@@ -113,17 +117,31 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = "Ardenwald"
 L["The Maw"] = "Der Schlund"
 
---==========================================Ardenweald============================================--
+--===========================================Maldraxxus===========================================--
 
---L[""] = "Schimmerkaskadenbecken"
-
-
+L["Nurakkir, House of Eyes"] = "Nurakkir, Haus der Augen"
+L["Exoramas, House of Rituals"] = "Exoramas, Haus der Rituale"
+L["Overlook, Seat of the Primus"] = "Warte, Sitz des Primus"
+L["Main Hall, Seat of the Primus"] = "Haupthalle, Sitz des Primus"
+L["Zerekriss: Maldraxxus"] = true
+L["Seat of the Primus"] = "Sitz des Primus"
 
 --============================================Bastion=============================================--
 
 L["Eternal Gateway"] = "Ewiges Tor"
 L["Anima Gateway"] = "Animaportal"
 L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast"
+
+--==========================================Ardenweald============================================--
+
+L["RANDOM LOCATION"] = "ZUFÄLLIGER ORT"
+L["near Tirna Vaal"] = "nahe Tirna Vaal"
+L["near Tirna Scithe"] = "nahe Tirna Scithe"
+L["near Dreamsang Fenn"] = "nahe Traumsang Fenn"
+L["Darkreach"] = "Dunkelvorstoss"
+L["Shimmerbough"] = "Schimmerkaskadenbecken"
+L["Heartwoodgrove"] = "Herzholzhain"
+L["near Hibernal Hollow"] = "nahe dem Winterschlafbecken"
 
 --==========================================Reavendreath==========================================--
 
@@ -135,18 +153,10 @@ L["Pridefall Hamlet"] = "Stolzsturzweiler"
 L["The Banewood"] = "Fresserdickicht"
 L["Halls of Atonement"] = "Hallen der Sühne"
 L["Dominance Keep"] = "Herrschaftsburg"
-L["Feeder's Thicket"] = "Der Fluchwald"
-
---===========================================Maldraxxus===========================================--
-
-L["Nurakkir, House of Eyes"] = "Nurakkir, Haus der Augen"
-L["Exoramas, House of Rituals"] = "Exoramas, Haus der Rituale"
-L["Overlook, Seat of the Primus"] = "Warte, Sitz des Primus"
-L["Main Hall, Seat of the Primus"] = "Haupthalle, Sitz des Primus"
-L["Zerekriss: Maldraxxus"] = true
-L["Seat of the Primus"] = "Sitz des Primus"
+L["Feeders' Thicket"] = "Der Fluchwald"
 
 -------------------------------------------------BfA------------------------------------------------
+
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true
 L["Portal to Zuldazar"] = "Portal nach Zuldazar"
@@ -291,7 +301,6 @@ L["Kalimdor"] = true
 L["Kalimdor, Durotar"] = true
 L["Portal to Orgrimmar"] = "Portal nach Orgrimmar"
 L["Zeppelin to Orgrimmar"] = "Zeppelin nach Orgrimmar"
-
 
 L["Kalimdor, Mulgore"] = true
 L["Portal to Thunder Bluff"] = "Portal nach Donnerfels"

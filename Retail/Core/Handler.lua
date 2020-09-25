@@ -1,36 +1,20 @@
-local _G = getfenv(0)
--- Libraries
-local string = _G.string
-local format, gsub = string.format, string.gsub
-local next, wipe, pairs, select, type = next, wipe, pairs, select, type
-local GameTooltip, WorldMapTooltip, GetSpellInfo, CreateFrame, UnitClass = _G.GameTooltip, _G.WorldMapTooltip, _G.GetSpellInfo, _G.CreateFrame, _G.UnitClass
-local UIDropDownMenu_CreateInfo, CloseDropDownMenus, UIDropDownMenu_AddButton, ToggleDropDownMenu = _G.UIDropDownMenu_CreateInfo, _G.CloseDropDownMenus, _G.UIDropDownMenu_AddButton, _G.ToggleDropDownMenu
-local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
-
 ----------------------------------------------------------------------------------------------------
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
 local FOLDER_NAME, private = ...
-local constantsicon = private.constants.icon
 
-
-local LibStub = _G.LibStub
-local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name)
-local LH = LibStub("AceLocale-3.0"):GetLocale("HandyNotes", false)
-local AceDB = LibStub("AceDB-3.0")
-
+local addon = LibStub("AceAddon-3.0"):NewAddon(FOLDER_NAME, "AceEvent-3.0", "AceTimer-3.0")
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
-local addon = LibStub("AceAddon-3.0"):NewAddon(private.addon_name, "AceEvent-3.0", "AceTimer-3.0")
-addon.constants = private.constants;
-addon.constants.addon_name = private.addon_name;
+local AceDB = LibStub("AceDB-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
+private.locale = L
+addon.constants = private.constants
 
-addon.descName    = L["handler_addon_name"]
-addon.pluginName  = L["handler_plugin_name"]
-addon.description = L["handler_plugin_desc"]
+_G.HandyNotes_TravelGuide = addon
 
-addon.Name = FOLDER_NAME;
-_G.HandyNotes_TravelGuide = addon;
+local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
+local constantsicon = private.constants.icon
 
 local requires          = L["handler_tooltip_requires"]
 local notavailable      = L["handler_tooltip_not_available"]
@@ -50,7 +34,7 @@ local creature_cache
 local function getCreatureNamebyID(id)
     mcache_tooltip:SetOwner(UIParent, "ANCHOR_NONE")
     mcache_tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(id))
-    creature_cache = _G[private.addon_name.."_mcacheToolTipTextLeft1"]:GetText()
+    creature_cache = _G[FOLDER_NAME.."_mcacheToolTipTextLeft1"]:GetText()
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -168,7 +152,7 @@ local get_point_info = function(point)
                 else
                     icon = MagePortalHorde
                 end
-            end			
+            end
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
             if ((astate == 1 or astate == 2) and point.faction == "Alliance" and IsQuestCompleted(point.timetravel) == false) then
@@ -188,11 +172,11 @@ local get_point_info = function(point)
                 icon = MagePortalHorde
             end
         end
-            else icon = work_out_icon(point)		
+            else icon = work_out_icon(point)
         end
             return label, label2, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
     end
-end 
+end
 
 local get_point_info_by_coord = function(uMapID, coord)
     return get_point_info(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
@@ -220,7 +204,7 @@ elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde") then
     asetnote = 1
     dsetnote = 0
 else 
-    warfrontnote = notavailable.."\n"..notavailable	
+    warfrontnote = notavailable.."\n"..notavailable
     asetnote = 1
     dsetnote = 1
 end
@@ -233,7 +217,7 @@ end
             local spellName = GetSpellInfo(point.spell)
             if point.spell and point.npc == true then
                 tooltip:AddLine(spellName)
-            else    
+            else
                 tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
             end
         end
@@ -298,10 +282,10 @@ end
                 tooltip:AddLine(requires.." "..sanctum_feature..":", 1) --red
                 tooltip:AddLine(TALENT["name"], 1, 1, 1) --white
                 tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
-                tooltip:AddLine("   •"..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) --grey
+                tooltip:AddLine("   • "..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) --grey
             end
         end
-                
+
     else
         tooltip:SetText(UNKNOWN)
     end
@@ -367,7 +351,7 @@ do
             -- Create the title of the menu
             info = UIDropDownMenu_CreateInfo()
             info.isTitle 		= true
-            info.text 		= "HandyNotes: " ..addon.pluginName
+            info.text 		= L["handler_context_menu_addon_name"]
             info.notCheckable 	= true
             UIDropDownMenu_AddButton(info, level)
             
@@ -386,7 +370,7 @@ do
 
             -- Hide menu item
             info = UIDropDownMenu_CreateInfo()
-            info.text		= L["handler_context_menu_hide_node"] 
+            info.text		= L["handler_context_menu_hide_node"]
             info.notCheckable 	= true
             info.func		= hideNode
             info.arg1		= currentMapID
@@ -404,7 +388,7 @@ do
         end
     end
     
-    local HL_Dropdown = CreateFrame("Frame", private.addon_name.."DropdownMenu")
+    local HL_Dropdown = CreateFrame("Frame", FOLDER_NAME.."DropdownMenu")
     HL_Dropdown.displayMode = "MENU"
     HL_Dropdown.initialize = generateMenu
 
@@ -439,20 +423,20 @@ local currentMapID = nil
             if value and private:ShouldShow(state, value, currentMapID) then
                 local label, label2, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
                 if portal or orderhall or mixedportal then
-                scale = (scale or 1) * (icon and icon.scale_config_portal or 1) * profile.icon_scale_config_portal
-                alpha = (alpha or 1) * (icon and icon.alpha_config_portal or 1) * profile.icon_alpha_config_portal
+                scale = (scale or 1) * (icon and icon.scale_portal or 1) * profile.icon_scale_portal
+                alpha = (alpha or 1) * (icon and icon.alpha_portal or 1) * profile.icon_alpha_portal
                 elseif boat or aboat then
-                scale = (scale or 1) * (icon and icon.scale_config_boat or 1) * profile.icon_scale_config_boat
-                alpha = (alpha or 1) * (icon and icon.alpha_config_boat or 1) * profile.icon_alpha_config_boat
+                scale = (scale or 1) * (icon and icon.scale_boat or 1) * profile.icon_scale_boat
+                alpha = (alpha or 1) * (icon and icon.alpha_boat or 1) * profile.icon_alpha_boat
                 elseif zeppelin or hzeppelin then
-                scale = (scale or 1) * (icon and icon.scale_config_zeppelin or 1) * profile.icon_scale_config_zeppelin
-                alpha = (alpha or 1) * (icon and icon.alpha_config_zeppelin or 1) * profile.icon_alpha_config_zeppelin
+                scale = (scale or 1) * (icon and icon.scale_zeppelin or 1) * profile.icon_scale_zeppelin
+                alpha = (alpha or 1) * (icon and icon.alpha_zeppelin or 1) * profile.icon_alpha_zeppelin
                 elseif covenant then
-                scale = (scale or 1) * (icon and icon.scale_config_covenant or 1) * profile.icon_scale_config_covenant
-                alpha = (alpha or 1) * (icon and icon.alpha_config_covenant or 1) * profile.icon_alpha_config_covenant
+                scale = (scale or 1) * (icon and icon.scale_covenant or 1) * profile.icon_scale_covenant
+                alpha = (alpha or 1) * (icon and icon.alpha_covenant or 1) * profile.icon_alpha_covenant
                 else
-                scale = (scale or 1) * (icon and icon.scale_config_others or 1) * profile.icon_scale_config_others
-                alpha = (alpha or 1) * (icon and icon.alpha_config_others or 1) * profile.icon_alpha_config_others
+                scale = (scale or 1) * (icon and icon.scale_others or 1) * profile.icon_scale_others
+                alpha = (alpha or 1) * (icon and icon.alpha_others or 1) * profile.icon_alpha_others
                 end
                 return state, nil, icon, scale, alpha
             end
@@ -469,16 +453,16 @@ local currentMapID = nil
             return false
         end
         -- this will check if any node is for specific class
-        if (point.class and point.class ~= select(2, UnitClass("player"))) then
+        if (point.class and point.class ~= select(2, UnitClass("player")) and not private.db.force_nodes) then
             return false
         end
         -- this will check if any node is for specific faction
-        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player")) and not private.db.force_nodes) then
             return false
         end
---        if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
---            return false
---        end
+        if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() and not private.db.force_nodes) then
+            return false
+        end
         if (point.portal and not private.db.show_portal) then return false; end
         if (point.orderhall and not private.db.show_orderhall) then return false; end
         if (point.worderhall and not private.db.show_orderhall) then return false; end
@@ -490,7 +474,6 @@ local currentMapID = nil
         if (point.aboat and not private.db.show_aboat) then return false; end
         if (point.zeppelin and not private.db.show_zeppelin) then return false; end
         if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
---        if (point.gate and not private.db.show_gate) then return false; end
         if (point.herosrestgate and not private.db.show_herorestgate) then return false; end
         if (point.tpplatform and not private.db.show_tpplatform) then return false; end
         if (point.covenant and not private.db.show_covenant) then return false; end -- platform, mirror, mushroom, necroportal
@@ -501,11 +484,15 @@ end
 ----------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New(private.addon_name.."DB", private.constants.defaults)
+    self.db = AceDB:New(FOLDER_NAME.."DB", private.constants.defaults)
 
     profile = self.db.profile
     private.db = profile
     private.hidden = self.db.char.hidden
+
+    if private.db.dev then
+        private.devmode()
+    end
 
     -- Initialize database with HandyNotes
     HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
@@ -550,11 +537,6 @@ function addon:QUEST_FINISHED()
     addon:Refresh()
 end
 
-SLASH_TGREFRESH1 = "/tgrefresh"
-SlashCmdList["TGREFRESH"] = function(msg)
-    addon:Refresh()
-    print("TravelGuide refreshed");
-end
 --[[
 function addon:CLOSE_WORLD_MAP()
     closeAllDropdowns()
