@@ -119,7 +119,7 @@ local TanaanJungle = L["Draenor, Tanaan Jungle"]
 
 local Pandaria = L["Pandaria"]
 local TownlongSteppes = L["Pandaria, Townlong Steppes"]
-local PtoIofT =	 L["Portal to Isle of Thunder"]
+local PtoIofT = L["Portal to Isle of Thunder"]
 local PtoSPG = L["Portal to Shado-Pan Garrison"]
 local PtoJadeForest = L["Portal to Jade Forest"]
 local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
@@ -228,7 +228,7 @@ DB.points = {
     [UiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
         [coord] = {
             spell         = [ID],           -- show spell in the tooltip
-            label         = ["string"],	    -- label: text that'll be the label, optional
+            label         = ["string"],     -- label: text that'll be the label, optional
             note          = ["string"],     -- additional notes for this node
             lvl           = [PLAYERlvl],    -- additional notes for required PLAYERLEVEL
             quest         = [ID],           -- additional notes for required QUEST
@@ -379,14 +379,14 @@ DB.points = {
                                          label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
         },
     [862] = { -- Zuldazar
-		[58304450] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-									label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
+        [58304450] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
+                                    label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
         [55255824] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
         [58466293] = { boat=true, label1=BtoDrustvar.." ("..KulTiras..")\n"..format(BtoStormsongValley.." ("..KulTiras..")\n"..BtoTiragardeSound.." ("..KulTiras..")"), 
                                   label2=BtoDrustvar.."\n"..format(BtoStormsongValley.."\n"..BtoTiragardeSound..""), faction="Horde" },
         [58596055] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
                                          label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
-        },						-- quest=51340, Drustvar	quest=51532, Stormsong valley	quest=51421, tiragard sound
+        },                               -- quest=51340, Drustvar   quest=51532, Stormsong valley   quest=51421, tiragard sound
     [1165] = { -- Dazar'alor
         [51004600] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
                                     label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
@@ -413,12 +413,12 @@ DB.points = {
         [54371416] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51902450 boat Grok Seahandler
         [54141818] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
         [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, -- Mechagon 
---noboat		[20742783] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
+--noboat        [20742783] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
         [62095274] = { boat=true, label1=BtoVolDun.." ("..Zandalar..")\n"..format(BtoNazmir.." ("..Zandalar..")\n"..BtoZuldazar.." ("..Zandalar..")"),
                                   label2=BtoVolDun.."\n"..format(BtoNazmir.."\n"..BtoZuldazar..""), faction="Alliance" },
         [60855074] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
                                          label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Alliance", warfront="both" },
-        },						-- Voldun  51283			nazmir	51088			zuldazar  51308
+        },      -- Voldun 51283, nazmir 51088, zuldazar 51308
     [895] = { -- Tiragarde Sound
         [74302350] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
                                     label2=PtoSW.."\n"..format(PtoIF.."\n"..PtoExodar.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Alliance" },
@@ -469,7 +469,7 @@ DB.points = {
     [630] = { -- Azsuna
         [46664141] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [46644121] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
---coord		[46664141] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
+--coord [46664141] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [82135737] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         [47582809] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
         },
@@ -520,18 +520,18 @@ DB.points = {
 
 -------------------------------------------------------------------------------------------ORDERHALL-------------------------------------------------------------------------------------------
 
-    [747] = { -- The Dreamgrove	 *DRUID*
+    [747] = { -- The Dreamgrove *DRUID*
         [56604310] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DRUID" },
         [55502200] = { orderhall=true, label=PtoEmeraldDreamway, class="DRUID" },
         },
-    [648] = { -- Acherus: The Ebon Hold - Hall of Command  *DEATHKNIGHT*
+    [648] = { -- Acherus: The Ebon Hold - Hall of Command *DEATHKNIGHT*
         [24703370] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" },
         },
-    [720] = { -- Mardum, the Shattered Abyss - Upper Command Center	*DEMONHUNTER*
+    [720] = { -- Mardum, the Shattered Abyss - Upper Command Center *DEMONHUNTER*
         [59269182] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" }, --quest=42872, access to orderhall
         [58361658] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" },
         },
-    [734] = { -- Hall of the Guardian  *MAGE*
+    [734] = { -- Hall of the Guardian *MAGE*
         [57299056] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="MAGE" },
         [66784670] = { orderhall=true, spell=223413, label=PtoValsharah, note=BrokenIsles, class="MAGE" },
         [67214172] = { orderhall=true, spell=223413, label=PtoStormheim, note=BrokenIsles, class="MAGE" },
@@ -539,28 +539,28 @@ DB.points = {
         [54684456] = { orderhall=true, spell=223413, label=PtoHighmountain, note=BrokenIsles, class="MAGE" },
         [54993963] = { orderhall=true, spell=223413, label=PtoAzsuna, note=BrokenIsles, class="MAGE" },
         },
-    [726] = { -- The Maelstrom	*SHAMAN*
+    [726] = { -- The Maelstrom *SHAMAN*
         [29835200] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="SHAMAN" },
         },
-    [24] = { -- Light's Hope Chapel	 *PALADIN*
+    [24] = { -- Light's Hope Chapel *PALADIN*
         [37646407] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
 --      in Eastern Plaguelands and Eastern Kingdoms another portal POI
         },
-    [717] = { -- Dreadscar Rift	 *WARLOCK*
+    [717] = { -- Dreadscar Rift *WARLOCK*
         [74333750] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="WARLOCK" },
         },
-    [702] = { -- Netherlight Temple	 *PRIEST*
+    [702] = { -- Netherlight Temple *PRIEST*
         [49798075] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PRIEST" },
         },
-    [695] = { -- Skyhold  *WARRIOR*
---		[58322500] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="WARRIOR" },
+    [695] = { -- Skyhold *WARRIOR*
+--      [58322500] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="WARRIOR" },
         [58322500] = { worderhall=true, label=dalaran.."\n"..format(stormheim.."\n"..azsuna.."\n"..valsharah.."\n"..highmountain.."\n"..suramar.."\n"..brokenshore..""), note=BrokenIsles, class="WARRIOR" },
         },
-    [709] = { -- The Wandering Isle	 *MONK*
+    [709] = { -- The Wandering Isle *MONK*
         [52405714] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="MONK" },
         [50055441] = { orderhall=true, label=PtoPeakofSerenity, note=KunLaiSummit, class="MONK" },
         },
-    [739] = { -- Trueshotlodge	*HUNTER*
+    [739] = { -- Trueshotlodge *HUNTER*
         [48634352] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, access to orderhall ???
         },
         
@@ -643,11 +643,11 @@ DB.points = {
         [48534357] = { orderhall=true, label=PtoOG, note=Durotar, class="MONK", faction="Horde" },
         [48964336] = { orderhall=true, label=PtoSW, note=ElwynnForest, class="MONK", faction="Alliance" },
         },
---[[	[371] = { -- The Jade Forest
+--[[    [371] = { -- The Jade Forest
         [28501401] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         [] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         },
-]]--		
+]]--
     [504] = { -- Isle of Thunder
         [64707348] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32644, faction="Alliance" },
         [33213269] = { portal=true, label=PtoSPG, note=TownlongSteppes, quest=32212, faction="Horde" },
@@ -798,7 +798,7 @@ DB.points = {
     [7] = { -- Mulgore
         [33692368] = { zeppelin=true, label=ZtoOG, note=Durotar, faction="Horde" },
         [33692369] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
-        },		
+        },
     [88] = { -- Thunder Bluff
         [14222574] = { zeppelin=true, label=ZtoOG, note=Durotar, faction="Horde" },
         [14222575] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
@@ -861,7 +861,7 @@ DB.points = {
         [06216261] = { aboat=true, label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
         [04415718] = { aboat=true, label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
         },
---[[	NOT USED
+--[[    NOT USED
     [10] = { -- Northern Barrens 
         [70307341] = { boat=true, label=format(BtoBootyBay) },
         },
@@ -897,8 +897,8 @@ DB.points = {
         [57663241] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
         [49714419] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
         [49244725] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
---		[41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" },
---		[43674008] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" },
+--      [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" },
+--      [43674008] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" },
         },-- Portal to Oribos quest=60151
     [84] = { -- Stormwind City
         [74481841] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
@@ -935,10 +935,10 @@ DB.points = {
         [58875901] = { spell=276824, timetravel=52758, portal=true, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" },
         },
     [21] = { -- Silverpine Forest
---		[47254337] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" }, --questid missing
+--      [47254337] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" }, --questid missing
         },
     [25] = { -- Hillsbrad Foothills
---		[30293662] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" }, --questid missing
+--      [30293662] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" }, --questid missing
         },
     [14] = { -- Arathi Highlands
         [27432937] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },

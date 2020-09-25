@@ -89,7 +89,7 @@ local get_point_info = function(point)
                 end
             else
                 icon = work_out_icon(point)
-            end	
+            end
         end
         if (point.portal and point.quest) then
             if IsQuestCompleted(point.quest) then
@@ -184,7 +184,7 @@ end
 
 local function handle_tooltip(tooltip, point)
 if ((astate == 4 and dstate == 4) and point.faction == "Horde") then
---	warfrontnote = 
+--  warfrontnote = 
     asetnote = 0
     dsetnote = 0
 elseif ((astate == 1 or astate == 2) and point.faction == "Alliance") then
@@ -221,18 +221,18 @@ end
                 tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
             end
         end
-		if (point.mixedportal) then
-			if (profile.show_note) then
-				tooltip:AddDoubleLine(point.label1, warfrontnote, nil,nil,nil,1) -- only the second line is red
-			elseif (not profile.show_note) then
-				tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1) -- only the second line is red
+        if (point.mixedportal) then
+            if (profile.show_note) then
+                tooltip:AddDoubleLine(point.label1, warfrontnote, nil,nil,nil,1) -- only the second line is red
+            elseif (not profile.show_note) then
+                tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1) -- only the second line is red
             end
-		end
-		if (point.label1 and profile.show_note and not point.mixedportal) then
-				tooltip:AddLine(point.label1)
-			elseif (not point.mixedportal) then
-				tooltip:AddLine(point.label2)
-		end
+        end
+        if (point.label1 and profile.show_note and not point.mixedportal) then
+                tooltip:AddLine(point.label1)
+        elseif (not point.mixedportal) then
+                tooltip:AddLine(point.label2)
+        end
         if (point.note and profile.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
@@ -252,7 +252,7 @@ end
             else
                 tooltip:AddLine(RetrievindData,1,0,1) -- pink
                 C_Timer.After(1, function() addon:Refresh() end) -- Refresh
---                print("refreshed")
+--              print("refreshed")
             end
         end
         if (point.spell and point.timetravel and UnitLevel("player") == 50) then --down't show this under level 50
@@ -261,7 +261,7 @@ end
             if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted				
+                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
                 end
@@ -346,17 +346,17 @@ do
     local function generateMenu(button, level)
         if (not level) then return end
         if (level == 1) then
---		local spacer = {text='', disabled=true, notClickable=true, notCheckable=true}
-            
+--      local spacer = {text='', disabled=true, notClickable=true, notCheckable=true}
+
             -- Create the title of the menu
             info = UIDropDownMenu_CreateInfo()
-            info.isTitle 		= true
-            info.text 		= L["handler_context_menu_addon_name"]
-            info.notCheckable 	= true
+            info.isTitle = true
+            info.text = L["handler_context_menu_addon_name"]
+            info.notCheckable = true
             UIDropDownMenu_AddButton(info, level)
-            
---			UIDropDownMenu_AddButton(spacer, level)
-            
+
+--            UIDropDownMenu_AddButton(spacer, level)
+
             if TomTom and not profile.easy_waypoint then
                 -- Waypoint menu item
                 info = UIDropDownMenu_CreateInfo()
@@ -370,24 +370,24 @@ do
 
             -- Hide menu item
             info = UIDropDownMenu_CreateInfo()
-            info.text		= L["handler_context_menu_hide_node"]
-            info.notCheckable 	= true
-            info.func		= hideNode
-            info.arg1		= currentMapID
-            info.arg2		= currentCoord
+            info.text         = L["handler_context_menu_hide_node"]
+            info.notCheckable = true
+            info.func         = hideNode
+            info.arg1         = currentMapID
+            info.arg2         = currentCoord
             UIDropDownMenu_AddButton(info, level)
-            
---			UIDropDownMenu_AddButton(spacer, level)
-            
+
+--          UIDropDownMenu_AddButton(spacer, level)
+
             -- Close menu item
             info = UIDropDownMenu_CreateInfo()
-            info.text		= CLOSE
-            info.func		= closeAllDropdowns
-            info.notCheckable 	= true
+            info.text         = CLOSE
+            info.func         = closeAllDropdowns
+            info.notCheckable = true
             UIDropDownMenu_AddButton(info, level)
         end
     end
-    
+
     local HL_Dropdown = CreateFrame("Frame", FOLDER_NAME.."DropdownMenu")
     HL_Dropdown.displayMode = "MENU"
     HL_Dropdown.initialize = generateMenu
@@ -509,9 +509,9 @@ end
 function addon:RegisterWithHandyNotes()
     astate = C_ContributionCollector.GetState(11)  --Battle for Stromgarde
     dstate = C_ContributionCollector.GetState(118) --Battle for Darkshore
---	astate = 1  --Battle for Stromgarde only for testing
---	dstate = 2  --Battle for Darkshore only for testing
---	print(astate..dstate) --only for testing
+--  astate = 1  --Battle for Stromgarde only for testing
+--  dstate = 2  --Battle for Darkshore only for testing
+--  print(astate..dstate) --only for testing
 end
 
 function addon:Refresh()

@@ -161,7 +161,7 @@ config.options = {
                 },
             },
             },
-        },	
+        },
     },
     SCALEALPHA = {
         type = "group",
