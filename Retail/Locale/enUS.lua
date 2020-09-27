@@ -58,10 +58,10 @@ L["config_teleport_platform"] = "Teleport platforms"
 L["config_teleport_platform_desc"] = "Show the teleport plattform locations."
 
 L["config_anima_gateway"] = "Anima Gateways"
-L["config_anima_gateway_desc"] = "Show the anima gatway locations."
+L["config_anima_gateway_desc"] = "Show the anima gateway locations."
 
 L["config_covenant"] = "Covenant Travel Network"
-L["config_covenant_desc"] = "Show locations of access points for the Covenant Travel Network."
+L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
 
 L["config_others"] = "Others"
 L["config_others_desc"] = "Show all the other POIs."
