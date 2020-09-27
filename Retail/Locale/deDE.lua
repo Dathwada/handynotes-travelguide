@@ -73,8 +73,17 @@ L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"
 L["config_restore_nodes_desc"] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
 L["config_restore_nodes_print"] = "Alle Versteckten Punkte wurden wiederhergestellt."
 
+----------------------------------------------------------------------------------------------------
+-------------------------------------------------DEV------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+L["dev_config_tab"] = "DEV"
+
 L["dev_config_force_nodes"] = "Erzwinge Punkte"
 L["dev_config_force_nodes_desc"] = "Erzwingt die Anzeige aller Punkte unabhängig von Klasse, Fraktion oder Pakt."
+
+L["dev_config_show_prints"] = "Zeige print()"
+L["dev_config_show_prints_desc"] = "Zeigt print() Nachrichten im Chatfenster an."
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------HANDLER----------------------------------------------

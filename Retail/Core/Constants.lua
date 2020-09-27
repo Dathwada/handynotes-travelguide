@@ -42,6 +42,7 @@ constants.defaults = {
 
         dev = false,
         force_nodes = false,
+        show_prints = false,
     },
     char = {
         hidden = {

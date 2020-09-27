@@ -73,8 +73,17 @@ L["config_restore_nodes"] = "Restore hidden nodes"
 L["config_restore_nodes_desc"] = "Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."
 L["config_restore_nodes_print"] = "All hidden nodes have been restored"
 
+----------------------------------------------------------------------------------------------------
+-------------------------------------------------DEV------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+L["dev_config_tab"] = "DEV"
+
 L["dev_config_force_nodes"] = "Force Nodes"
 L["dev_config_force_nodes_desc"] = "Force the display of all nodes regardless of class, faction or covenant."
+
+L["dev_config_show_prints"] = "Show print()"
+L["dev_config_show_prints_desc"] = "Show print() messages in the chat window."
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------HANDLER----------------------------------------------

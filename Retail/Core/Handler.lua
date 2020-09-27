@@ -9,6 +9,7 @@ local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local AceDB = LibStub("AceDB-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
 private.locale = L
+
 addon.constants = private.constants
 
 _G.HandyNotes_TravelGuide = addon
@@ -52,10 +53,10 @@ local function work_out_icon(point)
     if (point.flightmaster) then icon_key = "flightmaster" end
     if (point.herosrestgate) then icon_key = "herosrestgate" end
     if (point.tpplatform) then icon_key = "tpplatform" end
-    if (point.platform) then icon_key = "platform" end
-    if (point.mirror) then icon_key = "mirror" end
-    if (point.mushroom) then icon_key = "mushroom" end
     if (point.necroportal) then icon_key = "necroportal" end
+    if (point.platform) then icon_key = "platform" end
+    if (point.mushroom) then icon_key = "mushroom" end
+    if (point.mirror) then icon_key = "mirror" end
     
     if (icon_key and constantsicon[icon_key]) then
         return constantsicon[icon_key]
@@ -213,6 +214,14 @@ end
         if (point.label) then
             tooltip:AddLine(point.label)
         end
+        if (point.note and profile.show_note) then
+            tooltip:AddLine("("..point.note..")")
+        end
+        if (point.label1 and profile.show_note and not point.mixedportal) then
+                tooltip:AddLine(point.label1)
+        elseif (not point.mixedportal) then
+                tooltip:AddLine(point.label2)
+        end
         if (point.npc) then
             local spellName = GetSpellInfo(point.spell)
             if point.spell and point.npc == true then
@@ -227,18 +236,6 @@ end
             elseif (not profile.show_note) then
                 tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1) -- only the second line is red
             end
-        end
-        if (point.label1 and profile.show_note and not point.mixedportal) then
-                tooltip:AddLine(point.label1)
-        elseif (not point.mixedportal) then
-                tooltip:AddLine(point.label2)
-        end
-        if (point.note and profile.show_note) then
-            tooltip:AddLine("("..point.note..")")
-        end
-        if point.achievement then
-            local criteriaString = GetAchievementCriteriaInfo(point.achievement["id"], point.achievement["criteria"])
-            tooltip:AddLine("("..criteriaString..")")
         end
         if (point.warfront and (point.warfront == "arathi" and asetnote == 1) or (point.warfront == "darkshore" and dsetnote == 1)) then
             tooltip:AddLine(notavailable, 1) --red
@@ -511,7 +508,6 @@ function addon:RegisterWithHandyNotes()
     dstate = C_ContributionCollector.GetState(118) --Battle for Darkshore
 --  astate = 1  --Battle for Stromgarde only for testing
 --  dstate = 2  --Battle for Darkshore only for testing
---  print(astate..dstate) --only for testing
 end
 
 function addon:Refresh()
@@ -523,18 +519,34 @@ end
 
 function addon:ZONE_CHANGED()
     addon:Refresh()
+
+    if private.db.show_prints then
+        print("TravelGuide: refreshed after ZONE_CHANGED")
+    end
 end
 
 function addon:ZONE_CHANGED_INDOORS()
     addon:Refresh()
+    
+    if private.db.show_prints then
+        print("TravelGuide: refreshed after ZONE_CHANGED_INDOORS")
+    end
 end
 
 function addon:NEW_WMO_CHUNK()
     addon:Refresh()
+    
+    if private.db.show_prints then
+        print("TravelGuide: refreshed after NEW_WMO_CHUNK")
+    end
 end
 
 function addon:QUEST_FINISHED()
     addon:Refresh()
+    
+    if private.db.show_prints then
+        print("TravelGuide: refreshed after QUEST_FINISHED")
+    end
 end
 
 --[[
