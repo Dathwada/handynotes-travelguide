@@ -210,7 +210,7 @@ local ArathiHighlands = L["Eastern Kingdoms, Arathi Highlands"]
 local Darkshore = L["Kalimdor, Darkshore"]
 local PtoDalaCrater = L["Portal to Dalaran Crater"]
 local HillsbradFoothills = L["Eastern Kingdoms, Hillsbrad Foothills"]
-local Ptotomb = L["Portal to Tombs"]
+local PtoSepulcher = L["Portal to the Sepulcher"]
 local SilverpineForest = L["Eastern Kingdoms, Silverpine Forest"]
 
 ----------------------------------------------------------------------------------------------------
@@ -772,9 +772,9 @@ DB.points = {
         [59246651] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [56835629] = { boat=true, label=BtoBootyBay, note=StranglethornVale },
         [43181817] = { spell=290245, timetravel=54411, portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoExodar.." ("..AzuremystIsle..")"),
-                                                   label2=PtoSW.."\n"..format(PtoExodar..""),faction="Alliance" },
+                                                                    label2=PtoSW.."\n"..format(PtoExodar..""),faction="Alliance" },
         [39401090] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                   label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
+                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
         [43211616] = { spell=290245, timetravel=54411, portal=true, label=PtoExodar, note=Teldrassil, faction="Horde" },
         [29922620] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59468340] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -849,11 +849,11 @@ DB.points = {
         },
     [89] = { -- Darnassus
         [44247867] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                   label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
+                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
         },
     [57] = { -- Teldrassil
         [29085646] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                   label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
+                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
         [55009370] = { spell=290245, timetravel=54411, portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [52048951] = { spell=290245, timetravel=54411, portal=true, label=PtoExodar, note=AzuremystIsle },
         },
@@ -897,8 +897,8 @@ DB.points = {
         [57663241] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
         [49714419] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
         [49244725] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
---      [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" },
---      [43674008] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" },
+      [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
+      [43674008] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
         },-- Portal to Oribos quest=60151
     [84] = { -- Stormwind City
         [74481841] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
@@ -935,10 +935,10 @@ DB.points = {
         [58875901] = { spell=276824, timetravel=52758, portal=true, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" },
         },
     [21] = { -- Silverpine Forest
---      [47254337] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde" }, --questid missing
+        [47254337] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
         },
     [25] = { -- Hillsbrad Foothills
---      [30293662] = { portal=true, label=Ptotomb, note=SilverpineForest, faction="Horde" }, --questid missing
+        [30293662] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
         },
     [14] = { -- Arathi Highlands
         [27432937] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },

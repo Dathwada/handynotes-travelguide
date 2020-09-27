@@ -332,6 +332,6 @@ L["Kalimdor, Darkshore"] = true
 
 L["Portal to Dalaran Crater"] = true
 L["Eastern Kingdoms, Hillsbrad Foothills"] = true
-L["Portal to Tombs"] = true
+L["Portal to the Sepulcher"] = true
 L["Eastern Kingdoms, Silverpine Forest"] = true
 end

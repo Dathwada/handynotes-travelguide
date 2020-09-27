@@ -332,6 +332,6 @@ L["Kalimdor, Darkshore"] = "Kalimdor, Dunkelküste"
 
 L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
 L["Eastern Kingdoms, Hillsbrad Foothills"] = "Die Östlichen Königreiche, Vorgebirge des Hügellands"
-L["Portal to Tombs"] = "Portal zum Grabmal"
+L["Portal to the Sepulcher"] = "Portal zum Grabmal"
 L["Eastern Kingdoms, Silverpine Forest"] = "Die Östlichen Königreiche, Silberwald"
 end
