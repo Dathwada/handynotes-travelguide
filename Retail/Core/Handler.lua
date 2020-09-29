@@ -390,20 +390,20 @@ do
     HL_Dropdown.initialize = generateMenu
 
     function PluginHandler:OnClick(button, down, uMapID, coord)
-        if ((down or button ~= "RightButton") and profile.easy_waypoint) then
+        if ((down or button ~= "RightButton") and profile.easy_waypoint and TomTom) then
             return
         end
-        if ((button == "RightButton" and not down) and not profile.easy_waypoint) then
+        if ((button == "RightButton" and not down) and (not profile.easy_waypoint or not TomTom)) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
-        if (IsControlKeyDown() and profile.easy_waypoint) then
+        if (IsControlKeyDown() and profile.easy_waypoint and TomTom) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         else
-        if profile.easy_waypoint then
+        if profile.easy_waypoint and TomTom then
             addTomTomWaypoint(button, uMapID, coord)
         end
         end

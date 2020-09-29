@@ -156,7 +156,14 @@ config.options = {
                 easy_waypoint = {
                     type = "toggle",
                     width = "full",
-                    name = L["config_easy_waypoints"],
+                    name = function() 
+                        if TomTom then 
+                            return L["config_easy_waypoints"]
+                        else
+                            return L["config_easy_waypoints"].." |cFFFF0000("..L["handler_tooltip_requires"].." TomTom)|r"
+                        end
+                    end,
+                    disabled = function() return not TomTom end,
                     desc = L["config_easy_waypoints_desc"],
                     order = 28,
                 },
