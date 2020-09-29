@@ -13,8 +13,6 @@ L["config_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Sch
 L["config_tab_general"] = "Allgemein"
 L["config_tab_scale_alpha"] = "Größe / Transparenz"
 --L["config_scale_alpha_desc"] = "PH"
---L["Icon settings"] = "Symboleinstellungen"
---L["These settings control the look and feel of the icon."] = "Diese Einstellungen legen das Aussehen der Symbole fest."
 L["config_icon_scale"] = "Symbolgröße"
 L["config_icon_scale_desc"] = "Die größe der Symbole"
 L["config_icon_alpha"] = "Symboltranzparenz"
@@ -66,11 +64,8 @@ L["config_covenant_desc"] = "Zeigt die Positionen von Zugangspunkten für das Pa
 L["config_others"] = "Anderes"
 L["config_others_desc"] = "Zeige alle anderen POIs."
 
---L["AddOn Settings"] = "AddOn Einstellungen"
---L["Query from server"] = "Abfrage vom Server"
---L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Senden Sie eine Abfrageanforderung an den Server, um den lokalisierten Namen zu suchen. Kann beim ersten Mal ein wenig langsamer sein, ist aber schneller sobald der Name gefunden und zwischengespeichert wurde."
 L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"
-L["config_restore_nodes_desc"] = "Zeigt wieder alle Symbole an die mit STRG + Rechtsklick --> \"Verstecke diesen Punkt\" manuell ausgeblendet worden sind."
+L["config_restore_nodes_desc"] = "Stellt alle Punkte wieder her, die über das Kontextmenü versteckt wurden."
 L["config_restore_nodes_print"] = "Alle Versteckten Punkte wurden wiederhergestellt."
 
 ----------------------------------------------------------------------------------------------------
@@ -149,7 +144,7 @@ L["near Tirna Scithe"] = "nahe Tirna Scithe"
 L["near Dreamsang Fenn"] = "nahe Traumsang Fenn"
 L["Darkreach"] = "Dunkelvorstoss"
 L["Shimmerbough"] = "Schimmerkaskadenbecken"
-L["Heartwoodgrove"] = "Herzholzhain"
+L["Heartwood Grove"] = "Herzholzhain"
 L["near Hibernal Hollow"] = "nahe dem Winterschlafbecken"
 
 --==========================================Reavendreath==========================================--

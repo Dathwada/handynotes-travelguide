@@ -3,16 +3,13 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "ptBR", f
 if not L then return end
 --Brazilian Portuguese translation by angel333119 ( https://www.curseforge.com/members/angel333119 )
 if L then
-L["AddOn Settings"] = "Configurações do AddOn"
 --[[Translation missing --]]
 L["Anima Gateway"] = "Anima Gateway"
 --[[Translation missing --]]
 L["Anima Gateway to Hero's rest"] = "Anima Gateway to Hero's rest"
---[[Translation missing --]]
-L["Ardenweald"] = "Ardenweald"
+L["Ardenweald"] = "Ardena"
 L["Azsuna"] = true
---[[Translation missing --]]
-L["Bastion"] = "Bastion"
+L["Bastion"] = "Bastião"
 L["Boat to Booty Bay"] = "Navio para Angra do Butim"
 L["Boat to Boralus"] = "Navio para Boralus"
 L["Boat to Borean Tundra"] = "Navio para Tundra Boreana"
@@ -30,14 +27,14 @@ L["Boat to Theramore"] = "Navio para Theramore"
 L["Boat to Tiragarde Sound"] = "Navio para Estreito Tiragarde"
 L["Boat to Unu'Pe"] = "Navio para Unu'Pe"
 L["Boat to Vol'Dun"] = "Navio para Vol'Dun"
-L["Boat to Zuldazar"] = "\"Navio para Zuldazar"
+L["Boat to Zuldazar"] = "Navio para Zuldazar"
 L["Broken Isles"] = "Ilhas Partidas"
 L["Broken Isles, Stormheim"] = "Ilhas Partidas, Trommheim"
 L["Broken Shore"] = "Costa Partida"
 --[[Translation missing --]]
 L["config_anima_gateway"] = "Anima Gateways"
 --[[Translation missing --]]
-L["config_anima_gateway_desc"] = "Show the anima gatway locations."
+L["config_anima_gateway_desc"] = "Show the anima gateway locations."
 L["config_boat"] = "Navios"
 L["config_boat_alliance"] = "Navios da Aliança"
 L["config_boat_alliance_desc"] = "Mostrar as localizações dos navios da Aliança."
@@ -45,16 +42,15 @@ L["config_boat_desc"] = "Mostrar as localizações dos navios."
 L["config_boat_horde"] = "Navios da Horda"
 L["config_boat_horde_desc"] = "Mostrar as localizações dos navios da Horda."
 --[[Translation missing --]]
-L["config_covenant"] = "Covenant Transportation Network"
+L["config_covenant"] = "Covenant Travel Network"
 --[[Translation missing --]]
-L["config_covenant_desc"] = "Show locations of access points for the Covenant Transportation Network."
+L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
 L["config_deeprun_tram"] = "Metrô Correfundo"
 L["config_deeprun_tram_desc"] = "Mostrar a localização do Metrô Correfundo em Ventobravo e Altaforja."
 L["config_easy_waypoints"] = "Pontos de destino facilitados"
-L["config_easy_waypoints_desc"] = "Ativa a criação de pontos de destino simplificado. \\nPermite que você defina um ponto de destino simplesmente clicando com o botão direito do mouse e acessa mais opções com CTRL + clique do botão direito."
---[[Translation missing --]]
-L["config_general"] = "General"
+L["config_easy_waypoints_desc"] = "Ativa a criação de pontos de destino simplificado. \nPermite que você defina um ponto de destino simplesmente clicando com o botão direito do mouse e acessa mais opções com CTRL + clique do botão direito."
 L["config_icon_alpha"] = "Opacidade do ícone"
+L["config_icon_alpha_desc"] = "Transparência dos ícones"
 L["config_icon_scale"] = "Escala do ícone"
 L["config_icon_scale_desc"] = "Tamanho dos ícones"
 L["config_note"] = "Observações"
@@ -65,13 +61,16 @@ L["config_order_hall_portal_desc"] = "Mostrar as localizações dos portais dos 
 L["config_others"] = "Others"
 --[[Translation missing --]]
 L["config_others_desc"] = "Show all the other POIs."
+L["config_plugin_desc"] = "Mostra portais, localizações de zepelins e navios no Mapa-múndi e minimapa."
 L["config_portal"] = "Portal"
 L["config_portal_desc"] = "Mostrar as localizações dos portais."
 L["config_restore_nodes"] = "Restaurar ícones escondidos"
-L["config_restore_nodes_desc"] = "Restaura todos os ícones que você escondeu manualmente escolhendo a opção \\\"Esconder ícone\\\"."
+L["config_restore_nodes_desc"] = "Restaura todos os ícones que você escondeu manualmente escolhendo a opção \"Esconder ícone\"."
 L["config_restore_nodes_print"] = "Todos os ícones foram restaurados"
 --[[Translation missing --]]
-L["config_scale_alpha"] = "Scale / Alpha"
+L["config_tab_general"] = "General"
+--[[Translation missing --]]
+L["config_tab_scale_alpha"] = "Scale / Alpha"
 --[[Translation missing --]]
 L["config_teleport_platform"] = "Teleport platforms"
 --[[Translation missing --]]
@@ -87,10 +86,10 @@ L["config_zeppelin_desc"] = "Mostrar localizações dos Zepelins."
 L["config_zeppelin_horde"] = "Zepelins da Horda"
 L["config_zeppelin_horde_desc"] = "Mostrar localização dos Zepelins da Horda."
 L["Dalaran"] = true
+L["Darkreach"] = "Extensão Sombria"
 L["Deeprun Tram to Ironforge"] = "Metrô Correfundo para Altaforja"
 L["Deeprun Tram to Stormwind"] = "Metrô Correfundo para Ventobravo"
---[[Translation missing --]]
-L["Dominance Keep"] = "Dominance Keep"
+L["Dominance Keep"] = "Bastilha da Dominância"
 L["Draenor, Ashran"] = true
 L["Draenor, Tanaan Jungle"] = "Draenor, Selva de Tanaan"
 L["Eastern Kingdoms"] = "Reinos do Leste"
@@ -99,27 +98,29 @@ L["Eastern Kingdoms, Dun Morogh"] = "Reinos do Leste, Dun Morogh"
 L["Eastern Kingdoms, Elwynn Forest"] = "Reinos do Leste, Floresta de Elwynn"
 L["Eastern Kingdoms, Eversong Woods"] = "Reinos do Leste, Floresta do Canto Eterno"
 L["Eastern Kingdoms, Grom'gol Base Camp"] = "Reinos do Leste, Acampamento Grom'gol"
+L["Eastern Kingdoms, Hillsbrad Foothills"] = "Reinos do Leste, Contraforte de Eira dos Montes"
+L["Eastern Kingdoms, Silverpine Forest"] = "Reinos do Leste, Floresta de Pinhaprata"
 L["Eastern Kingdoms, Stranglethorn Vale"] = "Reinos do Leste, Selva do Espinhaço"
 L["Eastern Kingdoms, Tirisfal Glades"] = "Reinos do Leste, Clareiras de Tirisfal"
 L["Eastern Kingdoms, Wetlands"] = "Reinos do Leste, Pantanal"
---[[Translation missing --]]
-L["Ember Ward"] = "Ember Ward"
+L["Ember Ward"] = "Reduto das Brasas"
 --[[Translation missing --]]
 L["Eternal Gateway"] = "Eternal Gateway"
---[[Translation missing --]]
-L["Feeder's Thicket"] = "Feeder's Thicket"
+L["Feeders' Thicket"] = "Bosque do Provimento"
 L["Great Eagle to Trueshot Lodge"] = "Grande Águia para Tenda Tirocerto"
---[[Translation missing --]]
-L["Halls of Atonement"] = "Halls of Atonement"
+L["Halls of Atonement"] = "Salões da Expiação"
 L["handler_context_menu_add_tomtom"] = "Adicionar ao TomTom"
 L["handler_context_menu_hide_node"] = "Esconder este ícone"
-L["handler_plugin_desc"] = "Mostra portais, localizações de zepelins e navios no Mapa-múndi e minimapa."
 L["handler_tooltip_data"] = "RECUPERANDO DADOS..."
 L["handler_tooltip_not_available"] = "Atualmente INDISPONÍVEL"
 L["handler_tooltip_quest"] = "Desbloqueado com a missão: ["
 L["handler_tooltip_requires_level"] = "Requer personagem com nível mínimo de: "
+--[[Translation missing --]]
+L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
+--[[Translation missing --]]
+L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
+L["Heartwood Grove"] = "Bosque Lenhocórdis"
 L["Highmountain"] = "Alta Montanha"
-L["Icon settings"] = "Configuração dos ícones"
 L["in Exodar"] = "em Exodar"
 L["in Undercity Magic Quarter"] = "no Distrito da Magia em Cidade Baixa"
 --[[Translation missing --]]
@@ -139,7 +140,16 @@ L["Kul Tiras, Tiragarde Sound"] = "Kul Tiras, Estreito Tiragarde"
 L["Maelstrom"] = "Voragem"
 L["Maelstrom, Deepholm"] = "Voragem, Geodomo"
 --[[Translation missing --]]
-L["Maldraxxus"] = "Maldraxxus"
+L["Main Hall, Seat of the Primus"] = "Main Hall, Seat of the Primus"
+L["Maldraxxus"] = true
+--[[Translation missing --]]
+L["near Dreamsang Fenn"] = "near Dreamsang Fenn"
+--[[Translation missing --]]
+L["near Hibernal Hollow"] = "near Hibernal Hollow"
+--[[Translation missing --]]
+L["near Tirna Scithe"] = "near Tirna Scithe"
+--[[Translation missing --]]
+L["near Tirna Vaal"] = "near Tirna Vaal"
 L["Northrend, Borean Tundra"] = "Nortúndria, Tundra Boreana"
 L["Northrend, Crystalsong Forest"] = "Nortúndria, Floresta do Canto Cristalino"
 L["Northrend, Dragonblight"] = "Nortúndria, Ermo das Serpes"
@@ -148,11 +158,14 @@ L["Northrend, Valgarde"] = "Nortúndria, Valgarde"
 L["Northrend, Valiance Keep"] = "Nortúndria, Bastilha Valentia"
 L["Northrend, Vengeance Landing"] = "Nortúndria, Porto Vendeta"
 L["Northrend, Warsong Hold"] = "Nortúndria, Fortaleza Brado Guerreiro"
-L["Orb of translocation"] = "Orbe da Translocação"
 --[[Translation missing --]]
-L["Oribos"] = "Oribos"
+L["Nurakkir, House of Eyes"] = "Nurakkir, House of Eyes"
+L["Orb of translocation"] = "Orbe da Translocação"
+L["Oribos"] = true
 L["Outland"] = "Terralém"
 L["Outland, Terokkar Forest"] = "Terralém, Mata Terokkar"
+--[[Translation missing --]]
+L["Overlook, Seat of the Primus"] = "Overlook, Seat of the Primus"
 L["Pandaria"] = true
 L["Pandaria, Kun-Lai Summit"] = "Pandaria, Monte Kun-Lai"
 L["Pandaria, Townlong Steppes"] = "Pandaria, Estepes de Taolong"
@@ -161,6 +174,8 @@ L["Portal to Azsuna"] = "Portal para Azsuna"
 L["Portal to Boralus"] = "Portal para Boralus"
 L["Portal to Caverns of Time"] = "Portal para Cavernas do Tempo"
 L["Portal to Dalaran"] = "Portal para Dalaran"
+--[[Translation missing --]]
+L["Portal to Dalaran Crater"] = "Portal to Dalaran Crater"
 L["Portal to Darkshore"] = "Portal para Costa Negra"
 L["Portal to Darnassus"] = "Portal para Darnassus"
 L["Portal to Deepholm"] = "Portal para Geodomo"
@@ -195,6 +210,8 @@ L["Portal to Stranglethorn Vale"] = "Portal para Selva do Espinhaço"
 L["Portal to Suramar"] = "Portal para Suramar"
 L["Portal to Temple of Earth"] = "Portal para Templo da Terra"
 L["Portal to the Purple Parlor"] = "Portal para Salão Púrpura"
+--[[Translation missing --]]
+L["Portal to the Sepulcher"] = "Portal to the Sepulcher"
 L["Portal to Therazane's Throne"] = "Portal para Trono de Therazane"
 --[[Translation missing --]]
 L["Portal to Thorghast"] = "Portal to Thorghast"
@@ -208,29 +225,23 @@ L["Portal to Vashj'ir"] = "Portal para Vashj'ir"
 L["Portal to Vol'mar"] = "Portal para Vol'mar"
 L["Portal to Warspear"] = "Portal para Lança de Guerra"
 L["Portal to Zuldazar"] = "Portal para Zuldazar"
+L["Pridefall Hamlet"] = "Aldeia de Orgúlia"
 --[[Translation missing --]]
-L["Pridefall Hamlet"] = "Pridefall Hamlet"
---[[Translation missing --]]
-L["Reavendreath"] = "Reavendreath"
+L["RANDOM LOCATION"] = "RANDOM LOCATION"
+L["Reavendreath"] = "Revendreth"
 L["Return to Boralus"] = "Retorno para Boralus"
 L["Return to Zuldazar"] = "Retorno para Zuldazar"
---[[Translation missing --]]
-L["Sanctum of the Mad"] = "Sanctum of the Mad"
---[[Translation missing --]]
-L["Shadowlands"] = "Shadowlands"
---[[Translation missing --]]
-L["Sinfall"] = "Sinfall"
+L["Sanctuary of the Mad"] = "Santuário dos Loucos"
+L["Seat of the Primus"] = "Trono do Prócer"
+L["Shadowlands"] = "Terras Sombrias"
+L["Shimmerbough"] = "Lumínea"
+L["Sinfall"] = "Pecádia"
 L["Stormheim"] = "Trommheim"
 L["Submarine to Mechagon"] = "Submarino para Gnomecan"
 L["Suramar"] = true
-L["The alpha transparency of the icons"] = "Transparência dos ícones"
---[[Translation missing --]]
-L["The Banewood"] = "The Banewood"
---[[Translation missing --]]
-L["The Eternal Terrace"] = "The Eternal Terrace"
---[[Translation missing --]]
-L["The Maw"] = "The Maw"
-L["These settings control the look and feel of the icon."] = "Configuração do tamanho e transparência dos ícones."
+L["The Banewood"] = "Mata da Perdição"
+L["The Eternal Terrace"] = "Terraço Eternal"
+L["The Maw"] = "A Gorja"
 --[[Translation missing --]]
 L["To Ring of Fates"] = "To Ring of Fates"
 --[[Translation missing --]]
@@ -244,5 +255,5 @@ L["Zeppelin to Borean Tundra"] = "Zepelim para Tundra Boreana"
 L["Zeppelin to Orgrimmar"] = "Zepelim para Orgrimmar"
 L["Zeppelin to Stranglethorn Vale"] = "Zepelim para Selva do Espinhaço"
 L["Zeppelin to Thunder Bluff"] = "Zepelim para Penhasco do Trovão"
-
+L["Zerekriss: Maldraxxus"] = true
 end

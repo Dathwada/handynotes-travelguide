@@ -13,8 +13,6 @@ L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the 
 L["config_tab_general"] = "General"
 L["config_tab_scale_alpha"] = "Scale / Alpha"
 --L["config_scale_alpha_desc"] = "PH"
---L["Icon settings"] = true
---L["These settings control the look and feel of the icon."] = true
 L["config_icon_scale"] = "Icon Scale"
 L["config_icon_scale_desc"] = "The scale of the icons"
 L["config_icon_alpha"] = "Icon Alpha"
@@ -66,11 +64,8 @@ L["config_covenant_desc"] = "Show locations of access points for the covenant tr
 L["config_others"] = "Others"
 L["config_others_desc"] = "Show all the other POIs."
 
---L["AddOn Settings"] = true
---L["Query from server"] = true
---L["Send query request to server to lookup localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = true
 L["config_restore_nodes"] = "Restore hidden nodes"
-L["config_restore_nodes_desc"] = "Show all nodes that you have manually hidden by CTRL + right-clicking on them and choosing \"Hide this node\"."
+L["config_restore_nodes_desc"] = "Restore all nodes that were hidden via the context menu."
 L["config_restore_nodes_print"] = "All hidden nodes have been restored"
 
 ----------------------------------------------------------------------------------------------------
@@ -149,7 +144,7 @@ L["near Tirna Scithe"] = true
 L["near Dreamsang Fenn"] = true
 L["Darkreach"] = true
 L["Shimmerbough"] = true
-L["Heartwoodgrove"] = true
+L["Heartwood Grove"] = true
 L["near Hibernal Hollow"] = true
 
 --==========================================Reavendreath==========================================--

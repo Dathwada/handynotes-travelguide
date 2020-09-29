@@ -45,7 +45,7 @@ local Tirnavaal = L["near Tirna Vaal"]
 local Tirnascithe = L["near Tirna Scithe"]
 local Shimmerbough = L["Shimmerbough"]
 local Darkreach = L["Darkreach"]
-local Heartwoodgrove = L["Heartwoodgrove"]
+local Heartwoodgrove = L["Heartwood Grove"]
 
 local Sanctuary = L["Sanctuary of the Mad"]
 local EmberWard = L["Ember Ward"]
@@ -458,7 +458,7 @@ DB.points = {
         [61353269] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Stormheim
         [34544019] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Val'sharah
         [46022488] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Highmountain
-        [33995326] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Azuna
+        [33995326] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Azsuna
         [43944460] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Suramar
         },
     [627] = { -- Dalaran Broken Isles
