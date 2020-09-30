@@ -31,8 +31,6 @@ L["config_warfront_portal_desc"] = "Zeigt die Positionen von Kriegsfrontportalen
 
 L["config_boat"] = "Schiffe"
 L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
-L["config_boat_horde"] = "Horde Schiffe"
-L["config_boat_horde_desc"] = "Zeigt die Positionen von Horde Schiffen an."
 L["config_boat_alliance"] = "Allianz Schiffe"
 L["config_boat_alliance_desc"] = "Zeigt die Positionen von Allianz Schiffen an."
 
@@ -40,8 +38,6 @@ L["config_zeppelin"] = "Zeppeline"
 L["config_zeppelin_desc"] = "Zeigt die Positionen von Zeppelinen an."
 L["config_zeppelin_horde"] = "Horde Zeppeline"
 L["config_zeppelin_horde_desc"] = "Zeigt die Positionen von Horde Zeppelinen an."
-L["config_zeppelin_alliance"] = "Allianz Zeppeline"
-L["config_zeppelin_alliance_desc"] = "Zeigt die Positionen von Allianz Zeppelinen an."
 
 L["config_deeprun_tram"] = "Tiefenbahn"
 L["config_deeprun_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."

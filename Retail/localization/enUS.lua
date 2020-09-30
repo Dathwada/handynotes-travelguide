@@ -31,8 +31,6 @@ L["config_warfront_portal_desc"] = "Show the Warfront portal locations."
 
 L["config_boat"] = "Boat"
 L["config_boat_desc"] = "Show the boat locations."
-L["config_boat_horde"] = "Horde Boat"
-L["config_boat_horde_desc"] = "Show the Horde boat locations."
 L["config_boat_alliance"] = "Alliance Boat"
 L["config_boat_alliance_desc"] = "Show the Alliance boat locations."
 
@@ -40,8 +38,6 @@ L["config_zeppelin"] = "Zeppelin"
 L["config_zeppelin_desc"] = "Show the Zeppelin locations."
 L["config_zeppelin_horde"] = "Horde Zeppelin"
 L["config_zeppelin_horde_desc"] = "Show the Horde Zeppelin locations."
-L["config_zeppelin_alliance"] = "Allianze Zeppelin"
-L["config_zeppelin_alliance_desc"] = "Show the Alliance Zeppelin locations."
 
 L["config_deeprun_tram"] = "Deerun Tram"
 L["config_deeprun_tram_desc"] = "Show the Deeprun Tram locations in Stormwind and Ironforge."

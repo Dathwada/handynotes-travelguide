@@ -897,8 +897,8 @@ DB.points = {
         [57663241] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
         [49714419] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
         [49244725] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
-      [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
-      [43674008] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
+        [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
+        [43674008] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
         },-- Portal to Oribos quest=60151
     [84] = { -- Stormwind City
         [74481841] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
