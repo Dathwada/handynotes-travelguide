@@ -21,8 +21,11 @@ embeds.xml
 localization\locales.xml
 localization\deDE.lua
 localization\enUS.lua
+localization\esES.lua
 localization\ptBR.lua
+localization\ruRU.lua
 localization\zhCN.lua
+localization\zhTW.lua
 
 # CORE FILES
 core\constants.lua
