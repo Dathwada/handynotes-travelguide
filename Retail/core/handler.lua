@@ -78,7 +78,7 @@ local get_point_info = function(point)
         local label = point.label or point.label2 or spellName or UNKNOWN
         if ((point.portal or point.orderhall or point.boat or point.mirror or point.mushroom or point.platform or point.necroportal) == true and (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell)) then
         if (point.portal and point.timetravel) then
-            if UnitLevel("player") == 50 then
+            if UnitLevel("player") >= 50 then
                 if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
                     icon = MagePortalHorde
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
@@ -252,7 +252,7 @@ end
 --              print("refreshed")
             end
         end
-        if (point.spell and point.timetravel and UnitLevel("player") == 50) then --down't show this under level 50
+        if (point.spell and point.timetravel and UnitLevel("player") >= 50) then --don't show this under level 50
             local spellName = GetSpellInfo(point.spell)
         if spellName then
             if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
