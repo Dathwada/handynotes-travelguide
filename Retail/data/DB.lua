@@ -771,7 +771,7 @@ DB.points = {
         [59236650] = { aboat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [59246651] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [56835629] = { boat=true, label=BtoBootyBay, note=StranglethornVale },
-        [43181817] = { spell=290245, timetravel=54411, portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoExodar.." ("..AzuremystIsle..")"),
+        [43561640] = { spell=290245, timetravel=54411, portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoExodar.." ("..AzuremystIsle..")"),
                                                                     label2=PtoSW.."\n"..format(PtoExodar..""),faction="Alliance" },
         [39401090] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
                                                                     label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
