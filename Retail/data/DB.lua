@@ -359,7 +359,7 @@ DB.points = {
         [80984895] = { mirror=true, label=DominanceKeep, covenant=Venthyr, quest=60164, sanctumtalent=1049 },    -- Venthyr Reisenetzwerk Stufe 3
         [71841967] = { mirror=true, label=FeedersThicket, covenant=Venthyr, quest=60165, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
         },
-    [1543] = { -- Der Schlund
+    [1543] = { -- The Maw
         [42374215] = { portal=true, label=WstoOribos, lvl=60 },
         [48183943] = { portal=true, label=PtoThorghast, lvl=60 },
         },

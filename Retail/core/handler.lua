@@ -17,6 +17,10 @@ _G.HandyNotes_TravelGuide = addon
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 local constantsicon = private.constants.icon
 
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------LOCALS-----------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 local requires          = L["handler_tooltip_requires"]
 local notavailable      = L["handler_tooltip_not_available"]
 --local available       = L["handler_tooltip_available"] -- not in use
@@ -39,6 +43,9 @@ local function getCreatureNamebyID(id)
 end
 
 ----------------------------------------------------------------------------------------------------
+------------------------------------------------ICON------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 local function work_out_icon(point)
     local icon_key
 
@@ -183,6 +190,10 @@ local get_point_info_by_coord = function(uMapID, coord)
     return get_point_info(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
+----------------------------------------------------------------------------------------------------
+----------------------------------------------TOOLTIP-----------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 local function handle_tooltip(tooltip, point)
 if ((astate == 4 and dstate == 4) and point.faction == "Horde") then
 --  warfrontnote = 
@@ -238,7 +249,7 @@ end
             end
         end
         if (point.warfront and (point.warfront == "arathi" and asetnote == 1) or (point.warfront == "darkshore" and dsetnote == 1)) then
-            tooltip:AddLine(notavailable, 1) --red
+            tooltip:AddLine(notavailable, 1) -- red
         end
         if (point.lvl and UnitLevel("player") < point.lvl) then
             tooltip:AddLine(RequiresPlayerLvl..": "..point.lvl, 1) -- red
@@ -252,22 +263,22 @@ end
 --              print("refreshed")
             end
         end
-        if (point.spell and point.timetravel and UnitLevel("player") >= 50) then --don't show this under level 50
+        if (point.spell and point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
             local spellName = GetSpellInfo(point.spell)
         if spellName then
             if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
+                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
+                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
-                    tooltip:AddLine(requires..': '..spellName, 1) --text red / uncompleted
+                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 end
             end
         end
         if (point.spell and not point.timetravel and not point.npc == true) then
             local spellName = GetSpellInfo(point.spell)
             if spellName then
-                tooltip:AddLine(requires..': '..spellName, 1) --red
+                tooltip:AddLine(requires..': '..spellName, 1) -- red
             end
         end
         if point.covenant and point.sanctumtalent then
@@ -276,10 +287,10 @@ end
                 L["Tier0"] = TNRank:format('1')
                 L["Tier1"] = TNRank:format('2')
                 L["Tier2"] = TNRank:format('3')
-                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) --red
-                tooltip:AddLine(TALENT["name"], 1, 1, 1) --white
+                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
+                tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
                 tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
-                tooltip:AddLine("   • "..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) --grey
+                tooltip:AddLine("   • "..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) -- grey
             end
         end
 
@@ -293,6 +304,8 @@ local handle_tooltip_by_coord = function(tooltip, uMapID, coord)
     return handle_tooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
+----------------------------------------------------------------------------------------------------
+-------------------------------------------PluginHandler--------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
 local PluginHandler = {}
@@ -336,6 +349,8 @@ local function addTomTomWaypoint(button, uMapID, coord)
         })
     end
 end
+
+--------------------------------------------CONTEXT MENU--------------------------------------------
 
 do
     local currentMapID = nil
@@ -457,6 +472,7 @@ local currentMapID = nil
         if (point.faction and point.faction ~= select(1, UnitFactionGroup("player")) and not private.db.force_nodes) then
             return false
         end
+        -- this will check if any node is for specific covenant
         if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() and not private.db.force_nodes) then
             return false
         end
@@ -478,7 +494,9 @@ local currentMapID = nil
     end
 end
 
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+----------------------------------------------REGISTER---------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
     self.db = AceDB:New(FOLDER_NAME.."DB", private.constants.defaults)
@@ -504,10 +522,10 @@ function addon:WorldEnter()
 end
 
 function addon:RegisterWithHandyNotes()
-    astate = C_ContributionCollector.GetState(11)  --Battle for Stromgarde
-    dstate = C_ContributionCollector.GetState(118) --Battle for Darkshore
---  astate = 1  --Battle for Stromgarde only for testing
---  dstate = 2  --Battle for Darkshore only for testing
+    astate = C_ContributionCollector.GetState(11)  -- Battle for Stromgarde
+    dstate = C_ContributionCollector.GetState(118) -- Battle for Darkshore
+--  astate = 1  -- Battle for Stromgarde only for testing
+--  dstate = 2  -- Battle for Darkshore only for testing
 end
 
 function addon:Refresh()
@@ -516,6 +534,8 @@ end
 
 function addon:OnEnable()
 end
+
+----------------------------------------------EVENTS-----------------------------------------------
 
 function addon:ZONE_CHANGED()
     addon:Refresh()
