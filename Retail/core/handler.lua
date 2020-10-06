@@ -537,42 +537,35 @@ end
 
 ----------------------------------------------EVENTS-----------------------------------------------
 
-function addon:ZONE_CHANGED()
+local frame, events = CreateFrame("Frame"), {};
+function events:ZONE_CHANGED(...)
     addon:Refresh()
 
-    if private.db.show_prints then
+    if private.db.dev and private.db.show_prints then
         print("TravelGuide: refreshed after ZONE_CHANGED")
     end
 end
 
-function addon:ZONE_CHANGED_INDOORS()
+function events:ZONE_CHANGED_INDOORS(...)
     addon:Refresh()
     
-    if private.db.show_prints then
+    if private.db.dev and private.db.show_prints then
         print("TravelGuide: refreshed after ZONE_CHANGED_INDOORS")
     end
 end
 
-function addon:NEW_WMO_CHUNK()
+function events:QUEST_FINISHED(...)
     addon:Refresh()
     
-    if private.db.show_prints then
-        print("TravelGuide: refreshed after NEW_WMO_CHUNK")
-    end
-end
-
-function addon:QUEST_FINISHED()
-    addon:Refresh()
-    
-    if private.db.show_prints then
+    if private.db.dev and private.db.show_prints then
         print("TravelGuide: refreshed after QUEST_FINISHED")
     end
 end
 
---[[
-function addon:CLOSE_WORLD_MAP()
-    closeAllDropdowns()
+frame:SetScript("OnEvent", function(self, event, ...)
+ events[event](self, ...); -- call one of the functions above
+end);
+
+for k, v in pairs(events) do
+ frame:RegisterEvent(k); -- Register all events for which handlers have been defined
 end
-
-
-]]
