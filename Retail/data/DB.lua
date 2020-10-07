@@ -465,7 +465,7 @@ DB.points = {
     [627] = { -- Dalaran Broken Isles
         [39506320] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302400] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
-        [72854121] = { flightmaster=true, label=GEtoTrueshotLodge, note=Durotar, class="HUNTER" }, --quest=40953, ????
+        [72854121] = { flightmaster=true, label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" }, --quest=40953, ????
         },
     [630] = { -- Azsuna
         [46664141] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
