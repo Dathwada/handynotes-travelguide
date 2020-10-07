@@ -225,6 +225,10 @@ end
         if (point.label) then
             tooltip:AddLine(point.label)
         end
+        if point.labelspell then
+            local spellName = GetSpellInfo(point.labelspell)
+            tooltip:AddLine(spellName)
+        end
         if (point.note and profile.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
@@ -234,12 +238,7 @@ end
                 tooltip:AddLine(point.label2)
         end
         if (point.npc) then
-            local spellName = GetSpellInfo(point.spell)
-            if point.spell and point.npc then
-                tooltip:AddLine(spellName)
-            else
-                tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
-            end
+            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
         if (point.mixedportal) then
             if (profile.show_note) then
@@ -275,7 +274,7 @@ end
                 end
             end
         end
-        if (point.spell and not point.timetravel and not point.npc) then -- don't show this if the spell is known
+        if (point.spell and not point.timetravel) then -- don't show this if the spell is known
             local spellName = GetSpellInfo(point.spell)
             local isKnown = IsSpellKnown(point.spell)
             if spellName and not isKnown then

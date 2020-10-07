@@ -227,9 +227,10 @@ DB.points = {
 --[[ structure:
     [UiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
         [coord] = {
-            spell         = [ID],           -- show spell in the tooltip
             label         = ["string"],     -- label: text that'll be the label, optional
+            labelspell    = [ID],           -- show the spell name as the label
             note          = ["string"],     -- additional notes for this node
+            spell         = [ID],           -- show spell in the tooltip
             lvl           = [PLAYERlvl],    -- additional notes for required PLAYERLEVEL
             quest         = [ID],           -- additional notes for required QUEST
             timetravel    = [ID],           -- additional notes for required timetravel
@@ -291,53 +292,53 @@ DB.points = {
         [32322045] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1058 },    -- Kyrian Reisenetzwerk Stufe 3 npc=171105,
         },
     [1707] = { -- Elysisan Hold
-        [48606168] = { platform=true, covenant=Kyrian, label=EternalGateway, npc=171036, sanctumtalent=1056 }, -- Kyrian Reisenetzwerk Stufe 1
+        [48606168] = { platform=true, covenant=Kyrian, label=EternalGateway, sanctumtalent=1056 }, -- Kyrian Reisenetzwerk Stufe 1 npc=171036,
         },
     [1565] = { -- Ardenweald
-        [46365116] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [65736026] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [29513463] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [57504259] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [44575584] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [53287905] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [26445125] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [49392755] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [20286695] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [41116950] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [54229363] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [73712521] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [50900745] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [46365116] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [65736026] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [29513463] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [57504259] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [44575584] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [53287905] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [26445125] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [49392755] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [20286695] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [41116950] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [54229363] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [73712521] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
+        [50900745] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
         },
     [1701] = { -- Hearth of the Forest - The Trunk
---        [55442673] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
---        [54134136] = { mushroom=true, covenant=Nightfae, npc=true, spell=335702 }, -- Nightfae
+--        [55442673] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+--        [54134136] = { mushroom=true, covenant=Nightfae, labelspell=335702 }, -- Nightfae
         },
     [1702] = { -- Hearth of the Forest - The Roots
-        [55442673] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [57516562] = { mushroom=true, covenant=Nightfae, npc=true, spell=335702, quest=62624 },                     -- Nightfae The Queen's Conservatory
+        [55442673] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
+        [57516562] = { mushroom=true, covenant=Nightfae, labelspell=335702, quest=62624 },                     -- Nightfae The Queen's Conservatory
         },
     [1819] = { -- Ardenweald_Mushroom_A
-        [58896232] = { mushroom=true, covenant=Nightfae, npc=true, spell=325602, quest=57583, sanctumtalent=1053 },                      -- Nightfae Reisenetzwerk Stufe 1
-        [41936098] = { mushroom=true, covenant=Nightfae, npc=true, spell=325621, quest=57583, sanctumtalent=1053, note=Hibernalhollow }, -- Nightfae Reisenetzwerk Stufe 1
-        [41273983] = { mushroom=true, covenant=Nightfae, npc=true, spell=308436, quest=57583, sanctumtalent=1053, note=Dreamsangfenn },  -- Nightfae Reisenetzwerk Stufe 1
-        [56383740] = { mushroom=true, covenant=Nightfae, npc=true, spell=325614, quest=57583, sanctumtalent=1053, note=Tirnavaal },      -- Nightfae Reisenetzwerk Stufe 1
-        [59965292] = { mushroom=true, covenant=Nightfae, npc=true, spell=325657, quest=57583, sanctumtalent=1054, note=Random },         -- Nightfae Reisenetzwerk Stufe 2
-        [51853564] = { mushroom=true, covenant=Nightfae, npc=true, spell=325620, quest=57583, sanctumtalent=1054, note=Tirnascithe },    -- Nightfae Reisenetzwerk Stufe 2
-        [38424806] = { mushroom=true, covenant=Nightfae, npc=true, spell=325616, quest=57583, sanctumtalent=1054, note=Shimmerbough },   -- Nightfae Reisenetzwerk Stufe 2
-        [52696820] = { mushroom=true, covenant=Nightfae, npc=true, spell=325618, quest=57583, sanctumtalent=1054 },                      -- Nightfae Reisenetzwerk Stufe 2
-        [58894369] = { mushroom=true, covenant=Nightfae, npc=true, spell=325619, quest=57583, sanctumtalent=1055 },                      -- Nightfae Reisenetzwerk Stufe 3
-        [46703589] = { mushroom=true, covenant=Nightfae, npc=true, spell=325617, quest=57583, sanctumtalent=1055, note=Darkreach },      -- Nightfae Reisenetzwerk Stufe 3
-        [38875544] = { mushroom=true, covenant=Nightfae, npc=true, spell=325627, quest=57583, sanctumtalent=1055, note=Random },         -- Nightfae Reisenetzwerk Stufe 3
-        [45756677] = { mushroom=true, covenant=Nightfae, npc=true, spell=325607, quest=57583, sanctumtalent=1055, note=Heartwoodgrove }, -- Nightfae Reisenetzwerk Stufe 3
+        [58896232] = { mushroom=true, covenant=Nightfae, labelspell=325602, quest=57583, sanctumtalent=1053 },                      -- Nightfae Reisenetzwerk Stufe 1
+        [41936098] = { mushroom=true, covenant=Nightfae, labelspell=325621, quest=57583, sanctumtalent=1053, note=Hibernalhollow }, -- Nightfae Reisenetzwerk Stufe 1
+        [41273983] = { mushroom=true, covenant=Nightfae, labelspell=308436, quest=57583, sanctumtalent=1053, note=Dreamsangfenn },  -- Nightfae Reisenetzwerk Stufe 1
+        [56383740] = { mushroom=true, covenant=Nightfae, labelspell=325614, quest=57583, sanctumtalent=1053, note=Tirnavaal },      -- Nightfae Reisenetzwerk Stufe 1
+        [59965292] = { mushroom=true, covenant=Nightfae, labelspell=325657, quest=57583, sanctumtalent=1054, note=Random },         -- Nightfae Reisenetzwerk Stufe 2
+        [51853564] = { mushroom=true, covenant=Nightfae, labelspell=325620, quest=57583, sanctumtalent=1054, note=Tirnascithe },    -- Nightfae Reisenetzwerk Stufe 2
+        [38424806] = { mushroom=true, covenant=Nightfae, labelspell=325616, quest=57583, sanctumtalent=1054, note=Shimmerbough },   -- Nightfae Reisenetzwerk Stufe 2
+        [52696820] = { mushroom=true, covenant=Nightfae, labelspell=325618, quest=57583, sanctumtalent=1054 },                      -- Nightfae Reisenetzwerk Stufe 2
+        [58894369] = { mushroom=true, covenant=Nightfae, labelspell=325619, quest=57583, sanctumtalent=1055 },                      -- Nightfae Reisenetzwerk Stufe 3
+        [46703589] = { mushroom=true, covenant=Nightfae, labelspell=325617, quest=57583, sanctumtalent=1055, note=Darkreach },      -- Nightfae Reisenetzwerk Stufe 3
+        [38875544] = { mushroom=true, covenant=Nightfae, labelspell=325627, quest=57583, sanctumtalent=1055, note=Random },         -- Nightfae Reisenetzwerk Stufe 3
+        [45756677] = { mushroom=true, covenant=Nightfae, labelspell=325607, quest=57583, sanctumtalent=1055, note=Heartwoodgrove }, -- Nightfae Reisenetzwerk Stufe 3
         },
     [1825] = { -- Ardenweald_Mushroom_B
-        [50437614] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [50437614] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
         },
     [1826] = { -- Ardenweald_Mushroom_C
-        [50187317] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [50187317] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
         },
     [1827] = { -- Ardenweald_Mushroom_C
-        [48247310] = { mushroom=true, covenant=Nightfae, npc=true, spell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
+        [48247310] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
         },
     [1525] = { -- Revendreth
         [24855026] = { mirror=true, label=Sanctuary, covenant=Venthyr, quest=57536, sanctumtalent=1047 }, -- Venthyr Reisenetzwerk Stufe 1 spell=329427
