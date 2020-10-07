@@ -233,9 +233,9 @@ end
             tooltip:AddLine("("..point.note..")")
         end
         if (point.label1 and profile.show_note and not point.mixedportal) then
-                tooltip:AddLine(point.label1)
+            tooltip:AddLine(point.label1)
         elseif (not point.mixedportal) then
-                tooltip:AddLine(point.label2)
+            tooltip:AddLine(point.label2)
         end
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
@@ -264,8 +264,8 @@ end
         end
         if (point.spell and point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
             local spellName = GetSpellInfo(point.spell)
-        if spellName then
-            if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
+            if spellName then
+                if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
