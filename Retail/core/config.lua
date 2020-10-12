@@ -114,44 +114,36 @@ config.options = {
                     desc = L["config_note_desc"],
                     order = 20,
                 },
-                oribos_line = {
+                shadowlands_line = {
                     type = "header",
-                    name = L["Oribos"],
+                    name = "",
                     order = 21,
                 },
                 show_tpplatform = {
                     type = "toggle",
+                    width = "full",
                     name = L["config_teleport_platform"],
                     desc = L["config_teleport_platform_desc"],
                     order = 22,
                 },
-                bastion_line = {
-                    type = "header",
-                    name = L["Bastion"],
-                    order = 23,
-                },
                 show_herorestgate = {
                     type = "toggle",
+                    width = "full",
                     name = L["config_anima_gateway"],
                     desc = L["config_anima_gateway_desc"],
-                    order = 24,
-                },
-                unhide_line = {
-                    type = "header",
-                    name = "",
-                    order = 25,
+                    order = 23,
                 },
                 show_covenant = {
                     type = "toggle",
                     width = "full",
                     name = L["config_covenant"],
                     desc = L["config_covenant_desc"],
-                    order = 26,
+                    order = 24,
                 },
                 other_line = {
                     type = "header",
                     name = "",
-                    order = 27,
+                    order = 25,
                 },
                 easy_waypoint = {
                     type = "toggle",
@@ -165,7 +157,7 @@ config.options = {
                     end,
                     disabled = function() return not TomTom end,
                     desc = L["config_easy_waypoints_desc"],
-                    order = 28,
+                    order = 26,
                 },
                 unhide = {
                     type = "execute",
@@ -179,7 +171,7 @@ config.options = {
                         addon:Refresh()
                         print("TravelGuide: "..L["config_restore_nodes_print"])
                     end,
-                    order = 29,
+                    order = 27,
                 },
             },
             },

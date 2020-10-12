@@ -43,16 +43,16 @@ L["config_deeprun_tram"] = "Tiefenbahn"
 L["config_deeprun_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
 
 L["config_note"] = "Notizen"
-L["config_note_desc"] = "Zeigt zusätzliche Notizen an wenn diese verfügbar sind."
+L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."
 
 L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
 L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 
-L["config_teleport_platform"] = "Teleportplattformen"
-L["config_teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen an."
+L["config_teleport_platform"] = "Teleportplattformen in Oribos"
+L["config_teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen in Oribos an."
 
-L["config_anima_gateway"] = "Animaportale"
-L["config_anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen an."
+L["config_anima_gateway"] = "Animaportale in der Bastion"
+L["config_anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen in der Bastion an."
 
 L["config_covenant"] = "Pakt Reisenetzwerk"
 L["config_covenant_desc"] = "Zeigt die Positionen von Zugangspunkten für das Pakt Reisenetzwerk an."
