@@ -1,19 +1,5 @@
 ## Revision History:
 
-#### v2.2.0 (November 27, 2020)
--------------------------------
-* Added Simplified Chinese (zhCN) localization from [mmk5](https://www.curseforge.com/members/mmk5)
-* Finally found a way to track the timezones for Darkshore, Arathi Highlands, Tirisfal Glades and Sillithus and if they are not available in your current timezone the portals are red with a note in the tooltip
-* Added some new Shadowlands stuff
-    * Portal to Oribos in Orgrimmar and Stormwind
-    * Portal and Teleport platforms in Oribos
-    * Covenant Transportation Network (some new icons)
-    * Anima gates to Hero's rest in Bastion
-* Added new icons for the new stuff
-* Added new options to toggle the new stuff
-* Added more scale and alpha options for portals, boats, zeppelins, covenant, others 
-* Tooltip should now refresh after RETRIEVING DATA... (for quest names)
-
 #### v2.1.5 (August 26, 2020)
 -----------------------------
 * Added Brazilian Portuguese (ptBR) localization from [angel333119](https://www.curseforge.com/members/angel333119)
