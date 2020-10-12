@@ -3,9 +3,9 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 --Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 if L then
---[[Translation missing --]]
+
 L["Anima Gateway"] = "Anima Gateway"
---[[Translation missing --]]
+
 L["Anima Gateway to Hero's rest"] = "Anima Gateway to Hero's rest"
 L["Ardenweald"] = "炽蓝仙野"
 L["Azsuna"] = "阿苏纳"
@@ -31,22 +31,22 @@ L["Boat to Zuldazar"] = "前往祖达萨的船"
 L["Broken Isles"] = "破碎群岛"
 L["Broken Isles, Stormheim"] = "破碎群岛，风暴峡湾"
 L["Broken Shore"] = "破碎海滩"
---[[Translation missing --]]
-L["config_anima_gateway"] = "Anima Gateways"
---[[Translation missing --]]
-L["config_anima_gateway_desc"] = "Show the anima gateway locations."
+
+L["config_anima_gateway"] = "Anima Gateways in Bastion"
+
+L["config_anima_gateway_desc"] = "Show the anima gateway locations in Bastion."
 L["config_boat"] = "船"
 L["config_boat_alliance"] = "船-联盟"
 L["config_boat_alliance_desc"] = "显示所有联盟船只的位置。"
 L["config_boat_desc"] = "显示船的位置。"
---[[Translation missing --]]
+
 L["config_covenant"] = "Covenant Travel Network"
---[[Translation missing --]]
+
 L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
 L["config_deeprun_tram"] = "矿道地铁"
 L["config_deeprun_tram_desc"] = "显示暴风城和铁炉堡的矿道地铁位置。"
 L["config_easy_waypoints"] = "简易导航点"
-L["config_easy_waypoints_desc"] = "创建简易导航点。\\n右键点击设置导航，CTRL + 右键更多选项。"
+L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
 L["config_icon_alpha"] = "图标透明度"
 L["config_icon_alpha_desc"] = "图标透明度"
 L["config_icon_scale"] = "图标缩放"
@@ -55,9 +55,9 @@ L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
 L["config_order_hall_portal"] = "职业大厅"
 L["config_order_hall_portal_desc"] = "显示职业大厅传送门。"
---[[Translation missing --]]
+
 L["config_others"] = "Others"
---[[Translation missing --]]
+
 L["config_others_desc"] = "Show all the other POIs."
 L["config_plugin_desc"] = "在世界地图和小地图上显示传送门、飞艇、港口图标。"
 L["config_portal"] = "传送门"
@@ -65,14 +65,14 @@ L["config_portal_desc"] = "显示传送门位置。"
 L["config_restore_nodes"] = "回复所有隐藏图标"
 L["config_restore_nodes_desc"] = "显示所有被你隐藏的图标。"
 L["config_restore_nodes_print"] = "所有隐藏图标已还原"
---[[Translation missing --]]
+
 L["config_tab_general"] = "General"
---[[Translation missing --]]
+
 L["config_tab_scale_alpha"] = "Scale / Alpha"
---[[Translation missing --]]
-L["config_teleport_platform"] = "Teleport platforms"
---[[Translation missing --]]
-L["config_teleport_platform_desc"] = "Show the teleport plattform locations."
+
+L["config_teleport_platform"] = "Teleport platforms in Oribos"
+
+L["config_teleport_platform_desc"] = "Show the teleport plattform locations in Oribos."
 L["config_warfront_portal"] = "战争前线传送门"
 L["config_warfront_portal_desc"] = "显示战争前线传送门。"
 L["config_what_to_display"] = "显示什么？"
@@ -100,7 +100,7 @@ L["Eastern Kingdoms, Stranglethorn Vale"] = "东部王国，荆棘谷"
 L["Eastern Kingdoms, Tirisfal Glades"] = "东部王国，提瑞斯法林地"
 L["Eastern Kingdoms, Wetlands"] = "东部王国，湿地"
 L["Ember Ward"] = "灰烬荒野"
---[[Translation missing --]]
+
 L["Eternal Gateway"] = "Eternal Gateway"
 L["Feeders' Thicket"] = "饲育者林地"
 L["Great Eagle to Trueshot Lodge"] = "前往神射手营地的巨鹰"
@@ -110,18 +110,17 @@ L["handler_context_menu_hide_node"] = "隐藏图标"
 L["handler_tooltip_data"] = "接收数据中..."
 L["handler_tooltip_not_available"] = "目前不可用"
 L["handler_tooltip_quest"] = "需要解锁任务"
---[[Translation missing --]]
-L["handler_tooltip_requires"] = "Requires"
+L["handler_tooltip_requires"] = "需要"
 L["handler_tooltip_requires_level"] = "需要玩家等级"
---[[Translation missing --]]
+
 L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
---[[Translation missing --]]
+
 L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["Heartwood Grove"] = "心木林"
 L["Highmountain"] = "至高岭"
 L["in Exodar"] = "埃索达内部"
 L["in Undercity Magic Quarter"] = "幽暗城魔法区内部"
---[[Translation missing --]]
+
 L["Into the Maw"] = "Into the Maw"
 L["Jump to Skyhold"] = "前往苍穹要塞，跳！"
 L["Kalimdor"] = "卡利姆多"
@@ -137,16 +136,16 @@ L["Kul Tiras"] = "库尔提拉斯"
 L["Kul Tiras, Tiragarde Sound"] = "库尔提拉斯，提拉加德海峡"
 L["Maelstrom"] = "大漩涡"
 L["Maelstrom, Deepholm"] = "大漩涡，深岩之洲"
---[[Translation missing --]]
+
 L["Main Hall, Seat of the Primus"] = "Main Hall, Seat of the Primus"
 L["Maldraxxus"] = "玛卓克萨斯"
---[[Translation missing --]]
+
 L["near Dreamsang Fenn"] = "near Dreamsang Fenn"
---[[Translation missing --]]
+
 L["near Hibernal Hollow"] = "near Hibernal Hollow"
---[[Translation missing --]]
+
 L["near Tirna Scithe"] = "near Tirna Scithe"
---[[Translation missing --]]
+
 L["near Tirna Vaal"] = "near Tirna Vaal"
 L["Northrend, Borean Tundra"] = "诺森德，北风苔原"
 L["Northrend, Crystalsong Forest"] = "诺森德，晶歌森林"
@@ -156,13 +155,13 @@ L["Northrend, Valgarde"] = "诺森德，瓦加德（嚎风峡湾）"
 L["Northrend, Valiance Keep"] = "诺森德，无畏要塞（北风苔原）"
 L["Northrend, Vengeance Landing"] = "诺森德，复仇港（嚎风峡湾）"
 L["Northrend, Warsong Hold"] = "诺森德，战歌要塞（北风苔原）"
---[[Translation missing --]]
+
 L["Nurakkir, House of Eyes"] = "Nurakkir, House of Eyes"
 L["Orb of translocation"] = "传送宝珠"
 L["Oribos"] = "奥利波斯"
 L["Outland"] = "外域"
 L["Outland, Terokkar Forest"] = "外域，泰罗卡森林"
---[[Translation missing --]]
+
 L["Overlook, Seat of the Primus"] = "Overlook, Seat of the Primus"
 L["Pandaria"] = "潘达利亚"
 L["Pandaria, Kun-Lai Summit"] = "潘达利亚，昆莱山"
@@ -172,7 +171,7 @@ L["Portal to Azsuna"] = "阿苏纳"
 L["Portal to Boralus"] = "伯拉勒斯"
 L["Portal to Caverns of Time"] = "时光之穴"
 L["Portal to Dalaran"] = "达拉然"
---[[Translation missing --]]
+
 L["Portal to Dalaran Crater"] = "Portal to Dalaran Crater"
 L["Portal to Darkshore"] = "黑海岸"
 L["Portal to Darnassus"] = "达纳苏斯"
@@ -191,9 +190,8 @@ L["Portal to Jade Forest"] = "翡翠林"
 L["Portal to Lion's watch"] = "雄狮岗哨"
 L["Portal to Nazjatar"] = "纳沙塔尔"
 L["Portal to Orgrimmar"] = "奥格瑞玛"
---[[Translation missing --]]
+
 L["Portal to Oribos"] = "Portal to Oribos"
-L["Portal to Pandaria"] = "潘达利亚"
 L["Portal to Peak of Serenity"] = "晴日峰（昆莱山）"
 L["Portal to Port of Boralus"] = "伯拉勒斯港口"
 L["Portal to Port of Zandalar"] = "赞达拉港口"
@@ -208,10 +206,10 @@ L["Portal to Stranglethorn Vale"] = "荆棘谷"
 L["Portal to Suramar"] = "苏拉玛"
 L["Portal to Temple of Earth"] = "大地神殿"
 L["Portal to the Purple Parlor"] = "紫色天台"
---[[Translation missing --]]
+
 L["Portal to the Sepulcher"] = "Portal to the Sepulcher"
 L["Portal to Therazane's Throne"] = "塞拉赞恩的王座"
---[[Translation missing --]]
+
 L["Portal to Thorghast"] = "Portal to Thorghast"
 L["Portal to Thunder Bluff"] = "雷霆崖"
 L["Portal to Tol Barad"] = "托尔巴拉德"
@@ -224,7 +222,7 @@ L["Portal to Vol'mar"] = "沃马尔"
 L["Portal to Warspear"] = "阿什兰"
 L["Portal to Zuldazar"] = "祖达萨"
 L["Pridefall Hamlet"] = "堕傲庄"
---[[Translation missing --]]
+
 L["RANDOM LOCATION"] = "RANDOM LOCATION"
 L["Reavendreath"] = "雷文德斯"
 L["Return to Boralus"] = "返回伯拉勒斯"
@@ -240,12 +238,12 @@ L["Suramar"] = "苏拉玛"
 L["The Banewood"] = "灾厄林"
 L["The Eternal Terrace"] = "永恒高台"
 L["The Maw"] = "噬渊"
---[[Translation missing --]]
+
 L["To Ring of Fates"] = "To Ring of Fates"
---[[Translation missing --]]
+
 L["To Ring of Transference"] = "To Ring of Transference"
 L["Val'sharah"] = "瓦尔莎拉"
---[[Translation missing --]]
+
 L["Waystone to Oribos"] = "Waystone to Oribos"
 L["Zandalar"] = "赞达拉"
 L["Zandalar, Zuldazar"] = "赞达拉，祖达萨"
@@ -253,6 +251,6 @@ L["Zeppelin to Borean Tundra"] = "前往北风苔原的飞艇"
 L["Zeppelin to Orgrimmar"] = "前往奥格瑞玛的飞艇"
 L["Zeppelin to Stranglethorn Vale"] = "前往荆棘谷的飞艇"
 L["Zeppelin to Thunder Bluff"] = "前往雷霆崖的飞艇"
---[[Translation missing --]]
+
 L["Zerekriss: Maldraxxus"] = "Zerekriss: Maldraxxus"
 end
