@@ -10,7 +10,7 @@
 	* ![](https://i.imgur.com/cWTR8xo.png) Zepplins
 	* ![](https://i.imgur.com/HQLt4uh.png) Horde Zepplins (If you play Alliance, it displays the Horde zepplins.)
 	* ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
-	* Covenant travel network
+	* **Covenant travel network:**
 		* ![](https://i.imgur.com/Q8hRn5U.png) Necrolords
 		* ![](https://i.imgur.com/6kM7Emj.png) Kyrian
 		* ![](https://i.imgur.com/Q3THDAx.png) Nightfae
@@ -39,4 +39,4 @@ If you wish to help localize TravelGuide, please go to [Localization](https://ww
 
 ## Issues and Suggestion
 
-Please go to [Issues](https://www.curseforge.com/wow/addons/handynotes-travelguide/issues) to submit any issue found or any suggestion.
+Please go to [Issues](https://github.com/Dathwada/handynotes-travelguide/issues) to submit any issue found or any suggestion.
