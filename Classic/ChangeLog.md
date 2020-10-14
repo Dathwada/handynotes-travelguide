@@ -10,15 +10,15 @@
 
 #### v2.1.5b (October 13, 2019)
 -------------------------------
-* fixed error on logon ([ticket#2](https://www.curseforge.com/wow/addons/handynotes*travelguide*classic/issues/2) , [#3](https://www.curseforge.com/wow/addons/handynotes*travelguide*classic/issues/3))   
-					
+* fixed error on logon ([ticket#2](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic/issues/2) , [#3](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic/issues/3))   
+
 #### v2.1.5 (October 13, 2019)
 ------------------------------
 * Added french (frFR) localization from [scaxfull](https://www.curseforge.com/members/scaxfull)
 
 #### v2.1.4 (September 18, 2019)
 --------------------------------
-* fixed error with zhCN.lua (zhCN.lua had the wrong coding. was unicode, after fix UTF*8. sorry for this mistake
+* fixed error with zhCN.lua (zhCN.lua had the wrong coding. was unicode, after fix UTF-8. sorry for this mistake
 * Added korean (koKR) localization from [blacknib](https://www.curseforge.com/members/blacknib)
 
 #### v2.1.3 (September 17, 2019)
