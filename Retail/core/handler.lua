@@ -548,7 +548,7 @@ end
 
 function events:ZONE_CHANGED_INDOORS(...)
     addon:Refresh()
-    
+
     if private.db.dev and private.db.show_prints then
         print("TravelGuide: refreshed after ZONE_CHANGED_INDOORS")
     end
@@ -556,7 +556,7 @@ end
 
 function events:QUEST_FINISHED(...)
     addon:Refresh()
-    
+
     if private.db.dev and private.db.show_prints then
         print("TravelGuide: refreshed after QUEST_FINISHED")
     end
