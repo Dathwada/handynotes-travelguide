@@ -1,5 +1,28 @@
 ## Revision History:
 
+#### v2.2.0 (October 14, 2020)
+-------------------------------
+* Finally found a way to track the timezones for Darkshore, Arathi Highlands, Tirisfal Glades and Sillithus
+* Added some new Shadowlands stuff
+    * Portal to Oribos in Orgrimmar and Stormwind
+    * Portals and Teleport platforms in Oribos
+    * Anima Gateways to Hero's rest in Bastion
+    * Covenant Travel Network
+* Added new icons for the new stuff
+* Added new options to toggle the new stuff
+* Rework config
+    * Added Tabs: General and Scale / Alpha
+    * Added faction requirement for toggle zeppelin, horde zeppelin and alliance boat
+    * Added individual scale and alpha options for portals, boats, zeppelins, covenant and others
+    * Added a requirement for the Easy Waypoints function
+* Added Simplified Chinese (zhCN) localization from [mmk5](https://www.curseforge.com/members/mmk5) (83,03%)
+* Added Traditional Chinese (zhTW) localization from [lostindark2](https://www.curseforge.com/members/lostindark2) (59,63%)
+* Added Spanish (esES) localization created with [WoW.tools Tables](https://wow.tools/dbc/) (36,24%)
+* Added French (frFR) localization created with [WoW.tools Tables](https://wow.tools/dbc/) and ingame reviews (72,48%)
+* Added Russian (ruRU) localization created with [WoW.tools Tables](https://wow.tools/dbc/) (45,87%)
+* Tooltip should now refresh after RETRIEVING DATA... (for quest names)
+* Added new requirement notes for time travel and the covenant travel network
+
 #### v2.1.5 (August 26, 2020)
 -----------------------------
 * Added Brazilian Portuguese (ptBR) localization from [angel333119](https://www.curseforge.com/members/angel333119)
