@@ -1,12 +1,8 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "frFR", false, true)
 
 if not L then return end
---French translation by  ( https://www.curseforge.com/members/ )
+-- French translation by  ( https://www.curseforge.com/members/ )
 if L then
-
-L["Anima Gateway"] = "Anima Gateway"
-
-L["Anima Gateway to Hero's rest"] = "Anima Gateway to Hero's rest"
 L["Ardenweald"] = "Sylvarden"
 L["Azsuna"] = true
 L["Bastion"] = "Le Bastion"
@@ -31,59 +27,21 @@ L["Boat to Zuldazar"] = "Bateau vers Zuldazar"
 L["Broken Isles"] = "Îles Brisées"
 L["Broken Isles, Stormheim"] = "Îles Brisées, Tornheim"
 L["Broken Shore"] = "Rivage Brisé"
-
-L["config_anima_gateway"] = "Anima Gateways in Bastion"
-
-L["config_anima_gateway_desc"] = "Show the anima gateway locations in Bastion."
 L["config_boat"] = "Bateau"
 L["config_boat_alliance"] = "Bateau de l'Alliance"
 L["config_boat_alliance_desc"] = "Afficher locations des bateaux de l'Alliance."
 L["config_boat_desc"] = "Afficher locations des bateaux"
-
-L["config_covenant"] = "Covenant Travel Network"
-
-L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
 L["config_deeprun_tram"] = "Tram des Profondeurs"
 L["config_deeprun_tram_desc"] = "Montrez les emplacements des trams de profondeurs à Stormwind et Ironforge."
-
-L["config_easy_waypoints"] = "Easy waypoints"
-
-L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 L["config_icon_alpha"] = "Opacité"
 L["config_icon_alpha_desc"] = "La transparence des icônes"
 L["config_icon_scale"] = "Échelle"
 L["config_icon_scale_desc"] = "L'échelle des icônes"
 L["config_note"] = "Note"
 L["config_note_desc"] = "Affiche les notes supplémentaires du nœud, lorsqu'il est disponible."
-
-L["config_order_hall_portal"] = "Order Hall portal"
-
-L["config_order_hall_portal_desc"] = "Show the Order Hall portal locations."
-
-L["config_others"] = "Others"
-
-L["config_others_desc"] = "Show all the other POIs."
-
-L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
 L["config_portal"] = "Portail"
-
-L["config_portal_desc"] = "Show the portal locations."
-
-L["config_restore_nodes"] = "Restore hidden nodes"
-
-L["config_restore_nodes_desc"] = "Restore all nodes that were hidden via the context menu."
-
-L["config_restore_nodes_print"] = "All hidden nodes have been restored"
 L["config_tab_general"] = "Général"
 L["config_tab_scale_alpha"] = "Échelle / Opacité"
-
-L["config_teleport_platform"] = "Teleport platforms in Oribos"
-
-L["config_teleport_platform_desc"] = "Show the teleport plattform locations in Oribos."
-
-L["config_warfront_portal"] = "Warfront portal"
-
-L["config_warfront_portal_desc"] = "Show the Warfront portal locations."
 L["config_what_to_display"] = "Quoi afficher?"
 L["config_what_to_display_desc"] = "Ces paramètres contrôlent le type d’icônes à afficher."
 L["config_zeppelin"] = "Zeppelin"
@@ -109,37 +67,13 @@ L["Eastern Kingdoms, Stranglethorn Vale"] = "Royaumes de l’Est, Vallée de Str
 L["Eastern Kingdoms, Tirisfal Glades"] = "Royaumes de l’Est, Clairières de Tirisfal"
 L["Eastern Kingdoms, Wetlands"] = "Royaumes de l’Est, Les Paluns"
 L["Ember Ward"] = "Province des Braises"
-
-L["Eternal Gateway"] = "Eternal Gateway"
 L["Feeders' Thicket"] = "Fourré des Dévoreurs"
-
-L["Great Eagle to Trueshot Lodge"] = "Great Eagle to Trueshot Lodge"
 L["Halls of Atonement"] = "Salles de l’Expiation"
 L["handler_context_menu_add_tomtom"] = "Ajouter à TomTom"
 L["handler_context_menu_hide_node"] = "Cacher ce nœud"
-
-L["handler_tooltip_data"] = "RETRIEVING DATA..."
-
-L["handler_tooltip_not_available"] = "currently NOT available"
-
-L["handler_tooltip_quest"] = "Unlocked with quest"
 L["handler_tooltip_requires"] = "Nécessite"
-
-L["handler_tooltip_requires_level"] = "Requires at least player level"
-
-L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
-
-L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["Heartwood Grove"] = "Bosquet du Xylocarde"
 L["Highmountain"] = "Haut-Roc"
-
-L["in Exodar"] = "in Exodar"
-
-L["in Undercity Magic Quarter"] = "in Undercity Magic Quarter"
-
-L["Into the Maw"] = "Into the Maw"
-
-L["Jump to Skyhold"] = "Jump to Skyhold"
 L["Kalimdor"] = true
 L["Kalimdor, Azuremyst Isle"] = "Kalimdor, Île de Brume-Azur"
 L["Kalimdor, Darkshore"] = "Kalimdor, Sombrivage"
@@ -153,17 +87,7 @@ L["Kul Tiras"] = true
 L["Kul Tiras, Tiragarde Sound"] = "Kul Tiras, Rade de Tiragarde"
 L["Maelstrom"] = "Le Maelström"
 L["Maelstrom, Deepholm"] = "Le Maelström, Le Tréfonds"
-
-L["Main Hall, Seat of the Primus"] = "Main Hall, Seat of the Primus"
 L["Maldraxxus"] = true
-
-L["near Dreamsang Fenn"] = "near Dreamsang Fenn"
-
-L["near Hibernal Hollow"] = "near Hibernal Hollow"
-
-L["near Tirna Scithe"] = "near Tirna Scithe"
-
-L["near Tirna Vaal"] = "near Tirna Vaal"
 L["Northrend, Borean Tundra"] = "Norfendre, Toundra Boréenne"
 L["Northrend, Crystalsong Forest"] = "Norfendre, Forêt du Chant de cristal"
 L["Northrend, Dragonblight"] = "Norfendre, Désolation des dragons"
@@ -172,14 +96,10 @@ L["Northrend, Valgarde"] = "Norfendre, Valgarde"
 L["Northrend, Valiance Keep"] = "Norfendre, Donjon de la Bravoure"
 L["Northrend, Vengeance Landing"] = "Norfendre, Accostage de la Vengeance"
 L["Northrend, Warsong Hold"] = "Norfendre, Bastion Chanteguerre"
-
-L["Nurakkir, House of Eyes"] = "Nurakkir, House of Eyes"
 L["Orb of translocation"] = "Orbe de transposition"
 L["Oribos"] = true
 L["Outland"] = "Outreterre"
 L["Outland, Terokkar Forest"] = "Outreterre, Forêt de Terokkar"
-
-L["Overlook, Seat of the Primus"] = "Overlook, Seat of the Primus"
 L["Pandaria"] = "Pandarie"
 L["Pandaria, Kun-Lai Summit"] = "Pandarie, Sommet de Kun-Lai"
 L["Pandaria, Townlong Steppes"] = "Pandarie, Steppes de Tanglong"
@@ -235,21 +155,13 @@ L["Portal to Vol'mar"] = "Portail vers Vol'mar"
 L["Portal to Warspear"] = "Portail vers Fer-de-Lance"
 L["Portal to Zuldazar"] = "Portail vers Zuldazar"
 L["Pridefall Hamlet"] = "Tombe-Fierté"
-
-L["RANDOM LOCATION"] = "RANDOM LOCATION"
 L["Reavendreath"] = true
-
-L["Return to Boralus"] = "Return to Boralus"
-
-L["Return to Zuldazar"] = "Return to Zuldazar"
 L["Sanctuary of the Mad"] = "Sanctuaire du Fou"
 L["Seat of the Primus"] = "Siège du Primat"
 L["Shadowlands"] = "Ombreterre"
 L["Shimmerbough"] = "Lumefronde"
 L["Sinfall"] = "Tombe-Vice"
 L["Stormheim"] = "Tornheim"
-
-L["Submarine to Mechagon"] = "Submarine to Mechagon"
 L["Suramar"] = true
 L["The Banewood"] = "Le Malbois"
 L["The Eternal Terrace"] = "Terrasse Éternelle"
@@ -264,6 +176,4 @@ L["Zeppelin to Borean Tundra"] = "Zeppelin vers Toundra Boréenne"
 L["Zeppelin to Orgrimmar"] = "Zeppelin vers Orgrimmar"
 L["Zeppelin to Stranglethorn Vale"] = "Zeppelin vers Vallée de Strangleronce"
 L["Zeppelin to Thunder Bluff"] = "Zeppelin vers Pitons-du-Tonnerre"
-
-L["Zerekriss: Maldraxxus"] = "Zerekriss: Maldraxxus"
 end

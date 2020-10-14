@@ -1,12 +1,8 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "ptBR", false, true)
 
 if not L then return end
---Brazilian Portuguese translation by angel333119 ( https://www.curseforge.com/members/angel333119 )
+-- Brazilian Portuguese translation by angel333119 ( https://www.curseforge.com/members/angel333119 )
 if L then
-
-L["Anima Gateway"] = "Anima Gateway"
-
-L["Anima Gateway to Hero's rest"] = "Anima Gateway to Hero's rest"
 L["Ardenweald"] = "Ardena"
 L["Azsuna"] = true
 L["Bastion"] = "Bastião"
@@ -31,18 +27,10 @@ L["Boat to Zuldazar"] = "Navio para Zuldazar"
 L["Broken Isles"] = "Ilhas Partidas"
 L["Broken Isles, Stormheim"] = "Ilhas Partidas, Trommheim"
 L["Broken Shore"] = "Costa Partida"
-
-L["config_anima_gateway"] = "Anima Gateways in Bastion"
-
-L["config_anima_gateway_desc"] = "Show the anima gateway locations in Bastion."
 L["config_boat"] = "Navios"
 L["config_boat_alliance"] = "Navios da Aliança"
 L["config_boat_alliance_desc"] = "Mostrar as localizações dos navios da Aliança."
 L["config_boat_desc"] = "Mostrar as localizações dos navios."
-
-L["config_covenant"] = "Covenant Travel Network"
-
-L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
 L["config_deeprun_tram"] = "Metrô Correfundo"
 L["config_deeprun_tram_desc"] = "Mostrar a localização do Metrô Correfundo em Ventobravo e Altaforja."
 L["config_easy_waypoints"] = "Pontos de destino facilitados"
@@ -55,24 +43,12 @@ L["config_note"] = "Observações"
 L["config_note_desc"] = "Mostrar notas de observação adicionais quando disponíveis."
 L["config_order_hall_portal"] = "Portal para o Salão de Classe"
 L["config_order_hall_portal_desc"] = "Mostrar as localizações dos portais dos Salões de Classe."
-
-L["config_others"] = "Others"
-
-L["config_others_desc"] = "Show all the other POIs."
 L["config_plugin_desc"] = "Mostra portais, localizações de zepelins e navios no Mapa-múndi e minimapa."
 L["config_portal"] = "Portal"
 L["config_portal_desc"] = "Mostrar as localizações dos portais."
 L["config_restore_nodes"] = "Restaurar ícones escondidos"
 L["config_restore_nodes_desc"] = "Restaura todos os ícones que você escondeu manualmente escolhendo a opção \"Esconder ícone\"."
 L["config_restore_nodes_print"] = "Todos os ícones foram restaurados"
-
-L["config_tab_general"] = "General"
-
-L["config_tab_scale_alpha"] = "Scale / Alpha"
-
-L["config_teleport_platform"] = "Teleport platforms in Oribos"
-
-L["config_teleport_platform_desc"] = "Show the teleport plattform locations in Oribos."
 L["config_warfront_portal"] = "Portal Front de Guerra"
 L["config_warfront_portal_desc"] = "Mostrar a localização dos Portais para o Front de Guerra."
 L["config_what_to_display"] = "O que exibir?"
@@ -100,8 +76,6 @@ L["Eastern Kingdoms, Stranglethorn Vale"] = "Reinos do Leste, Selva do Espinhaç
 L["Eastern Kingdoms, Tirisfal Glades"] = "Reinos do Leste, Clareiras de Tirisfal"
 L["Eastern Kingdoms, Wetlands"] = "Reinos do Leste, Pantanal"
 L["Ember Ward"] = "Reduto das Brasas"
-
-L["Eternal Gateway"] = "Eternal Gateway"
 L["Feeders' Thicket"] = "Bosque do Provimento"
 L["Great Eagle to Trueshot Lodge"] = "Grande Águia para Tenda Tirocerto"
 L["Halls of Atonement"] = "Salões da Expiação"
@@ -112,16 +86,10 @@ L["handler_tooltip_not_available"] = "Atualmente INDISPONÍVEL"
 L["handler_tooltip_quest"] = "Desbloqueado com a missão"
 L["handler_tooltip_requires"] = "Requer"
 L["handler_tooltip_requires_level"] = "Requer personagem com nível mínimo de"
-
-L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
-
-L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["Heartwood Grove"] = "Bosque Lenhocórdis"
 L["Highmountain"] = "Alta Montanha"
 L["in Exodar"] = "em Exodar"
 L["in Undercity Magic Quarter"] = "no Distrito da Magia em Cidade Baixa"
-
-L["Into the Maw"] = "Into the Maw"
 L["Jump to Skyhold"] = "Pulo para Fortaleza Celeste"
 L["Kalimdor"] = true
 L["Kalimdor, Azuremyst Isle"] = "Kalimdor, Ilha Névoa Lazúli"
@@ -136,17 +104,7 @@ L["Kul Tiras"] = true
 L["Kul Tiras, Tiragarde Sound"] = "Kul Tiras, Estreito Tiragarde"
 L["Maelstrom"] = "Voragem"
 L["Maelstrom, Deepholm"] = "Voragem, Geodomo"
-
-L["Main Hall, Seat of the Primus"] = "Main Hall, Seat of the Primus"
 L["Maldraxxus"] = true
-
-L["near Dreamsang Fenn"] = "near Dreamsang Fenn"
-
-L["near Hibernal Hollow"] = "near Hibernal Hollow"
-
-L["near Tirna Scithe"] = "near Tirna Scithe"
-
-L["near Tirna Vaal"] = "near Tirna Vaal"
 L["Northrend, Borean Tundra"] = "Nortúndria, Tundra Boreana"
 L["Northrend, Crystalsong Forest"] = "Nortúndria, Floresta do Canto Cristalino"
 L["Northrend, Dragonblight"] = "Nortúndria, Ermo das Serpes"
@@ -155,14 +113,10 @@ L["Northrend, Valgarde"] = "Nortúndria, Valgarde"
 L["Northrend, Valiance Keep"] = "Nortúndria, Bastilha Valentia"
 L["Northrend, Vengeance Landing"] = "Nortúndria, Porto Vendeta"
 L["Northrend, Warsong Hold"] = "Nortúndria, Fortaleza Brado Guerreiro"
-
-L["Nurakkir, House of Eyes"] = "Nurakkir, House of Eyes"
 L["Orb of translocation"] = "Orbe da Translocação"
 L["Oribos"] = true
 L["Outland"] = "Terralém"
 L["Outland, Terokkar Forest"] = "Terralém, Mata Terokkar"
-
-L["Overlook, Seat of the Primus"] = "Overlook, Seat of the Primus"
 L["Pandaria"] = true
 L["Pandaria, Kun-Lai Summit"] = "Pandaria, Monte Kun-Lai"
 L["Pandaria, Townlong Steppes"] = "Pandaria, Estepes de Taolong"
@@ -206,8 +160,6 @@ L["Portal to Temple of Earth"] = "Portal para Templo da Terra"
 L["Portal to the Purple Parlor"] = "Portal para Salão Púrpura"
 L["Portal to the Sepulcher"] = "Portal para O Sepulcro"
 L["Portal to Therazane's Throne"] = "Portal para Trono de Therazane"
-
-L["Portal to Thorghast"] = "Portal to Thorghast"
 L["Portal to Thunder Bluff"] = "Portal para Penhasco do Trovão"
 L["Portal to Tol Barad"] = "Portal para Tol Barad"
 L["Portal to Twilight Highlands"] = "Portal para Planalto do Crepúsculo"
@@ -219,8 +171,6 @@ L["Portal to Vol'mar"] = "Portal para Vol'mar"
 L["Portal to Warspear"] = "Portal para Lança de Guerra"
 L["Portal to Zuldazar"] = "Portal para Zuldazar"
 L["Pridefall Hamlet"] = "Aldeia de Orgúlia"
-
-L["RANDOM LOCATION"] = "RANDOM LOCATION"
 L["Reavendreath"] = "Revendreth"
 L["Return to Boralus"] = "Retorno para Boralus"
 L["Return to Zuldazar"] = "Retorno para Zuldazar"
@@ -235,13 +185,7 @@ L["Suramar"] = true
 L["The Banewood"] = "Mata da Perdição"
 L["The Eternal Terrace"] = "Terraço Eternal"
 L["The Maw"] = "A Gorja"
-
-L["To Ring of Fates"] = "To Ring of Fates"
-
-L["To Ring of Transference"] = "To Ring of Transference"
 L["Val'sharah"] = true
-
-L["Waystone to Oribos"] = "Waystone to Oribos"
 L["Zandalar"] = true
 L["Zandalar, Zuldazar"] = true
 L["Zeppelin to Borean Tundra"] = "Zepelim para Tundra Boreana"

@@ -1,7 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "deDE", false, true)
 
 if not L then return end
---German Translation by Dathwada EU-Eredar
+-- German Translation by Dathwada EU-Eredar
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
