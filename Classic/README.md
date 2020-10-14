@@ -6,8 +6,8 @@
 * **toggle visibility of**
 	* ![](https://i.imgur.com/H9wPEeD.png)Boats
 	* ![](https://i.imgur.com/vfQqSBK.png)Alliance Boats (If you play Horde, it displays the Alliance boats.)
-	* ![](https://i.imgur.com/cWTR8xo.png)Zepplins
-	* ![](https://i.imgur.com/HQLt4uh.png)Horde Zepplins (If you play Alliance, it displays the Horde zepplins.)
+	* ![](https://i.imgur.com/cWTR8xo.png)Zeppelins
+	* ![](https://i.imgur.com/HQLt4uh.png)Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
 	* ![](https://i.imgur.com/VYJ1NaJ.png)Deeprun Tram
 	* Notes
 	
@@ -20,11 +20,11 @@
 ## Localization
 * `enUS` - default
 * `deDE` - German (Native locale by Dathwada!)
-* `ruRU` - Russuian (thanks [Arrogant_Dreamer](https://www.curseforge.com/members/Arrogant_Dreamer)!)
-* `koKR` - Korean (thanks [blacknib](https://www.curseforge.com/members/blacknib)!)
-* `zhCN` - Simplified Chinese (thanks [swimstiger](https://www.curseforge.com/members/swimstiger)!)
 * `frFR` - French (thanks [scaxfull](https://www.curseforge.com/members/scaxfull)!)
+* `koKR` - Korean (thanks [blacknib](https://www.curseforge.com/members/blacknib)!)
 * `ptBR` - Brazilian Portuguese (thanks [D4MM0N1C](https://www.curseforge.com/members/D4MM0N1C)!)
+* `ruRU` - Russian (thanks [Arrogant_Dreamer](https://www.curseforge.com/members/Arrogant_Dreamer)!)
+* `zhCN` - Simplified Chinese (thanks [swimstiger](https://www.curseforge.com/members/swimstiger)!)
 
 If you wish to help localize TravelGuide (Classic), please go to [Localization](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic/localization).
 
@@ -32,4 +32,4 @@ If you wish to help localize TravelGuide (Classic), please go to [Localization](
 
 ## Issues and Suggestion
 
-Please go to [Issues](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic/issues) to submit any issue found or any suggestion.
+Please go to [Issues](https://github.com/Dathwada/handynotes-travelguide/issues) to submit any issue found or any suggestion.

@@ -7,8 +7,8 @@
 	* ![](https://i.imgur.com/NIUq9ta.png) Portals / Order hall portals / Warfront portals
 	* ![](https://i.imgur.com/H9wPEeD.png) Boats
 	* ![](https://i.imgur.com/vfQqSBK.png) Alliance Boats (If you play Horde, it displays the Alliance boats.)
-	* ![](https://i.imgur.com/cWTR8xo.png) Zepplins
-	* ![](https://i.imgur.com/HQLt4uh.png) Horde Zepplins (If you play Alliance, it displays the Horde zepplins.)
+	* ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
+	* ![](https://i.imgur.com/HQLt4uh.png) Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
 	* ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
 	* **Covenant travel network:**
 		* ![](https://i.imgur.com/Q8hRn5U.png) Necrolords
@@ -33,7 +33,7 @@
 * `deDE` - German (Native locale by Dathwada!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
 * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!)
-* `zhTW` - Simplified Chinese (thanks [lostindark2](https://www.curseforge.com/members/lostindark2)!)
+* `zhTW` - Traditional Chinese (thanks [lostindark2](https://www.curseforge.com/members/lostindark2)!)
 
 If you wish to help localize TravelGuide, please go to [Localization](https://www.curseforge.com/wow/addons/handynotes-travelguide/localization).
 
