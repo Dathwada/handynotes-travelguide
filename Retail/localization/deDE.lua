@@ -62,7 +62,7 @@ L["config_others_desc"] = "Zeige alle anderen POIs."
 
 L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"
 L["config_restore_nodes_desc"] = "Stellt alle Punkte wieder her, die über das Kontextmenü versteckt wurden."
-L["config_restore_nodes_print"] = "Alle Versteckten Punkte wurden wiederhergestellt."
+L["config_restore_nodes_print"] = "Alle versteckten Punkte wurden wiederhergestellt."
 
 ----------------------------------------------------------------------------------------------------
 -------------------------------------------------DEV------------------------------------------------
