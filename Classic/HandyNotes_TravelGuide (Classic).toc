@@ -27,15 +27,14 @@
 ## X-Date: 2020-07-22
 ## X-Category: Map
 
-Locale\Locales.xml
-Locale\deDE.lua
-Locale\enUS.lua
-Locale\ruRU.lua
-Locale\koKR.lua
-Locale\zhCN.lua
-Locale\frFR.lua
-Locale\ptBR.lua
-Core\Constants.lua
-Core\Handler.lua
-Core\Config.lua
-Data\DB.lua
+# LOCALIZATION FILES
+localization\locales.xml
+
+# CORE FILES
+core\constants.lua
+core\handler.lua
+core\config.lua
+core\dev.lua
+
+# DATABASE
+data\DB.lua

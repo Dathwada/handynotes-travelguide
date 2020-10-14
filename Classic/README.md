@@ -15,7 +15,7 @@
     
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
-* notes for the zepplins and boats.
+* notes for the zeppelins and boats.
 
 ## Localization
 * `enUS` - default
