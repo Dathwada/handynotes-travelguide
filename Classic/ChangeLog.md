@@ -1,5 +1,13 @@
 ## Revision History:
 
+#### v2.2.0 (October 14, 2020)
+------------------------------
+* Rework config
+    * Added Tabs: General and Scale / Alpha
+    * Added faction requirement for toggle zeppelin, horde zeppelin and alliance boat
+    * Added individual scale and alpha options for boats, zeppelins and tram
+    * Added a requirement for the Easy Waypoints function
+
 #### v2.1.7 (July 22, 2020)
 ---------------------------
 * new feature: easy waypoints allows you to set a waypoint by right-clicking any POI (point of interest) and access to more options by CTRL + right-clicking (ON by default you can turn it off in the settings)
