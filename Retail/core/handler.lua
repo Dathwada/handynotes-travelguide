@@ -86,7 +86,7 @@ local get_point_info = function(point)
         if ((point.portal or point.orderhall or point.boat or point.mirror or point.mushroom or point.platform or point.necroportal) == true and (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell)) then
         if (point.portal and point.timetravel) then
             if UnitLevel("player") >= 50 then
-                if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
+                if (not IsQuestCompleted(point.timetravel) and not point.warfront and not point.ttturn) then
                     icon = MagePortalHorde
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
                     icon = MagePortalHorde
@@ -152,18 +152,18 @@ local get_point_info = function(point)
             end
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
-            if ((astate == 1 or astate == 2) and point.faction == "Alliance" and IsQuestCompleted(point.timetravel) == false) then
+            if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel)) then
                 icon = work_out_icon(point)
-            elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and IsQuestCompleted(point.timetravel) == false) then
+            elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and not IsQuestCompleted(point.timetravel)) then
                 icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
             end
         end
         if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
-            if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and IsQuestCompleted(point.timetravel) == false) then
+            if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel)) then
                 icon = work_out_icon(point)
-            elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde"and IsQuestCompleted(point.timetravel)== false) then
+            elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde" and not IsQuestCompleted(point.timetravel)) then
                 icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
@@ -242,7 +242,7 @@ end
         if (point.lvl and UnitLevel("player") < point.lvl) then
             tooltip:AddLine(RequiresPlayerLvl..": "..point.lvl, 1) -- red
         end
-        if (point.quest and IsQuestCompleted(point.quest) == false) then
+        if (point.quest and not IsQuestCompleted(point.quest)) then
             if C_QuestLog.GetTitleForQuestID(point.quest) ~= nil then
                 tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(point.quest).."] (ID: "..point.quest..")",1,0,0)
             else
@@ -254,7 +254,7 @@ end
         if (point.spell and point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
             local spellName = GetSpellInfo(point.spell)
             if spellName then
-                if (IsQuestCompleted(point.timetravel) == false and not point.warfront and not point.ttturn) then
+                if (not IsQuestCompleted(point.timetravel) and not point.warfront and not point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
