@@ -399,12 +399,12 @@ DB.points = {
         [73706210] = { portal=true, label=PtoSM, note=EversongWoods, faction="Horde" },
         [73706980] = { portal=true, label=PtoOG, note=Durotar, quest=46931, faction="Horde" },
         [73707730] = { portal=true, label=PtoTB, note=Mulgore, faction="Horde" },
-        [73708530] = { portal=true, label=PtoSilithus, note=Kalimdor, lvl=50, quest=46931, faction="Horde" },
-        [63008530] = { portal=true, label=PtoNazjatar, quest=55053, faction="Horde" },
+        [73708530] = { portal=true, label=PtoSilithus, note=Kalimdor, quest=46931, lvl=50, faction="Horde" },
+        [63008530] = { portal=true, label=PtoNazjatar, quest=55053, lvl=50, faction="Horde" },
         },
     [1355] = { -- Nazjatar
-        [47286278] = { portal=true, label=PtoZuldazar, note=Zandalar, quest=55053, faction="Horde" },
-        [40005260] = { portal=true, label=PtoBoralus, note=KulTiras, quest=54972, faction="Alliance" },
+        [47286278] = { portal=true, label=PtoZuldazar, note=Zandalar, quest=55053, lvl=50, faction="Horde" },
+        [40005260] = { portal=true, label=PtoBoralus, note=KulTiras, quest=54972, lvl=50, faction="Alliance" },
         },
     [876] = { -- Kul Tiras
         [61404950] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
