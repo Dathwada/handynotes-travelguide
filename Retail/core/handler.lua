@@ -99,18 +99,22 @@ local get_point_info = function(point)
                 icon = work_out_icon(point)
             end
         end
-        if (point.portal and point.quest) then
-            if IsQuestCompleted(point.quest) then
-                icon = work_out_icon(point)
-            else
-                icon = MagePortalHorde
-            end
-        end
         if (point.orderhall and point.spell) then
             if IsSpellKnown(point.spell) then
                 icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
+            end
+        end
+        if (point.portal and (point.lvl or point.quest)) then
+            if (point.lvl and (UnitLevel("player") < point.lvl)) and (point.quest and not IsQuestCompleted(point.quest)) then
+                icon = MagePortalHorde
+            elseif (point.lvl and (UnitLevel("player") < point.lvl)) then
+                icon = MagePortalHorde
+            elseif (point.quest and not IsQuestCompleted(point.quest)) then
+                icon = MagePortalHorde
+            else
+                icon = work_out_icon(point)
             end
         end
         if (point.boat and point.quest) then
@@ -145,21 +149,6 @@ local get_point_info = function(point)
                 icon = constantsicon.mushroom_X
             elseif point.necroportal then
                 icon = constantsicon.necroportal_X
-            end
-        end
-        if point.lvl then
-            if point.quest then
-                if IsQuestCompleted(point.quest) then
-                    icon = work_out_icon(point)
-                else
-                    icon = MagePortalHorde
-                end
-            else
-                if (UnitLevel("player") >= point.lvl) then
-                    icon = work_out_icon(point)
-                else
-                    icon = MagePortalHorde
-                end
             end
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
