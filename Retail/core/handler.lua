@@ -31,49 +31,19 @@ local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
 
 ----------------------------------------------------------------------------------------------------
--- get creature's name from server
-local mcache_tooltip = CreateFrame("GameTooltip", id , UIParent, "GameTooltipTemplate")
-local creature_cache
-
--- activation code
-local function getCreatureNamebyID(id)
-    mcache_tooltip:SetOwner(UIParent, "ANCHOR_NONE")
-    mcache_tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(id))
-    creature_cache = _G[FOLDER_NAME.."_mcacheToolTipTextLeft1"]:GetText()
-end
-
-----------------------------------------------------------------------------------------------------
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
 local function work_out_icon(point)
     local icon_key
 
-    if (point.boat) then icon_key = "boat" end
-    if (point.aboat) then icon_key = "aboat" end
-    if (point.zeppelin) then icon_key = "zeppelin" end
-    if (point.hzeppelin) then icon_key = "hzeppelin" end
-    if (point.portal or point.orderhall) then icon_key = "portal" end
-    if (point.mixedportal) then icon_key = "mixedportal" end
-    if (point.worderhall) then icon_key = "worderhall" end
-    if (point.tram) then icon_key = "tram" end
-    if (point.flightmaster) then icon_key = "flightmaster" end
-    if (point.herosrestgate) then icon_key = "herosrestgate" end
-    if (point.tpplatform) then icon_key = "tpplatform" end
-    if (point.necroportal) then icon_key = "necroportal" end
-    if (point.platform) then icon_key = "platform" end
-    if (point.mushroom) then icon_key = "mushroom" end
-    if (point.mirror) then icon_key = "mirror" end
-    
+    for i, k in ipairs({"portal", "orderhall", "mixedportal", "boat", "aboat", "zeppelin", "hzeppelin", "tram", "flightmaster",
+                        "herosrestgate", "tpplatform", "necroportal", "platform", "mushroom", "mirror"}) do
+        if point[k] then icon_key = k end
+    end
+
     if (icon_key and constantsicon[icon_key]) then
         return constantsicon[icon_key]
-    elseif (point.type and constantsicon[point.type]) then
-        return constantsicon[point.type]
-    -- use the icon specified in point data
-    elseif (point.icon) then
-        return point.icon
-    else
-        return private.constants.defaultIcon
     end
 end
 
@@ -82,19 +52,21 @@ local get_point_info = function(point)
     local MagePortalHorde = constantsicon.MagePortalHorde
     if point then
         local spellName = GetSpellInfo(point.spell)
-        local label = point.label or point.label2 or spellName or UNKNOWN
-        if ((point.portal or point.orderhall or point.boat or point.mirror or point.mushroom or point.platform or point.necroportal) == true and (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell)) then
-        if (point.portal and point.timetravel) then
-            if UnitLevel("player") >= 50 then
-                if (not IsQuestCompleted(point.timetravel) and not point.warfront and not point.ttturn) then
-                    icon = MagePortalHorde
-                elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
-                    icon = MagePortalHorde
-                elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
-                    icon = MagePortalHorde
-                else
-                    icon = work_out_icon(point)
-                end
+        local label = point.label or table.concat(point.multilabel, "\n") or spellName or UNKNOWN
+        if (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell) and not point.mixedportal then
+        if (point.portal and (point.lvl or point.quest or point.timetravel)) then
+            if (point.lvl and (UnitLevel("player") < point.lvl)) and (point.quest and not IsQuestCompleted(point.quest)) then
+                icon = MagePortalHorde
+            elseif (point.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and not point.timetravel["turn"]) then
+                icon = MagePortalHorde
+            elseif (point.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(point.timetravel["quest"]) and point.warfront and not point.timetravel["turn"]) then
+                icon = MagePortalHorde
+            elseif (point.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and point.timetravel["turn"]) then
+                icon = MagePortalHorde
+            elseif (point.lvl and (UnitLevel("player") < point.lvl)) then
+                icon = MagePortalHorde
+            elseif (point.quest and not IsQuestCompleted(point.quest)) then
+                icon = MagePortalHorde
             else
                 icon = work_out_icon(point)
             end
@@ -106,22 +78,29 @@ local get_point_info = function(point)
                 icon = MagePortalHorde
             end
         end
-        if (point.portal and (point.lvl or point.quest)) then
-            if (point.lvl and (UnitLevel("player") < point.lvl)) and (point.quest and not IsQuestCompleted(point.quest)) then
-                icon = MagePortalHorde
-            elseif (point.lvl and (UnitLevel("player") < point.lvl)) then
-                icon = MagePortalHorde
-            elseif (point.quest and not IsQuestCompleted(point.quest)) then
-                icon = MagePortalHorde
-            else
-                icon = work_out_icon(point)
-            end
-        end
         if (point.boat and point.quest) then
             if IsQuestCompleted(point.quest) then
                 icon = work_out_icon(point)
             else
                 icon = constantsicon.boat_X
+            end
+        end
+        if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
+            if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
+                icon = work_out_icon(point)
+            elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and not IsQuestCompleted(point.timetravel["quest"])) then
+                icon = work_out_icon(point)
+            else
+                icon = MagePortalHorde
+            end
+        end
+        if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
+            if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
+                icon = work_out_icon(point)
+            elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde" and not IsQuestCompleted(point.timetravel["quest"])) then
+                icon = work_out_icon(point)
+            else
+                icon = MagePortalHorde
             end
         end
         if (point.covenant and point.sanctumtalent) then
@@ -151,27 +130,9 @@ local get_point_info = function(point)
                 icon = constantsicon.necroportal_X
             end
         end
-        if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
-            if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel)) then
-                icon = work_out_icon(point)
-            elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and not IsQuestCompleted(point.timetravel)) then
-                icon = work_out_icon(point)
-            else
-                icon = MagePortalHorde
-            end
-        end
-        if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
-            if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel)) then
-                icon = work_out_icon(point)
-            elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde" and not IsQuestCompleted(point.timetravel)) then
-                icon = work_out_icon(point)
-            else
-                icon = MagePortalHorde
-            end
-        end
             else icon = work_out_icon(point)
         end
-            return label, label2, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
+            return label, multilabel, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
     end
 end
 
@@ -210,6 +171,25 @@ else
     dsetnote = 1
 end
 
+    function preparelabel()
+    -- workaround to prepare the multilabels with and without notes
+    -- because the game displays the first line in 14px and
+    -- the following lines in 13px with a normal for loop.
+        local label = {}
+        for i, name in ipairs(point.multilabel) do
+            if (point.multilabel and profile.show_note) then
+                if point.multilabel[i] and point.multinote[i] then
+                    label[i] = name.." ("..point.multinote[i]..")"
+                else
+                    label[i] = name -- if there is no note for this Portal
+                end
+            else
+                label[i] = name -- if the profile.show_note == false
+            end
+        end
+    return table.concat(label, "\n")
+    end
+
     if point then
         if (point.label) then
             tooltip:AddLine(point.label)
@@ -221,20 +201,14 @@ end
         if (point.note and profile.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
-        if (point.label1 and profile.show_note and not point.mixedportal) then
-            tooltip:AddLine(point.label1)
-        elseif (not point.mixedportal) then
-            tooltip:AddLine(point.label2)
+        if (point.multilabel and not point.mixedportal) then
+            tooltip:AddLine(preparelabel())
         end
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
         if (point.mixedportal) then
-            if (profile.show_note) then
-                tooltip:AddDoubleLine(point.label1, warfrontnote, nil,nil,nil,1) -- only the second line is red
-            elseif (not profile.show_note) then
-                tooltip:AddDoubleLine(point.label2, warfrontnote, nil,nil,nil,1) -- only the second line is red
-            end
+            tooltip:AddDoubleLine(preparelabel(), warfrontnote, nil,nil,nil,1) -- only the second line is red
         end
         if (point.warfront and (point.warfront == "arathi" and asetnote == 1) or (point.warfront == "darkshore" and dsetnote == 1)) then
             tooltip:AddLine(notavailable, 1) -- red
@@ -251,19 +225,19 @@ end
 --              print("refreshed")
             end
         end
-        if (point.spell and point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
-            local spellName = GetSpellInfo(point.spell)
+        if (point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
+            local spellName = GetSpellInfo(point.timetravel["spell"])
             if spellName then
-                if (not IsQuestCompleted(point.timetravel) and not point.warfront and not point.ttturn) then
+                if (not IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and not point.timetravel["turn"]) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
-                elseif (IsQuestCompleted(point.timetravel) and point.warfront and not point.ttturn) then
+                elseif (IsQuestCompleted(point.timetravel["quest"]) and point.warfront and not point.timetravel["turn"]) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
-                elseif (IsQuestCompleted(point.timetravel) and not point.warfront and point.ttturn) then
+                elseif (IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and point.timetravel["turn"]) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 end
             end
         end
-        if (point.spell and not point.timetravel) then -- don't show this if the spell is known
+        if (point.spell) then -- don't show this if the spell is known
             local spellName = GetSpellInfo(point.spell)
             local isKnown = IsSpellKnown(point.spell)
             if spellName and not isKnown then
@@ -422,7 +396,7 @@ local currentMapID = nil
         local state, value = next(t, prestate)
         while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local label, label2, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
+                local _, _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
                 if portal or orderhall or mixedportal then
                 scale = (scale or 1) * (icon and icon.scale_portal or 1) * profile.icon_scale_portal
                 alpha = (alpha or 1) * (icon and icon.alpha_portal or 1) * profile.icon_alpha_portal

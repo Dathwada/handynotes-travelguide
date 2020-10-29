@@ -57,14 +57,17 @@ constants.defaults = {
 
 local left, right, top, bottom = GetObjectIconTextureCoords("4772") --MagePortalAlliance
 local left2, right2, top2, bottom2 = GetObjectIconTextureCoords("4773") --MagePortalHorde
-constants.icon = {
-    portal = {
+local MagePortalAlliance = {
         icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
         tCoordLeft = left,
         tCoordRight = right,
         tCoordTop = top,
         tCoordBottom = bottom,
-    },
+    }
+
+constants.icon = {
+    portal = MagePortalAlliance,
+    orderhall = MagePortalAlliance,
     MagePortalHorde = {
         icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
         tCoordLeft = left2,

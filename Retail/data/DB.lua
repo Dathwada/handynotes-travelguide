@@ -368,32 +368,24 @@ DB.points = {
 ----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
 
     [875] = { -- Zandalar
-        [58206200] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
+        [58206200] = { portal=true, multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, faction="Horde" },
         [56307065] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
         [33201921] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51229, faction="Alliance" }, -- Vol'Dun Barnard "The Smasher" Baysworth
         [62492642] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51088, faction="Alliance" }, -- Nazmir Desha Stormwallow
         [47137856] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=51359, faction="Alliance" }, -- Zuldazar Daria Smithson
-        [58287605] = { boat=true, label1=BtoDrustvar.." ("..KulTiras..")\n"..format(BtoStormsongValley.." ("..KulTiras..")\n"..BtoTiragardeSound.." ("..KulTiras..")"),
-                                  label2=BtoDrustvar.."\n"..format(BtoStormsongValley.."\n"..BtoTiragardeSound..""),faction="Horde" },
-        [58367208] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
+        [58287605] = { boat=true, multilabel={BtoDrustvar, BtoStormsongValley, BtoTiragardeSound}, multinote={KulTiras, KulTiras, KulTiras}, faction="Horde" },
+        [58367208] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Horde", warfront="both" },
         },
     [862] = { -- Zuldazar
-        [58304450] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
+        [58304450] = { portal=true, multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, faction="Horde" },
         [55255824] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
-        [58466293] = { boat=true, label1=BtoDrustvar.." ("..KulTiras..")\n"..format(BtoStormsongValley.." ("..KulTiras..")\n"..BtoTiragardeSound.." ("..KulTiras..")"), 
-                                  label2=BtoDrustvar.."\n"..format(BtoStormsongValley.."\n"..BtoTiragardeSound..""), faction="Horde" },
-        [58596055] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
+        [58466293] = { boat=true, multilabel={BtoDrustvar, BtoStormsongValley, BtoTiragardeSound}, multinote={KulTiras, KulTiras, KulTiras}, faction="Horde" },
+        [58596055] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Horde", warfront="both" },
         },                               -- quest=51340, Drustvar   quest=51532, Stormsong valley   quest=51421, tiragard sound
     [1165] = { -- Dazar'alor
-        [51004600] = { portal=true, label1=PtoSM.." ("..EversongWoods..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoTB.." ("..Mulgore..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSM.."\n"..format(PtoOG.."\n"..PtoTB.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Horde" },
+        [51004600] = { portal=true, multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, faction="Horde" },
         [41808760] = { boat=true, label=StoMechagon, note=KulTiras, quest=55651, faction="Horde" },
-        [51859453] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Horde", warfront="both" },
+        [51859453] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Horde", warfront="both" },
         },
     [1163] = { -- Dazar'alor - The Great Seal
         [73706210] = { portal=true, label=PtoSM, note=EversongWoods, faction="Horde" },
@@ -407,26 +399,20 @@ DB.points = {
         [40005260] = { portal=true, label=PtoBoralus, note=KulTiras, quest=54972, lvl=50, faction="Alliance" },
         },
     [876] = { -- Kul Tiras
-        [61404950] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSW.."\n"..format(PtoIF.."\n"..PtoExodar.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Alliance" },
+        [61404950] = { portal=true, multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, faction="Alliance" },
         [69046516] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51438, faction="Horde" }, -- Tiragarde Sound speak: Erul Dawnbrook
         [25936716] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51340, faction="Horde" }, -- Drustvar
         [54371416] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51902450 boat Grok Seahandler
         [54141818] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
         [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, -- Mechagon 
 --noboat        [20742783] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
-        [62095274] = { boat=true, label1=BtoVolDun.." ("..Zandalar..")\n"..format(BtoNazmir.." ("..Zandalar..")\n"..BtoZuldazar.." ("..Zandalar..")"),
-                                  label2=BtoVolDun.."\n"..format(BtoNazmir.."\n"..BtoZuldazar..""), faction="Alliance" },
-        [60855074] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Alliance", warfront="both" },
+        [62095274] = { boat=true, multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
+        [60855074] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Alliance", warfront="both" },
         },      -- Voldun 51283, nazmir 51088, zuldazar 51308
     [895] = { -- Tiragarde Sound
-        [74302350] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSW.."\n"..format(PtoIF.."\n"..PtoExodar.."\n"..PtoSilithus.."\n"..PtoNazjatar..""), faction="Alliance" },
-        [73692628] = { boat=true, label1=BtoVolDun.." ("..Zandalar..")\n"..format(BtoNazmir.." ("..Zandalar..")\n"..BtoZuldazar.." ("..Zandalar..")"),
-                                  label2=BtoVolDun.."\n"..format(BtoNazmir.."\n"..BtoZuldazar..""), faction="Alliance" },
-        [73362568] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Alliance", warfront="both" },
+        [74302350] = { portal=true, multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, faction="Alliance" },
+        [73692628] = { boat=true, multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
+        [73362568] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Alliance", warfront="both" },
 
         },
     [942] = { -- Stormsong Valley
@@ -434,19 +420,15 @@ DB.points = {
         [51403370] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, --Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
         },
     [1161] = { -- Boralus
-        [70401600] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIF.." ("..DunMorogh..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoSilithus.." ("..Kalimdor..")\n"..PtoNazjatar..""),
-                                    label2=PtoSW.."\n"..format(PtoIF.."\n"..PtoExodar.."\n"..PtoSilithus.."\n"..PtoNazjatar..""),faction="Alliance" },
-        [67952669] = { boat=true, label1=BtoVolDun.." ("..Zandalar..")\n"..format(BtoNazmir.." ("..Zandalar..")\n"..BtoZuldazar.." ("..Zandalar..")"),
-                                  label2=BtoVolDun.."\n"..format(BtoNazmir.."\n"..BtoZuldazar..""), faction="Alliance" },
-        [66352486] = { mixedportal=true, label1=PtoArathiHighlands.." ("..EasternKingdoms..")\n"..format(PtoDarkshore.." ("..Kalimdor..")"),
-                                         label2=PtoArathiHighlands.."\n"..format(PtoDarkshore..""), lvl=50, faction="Alliance", warfront="both" }, --quest=53194,
+        [70401600] = { portal=true, multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, faction="Alliance" },
+        [67952669] = { boat=true, multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
+        [66352486] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Alliance", warfront="both" }, --quest=53194,
         },
 
 --------------------------------------------------------------------------------------------LEGION---------------------------------------------------------------------------------------------
 
     [619] = { -- Broken Isles
-        [30712543] = { orderhall=true, label1=PtoDala.." ("..BrokenIsles..")\n"..format(PtoEmeraldDreamway),
-                                       label2=PtoDala.."\n"..format(PtoEmeraldDreamway), class="DRUID" },
+        [30712543] = { orderhall=true, multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
         [63326940] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" },
         [45406523] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [46086351] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
@@ -490,8 +472,7 @@ DB.points = {
         [39834206] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
         },
     [641] = { -- Val'sharah
-        [41742385] = { orderhall=true, label1=PtoDala.." ("..BrokenIsles..")\n"..format(PtoEmeraldDreamway),
-                                       label2=PtoDala.."\n"..format(PtoEmeraldDreamway), class="DRUID" },
+        [41742385] = { orderhall=true, multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
         [54707490] = { worderhall=true, label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
         },
     [680] = { -- Suramar
@@ -568,20 +549,16 @@ DB.points = {
 ----------------------------------------------------------------------------------------------WoD----------------------------------------------------------------------------------------------
 
     [572] = { -- Draenor
-        [73004300] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoVolmar.." ("..TanaanJungle..")"),
-                                    label2=PtoOG.."\n"..format(PtoVolmar..""), faction="Horde"},
-        [73014305] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoLionswatch.." ("..TanaanJungle..")"),
-                                    label2=PtoSW.."\n"..format(PtoLionswatch..""), faction="Alliance"},
+        [73004300] = { portal=true, multilabel={PtoOG, PtoVolmar}, multinote={Durotar, TanaanJungle}, faction="Horde"},
+        [73014305] = { portal=true, multilabel={PtoSW, PtoLionswatch}, multinote={ElwynnForest, TanaanJungle}, faction="Alliance"},
         [34683698] = { portal=true, label=PtoWarspear, note=Ashran, quest=36614, faction="Horde"},
         [53556087] = { portal=true, label=PtoStormshield, note=Ashran, quest=36615, faction="Alliance"},
         [60424563] = { portal=true, label=PtoWarspear, note=Ashran, quest=37935, faction="Horde"},
         [59594867] = { portal=true, label=PtoStormshield, note=Ashran, quest=38445, faction="Alliance"},
         },
     [588] = { -- Ashran
-        [44001300] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoVolmar.." ("..TanaanJungle..")"),
-                                    label2=PtoOG.."\n"..format(PtoVolmar..""), faction="Horde"},
-        [40009000] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoLionswatch.." ("..TanaanJungle..")"),
-                                    label2=PtoSW.."\n"..format(PtoLionswatch..""), faction="Alliance"},
+        [44001300] = { portal=true, multilabel={PtoOG, PtoVolmar}, multinote={Durotar, TanaanJungle}, faction="Horde"},
+        [40009000] = { portal=true, multilabel={PtoSW, PtoLionswatch}, multinote={ElwynnForest, TanaanJungle}, faction="Alliance"},
         },
     [590] = { -- Frostwall (Garrison)
         [75104890] = { portal=true, label=PtoWarspear, note=Ashran, quest=36614, faction="Horde"},
@@ -701,8 +678,7 @@ DB.points = {
         [78858356] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [24607066] = { aboat=true, label=BtoSW, note=ElwynnForest, faction="Horde" },
         [24607065] = { boat=true, label=BtoSW, note=ElwynnForest, faction="Alliance" },
-        [47106782] = { boat=true, label1= BtoUnuPe.." ("..BoreanTundra..")\n"..format(BtoKamagua.." ("..HowlingFjord..")"),
-                                  label2= BtoUnuPe.."\n"..format(BtoKamagua..""), },
+        [47106782] = { boat=true, multilabel={BtoUnuPe, BtoKamagua}, multinote={BoreanTundra, HowlingFjord} },
         [30506590] = { boat=true, label=BtoMoaKiHarbor, note=Dragonblight },
         [66408188] = { boat=true, label=BtoMoaKiHarbor, note=Dragonblight },
         [17556488] = { zeppelin=true, label=ZtoOG, note=Durotar, faction="Horde" },
@@ -737,24 +713,20 @@ DB.points = {
         [56834888] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         },
     [101] = { -- Outland
-        [43886598] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
-                                    label2=PtoSW.."\n"..format(PtoIofQD..""), faction="Alliance" },
-        [43886599] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
-                                    label2=PtoOG.."\n"..format(PtoIofQD..""), faction="Horde" },
+        [43886598] = { portal=true, multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [43886599] = { portal=true, multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
         [69075236] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [69075190] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         },
     [108] = { -- Terokkar Forest
-        [30252350] = { portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
-                                    label2=PtoSW.."\n"..format(PtoIofQD..""), faction="Alliance" },
-        [30252350] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoIofQD.." ("..EasternKingdoms..")"),
-                                    label2=PtoOG.."\n"..format(PtoIofQD..""), faction="Horde" },
+        [30252350] = { portal=true, multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [30252350] = { portal=true, multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
         },
     [103] = { -- Exodar
         [48306290] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         },
     [97] = { -- Azuremyst Isle
-        [20335407] = { spell=290245, timetravel=54411, portal=true, label=PtoDarnassus, note=Teldrassil },
+        [20335407] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoDarnassus, note=Teldrassil },
         [26364616] = { portal=true, label=PtoSW, note=ElwynnForest..")\n("..inExodar.."", faction="Alliance" },
         },
     [110] = { -- Silvermoon City
@@ -762,8 +734,7 @@ DB.points = {
         [58501890] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" }, 
         },
     [94] = { -- Eversong Woods
-        [52803270] = { portal=true, label1=PtoUC.." ("..Tirisfal..")\n"..format(PtoOG.." ("..Durotar..")"),
-                                    label2=PtoUC.."\n"..format(PtoOG..""), faction="Horde" },
+        [52803270] = { portal=true, multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde" },
         },
 
 --------------------------------------------------------------------------------------------Vanilla--------------------------------------------------------------------------------------------
@@ -772,29 +743,25 @@ DB.points = {
         [59236650] = { aboat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [59246651] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [56835629] = { boat=true, label=BtoBootyBay, note=StranglethornVale },
-        [43561640] = { spell=290245, timetravel=54411, portal=true, label1=PtoSW.." ("..ElwynnForest..")\n"..format(PtoExodar.." ("..AzuremystIsle..")"),
-                                                                    label2=PtoSW.."\n"..format(PtoExodar..""),faction="Alliance" },
-        [39401090] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
-        [43211616] = { spell=290245, timetravel=54411, portal=true, label=PtoExodar, note=Teldrassil, faction="Horde" },
+        [43561640] = { timetravel={quest=54411, spell=290245}, portal=true, multilabel={PtoSW, PtoExodar}, multinote={ElwynnForest, AzuremystIsle},faction="Alliance" },
+        [39401090] = { timetravel={quest=54411, spell=290245}, portal=true, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
+        [43211616] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoExodar, note=Teldrassil, faction="Horde" },
         [29922620] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59468340] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59448340] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         [56122758] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [56222774] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
-        [29332713] = { spell=290245, timetravel=54411, portal=true, label=PtoDarnassus, note=Teldrassil },
+        [29332713] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoDarnassus, note=Teldrassil },
         [45405420] = { zeppelin=true, label=ZtoOG, note=Durotar, faction="Horde" },
         [45405421] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
-        [58154245] = { zeppelin=true, label1=ZtoTB.." ("..Mulgore..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")\n"..ZtoBoreanTundra.." ("..WarsongHold..")"),
-                                      label2=ZtoTB.."\n"..format(ZtoStranglethornVale.."\n"..ZtoBoreanTundra..""), faction="Horde" },
-        [58154246] = { hzeppelin=true, label1=ZtoTB.." ("..Mulgore..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")\n"..ZtoBoreanTundra.." ("..WarsongHold..")"),
-                                       label2=ZtoTB.."\n"..format(ZtoStranglethornVale.."\n"..ZtoBoreanTundra..""),faction="Alliance" },
-        [42857909] = { spell=255152, timetravel=50659, ttturn=true, portal=true, label=PtoZuldazar, note=Zandalar, lvl=50, quest=46931, faction="Horde" },
-        [42847905] = { spell=255152, timetravel=50659, ttturn=true, portal=true, label=PtoBoralus, note=TiragardeSound, lvl=50, faction="Alliance" },
-        [59414237] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")\n"..PtoUC.." ("..Tirisfal..")\n"..PtoDala.." ("..CrystalsongForest..")\n"..PtoJadeForest.." ("..Pandaria..")\n"..PtoZuldazar.." ("..Zandalar..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoWarspear.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands.."\n"..PtoUC.."\n"..PtoDala.."\n"..PtoJadeForest.."\n"..PtoZuldazar.."\n"..PtoAzsuna.."\n"..PtoWarspear.."\n"..PtoShattrath.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Horde" },
-        [46612303] = { spell=290245, timetravel=54411, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="darkshore"},
-        [46302282] = { spell=290245, timetravel=54411, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="darkshore" },
+        [58154245] = { zeppelin=true, multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
+        [58154246] = { hzeppelin=true, multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
+        [42857909] = { timetravel={quest=50659, spell=255152, turn=true}, portal=true, label=PtoZuldazar, note=Zandalar, lvl=50, quest=46931, faction="Horde" },
+        [42847905] = { timetravel={quest=50659, spell=255152, turn=true}, portal=true, label=PtoBoralus, note=TiragardeSound, lvl=50, faction="Alliance" },
+        [59414237] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos},
+                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands}, faction="Horde" },
+        [46612303] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="darkshore"},
+        [46302282] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="darkshore" },
         },-- Portal to Oribos quest=60151
     [7] = { -- Mulgore
         [33692368] = { zeppelin=true, label=ZtoOG, note=Durotar, faction="Horde" },
@@ -805,23 +772,18 @@ DB.points = {
         [14222575] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
         },
     [1] = { -- Durotar
-        [47881015] = { portal=true, label1=PtoDala.." ("..CrystalsongForest..")\n"..format(PtoJadeForest.." ("..Pandaria..")\n"..PtoZuldazar.." ("..Zandalar..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoWarspear.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoDala.."\n"..format(PtoJadeForest.."\n"..PtoZuldazar.."\n"..PtoAzsuna.."\n"..PtoWarspear.."\n"..PtoShattrath.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Horde" },
-        [45550380] = { hzeppelin=true, label1=ZtoTB.." ("..Mulgore..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")\n"..ZtoBoreanTundra.." ("..WarsongHold..")"),
-                                       label2=ZtoTB.."\n"..format(ZtoStranglethornVale.."\n"..ZtoBoreanTundra..""), faction="Alliance" },
-        [45550381] = { zeppelin=true, label1=ZtoTB.." ("..Mulgore..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")\n"..ZtoBoreanTundra.." ("..WarsongHold..")"), 
-                                      label2=ZtoTB.."\n"..format(ZtoStranglethornVale.."\n"..ZtoBoreanTundra..""), faction="Horde" },
-        [46980375] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")\n"..PtoUC.." ("..Tirisfal..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands.."\n"..PtoUC..""), faction="Horde" },
+        [47881015] = { portal=true, multilabel={PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos},
+                                    multinote={CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands}, faction="Horde" },
+        [45550380] = { hzeppelin=true, multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
+        [45550381] = { zeppelin=true, multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
+        [46980375] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal}, faction="Horde" },
         },
     [85] = { -- Orgrimmar
-        [59078945] = { portal=true, label1=PtoDala.." ("..CrystalsongForest..")\n"..format(PtoJadeForest.." ("..Pandaria..")\n"..PtoZuldazar.." ("..Zandalar..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoWarspear.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoDala.."\n"..format(PtoJadeForest.."\n"..PtoZuldazar.."\n"..PtoAzsuna.."\n"..PtoWarspear.."\n"..PtoShattrath.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Horde" },
+        [59078945] = { portal=true, multilabel={PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos}, multinote={CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands}, faction="Horde" },
         [50435651] = { portal=true, label=PtoUC, note=Tirisfal, faction="Horde" },
         [43126480] = { zeppelin=true, label=ZtoTB, note=Mulgore, faction="Horde" },
         [43126481] = { hzeppelin=true, label=ZtoTB, note=Mulgore, faction="Alliance" },
-        [50103773] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands..""), faction="Horde", },
+        [50103773] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Horde", },
                                     -- Vashj'ir complete quest 25924
                                     -- TolBarad at lvl 30
                                     -- other portals at lvl ?? Shadowlands
@@ -837,26 +799,24 @@ DB.points = {
         [59002670] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
         },
     [81] = { -- Silithus
-        [41604520] = { spell=255152, timetravel=50659, ttturn=true, portal=true, label =PtoZuldazar, note=Zandalar, lvl=50, quest=46931, faction="Horde" },
-        [41474479] = { spell=255152, timetravel=50659, ttturn=true, portal=true, label =PtoBoralus, note=TiragardeSound, lvl=50, faction="Alliance" },
+        [41604520] = { timetravel={quest=50659, spell=255152, turn=true}, portal=true, label =PtoZuldazar, note=Zandalar, lvl=50, quest=46931, faction="Horde" },
+        [41474479] = { timetravel={quest=50659, spell=255152, turn=true}, portal=true, label =PtoBoralus, note=TiragardeSound, lvl=50, faction="Alliance" },
         },
     [70] = { -- Dustwallow Marsh
         [71625648] = { aboat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [71625647] = { boat=true, label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         },
     [62] = { -- Darkshore
-        [48023627] = { spell=290245, timetravel=54411, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="darkshore" },
-        [46243511] = { spell=290245, timetravel=54411, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="darkshore" },
+        [48023627] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="darkshore" },
+        [46243511] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="darkshore" },
         },
     [89] = { -- Darnassus
-        [44247867] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
+        [44247867] = { timetravel={quest=54411, spell=290245}, portal=true, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
         },
     [57] = { -- Teldrassil
-        [29085646] = { spell=290245, timetravel=54411, portal=true, label1=PtoExodar.." ("..AzuremystIsle..")\n"..format(PtoHellfirePeninsula.." ("..Outland..")"),
-                                                                    label2=PtoExodar.."\n"..format(PtoHellfirePeninsula..""), faction="Alliance" },
-        [55009370] = { spell=290245, timetravel=54411, portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [52048951] = { spell=290245, timetravel=54411, portal=true, label=PtoExodar, note=AzuremystIsle },
+        [29085646] = { timetravel={quest=54411, spell=290245}, portal=true, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
+        [55009370] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [52048951] = { timetravel={quest=54411, spell=290245}, portal=true, label=PtoExodar, note=AzuremystIsle },
         },
     [56] = { -- Wetlands
         [06216261] = { aboat=true, label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
@@ -871,41 +831,33 @@ DB.points = {
         },
 ]]--
     [13] = { -- Eastern Kingdom
-        [44068694] = { zeppelin=true, label1=ZtoOG.." ("..Durotar..")\n"..format(PtoUC.." ("..Tirisfal..")"),
-                                      label2=ZtoOG.."\n"..format(PtoUC..""), faction="Horde" },
+        [44068694] = { zeppelin=true, multilabel={ZtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
         [44068695] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
-        [41107209] = { aboat=true, label1=BtoBoralus.." ("..KulTiras..")\n"..format(BtoBoreanTundra.." ("..ValianceKeep..")"),
-                                   label2=BtoBoralus.."\n"..format(BtoBoreanTundra..""), faction="Horde" },
-        [41107210] = { boat=true, label1=BtoBoralus.." ("..TiragardeSound..")\n"..format(BtoBoreanTundra.." ("..ValianceKeep..")\n"..PtoDarnassus.." ("..Teldrassil..")"),
-                                  label2=BtoBoralus.."\n"..format(BtoBoreanTundra.."\n"..PtoDarnassus..""), faction="Alliance" },
-        [45995488] = { aboat=true, label1=BtoTheramore.." ("..DustwallowMarsh..")\n"..format(BtoHowlingFjord.." ("..Valgarde..")"),
-                                   label2=BtoTheramore.."\n"..format(BtoHowlingFjord..""), faction="Horde" },
-        [45995482] = { boat=true, label1=BtoTheramore.." ("..DustwallowMarsh..")\n"..format(BtoHowlingFjord.." ("..Valgarde..")"),
-                                  label2=BtoTheramore.."\n"..format(BtoHowlingFjord..""), faction="Alliance" },
+        [41107209] = { aboat=true, multilabel={BtoBoralus, BtoBoreanTundra}, multinote={KulTiras, ValianceKeep}, faction="Horde" },
+        [41107210] = { boat=true, multilabel={BtoBoralus, BtoBoreanTundra, PtoDarnassus}, multinote={TiragardeSound, ValianceKeep, Teldrassil}, faction="Alliance" },
+        [45995488] = { aboat=true, multilabel={BtoTheramore, BtoHowlingFjord}, multinote={DustwallowMarsh, Valgarde}, faction="Horde" },
+        [45995482] = { boat=true, multilabel={BtoTheramore, BtoHowlingFjord}, multinote={DustwallowMarsh, Valgarde}, faction="Alliance" },
         [42999362] = { boat=true, label=BtoRatchet, note=NorthernBarrens },
-        [56161316] = { portal=true, label1=PtoOG.." ("..Durotar..")\n"..format(PtoUC.." ("..Tirisfal..")"),
-                                    label2=PtoOG.."\n"..format(PtoUC..""), faction="Horde" },
-        [43637155] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")\n"..DrTtoIF.." ("..DunMorogh..")\n"..PtoDarnassus.." ("..Teldrassil..")\n"..PtoDala.." ("..CrystalsongForest..")\n"..PtoJadeForest.." ("..Pandaria..")\n"..PtoBoralus.." ("..TiragardeSound..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoStormshield.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands.."\n"..DrTtoIF.."\n"..PtoDarnassus.."\n"..PtoDala.."\n"..PtoJadeForest.."\n"..PtoBoralus.."\n"..PtoAzsuna.."\n"..PtoStormshield.."\n"..PtoShattrath.."\n"..PtoExodar.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Alliance" },
+        [56161316] = { portal=true, multilabel={PtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
+        [43637155] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
+                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands}, faction="Alliance" },
         [43337195] = { tram=true, label=DrTtoIF, note=DunMorogh, faction="Horde" },
-        [43863354] = { spell=276824, timetravel=52758, portal=true, label1=PtoHowlingFjord.." ("..VengeanceLanding..")\n"..format(PtoOG.." ("..Durotar..")\n"..PtoStranglethornVale.." ("..GromgolBaseCamp..")\n"..PtoSM.." ("..EversongWoods..")\n"..PtoHellfirePeninsula.." ("..Outland..")"),
-                                                   label2=PtoHowlingFjord.."\n"..format(PtoOG.."\n"..PtoStranglethornVale.."\n"..PtoSM.."\n"..PtoHellfirePeninsula..""), faction="Horde" },
+        [43863354] = { timetravel={quest=52758, spell=276824}, portal=true, multilabel={PtoHowlingFjord, PtoOG, PtoStranglethornVale, PtoSM, PtoHellfirePeninsula}, multinote={VengeanceLanding, Durotar, GromgolBaseCamp, EversongWoods, Outland}, faction="Horde" },
         [47835898] = { tram=true, label=DrTtoSW, note=ElwynnForest, },
         [60835906] = { portal=true, label=PtoSW, note=ElwynnForest, quest=27537, faction="Alliance" },
         [35224839] = { portal=true, label=PtoSW, note=ElwynnForest, lvl=30, faction="Alliance" },
         [60105603] = { portal=true, label=PtoOG, note=Durotar, quest=26798, faction="Horde" }, --quest=26798,
         [34394957] = { portal=true, label=PtoOG, note=Durotar, lvl=30, faction="Horde" },
         [57663241] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="PALADIN" },
-        [49714419] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
-        [49244725] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
+        [49714419] = { timetravel={quest=52781, spell=276950}, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
+        [49244725] = { timetravel={quest=52781, spell=276950}, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
         [41003949] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
         [43674008] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
         },-- Portal to Oribos quest=60151
     [84] = { -- Stormwind City
-        [74481841] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands..""), faction="Alliance" },
-        [46419032] = { portal=true, label1=PtoDala.." ("..CrystalsongForest..")\n"..format(PtoJadeForest.." ("..Pandaria..")\n"..PtoBoralus.." ("..TiragardeSound..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoStormshield.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoDala.."\n"..format(PtoJadeForest.."\n"..PtoBoralus.."\n"..PtoAzsuna.."\n"..PtoStormshield.."\n"..PtoShattrath.."\n"..PtoExodar.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Alliance" },
+        [74481841] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },
+        [46419032] = { portal=true, multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands}, faction="Alliance" },
         [22015670] = { aboat=true, label=BtoBoralus, note=TiragardeSound, faction="Horde" },
         [17592553] = { aboat=true, label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [23805620] = { portal=true, label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
@@ -916,24 +868,23 @@ DB.points = {
         [42556750] = { tram=true, label=DrTtoIF, note=DunMorogh, },
         },
     [37] = { -- Elwynn Forest
-        [17804775] = { portal=true, label1=PtoDala.." ("..CrystalsongForest..")\n"..format(PtoJadeForest.." ("..Pandaria..")\n"..PtoBoralus.." ("..TiragardeSound..")\n"..PtoAzsuna.." ("..BrokenIsles..")\n"..PtoStormshield.." ("..Ashran..")\n"..PtoShattrath.." ("..TerokkarForest..")\n"..PtoExodar.." ("..AzuremystIsle..")\n"..PtoCavernsofTime.." ("..Tanaris..")\n"..PtoOribos.." ("..Shadowlands..")"),
-                                    label2=PtoDala.."\n"..format(PtoJadeForest.."\n"..PtoBoralus.."\n"..PtoAzsuna.."\n"..PtoStormshield.."\n"..PtoShattrath.."\n"..PtoExodar.."\n"..PtoCavernsofTime.."\n"..PtoOribos..""), faction="Alliance" },
+        [17804775] = { portal=true, multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands}, faction="Alliance" },
         [06003035] = { aboat=true, label=BtoBoralus, note=TiragardeSound, faction="Horde" },
         [03631530] = { aboat=true, label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [07253035] = { portal=true, label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
-        [31801155] = { portal=true, label1=PtoTolBarad.." ("..EasternKingdoms..")\n"..format(PtoUldum.." ("..Kalimdor..")\n"..PtoDeepholm.." ("..Maelstrom..")\n"..PtoVashjir.." ("..EasternKingdoms..")\n"..PtoHyjal.." ("..Kalimdor..")\n"..PtoTwilightHighlands.." ("..EasternKingdoms..")"),
-                                    label2=PtoTolBarad.."\n"..format(PtoUldum.."\n"..PtoDeepholm.."\n"..PtoVashjir.."\n"..PtoHyjal.."\n"..PtoTwilightHighlands..""), faction="Alliance" },
+        [31801155] = { portal=true, multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },
         [29251812] = { tram=true, label=DrTtoIF, note=DunMorogh },
         },
     [90] = { -- Undercity
-        [85301700] = { spell= 276824, timetravel=52758, portal=true, label=PtoHellfirePeninsula, note=Outland, faction="Horde" },
+        [85301700] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoHellfirePeninsula, note=Outland, faction="Horde" },
         },
     [18] = { -- Tirisfal Glades
-        [65906865] = { spell=276824, timetravel=52758, portal=true, label=PtoHellfirePeninsula, note=Outland..")\n("..inUCMq.."", faction="Horde" },
-        [59416743] = { spell=276824, timetravel=52758, portal=true, label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
-        [60475885] = { spell=276824, timetravel=52758, portal=true, label=PtoOG, note=Durotar, faction="Horde" },
-        [62035926] = { spell=276824, timetravel=52758, portal=true, label=PtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
-        [58875901] = { spell=276824, timetravel=52758, portal=true, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" },
+        [65906865] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoHellfirePeninsula, note=Outland..")\n("..inUCMq.."", faction="Horde" },
+        [59416743] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
+        [60475885] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoOG, note=Durotar, faction="Horde" },
+        [62035926] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
+        [58875901] = { timetravel={quest=52758, spell=276824}, portal=true, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" },
         },
     [21] = { -- Silverpine Forest
         [47254337] = { portal=true, label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", quest=27478 },
@@ -942,8 +893,8 @@ DB.points = {
         [30293662] = { portal=true, label=PtoSepulcher, note=SilverpineForest, faction="Horde", quest=27478 },
         },
     [14] = { -- Arathi Highlands
-        [27432937] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
-        [21956514] = { spell=276950, timetravel=52781, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
+        [27432937] = { timetravel={quest=52781, spell=276950}, portal=true, label=PtoPortofZandalar, note=Zuldazar, lvl=50, faction="Horde", warfront="arathi" },
+        [21956514] = { timetravel={quest=52781, spell=276950}, portal=true, label=PtoPortofBoralus, note=TiragardeSound, lvl=50, faction="Alliance", warfront="arathi" },
         },
     [50] = { -- Northern Stranglethorn
         [37195161] = { hzeppelin=true, label=ZtoOG, note=Durotar, faction="Alliance" },
