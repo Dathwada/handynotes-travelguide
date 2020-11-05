@@ -355,7 +355,7 @@ DB.points = {
         [42073630] = { mirror=true, label=PridefallHamlet, covenant=Venthyr, quest=60060, sanctumtalent=1047 },   -- Venthyr Reisenetzwerk Stufe 1
         },
     [1700] = { -- Sinfall Depths
-        [63625343] = { mirror=true, label=HallsofAtonement, covenant=Venthyr, quest=60159, sanctumtalent=1048 }, -- Venthyr Reisenetzwerk Stufe 2      
+        [63625343] = { mirror=true, label=HallsofAtonement, covenant=Venthyr, quest=60159, sanctumtalent=1048 }, -- Venthyr Reisenetzwerk Stufe 2
         [58383662] = { mirror=true, label=TheBanewood, covenant=Venthyr, quest=60160, sanctumtalent=1048 },      -- Venthyr Reisenetzwerk Stufe 2
         [80984895] = { mirror=true, label=DominanceKeep, covenant=Venthyr, quest=60164, sanctumtalent=1049 },    -- Venthyr Reisenetzwerk Stufe 3
         [71841967] = { mirror=true, label=FeedersThicket, covenant=Venthyr, quest=60165, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
@@ -404,7 +404,7 @@ DB.points = {
         [25936716] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51340, faction="Horde" }, -- Drustvar
         [54371416] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51902450 boat Grok Seahandler
         [54141818] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=51696, faction="Horde" }, -- Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
-        [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, -- Mechagon 
+        [20332457] = { boat=true, label=returntoZuldazar, note=Zandalar, quest=55651, faction="Horde" }, -- Mechagon
 --noboat        [20742783] = { boat=true, label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
         [62095274] = { boat=true, multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
         [60855074] = { mixedportal=true, multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, lvl=50, faction="Alliance", warfront="both" },
@@ -545,7 +545,7 @@ DB.points = {
     [739] = { -- Trueshotlodge *HUNTER*
         [48634352] = { orderhall=true, label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, access to orderhall ???
         },
-        
+
 ----------------------------------------------------------------------------------------------WoD----------------------------------------------------------------------------------------------
 
     [572] = { -- Draenor
@@ -659,7 +659,7 @@ DB.points = {
         [75255887] = { portal=true, label=PtoSW, note=ElwynnForest, lvl=30, faction="Alliance" },
         [56277966] = { portal=true, label=PtoOG, note=Durotar, lvl=30, faction="Horde" },
         },
-        
+
 ---------------------------------------------------------------------------------------------WotLK---------------------------------------------------------------------------------------------
 
     [125] = { -- Dalaran Northrend
@@ -731,7 +731,7 @@ DB.points = {
         },
     [110] = { -- Silvermoon City
         [49401510] = { portal=true, label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
-        [58501890] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" }, 
+        [58501890] = { portal=true, label=PtoOG, note=Durotar, faction="Horde" },
         },
     [94] = { -- Eversong Woods
         [52803270] = { portal=true, multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde" },
@@ -823,7 +823,7 @@ DB.points = {
         [04415718] = { aboat=true, label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
         },
 --[[    NOT USED
-    [10] = { -- Northern Barrens 
+    [10] = { -- Northern Barrens
         [70307341] = { boat=true, label=format(BtoBootyBay) },
         },
     [210] = { -- Cape of Stranglethorn

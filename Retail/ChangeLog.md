@@ -71,7 +71,7 @@
 * Added level and quest check to display unusable portals with a red portal.
 * Added level and quest info for unusable portals.
 * Added new lines to deDE.lua, enUS.lua and blank.lua
-* Added Portal to 
+* Added Portal to
     * Orgrimmar and Stormwind in Azsuna and Broken Isle
     * Boralus in Sillithus and Kalimdor (only Alliance)
     * Stormheim in Helheim
@@ -168,6 +168,6 @@
 #### v1.0 (May 12, 2017)
 ------------------------
 * Added Alliance and neutral boat locations in Azeroth
-* Added portals in Stormwind, Ironforge, Darnassus, Exodar, Shattrath, Vale of Eternal Blossoms, Dalaran-Northrend, and Dalaran-Broken Isles 
+* Added portals in Stormwind, Ironforge, Darnassus, Exodar, Shattrath, Vale of Eternal Blossoms, Dalaran-Northrend, and Dalaran-Broken Isles
 * Added portals in non major zones (Mount Hyjal, Deepholm, Tol Barad)
 * Created links for zeppelins and faction air vehicles

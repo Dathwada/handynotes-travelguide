@@ -146,7 +146,7 @@ end
 
 local function handle_tooltip(tooltip, point)
 if ((astate == 4 and dstate == 4) and point.faction == "Horde") then
---  warfrontnote = 
+--  warfrontnote =
     asetnote = 0
     dsetnote = 0
 elseif ((astate == 1 or astate == 2) and point.faction == "Alliance") then
@@ -165,7 +165,7 @@ elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde") then
     warfrontnote = notavailable.."\n".." "
     asetnote = 1
     dsetnote = 0
-else 
+else
     warfrontnote = notavailable.."\n"..notavailable
     asetnote = 1
     dsetnote = 1

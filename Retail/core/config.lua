@@ -148,8 +148,8 @@ config.options = {
                 easy_waypoint = {
                     type = "toggle",
                     width = "full",
-                    name = function() 
-                        if TomTom then 
+                    name = function()
+                        if TomTom then
                             return L["config_easy_waypoints"]
                         else
                             return L["config_easy_waypoints"].." |cFFFF0000("..L["handler_tooltip_requires"].." TomTom)|r"
@@ -183,7 +183,7 @@ config.options = {
 --      desc = L["config_scale_alpha_desc"],
         order = 1,
         args = {
-        
+
         },
     },
     },
