@@ -37,8 +37,9 @@ local TNRank            = L["handler_tooltip_TNTIER"]
 local function work_out_icon(point)
     local icon_key
 
-    for i, k in ipairs({"portal", "orderhall", "mixedportal", "boat", "aboat", "zeppelin", "hzeppelin", "tram", "flightmaster",
-                        "herosrestgate", "tpplatform", "necroportal", "platform", "mushroom", "mirror"}) do
+    for i, k in ipairs({
+        "portal", "orderhall", "mixedportal", "boat", "aboat", "zeppelin", "hzeppelin", "tram", "flightmaster"
+    }) do
         if point[k] then icon_key = k end
     end
 
@@ -101,33 +102,6 @@ local get_point_info = function(point)
                 icon = work_out_icon(point)
             else
                 icon = MagePortalHorde
-            end
-        end
-        if (point.covenant and point.sanctumtalent) then
-            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
-            if TALENT["researched"] then
-                icon = work_out_icon(point)
-            elseif point.platform then
-                icon = constantsicon.platform_X
-            elseif point.mirror then
-                icon = constantsicon.mirror_X
-            elseif point.mushroom then
-                icon = constantsicon.mushroom_X
-            elseif point.necroportal then
-                icon = constantsicon.necroportal_X
-            end
-        end
-        if (point.covenant and point.quest) then
-            if IsQuestCompleted(point.quest) then
-                icon = work_out_icon(point)
-            elseif point.platform then
-                icon = constantsicon.platform_X
-            elseif point.mirror then
-                icon = constantsicon.mirror_X
-            elseif point.mushroom then
-                icon = constantsicon.mushroom_X
-            elseif point.necroportal then
-                icon = constantsicon.necroportal_X
             end
         end
             else icon = work_out_icon(point)
@@ -244,19 +218,6 @@ end
                 tooltip:AddLine(requires..': '..spellName, 1) -- red
             end
         end
-        if point.covenant and point.sanctumtalent then
-            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
-            if TALENT["researched"] == false then
-                L["Tier0"] = TNRank:format('1')
-                L["Tier1"] = TNRank:format('2')
-                L["Tier2"] = TNRank:format('3')
-                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
-                tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
-                tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
-                tooltip:AddLine("   • "..L["Tier"..TALENT["tier"]], 0.6, 0.6, 0.6) -- grey
-            end
-        end
-
     else
         tooltip:SetText(UNKNOWN)
     end
@@ -452,7 +413,6 @@ local currentMapID = nil
         if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
         if (point.herosrestgate and not private.db.show_herorestgate) then return false; end
         if (point.tpplatform and not private.db.show_tpplatform) then return false; end
-        if (point.covenant and not private.db.show_covenant) then return false; end -- platform, mirror, mushroom, necroportal
         return true
     end
 end

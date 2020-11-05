@@ -54,9 +54,6 @@ L["config_teleport_platform_desc"] = "Show the teleport plattform locations in O
 L["config_anima_gateway"] = "Anima Gateways in Bastion"
 L["config_anima_gateway_desc"] = "Show the anima gateway locations in Bastion."
 
-L["config_covenant"] = "Covenant Travel Network"
-L["config_covenant_desc"] = "Show locations of access points for the covenant travel network."
-
 L["config_others"] = "Others"
 L["config_others_desc"] = "Show all the other POIs."
 
@@ -117,43 +114,9 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = true
 L["The Maw"] = true
 
---===========================================Maldraxxus===========================================--
-
-L["Nurakkir, House of Eyes"] = true
-L["Exoramas, House of Rituals"] = true
-L["Overlook, Seat of the Primus"] = true
-L["Main Hall, Seat of the Primus"] = true
-L["Zerekriss: Maldraxxus"] = true
-L["Seat of the Primus"] = true
-
 --============================================Bastion=============================================--
 
-L["Eternal Gateway"] = true
-L["Anima Gateway"] = true
 L["Anima Gateway to Hero's rest"] = true
-
---==========================================Ardenweald============================================--
-
-L["RANDOM LOCATION"] = true
-L["near Tirna Vaal"] = true
-L["near Tirna Scithe"] = true
-L["near Dreamsang Fenn"] = true
-L["Darkreach"] = true
-L["Shimmerbough"] = true
-L["Heartwood Grove"] = true
-L["near Hibernal Hollow"] = true
-
---==========================================Reavendreath==========================================--
-
-L["Sanctuary of the Mad"] = true
-L["Ember Ward"] = true
-L["Sinfall"] = true
-L["The Eternal Terrace"] = true
-L["Pridefall Hamlet"] = true
-L["The Banewood"] = true
-L["Halls of Atonement"] = true
-L["Dominance Keep"] = true
-L["Feeders' Thicket"] = true
 
 -------------------------------------------------BfA------------------------------------------------
 

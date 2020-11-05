@@ -133,13 +133,6 @@ config.options = {
                     desc = L["config_anima_gateway_desc"],
                     order = 23,
                 },
-                show_covenant = {
-                    type = "toggle",
-                    width = "full",
-                    name = L["config_covenant"],
-                    desc = L["config_covenant_desc"],
-                    order = 24,
-                },
                 other_line = {
                     type = "header",
                     name = "",
@@ -189,7 +182,7 @@ config.options = {
     },
 }
 
-for i, icongroup in ipairs({"portal", "boat", "zeppelin", "covenant", "others"}) do
+for i, icongroup in ipairs({"portal", "boat", "zeppelin", "others"}) do
 
     config.options.args.SCALEALPHA.args["name_"..icongroup] = {
         type = "header",

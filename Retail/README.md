@@ -10,11 +10,6 @@
 	* ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
 	* ![](https://i.imgur.com/HQLt4uh.png) Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
 	* ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
-	* **Covenant travel network:**
-		* ![](https://i.imgur.com/Q8hRn5U.png) Necrolords
-		* ![](https://i.imgur.com/6kM7Emj.png) Kyrian
-		* ![](https://i.imgur.com/Q3THDAx.png) Nightfae
-		* ![](https://i.imgur.com/7ZCnru6.png) Venthyr
 	* Notes
 
 ![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
@@ -22,9 +17,8 @@
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * Notes for the portals, zepplins and boats.
-* Level, quest, time travel and sanctum upgrade (i.e. Tirisfal Glades) check.
+* Level, quest and time travel (i.e. Tirisfal Glades) check.
 	* ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest or time travel requirement are unfulfilled)
-	* ![](https://i.imgur.com/taTQxTY.png), ![](https://i.imgur.com/cl0QfNr.png), ![](https://i.imgur.com/9ubG6Xz.png), ![](https://i.imgur.com/O4uimkC.png) - (sanctum upgrade requirement are unfulfilled)
 
 ![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/oywcFDL.png)
 

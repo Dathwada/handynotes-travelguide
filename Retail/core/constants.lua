@@ -37,7 +37,6 @@ constants.defaults = {
         easy_waypoint = true,
         show_tpplatform = true,
         show_herorestgate = true,
-        show_covenant = true,
 --      show_others = true,
 
         dev = false,
@@ -85,14 +84,5 @@ constants.icon = {
     hzeppelin     = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\zeppelin_horde",
     worderhall    = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\warrior",
     tpplatform    = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
-    necroportal   = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\necroportal",
-    necroportal_X = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\necroportal_x",
-    platform      = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\platform_kyrian",
-    platform_X    = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\platform_kyrian_x",
     herosrestgate = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\platform",
-    mushroom      = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\mushroom",
-    mushroom_X    = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\mushroom_x",
-    mirror        = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\mirror",
-    mirror_X      = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\mirror_x",
-
 }

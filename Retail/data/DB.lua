@@ -27,36 +27,6 @@ local RingFates = L["To Ring of Fates"]
 local IntoTheMaw = L["Into the Maw"]
 local PtoThorghast = L["Portal to Thorghast"]
 
-local Nurakkir = L["Nurakkir, House of Eyes"]
-local Exoramas = L["Exoramas, House of Rituals"]
-local Overlook = L["Overlook, Seat of the Primus"]
-local Mainhall = L["Main Hall, Seat of the Primus"]
-local Zerekriss = L["Zerekriss: Maldraxxus"]
-local SeatofthePrimus = L["Seat of the Primus"]
-
-local EternalGateway = L["Eternal Gateway"]
-local AnimaGateway = L["Anima Gateway"]
-local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
-
-local Random = L["RANDOM LOCATION"]
-local Hibernalhollow = L["near Hibernal Hollow"]
-local Dreamsangfenn = L["near Dreamsang Fenn"]
-local Tirnavaal = L["near Tirna Vaal"]
-local Tirnascithe = L["near Tirna Scithe"]
-local Shimmerbough = L["Shimmerbough"]
-local Darkreach = L["Darkreach"]
-local Heartwoodgrove = L["Heartwood Grove"]
-
-local Sanctuary = L["Sanctuary of the Mad"]
-local EmberWard = L["Ember Ward"]
-local Sinfall = L["Sinfall"]
-local TheEternalTerrace = L["The Eternal Terrace"]
-local PridefallHamlet = L["Pridefall Hamlet"]
-local TheBanewood = L["The Banewood"]
-local HallsofAtonement = L["Halls of Atonement"]
-local DominanceKeep = L["Dominance Keep"]
-local FeedersThicket = L["Feeders' Thicket"]
-
 -------------------------------------------------BfA------------------------------------------------
 
 local Zandalar = L["Zandalar"]
@@ -262,103 +232,10 @@ DB.points = {
         [49506073] = { tpplatform=true, label=RingFates },
         [49504243] = { tpplatform=true, label=RingFates },
         },
-    [1536] = { -- Maldraxxus
-        [50407397] = { necroportal=true, covenant=Necrolord, label=Mainhall, sanctumtalent=1050 },          -- Necrolord Reisenetzwerk Stufe 1
-        [51631638] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1050 },   -- Necrolord Reisenetzwerk Stufe 1
-        [28614470] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1051 },   -- Necrolord Reisenetzwerk Stufe 2
-        [74473364] = { necroportal=true, covenant=Necrolord, label=SeatofthePrimus, sanctumtalent=1052 },   -- Necrolord Reisenetzwerk Stufe 3
-        [51407067] = { necroportal=true, covenant=Necrolord, label=Nurakkir.."\n"..format(Overlook.."\n"..Zerekriss.."\n"..Exoramas), multisanctumtalent={1050, 1050, 1051, 1052} },
-        },
-    [1698] = { -- Seat of the Primus
-        [61673783] = { necroportal=true, covenant=Necrolord, label=Nurakkir, sanctumtalent=1050 },  -- Necrolord Reisenetzwerk Stufe 1
-        [58812304] = { necroportal=true, covenant=Necrolord, label=Overlook, sanctumtalent=1050 },  -- Necrolord Reisenetzwerk Stufe 1
-        [62993430] = { necroportal=true, covenant=Necrolord, label=Zerekriss, sanctumtalent=1051 }, -- Necrolord Reisenetzwerk Stufe 2
-        [61593043] = { necroportal=true, covenant=Necrolord, label=Exoramas, sanctumtalent=1052 },  -- Necrolord Reisenetzwerk Stufe 3
-        [56373149] = { necroportal=true, covenant=Necrolord, label=PH, sanctumtalent=nil },         -- Necrolord Reisenetzwerk Stufe ?
-        [56433702] = { necroportal=true, covenant=Necrolord, label=PH, sanctumtalent=nil },         -- Necrolord Reisenetzwerk Stufe ?
-        },
     [1533] = { -- Bastion
         [55985276] = { herosrestgate=true, label=AGtoHerosrest }, --1 --Blizzard marked
         [46964891] = { herosrestgate=true, label=AGtoHerosrest }, --2 --Blizzard marked
         [52983802] = { herosrestgate=true, label=AGtoHerosrest }, --3 --Blizzard marked
-        [65951932] = { platform=true, covenant=Kyrian, label=EternalGateway, sanctumtalent=1056 },  -- Kyrian Reisenetzwerk Stufe 1 npc=171036,
-        [51754681] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1 npc=171037,
-        [48337285] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1 npc=171091,
-        [40715521] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1056 },    -- Kyrian Reisenetzwerk Stufe 1 npc=171097,
-        [44163302] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2 npc=171101,
-        [59427711] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2 npc=171102,
-        [58373098] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1057 },    -- Kyrian Reisenetzwerk Stufe 2 npc=171103,
-        [66594790] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1058 },    -- Kyrian Reisenetzwerk Stufe 3 npc=171104,
-        [32322045] = { platform=true, covenant=Kyrian, label=AnimaGateway, sanctumtalent=1058 },    -- Kyrian Reisenetzwerk Stufe 3 npc=171105,
-        },
-    [1707] = { -- Elysisan Hold
-        [48606168] = { platform=true, covenant=Kyrian, label=EternalGateway, sanctumtalent=1056 }, -- Kyrian Reisenetzwerk Stufe 1 npc=171036,
-        },
-    [1565] = { -- Ardenweald
-        [46365116] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [65736026] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [29513463] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [57504259] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [44575584] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [53287905] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [26445125] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [49392755] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        [20286695] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [41116950] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [54229363] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [73712521] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        [50900745] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1055 }, -- Nightfae Reisenetzwerk Stufe 3
-        },
-    [1701] = { -- Hearth of the Forest - The Trunk
---        [55442673] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
---        [54134136] = { mushroom=true, covenant=Nightfae, labelspell=335702 }, -- Nightfae
-        },
-    [1702] = { -- Hearth of the Forest - The Roots
-        [55442673] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1053 }, -- Nightfae Reisenetzwerk Stufe 1
-        [57516562] = { mushroom=true, covenant=Nightfae, labelspell=335702, quest=62624 },                     -- Nightfae The Queen's Conservatory
-        },
-    [1819] = { -- Ardenweald_Mushroom_A
-        [58896232] = { mushroom=true, covenant=Nightfae, labelspell=325602, quest=57583, sanctumtalent=1053 },                      -- Nightfae Reisenetzwerk Stufe 1
-        [41936098] = { mushroom=true, covenant=Nightfae, labelspell=325621, quest=57583, sanctumtalent=1053, note=Hibernalhollow }, -- Nightfae Reisenetzwerk Stufe 1
-        [41273983] = { mushroom=true, covenant=Nightfae, labelspell=308436, quest=57583, sanctumtalent=1053, note=Dreamsangfenn },  -- Nightfae Reisenetzwerk Stufe 1
-        [56383740] = { mushroom=true, covenant=Nightfae, labelspell=325614, quest=57583, sanctumtalent=1053, note=Tirnavaal },      -- Nightfae Reisenetzwerk Stufe 1
-        [59965292] = { mushroom=true, covenant=Nightfae, labelspell=325657, quest=57583, sanctumtalent=1054, note=Random },         -- Nightfae Reisenetzwerk Stufe 2
-        [51853564] = { mushroom=true, covenant=Nightfae, labelspell=325620, quest=57583, sanctumtalent=1054, note=Tirnascithe },    -- Nightfae Reisenetzwerk Stufe 2
-        [38424806] = { mushroom=true, covenant=Nightfae, labelspell=325616, quest=57583, sanctumtalent=1054, note=Shimmerbough },   -- Nightfae Reisenetzwerk Stufe 2
-        [52696820] = { mushroom=true, covenant=Nightfae, labelspell=325618, quest=57583, sanctumtalent=1054 },                      -- Nightfae Reisenetzwerk Stufe 2
-        [58894369] = { mushroom=true, covenant=Nightfae, labelspell=325619, quest=57583, sanctumtalent=1055 },                      -- Nightfae Reisenetzwerk Stufe 3
-        [46703589] = { mushroom=true, covenant=Nightfae, labelspell=325617, quest=57583, sanctumtalent=1055, note=Darkreach },      -- Nightfae Reisenetzwerk Stufe 3
-        [38875544] = { mushroom=true, covenant=Nightfae, labelspell=325627, quest=57583, sanctumtalent=1055, note=Random },         -- Nightfae Reisenetzwerk Stufe 3
-        [45756677] = { mushroom=true, covenant=Nightfae, labelspell=325607, quest=57583, sanctumtalent=1055, note=Heartwoodgrove }, -- Nightfae Reisenetzwerk Stufe 3
-        },
-    [1825] = { -- Ardenweald_Mushroom_B
-        [50437614] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        },
-    [1826] = { -- Ardenweald_Mushroom_C
-        [50187317] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        },
-    [1827] = { -- Ardenweald_Mushroom_C
-        [48247310] = { mushroom=true, covenant=Nightfae, labelspell=308437, quest=57583, sanctumtalent=1054 }, -- Nightfae Reisenetzwerk Stufe 2
-        },
-    [1525] = { -- Revendreth
-        [24855026] = { mirror=true, label=Sanctuary, covenant=Venthyr, quest=57536, sanctumtalent=1047 }, -- Venthyr Reisenetzwerk Stufe 1 spell=329427
-        [31964670] = { mirror=true, label=EmberWard, covenant=Venthyr, quest=57536, sanctumtalent=1047 }, -- Venthyr Reisenetzwerk Stufe 1 spell=329427
-        [70757546] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60060, sanctumtalent=1047 },   -- Venthyr Reisenetzwerk Stufe 1
-        [56743250] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60147, sanctumtalent=1047 },   -- Venthyr Reisenetzwerk Stufe 1
-        [73624393] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60159, sanctumtalent=1048 },   -- Venthyr Reisenetzwerk Stufe 2
-        [43485709] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60160, sanctumtalent=1048 },   -- Venthyr Reisenetzwerk Stufe 2
-        [25472685] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60164, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
-        [58246275] = { mirror=true, label=Sinfall, covenant=Venthyr, quest=60165, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
-        },
-    [1699] = { -- Sinfall Reaches
-        [46054944] = { mirror=true, label=TheEternalTerrace, covenant=Venthyr, quest=60147, sanctumtalent=1047 }, -- Venthyr Reisenetzwerk Stufe 1
-        [42073630] = { mirror=true, label=PridefallHamlet, covenant=Venthyr, quest=60060, sanctumtalent=1047 },   -- Venthyr Reisenetzwerk Stufe 1
-        },
-    [1700] = { -- Sinfall Depths
-        [63625343] = { mirror=true, label=HallsofAtonement, covenant=Venthyr, quest=60159, sanctumtalent=1048 }, -- Venthyr Reisenetzwerk Stufe 2
-        [58383662] = { mirror=true, label=TheBanewood, covenant=Venthyr, quest=60160, sanctumtalent=1048 },      -- Venthyr Reisenetzwerk Stufe 2
-        [80984895] = { mirror=true, label=DominanceKeep, covenant=Venthyr, quest=60164, sanctumtalent=1049 },    -- Venthyr Reisenetzwerk Stufe 3
-        [71841967] = { mirror=true, label=FeedersThicket, covenant=Venthyr, quest=60165, sanctumtalent=1049 },   -- Venthyr Reisenetzwerk Stufe 3
         },
     [1543] = { -- The Maw
         [42374215] = { portal=true, label=WstoOribos, lvl=60 },

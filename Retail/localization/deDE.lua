@@ -54,9 +54,6 @@ L["config_teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattform
 L["config_anima_gateway"] = "Animaportale in der Bastion"
 L["config_anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen in der Bastion an."
 
-L["config_covenant"] = "Pakt Reisenetzwerk"
-L["config_covenant_desc"] = "Zeigt die Positionen von Zugangspunkten für das Pakt Reisenetzwerk an."
-
 L["config_others"] = "Anderes"
 L["config_others_desc"] = "Zeige alle anderen POIs."
 
@@ -117,43 +114,9 @@ L["Maldraxxus"] = true
 L["Ardenweald"] = "Ardenwald"
 L["The Maw"] = "Der Schlund"
 
---===========================================Maldraxxus===========================================--
-
-L["Nurakkir, House of Eyes"] = "Nurakkir, Haus der Augen"
-L["Exoramas, House of Rituals"] = "Exoramas, Haus der Rituale"
-L["Overlook, Seat of the Primus"] = "Warte, Sitz des Primus"
-L["Main Hall, Seat of the Primus"] = "Haupthalle, Sitz des Primus"
-L["Zerekriss: Maldraxxus"] = true
-L["Seat of the Primus"] = "Sitz des Primus"
-
 --============================================Bastion=============================================--
 
-L["Eternal Gateway"] = "Ewiges Tor"
-L["Anima Gateway"] = "Animaportal"
 L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast"
-
---==========================================Ardenweald============================================--
-
-L["RANDOM LOCATION"] = "ZUFÄLLIGER ORT"
-L["near Tirna Vaal"] = "nahe Tirna Vaal"
-L["near Tirna Scithe"] = "nahe Tirna Scithe"
-L["near Dreamsang Fenn"] = "nahe Traumsang Fenn"
-L["Darkreach"] = "Dunkelvorstoss"
-L["Shimmerbough"] = "Schimmerkaskadenbecken"
-L["Heartwood Grove"] = "Herzholzhain"
-L["near Hibernal Hollow"] = "nahe dem Winterschlafbecken"
-
---==========================================Reavendreath==========================================--
-
-L["Sanctuary of the Mad"] = "Refugium des Wahnsinnigen"
-L["Ember Ward"] = "Glutdistrikt"
-L["Sinfall"] = "Sündensturz"
-L["The Eternal Terrace"] = "Die Ewige Terrasse"
-L["Pridefall Hamlet"] = "Stolzsturzweiler"
-L["The Banewood"] = "Fresserdickicht"
-L["Halls of Atonement"] = "Hallen der Sühne"
-L["Dominance Keep"] = "Herrschaftsburg"
-L["Feeders' Thicket"] = "Der Fluchwald"
 
 -------------------------------------------------BfA------------------------------------------------
 
