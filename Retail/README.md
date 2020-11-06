@@ -27,7 +27,7 @@
 * `deDE` - German (Native locale by Dathwada!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
 * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!)
-* `zhTW` - Traditional Chinese (thanks [lostindark2](https://www.curseforge.com/members/lostindark2)!)
+* `zhTW` - Traditional Chinese (thanks [lostindark0](https://www.curseforge.com/members/lostindark0)!)
 
 If you wish to help localize TravelGuide, please go to [Localization](https://www.curseforge.com/wow/addons/handynotes-travelguide/localization).
 

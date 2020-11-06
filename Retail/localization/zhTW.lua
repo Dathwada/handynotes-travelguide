@@ -1,7 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhTW", false, true)
 
 if not L then return end
--- Traditional Chinese translation by lostindark2 ( https://www.curseforge.com/members/lostindark2  )
+-- Traditional Chinese translation by lostindark0 ( https://www.curseforge.com/members/lostindark0  )
 if L then
 L["Ardenweald"] = "亞登曠野"
 L["Azsuna"] = "艾蘇納"
@@ -46,6 +46,7 @@ L["config_order_hall_portal_desc"] = "顯示職業大廳傳送門的位置。"
 L["config_others"] = "其它"
 L["config_others_desc"] = "顯示所有其他地標。"
 L["config_plugin_desc"] = "在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。"
+L["config_plugin_name"] = "旅行指南"
 L["config_portal"] = "傳送門"
 L["config_portal_desc"] = "顯示傳送門位置"
 L["config_restore_nodes"] = "恢復隱藏的節點"

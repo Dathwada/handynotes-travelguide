@@ -4,6 +4,7 @@
 ## Notes-deDE: Zeigt die Positionen von Portalen, Schiffen und Zeppelinen auf der Worldmap und der Minimap an.
 ## Notes-ptBR: Mostra portais, localizações de zepelins e navios no Mapa-múndi e minimapa.
 ## Notes-zhCN: 在世界地图和小地图上显示传送门、飞艇、港口图标。
+## Notes-zhTW: 在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。
 ## Author: |cFFFF8C00Dathwada EU-Eredar|r
 ## Version: v2.2.0
 ## RequiredDeps: HandyNotes
