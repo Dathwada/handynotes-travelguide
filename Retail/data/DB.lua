@@ -27,6 +27,8 @@ local RingFates = L["To Ring of Fates"]
 local IntoTheMaw = L["Into the Maw"]
 local PtoThorghast = L["Portal to Thorghast"]
 
+local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
+
 -------------------------------------------------BfA------------------------------------------------
 
 local Zandalar = L["Zandalar"]

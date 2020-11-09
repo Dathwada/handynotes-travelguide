@@ -38,7 +38,8 @@ local function work_out_icon(point)
     local icon_key
 
     for i, k in ipairs({
-        "portal", "orderhall", "mixedportal", "boat", "aboat", "zeppelin", "hzeppelin", "tram", "flightmaster"
+        "portal", "orderhall", "mixedportal", "boat", "aboat",
+        "zeppelin", "hzeppelin", "tram", "flightmaster", "herosrestgate"
     }) do
         if point[k] then icon_key = k end
     end
