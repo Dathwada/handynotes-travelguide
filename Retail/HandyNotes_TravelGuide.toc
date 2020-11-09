@@ -6,12 +6,12 @@
 ## Notes-zhCN: 在世界地图和小地图上显示传送门、飞艇、港口图标。
 ## Notes-zhTW: 在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。
 ## Author: |cFFFF8C00Dathwada EU-Eredar|r
-## Version: v2.2.0
+## Version: v2.2.1
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideDB
 ## X-Embeds: AceTimer-3.0
-## X-Date: 2020-10-14
+## X-Date: 2020-11-09
 ## X-Category: Map
 
 #@no-lib-strip@

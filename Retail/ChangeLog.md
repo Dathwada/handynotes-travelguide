@@ -1,5 +1,14 @@
 ## Revision History:
 
+#### v2.2.1 (November 09 , 2020)
+-------------------------------
+* Updated AceTimer-3.0
+* Updated zhTW (95,85%) and zhCN (90,67%) (thanks [lostindark0](https://www.curseforge.com/members/lostindark0))
+* Fixed the icon behavior for portals with quest and/or level requirements
+* Added some level requirements for portals
+* Some background changes in DB.lua and handler.lua for multilabels with and without notes and timetravel
+* Removed the Covenant Travel Network (because Blizzard has added it to the map.)
+
 #### v2.2.0 (October 14, 2020)
 -------------------------------
 * Finally found a way to track the timezones for Darkshore, Arathi Highlands, Tirisfal Glades and Sillithus
