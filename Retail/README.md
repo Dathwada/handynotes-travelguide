@@ -17,10 +17,10 @@
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * Notes for the portals, zepplins and boats.
-* Level, quest and time travel (i.e. Tirisfal Glades) check.
+* Level, quest, time travel (i.e. Tirisfal Glades) and sanctum upgrade check.
 	* ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest or time travel requirement are unfulfilled)
 
-![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/oywcFDL.png)
+![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/MlnVJKC.png)
 
 ## Localization
 * `enUS` - default
