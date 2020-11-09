@@ -16,7 +16,7 @@
     * Added individual scale and alpha options for portals, boats, zeppelins, covenant and others
     * Added a requirement for the Easy Waypoints function
 * Added Simplified Chinese (zhCN) localization from [mmk5](https://www.curseforge.com/members/mmk5) (83,03%)
-* Added Traditional Chinese (zhTW) localization from [lostindark2](https://www.curseforge.com/members/lostindark2) (59,63%)
+* Added Traditional Chinese (zhTW) localization from [lostindark0](https://www.curseforge.com/members/lostindark0) (59,63%)
 * Added Spanish (esES) localization created with [WoW.tools Tables](https://wow.tools/dbc/) (36,24%)
 * Added French (frFR) localization created with [WoW.tools Tables](https://wow.tools/dbc/) and ingame reviews (72,48%)
 * Added Russian (ruRU) localization created with [WoW.tools Tables](https://wow.tools/dbc/) (45,87%)
