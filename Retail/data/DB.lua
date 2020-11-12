@@ -226,13 +226,17 @@ DB.points = {
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
         [20894567] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", quest=60151 },
-        [52095784] = { tpplatform=true, label=RingTransference },
         [52094278] = { tpplatform=true, label=RingTransference },
+        [57145040] = { tpplatform=true, label=RingTransference },
+        [52095784] = { tpplatform=true, label=RingTransference },
+        [47055029] = { tpplatform=true, label=RingTransference },
         },
     [1671] = { -- Oribos - Ring of Transference
         [49525107] = { portal=true, label=IntoTheMaw, lvl=60 },
-        [49506073] = { tpplatform=true, label=RingFates },
         [49504243] = { tpplatform=true, label=RingFates },
+        [55735162] = { tpplatform=true, label=RingFates },
+        [49506073] = { tpplatform=true, label=RingFates },
+        [43375150] = { tpplatform=true, label=RingFates },
         },
     [1533] = { -- Bastion
         [55985276] = { herosrestgate=true, label=AGtoHerosrest }, --1 --Blizzard marked
