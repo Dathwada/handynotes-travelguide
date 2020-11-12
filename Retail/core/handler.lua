@@ -78,18 +78,10 @@ local get_point_info = function(point)
             icon = TALENT["researched"] and work_out_icon(point) or MagePortalHorde
         end
         if (point.orderhall and point.spell) then
-            if IsSpellKnown(point.spell) then
-                icon = work_out_icon(point)
-            else
-                icon = MagePortalHorde
-            end
+            icon = IsSpellKnown(point.spell) and work_out_icon(point) or MagePortalHorde
         end
         if (point.boat and point.quest) then
-            if IsQuestCompleted(point.quest) then
-                icon = work_out_icon(point)
-            else
-                icon = constantsicon.boat_X
-            end
+            icon = IsQuestCompleted(point.quest) and work_out_icon(point) or constantsicon.boat_X
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
             if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
