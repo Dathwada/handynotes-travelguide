@@ -142,13 +142,13 @@ config.options = {
                     type = "toggle",
                     width = "full",
                     name = function()
-                        if TomTom then
+                        if IsAddOnLoaded("TomTom") then
                             return L["config_easy_waypoints"]
                         else
                             return L["config_easy_waypoints"].." |cFFFF0000("..L["handler_tooltip_requires"].." TomTom)|r"
                         end
                     end,
-                    disabled = function() return not TomTom end,
+                    disabled = function() return not IsAddOnLoaded("TomTom") end,
                     desc = L["config_easy_waypoints_desc"],
                     order = 26,
                 },

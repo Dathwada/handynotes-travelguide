@@ -152,14 +152,14 @@ end
     -- the following lines in 13px with a normal for loop.
         local label = {}
         for i, name in ipairs(point.multilabel) do
-            if (point.multilabel and profile.show_note) then
+            if (point.multilabel and private.db.show_note) then
                 if point.multilabel[i] and point.multinote[i] then
                     label[i] = name.." ("..point.multinote[i]..")"
                 else
                     label[i] = name -- if there is no note for this Portal
                 end
             else
-                label[i] = name -- if the profile.show_note == false
+                label[i] = name -- if the private.db.show_note == false
             end
         end
     return table.concat(label, "\n")
@@ -173,7 +173,7 @@ end
             local spellName = GetSpellInfo(point.labelspell)
             tooltip:AddLine(spellName)
         end
-        if (point.note and profile.show_note) then
+        if (point.note and private.db.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
         if (point.multilabel and not point.mixedportal) then
@@ -264,7 +264,7 @@ local function closeAllDropdowns()
 end
 
 local function addTomTomWaypoint(button, uMapID, coord)
-    if TomTom then
+    if IsAddOnLoaded("TomTom") then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
             title = get_point_info_by_coord(uMapID, coord),
@@ -294,7 +294,7 @@ do
 
 --            UIDropDownMenu_AddButton(spacer, level)
 
-            if TomTom and not profile.easy_waypoint then
+            if IsAddOnLoaded("TomTom") and not private.db.easy_waypoint then
                 -- Waypoint menu item
                 info = UIDropDownMenu_CreateInfo()
                 info.text = L["handler_context_menu_add_tomtom"]
@@ -330,20 +330,20 @@ do
     HL_Dropdown.initialize = generateMenu
 
     function PluginHandler:OnClick(button, down, uMapID, coord)
-        if ((down or button ~= "RightButton") and profile.easy_waypoint and TomTom) then
+        if ((down or button ~= "RightButton") and private.db.easy_waypoint and IsAddOnLoaded("TomTom")) then
             return
         end
-        if ((button == "RightButton" and not down) and (not profile.easy_waypoint or not TomTom)) then
+        if ((button == "RightButton" and not down) and (not private.db.easy_waypoint or not IsAddOnLoaded("TomTom"))) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
-        if (IsControlKeyDown() and profile.easy_waypoint and TomTom) then
+        if (IsControlKeyDown() and private.db.easy_waypoint and IsAddOnLoaded("TomTom")) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         else
-        if profile.easy_waypoint and TomTom then
+        if private.db.easy_waypoint and IsAddOnLoaded("TomTom") then
             addTomTomWaypoint(button, uMapID, coord)
         end
         end
@@ -360,20 +360,20 @@ local currentMapID = nil
             if value and private:ShouldShow(state, value, currentMapID) then
                 local _, _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
                 if portal or orderhall or mixedportal then
-                scale = (scale or 1) * (icon and icon.scale_portal or 1) * profile.icon_scale_portal
-                alpha = (alpha or 1) * (icon and icon.alpha_portal or 1) * profile.icon_alpha_portal
+                scale = (scale or 1) * private.db.icon_scale_portal
+                alpha = (alpha or 1) * private.db.icon_alpha_portal
                 elseif boat or aboat then
-                scale = (scale or 1) * (icon and icon.scale_boat or 1) * profile.icon_scale_boat
-                alpha = (alpha or 1) * (icon and icon.alpha_boat or 1) * profile.icon_alpha_boat
+                scale = (scale or 1) * private.db.icon_scale_boat
+                alpha = (alpha or 1) * private.db.icon_alpha_boat
                 elseif zeppelin or hzeppelin then
-                scale = (scale or 1) * (icon and icon.scale_zeppelin or 1) * profile.icon_scale_zeppelin
-                alpha = (alpha or 1) * (icon and icon.alpha_zeppelin or 1) * profile.icon_alpha_zeppelin
+                scale = (scale or 1) * private.db.icon_scale_zeppelin
+                alpha = (alpha or 1) * private.db.icon_alpha_zeppelin
                 elseif covenant then
-                scale = (scale or 1) * (icon and icon.scale_covenant or 1) * profile.icon_scale_covenant
-                alpha = (alpha or 1) * (icon and icon.alpha_covenant or 1) * profile.icon_alpha_covenant
+                scale = (scale or 1) * private.db.icon_scale_covenant
+                alpha = (alpha or 1) * private.db.icon_alpha_covenant
                 else
-                scale = (scale or 1) * (icon and icon.scale_others or 1) * profile.icon_scale_others
-                alpha = (alpha or 1) * (icon and icon.alpha_others or 1) * profile.icon_alpha_others
+                scale = (scale or 1) * private.db.icon_scale_others
+                alpha = (alpha or 1) * private.db.icon_alpha_others
                 end
                 return state, nil, icon, scale, alpha
             end
