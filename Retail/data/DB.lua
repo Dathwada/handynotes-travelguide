@@ -222,6 +222,9 @@ DB.points = {
         [45665085] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
         [45665054] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", quest=60151 },
         [23411094] = { portal=true, label=WstoOribos, lvl=60 },
+        [76015007] = { portal=true, label=PtoOribos, covenant=Kyrian, sanctumtalent=1058 },
+        [47928153] = { portal=true, label=PtoOribos, covenant=Nightfae, sanctumtalent=1055 },
+        [62772775] = { portal=true, label=PtoOribos, covenant=Necrolord, sanctumtalent=1052 },
         },
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
@@ -238,10 +241,26 @@ DB.points = {
         [49506073] = { tpplatform=true, label=RingFates },
         [43375150] = { tpplatform=true, label=RingFates },
         },
+    [1536] = { -- Maldraxxus
+        [51147034] = { portal=true, label=PtoOribos, covenant=Necrolord, sanctumtalent=1052 },
+        },
+    [1698] = { -- Seat of the Primus
+        [56373149] = { portal=true, label=PtoOribos, covenant=Necrolord, sanctumtalent=1052 },
+        },
     [1533] = { -- Bastion
         [55985276] = { herosrestgate=true, label=AGtoHerosrest }, --1 --Blizzard marked
         [46964891] = { herosrestgate=true, label=AGtoHerosrest }, --2 --Blizzard marked
         [52983802] = { herosrestgate=true, label=AGtoHerosrest }, --3 --Blizzard marked
+        [65581959] = { portal=true, label=PtoOribos, covenant=Kyrian, sanctumtalent=1058 },
+        },
+        [1707] = { -- Elysian Hold
+        [48816478] = { portal=true, label=PtoOribos, covenant=Kyrian, sanctumtalent=1058 },
+        },
+    [1565] = { -- Ardenweald
+        [46605126] = { portal=true, label=PtoOribos, covenant=Nightfae, sanctumtalent=1055 },
+        },
+    [1702] = { -- Hearth of the Forest - The Roots
+        [59972842] = { portal=true, label=PtoOribos, covenant=Nightfae, sanctumtalent=1055 },
         },
     [1543] = { -- The Maw
         [42374215] = { portal=true, label=WstoOribos, lvl=60 },

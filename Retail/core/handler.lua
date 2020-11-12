@@ -73,6 +73,10 @@ local get_point_info = function(point)
                 icon = work_out_icon(point)
             end
         end
+        if (point.covenant and point.sanctumtalent) then
+            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
+            icon = TALENT["researched"] and work_out_icon(point) or MagePortalHorde
+        end
         if (point.orderhall and point.spell) then
             if IsSpellKnown(point.spell) then
                 icon = work_out_icon(point)
@@ -217,6 +221,15 @@ end
             local isKnown = IsSpellKnown(point.spell)
             if spellName and not isKnown then
                 tooltip:AddLine(requires..': '..spellName, 1) -- red
+            end
+        end
+        if point.covenant and point.sanctumtalent then
+            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
+            if not TALENT["researched"] then
+                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
+                tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
+                tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
+                tooltip:AddLine("   • "..format(TNRank, TALENT["tier"]+1), 0.6, 0.6, 0.6) -- grey
             end
         end
     else
