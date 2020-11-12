@@ -48,6 +48,14 @@ local function devmode()
         print("Darkshore: "..C_ContributionCollector.GetState(118)) --Battle for Darkshore
         print("~~~~~~~~~~~~~~~~~~~~~~")
     end
+
+    SLASH_TG1 = "/tg"
+    SlashCmdList["TG"] = function(msg)
+        InterfaceOptionsFrame_Show()
+        InterfaceOptionsFrame_OpenToCategory('HandyNotes')
+        LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', 'TravelGuide')
+    end
+
 end
 
 private.devmode = devmode
