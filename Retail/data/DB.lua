@@ -221,7 +221,7 @@ DB.points = {
     [1550] = { -- Shadowlands
         [45665085] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
         [45665054] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", quest=60151 },
-        [20131380] = { portal=true, label=WstoOribos, lvl=60 }, --located by 23291066
+        [23411094] = { portal=true, label=WstoOribos, lvl=60 },
         },
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", quest=60151 },
