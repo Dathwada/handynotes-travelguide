@@ -4,15 +4,15 @@
 ## Options
 * **icon scale and alpha.**
 * **toggle visibility of**
-	* ![](https://i.imgur.com/H9wPEeD.png)Boats
-	* ![](https://i.imgur.com/vfQqSBK.png)Alliance Boats (If you play Horde, it displays the Alliance boats.)
-	* ![](https://i.imgur.com/cWTR8xo.png)Zeppelins
-	* ![](https://i.imgur.com/HQLt4uh.png)Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
-	* ![](https://i.imgur.com/VYJ1NaJ.png)Deeprun Tram
-	* Notes
-	
+    * ![](https://i.imgur.com/H9wPEeD.png)Boats
+    * ![](https://i.imgur.com/vfQqSBK.png)Alliance Boats (If you play Horde, it displays the Alliance boats.)
+    * ![](https://i.imgur.com/cWTR8xo.png)Zeppelins
+    * ![](https://i.imgur.com/HQLt4uh.png)Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
+    * ![](https://i.imgur.com/VYJ1NaJ.png)Deeprun Tram
+    * Notes
+
 ![](https://i.imgur.com/NJyqYnw.png) ![](https://i.imgur.com/94Imo8e.png)
-    
+
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * notes for the zeppelins and boats.

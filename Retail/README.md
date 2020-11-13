@@ -4,13 +4,13 @@
 ## Options
 * **icon scale and alpha.**
 * **toggle visibility of**
-	* ![](https://i.imgur.com/NIUq9ta.png) Portals / Order hall portals / Warfront portals
-	* ![](https://i.imgur.com/H9wPEeD.png) Boats
-	* ![](https://i.imgur.com/vfQqSBK.png) Alliance Boats (If you play Horde, it displays the Alliance boats.)
-	* ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
-	* ![](https://i.imgur.com/HQLt4uh.png) Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
-	* ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
-	* Notes
+    * ![](https://i.imgur.com/NIUq9ta.png) Portals / Order hall portals / Warfront portals
+    * ![](https://i.imgur.com/H9wPEeD.png) Boats
+    * ![](https://i.imgur.com/vfQqSBK.png) Alliance Boats (If you play Horde, it displays the Alliance boats.)
+    * ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
+    * ![](https://i.imgur.com/HQLt4uh.png) Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
+    * ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
+    * Notes
 
 ![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
 
@@ -18,7 +18,7 @@
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * Notes for the portals, zepplins and boats.
 * Level, quest, time travel (i.e. Tirisfal Glades) and sanctum upgrade check.
-	* ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
+    * ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
 
 ![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/MlnVJKC.png)
 
