@@ -231,15 +231,16 @@ local currentMapID = nil
         return iter, private.DB.points[uMapID], nil
     end
     function private:ShouldShow(coord, point, currentMapID)
+    if not private.db.force_nodes then
         if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
             return false
         end
         -- this will check if any node is for specific class
-        if (point.class and point.class ~= select(2, UnitClass("player")) and not private.db.force_nodes) then
+        if (point.class and point.class ~= select(2, UnitClass("player"))) then
             return false
         end
         -- this will check if any node is for specific faction
-        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player")) and not private.db.force_nodes) then
+        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
             return false
         end
 
@@ -248,6 +249,7 @@ local currentMapID = nil
         if (point.aboat and not private.db.show_aboat) then return false; end
         if (point.zeppelin and not private.db.show_zeppelin) then return false; end
         if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
+    end
         return true
     end
 end
