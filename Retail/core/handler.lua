@@ -34,7 +34,7 @@ local TNRank            = L["handler_tooltip_TNTIER"]
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function work_out_icon(point)
+local function SetIcon(point)
     local icon_key
 
     for i, k in ipairs({
@@ -49,7 +49,7 @@ local function work_out_icon(point)
     end
 end
 
-local get_point_info = function(point)
+local GetPointInfo = function(point)
     local icon
     local MagePortalHorde = constantsicon.MagePortalHorde
     if point then
@@ -70,52 +70,52 @@ local get_point_info = function(point)
             elseif (point.quest and not IsQuestCompleted(point.quest)) then
                 icon = MagePortalHorde
             else
-                icon = work_out_icon(point)
+                icon = SetIcon(point)
             end
         end
         if (point.covenant and point.sanctumtalent) then
             local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
-            icon = TALENT["researched"] and work_out_icon(point) or MagePortalHorde
+            icon = TALENT["researched"] and SetIcon(point) or MagePortalHorde
         end
         if (point.orderhall and point.spell) then
-            icon = IsSpellKnown(point.spell) and work_out_icon(point) or MagePortalHorde
+            icon = IsSpellKnown(point.spell) and SetIcon(point) or MagePortalHorde
         end
         if (point.boat and point.quest) then
-            icon = IsQuestCompleted(point.quest) and work_out_icon(point) or constantsicon.boat_X
+            icon = IsQuestCompleted(point.quest) and SetIcon(point) or constantsicon.boat_X
         end
         if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
             if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = work_out_icon(point)
+                icon = SetIcon(point)
             elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = work_out_icon(point)
+                icon = SetIcon(point)
             else
                 icon = MagePortalHorde
             end
         end
         if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
             if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = work_out_icon(point)
+                icon = SetIcon(point)
             elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = work_out_icon(point)
+                icon = SetIcon(point)
             else
                 icon = MagePortalHorde
             end
         end
-            else icon = work_out_icon(point)
+            else icon = SetIcon(point)
         end
             return label, multilabel, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
     end
 end
 
-local get_point_info_by_coord = function(uMapID, coord)
-    return get_point_info(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local GetPoinInfoByCoord = function(uMapID, coord)
+    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function handle_tooltip(tooltip, point)
+local function SetTooltip(tooltip, point)
 if ((astate == 4 and dstate == 4) and point.faction == "Horde") then
 --  warfrontnote =
     asetnote = 0
@@ -230,8 +230,8 @@ end
     tooltip:Show()
 end
 
-local handle_tooltip_by_coord = function(tooltip, uMapID, coord)
-    return handle_tooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local SetTooltipByCoord = function(tooltip, uMapID, coord)
+    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -248,7 +248,7 @@ function PluginHandler:OnEnter(uMapID, coord)
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    handle_tooltip_by_coord(tooltip, uMapID, coord)
+    SetTooltipByCoord(tooltip, uMapID, coord)
 end
 
 function PluginHandler:OnLeave(uMapID, coord)
@@ -272,7 +272,7 @@ local function addTomTomWaypoint(button, uMapID, coord)
     if IsAddOnLoaded("TomTom") then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = get_point_info_by_coord(uMapID, coord),
+            title = GetPoinInfoByCoord(uMapID, coord),
             persistent = nil,
             minimap = true,
             world = true
@@ -363,7 +363,7 @@ local currentMapID = nil
         local state, value = next(t, prestate)
         while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local _, _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = get_point_info(value)
+                local _, _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = GetPointInfo(value)
                 if portal or orderhall or mixedportal then
                 scale = (scale or 1) * private.db.icon_scale_portal
                 alpha = (alpha or 1) * private.db.icon_alpha_portal

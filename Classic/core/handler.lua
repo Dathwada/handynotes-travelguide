@@ -18,7 +18,7 @@ _G.HandyNotes_TravelGuide = addon
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function work_out_texture(point)
+local function SetIcon(point)
     local icon_key
 
     if (point.boat) then icon_key = "boat" end
@@ -40,24 +40,24 @@ local function work_out_texture(point)
     end
 end
 
-local get_point_info = function(point)
+local GetPointInfo = function(point)
     local icon
     if point then
         local label = point.label or point.label2 or UNKNOWN
-            icon = work_out_texture(point)
+            icon = SetIcon(point)
         return label, label2, icon, quest, lvl, point.scale, point.alpha, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.tram
     end
 end
 
-local get_point_info_by_coord = function(uMapID, coord)
-    return get_point_info(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local GetPointInfoByCoord = function(uMapID, coord)
+    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function handle_tooltip(tooltip, point)
+local function SetTooltip(tooltip, point)
     if point then
         if (point.label) then
             tooltip:AddLine(point.label)
@@ -76,8 +76,8 @@ local function handle_tooltip(tooltip, point)
     tooltip:Show()
 end
 
-local handle_tooltip_by_coord = function(tooltip, uMapID, coord)
-    return handle_tooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local SetTooltipByCoord = function(tooltip, uMapID, coord)
+    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ function PluginHandler:OnEnter(uMapID, coord)
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    handle_tooltip_by_coord(tooltip, uMapID, coord)
+    SetTooltipByCoord(tooltip, uMapID, coord)
 end
 
 function PluginHandler:OnLeave(uMapID, coord)
@@ -118,7 +118,7 @@ local function addTomTomWaypoint(button, uMapID, coord)
     if TomTom then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = get_point_info_by_coord(uMapID, coord),
+            title = GetPointInfoByCoord(uMapID, coord),
             persistent = nil,
             minimap = true,
             world = true
@@ -207,9 +207,9 @@ local currentMapID = nil
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
-        while state do 
+        while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local label, label2, icon, quest, lvl, scale, alpha, zeppelin, hzeppelin, boat, aboat, tram = get_point_info(value)
+                local label, label2, icon, quest, lvl, scale, alpha, zeppelin, hzeppelin, boat, aboat, tram = GetPointInfo(value)
                 if boat or aboat then
                     scale = (scale or 1) * (icon and icon.scale_boat or 1) * profile.icon_scale_boat
                     alpha = (alpha or 1) * (icon and icon.alpha_boat or 1) * profile.icon_alpha_boat
