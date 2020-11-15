@@ -9,6 +9,13 @@ local L = private.locale
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+local function GetMapNames(id1, id2)
+    if id1 and id2 then
+        return format("%s, %s", C_Map.GetMapInfo(id1).name, C_Map.GetMapInfo(id2).name)
+    end
+    return C_Map.GetMapInfo(id1).name
+end
+
 ----------------------------------------------COVENANT----------------------------------------------
 
 local Kyrian    = 1
@@ -19,7 +26,7 @@ local PH = L["PH"] -- PLACEHOLDER
 
 --------------------------------------------SHADOWLANDS---------------------------------------------
 
-local Shadowlands = L["Shadowlands"]
+local Shadowlands = GetMapNames(1550)
 local PtoOribos = L["Portal to Oribos"]
 local WstoOribos = L["Waystone to Oribos"]
 local RingTransference= L["To Ring of Transference"]
@@ -31,8 +38,8 @@ local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
 
 -------------------------------------------------BfA------------------------------------------------
 
-local Zandalar = L["Zandalar"]
-local Zuldazar = L["Zandalar, Zuldazar"]
+local Zandalar = GetMapNames(875)
+local Zuldazar = GetMapNames(875, 862)
 local PtoZuldazar = L["Portal to Zuldazar"]
 local BtoZuldazar = L["Boat to Zuldazar"]
 local returntoZuldazar = L["Return to Zuldazar"]
@@ -42,8 +49,8 @@ local PtoNazjatar = L["Portal to Nazjatar"]
 local StoMechagon = L["Submarine to Mechagon"]
 local PtoSilithus = L["Portal to Silithus"]
 
-local KulTiras = L["Kul Tiras"]
-local TiragardeSound = L["Kul Tiras, Tiragarde Sound"]
+local KulTiras = GetMapNames(876)
+local TiragardeSound = GetMapNames(876, 895)
 local PtoBoralus = L["Portal to Boralus"]
 local BtoBoralus = L["Boat to Boralus"]
 local returntoBoralus = L["Return to Boralus"]
@@ -58,8 +65,8 @@ local PtoPortofBoralus = L["Portal to Port of Boralus"]
 
 -----------------------------------------------LEGION-----------------------------------------------
 
-local BrokenIsles = L["Broken Isles"]
-local Stormheim = L["Broken Isles, Stormheim"]
+local BrokenIsles = GetMapNames(619)
+local Stormheim = GetMapNames(619, 634)
 local PtoStormheim = L["Portal to Stormheim"]
 local PtoHelheim = L["Portal to Helheim"]
 local PtoDala = L["Portal to Dalaran"]
@@ -70,13 +77,13 @@ local PtoSuramar = L["Portal to Suramar"]
 local PtoHighmountain = L["Portal to Highmountain"]
 local GEtoTrueshotLodge = L["Great Eagle to Trueshot Lodge"]
 local JtoSkyhold = L["Jump to Skyhold"]
-local dalaran = L["Dalaran"]
-local azsuna = L["Azsuna"]
-local valsharah = L["Val'sharah"]
-local suramar = L["Suramar"]
-local highmountain = L["Highmountain"]
-local stormheim = L["Stormheim"]
-local brokenshore = L["Broken Shore"]
+local dalaran = GetMapNames(627)
+local azsuna = GetMapNames(630)
+local valsharah = GetMapNames(641)
+local suramar = GetMapNames(680)
+local highmountain = GetMapNames(650)
+local stormheim = GetMapNames(634)
+local brokenshore = GetMapNames(646)
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -84,23 +91,23 @@ local PtoStormshield = L["Portal to Stormshield"]
 local PtoLionswatch = L["Portal to Lion's watch"]
 local PtoWarspear = L["Portal to Warspear"]
 local PtoVolmar = L["Portal to Vol'mar"]
-local Ashran = L["Draenor, Ashran"]
-local TanaanJungle = L["Draenor, Tanaan Jungle"]
+local Ashran = GetMapNames(572, 588)
+local TanaanJungle = GetMapNames(572, 534)
 
 -------------------------------------------------MoP------------------------------------------------
 
-local Pandaria = L["Pandaria"]
-local TownlongSteppes = L["Pandaria, Townlong Steppes"]
+local Pandaria = GetMapNames(424)
+local TownlongSteppes = GetMapNames(424, 388)
 local PtoIofT = L["Portal to Isle of Thunder"]
 local PtoSPG = L["Portal to Shado-Pan Garrison"]
 local PtoJadeForest = L["Portal to Jade Forest"]
+local KunLaiSummit = GetMapNames(424, 379)
 local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
-local KunLaiSummit = L["Pandaria, Kun-Lai Summit"]
 
 -------------------------------------------------CATA-----------------------------------------------
 
-local Maelstrom = L["Maelstrom"]
-local Deepholm = L["Maelstrom, Deepholm"]
+local Maelstrom = GetMapNames(948)
+local Deepholm = GetMapNames(948, 207)
 local PtoTolBarad = L["Portal to Tol Barad"]
 local PtoUldum = L["Portal to Uldum"]
 local PtoDeepholm = L["Portal to Deepholm"]
@@ -112,78 +119,78 @@ local PtoTherazanesThrone = L["Portal to Therazane's Throne"]
 
 ------------------------------------------------WotLK-----------------------------------------------
 
-local CrystalsongForest = L["Northrend, Crystalsong Forest"]
+local CrystalsongForest = GetMapNames(113, 127)
 local PtotPurpleParlor = L["Portal to the Purple Parlor"]
-local BoreanTundra = L["Northrend, Borean Tundra"]
+local BoreanTundra = GetMapNames(113, 114)
 local ZtoBoreanTundra = L["Zeppelin to Borean Tundra"]
 local BtoBoreanTundra = L["Boat to Borean Tundra"]
-local WarsongHold = L["Northrend, Warsong Hold"]
-local ValianceKeep = L["Northrend, Valiance Keep"]
+local WarsongHold = GetMapNames(113)..", "..C_Map.GetAreaInfo(4129)
+local ValianceKeep = GetMapNames(113)..", "..C_Map.GetAreaInfo(4032)
 local BtoUnuPe = L["Boat to Unu'Pe"]
-local Dragonblight = L["Northrend, Dragonblight"]
+local Dragonblight = GetMapNames(113, 115)
 local BtoMoaKiHarbor = L["Boat to Moa'Ki Harbor"]
-local HowlingFjord = L["Northrend, Howling Fjord"]
+local HowlingFjord = GetMapNames(113, 117)
 local PtoHowlingFjord = L["Portal to Howling Fjord"]
-local VengeanceLanding = L["Northrend, Vengeance Landing"]
+local VengeanceLanding = GetMapNames(113)..", "..C_Map.GetAreaInfo(4000)
 local BtoHowlingFjord = L["Boat to Howling Fjord"]
-local Valgarde = L["Northrend, Valgarde"]
+local Valgarde = GetMapNames(113)..", "..C_Map.GetAreaInfo(3981)
 local BtoKamagua = L["Boat to Kamagua"]
 
 -------------------------------------------------BC-------------------------------------------------
 
-local AzuremystIsle = L["Kalimdor, Azuremyst Isle"]
+local AzuremystIsle = GetMapNames(12, 97)
 local PtoExodar = L["Portal to Exodar"]
 local inExodar = L["in Exodar"]
-local Outland = L["Outland"]
+local Outland = GetMapNames(101)
 local PtoHellfirePeninsula = L["Portal to Hellfire Peninsula"]
 local PtoIofQD = L["Portal to Isle of Quel'Danas"]
 local PtoShattrath = L["Portal to Shattrath"]
-local TerokkarForest = L["Outland, Terokkar Forest"]
+local TerokkarForest = GetMapNames(101, 108)
 
 -----------------------------------------------VANILLA----------------------------------------------
 
-local Durotar = L["Kalimdor, Durotar"]
+local Durotar = GetMapNames(12, 1)
 local PtoOG = L["Portal to Orgrimmar"]
 local ZtoOG = L["Zeppelin to Orgrimmar"]
-local Mulgore = L["Kalimdor, Mulgore"]
+local Mulgore = GetMapNames(12, 7)
 local PtoTB = L["Portal to Thunder Bluff"]
 local ZtoTB = L["Zeppelin to Thunder Bluff"]
-local Tirisfal = L["Eastern Kingdoms, Tirisfal Glades"]
+local Tirisfal = GetMapNames(13, 18)
 local PtoUC = L["Portal to Undercity"]
-local Orboftranslocation = L["Orb of translocation"]
 local inUCMq = L["in Undercity Magic Quarter"]
-local EversongWoods = L["Eastern Kingdoms, Eversong Woods"]
+local Orboftranslocation = L["Orb of translocation"]
+local EversongWoods = GetMapNames(13, 94)
 local PtoSM = L["Portal to Silvermoon"]
-local NorthernBarrens = L["Kalimdor, Northern Barrens"]
+local NorthernBarrens = GetMapNames(12, 10)
 local BtoRatchet = L["Boat to Ratchet"]
-local ElwynnForest = L["Eastern Kingdoms, Elwynn Forest"]
+local ElwynnForest = GetMapNames(13, 37)
 local PtoSW = L["Portal to Stormwind"]
 local BtoSW = L["Boat to Stormwind"]
 local DrTtoSW = L["Deeprun Tram to Stormwind"]
-local Teldrassil = L["Kalimdor, Teldrassil"]
+local Teldrassil = GetMapNames(12, 57)
 local PtoDarnassus = L["Portal to Darnassus"]
-local DunMorogh = L["Eastern Kingdoms, Dun Morogh"]
+local DunMorogh = GetMapNames(13, 27)
 local PtoIF = L["Portal to Ironforge"]
 local DrTtoIF = L["Deeprun Tram to Ironforge"]
 local BtoMenethilHarbor = L["Boat to Menethil Harbor"]
 local EasternKingdoms = L["Eastern Kingdoms"]
-local Wetlands = L["Eastern Kingdoms, Wetlands"]
+local Wetlands = GetMapNames(13, 56)
 local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local PtoStranglethornVale = L["Portal to Stranglethorn Vale"]
-local StranglethornVale = L["Eastern Kingdoms, Stranglethorn Vale"]
+local StranglethornVale = GetMapNames(13, 224)
 local BtoBootyBay = L["Boat to Booty Bay"]
-local GromgolBaseCamp = L["Eastern Kingdoms, Grom'gol Base Camp"]
+local GromgolBaseCamp = GetMapNames(13)..", "..C_Map.GetAreaInfo(117)
 local Kalimdor = L["Kalimdor"]
-local DustwallowMarsh = L["Kalimdor, Dustwallow Marsh"]
+local DustwallowMarsh = GetMapNames(12, 70)
 local BtoTheramore = L["Boat to Theramore"]
 local PtoCavernsofTime = L["Portal to Caverns of Time"]
-local Tanaris = L["Kalimdor, Tanaris"]
-local ArathiHighlands = L["Eastern Kingdoms, Arathi Highlands"]
-local Darkshore = L["Kalimdor, Darkshore"]
+local Tanaris = GetMapNames(12, 71)
+local ArathiHighlands = GetMapNames(13, 14)
+local Darkshore = GetMapNames(12, 62)
 local PtoDalaCrater = L["Portal to Dalaran Crater"]
-local HillsbradFoothills = L["Eastern Kingdoms, Hillsbrad Foothills"]
+local HillsbradFoothills = GetMapNames(13, 25)
 local PtoSepulcher = L["Portal to the Sepulcher"]
-local SilverpineForest = L["Eastern Kingdoms, Silverpine Forest"]
+local SilverpineForest = GetMapNames(13, 21)
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------

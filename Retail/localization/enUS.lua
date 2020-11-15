@@ -100,19 +100,12 @@ L["handler_tooltip_not_available"] = "currently NOT available"
 
 --==========================================SHADOWLANDS===========================================--
 
-L["Shadowlands"] = true
 L["Portal to Oribos"] = true
 L["Waystone to Oribos"] = true
-L["Oribos"] = true
 L["To Ring of Transference"] = true
 L["To Ring of Fates"] = true
 L["Into the Maw"] = true
 L["Portal to Thorghast"] = true
-L["Reavendreath"] = true
-L["Bastion"] = true
-L["Maldraxxus"] = true
-L["Ardenweald"] = true
-L["The Maw"] = true
 
 --============================================Bastion=============================================--
 
@@ -120,8 +113,6 @@ L["Anima Gateway to Hero's rest"] = true
 
 -------------------------------------------------BfA------------------------------------------------
 
-L["Zandalar"] = true
-L["Zandalar, Zuldazar"] = true
 L["Portal to Zuldazar"] = true
 L["Boat to Zuldazar"] = true
 L["Return to Zuldazar"] = true
@@ -131,8 +122,6 @@ L["Portal to Nazjatar"] = true
 L["Submarine to Mechagon"] = true
 L["Portal to Silithus"] = true
 
-L["Kul Tiras"] = true
-L["Kul Tiras, Tiragarde Sound"] = true
 L["Portal to Boralus"] = true
 L["Boat to Boralus"] = true
 L["Return to Boralus"] = true
@@ -147,8 +136,6 @@ L["Portal to Port of Boralus"] = true
 
 -----------------------------------------------LEGION-----------------------------------------------
 
-L["Broken Isles"] = true
-L["Broken Isles, Stormheim"] = true
 L["Portal to Stormheim"] = true
 L["Portal to Helheim"] = true
 L["Portal to Dalaran"] = true
@@ -159,13 +146,6 @@ L["Portal to Suramar"] = true
 L["Portal to Highmountain"] = true
 L["Great Eagle to Trueshot Lodge"] = true
 L["Jump to Skyhold"] = true
-L["Dalaran"] = true
-L["Azsuna"] = true
-L["Val'sharah"] = true
-L["Suramar"] = true
-L["Highmountain"] = true
-L["Stormheim"] = true
-L["Broken Shore"] = true
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -173,14 +153,9 @@ L["Portal to Warspear"] = true
 L["Portal to Stormshield"] = true
 L["Portal to Vol'mar"] = true
 L["Portal to Lion's watch"] = true
-L["Draenor, Tanaan Jungle"] = true
-L["Draenor, Ashran"] = true
 
 -------------------------------------------------MoP------------------------------------------------
 
-L["Pandaria"] = true
-L["Pandaria, Kun-Lai Summit"] = true
-L["Pandaria, Townlong Steppes"] = true
 L["Portal to Jade Forest"] = true
 L["Portal to Pandaria"] = true
 L["Portal to Isle of Thunder"] = true
@@ -189,8 +164,6 @@ L["Portal to Peak of Serenity"]= true
 
 -------------------------------------------------CATA-----------------------------------------------
 
-L["Maelstrom"] = true
-L["Maelstrom, Deepholm"] = true
 L["Portal to Deepholm"] = true
 L["Portal to Temple of Earth"] = true
 L["Portal to Therazane's Throne"] = true
@@ -202,90 +175,59 @@ L["Portal to Hyjal"] = true
 
 ------------------------------------------------WotLK-----------------------------------------------
 
-L["Northrend, Crystalsong Forest"] = true
 L["Portal to the Purple Parlor"] = true
-L["Northrend, Howling Fjord"] = true
-L["Northrend, Vengeance Landing"] = true
-L["Northrend, Valgarde"] = true
 L["Boat to Howling Fjord"] = true
 L["Boat to Kamagua"] = true
 L["Portal to Howling Fjord"] = true
-L["Northrend, Borean Tundra"] = true
-L["Northrend, Warsong Hold"] = true
-L["Northrend, Valiance Keep"] = true
 L["Boat to Borean Tundra"] = true
 L["Boat to Unu'Pe"] = true
 L["Zeppelin to Borean Tundra"] = true
-L["Northrend, Dragonblight"] = true
 L["Boat to Moa'Ki Harbor"] = true
 
 -------------------------------------------------BC-------------------------------------------------
 
-L["Outland"] = true
-L["Outland, Terokkar Forest"] = true
 L["Portal to Hellfire Peninsula"] = true
 L["Portal to Shattrath"] = true
 L["Portal to Isle of Quel'Danas"] = true
-L["Kalimdor, Azuremyst Isle"] = true
 L["Portal to Exodar"] = true
 L["in Exodar"] = true
 L["Boat to Exodar"] = true
 
 -----------------------------------------------VANILLA----------------------------------------------
 
-L["Eastern Kingdoms"] = true
-L["Eastern Kingdoms, Wetlands"] = true
 L["Boat to Menethil Harbor"] = true
 
-L["Eastern Kingdoms, Eversong Woods"] = true
 L["Portal to Silvermoon"] = true
 
-L["Eastern Kingdoms, Tirisfal Glades"] = true
 L["Portal to Undercity"] = true
 L["Orb of translocation"] = true
 L["in Undercity Magic Quarter"] = true
 
-L["Eastern Kingdoms, Stranglethorn Vale"] = true
-L["Eastern Kingdoms, Grom'gol Base Camp"] = true
 L["Zeppelin to Stranglethorn Vale"] = true
 L["Portal to Stranglethorn Vale"] = true
 L["Boat to Booty Bay"] = true
 
-L["Eastern Kingdoms, Elwynn Forest"] = true
 L["Portal to Stormwind"] = true
 L["Boat to Stormwind"] = true
 L["Deeprun Tram to Stormwind"] = true
 
-L["Eastern Kingdoms, Dun Morogh"] = true
 L["Portal to Ironforge"] = true
 L["Deeprun Tram to Ironforge"] = true
 
-L["Kalimdor"] = true
-L["Kalimdor, Durotar"] = true
 L["Portal to Orgrimmar"] = true
 L["Zeppelin to Orgrimmar"] = true
 
-L["Kalimdor, Mulgore"] = true
 L["Portal to Thunder Bluff"] = true
 L["Zeppelin to Thunder Bluff"] = true
 
-L["Kalimdor, Teldrassil"] = true
 L["Portal to Darnassus"] = true
 
-L["Kalimdor, Northern Barrens"] = true
 L["Boat to Ratchet"] = true
 
-L["Kalimdor, Dustwallow Marsh"] = true
 L["Boat to Theramore"] = true
 
-L["Kalimdor, Tanaris"] = true
 L["Portal to Caverns of Time"] = true
 
-L["Eastern Kingdoms, Arathi Highlands"] = true
-L["Kalimdor, Darkshore"] = true
-
 L["Portal to Dalaran Crater"] = true
-L["Eastern Kingdoms, Hillsbrad Foothills"] = true
 L["Portal to the Sepulcher"] = true
-L["Eastern Kingdoms, Silverpine Forest"] = true
 end

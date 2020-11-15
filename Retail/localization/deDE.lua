@@ -100,19 +100,12 @@ L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
 
 --==========================================SHADOWLANDS===========================================--
 
-L["Shadowlands"] = "Schattenlande"
 L["Portal to Oribos"] = "Portal nach Oribos"
 L["Waystone to Oribos"] = "Portalstein nach Oribos"
-L["Oribos"] = true
 L["To Ring of Transference"] = "Zum Ring der Übertragung"
 L["To Ring of Fates"] = "Zum Ring der Schicksale"
 L["Into the Maw"] = "In den Schlund"
 L["Portal to Thorghast"] = "Portal nach Thorghast"
-L["Reavendreath"] = true
-L["Bastion"] = true
-L["Maldraxxus"] = true
-L["Ardenweald"] = "Ardenwald"
-L["The Maw"] = "Der Schlund"
 
 --============================================Bastion=============================================--
 
@@ -120,8 +113,6 @@ L["Anima Gateway to Hero's rest"] = "Animaportal nach Heldenrast"
 
 -------------------------------------------------BfA------------------------------------------------
 
-L["Zandalar"] = true
-L["Zandalar, Zuldazar"] = true
 L["Portal to Zuldazar"] = "Portal nach Zuldazar"
 L["Boat to Zuldazar"] = "Schiff nach Zuldazar"
 L["Return to Zuldazar"] = "Zurück nach Zuldazar"
@@ -131,8 +122,6 @@ L["Portal to Nazjatar"] = "Portal nach Nazjatar"
 L["Submarine to Mechagon"] = "U-Boot nach Mechagon"
 L["Portal to Silithus"] = "Portal nach Silithus"
 
-L["Kul Tiras"] = true
-L["Kul Tiras, Tiragarde Sound"] = "Kul Tiras, Tiragardesund"
 L["Portal to Boralus"] = "Portal nach Boralus"
 L["Boat to Boralus"] = "Schiff nach Boralus"
 L["Return to Boralus"] = "Zurück nach Boralus"
@@ -147,8 +136,6 @@ L["Portal to Port of Boralus"] = "Portal zum Hafen von Boralus"
 
 -----------------------------------------------LEGION-----------------------------------------------
 
-L["Broken Isles"] = "Die Verheerten Inseln"
-L["Broken Isles, Stormheim"] = "Die Verheerten Inseln, Sturmheim"
 L["Portal to Stormheim"] = "Portal nach Sturmheim"
 L["Portal to Helheim"] = "Portal nach Helheim"
 L["Portal to Dalaran"] = "Portal nach Dalaran"
@@ -159,13 +146,6 @@ L["Portal to Suramar"] = "Portal nach Suramar"
 L["Portal to Highmountain"] = "Portal zum Hochberg"
 L["Great Eagle to Trueshot Lodge"] = "Großer Adler zur Volltrefferhütte"
 L["Jump to Skyhold"] = "Zur Himmelfeste springen"
-L["Dalaran"] = true
-L["Azsuna"] = true
-L["Val'sharah"] = true
-L["Suramar"] = true
-L["Highmountain"] = "Hochberg"
-L["Stormheim"] = "Sturmheim"
-L["Broken Shore"] = "Die Verheerte Küste"
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -173,14 +153,9 @@ L["Portal to Warspear"] = "Portal nach Kriegsspeer"
 L["Portal to Stormshield"] = "Portal zum Sturmschild"
 L["Portal to Vol'mar"] = "Portal nach Vol'mar"
 L["Portal to Lion's watch"] = "Portal zur Löwenwacht"
-L["Draenor, Tanaan Jungle"] = "Draenor, Tanaandschungel"
-L["Draenor, Ashran"] = true
 
 -------------------------------------------------MoP------------------------------------------------
 
-L["Pandaria"] = true
-L["Pandaria, Kun-Lai Summit"] = "Pandaria, Kun-Lai Gipfel"
-L["Pandaria, Townlong Steppes"] = "Pandaria, Tonlongsteppe"
 L["Portal to Jade Forest"] = "Portal zum Jadewald"
 L["Portal to Pandaria"] = "Portal nach Pandaria"
 L["Portal to Isle of Thunder"] = "Portal zur Insel des Donners"
@@ -189,8 +164,6 @@ L["Portal to Peak of Serenity"] = "Portal zum Gipfel der Ruhe"
 
 -------------------------------------------------CATA-----------------------------------------------
 
-L["Maelstrom"] = "Mahlstrom"
-L["Maelstrom, Deepholm"] = "Mahlstrom, Tiefenheim"
 L["Portal to Deepholm"] = "Portal nach Tiefenheim"
 L["Portal to Temple of Earth"] = "Portal zum Tempel der Erde"
 L["Portal to Therazane's Throne"] = "Portal zu Therazanes Thron"
@@ -202,90 +175,59 @@ L["Portal to Hyjal"] = "Portal zum Hyjal"
 
 ------------------------------------------------WotLK-----------------------------------------------
 
-L["Northrend, Crystalsong Forest"] = "Nordend, Kristallsangwald"
 L["Portal to the Purple Parlor"] = "Portal zum Purpursalon"
-L["Northrend, Howling Fjord"] = "Nordend, Heulender Fjord"
-L["Northrend, Vengeance Landing"] = "Nordend, Hafen der Vergeltung"
-L["Northrend, Valgarde"] = "Nordend, Valgarde"
 L["Boat to Howling Fjord"] = "Schiff in den Heulenden Fjord"
 L["Boat to Kamagua"] = "Schiff nach Kamagua"
 L["Portal to Howling Fjord"] = "Portal zum Heulenden Fjord"
-L["Northrend, Borean Tundra"] = "Nordend, Boreanische Tundra"
-L["Northrend, Warsong Hold"] = "Nordend, Kriegshymnenfeste"
-L["Northrend, Valiance Keep"] = "Nordend, Valianzfeste"
 L["Boat to Borean Tundra"] = "Schiff in die Boreanische Tundra"
 L["Boat to Unu'Pe"] = "Schiff nach Unu'pe"
 L["Zeppelin to Borean Tundra"] = "Zeppelin in die Boreanische Tundra"
-L["Northrend, Dragonblight"] = "Nordend, Drachenöde"
 L["Boat to Moa'Ki Harbor"] = "Schiff zum Hafen Moa'ki"
 
 -------------------------------------------------BC-------------------------------------------------
 
-L["Outland"] = "Scherbenwelt"
-L["Outland, Terokkar Forest"] = "Scherbenwelt, Wälder von Terokkar"
 L["Portal to Hellfire Peninsula"] = "Portal zur Höllenfeuerhalbinsel"
 L["Portal to Shattrath"] = "Portal nach Shattrath"
 L["Portal to Isle of Quel'Danas"] = "Portal zur Insel von Quel'Danas"
-L["Kalimdor, Azuremyst Isle"] = "Kalimdor, Azurmythosinsel"
 L["Portal to Exodar"] = "Portal zur Exodar"
 L["in Exodar"] = true
 L["Boat to Exodar"] = "Schiff zur Exodar"
 
 -----------------------------------------------VANILLA----------------------------------------------
 
-L["Eastern Kingdoms"] = "Die Östlichen Königreiche"
-L["Eastern Kingdoms, Wetlands"] = "Die Östlichen Königreiche, Sumpfland"
 L["Boat to Menethil Harbor"] = "Schiff zum Hafen von Menethil"
 
-L["Eastern Kingdoms, Eversong Woods"] = "Die Östlichen Königreiche, Immersangwald"
 L["Portal to Silvermoon"] = "Portal nach Silbermond"
 
-L["Eastern Kingdoms, Tirisfal Glades"] = "Die Östlichen Königreiche, Tirisfal"
 L["Portal to Undercity"] = "Portal nach Unterstadt"
 L["Orb of translocation"] = "Translokationskugel"
 L["in Undercity Magic Quarter"] = "in Unterstadt im Magieviertel"
 
-L["Eastern Kingdoms, Stranglethorn Vale"] = "Die Östlichen Königreiche, Schlingendorntal"
-L["Eastern Kingdoms, Grom'gol Base Camp"] = "Die Östlichen Königreiche, Basislager Grom'gol"
 L["Zeppelin to Stranglethorn Vale"] = "Zeppelin ins Schlingendorntal"
 L["Portal to Stranglethorn Vale"] = "Portal zum Schlingendorntal"
 L["Boat to Booty Bay"] = "Schiff nach Beutebucht"
 
-L["Eastern Kingdoms, Elwynn Forest"] = "Die Östlichen Königreiche, Wald von Elwynn"
 L["Portal to Stormwind"] = "Portal nach Sturmwind"
 L["Boat to Stormwind"] = "Schiff nach Sturmwind"
 L["Deeprun Tram to Stormwind"] = "Tiefenbahn nach Sturmwind"
 
-L["Eastern Kingdoms, Dun Morogh"] = "Die Östlichen Königreiche, Dun Morogh"
 L["Portal to Ironforge"] = "Portal nach Eisenschmiede"
 L["Deeprun Tram to Ironforge"] = "Tiefenbahn nach Eisenschmiede"
 
-L["Kalimdor"] = true
-L["Kalimdor, Durotar"] = true
 L["Portal to Orgrimmar"] = "Portal nach Orgrimmar"
 L["Zeppelin to Orgrimmar"] = "Zeppelin nach Orgrimmar"
 
-L["Kalimdor, Mulgore"] = true
 L["Portal to Thunder Bluff"] = "Portal nach Donnerfels"
 L["Zeppelin to Thunder Bluff"] = "Zeppelin nach Donnerfels"
 
-L["Kalimdor, Teldrassil"] = true
 L["Portal to Darnassus"] = "Portal nach Darnassus"
 
-L["Kalimdor, Northern Barrens"] = "Kalimdor, Nördliches Brachland"
 L["Boat to Ratchet"] = "Schiff nach Ratchet"
 
-L["Kalimdor, Dustwallow Marsh"] = "Kalimdor, Düstermarschen"
 L["Boat to Theramore"] = "Schiff nach Theramore"
 
-L["Kalimdor, Tanaris"] = true
 L["Portal to Caverns of Time"] = "Portal zu den Höhlen der Zeit"
 
-L["Eastern Kingdoms, Arathi Highlands"] = "Die Östlichen Königreiche, Arathihochland"
-L["Kalimdor, Darkshore"] = "Kalimdor, Dunkelküste"
-
 L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
-L["Eastern Kingdoms, Hillsbrad Foothills"] = "Die Östlichen Königreiche, Vorgebirge des Hügellands"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
-L["Eastern Kingdoms, Silverpine Forest"] = "Die Östlichen Königreiche, Silberwald"
 end
