@@ -39,9 +39,11 @@ constants.defaults = {
         show_herorestgate = true,
 --      show_others = true,
 
-        dev = false,
         force_nodes = false,
         show_prints = false,
+    },
+    global = {
+        dev = false,
     },
     char = {
         hidden = {
