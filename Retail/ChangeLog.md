@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.3.0 (November 18 , 2020)
+-------------------------------
+* Added new teleport platforms in Oribos
+* Added the new travel network tier 3 covenant sanctum Portal to Oribos
+* More background changes
+* Bump .toc to 90002
+
 #### v2.2.1 (November 09 , 2020)
 -------------------------------
 * Updated AceTimer-3.0
