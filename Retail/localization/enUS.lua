@@ -8,7 +8,7 @@ if L then
 ----------------------------------------------------------------------------------------------------
 
 L["config_plugin_name"] = "TravelGuide"
-L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
+L["config_plugin_desc"] = "Displays the portal, zeppelin and boat locations on the world map and minimap."
 
 L["config_tab_general"] = "General"
 L["config_tab_scale_alpha"] = "Scale / Alpha"
