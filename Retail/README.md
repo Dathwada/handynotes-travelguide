@@ -1,4 +1,4 @@
-##### **TravelGuide is a [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin to show the portal, boat and zeppelin locations on the world map and the mini map.**
+##### **TravelGuide is a [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin to display the portal, boat and zeppelin locations on the world map and minimap.**
 ##### **Classic Version: [HandyNotes: TravelGuide (Classic)](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic)**
 
 ## Options
@@ -16,6 +16,7 @@
 
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
+* Easy Waypoint (Set a waypoint by right-clicking a node and access to more options by CTRL + right-clicking)
 * Notes for the portals, zepplins and boats.
 * Level, quest, time travel (i.e. Tirisfal Glades) and sanctum upgrade check.
     * ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
