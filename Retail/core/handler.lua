@@ -15,7 +15,9 @@ addon.constants = private.constants
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
-local constantsicon = private.constants.icon
+
+local MagePortalHorde  = private.constants.icon.MagePortalHorde
+local BoatX            = private.constants.icon.boat_x
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -31,6 +33,63 @@ local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
 
 ----------------------------------------------------------------------------------------------------
+----------------------------------------------FUNCTIONS---------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+-- returns the controlling faction
+local function GetWarfrontState(id)
+    -- Battle for Stromgarde 11, Battle for Darkshore 118
+    state = C_ContributionCollector.GetState(id)
+    return (state == 1 or state == 2) and "Alliance" or "Horde"
+end
+
+-- returns the note for mixed portals
+local function SetWarfrontNote()
+    astate = GetWarfrontState(11) -- Battle for Stromgarde
+    dstate = GetWarfrontState(118) -- Battle for Darkshore
+
+    return (astate ~= select(1, UnitFactionGroup("player")) and notavailable or " ").."\n"..(dstate ~= select(1, UnitFactionGroup("player")) and notavailable or " ")
+end
+
+-- returns true when all requirements are fullfilled
+local function ReqFullfilled(req, ...)
+    if (req.quest and not IsQuestCompleted(req.quest))
+    or (req.level and (UnitLevel("player") < req.level))
+    or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
+    or (req.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
+    or (req.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(req.timetravel.quest) and req.warfront and not req.timetravel.turn)
+    or (req.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
+    or (req.warfront and GetWarfrontState(req.warfront) ~= select(1, UnitFactionGroup("player")))
+    or (req.spell and not IsSpellKnown(req.spell))
+    then
+        return false
+    end
+
+	return true
+end
+
+-- workaround to prepare the multilabels with and without notes
+-- because the game displays the first line in 14px and
+-- the following lines in 13px with a normal for loop.
+local function PrepareLabel(label, note)
+    local t = {}
+    for i, name in ipairs(label) do
+        if (label and private.db.show_note) then
+            if label[i] and note[i] then
+                t[i] = name.." ("..note[i]..")"
+             else
+            -- if there is no note for this Portal
+                t[i] = name
+            end
+        else
+        -- if the private.db.show_note == false
+            t[i] = name
+        end
+    end
+    return table.concat(t, "\n")
+end
+
+----------------------------------------------------------------------------------------------------
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
@@ -44,66 +103,23 @@ local function SetIcon(point)
         if point[k] then icon_key = k end
     end
 
-    if (icon_key and constantsicon[icon_key]) then
-        return constantsicon[icon_key]
+    if (icon_key and private.constants.icon[icon_key]) then
+        return private.constants.icon[icon_key]
     end
 end
 
 local GetPointInfo = function(point)
     local icon
-    local MagePortalHorde = constantsicon.MagePortalHorde
+
     if point then
         local spellName = GetSpellInfo(point.spell)
-        local label = point.label or table.concat(point.multilabel, "\n") or spellName or UNKNOWN
-        if (point.lvl or point.quest or point.sanctumtalent or point.timetravel or point.spell) and not point.mixedportal then
-        if (point.portal and (point.lvl or point.quest or point.timetravel)) then
-            if (point.lvl and (UnitLevel("player") < point.lvl)) and (point.quest and not IsQuestCompleted(point.quest)) then
-                icon = MagePortalHorde
-            elseif (point.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and not point.timetravel["turn"]) then
-                icon = MagePortalHorde
-            elseif (point.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(point.timetravel["quest"]) and point.warfront and not point.timetravel["turn"]) then
-                icon = MagePortalHorde
-            elseif (point.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and point.timetravel["turn"]) then
-                icon = MagePortalHorde
-            elseif (point.lvl and (UnitLevel("player") < point.lvl)) then
-                icon = MagePortalHorde
-            elseif (point.quest and not IsQuestCompleted(point.quest)) then
-                icon = MagePortalHorde
-            else
-                icon = SetIcon(point)
-            end
+        local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or spellName or UNKNOWN
+        if point.requirements and not ReqFullfilled(point.requirements) then
+            icon = ((point.portal or point.orderhall) and MagePortalHorde) or (point.boat and BoatX)
+        else
+            icon = SetIcon(point)
         end
-        if (point.covenant and point.sanctumtalent) then
-            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
-            icon = TALENT["researched"] and SetIcon(point) or MagePortalHorde
-        end
-        if (point.orderhall and point.spell) then
-            icon = IsSpellKnown(point.spell) and SetIcon(point) or MagePortalHorde
-        end
-        if (point.boat and point.quest) then
-            icon = IsQuestCompleted(point.quest) and SetIcon(point) or constantsicon.boat_X
-        end
-        if (point.warfront and point.warfront == "arathi" and UnitLevel("player") >= 50) then
-            if ((astate == 1 or astate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = SetIcon(point)
-            elseif ((astate == 3 or astate == 4) and point.faction == "Horde"and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = SetIcon(point)
-            else
-                icon = MagePortalHorde
-            end
-        end
-        if (point.warfront and point.warfront == "darkshore" and UnitLevel("player") >= 50) then
-            if ((dstate == 1 or dstate == 2) and point.faction == "Alliance" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = SetIcon(point)
-            elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde" and not IsQuestCompleted(point.timetravel["quest"])) then
-                icon = SetIcon(point)
-            else
-                icon = MagePortalHorde
-            end
-        end
-            else icon = SetIcon(point)
-        end
-            return label, multilabel, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
+        return label, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
     end
 end
 
@@ -116,51 +132,7 @@ end
 ----------------------------------------------------------------------------------------------------
 
 local function SetTooltip(tooltip, point)
-if ((astate == 4 and dstate == 4) and point.faction == "Horde") then
---  warfrontnote =
-    asetnote = 0
-    dsetnote = 0
-elseif ((astate == 1 or astate == 2) and point.faction == "Alliance") then
-    warfrontnote = " ".."\n"..notavailable
-    asetnote = 0
-    dsetnote = 1
-elseif ((astate == 3 or astate == 4) and point.faction == "Horde") then
-    warfrontnote = " ".."\n"..notavailable
-    asetnote = 0
-    dsetnote = 1
-elseif ((dstate == 1 or dstate == 2) and point.faction == "Alliance") then
-    warfrontnote = notavailable.."\n".." "
-    asetnote = 1
-    dsetnote = 0
-elseif ((dstate == 3 or dstate == 4) and point.faction == "Horde") then
-    warfrontnote = notavailable.."\n".." "
-    asetnote = 1
-    dsetnote = 0
-else
-    warfrontnote = notavailable.."\n"..notavailable
-    asetnote = 1
-    dsetnote = 1
-end
-
-    function preparelabel()
-    -- workaround to prepare the multilabels with and without notes
-    -- because the game displays the first line in 14px and
-    -- the following lines in 13px with a normal for loop.
-        local label = {}
-        for i, name in ipairs(point.multilabel) do
-            if (point.multilabel and private.db.show_note) then
-                if point.multilabel[i] and point.multinote[i] then
-                    label[i] = name.." ("..point.multinote[i]..")"
-                else
-                    label[i] = name -- if there is no note for this Portal
-                end
-            else
-                label[i] = name -- if the private.db.show_note == false
-            end
-        end
-    return table.concat(label, "\n")
-    end
-
+    local pointreq = point.requirements
     if point then
         if (point.label) then
             tooltip:AddLine(point.label)
@@ -173,55 +145,57 @@ end
             tooltip:AddLine("("..point.note..")")
         end
         if (point.multilabel and not point.mixedportal) then
-            tooltip:AddLine(preparelabel())
+            tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
         end
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
         if (point.mixedportal) then
-            tooltip:AddDoubleLine(preparelabel(), warfrontnote, nil,nil,nil,1) -- only the second line is red
+            tooltip:AddDoubleLine(PrepareLabel(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
-        if (point.warfront and (point.warfront == "arathi" and asetnote == 1) or (point.warfront == "darkshore" and dsetnote == 1)) then
-            tooltip:AddLine(notavailable, 1) -- red
-        end
-        if (point.lvl and UnitLevel("player") < point.lvl) then
-            tooltip:AddLine(RequiresPlayerLvl..": "..point.lvl, 1) -- red
-        end
-        if (point.quest and not IsQuestCompleted(point.quest)) then
-            if C_QuestLog.GetTitleForQuestID(point.quest) ~= nil then
-                tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(point.quest).."] (ID: "..point.quest..")",1,0,0)
-            else
-                tooltip:AddLine(RetrievindData,1,0,1) -- pink
-                C_Timer.After(1, function() addon:Refresh() end) -- Refresh
---              print("refreshed")
+        if pointreq then
+            if (pointreq.warfront and GetWarfrontState(pointreq.warfront) ~= select(1, UnitFactionGroup("player"))) then
+                tooltip:AddLine(notavailable, 1) -- red
             end
-        end
-        if (point.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
-            local spellName = GetSpellInfo(point.timetravel["spell"])
-            if spellName then
-                if (not IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and not point.timetravel["turn"]) then
-                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
-                elseif (IsQuestCompleted(point.timetravel["quest"]) and point.warfront and not point.timetravel["turn"]) then
-                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
-                elseif (IsQuestCompleted(point.timetravel["quest"]) and not point.warfront and point.timetravel["turn"]) then
-                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
+            if (pointreq.level and UnitLevel("player") < pointreq.level) then
+                tooltip:AddLine(RequiresPlayerLvl..": "..pointreq.level, 1) -- red
+            end
+            if (pointreq.quest and not IsQuestCompleted(pointreq.quest)) then
+                if C_QuestLog.GetTitleForQuestID(pointreq.quest) ~= nil then
+                    tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
+                else
+                    tooltip:AddLine(RetrievindData,1,0,1) -- pink
+                    C_Timer.After(1, function() addon:Refresh() end) -- Refresh
+    --              print("refreshed")
                 end
             end
-        end
-        if (point.spell) then -- don't show this if the spell is known
-            local spellName = GetSpellInfo(point.spell)
-            local isKnown = IsSpellKnown(point.spell)
-            if spellName and not isKnown then
-                tooltip:AddLine(requires..': '..spellName, 1) -- red
+            if (pointreq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
+                local spellName = GetSpellInfo(pointreq.timetravel["spell"])
+                if spellName then
+                    if (not IsQuestCompleted(pointreq.timetravel["quest"]) and not pointreq.warfront and not pointreq.timetravel["turn"]) then
+                        tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
+                    elseif (IsQuestCompleted(pointreq.timetravel["quest"]) and pointreq.warfront and not pointreq.timetravel["turn"]) then
+                        tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
+                    elseif (IsQuestCompleted(pointreq.timetravel["quest"]) and not pointreq.warfront and pointreq.timetravel["turn"]) then
+                        tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
+                    end
+                end
             end
-        end
-        if point.covenant and point.sanctumtalent then
-            local TALENT = C_Garrison.GetTalentInfo(point.sanctumtalent)
-            if not TALENT["researched"] then
-                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
-                tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
-                tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
-                tooltip:AddLine("   • "..format(TNRank, TALENT["tier"]+1), 0.6, 0.6, 0.6) -- grey
+            if (pointreq.spell) then -- don't show this if the spell is known
+                local spellName = GetSpellInfo(pointreq.spell)
+                local isKnown = IsSpellKnown(pointreq.spell)
+                if spellName and not isKnown then
+                    tooltip:AddLine(requires..': '..spellName, 1) -- red
+                end
+            end
+            if point.covenant and pointreq.sanctumtalent then
+                local TALENT = C_Garrison.GetTalentInfo(pointreq.sanctumtalent)
+                if not TALENT["researched"] then
+                    tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
+                    tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
+                    tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
+                    tooltip:AddLine("   • "..format(TNRank, TALENT["tier"]+1), 0.6, 0.6, 0.6) -- grey
+                end
             end
         end
     else
@@ -363,7 +337,7 @@ local currentMapID = nil
         local state, value = next(t, prestate)
         while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local _, _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = GetPointInfo(value)
+                local _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = GetPointInfo(value)
                 if portal or orderhall or mixedportal then
                 scale = (scale or 1) * private.db.icon_scale_portal
                 alpha = (alpha or 1) * private.db.icon_alpha_portal
@@ -407,19 +381,19 @@ local currentMapID = nil
         if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
             return false
         end
-        if (point.portal and not private.db.show_portal) then return false; end
-        if (point.orderhall and not private.db.show_orderhall) then return false; end
-        if (point.worderhall and not private.db.show_orderhall) then return false; end
-        if (point.warfront and not private.db.show_warfront) then return false; end
-        if (point.mixedportal and not private.db.show_warfront) then return false; end
-        if (point.flightmaster and not private.db.show_orderhall) then return false; end
-        if (point.tram and not private.db.show_tram) then return false; end
-        if (point.boat and not private.db.show_boat) then return false; end
-        if (point.aboat and not private.db.show_aboat) then return false; end
-        if (point.zeppelin and not private.db.show_zeppelin) then return false; end
-        if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
-        if (point.herosrestgate and not private.db.show_herorestgate) then return false; end
-        if (point.tpplatform and not private.db.show_tpplatform) then return false; end
+        if (point.portal and not private.db.show_portal) then return false end
+        if (point.orderhall and not private.db.show_orderhall) then return false end
+        if (point.worderhall and not private.db.show_orderhall) then return false end
+        if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
+        if (point.mixedportal and not private.db.show_warfront) then return false end
+        if (point.flightmaster and not private.db.show_orderhall) then return false end
+        if (point.tram and not private.db.show_tram) then return false end
+        if (point.boat and not private.db.show_boat) then return false end
+        if (point.aboat and not private.db.show_aboat) then return false end
+        if (point.zeppelin and not private.db.show_zeppelin) then return false end
+        if (point.hzeppelin and not private.db.show_hzeppelin) then return false end
+        if (point.herosrestgate and not private.db.show_herorestgate) then return false end
+        if (point.tpplatform and not private.db.show_tpplatform) then return false end
     end
         return true
     end
@@ -446,21 +420,6 @@ function addon:OnInitialize()
 
     -- Initialize database with HandyNotes
     HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
-    self:RegisterEvent("PLAYER_ENTERING_WORLD", "WorldEnter");
-end
-
-function addon:WorldEnter()
-    self:UnregisterEvent("PLAYER_ENTERING_WORLD");
-    self:ScheduleTimer("RegisterWithHandyNotes", 2);
-    C_Timer.After(5, function()
-    end );
-end
-
-function addon:RegisterWithHandyNotes()
-    astate = C_ContributionCollector.GetState(11)  -- Battle for Stromgarde
-    dstate = C_ContributionCollector.GetState(118) -- Battle for Darkshore
---  astate = 1  -- Battle for Stromgarde only for testing
---  dstate = 2  -- Battle for Darkshore only for testing
 end
 
 function addon:Refresh()
