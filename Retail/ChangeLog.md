@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.4.0 (December 20, 2020)
+-------------------------------
+* Fixed Kalimdor and Eastern Kingdoms localization [#4](https://github.com/Dathwada/handynotes-travelguide/issues/4)
+* Updated Traditional Chinese translation by [lostindark0](https://www.curseforge.com/members/lostindark0)
+* Background changes with requirements and warfront states and notes
+
 #### v2.3.0 (November 18 , 2020)
 -------------------------------
 * Added new teleport platforms in Oribos
