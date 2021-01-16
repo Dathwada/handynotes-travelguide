@@ -234,9 +234,10 @@ DB.points = {
         [45665085] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", requirements={quest=60151} },
         [45665054] = { portal=true, label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={quest=60151} },
         [23411094] = { portal=true, label=WstoOribos },
+        [62772775] = { portal=true, label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
         [76015007] = { portal=true, label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
         [47928153] = { portal=true, label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
-        [62772775] = { portal=true, label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
+        [20535087] = { portal=true, label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
         },
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { portal=true, label=PtoOG, note=Durotar, faction="Horde", requirements={quest=60151} },
@@ -265,7 +266,7 @@ DB.points = {
         [52983802] = { herosrestgate=true, label=AGtoHerosrest }, --3 --Blizzard marked
         [65581959] = { portal=true, label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
         },
-        [1707] = { -- Elysian Hold
+    [1707] = { -- Elysian Hold
         [48816478] = { portal=true, label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
         },
     [1565] = { -- Ardenweald
@@ -273,6 +274,12 @@ DB.points = {
         },
     [1702] = { -- Hearth of the Forest - The Roots
         [59972842] = { portal=true, label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
+        },
+    [1525] = { -- Revendreth
+        [32134043] = { portal=true, label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        },
+    [1699] = { -- Sinfall Reaches
+        [62052630] = { portal=true, label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
         },
     [1543] = { -- The Maw
         [42374215] = { portal=true, label=WstoOribos },
