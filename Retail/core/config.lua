@@ -104,8 +104,8 @@ config.options = {
                 },
                 show_tram = {
                     type = "toggle",
-                    name = L["config_deeprun_tram"],
-                    desc = L["config_deeprun_tram_desc"],
+                    name = L["config_tram"],
+                    desc = L["config_tram_desc"],
                     order = 19,
                 },
                 show_note = {
@@ -119,18 +119,18 @@ config.options = {
                     name = "",
                     order = 21,
                 },
-                show_tpplatform = {
-                    type = "toggle",
-                    width = "full",
-                    name = L["config_teleport_platform"],
-                    desc = L["config_teleport_platform_desc"],
-                    order = 22,
-                },
-                show_herorestgate = {
+                show_anima_gateway = {
                     type = "toggle",
                     width = "full",
                     name = L["config_anima_gateway"],
                     desc = L["config_anima_gateway_desc"],
+                    order = 22,
+                },
+                show_teleport_platform = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["config_teleport_platform"],
+                    desc = L["config_teleport_platform_desc"],
                     order = 23,
                 },
                 other_line = {
@@ -182,7 +182,8 @@ config.options = {
     },
 }
 
-for i, icongroup in ipairs({"portal", "boat", "zeppelin", "others"}) do
+-- create the scale / alpha config menu
+for i, icongroup in ipairs(private.constants.icongroup) do
 
     config.options.args.SCALEALPHA.args["name_"..icongroup] = {
         type = "header",
@@ -196,7 +197,7 @@ for i, icongroup in ipairs({"portal", "boat", "zeppelin", "others"}) do
         desc = L["config_icon_scale_desc"],
         min = 0.25, max = 3, step = 0.01,
         arg = "icon_scale_"..icongroup,
-        width = 1.13,
+        width = 1.07,
         order = i *10 + 1,
     }
 
@@ -206,7 +207,7 @@ for i, icongroup in ipairs({"portal", "boat", "zeppelin", "others"}) do
         desc = L["config_icon_alpha_desc"],
         min = 0, max = 1, step = 0.01,
         arg = "icon_alpha_"..icongroup,
-        width = 1.13,
+        width = 1.07,
         order = i *10 + 2,
     }
 end

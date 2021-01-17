@@ -94,18 +94,35 @@ end
 ----------------------------------------------------------------------------------------------------
 
 local function SetIcon(point)
-    local icon_key
-
-    for i, k in ipairs({
-        "portal", "orderhall", "mixedportal", "boat", "aboat", "zeppelin",
-        "hzeppelin", "tram", "flightmaster", "herosrestgate", "tpplatform"
-    }) do
-        if point[k] then icon_key = k end
-    end
+    local icon_key = point.icon
 
     if (icon_key and private.constants.icon[icon_key]) then
         return private.constants.icon[icon_key]
     end
+end
+
+local function GetIconScale(icon)
+    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" then
+        return private.db["icon_scale_portal"]
+    elseif icon == "boat" or icon == "aboat" then
+        return private.db["icon_scale_boat"]
+    elseif icon == "zeppelin" or icon == "hzeppelin" then
+        return private.db["icon_scale_zeppelin"]
+    end
+
+    return private.db["icon_scale_"..icon] or private.db["icon_scale_others"]
+end
+
+local function GetIconAlpha(icon)
+    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" then
+        return private.db["icon_alpha_portal"]
+    elseif icon == "boat" or icon == "aboat" then
+        return private.db["icon_alpha_boat"]
+    elseif icon == "zeppelin" or icon == "hzeppelin" then
+        return private.db["icon_alpha_zeppelin"]
+    end
+
+    return private.db["icon_alpha_"..icon] or private.db["icon_alpha_others"]
 end
 
 local GetPointInfo = function(point)
@@ -115,11 +132,11 @@ local GetPointInfo = function(point)
         local spellName = GetSpellInfo(point.spell)
         local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or spellName or UNKNOWN
         if point.requirements and not ReqFullfilled(point.requirements) then
-            icon = ((point.portal or point.orderhall) and MagePortalHorde) or (point.boat and BoatX)
+            icon = ((point.icon == "portal" or point.icon == "orderhall") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
             icon = SetIcon(point)
         end
-        return label, icon, point.scale, point.alpha, point.portal, point.orderhall, point.mixedportal, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.covenant
+        return label, icon, point.icon, point.scale, point.alpha
     end
 end
 
@@ -337,23 +354,9 @@ local currentMapID = nil
         local state, value = next(t, prestate)
         while state do
             if value and private:ShouldShow(state, value, currentMapID) then
-                local _, icon, scale, alpha, portal, orderhall, mixedportal, zeppelin, hzeppelin, boat, aboat, covenant = GetPointInfo(value)
-                if portal or orderhall or mixedportal then
-                scale = (scale or 1) * private.db.icon_scale_portal
-                alpha = (alpha or 1) * private.db.icon_alpha_portal
-                elseif boat or aboat then
-                scale = (scale or 1) * private.db.icon_scale_boat
-                alpha = (alpha or 1) * private.db.icon_alpha_boat
-                elseif zeppelin or hzeppelin then
-                scale = (scale or 1) * private.db.icon_scale_zeppelin
-                alpha = (alpha or 1) * private.db.icon_alpha_zeppelin
-                elseif covenant then
-                scale = (scale or 1) * private.db.icon_scale_covenant
-                alpha = (alpha or 1) * private.db.icon_alpha_covenant
-                else
-                scale = (scale or 1) * private.db.icon_scale_others
-                alpha = (alpha or 1) * private.db.icon_alpha_others
-                end
+                local _, icon, iconname, scale, alpha = GetPointInfo(value)
+                    scale = (scale or 1) * GetIconScale(iconname)
+                    alpha = (alpha or 1) * GetIconAlpha(iconname)
                 return state, nil, icon, scale, alpha
             end
             state, value = next(t, state)
@@ -381,19 +384,19 @@ local currentMapID = nil
         if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
             return false
         end
-        if (point.portal and not private.db.show_portal) then return false end
-        if (point.orderhall and not private.db.show_orderhall) then return false end
-        if (point.worderhall and not private.db.show_orderhall) then return false end
+        if (point.icon == "portal" and not private.db.show_portal) then return false end
+        if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
+        if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
         if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
-        if (point.mixedportal and not private.db.show_warfront) then return false end
-        if (point.flightmaster and not private.db.show_orderhall) then return false end
-        if (point.tram and not private.db.show_tram) then return false end
-        if (point.boat and not private.db.show_boat) then return false end
-        if (point.aboat and not private.db.show_aboat) then return false end
-        if (point.zeppelin and not private.db.show_zeppelin) then return false end
-        if (point.hzeppelin and not private.db.show_hzeppelin) then return false end
-        if (point.herosrestgate and not private.db.show_herorestgate) then return false end
-        if (point.tpplatform and not private.db.show_tpplatform) then return false end
+        if (point.icon == "mixedportal" and not private.db.show_warfront) then return false end
+        if (point.icon == "flightmaster" and not private.db.show_orderhall) then return false end
+        if (point.icon == "tram" and not private.db.show_tram) then return false end
+        if (point.icon == "boat" and not private.db.show_boat) then return false end
+        if (point.icon == "aboat" and not private.db.show_aboat) then return false end
+        if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
+        if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
+        if (point.icon == "anima_gateway" and not private.db.show_anima_gateway) then return false end
+        if (point.icon == "teleport_platform" and not private.db.show_teleport_platform) then return false end
     end
         return true
     end
