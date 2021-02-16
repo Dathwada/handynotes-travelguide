@@ -105,7 +105,7 @@ L["Waystone to Oribos"] = true
 L["To Ring of Transference"] = true
 L["To Ring of Fates"] = true
 L["Into the Maw"] = true
-L["Portal to Thorghast"] = true
+L["Portal to Torghast"] = true
 
 --============================================Bastion=============================================--
 

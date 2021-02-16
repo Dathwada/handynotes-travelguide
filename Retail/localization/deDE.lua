@@ -15,7 +15,7 @@ L["config_tab_scale_alpha"] = "Größe / Transparenz"
 --L["config_scale_alpha_desc"] = "PH"
 L["config_icon_scale"] = "Symbolgröße"
 L["config_icon_scale_desc"] = "Die größe der Symbole"
-L["config_icon_alpha"] = "Symboltranzparenz"
+L["config_icon_alpha"] = "Symboltransparenz"
 L["config_icon_alpha_desc"] = "Die Transparenz der Symbole"
 L["config_what_to_display"] = "Was soll angezeigt werden?"
 L["config_what_to_display_desc"] = "Diese Einstellungen legen fest welche Symbole auf der Welt- und Minimap angezeigt werden sollen."
@@ -105,7 +105,7 @@ L["Waystone to Oribos"] = "Portalstein nach Oribos"
 L["To Ring of Transference"] = "Zum Ring der Übertragung"
 L["To Ring of Fates"] = "Zum Ring der Schicksale"
 L["Into the Maw"] = "In den Schlund"
-L["Portal to Thorghast"] = "Portal nach Thorghast"
+L["Portal to Torghast"] = "Portal nach Torghast"
 
 --============================================Bastion=============================================--
 
