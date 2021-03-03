@@ -26,6 +26,7 @@
 ## Localization
 * `enUS` - default
 * `deDE` - German (Native locale by Dathwada!)
+* `esMX` - Spanish (thanks [Irakua](https://www.curseforge.com/members/Irakua) and [dogstryker](https://www.curseforge.com/members/dogstryker)!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
 * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!)
 * `zhTW` - Traditional Chinese (thanks [lostindark0](https://www.curseforge.com/members/lostindark0)!)
