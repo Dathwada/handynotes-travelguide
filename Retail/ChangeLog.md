@@ -1,5 +1,14 @@
 ## Revision History:
 
+#### v2.5.0 (March 10, 2021)
+-------------------------------
+* Added the missing Venthyr portal to oribos
+* Added Latin American Spanish by [Irakua](https://www.curseforge.com/members/Irakua) and [dogstryker](https://www.curseforge.com/members/dogstryker)
+* Updated ruRU by [Golowolom](https://www.curseforge.com/members/golowolom) and [dadec666](https://www.curseforge.com/members/dadec666)
+* Updated esES by [Irakua](https://www.curseforge.com/members/Irakua), deDE, frFR, ptBR
+* Background changes (individual scale and alpha options)
+* Bump .toc to 90005
+
 #### v2.4.0 (December 20, 2020)
 -------------------------------
 * Fixed Kalimdor and Eastern Kingdoms localization [#4](https://github.com/Dathwada/handynotes-travelguide/issues/4)
