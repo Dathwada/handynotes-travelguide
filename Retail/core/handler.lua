@@ -161,13 +161,13 @@ local function SetTooltip(tooltip, point)
         if (point.note and private.db.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
-        if (point.multilabel and not point.mixedportal) then
+        if (point.multilabel and point.icon ~= "mixedportal") then
             tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
         end
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
-        if (point.mixedportal) then
+        if (point.icon == "mixedportal") then
             tooltip:AddDoubleLine(PrepareLabel(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
         if pointreq then
