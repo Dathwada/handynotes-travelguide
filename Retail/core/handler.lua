@@ -39,14 +39,15 @@ local TNRank            = L["handler_tooltip_TNTIER"]
 -- returns the controlling faction
 local function GetWarfrontState(id)
     -- Battle for Stromgarde 11, Battle for Darkshore 118
-    state = C_ContributionCollector.GetState(id)
+    local state = C_ContributionCollector.GetState(id)
+
     return (state == 1 or state == 2) and "Alliance" or "Horde"
 end
 
 -- returns the note for mixed portals
 local function SetWarfrontNote()
-    astate = GetWarfrontState(11) -- Battle for Stromgarde
-    dstate = GetWarfrontState(118) -- Battle for Darkshore
+    local astate = GetWarfrontState(11) -- Battle for Stromgarde
+    local dstate = GetWarfrontState(118) -- Battle for Darkshore
 
     return (astate ~= select(1, UnitFactionGroup("player")) and notavailable or " ").."\n"..(dstate ~= select(1, UnitFactionGroup("player")) and notavailable or " ")
 end
