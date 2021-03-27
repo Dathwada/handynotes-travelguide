@@ -27,8 +27,9 @@
 * `enUS` - default
 * `deDE` - German (Native locale by Dathwada!)
 * `esES` - Spanish (thanks [Irakua](https://www.curseforge.com/members/Irakua)!)
-* `esMX` - Spanish (thanks [Irakua](https://www.curseforge.com/members/Irakua) and [dogstryker](https://www.curseforge.com/members/dogstryker)!)
+* `esMX` - Latin American Spanish (thanks [Irakua](https://www.curseforge.com/members/Irakua) and [dogstryker](https://www.curseforge.com/members/dogstryker)!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
+* `ruRU` - Russian (thanks [Golowolom](https://www.curseforge.com/members/golowolom) and [dadec666](https://www.curseforge.com/members/dadec666)!)
 * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!)
 * `zhTW` - Traditional Chinese (thanks [lostindark0](https://www.curseforge.com/members/lostindark0)!)
 
