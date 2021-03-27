@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.5.1 (March 27, 2021)
+-------------------------------
+* Fixed leaked variables
+* Fixed the mixed portal warfront notes
+* Added / Updated .toc localization notes
+* Updated frFR by [shaiandra](https://www.curseforge.com/members/shaiandra)
+
 #### v2.5.0 (March 10, 2021)
 -------------------------------
 * Added the missing Venthyr portal to oribos
