@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v3.1 (May 24, 2021)
+------------------------------
+* Fixed the default state for zeppelins
+
 #### v3.0 (May 24, 2021)
 ------------------------------
 * Reworked to match other addon versions (Retail / BCC)
