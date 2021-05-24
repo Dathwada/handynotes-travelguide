@@ -45,7 +45,7 @@ constants.defaults = {
 ------------------------------------------------ICONS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-constants.icon_texture = {
+constants.icon = {
     boat            = "Interface\\AddOns\\HandyNotes_TravelGuide (Classic)\\icons\\boat",
     aboat           = "Interface\\AddOns\\HandyNotes_TravelGuide (Classic)\\icons\\boat_alliance",
     tram            = "Interface\\AddOns\\HandyNotes_TravelGuide (Classic)\\icons\\tram",
