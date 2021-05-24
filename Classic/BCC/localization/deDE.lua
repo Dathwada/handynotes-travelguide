@@ -30,8 +30,8 @@ L["config_zeppelin_desc"] = "Zeigt die Positionen von Zeppelinen an."
 L["config_zeppelin_horde"] = "Horde Zeppeline"
 L["config_zeppelin_horde_desc"] = "Zeigt die Positionen von Horde Zeppelinen an."
 
-L["config_deeprun_tram"] = "Tiefenbahn"
-L["config_deeprun_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
+L["config_tram"] = "Tiefenbahn"
+L["config_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
 
 L["config_note"] = "Notizen"
 L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."

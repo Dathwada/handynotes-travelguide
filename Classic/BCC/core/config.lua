@@ -91,8 +91,8 @@ config.options = {
                 },
                 show_tram = {
                     type = "toggle",
-                    name = L["config_deeprun_tram"],
-                    desc = L["config_deeprun_tram_desc"],
+                    name = L["config_tram"],
+                    desc = L["config_tram_desc"],
                     order = 16,
                 },
                 show_note = {
@@ -150,7 +150,7 @@ config.options = {
     },
 }
 
-for i, icongroup in ipairs({"boat", "zeppelin", "deeprun_tram"}) do
+for i, icongroup in ipairs({"boat", "zeppelin", "tram"}) do
 
     config.options.args.SCALEALPHA.args["name_"..icongroup] = {
         type = "header",

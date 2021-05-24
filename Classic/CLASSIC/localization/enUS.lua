@@ -30,8 +30,8 @@ L["config_zeppelin_desc"] = "Show the Zeppelin locations."
 L["config_zeppelin_horde"] = "Horde Zeppelin"
 L["config_zeppelin_horde_desc"] = "Show the Horde Zeppelin locations."
 
-L["config_deeprun_tram"] = "Deerun Tram"
-L["config_deeprun_tram_desc"] = "Show the Deeprun Tram locations in Stormwind and Ironforge."
+L["config_tram"] = "Deerun Tram"
+L["config_tram_desc"] = "Show the Deeprun Tram locations in Stormwind and Ironforge."
 
 L["config_note"] = "Note"
 L["config_note_desc"] = "Show the node's additional notes when it's available."

@@ -19,8 +19,8 @@ constants.defaults = {
         icon_alpha_boat = 1.0,
         icon_scale_zeppelin = 1.5,
         icon_alpha_zeppelin = 1.0,
-        icon_scale_deeprun_tram = 1.5,
-        icon_alpha_deeprun_tram = 1.0,
+        icon_scale_tram = 1.5,
+        icon_alpha_tram = 1.0,
 
         show_portal = true,
         show_tram = true,
