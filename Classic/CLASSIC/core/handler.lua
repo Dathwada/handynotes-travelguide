@@ -18,7 +18,7 @@ _G.HandyNotes_TravelGuide = addon
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetIcon(point)
+local function work_out_texture(point)
     local icon_key
 
     if (point.boat) then icon_key = "boat" end
@@ -40,24 +40,24 @@ local function SetIcon(point)
     end
 end
 
-local GetPointInfo = function(point)
+local get_point_info = function(point)
     local icon
     if point then
         local label = point.label or point.label2 or UNKNOWN
-            icon = SetIcon(point)
+            icon = work_out_texture(point)
         return label, label2, icon, quest, lvl, point.scale, point.alpha, point.zeppelin, point.hzeppelin, point.boat, point.aboat, point.tram
     end
 end
 
-local GetPointInfoByCoord = function(uMapID, coord)
-    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local get_point_info_by_coord = function(uMapID, coord)
+    return get_point_info(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetTooltip(tooltip, point)
+local function handle_tooltip(tooltip, point)
     if point then
         if (point.label) then
             tooltip:AddLine(point.label)
@@ -76,8 +76,8 @@ local function SetTooltip(tooltip, point)
     tooltip:Show()
 end
 
-local SetTooltipByCoord = function(tooltip, uMapID, coord)
-    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local handle_tooltip_by_coord = function(tooltip, uMapID, coord)
+    return handle_tooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ function PluginHandler:OnEnter(uMapID, coord)
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    SetTooltipByCoord(tooltip, uMapID, coord)
+    handle_tooltip_by_coord(tooltip, uMapID, coord)
 end
 
 function PluginHandler:OnLeave(uMapID, coord)
@@ -118,7 +118,7 @@ local function addTomTomWaypoint(button, uMapID, coord)
     if TomTom then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = GetPointInfoByCoord(uMapID, coord),
+            title = get_point_info_by_coord(uMapID, coord),
             persistent = nil,
             minimap = true,
             world = true
@@ -207,9 +207,9 @@ local currentMapID = nil
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
-        while state do
+        while state do 
             if value and private:ShouldShow(state, value, currentMapID) then
-                local label, label2, icon, quest, lvl, scale, alpha, zeppelin, hzeppelin, boat, aboat, tram = GetPointInfo(value)
+                local label, label2, icon, quest, lvl, scale, alpha, zeppelin, hzeppelin, boat, aboat, tram = get_point_info(value)
                 if boat or aboat then
                     scale = (scale or 1) * (icon and icon.scale_boat or 1) * profile.icon_scale_boat
                     alpha = (alpha or 1) * (icon and icon.alpha_boat or 1) * profile.icon_alpha_boat
@@ -231,16 +231,15 @@ local currentMapID = nil
         return iter, private.DB.points[uMapID], nil
     end
     function private:ShouldShow(coord, point, currentMapID)
-    if not private.db.force_nodes then
         if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
             return false
         end
         -- this will check if any node is for specific class
-        if (point.class and point.class ~= select(2, UnitClass("player"))) then
+        if (point.class and point.class ~= select(2, UnitClass("player")) and not private.db.force_nodes) then
             return false
         end
         -- this will check if any node is for specific faction
-        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player")) and not private.db.force_nodes) then
             return false
         end
 
@@ -249,7 +248,6 @@ local currentMapID = nil
         if (point.aboat and not private.db.show_aboat) then return false; end
         if (point.zeppelin and not private.db.show_zeppelin) then return false; end
         if (point.hzeppelin and not private.db.show_hzeppelin) then return false; end
-    end
         return true
     end
 end
