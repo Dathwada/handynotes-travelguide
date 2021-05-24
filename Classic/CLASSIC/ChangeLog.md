@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v3.0 (May 24, 2021)
+------------------------------
+* Reworked to match other addon versions (Retail / BCC)
+* .toc update
+
 #### v2.2.0 (October 14, 2020)
 ------------------------------
 * Rework config
