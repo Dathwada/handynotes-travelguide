@@ -257,7 +257,7 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New("HandyNotes_TravelGuideClassicDB", private.constants.defaults)
+    self.db = AceDB:New("HandyNotes_TravelGuideBCCDB", private.constants.defaults)
 
     profile = self.db.profile
     private.db = profile

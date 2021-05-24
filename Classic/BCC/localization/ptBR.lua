@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "ptBR", false, true)
+local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (BCC)", "ptBR", false, true)
 
 if not L then return end
 -- Brazilian Portuguese translation by D4MM0N1C https://www.curseforge.com/members/d4mm0n1c

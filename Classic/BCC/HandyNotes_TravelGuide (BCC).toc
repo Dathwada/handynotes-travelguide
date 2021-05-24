@@ -1,6 +1,6 @@
 ## Interface: 20501
 #@non-debug@
-## Title: HandyNotes: TravelGuide (Classic)
+## Title: HandyNotes: TravelGuide (BCC)
 ## Notes: Shows the boat and zeppelin locations on the World Map and the MiniMap.
 ## Notes-deDE: Zeigt die Positionen von Schiffen und Zeppelinen auf der Worldmap und der Minimap an.
 ## Notes-ruRU: Показывает расположение кораблей и дирижаблей на карте мира и на миникарте.
@@ -10,7 +10,7 @@
 ## Notes-ptBR: Mostrar as localizações dos barcos e zepelins no Mapa-múndi e no Minimapa.
 #@end-non-debug@
 #@debug@
-# ## Title: HandyNotes: TravelGuide (Classic)
+# ## Title: HandyNotes: TravelGuide (BCC)
 # ## Notes: Shows the boat and zeppelin locations on the World Map and the MiniMap.
 # ## Notes-deDE: Zeigt die Positionen von Schiffen und Zeppelinen auf der Worldmap und der Minimap an.
 # ## Notes-ruRU: Показывает расположение кораблей и дирижаблей на карте мира и на миникарте.
@@ -23,7 +23,7 @@
 ## Version: v2.2.0
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
-## SavedVariables: HandyNotes_TravelGuideClassicDB
+## SavedVariables: HandyNotes_TravelGuideBCCDB
 ## X-Date: 2020-10-14
 ## X-Category: Map
 

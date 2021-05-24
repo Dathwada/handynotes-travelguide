@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "deDE", false, true)
+local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (BCC)", "deDE", false, true)
 
 if not L then return end
 --german translation by Dathwada EU-Eredar https://www.curseforge.com/members/dathwada
@@ -7,7 +7,7 @@ if L then
 -----------------------------------------------CONFIG-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["config_plugin_name"] = "TravelGuide (Classic)"
+L["config_plugin_name"] = "TravelGuide (BCC)"
 L["config_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
 
 L["config_tab_general"] = "Allgemein"

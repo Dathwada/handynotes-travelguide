@@ -11,7 +11,7 @@ local L = private.locale
 ----------------------------------------------------------------------------------------------------
 
 -- Activate the developer mode with:
--- /script HandyNotes_TravelGuideClassicDB.global.dev = true
+-- /script HandyNotes_TravelGuideBCCDB.global.dev = true
 -- /reload
 
 local function devmode()
@@ -46,7 +46,7 @@ local function devmode()
     SlashCmdList["TG"] = function(msg)
         InterfaceOptionsFrame_Show()
         InterfaceOptionsFrame_OpenToCategory('HandyNotes')
-        LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', 'TravelGuide (Classic)')
+        LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', 'TravelGuide (BCC)')
     end
 
 end

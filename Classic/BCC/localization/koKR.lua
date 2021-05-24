@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "koKR", false, true)
+local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (BCC)", "koKR", false, true)
 
 if not L then return end
 -- Korean translation by blacknib https://www.curseforge.com/members/blacknib

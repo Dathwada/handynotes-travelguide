@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "ruRU", false, true)
+local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (BCC)", "ruRU", false, true)
 
 if not L then return end
 -- Russian translation by Кеаллах RU-Змейталак https://www.curseforge.com/members/arrogant_dreamer
