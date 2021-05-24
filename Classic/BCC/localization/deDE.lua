@@ -70,38 +70,25 @@ L["handler_context_menu_hide_node"] = "Verstecke diesen Punkt"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["Eastern Kingdoms"] = "Die Östlichen Königreiche"
-L["Eastern Kingdoms, Wetlands"] = "Die Östlichen Königreiche, Sumpfland"
 L["Boat to Menethil Harbor"] = "Schiff zum Hafen von Menethil"
 
-L["Eastern Kingdoms, Tirisfal Glades"] = "Die Östlichen Königreiche, Tirisfal"
 L["Zeppelin to Undercity"] = "Zeppelin nach Unterstadt"
 
-L["Eastern Kingdoms, Stranglethorn Vale"] = "Die Östlichen Königreiche, Schlingendorntal"
-L["Eastern Kingdoms, Grom'gol Base Camp"] = "Die Östlichen Königreiche, Basislager Grom'gol"
 L["Zeppelin to Stranglethorn Vale"] = "Zeppelin ins Schlingendorntal"
 L["Boat to Booty Bay"] = "Schiff nach Beutebucht"
 
-L["Eastern Kingdoms, Elwynn Forest"] = "Die Östlichen Königreiche, Wald von Elwynn"
 L["Deeprun Tram to Stormwind"] = "Tiefenbahn nach Sturmwind"
 
-L["Eastern Kingdoms, Dun Morogh"] = "Die Östlichen Königreiche, Dun Morogh"
 L["Deeprun Tram to Ironforge"] = "Tiefenbahn nach Eisenschmiede"
 
-L["Kalimdor"] = "Kalimdor"
-L["Kalimdor, Durotar"] = "Kalimdor, Durotar"
 L["Zeppelin to Orgrimmar"] = "Zeppelin nach Orgrimmar"
 
-L["Kalimdor, Teldrassil"] = "Kalimdor, Teldrassil"
 L["Boat to Darnassus"] = "Schiff nach Darnassus"
 
-L["Kalimdor, The Barrens"] = "Kalimdor, Das Brachland"
 L["Boat to Ratchet"] = "Schiff nach Ratchet"
 
-L["Kalimdor, Dustwallow Marsh"] = "Kalimdor, Düstermarschen"
 L["Boat to Theramore"] = "Schiff nach Theramore"
 
-L["Kalimdor, Darkshore"] = "Kalimdor, Dunkelküste"
 L["Boat to Auberdine"] = "Schiff nach Auberdine"
 
 end

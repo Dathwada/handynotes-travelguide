@@ -9,36 +9,45 @@ local L = private.locale
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local ElwynnForest = L["Eastern Kingdoms, Elwynn Forest"]
+local function GetMapNames(id1, id2)
+    if id1 and id2 then
+        return format("%s, %s", C_Map.GetMapInfo(id1).name, C_Map.GetMapInfo(id2).name)
+    end
+    return C_Map.GetMapInfo(id1).name
+end
+
+----------------------------------------------------------------------------------------------------
+
+local ElwynnForest = GetMapNames(1415, 1429)
 local DrTtoIF = L["Deeprun Tram to Ironforge"]
 
-local DunMorogh = L["Eastern Kingdoms, Dun Morogh"]
+local DunMorogh = GetMapNames(1415, 1426)
 local DrTtoSW = L["Deeprun Tram to Stormwind"]
 
-local Durotar = L["Kalimdor, Durotar"]
+local Durotar = GetMapNames(1414, 1411)
 local ZtoOG = L["Zeppelin to Orgrimmar"]
 
-local Tirisfal = L["Eastern Kingdoms, Tirisfal Glades"]
+local Tirisfal = GetMapNames(1415, 1420)
 local ZtoUC = L["Zeppelin to Undercity"]
 
-local Barrens = L["Kalimdor, The Barrens"]
+local Barrens = GetMapNames(1414, 1413)
 local BtoBootyBay = L["Boat to Booty Bay"]
 
-local Wetlands = L["Eastern Kingdoms, Wetlands"]
+local Wetlands = GetMapNames(1415, 1437)
 local BtoMenethilHarbor = L["Boat to Menethil Harbor"]
 
-local StranglethornVale = L["Eastern Kingdoms, Stranglethorn Vale"]
-local GromgolBaseCamp = L["Eastern Kingdoms, Grom'gol Base Camp"]
+local StranglethornVale = GetMapNames(1415, 1434)
+local GromgolBaseCamp = GetMapNames(1415)..", "..C_Map.GetAreaInfo(117)
 local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local BtoRatchet = L["Boat to Ratchet"]
 
-local DustwallowMarsh = L["Kalimdor, Dustwallow Marsh"]
+local DustwallowMarsh = GetMapNames(1414, 1445)
 local BtoTheramore = L["Boat to Theramore"]
 
-local Teldrassil = L["Kalimdor, Teldrassil"]
+local Teldrassil = GetMapNames(1414, 1438)
 local BtoDarnassus = L["Boat to Darnassus"]
 
-local Darkshore = L["Kalimdor, Darkshore"]
+local Darkshore = GetMapNames(1414, 1439)
 local BtoAuberdine = L["Boat to Auberdine"]
 
 ----------------------------------------------------------------------------------------------------
