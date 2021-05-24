@@ -264,9 +264,13 @@ function addon:OnInitialize()
 
     profile = self.db.profile
     private.db = profile
+
+    global = self.db.global
+    private.global = global
+
     private.hidden = self.db.char.hidden
 
-    if private.db.dev then
+    if private.global.dev then
         private.devmode()
     end
 

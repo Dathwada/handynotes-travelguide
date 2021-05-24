@@ -10,7 +10,9 @@ local L = private.locale
 -------------------------------------------DEV CONFIG TAB-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
--- activates the devmode ["dev"] = true,
+-- Activate the developer mode with:
+-- /script HandyNotes_TravelGuideClassicDB.global.dev = true
+-- /reload
 
 local function devmode()
     private.config.options.args["DEV"] = {
