@@ -1,4 +1,4 @@
-##### **TravelGuide (Cassic) is a [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin to show the boat and zeppelin locations on the world map and the mini map.**
+##### **TravelGuide (Classic) is a [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin to show the boat and zeppelin locations on the world map and the mini map.**
 ##### **Retail Version: [HandyNotes: TravelGuide](https://www.curseforge.com/wow/addons/handynotes-travelguide)**
 
 ## Options
