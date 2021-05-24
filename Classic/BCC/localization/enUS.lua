@@ -8,7 +8,7 @@ if L then
 ----------------------------------------------------------------------------------------------------
 
 L["config_plugin_name"] = "TravelGuide (Classic)"
-L["config_plugin_desc"] = "Shows the boat and zeppelin locations on the World Map and the MiniMap."
+L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
 
 L["config_tab_general"] = "General"
 L["config_tab_scale_alpha"] = "Scale / Alpha"
@@ -19,6 +19,9 @@ L["config_icon_alpha"] = "Icon Alpha"
 L["config_icon_alpha_desc"] = "The alpha transparency of the icons"
 L["config_what_to_display"] = "What to display?"
 L["config_what_to_display_desc"] = "These settings control what type of icons to be displayed."
+
+L["config_portal"] = "Portal"
+L["config_portal_desc"] = "Show the Portal locations."
 
 L["config_boat"] = "Boat"
 L["config_boat_desc"] = "Show the boat locations."
@@ -90,5 +93,10 @@ L["Boat to Ratchet"] = true
 L["Boat to Theramore"] = true
 
 L["Boat to Auberdine"] = true
+
+L["Portal to Silvermoon"] = true
+
+L["Portal to Undercity"] = true
+L["Orb of translocation"] = true
 
 end

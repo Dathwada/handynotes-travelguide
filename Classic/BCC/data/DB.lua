@@ -29,6 +29,8 @@ local ZtoOG = L["Zeppelin to Orgrimmar"]
 
 local Tirisfal = GetMapNames(1415, 1420)
 local ZtoUC = L["Zeppelin to Undercity"]
+local PtoUC = L["Portal to Undercity"]
+local Orboftranslocation = L["Orb of translocation"]
 
 local Barrens = GetMapNames(1414, 1413)
 local BtoBootyBay = L["Boat to Booty Bay"]
@@ -49,6 +51,9 @@ local BtoDarnassus = L["Boat to Darnassus"]
 
 local Darkshore = GetMapNames(1414, 1439)
 local BtoAuberdine = L["Boat to Auberdine"]
+
+local EversongWoods = GetMapNames(1415, 1941)
+local PtoSM = L["Portal to Silvermoon"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -93,6 +98,7 @@ DB.points = {
         [60695878] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [61885907] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
         [61885906] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
+        [59456744] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         },
     [1437] = { -- Wetlands
         [05026348] = { icon="boat", label=BtoTheramore, note=DustwallowMarsh, faction="Alliance" },
@@ -139,6 +145,8 @@ DB.points = {
                                   label2= BtoAuberdine.."\n"..format(BtoTheramore..""), faction="Horde"},
         [45995482] = { icon="boat", label1= BtoAuberdine.." ("..Darkshore..")\n"..format(BtoTheramore.." ("..DustwallowMarsh..")"),
                                     label2= BtoAuberdine.."\n"..format(BtoTheramore..""), faction="Alliance" },
+        [56041304] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
+        [43753451] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         },
     [1434] = { -- Stranglethorn Vale
         [25867311] = { icon="boat", label=BtoRatchet, note=Barrens },
@@ -167,9 +175,15 @@ DB.points = {
         [32404584] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [32404585] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         },
+--------------------------------------------------BCC--------------------------------------------------
+    [1941] = { -- Eversong Forest
+        [50993068] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
         },
     [1954] = { -- Silvermoon
-        [49391483] = { portal=true, label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
+        [49391483] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
+        },
+    [1458] = { -- Undercity
+        [54851125] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         },
 
 }

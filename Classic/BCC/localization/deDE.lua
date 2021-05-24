@@ -20,6 +20,9 @@ L["config_icon_alpha_desc"] = "Die Transparenz der Symbole"
 L["config_what_to_display"] = "Was soll angezeigt werden?"
 L["config_what_to_display_desc"] = "Diese Einstellungen legen fest welche Symbole auf der Welt- und Minimap angezeigt werden sollen."
 
+L["config_portal"] = "Portale"
+L["config_portal_desc"] = "Zeigt die Positionen von Portalen an."
+
 L["config_boat"] = "Schiffe"
 L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
 L["config_boat_alliance"] = "Allianz Schiffe"
@@ -90,5 +93,10 @@ L["Boat to Ratchet"] = "Schiff nach Ratchet"
 L["Boat to Theramore"] = "Schiff nach Theramore"
 
 L["Boat to Auberdine"] = "Schiff nach Auberdine"
+
+L["Portal to Silvermoon"] = "Portal nach Silbermond"
+
+L["Portal to Undercity"] = "Portal nach Unterstadt"
+L["Orb of translocation"] = "Translokationskugel"
 
 end

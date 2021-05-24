@@ -150,7 +150,7 @@ config.options = {
     },
 }
 
-for i, icongroup in ipairs({"boat", "zeppelin", "tram"}) do
+for i, icongroup in ipairs({"portal", "boat", "zeppelin", "tram"}) do
 
     config.options.args.SCALEALPHA.args["name_"..icongroup] = {
         type = "header",
