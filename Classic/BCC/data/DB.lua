@@ -65,21 +65,24 @@ private.DB = DB
 
 DB.points = {
 -- MAPID from https://wow.gamepedia.com/UiMapID/Classic
-    --[[ structure:
+-- or collected with /dump WorldMapFrame:GetMapID()
+
+--[[ structure:
     [UiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
         [coord] = {
-            label=[string],         -- label: text that'll be the label, optional
-            npc=[id],                 -- related npc id, used to display names in tooltip
-            type=[string],             -- the pre-define icon type which can be found in Constant.lua
-            class=[CLASS NAME],        -- specified the class name so that this node will only be available for this class
-            faction="FACTION",      -- shows only for selected faction
-            note=[string],            -- additional notes for this node
-            level=[number]            -- map level from dropdown
+            icon          = ["STRING"],         -- specific icon for nodes
+            label         = ["STRING"],         -- label for singel destination nodes
+            multilabel    = {TABLE},            -- label for multi destination nodes
+            note          = ["STRING"],         -- additional destination notes
+            multinote     = {TABLE},            -- additional notes for multi destination nodes
+            faction       = ["FACTION"],        -- shows only for selected faction
+            class         = [CLASS NAME],       -- shows only for selected class
         },
     },
---]]
+]]
 
---Vanilla-------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------Vanilla---------------------------------------------------------
+
     [1429] = { -- Elwynn Forest
         [29201782] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         },
@@ -93,7 +96,7 @@ DB.points = {
         [50821385] = { icon="zeppelin", label=ZtoUC, note=Tirisfal, faction="Horde" },
         [50831385] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" },
         },
-    [1420] = { -- Trisfal Glades
+    [1420] = { -- Tirisfal Glades
         [60695877] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [60695878] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [61885907] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
@@ -116,14 +119,12 @@ DB.points = {
 --        [44292534] = { icon="aboat", label=BtoDarnassus, note=Teldrassil, faction="Horde" },
 --        [44152600] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
 --        [44152601] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
-        [44292533] = { icon="aboat", label1= BtoDarnassus.." ("..Teldrassil..")\n"..format(BtoMenethilHarbor.." ("..Wetlands..")"),
-                                  label2= BtoDarnassus.."\n"..format(BtoMenethilHarbor..""), faction="Horde"},
-        [44262534] = { icon="boat", label1= BtoDarnassus.." ("..Teldrassil..")\n"..format(BtoMenethilHarbor.." ("..Wetlands..")"),
-                                    label2= BtoDarnassus.."\n"..format(BtoMenethilHarbor..""), faction="Alliance" },
-        [58994665] = { icon="zeppelin", label1= ZtoUC.." ("..Tirisfal..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")"),
-                                  label2= ZtoUC.."\n"..format(ZtoStranglethornVale..""), faction="Horde"},
-        [58994666] = { icon="hzeppelin", label1= ZtoUC.." ("..Tirisfal..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")"),
-                                    label2= ZtoUC.."\n"..format(ZtoStranglethornVale..""), faction="Alliance" },
+        [44292533] = { icon="aboat", multilabel={BtoDarnassus, BtoExodar, BtoMenethilHarbor}, multinote={Teldrassil, AzuremystIsle, Wetlands}, faction="Horde" },
+        [44262534] = { icon="boat", multilabel={BtoDarnassus, BtoExodar, BtoMenethilHarbor}, multinote={Teldrassil, AzuremystIsle, Wetlands}, faction="Alliance" },
+        [58994665] = { icon="zeppelin", multilabel={ZtoUC, ZtoStranglethornVale}, multinote={Tirisfal, GromgolBaseCamp}, faction="Horde" },
+        [58994666] = { icon="hzeppelin", multilabel={ZtoUC, ZtoStranglethornVale}, multinote={Tirisfal, GromgolBaseCamp}, faction="Alliance" },
+        [29332792] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
+        [29332791] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
         },
     [1413] = { -- The Barrens
         [63683862] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
@@ -132,19 +133,13 @@ DB.points = {
         [43839266] = { icon="boat", label=BtoRatchet, note=Barrens },
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [47835898] = { icon="tram", label=DrTtoSW, note=ElwynnForest, },
-        [43953355] = { icon="zeppelin", label1= ZtoOG.." ("..Durotar..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")"),
-                                  label2= ZtoOG.."\n"..format(ZtoStranglethornVale..""), faction="Horde"},
-        [43953356] = { icon="hzeppelin", label1= ZtoOG.." ("..Durotar..")\n"..format(ZtoStranglethornVale.." ("..GromgolBaseCamp..")"),
-                                    label2= ZtoOG.."\n"..format(ZtoStranglethornVale..""), faction="Alliance" },
-        [44098694] = { icon="zeppelin", label1= ZtoOG.." ("..Durotar..")\n"..format(ZtoUC.." ("..Tirisfal..")"),
-                                  label2= ZtoOG.."\n"..format(ZtoUC..""), faction="Horde"},
-        [44098693] = { icon="hzeppelin", label1= ZtoOG.." ("..Durotar..")\n"..format(ZtoUC.." ("..Tirisfal..")"),
-                                    label2= ZtoOG.."\n"..format(ZtoUC..""), faction="Alliance" },
+        [43953355] = { icon="zeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Horde" },
+        [43953356] = { icon="hzeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Alliance" },
+        [44098694] = { icon="zeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
+        [44098693] = { icon="hzeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Alliance" },
 
-        [45995488] = { icon="aboat", label1= BtoAuberdine.." ("..Darkshore..")\n"..format(BtoTheramore.." ("..DustwallowMarsh..")"),
-                                  label2= BtoAuberdine.."\n"..format(BtoTheramore..""), faction="Horde"},
-        [45995482] = { icon="boat", label1= BtoAuberdine.." ("..Darkshore..")\n"..format(BtoTheramore.." ("..DustwallowMarsh..")"),
-                                    label2= BtoAuberdine.."\n"..format(BtoTheramore..""), faction="Alliance" },
+        [45995488] = { icon="aboat", multilabel={BtoAuberdine, BtoTheramore}, multinote={Darkshore, DustwallowMarsh}, faction="Horde" },
+        [45995482] = { icon="boat", multilabel={BtoAuberdine, BtoTheramore}, multinote={Darkshore, DustwallowMarsh}, faction="Alliance" },
         [56041304] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
         [43753451] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         },
@@ -175,7 +170,9 @@ DB.points = {
         [32404584] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [32404585] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         },
---------------------------------------------------BCC--------------------------------------------------
+
+-----------------------------------------------------------BCC-----------------------------------------------------------
+
     [1941] = { -- Eversong Forest
         [50993068] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
         },
