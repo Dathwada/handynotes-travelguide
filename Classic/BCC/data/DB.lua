@@ -18,6 +18,7 @@ end
 
 ----------------------------------------------------------------------------------------------------
 
+local EasternKingdoms = GetMapNames(1415)
 local ElwynnForest = GetMapNames(1415, 1429)
 local DrTtoIF = L["Deeprun Tram to Ironforge"]
 
@@ -54,6 +55,21 @@ local BtoAuberdine = L["Boat to Auberdine"]
 
 local EversongWoods = GetMapNames(1415, 1941)
 local PtoSM = L["Portal to Silvermoon"]
+
+local Mulgore = GetMapNames(1414, 1412)
+local SPtoTB = L["Shattrath Portal to Thunder Bluff"]
+local SPtoOG = L["Shattrath Portal to Orgrimmar"]
+local SPtoUC = L["Shattrath Portal to Undercity"]
+local SPtoSM = L["Shattrath Portal to Silvermoon"]
+
+local AzuremystIsle = GetMapNames(1414, 1943)
+local BtoExodar = L["Boat to Exodar"]
+local SPtoExodar = L["Shattrath Portal to Exodar"]
+local SPtoDarnassus = L["Shattrath Portal to Darnassus"]
+local SPtoSW = L["Shattrath Portal to Stormwind"]
+local SPtoIF = L["Shattrath Portal to Ironforge"]
+
+local SPtoIoQD = L["Shattrath Portal to Isle of Quel'Danas"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -167,8 +183,10 @@ DB.points = {
     [1439] = { -- Darkshore
         [33194006] = { icon="boat", label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
         [33194007] = { icon="aboat", label=BtoDarnassus, note=Teldrassil, faction="Horde" },
-        [32404584] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
-        [32404585] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
+        [32404384] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
+        [32404383] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
+        [30724098] = { icon="boat", label=BtoExodar, note=AzuremystIsle, faction="Alliance" },
+        [30724097] = { icon="aboat", label=BtoExodar, note=AzuremystIsle, faction="Horde" },
         },
 
 -----------------------------------------------------------BCC-----------------------------------------------------------
@@ -182,5 +200,23 @@ DB.points = {
     [1458] = { -- Undercity
         [54851125] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         },
-
+    [1943] = { -- Azuremyst Isle
+        [20355419] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
+        [20355420] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
+        },
+    [1955] = { -- Shattrath
+        [52205290] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
+        [55793661] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF}, multinote={Teldrassil, ElwynnForest, DunMorogh, EasternKingdoms}, faction="Alliance" },
+        [59184833] = { icon="portal", label=SPtoSM, note=EversongWoods, faction="Horde" },
+        [59554665] = { icon="portal", label=SPtoExodar, note=AzuremystIsle, faction="Alliance" },
+        [48584203] = { icon="portal", label=SPtoIoQD, note=EasternKingdoms },
+        },
+    [1952] = { -- Terokkar Forest
+        [30612399] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
+        [30612398] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" },
+        },
+    [1945] = { -- Outlands
+        [43326601] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
+        [43326600] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" },
+        },
 }
