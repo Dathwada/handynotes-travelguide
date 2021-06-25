@@ -29,6 +29,9 @@ L["config_order_hall_portal_desc"] = "Zeigt die Positionen von Ordenshallenporta
 L["config_warfront_portal"] = "Kriegsfrontportale"
 L["config_warfront_portal_desc"] = "Zeigt die Positionen von Kriegsfrontportalen an."
 
+L["config_petbattle_portal"] = "Haustierkampfportale"
+L["config_petbattle_portal_desc"] = "Zeigt die Positionen von Haustierkampfportalen an."
+
 L["config_boat"] = "Schiffe"
 L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
 L["config_boat_alliance"] = "Allianz Schiffe"

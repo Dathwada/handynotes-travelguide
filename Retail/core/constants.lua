@@ -33,6 +33,7 @@ constants.defaults = {
         show_portal = true,
         show_orderhall = true,
         show_warfront = true,
+        show_petbattleportal = true,
         show_tram = true,
         show_boat = true,
         show_aboat = true,
@@ -82,6 +83,7 @@ local MagePortalAlliance = {
 
 constants.icon = {
     portal = MagePortalAlliance,
+    petbattleportal = MagePortalAlliance,
     orderhall = MagePortalAlliance,
     MagePortalHorde = {
         icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],

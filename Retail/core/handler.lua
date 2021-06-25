@@ -109,7 +109,7 @@ local function SetIcon(point)
 end
 
 local function GetIconScale(icon)
-    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" then
+    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" or icon == "petbattleportal" then
         return private.db["icon_scale_portal"]
     elseif icon == "boat" or icon == "aboat" then
         return private.db["icon_scale_boat"]
@@ -139,7 +139,7 @@ local GetPointInfo = function(point)
         local spellName = GetSpellInfo(point.spell)
         local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or spellName or UNKNOWN
         if point.requirements and not ReqFullfilled(point.requirements) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall") and MagePortalHorde) or (point.icon == "boat" and BoatX)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedportal" or point.icon == "petbattleportal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
             icon = SetIcon(point)
         end

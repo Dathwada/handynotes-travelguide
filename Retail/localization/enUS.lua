@@ -29,6 +29,9 @@ L["config_order_hall_portal_desc"] = "Show the Order Hall portal locations."
 L["config_warfront_portal"] = "Warfront Portal"
 L["config_warfront_portal_desc"] = "Show the Warfront portal locations."
 
+L["config_petbattle_portal"] = "Petbattle Portal"
+L["config_petbattle_portal_desc"] = "Show the Petbattle portal locations."
+
 L["config_boat"] = "Boat"
 L["config_boat_desc"] = "Show the boat locations."
 L["config_boat_alliance"] = "Alliance Boat"
