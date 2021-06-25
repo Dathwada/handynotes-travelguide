@@ -28,6 +28,7 @@ local notavailable      = L["handler_tooltip_not_available"]
 --local available       = L["handler_tooltip_available"] -- not in use
 local RequiresPlayerLvl = L["handler_tooltip_requires_level"]
 local RequiresQuest     = L["handler_tooltip_quest"]
+local RequiresRep       = L["handler_tooltip_rep"]
 local RetrievindData    = L["handler_tooltip_data"]
 local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
@@ -64,6 +65,11 @@ local function ReqFullfilled(req, ...)
     or (req.spell and not IsSpellKnown(req.spell))
     then
         return false
+    end
+
+    if (req.reputation) then
+        local _,_,standing = GetFactionInfoByID(req.reputation[1])
+        return standing >= req.reputation[2]
     end
 
 	return true
@@ -185,6 +191,13 @@ local function SetTooltip(tooltip, point)
                     tooltip:AddLine(RetrievindData,1,0,1) -- pink
                     C_Timer.After(1, function() addon:Refresh() end) -- Refresh
     --              print("refreshed")
+                end
+            end
+            if (pointreq.reputation) then
+                name, _, standing, _, _, value = GetFactionInfoByID(pointreq.reputation[1])
+                if (standing < pointreq.reputation[2]) then
+                    tooltip:AddLine(RequiresRep..": ",1) -- red
+                    GameTooltip_ShowProgressBar(GameTooltip, 0, 21000, value, name..": "..value.." / 21000")
                 end
             end
             if (pointreq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50

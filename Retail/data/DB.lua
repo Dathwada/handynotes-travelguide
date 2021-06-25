@@ -213,6 +213,7 @@ DB.points = {
                 quest         = [ID],           -- additional notes for a required quest
                 spell         = [ID],           -- additional notes for a required spell
                 level         = [PLAYERLEVEL],  -- additional notes for a required player level
+                reputation    = {ID, standing}, -- additional notes for a required reputation
                 sanctumtalent = [ID],           -- additional notes for a required sanctum upgrade
                 warfront      = [ID],           -- additional notes for warfront nodes
                 timetravel    = {               -- additional requirement for nodes
@@ -633,6 +634,7 @@ DB.points = {
         [57224827] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [48594200] = { icon="portal", label=PtoIofQD, note=EasternKingdoms },
         [56834888] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [74803160] = { icon="portal", label=PtoCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } }
         },
     [101] = { -- Outland
         [43886598] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },

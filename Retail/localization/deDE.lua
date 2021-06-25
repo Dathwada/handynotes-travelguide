@@ -90,6 +90,7 @@ L["handler_tooltip_sanctum_feature"] = "eine Sanktumaufwertung"
 L["handler_tooltip_data"] = "DATEN ABRUFEN..."
 L["handler_tooltip_quest"] = "Freigeschaltet mit der Quest"
 L["handler_tooltip_requires_level"] = "Benötigt min. Spielerlevel"
+L["handler_tooltip_rep"] = "Benötigt Ruf bei"
 L["handler_tooltip_TNTIER"] = "Stufe %s des Reisenetzwerks."
 L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
 --L["currently available"] = "zurzeit Verfügbar"
@@ -192,6 +193,7 @@ L["Portal to Isle of Quel'Danas"] = "Portal zur Insel von Quel'Danas"
 L["Portal to Exodar"] = "Portal zur Exodar"
 L["in Exodar"] = true
 L["Boat to Exodar"] = "Schiff zur Exodar"
+L["Speak with Zephyr"] = "Sprich mit Zephyr"
 
 -----------------------------------------------VANILLA----------------------------------------------
 

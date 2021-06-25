@@ -89,6 +89,7 @@ L["handler_tooltip_requires"] = "Requires"
 L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
 L["handler_tooltip_data"] = "RETRIEVING DATA..."
 L["handler_tooltip_quest"] = "Unlocked with quest"
+L["handler_tooltip_rep"] = "Requires reputation with"
 L["handler_tooltip_requires_level"] = "Requires at least player level"
 L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["handler_tooltip_not_available"] = "currently NOT available"
@@ -192,6 +193,7 @@ L["Portal to Isle of Quel'Danas"] = true
 L["Portal to Exodar"] = true
 L["in Exodar"] = true
 L["Boat to Exodar"] = true
+L["Speak with Zephyr"] = true
 
 -----------------------------------------------VANILLA----------------------------------------------
 
