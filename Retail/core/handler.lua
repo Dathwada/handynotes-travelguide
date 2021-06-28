@@ -136,8 +136,7 @@ local GetPointInfo = function(point)
     local icon
 
     if point then
-        local spellName = GetSpellInfo(point.spell)
-        local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or spellName or UNKNOWN
+        local label = point.label or point.multilabel and PrepareLabel(point.multilabel) or UNKNOWN
         if point.requirements and not ReqFullfilled(point.requirements) then
             icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedportal" or point.icon == "petbattleportal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
@@ -160,10 +159,6 @@ local function SetTooltip(tooltip, point)
     if point then
         if (point.label) then
             tooltip:AddLine(point.label)
-        end
-        if point.labelspell then
-            local spellName = GetSpellInfo(point.labelspell)
-            tooltip:AddLine(spellName)
         end
         if (point.note and private.db.show_note) then
             tooltip:AddLine("("..point.note..")")
