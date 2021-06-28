@@ -32,7 +32,7 @@ local WstoOribos = L["Waystone to Oribos"]
 local RingTransference= L["To Ring of Transference"]
 local RingFates = L["To Ring of Fates"]
 local IntoTheMaw = L["Into the Maw"]
-local PtoThorghast = L["Portal to Thorghast"]
+local PtoTorghast = L["Portal to Torghast"]
 
 local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
 
@@ -288,7 +288,7 @@ DB.points = {
         },
     [1543] = { -- The Maw
         [42374215] = { icon="portal", label=WstoOribos },
-        [48183943] = { icon="portal", label=PtoThorghast, requirements={level=60} },
+        [48183943] = { icon="portal", label=PtoTorghast, requirements={level=60} },
         },
 
 ----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
