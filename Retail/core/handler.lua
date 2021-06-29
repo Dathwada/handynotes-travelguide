@@ -72,27 +72,62 @@ local function ReqFullfilled(req, ...)
         return standing >= req.reputation[2]
     end
 
+    if (req.multiquest) then
+        for i, quest in pairs(req.multiquest) do
+            if not IsQuestCompleted(quest) then return false end
+        end
+    end
+
 	return true
 end
 
 -- workaround to prepare the multilabels with and without notes
 -- because the game displays the first line in 14px and
 -- the following lines in 13px with a normal for loop.
-local function PrepareLabel(label, note)
+local function Prepare(label, note, level, quest)
     local t = {}
+    local NOTE
+    local LEVEL
+    local QUEST
+
     for i, name in ipairs(label) do
-        if (label and private.db.show_note) then
-            if label[i] and note[i] then
-                t[i] = name.." ("..note[i]..")"
-             else
-            -- if there is no note for this Portal
-                t[i] = name
+
+        -- set spell name as label
+        if type(name) == "number" then
+            name = GetSpellInfo(name)
+        end
+
+        -- add additional notes
+        if note and note[i] and private.db.show_note then
+            NOTE = " ("..note[i]..")"
+        else
+            NOTE = ''
+        end
+
+        -- add required level information
+        if level and level[i] and UnitLevel("player") < level[i] then
+            LEVEL = "\n    |cFFFF0000"..RequiresPlayerLvl..": "..level[i].."|r"
+        else
+            LEVEL = ''
+        end
+
+        -- add required quest information
+        if quest and quest[i] and not IsQuestCompleted(quest[i]) then
+            if (C_QuestLog.GetTitleForQuestID(quest[i]) ~= nil) then
+                local title = C_QuestLog.GetTitleForQuestID(quest[i])
+                QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
+            else
+                QUEST = "\n    |cFFFF00FF"..RetrievindData.."|r" -- pink
+                C_Timer.After(1, function() addon:Refresh() end) -- Refresh
             end
         else
-        -- if the private.db.show_note == false
-            t[i] = name
+            QUEST = ''
         end
+
+        -- store everything together
+        t[i] = name..NOTE..LEVEL..QUEST
     end
+
     return table.concat(t, "\n")
 end
 
@@ -136,7 +171,7 @@ local GetPointInfo = function(point)
     local icon
 
     if point then
-        local label = point.label or point.multilabel and PrepareLabel(point.multilabel) or UNKNOWN
+        local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if point.requirements and not ReqFullfilled(point.requirements) then
             icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedportal" or point.icon == "petbattleportal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
@@ -164,13 +199,17 @@ local function SetTooltip(tooltip, point)
             tooltip:AddLine("("..point.note..")")
         end
         if (point.multilabel and point.icon ~= "mixedportal") then
-            tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
+            if pointreq then
+                tooltip:AddLine(Prepare(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
+            else
+                tooltip:AddLine(Prepare(point.multilabel, point.multinote))
+            end
         end
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
         if (point.icon == "mixedportal") then
-            tooltip:AddDoubleLine(PrepareLabel(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
+            tooltip:AddDoubleLine(Prepare(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
         if pointreq then
             if (pointreq.warfront and GetWarfrontState(pointreq.warfront) ~= select(1, UnitFactionGroup("player"))) then
