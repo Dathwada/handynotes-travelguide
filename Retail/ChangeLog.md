@@ -1,5 +1,15 @@
 ## Revision History:
 
+#### v2.6.0 (June 30, 2021)
+-------------------------------
+* Added quest and level requirements to the tooltip for multi destination POI's
+* Added Portal to Caverns of Time in Shattrath (Zephyr) with a reputations requirement
+* Added Petbattle Portals (Manapoof) with quest requirements
+* Added toggle options for the new Petbatte Portals
+* Fix localizations for Portal to Torghast
+* Fix typo in deDE
+* Bump .toc to 90100
+
 #### v2.5.1 (March 27, 2021)
 -------------------------------
 * Fixed leaked variables
