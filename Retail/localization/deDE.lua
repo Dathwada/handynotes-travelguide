@@ -109,6 +109,7 @@ L["Waystone to Oribos"] = "Portalstein nach Oribos"
 L["To Ring of Transference"] = "Zum Ring der Übertragung"
 L["To Ring of Fates"] = "Zum Ring der Schicksale"
 L["Into the Maw"] = "In den Schlund"
+L["To Keeper's Respite"] = "Zur Zuflucht des Hüters"
 L["Portal to Torghast"] = "Portal nach Torghast"
 
 --============================================Bastion=============================================--

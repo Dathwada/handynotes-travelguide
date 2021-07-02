@@ -33,6 +33,8 @@ local RingTransference= L["To Ring of Transference"]
 local RingFates = L["To Ring of Fates"]
 local IntoTheMaw = L["Into the Maw"]
 local PtoTorghast = L["Portal to Torghast"]
+local Korthia = GetMapNames(1543, 1961)
+local KeepersRespite = L["To Keeper's Respite"]
 
 local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
 
@@ -260,6 +262,7 @@ DB.points = {
         [55735162] = { icon="teleport_platform", label=RingFates },
         [49506073] = { icon="teleport_platform", label=RingFates },
         [43375150] = { icon="teleport_platform", label=RingFates },
+        [30702319] = { icon="portal", label=KeepersRespite, note=Korthia, requirements={quest=63665} },
         },
     [1536] = { -- Maldraxxus
         [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
@@ -291,6 +294,10 @@ DB.points = {
     [1543] = { -- The Maw
         [42374215] = { icon="portal", label=WstoOribos },
         [48183943] = { icon="portal", label=PtoTorghast, requirements={level=60} },
+        [70268933] = { icon="portal", label=WstoOribos, requirements={quest=63665} }
+        },
+    [1961] = { -- Korthia
+        [64472406] = { icon="portal", label=WstoOribos, requirements={quest=63665} }
         },
 
 ----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
