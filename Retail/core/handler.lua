@@ -53,8 +53,8 @@ local function SetWarfrontNote()
     return (astate ~= select(1, UnitFactionGroup("player")) and notavailable or " ").."\n"..(dstate ~= select(1, UnitFactionGroup("player")) and notavailable or " ")
 end
 
--- returns true when all requirements are fullfilled
-local function ReqFullfilled(req, ...)
+-- returns true when all requirements are fulfilled
+local function ReqFulfilled(req, ...)
     if (req.quest and not IsQuestCompleted(req.quest))
     or (req.level and (UnitLevel("player") < req.level))
     or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
@@ -172,7 +172,7 @@ local GetPointInfo = function(point)
 
     if point then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
-        if point.requirements and not ReqFullfilled(point.requirements) then
+        if point.requirements and not ReqFulfilled(point.requirements) then
             icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedportal" or point.icon == "petbattleportal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
             icon = SetIcon(point)
