@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v2.6.1 (July 04, 2020)
+-------------------------------
+* Added the new "Portal" to Keeper's Respite (Korthia)
+
 #### v2.6.0 (June 30, 2021)
 -------------------------------
 * Added quest and level requirements to the tooltip for multi destination POI's
