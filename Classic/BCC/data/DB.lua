@@ -108,7 +108,7 @@ DB.points = {
         [1411] = { -- Durotar
         [34017850] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
         [50571265] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
-        [50581265] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance"},
+        [50581265] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         [50821385] = { icon="zeppelin", label=ZtoUC, note=Tirisfal, faction="Horde" },
         [50831385] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" },
         },
@@ -148,7 +148,7 @@ DB.points = {
     [1415] = { -- Eastern Kingdom
         [43839266] = { icon="boat", label=BtoRatchet, note=Barrens },
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh },
-        [47835898] = { icon="tram", label=DrTtoSW, note=ElwynnForest, },
+        [47835898] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         [43953355] = { icon="zeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Horde" },
         [43953356] = { icon="hzeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Alliance" },
         [44098694] = { icon="zeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
@@ -167,10 +167,10 @@ DB.points = {
         [31582912] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" },
         },
     [1426] = { -- Dun Morogh
-        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest, },
+        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         },
     [1455] = { -- Ironforge
-        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest, },
+        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         },
     [1445] = { -- Dustwallow Marsh
         [71625648] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
