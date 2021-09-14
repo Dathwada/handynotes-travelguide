@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v3.2 (September 14, 2021)
+------------------------------
+* Updated .toc to 20502
+
 #### v3.1 (June 02, 2021)
 ------------------------------
 * Added Shattrath Portals and the Boat to Exodar
