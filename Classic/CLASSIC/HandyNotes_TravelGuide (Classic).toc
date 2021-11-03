@@ -1,4 +1,4 @@
-## Interface: 11307
+## Interface: 11400
 #@non-debug@
 ## Title: HandyNotes: TravelGuide (Classic)
 ## Notes: Shows the boat and zeppelin locations on the World Map and the MiniMap.
@@ -20,11 +20,11 @@
 # ## Notes-ptBR: Mostrar as localizações dos barcos e zepelins no Mapa-múndi e no Minimapa.
 #@end-debug@
 ## Author: Dathwada
-## Version: v3.2
+## Version: v3.3
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideClassicDB
-## X-Date: 2021-06-02
+## X-Date: 2021-11-03
 ## X-Category: Map
 
 # LOCALIZATION FILES

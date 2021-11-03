@@ -1,5 +1,9 @@
 ## Revision History:
 
+##### v3.3 (November 03, 2021)
+------------------------------
+* Bump .toc to 11400
+
 ##### v3.2 (June 02, 2021)
 ------------------------------
 * More reworked to match other addon versions (Retail / BCC)
