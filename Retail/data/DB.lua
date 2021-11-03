@@ -427,16 +427,16 @@ DB.points = {
     [832] = { -- Krokuun Vindikaar
         [43272508] = { icon="portal", label=PtoDala, note=BrokenIsles },
         },
-    [882] = { -- Mac'Aree
+    [882] = { -- Eredath
         [51668722] = { icon="portal", label=PtoDala, note=BrokenIsles },
         },
-    [884] = { -- Mac'Aree Vindikaar
+    [884] = { -- Eredath Vindikaar
         [49332529] = { icon="portal", label=PtoDala, note=BrokenIsles },
         },
-    [885] = { -- Antorische Ödnis
+    [885] = { -- Antoran Wastes
         [75893732] = { icon="portal", label=PtoDala, note=BrokenIsles },
         },
-    [887] = { -- Antorische Ödnis Vindikaar
+    [887] = { -- Antoran Wastes Vindikaar
         [33785600] = { icon="portal", label=PtoDala, note=BrokenIsles },
         },
 
