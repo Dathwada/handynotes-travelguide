@@ -188,6 +188,7 @@ L["Boat to Borean Tundra"] = "Schiff in die Boreanische Tundra"
 L["Boat to Unu'Pe"] = "Schiff nach Unu'pe"
 L["Zeppelin to Borean Tundra"] = "Zeppelin in die Boreanische Tundra"
 L["Boat to Moa'Ki Harbor"] = "Schiff zum Hafen Moa'ki"
+L["Waygate to Sholazar Basin"] = "Tor ins Sholazarbecken"
 
 -------------------------------------------------BC-------------------------------------------------
 
@@ -236,4 +237,6 @@ L["Portal to Caverns of Time"] = "Portal zu den Höhlen der Zeit"
 
 L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
+
+L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
 end

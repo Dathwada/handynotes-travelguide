@@ -188,6 +188,7 @@ L["Boat to Borean Tundra"] = true
 L["Boat to Unu'Pe"] = true
 L["Zeppelin to Borean Tundra"] = true
 L["Boat to Moa'Ki Harbor"] = true
+L["Waygate to Sholazar Basin"] = true
 
 -------------------------------------------------BC-------------------------------------------------
 
@@ -236,4 +237,6 @@ L["Portal to Caverns of Time"] = true
 
 L["Portal to Dalaran Crater"] = true
 L["Portal to the Sepulcher"] = true
+
+L["Waygate to Un'Goro Crater"] = true
 end

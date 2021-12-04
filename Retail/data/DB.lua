@@ -137,6 +137,8 @@ local VengeanceLanding = GetMapNames(113)..", "..C_Map.GetAreaInfo(4000)
 local BtoHowlingFjord = L["Boat to Howling Fjord"]
 local Valgarde = GetMapNames(113)..", "..C_Map.GetAreaInfo(3981)
 local BtoKamagua = L["Boat to Kamagua"]
+local Northrend = GetMapNames(113)
+local WtoSholazarBasin = L["Waygate to Sholazar Basin"]
 
 -------------------------------------------------BC-------------------------------------------------
 
@@ -196,6 +198,7 @@ local SilverpineForest = GetMapNames(13, 21)
 local EasternPlaguelands = GetMapNames(13, 23)
 local Westfall = GetMapNames(13, 52)
 local BurningSteppes = GetMapNames(13, 36)
+local WtoUngoroCrater = L["Waygate to Un'Goro Crater"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -624,6 +627,7 @@ DB.points = {
         [17556488] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [17556489] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [84057266] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" },
+        [24364962] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} },
         },
     [115] = { -- Dragonblight
         [47797887] = { icon="boat", label=BtoUnuPe, note=BoreanTundra },
@@ -639,6 +643,9 @@ DB.points = {
         [23295769] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
         [61506270] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [77612813] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" },
+        },
+    [119] = { -- Sholazar Basin
+        [40348312] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} },
         },
 
 ----------------------------------------------------------------------------------------------BC-----------------------------------------------------------------------------------------------
@@ -704,6 +711,7 @@ DB.points = {
                                       requirements={multiquest={[4]=25924, [6]=26798, [10]=46931, [15]=60151}}, faction="Horde" },
         [46612303] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
         [46302282] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
+        [50007527] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -763,6 +771,9 @@ DB.points = {
     [56] = { -- Wetlands
         [06216261] = { icon="aboat", label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
         [04415718] = { icon="aboat", label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
+        },
+    [78] = { -- Un'Goro Crater
+        [50520774] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
         },
 --[[    NOT USED
     [10] = { -- Northern Barrens
