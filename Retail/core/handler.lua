@@ -224,7 +224,7 @@ local function SetTooltip(tooltip, point)
                 else
                     tooltip:AddLine(RetrievindData,1,0,1) -- pink
                     C_Timer.After(1, function() addon:Refresh() end) -- Refresh
-    --              print("refreshed")
+                    -- print("refreshed")
                 end
             end
             if (pointreq.reputation) then
@@ -327,7 +327,7 @@ do
     local function generateMenu(button, level)
         if (not level) then return end
         if (level == 1) then
---      local spacer = {text='', disabled=true, notClickable=true, notCheckable=true}
+        -- local spacer = {text='', disabled=true, notClickable=true, notCheckable=true}
 
             -- Create the title of the menu
             info = UIDropDownMenu_CreateInfo()
@@ -336,7 +336,7 @@ do
             info.notCheckable = true
             UIDropDownMenu_AddButton(info, level)
 
---            UIDropDownMenu_AddButton(spacer, level)
+            -- UIDropDownMenu_AddButton(spacer, level)
 
             if IsAddOnLoaded("TomTom") and not private.db.easy_waypoint then
                 -- Waypoint menu item
@@ -358,7 +358,7 @@ do
             info.arg2         = currentCoord
             UIDropDownMenu_AddButton(info, level)
 
---          UIDropDownMenu_AddButton(spacer, level)
+            -- UIDropDownMenu_AddButton(spacer, level)
 
             -- Close menu item
             info = UIDropDownMenu_CreateInfo()
@@ -386,17 +386,14 @@ do
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
-        else
-        if private.db.easy_waypoint and IsAddOnLoaded("TomTom") then
+        elseif private.db.easy_waypoint and IsAddOnLoaded("TomTom") then
             addTomTomWaypoint(button, uMapID, coord)
-        end
         end
     end
 end
 
 do
-
-local currentMapID = nil
+    local currentMapID = nil
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
@@ -416,37 +413,37 @@ local currentMapID = nil
         return iter, private.DB.points[uMapID], nil
     end
     function private:ShouldShow(coord, point, currentMapID)
-    if not private.db.force_nodes then
-        if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
-            return false
+        if not private.db.force_nodes then
+            if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
+                return false
+            end
+            -- this will check if any node is for specific class
+            if (point.class and point.class ~= select(2, UnitClass("player"))) then
+                return false
+            end
+            -- this will check if any node is for specific faction
+            if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+                return false
+            end
+            -- this will check if any node is for specific covenant
+            if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
+                return false
+            end
+            if (point.icon == "portal" and not private.db.show_portal) then return false end
+            if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
+            if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
+            if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
+            if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
+            if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
+            if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
+            if (point.icon == "tram" and not private.db.show_tram) then return false end
+            if (point.icon == "boat" and not private.db.show_boat) then return false end
+            if (point.icon == "aboat" and not private.db.show_aboat) then return false end
+            if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
+            if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
+            if (point.icon == "animaGateway" and not private.db.show_animaGateway) then return false end
+            if (point.icon == "teleportPlatform" and not private.db.show_teleportPlatform) then return false end
         end
-        -- this will check if any node is for specific class
-        if (point.class and point.class ~= select(2, UnitClass("player"))) then
-            return false
-        end
-        -- this will check if any node is for specific faction
-        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
-            return false
-        end
-        -- this will check if any node is for specific covenant
-        if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
-            return false
-        end
-        if (point.icon == "portal" and not private.db.show_portal) then return false end
-        if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
-        if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
-        if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
-        if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
-        if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
-        if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
-        if (point.icon == "tram" and not private.db.show_tram) then return false end
-        if (point.icon == "boat" and not private.db.show_boat) then return false end
-        if (point.icon == "aboat" and not private.db.show_aboat) then return false end
-        if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
-        if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
-        if (point.icon == "animaGateway" and not private.db.show_animaGateway) then return false end
-        if (point.icon == "teleportPlatform" and not private.db.show_teleportPlatform) then return false end
-    end
         return true
     end
 end
@@ -509,9 +506,9 @@ function events:QUEST_FINISHED(...)
 end
 
 frame:SetScript("OnEvent", function(self, event, ...)
- events[event](self, ...); -- call one of the functions above
+    events[event](self, ...); -- call one of the functions above
 end);
 
 for k, v in pairs(events) do
- frame:RegisterEvent(k); -- Register all events for which handlers have been defined
+    frame:RegisterEvent(k); -- Register all events for which handlers have been defined
 end

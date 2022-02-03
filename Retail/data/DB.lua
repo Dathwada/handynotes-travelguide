@@ -12,8 +12,9 @@ local L = private.locale
 local function GetMapNames(id1, id2)
     if id1 and id2 then
         return format("%s, %s", C_Map.GetMapInfo(id1).name, C_Map.GetMapInfo(id2).name)
+    else
+        return C_Map.GetMapInfo(id1).name
     end
-    return C_Map.GetMapInfo(id1).name
 end
 
 ----------------------------------------------COVENANT----------------------------------------------
@@ -22,7 +23,6 @@ local Kyrian    = 1
 local Venthyr   = 2
 local Nightfae  = 3
 local Necrolord = 4
-local PH = L["PH"] -- PLACEHOLDER
 
 --------------------------------------------SHADOWLANDS---------------------------------------------
 
