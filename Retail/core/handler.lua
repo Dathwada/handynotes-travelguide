@@ -156,7 +156,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if icon == "portal" or icon == "orderhall" or icon == "mixedPortal" then
+    if icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" then
         return private.db["icon_alpha_portal"]
     elseif icon == "boat" or icon == "aboat" then
         return private.db["icon_alpha_boat"]
@@ -437,6 +437,7 @@ local currentMapID = nil
         if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
         if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
         if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
+        if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
         if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
         if (point.icon == "tram" and not private.db.show_tram) then return false end
         if (point.icon == "boat" and not private.db.show_boat) then return false end
