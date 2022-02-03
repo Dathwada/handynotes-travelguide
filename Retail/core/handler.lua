@@ -144,7 +144,7 @@ local function SetIcon(point)
 end
 
 local function GetIconScale(icon)
-    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" or icon == "petbattleportal" then
+    if icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" then
         return private.db["icon_scale_portal"]
     elseif icon == "boat" or icon == "aboat" then
         return private.db["icon_scale_boat"]
@@ -156,7 +156,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if icon == "portal" or icon == "orderhall" or icon == "mixedportal" then
+    if icon == "portal" or icon == "orderhall" or icon == "mixedPortal" then
         return private.db["icon_alpha_portal"]
     elseif icon == "boat" or icon == "aboat" then
         return private.db["icon_alpha_boat"]
@@ -173,7 +173,7 @@ local GetPointInfo = function(point)
     if point then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if point.requirements and not ReqFulfilled(point.requirements) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedportal" or point.icon == "petbattleportal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
             icon = SetIcon(point)
         end
@@ -198,7 +198,7 @@ local function SetTooltip(tooltip, point)
         if (point.note and private.db.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
-        if (point.multilabel and point.icon ~= "mixedportal") then
+        if (point.multilabel and point.icon ~= "mixedPortal") then
             if pointreq then
                 tooltip:AddLine(Prepare(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
             else
@@ -208,7 +208,7 @@ local function SetTooltip(tooltip, point)
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
-        if (point.icon == "mixedportal") then
+        if (point.icon == "mixedPortal") then
             tooltip:AddDoubleLine(Prepare(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
         if pointreq then
@@ -436,15 +436,15 @@ local currentMapID = nil
         if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
         if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
         if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
-        if (point.icon == "mixedportal" and not private.db.show_warfront) then return false end
-        if (point.icon == "flightmaster" and not private.db.show_orderhall) then return false end
+        if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
+        if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
         if (point.icon == "tram" and not private.db.show_tram) then return false end
         if (point.icon == "boat" and not private.db.show_boat) then return false end
         if (point.icon == "aboat" and not private.db.show_aboat) then return false end
         if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
         if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
-        if (point.icon == "anima_gateway" and not private.db.show_anima_gateway) then return false end
-        if (point.icon == "teleport_platform" and not private.db.show_teleport_platform) then return false end
+        if (point.icon == "animaGateway" and not private.db.show_animaGateway) then return false end
+        if (point.icon == "teleportPlatform" and not private.db.show_teleportPlatform) then return false end
     end
         return true
     end

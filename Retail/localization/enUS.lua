@@ -51,11 +51,11 @@ L["config_note_desc"] = "Show the node's additional notes when it's available."
 L["config_easy_waypoints"] = "Easy Waypoints"
 L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 
-L["config_teleport_platform"] = "Teleport platforms in Oribos"
-L["config_teleport_platform_desc"] = "Show the teleport plattform locations in Oribos."
+L["config_teleportPlatform"] = "Teleport platforms in Oribos"
+L["config_teleportPlatform_desc"] = "Show the teleport plattform locations in Oribos."
 
-L["config_anima_gateway"] = "Anima Gateways in Bastion"
-L["config_anima_gateway_desc"] = "Show the anima gateway locations in Bastion."
+L["config_animaGateway"] = "Anima Gateways in Bastion"
+L["config_animaGateway_desc"] = "Show the anima gateway locations in Bastion."
 
 L["config_others"] = "Others"
 L["config_others_desc"] = "Show all the other POIs."

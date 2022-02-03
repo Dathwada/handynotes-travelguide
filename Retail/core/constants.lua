@@ -23,17 +23,17 @@ constants.defaults = {
         icon_alpha_covenant = 1.0,
         icon_scale_tram = 1.5,
         icon_alpha_tram = 1.0,
-        icon_scale_anima_gateway = 1.5,
-        icon_alpha_anima_gateway = 1.0,
-        icon_scale_teleport_platform = 1.5,
-        icon_alpha_teleport_platform = 1.0,
+        icon_scale_animaGateway = 1.5,
+        icon_alpha_animaGateway = 1.0,
+        icon_scale_teleportPlatform = 1.5,
+        icon_alpha_teleportPlatform = 1.0,
         icon_scale_others = 1.5,
         icon_alpha_others = 1.0,
 
         show_portal = true,
         show_orderhall = true,
         show_warfront = true,
-        show_petbattleportal = true,
+        show_petBattlePortal = true,
         show_tram = true,
         show_boat = true,
         show_aboat = true,
@@ -41,8 +41,8 @@ constants.defaults = {
         show_hzeppelin = true,
         show_note = true,
         easy_waypoint = true,
-        show_anima_gateway = true,
-        show_teleport_platform = true,
+        show_animaGateway = true,
+        show_teleportPlatform = true,
         -- show_others = true,
 
         force_nodes = false,
@@ -67,8 +67,8 @@ constants.icongroup = {
     "boat",
     "zeppelin",
     "tram",
-    "anima_gateway",
-    "teleport_platform"
+    "animaGateway",
+    "teleportPlatform"
 }
 
 local left, right, top, bottom = GetObjectIconTextureCoords("4772") --MagePortalAlliance
@@ -83,8 +83,8 @@ local MagePortalAlliance = {
 
 constants.icon = {
     portal = MagePortalAlliance,
-    petbattleportal = MagePortalAlliance,
     orderhall = MagePortalAlliance,
+    petBattlePortal = MagePortalAlliance,
     MagePortalHorde = {
         icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
         tCoordLeft = left2,
@@ -92,15 +92,15 @@ constants.icon = {
         tCoordTop = top2,
         tCoordBottom = bottom2,
     },
-    mixedportal       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_mixed",
+    mixedPortal       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_mixed",
     boat              = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat",
     aboat             = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat_alliance",
     boat_x            = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat_grey_x",
     tram              = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\tram",
-    flightmaster      = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
+    flightMaster      = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
     zeppelin          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin",
     hzeppelin         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin_horde",
     worderhall        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\warrior",
-    teleport_platform = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
-    anima_gateway     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
+    teleportPlatform = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
+    animaGateway     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
 }

@@ -62,7 +62,7 @@ config.options = {
                     desc = L["config_warfront_portal_desc"],
                     order = 12.2,
                 },
-                show_petbattleportal = {
+                show_petBattlePortal = {
                     type = "toggle",
                     name = L["config_petbattle_portal"],
                     desc = L["config_petbattle_portal_desc"],
@@ -124,18 +124,18 @@ config.options = {
                     name = "",
                     order = 21,
                 },
-                show_anima_gateway = {
+                show_animaGateway = {
                     type = "toggle",
                     width = "full",
-                    name = L["config_anima_gateway"],
-                    desc = L["config_anima_gateway_desc"],
+                    name = L["config_animaGateway"],
+                    desc = L["config_animaGateway_desc"],
                     order = 22,
                 },
-                show_teleport_platform = {
+                show_teleportPlatform = {
                     type = "toggle",
                     width = "full",
-                    name = L["config_teleport_platform"],
-                    desc = L["config_teleport_platform_desc"],
+                    name = L["config_teleportPlatform"],
+                    desc = L["config_teleportPlatform_desc"],
                     order = 23,
                 },
                 other_line = {

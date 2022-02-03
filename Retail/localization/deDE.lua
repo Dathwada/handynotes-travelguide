@@ -51,11 +51,11 @@ L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar si
 L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
 L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 
-L["config_teleport_platform"] = "Teleportplattformen in Oribos"
-L["config_teleport_platform_desc"] = "Zeigt die Positionen von Teleportplattformen in Oribos an."
+L["config_teleportPlatform"] = "Teleportplattformen in Oribos"
+L["config_teleportPlatform_desc"] = "Zeigt die Positionen von Teleportplattformen in Oribos an."
 
-L["config_anima_gateway"] = "Animaportale in der Bastion"
-L["config_anima_gateway_desc"] = "Zeigt die Positionen von Animaportalen in der Bastion an."
+L["config_animaGateway"] = "Animaportale in der Bastion"
+L["config_animaGateway_desc"] = "Zeigt die Positionen von Animaportalen in der Bastion an."
 
 L["config_others"] = "Anderes"
 L["config_others_desc"] = "Zeige alle anderen POIs."
