@@ -114,6 +114,7 @@ L["To Ring of Fates"] = "Zum Ring der Schicksale"
 L["Into the Maw"] = "In den Schlund"
 L["To Keeper's Respite"] = "Zur Zuflucht des Hüters"
 L["Portal to Torghast"] = "Portal nach Torghast"
+L["Portal to Zereth Mortis"] = "Portal nach Zereth Mortis"
 
 --============================================Bastion=============================================--
 

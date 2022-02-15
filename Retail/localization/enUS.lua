@@ -114,6 +114,7 @@ L["To Ring of Fates"] = true
 L["Into the Maw"] = true
 L["To Keeper's Respite"] = true
 L["Portal to Torghast"] = true
+L["Portal to Zereth Mortis"] = true
 
 --============================================Bastion=============================================--
 

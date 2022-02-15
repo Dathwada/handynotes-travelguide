@@ -35,6 +35,7 @@ local IntoTheMaw = L["Into the Maw"]
 local PtoTorghast = L["Portal to Torghast"]
 local Korthia = GetMapNames(1543, 1961)
 local KeepersRespite = L["To Keeper's Respite"]
+local PtoZerethMortis = L["Portal to Zereth Mortis"]
 
 local AGtoHerosrest = L["Anima Gateway to Hero's rest"]
 
@@ -269,6 +270,7 @@ DB.points = {
         [49506073] = { icon="teleportPlatform", label=RingFates },
         [43375150] = { icon="teleportPlatform", label=RingFates },
         [30702319] = { icon="portal", label=KeepersRespite, note=Korthia, requirements={quest=63665} },
+        [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} }
         },
     [1536] = { -- Maldraxxus
         [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
@@ -304,6 +306,9 @@ DB.points = {
         },
     [1961] = { -- Korthia
         [64472406] = { icon="portal", label=WstoOribos, requirements={quest=63665} }
+        },
+    [1970] = { -- Zereth Mortis
+        [32956974] = { icon="portal", label=WstoOribos, requirements={quest=64957} }
         },
 
 ----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
