@@ -79,7 +79,7 @@ config.options = {
                     name = L["config_boat_alliance"],
                     desc = L["config_boat_alliance_desc"],
                     hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Alliance" then
+                        if (select(1, UnitFactionGroup("player")) == "Alliance") then
                             return true
                         end
                     end,
@@ -90,7 +90,7 @@ config.options = {
                     name = L["config_zeppelin"],
                     desc = L["config_zeppelin_desc"],
                     hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Alliance" then
+                        if (select(1, UnitFactionGroup("player")) == "Alliance") then
                             return true
                         end
                     end,
@@ -101,7 +101,7 @@ config.options = {
                     name = L["config_zeppelin_horde"],
                     desc = L["config_zeppelin_horde_desc"],
                     hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Horde" then
+                        if (select(1, UnitFactionGroup("player")) == "Horde") then
                             return true
                         end
                     end,
@@ -147,7 +147,7 @@ config.options = {
                     type = "toggle",
                     width = "full",
                     name = function()
-                        if IsAddOnLoaded("TomTom") then
+                        if (IsAddOnLoaded("TomTom")) then
                             return L["config_easy_waypoints"]
                         else
                             return L["config_easy_waypoints"].." |cFFFF0000("..L["handler_tooltip_requires"].." TomTom)|r"
