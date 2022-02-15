@@ -32,6 +32,9 @@ L["config_warfront_portal_desc"] = "Show the Warfront portal locations."
 L["config_petbattle_portal"] = "Petbattle Portal"
 L["config_petbattle_portal_desc"] = "Show the Petbattle portal locations."
 
+L["config_ogreWaygate"] = "Ogre Waygate"
+L["config_ogreWaygate_desc"] = "Show the Ogre Waygat portal locations."
+
 L["config_boat"] = "Boat"
 L["config_boat_desc"] = "Show the boat locations."
 L["config_boat_alliance"] = "Alliance Boat"
@@ -158,6 +161,7 @@ L["Portal to Warspear"] = true
 L["Portal to Stormshield"] = true
 L["Portal to Vol'mar"] = true
 L["Portal to Lion's watch"] = true
+L["Ogre Waygate"] = true
 
 -------------------------------------------------MoP------------------------------------------------
 

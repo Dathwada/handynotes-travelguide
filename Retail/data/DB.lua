@@ -95,6 +95,7 @@ local PtoWarspear = L["Portal to Warspear"]
 local PtoVolmar = L["Portal to Vol'mar"]
 local Ashran = GetMapNames(572, 588)
 local TanaanJungle = GetMapNames(572, 534)
+local OgreWaygate = L["Ogre Waygate"]
 
 -------------------------------------------------MoP------------------------------------------------
 
@@ -219,6 +220,8 @@ DB.points = {
             requirements  = {                   -- additional notes for requirements
                 TABLE FOR:
                 quest         = [ID],           -- additional notes for a required quest
+                item          = {ID, QUANTITY}  -- additional notes for a required item with quantity
+                hideQuestName = [BOOLEAN],      -- hides quest name for a required quest
                 multiquest    = {TABLE},        -- additional notes for multi required quests
                 spell         = [ID],           -- additional notes for a required spell
                 level         = [PLAYERLEVEL],  -- additional notes for a required player level
@@ -498,6 +501,13 @@ DB.points = {
         [53556087] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
         [60424563] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=37935}, faction="Horde" },
         [59594867] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=38445}, faction="Alliance" },
+        [36843203] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Frostfire Ridge
+        [58736681] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Shadowmoon Valley
+        [58684818] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Tanaan Jungle
+        [52432296] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36886, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Gorgrond
+        [20935290] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36906, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Nagrand
+        [47817847] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Spires of Arak
+        [42635724] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Talador
         },
     [588] = { -- Ashran
         [44001300] = { icon="portal", multilabel={PtoOG, PtoVolmar}, multinote={Durotar, TanaanJungle}, requirements={multiquest={[2]=37935}}, faction="Horde" },
@@ -508,16 +518,19 @@ DB.points = {
         },
     [525] = { -- Frostfire Ridge
         [51496593] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=36614}, faction="Horde" },
+        [59544752] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 36843203
         },
     [582] = { -- Lunarfall (Garrison)
         [70102750] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
         },
     [539] = { -- Shadowmoon Valley
         [32871553] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
+        [50463569] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58736681
         },
     [534] = { -- Tanaan Jungle
         [61004734] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=37935}, faction="Horde" },
         [57446050] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=38445}, faction="Alliance" },
+        [53495838] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58684818
         },
     [624] = { -- Warspear (Ashran)
         [60705160] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
@@ -526,6 +539,18 @@ DB.points = {
     [622] = { -- Stormshield (Ashran)
         [60903800] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [36314116] = { icon="portal", label=PtoLionswatch, note=TanaanJungle, requirements={quest=38445}, faction="Alliance" },
+        },
+    [543] = { -- Gorgrond
+        [58033443] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36886, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 52432296
+        },
+    [550] = { -- Nagrand
+        [32164623] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36906, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 20935290
+        },
+    [542] = { -- Spires of Arak
+        [54625163] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 47817847
+        },
+    [535] = { -- Talador
+        [55074812] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 42635724
         },
 
 ----------------------------------------------------------------------------------------------MoP----------------------------------------------------------------------------------------------

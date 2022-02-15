@@ -68,6 +68,12 @@ config.options = {
                     desc = L["config_petbattle_portal_desc"],
                     order = 12.3,
                 },
+                show_ogreWaygate = {
+                    type = "toggle",
+                    name = L["config_ogreWaygate"],
+                    desc = L["config_ogreWaygate_desc"],
+                    order = 12.4,
+                },
                 show_boat = {
                     type = "toggle",
                     name = L["config_boat"],

@@ -144,7 +144,7 @@ local function SetIcon(point)
 end
 
 local function GetIconScale(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal") then
+    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" or icon == "ogreWaygate") then
         return private.db["icon_scale_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_scale_boat"]
@@ -156,7 +156,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal") then
+    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" or icon == "ogreWaygate") then
         return private.db["icon_alpha_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_alpha_boat"]
@@ -173,7 +173,7 @@ local GetPointInfo = function(point)
     if (point) then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal") and MagePortalHorde) or (point.icon == "boat" and BoatX)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and MagePortalHorde) or (point.icon == "boat" and BoatX)
         else
             icon = SetIcon(point)
         end
@@ -219,12 +219,21 @@ local function SetTooltip(tooltip, point)
                 tooltip:AddLine(RequiresPlayerLvl..": "..pointreq.level, 1) -- red
             end
             if (pointreq.quest and not IsQuestCompleted(pointreq.quest)) then
-                if (C_QuestLog.GetTitleForQuestID(pointreq.quest) ~= nil) then
-                    tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
-                else
-                    tooltip:AddLine(RetrievindData,1,0,1) -- pink
-                    C_Timer.After(1, function() addon:Refresh() end) -- Refresh
-                    -- print("refreshed")
+                if (not pointreq.hideQuestName) then
+                    if (C_QuestLog.GetTitleForQuestID(pointreq.quest) ~= nil) then
+                        tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
+                    else
+                        tooltip:AddLine(RetrievindData,1,0,1) -- pink
+                        C_Timer.After(1, function() addon:Refresh() end) -- Refresh
+                        -- print("refreshed")
+                    end
+                elseif (pointreq.item) then -- OgreWaygate
+                    local name = C_Item.GetItemNameByID(pointreq.item[1]) or "UNKNOWN"
+                    local quantity = pointreq.item[2]
+                    if (name == "UNKNOWN") then
+                        C_Timer.After(1, function() addon:Refresh() end) -- Refresh
+                    end
+                    tooltip:AddLine(requires..': '..quantity..'x '..name, 1) -- red
                 end
             end
             if (pointreq.reputation) then
@@ -433,6 +442,7 @@ do
             if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
             if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
             if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
+            if (point.icon == "ogreWaygate" and not private.db.show_ogreWaygate) then return false end
             if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
             if (point.icon == "tram" and not private.db.show_tram) then return false end
             if (point.icon == "boat" and not private.db.show_boat) then return false end

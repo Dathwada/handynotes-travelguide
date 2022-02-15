@@ -32,6 +32,9 @@ L["config_warfront_portal_desc"] = "Zeigt die Positionen von Kriegsfrontportalen
 L["config_petbattle_portal"] = "Haustierkampfportale"
 L["config_petbattle_portal_desc"] = "Zeigt die Positionen von Haustierkampfportalen an."
 
+L["config_ogreWaygate"] = "Ogerportale"
+L["config_ogreWaygate_desc"] = "Zeigt die Positionen von Ogerportalen an."
+
 L["config_boat"] = "Schiffe"
 L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
 L["config_boat_alliance"] = "Allianz Schiffe"
@@ -158,6 +161,7 @@ L["Portal to Warspear"] = "Portal nach Kriegsspeer"
 L["Portal to Stormshield"] = "Portal zum Sturmschild"
 L["Portal to Vol'mar"] = "Portal nach Vol'mar"
 L["Portal to Lion's watch"] = "Portal zur Löwenwacht"
+L["Ogre Waygate"] = "Ogerportal"
 
 -------------------------------------------------MoP------------------------------------------------
 
