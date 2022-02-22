@@ -2,6 +2,7 @@
 
 #### v2.7.0 (February 22, 2022)
 -------------------------------
+* Bump .toc to 90200
 * Added the Waygate portal between Un'goro and Sholazar Basin [#44](https://www.curseforge.com/wow/addons/handynotes-travelguide?comment=44)
 * Added Ogre Waygates [#46](https://www.curseforge.com/wow/addons/handynotes-travelguide?comment=46)
 * Added Portal to Oribos in Zereth Mortis.
