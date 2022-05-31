@@ -201,6 +201,11 @@ local EasternPlaguelands = GetMapNames(13, 23)
 local Westfall = GetMapNames(13, 52)
 local BurningSteppes = GetMapNames(13, 36)
 local WtoUngoroCrater = L["Waygate to Un'Goro Crater"]
+local PtoKarazhan = L["Portal to Karazhan"]
+local DeadwindPass = GetMapNames(13, 42)
+local PtoMechagon = L["Portal to Mechagon"]
+local PtoGorgrond = L["Portal to Gorgrond"]
+local Draenor = GetMapNames(572)
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -270,7 +275,8 @@ DB.points = {
         [49506073] = { icon="teleportPlatform", label=RingFates },
         [43375150] = { icon="teleportPlatform", label=RingFates },
         [30702319] = { icon="portal", label=KeepersRespite, note=Korthia, requirements={quest=63665} },
-        [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} }
+        [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} },
+        [56267594] = { icon="portal", multilabel={PtoKarazhan, PtoGorgrond, PtoMechagon}, multinote={DeadwindPass, Draenor, KulTiras} }
         },
     [1536] = { -- Maldraxxus
         [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
