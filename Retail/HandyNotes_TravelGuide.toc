@@ -1,4 +1,4 @@
-## Interface: 90200
+## Interface: 90205
 ## Title: HandyNotes: TravelGuide
 ## Notes: Displays the portal, zeppelin and boat locations on the world map and minimap.
 ## Notes-deDE: Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Weltkarte und Minimap an.
@@ -8,12 +8,12 @@
 ## Notes-zhCN: 在世界地图和小地图上显示传送门、飞艇、港口图标。
 ## Notes-zhTW: 在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。
 ## Author: |cFFFF8C00Dathwada EU-Eredar|r
-## Version: v2.7.0
+## Version: v2.8.0
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideDB
 ## X-Embeds: AceTimer-3.0
-## X-Date: 2022-02-22
+## X-Date: 2022-06-01
 ## X-Category: Map
 
 #@no-lib-strip@

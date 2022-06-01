@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.8.0 (June 01, 2022)
+-------------------------------
+* Bump .toc to 90205
+* Added new Portals in Oribos
+* Fixed leaked variables
+
 #### v2.7.0 (February 22, 2022)
 -------------------------------
 * Bump .toc to 90200
