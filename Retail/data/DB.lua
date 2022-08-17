@@ -262,7 +262,7 @@ DB.points = {
         [62772775] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
         [76015007] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
         [47928153] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
-        [20535087] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        [20535087] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
         },
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={quest=60151} },
@@ -270,7 +270,7 @@ DB.points = {
         [52094278] = { icon="teleportPlatform", label=RingTransference },
         [57145040] = { icon="teleportPlatform", label=RingTransference },
         [52095784] = { icon="teleportPlatform", label=RingTransference },
-        [47055029] = { icon="teleportPlatform", label=RingTransference },
+        [47055029] = { icon="teleportPlatform", label=RingTransference }
         },
     [1671] = { -- Oribos - Ring of Transference
         [49525107] = { icon="portal", label=IntoTheMaw },
@@ -283,31 +283,31 @@ DB.points = {
         [56267594] = { icon="portal", multilabel={PtoKarazhan, PtoGorgrond, PtoMechagon}, multinote={DeadwindPass, Draenor, KulTiras} }
         },
     [1536] = { -- Maldraxxus
-        [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
+        [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} }
         },
     [1698] = { -- Seat of the Primus
-        [56373149] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
+        [56373149] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} }
         },
     [1533] = { -- Bastion
         [55985276] = { icon="animaGateway", label=AGtoHerosrest }, --1 --Blizzard marked
         [46964891] = { icon="animaGateway", label=AGtoHerosrest }, --2 --Blizzard marked
         [52983802] = { icon="animaGateway", label=AGtoHerosrest }, --3 --Blizzard marked
-        [65581959] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
+        [65581959] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} }
         },
     [1707] = { -- Elysian Hold
-        [48816478] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
+        [48816478] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} }
         },
     [1565] = { -- Ardenweald
-        [46605126] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
+        [46605126] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} }
         },
     [1702] = { -- Hearth of the Forest - The Roots
-        [59972842] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
+        [59972842] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} }
         },
     [1525] = { -- Revendreth
-        [32134043] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        [32134043] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
         },
     [1699] = { -- Sinfall Reaches
-        [62052630] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        [62052630] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
         },
     [1543] = { -- The Maw
         [42374215] = { icon="portal", label=WstoOribos },
@@ -331,31 +331,31 @@ DB.points = {
         [47137856] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51359}, faction="Alliance" }, -- Zuldazar Daria Smithson
         [58287605] = { icon="boat", multilabel={BtoDrustvar, BtoStormsongValley, BtoTiragardeSound}, multinote={KulTiras, KulTiras, KulTiras}, requirements={multiquest={51340, 51532, 51421}}, faction="Horde" },
         [58367208] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Horde" },
-        [59285897] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" },
+        [59285897] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" }
         },
     [862] = { -- Zuldazar
         [58304450] = { icon="portal", multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multilevel={[4]=50}}, faction="Horde" },
         [55255824] = { icon="boat", label=StoMechagon, note=KulTiras, requirements={quest=55651}, faction="Horde" },
         [58466293] = { icon="boat", multilabel={BtoDrustvar, BtoStormsongValley, BtoTiragardeSound}, multinote={KulTiras, KulTiras, KulTiras}, requirements={multiquest={51340, 51532, 51421}}, faction="Horde" },
         [58596055] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Horde" },
-        [60073938] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" },
+        [60073938] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" }
         },
     [1165] = { -- Dazar'alor
         [51004600] = { icon="portal", multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multilevel={[4]=50}}, faction="Horde" },
         [41808760] = { icon="boat", label=StoMechagon, note=KulTiras, requirements={quest=55651}, faction="Horde" },
         [51859453] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Horde" },
-        [56323090] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" },
+        [56323090] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" }
         },
     [1163] = { -- Dazar'alor - The Great Seal
         [73706210] = { icon="portal", label=PtoSM, note=EversongWoods, faction="Horde" },
         [73706980] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=46931}, faction="Horde" },
         [73707730] = { icon="portal", label=PtoTB, note=Mulgore, faction="Horde" },
         [73708530] = { icon="portal", label=PtoSilithus, note=Kalimdor, requirements={quest=46931,level=50}, faction="Horde" },
-        [63008530] = { icon="portal", label=PtoNazjatar, requirements={quest=55053, level=50}, faction="Horde" },
+        [63008530] = { icon="portal", label=PtoNazjatar, requirements={quest=55053, level=50}, faction="Horde" }
         },
     [1355] = { -- Nazjatar
         [47286278] = { icon="portal", label=PtoZuldazar, note=Zandalar, requirements={quest=55053, level=50}, faction="Horde" },
-        [40005260] = { icon="portal", label=PtoBoralus, note=KulTiras, requirements={quest=54972, level=50}, faction="Alliance" },
+        [40005260] = { icon="portal", label=PtoBoralus, note=KulTiras, requirements={quest=54972, level=50}, faction="Alliance" }
         },
     [876] = { -- Kul Tiras
         [61404950] = { icon="portal", multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, requirements={multiquest={47186, 47186, 47186, 47186, 54972}, multilevel={[4]=50}}, faction="Alliance" },
@@ -367,23 +367,23 @@ DB.points = {
 --noboat        [20742783] = { icon="boat", label=returntoBoralus, note=TiragardeSound, quest=54992, faction="Alliance" }, --Mechagon --quest=54992,
         [62095274] = { icon="boat", multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, requirements={multiquest={51283, 51088, 51308}}, faction="Alliance" },
         [60855074] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Alliance" },
-        [58635379] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" },
+        [58635379] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" }
         },
     [895] = { -- Tiragarde Sound
         [74302350] = { icon="portal", multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, requirements={multiquest={47186, 47186, 47186, 47186, 54972}, multilevel={[4]=50}}, faction="Alliance" },
         [73692628] = { icon="boat", multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
         [73362568] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Alliance" },
-        [69453107] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" },
+        [69453107] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" }
         },
     [942] = { -- Stormsong Valley
         [51902450] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" }, --Stormsong valley 51902450 boat Grok Seahandler
-        [51403370] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" }, --Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
+        [51403370] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" } --Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
         },
     [1161] = { -- Boralus
         [70401600] = { icon="portal", multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, requirements={multiquest={47186, 47186, 47186, 47186, 54972}, multilevel={[4]=50}}, faction="Alliance" },
         [67952669] = { icon="boat", multilabel={BtoVolDun, BtoNazmir, BtoZuldazar}, multinote={Zandalar, Zandalar, Zandalar}, faction="Alliance" },
         [66352486] = { icon="mixedPortal", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Alliance" }, --quest=53194,
-        [50044669] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" },
+        [50044669] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" }
         },
 
 --------------------------------------------------------------------------------------------LEGION---------------------------------------------------------------------------------------------
@@ -411,21 +411,21 @@ DB.points = {
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302400] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58613934] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}} },
-        [72854121] = { icon="flightMaster", label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" }, --quest=40953, ????
+        [72854121] = { icon="flightMaster", label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" } --quest=40953, ????
         },
     [630] = { -- Azsuna
         [46664141] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [46644121] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [82135737] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [47582809] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [47582809] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
         },
     [634] = { -- Stormheim
         [30084070] = { icon="portal", label=PtoDala, note=BrokenIsles },
         [73633938] = { icon="portal", label=PtoHelheim, note=Stormheim },
-        [60175223] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [60175223] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
         },
     [649] = { -- Stormheim - Helheim
-        [66584793] = { icon="portal", label=PtoStormheim, note=Stormheim },
+        [66584793] = { icon="portal", label=PtoStormheim, note=Stormheim }
         },
     [650] = { -- Highmountain
         [34585114] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, ????
@@ -433,49 +433,50 @@ DB.points = {
         [44667290] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} } -- Highmountain, Neltharion's Vault
         },
     [750] = { -- Highmountain - Thunder Totem
-        [39834206] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [39834206] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
         },
     [641] = { -- Val'sharah
         [41742385] = { icon="orderhall", multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
-        [54707490] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [54707490] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
         },
     [680] = { -- Suramar
-        [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
         },
     [646] = { -- Broken Shore
         [44816132] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [71694799] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} } -- The Broken Shore, Broken Shore
         },
     [830] = { -- Krokuun
-        [62008694] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [62008694] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
     [832] = { -- Krokuun Vindikaar
-        [43272508] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [43272508] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
     [882] = { -- Eredath
-        [51668722] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [51668722] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
     [884] = { -- Eredath Vindikaar
-        [49332529] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [49332529] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
     [885] = { -- Antoran Wastes
-        [75893732] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [75893732] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
     [887] = { -- Antoran Wastes Vindikaar
-        [33785600] = { icon="portal", label=PtoDala, note=BrokenIsles },
+        [33785600] = { icon="portal", label=PtoDala, note=BrokenIsles }
         },
 
 -------------------------------------------------------------------------------------------ORDERHALL-------------------------------------------------------------------------------------------
 
     [747] = { -- The Dreamgrove *DRUID*
         [56604310] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DRUID" },
-        [55502200] = { icon="orderhall", label=PtoEmeraldDreamway, class="DRUID" },
+        [55502200] = { icon="orderhall", label=PtoEmeraldDreamway, class="DRUID" }
         },
     [648] = { -- Acherus: The Ebon Hold - Hall of Command *DEATHKNIGHT*
-        [24703370] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" },
+        [24703370] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" }
         },
     [720] = { -- Mardum, the Shattered Abyss - Upper Command Center *DEMONHUNTER*
         [59269182] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" }, --quest=42872, access to orderhall
-        [58361658] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" },
+        [58361658] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEMONHUNTER" }
         },
     [734] = { -- Hall of the Guardian *MAGE*
         [57299056] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="MAGE" },
@@ -483,31 +484,31 @@ DB.points = {
         [67214172] = { icon="orderhall", requirements={spell=223413}, label=PtoStormheim, note=BrokenIsles, class="MAGE" },
         [60235191] = { icon="orderhall", requirements={spell=223413}, label=PtoSuramar, note=BrokenIsles, class="MAGE" },
         [54684456] = { icon="orderhall", requirements={spell=223413}, label=PtoHighmountain, note=BrokenIsles, class="MAGE" },
-        [54993963] = { icon="orderhall", requirements={spell=223413}, label=PtoAzsuna, note=BrokenIsles, class="MAGE" },
+        [54993963] = { icon="orderhall", requirements={spell=223413}, label=PtoAzsuna, note=BrokenIsles, class="MAGE" }
         },
     [726] = { -- The Maelstrom *SHAMAN*
-        [29835200] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="SHAMAN" },
+        [29835200] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="SHAMAN" }
         },
     [24] = { -- Light's Hope Chapel *PALADIN*
-        [37646407] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" },
+        [37646407] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" }
 --      in Eastern Plaguelands and Eastern Kingdoms another portal POI
         },
     [717] = { -- Dreadscar Rift *WARLOCK*
-        [74333750] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="WARLOCK" },
+        [74333750] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="WARLOCK" }
         },
     [702] = { -- Netherlight Temple *PRIEST*
-        [49798075] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PRIEST" },
+        [49798075] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PRIEST" }
         },
     [695] = { -- Skyhold *WARRIOR*
 --      [58322500] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="WARRIOR" },
-        [58322500] = { icon="worderhall", multilabel={dalaran, stormheim, azsuna, valsharah, highmountain, suramar, brokenshore}, note=BrokenIsles, class="WARRIOR" },
+        [58322500] = { icon="worderhall", multilabel={dalaran, stormheim, azsuna, valsharah, highmountain, suramar, brokenshore}, note=BrokenIsles, class="WARRIOR" }
         },
     [709] = { -- The Wandering Isle *MONK*
         [52405714] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="MONK" },
-        [50055441] = { icon="orderhall", label=PtoPeakofSerenity, note=KunLaiSummit, class="MONK" },
+        [50055441] = { icon="orderhall", label=PtoPeakofSerenity, note=KunLaiSummit, class="MONK" }
         },
     [739] = { -- Trueshotlodge *HUNTER*
-        [48634352] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, access to orderhall ???
+        [48634352] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="HUNTER" } --quest=40953, access to orderhall ???
         },
 
 ----------------------------------------------------------------------------------------------WoD----------------------------------------------------------------------------------------------
@@ -531,34 +532,34 @@ DB.points = {
         },
     [588] = { -- Ashran
         [44001300] = { icon="portal", multilabel={PtoOG, PtoVolmar}, multinote={Durotar, TanaanJungle}, requirements={multiquest={[2]=37935}}, faction="Horde" },
-        [40009000] = { icon="portal", multilabel={PtoSW, PtoLionswatch}, multinote={ElwynnForest, TanaanJungle}, requirements={multiquest={[2]=38445}}, faction="Alliance" },
+        [40009000] = { icon="portal", multilabel={PtoSW, PtoLionswatch}, multinote={ElwynnForest, TanaanJungle}, requirements={multiquest={[2]=38445}}, faction="Alliance" }
         },
     [590] = { -- Frostwall (Garrison)
-        [75104890] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=36614}, faction="Horde" },
+        [75104890] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=36614}, faction="Horde" }
         },
     [525] = { -- Frostfire Ridge
         [51496593] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=36614}, faction="Horde" },
-        [59544752] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 36843203
+        [59544752] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} } -- 36843203
         },
     [582] = { -- Lunarfall (Garrison)
-        [70102750] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
+        [70102750] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" }
         },
     [539] = { -- Shadowmoon Valley
         [32871553] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
-        [50463569] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58736681
+        [50463569] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} } -- 58736681
         },
     [534] = { -- Tanaan Jungle
         [61004734] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=37935}, faction="Horde" },
         [57446050] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=38445}, faction="Alliance" },
-        [53495838] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58684818
+        [53495838] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} } -- 58684818
         },
     [624] = { -- Warspear (Ashran)
         [60705160] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [53104390] = { icon="portal", label=PtoVolmar, note=TanaanJungle, requirements={quest=37935}, faction="Horde" },
+        [53104390] = { icon="portal", label=PtoVolmar, note=TanaanJungle, requirements={quest=37935}, faction="Horde" }
         },
     [622] = { -- Stormshield (Ashran)
         [60903800] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [36314116] = { icon="portal", label=PtoLionswatch, note=TanaanJungle, requirements={quest=38445}, faction="Alliance" },
+        [36314116] = { icon="portal", label=PtoLionswatch, note=TanaanJungle, requirements={quest=38445}, faction="Alliance" }
         },
     [543] = { -- Gorgrond
         [58033443] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36886, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 52432296
@@ -569,10 +570,10 @@ DB.points = {
         [65750825] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true} } -- Nagrand, Elemental Plateau
         },
     [542] = { -- Spires of Arak
-        [54625163] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 47817847
+        [54625163] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} } -- 47817847
         },
     [535] = { -- Talador
-        [55074812] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 42635724
+        [55074812] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} } -- 42635724
         },
 
 ----------------------------------------------------------------------------------------------MoP----------------------------------------------------------------------------------------------
@@ -593,21 +594,21 @@ DB.points = {
         },
     [390] = { -- Vale of Eternal Blossoms
         [90876620] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [63461261] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [63461261] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [1530] = { -- Vale of Eternal Blossoms BFA Vision of N'Zoth
         [91606427] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [63720988] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [63720988] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [392] = { -- Shrine of Two Moons - The Imperial Mercantile
-        [73304270] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [73304270] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [394] = { -- Shrine of Seven Stars - The Imperial Exchange
-        [71703570] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [71703570] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [388] = { -- Townlong Steppes
         [49746867] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32681}, faction="Alliance" },
-        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" },
+        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" }
         },
     [376] = { -- Valley of the Four Winds
         [31517359] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true} } -- Valley of the Four Winds, Stormstout Brewery
@@ -619,12 +620,12 @@ DB.points = {
         },
 --[[    [371] = { -- The Jade Forest
         [28501401] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
 ]]--
     [504] = { -- Isle of Thunder
         [64707348] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32644}, faction="Alliance" },
-        [33213269] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32212}, faction="Horde" },
+        [33213269] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32212}, faction="Horde" }
         },
 
 ---------------------------------------------------------------------------------------------CATA----------------------------------------------------------------------------------------------
@@ -638,23 +639,23 @@ DB.points = {
         [48515381] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [50935310] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [49325034] = { icon="portal", label=PtoTherazanesThrone, note=Deepholm, requirements={quest=26709} },
-        [57211352] = { icon="portal", label=PtoTempleofEarth, note=Deepholm, requirements={quest=26971} },
+        [57211352] = { icon="portal", label=PtoTempleofEarth, note=Deepholm, requirements={quest=26971} }
         },
     [948] = { -- Maelstrom
         [51182842] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [51172840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [51172840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [241] = { -- Twilight Highlands
         [79517782] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={quest=27537}, faction="Alliance" },
-        [73625351] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=26798}, faction="Horde" },
+        [73625351] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=26798}, faction="Horde" }
         },
     [244] = { -- Tol Barad
         [47115193] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=30}, faction="Alliance" },
-        [47115192] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" },
+        [47115192] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" }
         },
     [245] = { -- Tol Barad Peninsula
         [75255887] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=30}, faction="Alliance" },
-        [56277966] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" },
+        [56277966] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" }
         },
 
 ---------------------------------------------------------------------------------------------WotLK---------------------------------------------------------------------------------------------
@@ -662,11 +663,11 @@ DB.points = {
     [125] = { -- Dalaran Northrend
         [40086282] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302542] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [25634785] = { icon="portal", label=PtotPurpleParlor },
+        [25634785] = { icon="portal", label=PtotPurpleParlor }
         },
     [127] = { -- Crystalsong Forest
         [26194278] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [31223174] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [31223174] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [113] = { -- Northrend
         [47874119] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -694,18 +695,18 @@ DB.points = {
         [79015410] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
         [59946947] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [41255344] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
-        [41255345] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
+        [41255345] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [117] = { -- Howling Fjord
         [23295769] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
         [61506270] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
-        [77612813] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" },
+        [77612813] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" }
         },
     [118] = { -- Icecrown
         [76971866] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} } -- Icecrown, Argent Tournament Grounds
         },
     [119] = { -- Sholazar Basin
-        [40348312] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} },
+        [40348312] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} }
         },
     [120] = { -- The Storm Peaks
         [17223271] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} } -- Icecrown, Argent Tournament Grounds
@@ -735,10 +736,10 @@ DB.points = {
         },
     [108] = { -- Terokkar Forest
         [30252350] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
-        [30252350] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [30252350] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" }
         },
     [103] = { -- Exodar
-        [48306290] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [48306290] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [104] = { -- Shadowmoon Valley
         [50773530] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true} } -- Shadowmoon Valley, Fel Pits
@@ -748,14 +749,14 @@ DB.points = {
         },
     [97] = { -- Azuremyst Isle
         [20335407] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoDarnassus, note=Teldrassil },
-        [26364616] = { icon="portal", label=PtoSW, note=ElwynnForest..")\n("..inExodar.."", faction="Alliance" },
+        [26364616] = { icon="portal", label=PtoSW, note=ElwynnForest..")\n("..inExodar.."", faction="Alliance" }
         },
     [110] = { -- Silvermoon City
         [49401510] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
-        [58501890] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [58501890] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [94] = { -- Eversong Woods
-        [52803270] = { icon="portal", multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde" },
+        [52803270] = { icon="portal", multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde" }
         },
 
 --------------------------------------------------------------------------------------------Vanilla--------------------------------------------------------------------------------------------
@@ -791,11 +792,11 @@ DB.points = {
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
-        [33692369] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
+        [33692369] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [88] = { -- Thunder Bluff
         [14222574] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
-        [14222575] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
+        [14222575] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [1] = { -- Durotar
         [47881015] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos},
@@ -803,7 +804,7 @@ DB.points = {
                                     requirements={multiquest={[3]=46931, [8]=60151}}, faction="Horde" },
         [45550380] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [45550381] = { icon="zeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
-        [46980375] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal}, requirements={multiquest={[4]=25924, [6]=26798}}, faction="Horde" },
+        [46980375] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal}, requirements={multiquest={[4]=25924, [6]=26798}}, faction="Horde" }
         },
     [85] = { -- Orgrimmar
         [59078945] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos}, multinote={CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands}, requirements={multiquest={[3]=46931, [8]=60151}}, faction="Horde" },
@@ -814,39 +815,39 @@ DB.points = {
                                     -- TolBarad at level 30
                                     -- other portals at level ?? Shadowlands
         [45306178] = { icon="hzeppelin", label=ZtoBoreanTundra, note=WarsongHold, faction="Alliance" },
-        [52885242] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
+        [52885242] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" }
         },
     [71] = { -- Tanaris
         [65794954] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [65924954] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [65924954] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [74] = { -- Cavern of Time
         [58202660] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [59002670] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [59002670] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [81] = { -- Silithus
         [41604520] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
-        [41474479] = { icon="portal", requirements={level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" },
+        [41474479] = { icon="portal", requirements={level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" }
         },
     [70] = { -- Dustwallow Marsh
         [71625648] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
-        [71625647] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
+        [71625647] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" }
         },
     [62] = { -- Darkshore
         [48023627] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
-        [46243511] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
+        [46243511] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" }
         },
     [89] = { -- Darnassus
-        [44247867] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
+        [44247867] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" }
         },
     [57] = { -- Teldrassil
         [29085646] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
         [55009370] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [52048951] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoExodar, note=AzuremystIsle },
+        [52048951] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoExodar, note=AzuremystIsle }
         },
     [56] = { -- Wetlands
         [06216261] = { icon="aboat", label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
-        [04415718] = { icon="aboat", label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
+        [04415718] = { icon="aboat", label=BtoHowlingFjord, note=Valgarde, faction="Horde" }
         },
     [78] = { -- Un'Goro Crater
         [50520774] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
@@ -861,7 +862,7 @@ DB.points = {
         },
 --[[    NOT USED
     [210] = { -- Cape of Stranglethorn
-        [38546670] = { icon="boat", label=format(BtoRatchet) },
+        [38546670] = { icon="boat", label=format(BtoRatchet) }
         },
 ]]--
     [13] = { -- Eastern Kingdom
@@ -906,7 +907,7 @@ DB.points = {
         },
     [499] = { -- Deeprun Tram
         [42554350] = { icon="tram", label=DrTtoIF, note=DunMorogh },
-        [42556750] = { icon="tram", label=DrTtoIF, note=DunMorogh },
+        [42556750] = { icon="tram", label=DrTtoIF, note=DunMorogh }
         },
     [37] = { -- Elwynn Forest
         [17804775] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
@@ -920,40 +921,40 @@ DB.points = {
         [46726015] = { icon="molemachine", label=GetAreaInfo(1537) } -- Ironforge
         },
     [90] = { -- Undercity
-        [85301700] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoHellfirePeninsula, note=Outland, faction="Horde" },
+        [85301700] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoHellfirePeninsula, note=Outland, faction="Horde" }
         },
     [18] = { -- Tirisfal Glades
         [65906865] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoHellfirePeninsula, note=Outland..")\n("..inUCMq.."", faction="Horde" },
         [59416743] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
         [60475885] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoOG, note=Durotar, faction="Horde" },
         [62035926] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
-        [58875901] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" },
+        [58875901] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=PtoHowlingFjord, note=VengeanceLanding, faction="Horde" }
         },
     [21] = { -- Silverpine Forest
-        [47254337] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", requirements={quest=27478} },
+        [47254337] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", requirements={quest=27478} }
         },
     [25] = { -- Hillsbrad Foothills
-        [30293662] = { icon="portal", label=PtoSepulcher, note=SilverpineForest, faction="Horde", requirements={quest=27478} },
+        [30293662] = { icon="portal", label=PtoSepulcher, note=SilverpineForest, faction="Horde", requirements={quest=27478} }
         },
     [14] = { -- Arathi Highlands
         [27432937] = { icon="portal", requirements={level=50, warfront=11, timetravel={quest=52781, spell=276950}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
-        [21956514] = { icon="portal", requirements={level=50, warfront=11, timetravel={quest=52781, spell=276950}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
+        [21956514] = { icon="portal", requirements={level=50, warfront=11, timetravel={quest=52781, spell=276950}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" }
         },
     [50] = { -- Northern Stranglethorn
-        [37195161] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
+        [37195161] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [224] = { -- Stranglethorn Vale
-        [41403390] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
+        [41403390] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [23] = { -- Eastern Plaguelands
-        [75234942] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" },
+        [75234942] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" }
         },
     [27] = { -- Dun Morogh
         [70452731] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         [61293718] = { icon="molemachine", label=GetAreaInfo(1537) } -- Ironforge
         },
     [87] = { -- Ironforge
-        [76205120] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
+        [76205120] = { icon="tram", label=DrTtoSW, note=ElwynnForest }
         },
     [17] = { -- Blasted Lands
         [61971280] = { icon="molemachine", label=GetAreaInfo(1438), requirements={quest=53594, hideQuestName=true} } -- -- Blasted Lands, Nethergarde Keep
