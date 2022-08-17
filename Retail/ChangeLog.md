@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.9.0 (August 17, 2022)
+-------------------------------
+* Added mole machines [Curseforge #48](https://www.curseforge.com/wow/addons/handynotes-travelguide?comment=48)
+* Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-travelguide/pull/8)
+* Bump .toc to 90207
+
 #### v2.8.0 (June 01, 2022)
 -------------------------------
 * Bump .toc to 90205

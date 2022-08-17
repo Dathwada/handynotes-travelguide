@@ -31,7 +31,7 @@
 * `frFR` - French (thanks [shaiandra](https://www.curseforge.com/members/shaiandra)!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
 * `ruRU` - Russian (thanks [Golowolom](https://www.curseforge.com/members/golowolom) and [dadec666](https://www.curseforge.com/members/dadec666)!)
-* `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5)!)
+* `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5) and [nanjuekaien1](https://github.com/nanjuekaien1)!)
 * `zhTW` - Traditional Chinese (thanks [lostindark0](https://www.curseforge.com/members/lostindark0)!)
 
 If you wish to help localize TravelGuide, please go to [Localization](https://www.curseforge.com/wow/addons/handynotes-travelguide/localization).
