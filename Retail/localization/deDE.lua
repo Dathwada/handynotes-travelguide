@@ -48,6 +48,9 @@ L["config_zeppelin_horde_desc"] = "Zeigt die Positionen von Horde Zeppelinen an.
 L["config_tram"] = "Tiefenbahn"
 L["config_tram_desc"] = "Zeigt die Positionen der Tiefenbahn in Sturmwind und Eisenschmiede an."
 
+L["config_molemachine"] = "Maulwurfmaschine"
+L["config_molemachine_desc"] = "Zeigt die Position von Zielen der Maulwurfmaschine an."
+
 L["config_note"] = "Notizen"
 L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."
 
@@ -100,6 +103,7 @@ L["handler_tooltip_rep"] = "Benötigt Ruf bei"
 L["handler_tooltip_TNTIER"] = "Stufe %s des Reisenetzwerks."
 L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
 --L["currently available"] = "zurzeit Verfügbar"
+L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -247,4 +251,6 @@ L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
 
 L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
+L["The Masonary"] = "Die Freimaurerei"
+L["inside Blackrock Mountain"] = "innerhalb des Schwarzfels"
 end

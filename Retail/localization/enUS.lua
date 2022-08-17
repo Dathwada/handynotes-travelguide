@@ -48,6 +48,9 @@ L["config_zeppelin_horde_desc"] = "Show the Horde Zeppelin locations."
 L["config_tram"] = "Deerun Tram"
 L["config_tram_desc"] = "Show the Deeprun Tram locations in Stormwind and Ironforge."
 
+L["config_molemachine"] = "Mole Machine"
+L["config_molemachine_desc"] = "Show destinations for the Mole Machine."
+
 L["config_note"] = "Note"
 L["config_note_desc"] = "Show the node's additional notes when it's available."
 
@@ -100,6 +103,7 @@ L["handler_tooltip_requires_level"] = "Requires at least player level"
 L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["handler_tooltip_not_available"] = "currently NOT available"
 --L["handler_tooltip_available"] = "currently available"
+L["handler_tooltip_not_discovered"] = "not yet discovered"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -247,4 +251,6 @@ L["Portal to Dalaran Crater"] = true
 L["Portal to the Sepulcher"] = true
 
 L["Waygate to Un'Goro Crater"] = true
+L["The Masonary"] = true
+L["inside the Blackrock Mountain"] = true
 end

@@ -27,6 +27,8 @@ constants.defaults = {
         icon_alpha_animaGateway = 1.0,
         icon_scale_teleportPlatform = 1.5,
         icon_alpha_teleportPlatform = 1.0,
+        icon_scale_molemachine = 1.5,
+        icon_alpha_molemachine = 1.0,
         icon_scale_others = 1.5,
         icon_alpha_others = 1.0,
 
@@ -44,6 +46,7 @@ constants.defaults = {
         easy_waypoint = true,
         show_animaGateway = true,
         show_teleportPlatform = true,
+        show_molemachine = true,
         -- show_others = true,
 
         force_nodes = false,
@@ -68,6 +71,7 @@ constants.icongroup = {
     "boat",
     "zeppelin",
     "tram",
+    "molemachine",
     "animaGateway",
     "teleportPlatform"
 }
@@ -103,6 +107,8 @@ constants.icon = {
     zeppelin          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin",
     hzeppelin         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin_horde",
     worderhall        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\warrior",
-    teleportPlatform = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
-    animaGateway     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
+    teleportPlatform  = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
+    animaGateway      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
+    molemachine       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine",
+    molemachine_x     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine_grey_x"
 }

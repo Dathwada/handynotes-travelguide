@@ -46,11 +46,14 @@ L["config_zeppelin_horde_desc"] = "显示所有部落飞艇的位置。"
 L["config_tram"] = "矿道地铁"
 L["config_tram_desc"] = "显示暴风城和铁炉堡的矿道地铁位置。"
 
+-- L["config_molemachine"] = "Mole Machine"
+-- L["config_molemachine_desc"] = "Show destinations for the Mole Machine."
+
 L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
 
 L["config_easy_waypoints"] = "简易导航点"
-L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。" 
+L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
 
 L["config_teleportPlatform"] = "奥利波斯传送平台"
 L["config_teleportPlatform_desc"] = "显示奥利波斯传送平台位置."
@@ -97,7 +100,8 @@ L["handler_tooltip_requires_level"] = "需要玩家等级"
 L["handler_tooltip_rep"] = "需要声望"
 L["handler_tooltip_TNTIER"] = "旅行网络的第 %s 层."
 L["handler_tooltip_not_available"] = "当前不可用"
---L["currently available"] = "目前可用"
+-- L["currently available"] = "目前可用"
+-- L["handler_tooltip_not_discovered"] = "not yet discovered"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -245,4 +249,6 @@ L["Portal to Dalaran Crater"] = "通往达拉然巨坑"
 L["Portal to the Sepulcher"] = "墓地"
 
 L["Waygate to Un'Goro Crater"] = "通往安戈洛环形山"
+L["The Masonary"] = "石匠区"
+-- L["inside Blackrock Mountain"] = ""
 end

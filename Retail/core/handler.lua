@@ -18,6 +18,7 @@ local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
 local MagePortalHorde  = private.constants.icon.MagePortalHorde
 local BoatX            = private.constants.icon.boat_x
+local molemachineX     = private.constants.icon.molemachine_x
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -173,7 +174,9 @@ local GetPointInfo = function(point)
     if (point) then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and MagePortalHorde) or (point.icon == "boat" and BoatX)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and MagePortalHorde)
+            or (point.icon == "boat" and BoatX)
+            or (point.icon == "molemachine" and molemachineX)
         else
             icon = SetIcon(point)
         end
@@ -234,6 +237,8 @@ local function SetTooltip(tooltip, point)
                         C_Timer.After(1, function() addon:Refresh() end) -- Refresh
                     end
                     tooltip:AddLine(requires..': '..quantity..'x '..name, 1) -- red
+                elseif (point.icon == "molemachine") then
+                    tooltip:AddLine(L["handler_tooltip_not_discovered"], 1) -- red
                 end
             end
             if (pointreq.reputation) then
@@ -451,6 +456,7 @@ do
             if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
             if (point.icon == "animaGateway" and not private.db.show_animaGateway) then return false end
             if (point.icon == "teleportPlatform" and not private.db.show_teleportPlatform) then return false end
+            if (point.icon == "molemachine" and (not private.db.show_molemachine or (select(2, UnitRace("player")) ~= "DarkIronDwarf"))) then return false end
         end
         return true
     end
