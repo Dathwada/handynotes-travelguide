@@ -10,6 +10,7 @@
     * ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
     * ![](https://i.imgur.com/HQLt4uh.png) Horde Zeppelins (If you play Alliance, it displays the Horde zeppelins.)
     * ![](https://i.imgur.com/VYJ1NaJ.png) Deeprun Tram
+    * ![](https://i.imgur.com/OQLYKpT.png) Mole Machine (If you play a Dark Iron Dwarf)
     * Notes
 
 ![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
@@ -19,7 +20,7 @@
 * Easy Waypoint (Set a waypoint by right-clicking a node and access to more options by CTRL + right-clicking)
 * Notes for the portals, zepplins and boats.
 * Level, quest, time travel (i.e. Tirisfal Glades) and sanctum upgrade check.
-    * ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
+    * ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png), ![](https://i.imgur.com/S5k5pfG.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
 
 ![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/MlnVJKC.png)
 
