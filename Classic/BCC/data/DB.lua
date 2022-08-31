@@ -100,30 +100,30 @@ DB.points = {
 ---------------------------------------------------------Vanilla---------------------------------------------------------
 
     [1429] = { -- Elwynn Forest
-        [29201782] = { icon="tram", label=DrTtoIF, note=DunMorogh },
+        [29201782] = { icon="tram", label=DrTtoIF, note=DunMorogh }
         },
     [1453] = { -- Stormwind
-        [63910817] = { icon="tram", label=DrTtoIF, note=DunMorogh },
+        [63910817] = { icon="tram", label=DrTtoIF, note=DunMorogh }
         },
         [1411] = { -- Durotar
         [34017850] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
         [50571265] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
         [50581265] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         [50821385] = { icon="zeppelin", label=ZtoUC, note=Tirisfal, faction="Horde" },
-        [50831385] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" },
+        [50831385] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" }
         },
     [1420] = { -- Tirisfal Glades
         [60695877] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [60695878] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [61885907] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
         [61885906] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
-        [59456744] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
+        [59456744] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" }
         },
     [1437] = { -- Wetlands
         [05026348] = { icon="boat", label=BtoTheramore, note=DustwallowMarsh, faction="Alliance" },
         [05026349] = { icon="aboat", label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
         [04635710] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
-        [04635711] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
+        [04635711] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" }
         },
     [1414] = { -- Kalimdor
         [56785623] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
@@ -140,10 +140,10 @@ DB.points = {
         [58994665] = { icon="zeppelin", multilabel={ZtoUC, ZtoStranglethornVale}, multinote={Tirisfal, GromgolBaseCamp}, faction="Horde" },
         [58994666] = { icon="hzeppelin", multilabel={ZtoUC, ZtoStranglethornVale}, multinote={Tirisfal, GromgolBaseCamp}, faction="Alliance" },
         [29332792] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
-        [29332791] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
+        [29332791] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" }
         },
     [1413] = { -- The Barrens
-        [63683862] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
+        [63683862] = { icon="boat", label=BtoBootyBay, note=StranglethornVale }
         },
     [1415] = { -- Eastern Kingdom
         [43839266] = { icon="boat", label=BtoRatchet, note=Barrens },
@@ -157,28 +157,28 @@ DB.points = {
         [45995488] = { icon="aboat", multilabel={BtoAuberdine, BtoTheramore}, multinote={Darkshore, DustwallowMarsh}, faction="Horde" },
         [45995482] = { icon="boat", multilabel={BtoAuberdine, BtoTheramore}, multinote={Darkshore, DustwallowMarsh}, faction="Alliance" },
         [56041304] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
-        [43753451] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
+        [43753451] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" }
         },
     [1434] = { -- Stranglethorn Vale
         [25867311] = { icon="boat", label=BtoRatchet, note=Barrens },
         [31363015] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [31363016] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [31582911] = { icon="zeppelin", label=ZtoUC, note=Tirisfal, faction="Horde" },
-        [31582912] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" },
+        [31582912] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" }
         },
     [1426] = { -- Dun Morogh
-        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
+        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest }
         },
     [1455] = { -- Ironforge
-        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
+        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest }
         },
     [1445] = { -- Dustwallow Marsh
         [71625648] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
-        [71625649] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
+        [71625649] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" }
         },
     [1438] = { -- Teldrassil
         [54859680] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
-        [54859681] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
+        [54859681] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" }
         },
     [1439] = { -- Darkshore
         [33194006] = { icon="boat", label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
@@ -186,23 +186,23 @@ DB.points = {
         [32404384] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [32404383] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [30724098] = { icon="boat", label=BtoExodar, note=AzuremystIsle, faction="Alliance" },
-        [30724097] = { icon="aboat", label=BtoExodar, note=AzuremystIsle, faction="Horde" },
+        [30724097] = { icon="aboat", label=BtoExodar, note=AzuremystIsle, faction="Horde" }
         },
 
 -----------------------------------------------------------BCC-----------------------------------------------------------
 
     [1941] = { -- Eversong Forest
-        [50993068] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
+        [50993068] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" }
         },
     [1954] = { -- Silvermoon
-        [49391483] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
+        [49391483] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" }
         },
     [1458] = { -- Undercity
-        [54851125] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" },
+        [54851125] = { icon="portal", label=PtoSM, note=EversongWoods..")\n("..Orboftranslocation.."", faction="Horde" }
         },
     [1943] = { -- Azuremyst Isle
         [20355419] = { icon="boat", label=BtoAuberdine, note=Darkshore, faction="Alliance" },
-        [20355420] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" },
+        [20355420] = { icon="aboat", label=BtoAuberdine, note=Darkshore, faction="Horde" }
         },
     [1955] = { -- Shattrath
         [52205290] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
@@ -213,10 +213,10 @@ DB.points = {
         },
     [1952] = { -- Terokkar Forest
         [30612399] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
-        [30612398] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" },
+        [30612398] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" }
         },
     [1945] = { -- Outlands
         [43326601] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
-        [43326600] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" },
-        },
+        [43326600] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" }
+        }
 }
