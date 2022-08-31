@@ -1,5 +1,5 @@
 ##### **TravelGuide is a [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin to display the portal, boat and zeppelin locations on the world map and minimap.**
-##### **Classic Version: [HandyNotes: TravelGuide (Classic & BCC)](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic)**
+##### **Classic Version: [HandyNotes: TravelGuide (Classic versions)](https://www.curseforge.com/wow/addons/handynotes-travelguide-classic)**
 
 ## Options
 * **icon scale and alpha.**
