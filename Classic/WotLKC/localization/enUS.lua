@@ -73,6 +73,7 @@ L["handler_context_menu_hide_node"] = "Hide this node"
 
 L["handler_tooltip_data"] = "RETRIEVING DATA..."
 L["handler_tooltip_quest"] = "Unlocked with quest"
+L["handler_tooltip_rep"] = "Requires reputation with"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------

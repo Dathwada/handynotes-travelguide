@@ -73,6 +73,7 @@ L["handler_context_menu_hide_node"] = "Verstecke diesen Punkt"
 
 L["handler_tooltip_data"] = "DATEN ABRUFEN..."
 L["handler_tooltip_quest"] = "Freigeschaltet mit der Quest"
+L["handler_tooltip_rep"] = "Benötigt Ruf bei"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
