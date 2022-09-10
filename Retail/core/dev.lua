@@ -53,8 +53,7 @@ local function devmode()
 
     SLASH_TG1 = "/tg"
     SlashCmdList["TG"] = function(msg)
-        InterfaceOptionsFrame_Show()
-        InterfaceOptionsFrame_OpenToCategory('HandyNotes')
+        Settings.OpenToCategory('HandyNotes')
         LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', 'TravelGuide')
     end
 
