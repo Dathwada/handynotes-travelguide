@@ -243,7 +243,7 @@ L["Portal to Darnassus"] = true
 
 L["Boat to Ratchet"] = true
 
-L["Boat to Theramore"] = true
+L["Boat to Theramore Isle"] = true
 
 L["Portal to Caverns of Time"] = true
 

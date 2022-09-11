@@ -241,7 +241,7 @@ L["Portal to Darnassus"] = "通往达纳苏斯"
 
 L["Boat to Ratchet"] = "前往棘齿城（北贫瘠之地）的船"
 
-L["Boat to Theramore"] = "前往塞拉摩的船"
+L["Boat to Theramore Isle"] = "前往塞拉摩的船"
 
 L["Portal to Caverns of Time"] = "通往时光之穴"
 

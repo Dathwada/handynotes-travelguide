@@ -42,7 +42,7 @@ local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local BtoRatchet = L["Boat to Ratchet"]
 
 local DustwallowMarsh = GetMapNames(1414, 1445)
-local BtoTheramore = L["Boat to Theramore"]
+local BtoTheramore = L["Boat to Theramore Isle"]
 
 local Teldrassil = GetMapNames(1414, 1438)
 local BtoDarnassus = L["Boat to Darnassus"]

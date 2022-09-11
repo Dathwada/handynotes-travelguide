@@ -243,7 +243,7 @@ L["Portal to Darnassus"] = "Portal nach Darnassus"
 
 L["Boat to Ratchet"] = "Schiff nach Ratchet"
 
-L["Boat to Theramore"] = "Schiff nach Theramore"
+L["Boat to Theramore Isle"] = "Schiff nach Theramore"
 
 L["Portal to Caverns of Time"] = "Portal zu den Höhlen der Zeit"
 

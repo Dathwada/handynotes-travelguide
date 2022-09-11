@@ -90,7 +90,7 @@ L["Boat to Darnassus"] = true
 
 L["Boat to Ratchet"] = true
 
-L["Boat to Theramore"] = true
+L["Boat to Theramore Isle"] = true
 
 L["Boat to Auberdine"] = true
 
