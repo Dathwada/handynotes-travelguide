@@ -736,7 +736,7 @@ DB.points = {
         },
     [108] = { -- Terokkar Forest
         [30252350] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
-        [30252350] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" }
+        [30252351] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" }
         },
     [103] = { -- Exodar
         [48306290] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
