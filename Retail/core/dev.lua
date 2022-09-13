@@ -60,4 +60,12 @@ local function devmode()
 
 end
 
+function addon:debugmsg(msg)
+
+    if private.global.dev and private.db.show_prints then
+        print("|CFFFF6666TravelGuide: |r"..msg)
+    end
+
+end
+
 private.devmode = devmode

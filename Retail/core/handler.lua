@@ -498,25 +498,19 @@ local frame, events = CreateFrame("Frame"), {};
 function events:ZONE_CHANGED(...)
     addon:Refresh()
 
-    if (private.global.dev and private.db.show_prints) then
-        print("TravelGuide: refreshed after ZONE_CHANGED")
-    end
+    addon:debugmsg("refreshed after ZONE_CHANGED")
 end
 
 function events:ZONE_CHANGED_INDOORS(...)
     addon:Refresh()
 
-    if (private.global.dev and private.db.show_prints) then
-        print("TravelGuide: refreshed after ZONE_CHANGED_INDOORS")
-    end
+    addon:debugmsg("refreshed after ZONE_CHANGED_INDOORS")
 end
 
 function events:QUEST_FINISHED(...)
     addon:Refresh()
 
-    if (private.global.dev and private.db.show_prints) then
-        print("TravelGuide: refreshed after QUEST_FINISHED")
-    end
+    addon:debugmsg("refreshed after QUEST_FINISHED")
 end
 
 frame:SetScript("OnEvent", function(self, event, ...)
