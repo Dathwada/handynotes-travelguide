@@ -898,7 +898,8 @@ DB.points = {
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },
         [46419032] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands}, faction="Alliance" },
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands},
+                                    requirements={multiquest={[3]=47186, [9]=60151}}, faction="Alliance" },
         [22015670] = { icon="aboat", label=BtoBoralus, note=TiragardeSound, faction="Horde" },
         [17592553] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [23805620] = { icon="portal", label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
@@ -911,7 +912,8 @@ DB.points = {
         },
     [37] = { -- Elwynn Forest
         [17804775] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands}, faction="Alliance" },
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands},
+                                    requirements={multiquest={[3]=47186, [9]=60151}}, faction="Alliance" },
         [06003035] = { icon="aboat", label=BtoBoralus, note=TiragardeSound, faction="Horde" },
         [03631530] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [07253035] = { icon="portal", label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
