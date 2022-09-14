@@ -17,7 +17,7 @@ local function GetMapNames(id1, id2)
     end
 end
 
-GetAreaInfo = C_Map.GetAreaInfo
+local GetAreaInfo = C_Map.GetAreaInfo
 
 ----------------------------------------------------------------------------------------------------
 
