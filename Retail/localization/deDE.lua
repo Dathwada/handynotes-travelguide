@@ -54,6 +54,9 @@ L["config_molemachine_desc"] = "Zeigt die Position von Zielen der Maulwurfmaschi
 L["config_note"] = "Notizen"
 L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."
 
+L["config_remove_AreaPois"] = "Entferne Blizzards Knotenpunkte für Reiseziele"
+L["config_remove_AreaPois_desc"] = "Dadurch werden die von Blizzard festgelegten Points of Interest (POIs) für Reiseziele auf der Weltkarte entfernt."
+
 L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
 L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 
@@ -149,6 +152,7 @@ L["Portal to Arathi Highlands"] = "Portal ins Arathihochland"
 L["Portal to Port of Zandalar"] = "Portal zum Hafen von Zandalar"
 L["Portal to Darkshore"] = "Portal zur Dunkelküste"
 L["Portal to Port of Boralus"] = "Portal zum Hafen von Boralus"
+L["Boat to Echo Isles"] = "Schiff zu den Echoinseln"
 
 -----------------------------------------------LEGION-----------------------------------------------
 

@@ -34,6 +34,59 @@ local RetrievindData    = L["handler_tooltip_data"]
 local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
 
+local areaPoisToRemove = {
+    -- Alliance
+    5846, -- Vol'dun
+    5847, -- Nazmir
+    5848, -- Zuldazar
+    5873, -- Dustwallow Marsh, Boat to Menethil Harbor, Wetlands
+    5874, -- Wetlands, Boat to Theramore Isle, Dustwallow Marsh
+    5875, -- Wetlands, Boat to Daggercap Bay, Howling Fjord
+    5876, -- Howling Fjord, Boat to Menethil Harbor, Wetlands
+    5877, -- Borean Tundra, Boat to Stormwind City
+    5878, -- Stormwind, Boat to Valiance Keep, Borean Tundra
+    5879, -- Stormwind, Boat to Boralus Harbor, Tiragarde Sound
+    5880, -- Tiragarde Sound, Boat to Stormwind City
+    5892, -- The Jade Forest, Portal to Stormwind City
+    6014, -- Stormwind Portal Room
+
+    -- Horde
+    5843, -- Drustvar
+    5844, -- Tiragarde Sound
+    5845, -- Stormsong Valley
+    5883, -- Northern Stranglethorn, Zeppelin to Orgrimmar
+    5884, -- Orgrimmar, Zeppelin to Grom'gol, Schlingendorntal
+    5885, -- Orgrimmar, Zeppelin to Warsong Hold, Borean Tundra
+    5886, -- Borean Tundra, Zeppelin to Orgrimmar
+    5887, -- Echo Isles, Boat to Dazar'alor, Zuldazar
+    5888, -- Zuldazar, Boat to Echo Isles, Durotar
+    5890, -- The Jade Forest, Portal to Orgrimmar
+    6015, -- Orgrimmar Portal Room
+    6138, -- Mechagon
+
+    -- Neutral
+    5881, -- The Cape of Stranglethorn, Boat to Ratschet
+    5882 -- Northern Barrens, Boat to Booty Bay
+}
+
+----------------------------------------------------------------------------------------------------
+---------------------------------------------HookScript---------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+-- This will remove specified AreaPois on the WorldMapFrame
+WorldMapFrame:HookScript ("OnUpdate", function(self)
+    if (not private.db.remove_AreaPois) then return end
+    for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
+        for _, poiID in ipairs(areaPoisToRemove) do
+            local poi = C_AreaPoiInfo.GetAreaPOIInfo(WorldMapFrame:GetMapID(), pin.areaPoiID)
+            if (poi.areaPoiID == poiID) then
+                WorldMapFrame:RemovePin(pin)
+                addon:debugmsg("removed AreaPoi "..poiID.." "..poi.name)
+            end
+        end
+    end
+end)
+
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------FUNCTIONS---------------------------------------------
 ----------------------------------------------------------------------------------------------------

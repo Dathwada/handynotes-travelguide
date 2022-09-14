@@ -54,6 +54,9 @@ L["config_molemachine_desc"] = "Show destinations for the Mole Machine."
 L["config_note"] = "Note"
 L["config_note_desc"] = "Show the node's additional notes when it's available."
 
+L["config_remove_AreaPois"] = "Remove Blizzard's POIs for destinations"
+L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POIs) set by Blizzard for destinations on the world map."
+
 L["config_easy_waypoints"] = "Easy Waypoints"
 L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 
@@ -149,6 +152,7 @@ L["Portal to Arathi Highlands"] = true
 L["Portal to Port of Zandalar"] = true
 L["Portal to Darkshore"] = true
 L["Portal to Port of Boralus"] = true
+L["Boat to Echo Isles"] = true
 
 -----------------------------------------------LEGION-----------------------------------------------
 

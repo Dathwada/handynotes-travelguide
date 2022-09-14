@@ -43,6 +43,7 @@ constants.defaults = {
         show_zeppelin = true,
         show_hzeppelin = true,
         show_note = true,
+        remove_AreaPois = true,
         easy_waypoint = true,
         show_animaGateway = true,
         show_teleportPlatform = true,

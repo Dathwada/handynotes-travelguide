@@ -156,6 +156,13 @@ config.options = {
                     name = "",
                     order = 25,
                 },
+                remove_AreaPois = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["config_remove_AreaPois"],
+                    desc = L["config_remove_AreaPois_desc"],
+                    order = 26,
+                },
                 easy_waypoint = {
                     type = "toggle",
                     width = "full",
@@ -168,7 +175,7 @@ config.options = {
                     end,
                     disabled = function() return not IsAddOnLoaded("TomTom") end,
                     desc = L["config_easy_waypoints_desc"],
-                    order = 26,
+                    order = 27,
                 },
                 unhide = {
                     type = "execute",
@@ -182,7 +189,7 @@ config.options = {
                         addon:Refresh()
                         print("TravelGuide: "..L["config_restore_nodes_print"])
                     end,
-                    order = 27,
+                    order = 28,
                 },
             },
             },
