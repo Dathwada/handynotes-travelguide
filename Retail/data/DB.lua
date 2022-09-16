@@ -188,6 +188,7 @@ local Wetlands = GetMapNames(13, 56)
 local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local PtoStranglethornVale = L["Portal to Stranglethorn Vale"]
 local StranglethornVale = GetMapNames(13, 224)
+local StranglethornCape = GetMapNames(13, 210)
 local BtoBootyBay = L["Boat to Booty Bay"]
 local GromgolBaseCamp = GetMapNames(13)..", "..GetAreaInfo(117)
 local Kalimdor = GetMapNames(12)
@@ -783,7 +784,7 @@ DB.points = {
         [58501890] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [94] = { -- Eversong Woods
-        [52803270] = { icon="portal", multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde" }
+        [52803270] = { icon="portal", multilabel={PtoUC, PtoOG}, multinote={Tirisfal, Durotar}, faction="Horde"}
         },
 
 --------------------------------------------------------------------------------------------Vanilla--------------------------------------------------------------------------------------------
@@ -791,7 +792,7 @@ DB.points = {
     [12] = { -- Kalimdor
         [59236650] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [59246651] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
-        [56825425] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
+        [56825425] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
         [43561640] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoSW, PtoExodar}, multinote={ElwynnForest, AzuremystIsle},faction="Alliance" },
         [39401090] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
         [43211616] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoExodar, note=Teldrassil, faction="Horde" },
@@ -895,12 +896,12 @@ DB.points = {
         },
     [199] = { -- Southern Barrens
         [39110930] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
-        [70152440] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
+        [70152440] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
         [96362409] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Horde" },
         [96362408] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Alliance" }
         },
     [10] = { -- Northern Barrens
-        [70417340] = { icon="boat", label=BtoBootyBay },
+        [70417340] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
         [30365394] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} } -- Southern Barrens, The Great Divide
         },
     [210] = { -- Cape of Stranglethorn
