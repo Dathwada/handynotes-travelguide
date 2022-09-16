@@ -59,6 +59,11 @@ L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POI
 
 L["config_easy_waypoints"] = "Easy Waypoints"
 L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
+L["config_easy_waypoints_dropdown"] = "Choose"
+L["config_easy_waypoints_dropdown_desc"] = "Choose how the waypoint should be created."
+L["Blizzard"] = true
+L["TomTom"] = true
+L["Both"] = true
 
 L["config_teleportPlatform"] = "Teleport platforms in Oribos"
 L["config_teleportPlatform_desc"] = "Show the teleport plattform locations in Oribos."
@@ -93,6 +98,7 @@ L["dev_config_show_prints_desc"] = "Show print() messages in the chat window."
 
 L["handler_context_menu_addon_name"] = "HandyNotes: TravelGuide"
 L["handler_context_menu_add_tomtom"] = "Add to TomTom"
+L['handler_context_menu_add_map_pin'] = 'Set map waypoint'
 L["handler_context_menu_hide_node"] = "Hide this node"
 
 --============================================TOOLTIPS============================================--

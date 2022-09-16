@@ -45,6 +45,7 @@ constants.defaults = {
         show_note = true,
         remove_AreaPois = true,
         easy_waypoint = true,
+        easy_waypoint_dropdown = 1,
         show_animaGateway = true,
         show_teleportPlatform = true,
         show_molemachine = true,
