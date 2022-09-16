@@ -392,45 +392,41 @@ do
     local function generateMenu(button, level)
         if (not level) then return end
         if (level == 1) then
-        -- local spacer = {text='', disabled=true, notClickable=true, notCheckable=true}
 
             -- Create the title of the menu
-            info = UIDropDownMenu_CreateInfo()
-            info.isTitle = true
-            info.text = L["handler_context_menu_addon_name"]
-            info.notCheckable = true
-            UIDropDownMenu_AddButton(info, level)
+            UIDropDownMenu_AddButton({
+                isTitle = true,
+                text = L["handler_context_menu_addon_name"],
+                notCheckable = true
+            }, level)
 
-            -- UIDropDownMenu_AddButton(spacer, level)
-
-            if (IsAddOnLoaded("TomTom") and not private.db.easy_waypoint) then
-                -- Waypoint menu item
-                info = UIDropDownMenu_CreateInfo()
-                info.text = L["handler_context_menu_add_tomtom"]
-                info.notCheckable = true
-                info.func = addTomTomWaypoint
-                info.arg1 = currentMapID
-                info.arg2 = currentCoord
-                UIDropDownMenu_AddButton(info, level)
+            -- TomTom waypoint menu item
+            if (IsAddOnLoaded("TomTom")) then
+                UIDropDownMenu_AddButton({
+                    text = L["handler_context_menu_add_tomtom"],
+                    notCheckable = true,
+                    func = addTomTomWaypoint,
+                    arg1 = currentMapID,
+                    arg2 = currentCoord
+                }, level)
             end
 
             -- Hide menu item
-            info = UIDropDownMenu_CreateInfo()
-            info.text         = L["handler_context_menu_hide_node"]
-            info.notCheckable = true
-            info.func         = hideNode
-            info.arg1         = currentMapID
-            info.arg2         = currentCoord
-            UIDropDownMenu_AddButton(info, level)
-
-            -- UIDropDownMenu_AddButton(spacer, level)
+            UIDropDownMenu_AddButton({
+                text         = L["handler_context_menu_hide_node"],
+                notCheckable = true,
+                func         = hideNode,
+                arg1         = currentMapID,
+                arg2         = currentCoord
+            }, level)
 
             -- Close menu item
-            info = UIDropDownMenu_CreateInfo()
-            info.text         = CLOSE
-            info.func         = closeAllDropdowns
-            info.notCheckable = true
-            UIDropDownMenu_AddButton(info, level)
+            UIDropDownMenu_AddButton({
+                text         = CLOSE,
+                func         = closeAllDropdowns,
+                notCheckable = true
+            }, level)
+
         end
     end
 
