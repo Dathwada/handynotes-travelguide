@@ -59,8 +59,8 @@ L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POI
 
 L["config_easy_waypoints"] = "Easy Waypoints"
 L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
-L["config_easy_waypoints_dropdown"] = "Choose"
-L["config_easy_waypoints_dropdown_desc"] = "Choose how the waypoint should be created."
+L["config_waypoint_dropdown"] = "Choose"
+L["config_waypoint_dropdown_desc"] = "Choose how the waypoint should be created."
 L["Blizzard"] = true
 L["TomTom"] = true
 L["Both"] = true

@@ -59,8 +59,8 @@ L["config_remove_AreaPois_desc"] = "Dadurch werden die von Blizzard festgelegten
 
 L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
 L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
-L["config_easy_waypoints_dropdown"] = "Wähle aus"
-L["config_easy_waypoints_dropdown_desc"] = "Wähle aus, wie der Wegpunkt erstellt werden soll."
+L["config_waypoint_dropdown"] = "Wähle aus"
+L["config_waypoint_dropdown_desc"] = "Wähle aus, wie der Wegpunkt erstellt werden soll."
 L["Blizzard"] = true
 L["TomTom"] = true
 L["Both"] = "Beide"
