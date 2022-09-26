@@ -442,6 +442,7 @@ DB.points = {
         },
     [630] = { -- Azsuna
         [46664141] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [80176227] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [46644121] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [82135737] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [47582809] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
@@ -455,6 +456,7 @@ DB.points = {
         [66584793] = { icon="portal", label=PtoStormheim, note=Stormheim }
         },
     [650] = { -- Highmountain
+        [62247129] = { icon="portal", label=PtoDala, note=BrokenIsles },
         [34585114] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, ????
         [46115996] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
         [44667290] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} } -- Highmountain, Neltharion's Vault
@@ -922,9 +924,9 @@ DB.points = {
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh, faction="Horde" },
         [43863354] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, multilabel={PtoHowlingFjord, PtoOG, PtoStranglethornVale, PtoSM, PtoHellfirePeninsula}, multinote={VengeanceLanding, Durotar, GromgolBaseCamp, EversongWoods, Outland}, faction="Horde" },
         [47835898] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
-        [60835906] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={quest=27537}, faction="Alliance" },
+        [60875918] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={quest=27537}, faction="Alliance" },
         [35224839] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=30}, faction="Alliance" },
-        [60105603] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=26798}, faction="Horde" }, --quest=26798,
+        [60115603] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=26798}, faction="Horde" },
         [34394957] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" },
         [57663241] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" },
         [49714419] = { icon="portal", requirements={level=50, warfront=11, timetravel={quest=52781, spell=276950}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
