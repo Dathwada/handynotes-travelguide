@@ -4,7 +4,7 @@
 ## Options
 * **icon scale and alpha.**
 * **toggle visibility of**
-    * ![](https://i.imgur.com/NIUq9ta.png)Portals (only in BCC)
+    * ![](https://i.imgur.com/NIUq9ta.png)Portals (only in WotLKC)
     * ![](https://i.imgur.com/H9wPEeD.png)Boats
     * ![](https://i.imgur.com/vfQqSBK.png)Alliance Boats (If you play Horde, it displays the Alliance boats.)
     * ![](https://i.imgur.com/cWTR8xo.png)Zeppelins
@@ -16,7 +16,7 @@
 
 ## Features
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
-* notes for the zeppelins and boats.
+* notes for the portals, zeppelins and boats.
 
 ## Localization
 * `enUS` - default
