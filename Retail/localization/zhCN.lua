@@ -54,6 +54,11 @@ L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的
 
 L["config_easy_waypoints"] = "简易导航点"
 L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
+L["config_waypoint_dropdown"] = "选择"
+L["config_waypoint_dropdown_desc"] = "选择如何建立导航点"
+L["Blizzard"] = "暴雪原生"
+L["TomTom"] = true
+L["Both"] = "同时显示"
 
 L["config_teleportPlatform"] = "奥利波斯传送平台"
 L["config_teleportPlatform_desc"] = "显示奥利波斯传送平台位置."
