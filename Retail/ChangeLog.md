@@ -1,5 +1,19 @@
 ## Revision History:
 
+#### v2.10.0 (September 29, 2022)
+-------------------------------
+* Added the feature to remove Blizzards AreaPois (on by default)
+    * Added new portals, zeppelins and boats for this.
+* Added an option to create a Blizzard waypoint
+    * Easy waypoints now sets Blizzard waypoints by default.
+    * Please check the options to change it to TomTom (if installed)
+* Added missing requiements for a Portal node in Stormwind City and Elwynn Forest
+* Added missing Portals in Azsuna (only alliance) and Highmountain
+* Fixed a Portal in Terokkar Forest that wasn't shown up
+* Updated the Boat to Booty Bay note
+* Updated some coords
+* Some background changes
+
 #### v2.9.0 (August 17, 2022)
 -------------------------------
 * Added mole machines [Curseforge #48](https://www.curseforge.com/wow/addons/handynotes-travelguide?comment=48)
