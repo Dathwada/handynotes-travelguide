@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2022/06/07
+--  Last update: 2022/10/02
 if L then
 L["config_plugin_name"] = "旅行指南"
 L["config_plugin_desc"] = "在世界地图和小地图上显示传送门、飞艇、港口图标。"
@@ -46,8 +46,8 @@ L["config_zeppelin_horde_desc"] = "显示所有部落飞艇的位置。"
 L["config_tram"] = "矿道地铁"
 L["config_tram_desc"] = "显示暴风城和铁炉堡的矿道地铁位置。"
 
--- L["config_molemachine"] = "Mole Machine"
--- L["config_molemachine_desc"] = "Show destinations for the Mole Machine."
+L["config_molemachine"] = "钻探机[黑铁矮人]"
+L["config_molemachine_desc"] = "显示钻探机[黑铁矮人]目的地。"
 
 L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
@@ -106,7 +106,7 @@ L["handler_tooltip_rep"] = "需要声望"
 L["handler_tooltip_TNTIER"] = "旅行网络的第 %s 层."
 L["handler_tooltip_not_available"] = "当前不可用"
 -- L["currently available"] = "目前可用"
--- L["handler_tooltip_not_discovered"] = "not yet discovered"
+L["handler_tooltip_not_discovered"] = "尚未发现"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -255,5 +255,5 @@ L["Portal to the Sepulcher"] = "墓地"
 
 L["Waygate to Un'Goro Crater"] = "通往安戈洛环形山"
 L["The Masonary"] = "石匠区"
--- L["inside Blackrock Mountain"] = ""
+L["inside Blackrock Mountain"] = "在黑石山内部"
 end
