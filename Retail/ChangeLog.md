@@ -2,7 +2,7 @@
 
 #### v2.10.1 (Oktober 09, 2022)
 -------------------------------
-* Fix poi nil error
+* Fix poi nil error [#12](https://github.com/Dathwada/handynotes-travelguide/issues/12)
 
 #### v2.10.0 (September 29, 2022)
 -------------------------------
