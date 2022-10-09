@@ -80,7 +80,7 @@ WorldMapFrame:HookScript ("OnUpdate", function(self)
     for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
         for _, poiID in ipairs(areaPoisToRemove) do
             local poi = C_AreaPoiInfo.GetAreaPOIInfo(WorldMapFrame:GetMapID(), pin.areaPoiID)
-            if (poi.areaPoiID == poiID) then
+            if (poi ~= nil and poi.areaPoiID == poiID) then
                 WorldMapFrame:RemovePin(pin)
                 addon:debugmsg("removed AreaPoi "..poiID.." "..poi.name)
             end
