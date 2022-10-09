@@ -51,6 +51,7 @@ local areaPoisToRemove = {
     5880, -- Tiragarde Sound, Boat to Stormwind City
     5892, -- The Jade Forest, Portal to Stormwind City
     6014, -- Stormwind Portal Room
+    7340, -- Thaldraszus, Boat to Stormwind
 
     -- Horde
     5843, -- Drustvar
@@ -65,6 +66,8 @@ local areaPoisToRemove = {
     5890, -- The Jade Forest, Portal to Orgrimmar
     6015, -- Orgrimmar Portal Room
     6138, -- Mechagon
+    7339, -- Thaldraszus, Zeppelin to Orgrimmar
+    7341, -- Durotar, Zeppelin to the Waking Shores, Dragon Isles
 
     -- Neutral
     5881, -- The Cape of Stranglethorn, Boat to Ratschet
