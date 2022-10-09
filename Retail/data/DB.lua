@@ -1137,9 +1137,9 @@ DB.points = {
         [88124642] = { icon="molemachine", label=GetAreaInfo(348), requirements={quest=53585, hideQuestName=true} }, -- The Hinterlands, Aerie Peak
         [89916842] = { icon="molemachine", label=GetAreaInfo(1438), requirements={quest=53594, hideQuestName=true} }, -- Blasted Lands, Nethergarde Keep
         [86526116] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} }, -- Black Rock Mountains, The Masonary
-        [18746821] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} }, -- Un'Goro Crater, Fire Plume Ridge
-        [18895454] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
-        [21224631] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
+        [25766821] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} }, -- Un'Goro Crater, Fire Plume Ridge
+        [25915454] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
+        [28254631] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
         [47448610] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true} }, -- Valley of the Four Winds, Stormstout Brewery
         [47757762] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true} }, -- Kun-Lai Summit, One Keg
         [48931729] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} }, -- Dragonblight, Ruby Dragonshrine
