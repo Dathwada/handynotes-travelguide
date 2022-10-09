@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v2.10.1 (Oktober 09, 2022)
+-------------------------------
+* Fix poi nil error
+
 #### v2.10.0 (September 29, 2022)
 -------------------------------
 * Added the feature to remove Blizzards AreaPois (on by default)
