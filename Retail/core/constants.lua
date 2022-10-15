@@ -78,28 +78,12 @@ constants.icongroup = {
     "teleportPlatform"
 }
 
-local left, right, top, bottom = GetObjectIconTextureCoords(4772) --MagePortalAlliance
-local left2, right2, top2, bottom2 = GetObjectIconTextureCoords(4773) --MagePortalHorde
-local MagePortalAlliance = {
-        icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
-        tCoordLeft = left,
-        tCoordRight = right,
-        tCoordTop = top,
-        tCoordBottom = bottom,
-    }
-
 constants.icon = {
-    portal = MagePortalAlliance,
-    orderhall = MagePortalAlliance,
-    petBattlePortal = MagePortalAlliance,
-    ogreWaygate = MagePortalAlliance,
-    MagePortalHorde = {
-        icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
-        tCoordLeft = left2,
-        tCoordRight = right2,
-        tCoordTop = top2,
-        tCoordBottom = bottom2,
-    },
+    portal            = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
+    orderhall         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
+    petBattlePortal   = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
+    portal_red        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_red",
+    ogreWaygate       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
     portal_mixed      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_mixed",
     boat              = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat",
     aboat             = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat_alliance",

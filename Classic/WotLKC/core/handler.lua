@@ -16,7 +16,7 @@ _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
-local MagePortalHorde  = private.constants.icon.MagePortalHorde
+local portal_red  = private.constants.icon.portal_red
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -106,7 +106,7 @@ local GetPointInfo = function(point)
     if (point) then
         local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or UNKNOWN
         if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal") and MagePortalHorde)
+            icon = ((point.icon == "portal") and portal_red)
         else
             icon = SetIcon(point)
         end
