@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.11.0 (Oktober 15, 2022)
+-------------------------------
+* Added Reflective Portals [#13](https://github.com/Dathwada/handynotes-travelguide/issues/13)
+* Added a new icon for Ogre Waygates
+* Updated zhCN by nanjuekaien1 [#11](https://github.com/Dathwada/handynotes-travelguide/pull/11)
+* Background changes
+
 #### v2.10.1 (Oktober 09, 2022)
 -------------------------------
 * Fix poi nil error [#12](https://github.com/Dathwada/handynotes-travelguide/issues/12)
