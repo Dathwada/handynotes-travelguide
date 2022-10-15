@@ -5,6 +5,8 @@
 * **icon scale and alpha.**
 * **toggle visibility of**
     * ![](https://i.imgur.com/NIUq9ta.png) Portals / Order hall portals / Warfront portals
+    * ![](https://i.imgur.com/80SeOfz.png) Ogre Waygates
+    * ![](https://i.imgur.com/5oEGwxx.png) Reflective Portals ([Ever-Shifting Mirror](https://www.wowhead.com/item=129929))
     * ![](https://i.imgur.com/H9wPEeD.png) Boats
     * ![](https://i.imgur.com/vfQqSBK.png) Alliance Boats (If you play Horde, it displays the Alliance boats.)
     * ![](https://i.imgur.com/cWTR8xo.png) Zeppelins
