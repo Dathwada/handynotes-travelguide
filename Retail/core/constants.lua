@@ -100,7 +100,7 @@ constants.icon = {
         tCoordTop = top2,
         tCoordBottom = bottom2,
     },
-    mixedPortal       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_mixed",
+    portal_mixed      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_mixed",
     boat              = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat",
     aboat             = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat_alliance",
     boat_x            = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\boat_grey_x",

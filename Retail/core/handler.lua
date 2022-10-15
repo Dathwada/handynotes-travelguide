@@ -17,7 +17,7 @@ _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
-local MagePortalHorde  = private.constants.icon.MagePortalHorde
+local portal_red  = private.constants.icon.portal_red
 local BoatX            = private.constants.icon.boat_x
 local molemachineX     = private.constants.icon.molemachine_x
 
@@ -199,7 +199,7 @@ local function SetIcon(point)
 end
 
 local function GetIconScale(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" or icon == "ogreWaygate") then
+    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate") then
         return private.db["icon_scale_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_scale_boat"]
@@ -211,7 +211,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "mixedPortal" or icon == "petBattlePortal" or icon == "ogreWaygate") then
+    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate") then
         return private.db["icon_alpha_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_alpha_boat"]
@@ -228,7 +228,7 @@ local GetPointInfo = function(point)
     if (point) then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "mixedPortal" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and MagePortalHorde)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "portal_mixed" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and portal_red)
             or (point.icon == "boat" and BoatX)
             or (point.icon == "molemachine" and molemachineX)
         else
@@ -255,7 +255,7 @@ local function SetTooltip(tooltip, point)
         if (point.note and private.db.show_note) then
             tooltip:AddLine("("..point.note..")")
         end
-        if (point.multilabel and point.icon ~= "mixedPortal") then
+        if (point.multilabel and point.icon ~= "portal_mixed") then
             if (pointreq) then
                 tooltip:AddLine(Prepare(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
             else
@@ -265,7 +265,7 @@ local function SetTooltip(tooltip, point)
         if (point.npc) then
             tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
-        if (point.icon == "mixedPortal") then
+        if (point.icon == "portal_mixed") then
             tooltip:AddDoubleLine(Prepare(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
         if (pointreq) then
@@ -523,7 +523,7 @@ do
             if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
             if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
             if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
-            if (point.icon == "mixedPortal" and not private.db.show_warfront) then return false end
+            if (point.icon == "portal_mixed" and not private.db.show_warfront) then return false end
             if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
             if (point.icon == "ogreWaygate" and not private.db.show_ogreWaygate) then return false end
             if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
