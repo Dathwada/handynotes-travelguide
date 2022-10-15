@@ -74,6 +74,12 @@ config.options = {
                     desc = L["config_ogreWaygate_desc"],
                     order = 12.4,
                 },
+                show_reflectivePortal = {
+                    type = "toggle",
+                    name = L["config_show_reflectivePortal"],
+                    desc = L["config_show_reflectivePortal_desc"],
+                    order = 12.5,
+                },
                 show_boat = {
                     type = "toggle",
                     name = L["config_boat"],

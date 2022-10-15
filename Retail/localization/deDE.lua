@@ -35,6 +35,9 @@ L["config_petbattle_portal_desc"] = "Zeigt die Positionen von Haustierkampfporta
 L["config_ogreWaygate"] = "Ogerportale"
 L["config_ogreWaygate_desc"] = "Zeigt die Positionen von Ogerportalen an."
 
+L["config_show_reflectivePortal"] = "Reflexionsportale"
+L["config_show_reflectivePortal_desc"] = "Zeigt die Positionen von Reflexionsportalen an."
+
 L["config_boat"] = "Schiffe"
 L["config_boat_desc"] = "Zeigt die Positionen von Schiffen an."
 L["config_boat_alliance"] = "Allianz Schiffe"
@@ -109,6 +112,7 @@ L["handler_tooltip_data"] = "DATEN ABRUFEN..."
 L["handler_tooltip_quest"] = "Freigeschaltet mit der Quest"
 L["handler_tooltip_requires_level"] = "Benötigt min. Spielerlevel"
 L["handler_tooltip_rep"] = "Benötigt Ruf bei"
+L["handler_tooltip_toy"] = "Benötigt das Spielzeug"
 L["handler_tooltip_TNTIER"] = "Stufe %s des Reisenetzwerks."
 L["handler_tooltip_not_available"] = "zurzeit NICHT Verfügbar"
 --L["currently available"] = "zurzeit Verfügbar"
@@ -180,6 +184,7 @@ L["Portal to Stormshield"] = "Portal zum Sturmschild"
 L["Portal to Vol'mar"] = "Portal nach Vol'mar"
 L["Portal to Lion's watch"] = "Portal zur Löwenwacht"
 L["Ogre Waygate"] = "Ogerportal"
+L["Reflective Portal"] = "Reflexionsportal"
 
 -------------------------------------------------MoP------------------------------------------------
 

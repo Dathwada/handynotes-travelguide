@@ -17,7 +17,7 @@ _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
-local portal_red  = private.constants.icon.portal_red
+local portal_red       = private.constants.icon.portal_red
 local BoatX            = private.constants.icon.boat_x
 local molemachineX     = private.constants.icon.molemachine_x
 
@@ -31,6 +31,7 @@ local notavailable      = L["handler_tooltip_not_available"]
 local RequiresPlayerLvl = L["handler_tooltip_requires_level"]
 local RequiresQuest     = L["handler_tooltip_quest"]
 local RequiresRep       = L["handler_tooltip_rep"]
+local RequiresToy       = L["handler_tooltip_toy"]
 local RetrievindData    = L["handler_tooltip_data"]
 local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
@@ -118,6 +119,7 @@ local function ReqFulfilled(req, ...)
     or (req.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
     or (req.warfront and GetWarfrontState(req.warfront) ~= select(1, UnitFactionGroup("player")))
     or (req.spell and not IsSpellKnown(req.spell))
+    or (req.toy and not PlayerHasToy(req.toy))
     then
         return false
     end
@@ -134,6 +136,10 @@ local function ReqFulfilled(req, ...)
     end
 
 	return true
+end
+
+local function RefreshAfter(time)
+    C_Timer.After(time, function() addon:Refresh() end)
 end
 
 -- workaround to prepare the multilabels with and without notes
@@ -173,7 +179,7 @@ local function Prepare(label, note, level, quest)
                 QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
             else
                 QUEST = "\n    |cFFFF00FF"..RetrievindData.."|r" -- pink
-                C_Timer.After(1, function() addon:Refresh() end) -- Refresh
+                RefreshAfter(1) -- Refresh
             end
         else
             QUEST = ''
@@ -199,7 +205,7 @@ local function SetIcon(point)
 end
 
 local function GetIconScale(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate") then
+    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
         return private.db["icon_scale_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_scale_boat"]
@@ -211,7 +217,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate") then
+    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
         return private.db["icon_alpha_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return private.db["icon_alpha_boat"]
@@ -228,7 +234,7 @@ local GetPointInfo = function(point)
     if (point) then
         local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
         if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "portal_mixed" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate") and portal_red)
+            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "portal_mixed" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate" or point.icon == "portal_purple") and portal_red)
             or (point.icon == "boat" and BoatX)
             or (point.icon == "molemachine" and molemachineX)
         else
@@ -281,15 +287,14 @@ local function SetTooltip(tooltip, point)
                         tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
                     else
                         tooltip:AddLine(RetrievindData,1,0,1) -- pink
-                        C_Timer.After(1, function() addon:Refresh() end) -- Refresh
-                        -- print("refreshed")
+                        RefreshAfter(1) -- Refresh
                     end
                 elseif (pointreq.item) then -- OgreWaygate
-                    local name = C_Item.GetItemNameByID(pointreq.item[1]) or "UNKNOWN"
+                    local name = C_Item.GetItemNameByID(pointreq.item[1]) or RetrievindData
                     local quantity = pointreq.item[2]
-                    if (name == "UNKNOWN") then
-                        C_Timer.After(1, function() addon:Refresh() end) -- Refresh
-                    end
+
+                    if (name == RetrievindData) then RefreshAfter(1) end
+
                     tooltip:AddLine(requires..': '..quantity..'x '..name, 1) -- red
                 elseif (point.icon == "molemachine") then
                     tooltip:AddLine(L["handler_tooltip_not_discovered"], 1) -- red
@@ -317,6 +322,16 @@ local function SetTooltip(tooltip, point)
                 local isKnown = IsSpellKnown(pointreq.spell)
                 if (spellName and not isKnown) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- red
+                end
+            end
+            if (pointreq.toy) then
+                local toyName = GetItemInfo(pointreq.toy) or RetrievindData
+                local isKnown = PlayerHasToy(pointreq.toy)
+
+                if (toyName == RetrievindData) then RefreshAfter(1) end
+
+                if (not isKnown) then
+                    tooltip:AddLine(RequiresToy..': '..toyName, 1) -- red
                 end
             end
             if (point.covenant and pointreq.sanctumtalent) then
@@ -526,6 +541,7 @@ do
             if (point.icon == "portal_mixed" and not private.db.show_warfront) then return false end
             if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
             if (point.icon == "ogreWaygate" and not private.db.show_ogreWaygate) then return false end
+            if (point.icon == "portal_purple" and not private.db.show_reflectivePortal) then return false end
             if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
             if (point.icon == "tram" and not private.db.show_tram) then return false end
             if (point.icon == "boat" and not private.db.show_boat) then return false end

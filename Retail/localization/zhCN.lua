@@ -33,6 +33,9 @@ L["config_petbattle_portal_desc"] = "显示宠物对战传送门"
 L["config_ogreWaygate"] = "食人魔传送门"
 L["config_ogreWaygate_desc"] = "显示食人魔传送门"
 
+-- L["config_show_reflectivePortal"] = ""
+-- L["config_show_reflectivePortal_desc"] = ""
+
 L["config_boat"] = "船"
 L["config_boat_desc"] = "显示船的位置。"
 L["config_boat_alliance"] = "船-联盟"
@@ -103,6 +106,7 @@ L["handler_tooltip_data"] = "接收数据中..."
 L["handler_tooltip_quest"] = "需要解锁任务"
 L["handler_tooltip_requires_level"] = "需要玩家等级"
 L["handler_tooltip_rep"] = "需要声望"
+-- L["handler_tooltip_toy"] = ""
 L["handler_tooltip_TNTIER"] = "旅行网络的第 %s 层."
 L["handler_tooltip_not_available"] = "当前不可用"
 -- L["currently available"] = "目前可用"
@@ -173,6 +177,7 @@ L["Portal to Stormshield"] = "通往暴风之盾"
 L["Portal to Vol'mar"] = "通往沃马尔"
 L["Portal to Lion's watch"] = "通往雄狮岗哨"
 L["Ogre Waygate"] = "食人魔传送门"
+-- L["Reflective Portal"] = ""
 
 -------------------------------------------------MoP------------------------------------------------
 

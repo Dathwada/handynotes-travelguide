@@ -9,12 +9,12 @@ local L = private.locale
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function GetMapNames(id1, id2)
-    if (id1 and id2) then
-        return format("%s, %s", C_Map.GetMapInfo(id1).name, C_Map.GetMapInfo(id2).name)
-    else
-        return C_Map.GetMapInfo(id1).name
-    end
+local function GetMapNames(id1, id2, id3)
+    local name1 = id1 and C_Map.GetMapInfo(id1).name or ''
+    local name2 = id2 and ", " .. C_Map.GetMapInfo(id2).name or ''
+    local name3 = id3 and ", " .. C_Map.GetAreaInfo(id3) or ''
+
+    return format("%s%s%s", name1, name2, name3)
 end
 
 local GetAreaInfo = C_Map.GetAreaInfo
@@ -101,6 +101,7 @@ local PtoVolmar = L["Portal to Vol'mar"]
 local Ashran = GetMapNames(572, 588)
 local TanaanJungle = GetMapNames(572, 534)
 local OgreWaygate = L["Ogre Waygate"]
+local ReflectivePortal = L["Reflective Portal"]
 
 -------------------------------------------------MoP------------------------------------------------
 
@@ -132,16 +133,16 @@ local PtotPurpleParlor = L["Portal to the Purple Parlor"]
 local BoreanTundra = GetMapNames(113, 114)
 local ZtoBoreanTundra = L["Zeppelin to Borean Tundra"]
 local BtoBoreanTundra = L["Boat to Borean Tundra"]
-local WarsongHold = GetMapNames(113)..", "..GetAreaInfo(4129)
-local ValianceKeep = GetMapNames(113)..", "..GetAreaInfo(4032)
+local WarsongHold = GetMapNames(113, nil, 4129)
+local ValianceKeep = GetMapNames(113, nil, 4032)
 local BtoUnuPe = L["Boat to Unu'Pe"]
 local Dragonblight = GetMapNames(113, 115)
 local BtoMoaKiHarbor = L["Boat to Moa'Ki Harbor"]
 local HowlingFjord = GetMapNames(113, 117)
 local PtoHowlingFjord = L["Portal to Howling Fjord"]
-local VengeanceLanding = GetMapNames(113)..", "..GetAreaInfo(4000)
+local VengeanceLanding = GetMapNames(113, nil, 4000)
 local BtoHowlingFjord = L["Boat to Howling Fjord"]
-local Valgarde = GetMapNames(113)..", "..GetAreaInfo(3981)
+local Valgarde = GetMapNames(113, nil, 3981)
 local BtoKamagua = L["Boat to Kamagua"]
 local Northrend = GetMapNames(113)
 local WtoSholazarBasin = L["Waygate to Sholazar Basin"]
@@ -190,7 +191,7 @@ local PtoStranglethornVale = L["Portal to Stranglethorn Vale"]
 local StranglethornVale = GetMapNames(13, 224)
 local StranglethornCape = GetMapNames(13, 210)
 local BtoBootyBay = L["Boat to Booty Bay"]
-local GromgolBaseCamp = GetMapNames(13)..", "..GetAreaInfo(117)
+local GromgolBaseCamp = GetMapNames(13, nil, 117)
 local Kalimdor = GetMapNames(12)
 local DustwallowMarsh = GetMapNames(12, 70)
 local BtoTheramore = L["Boat to Theramore Isle"]
@@ -557,7 +558,22 @@ DB.points = {
         [47817847] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Spires of Arak
         [42635724] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Talador
         [48352451] = { icon="molemachine", label=GetAreaInfo(6967), requirements={quest=53588, hideQuestName=true} }, -- Gorgrond, Blackrock Foundry Overlook
-        [29324342] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true} } -- Nagrand, Elemental Plateau
+        [29324342] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true} }, -- Nagrand, Elemental Plateau
+        [26703144] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [30923558] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [53396476] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 104, 3743), requirements={toy=129929} }, -- Legion Hold
+        [61557054] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 104), requirements={toy=129929} }, -- near The Black Temple
+        [49333706] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3833), requirements={toy=129929} }, -- Razor Ridge
+        [49842188] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3618), requirements={toy=129929} }, -- Gruul's Lair
+        [25475564] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 107), requirements={toy=129929} }, -- near Oshu'gun
+        [30734684] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 107, 3615), requirements={toy=129929} }, -- Throne of the Elements
+        [33184361] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 102, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
+        [34944706] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 102), requirements={toy=129929} }, --
+        [45896803] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108, 3679), requirements={toy=129929} }, -- Skettis
+        [57774641] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 100, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
+        [62564729] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 100, 3706), requirements={toy=129929} }, -- The Path of Glory (near The Dark Portal)
+        [41415385] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108), requirements={toy=129929} }, -- near Shattrath
+        [43366574] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108, 3697), requirements={toy=129929} } -- The Bone Wastes
         },
     [588] = { -- Ashran
         [43921380] = { icon="portal", multilabel={PtoOG, PtoVolmar}, multinote={Durotar, TanaanJungle}, requirements={multiquest={[2]=37935}}, faction="Horde" },
@@ -568,19 +584,25 @@ DB.points = {
         },
     [525] = { -- Frostfire Ridge
         [51496593] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=36614}, faction="Horde" },
-        [59544752] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} } -- 36843203
+        [59544752] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 36843203
+        [21814531] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [37536071] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3824), requirements={toy=129929} } -- Bloodmaul Ravine
         },
     [582] = { -- Lunarfall (Garrison)
         [70102750] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" }
         },
     [539] = { -- Shadowmoon Valley
         [32871553] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=36615}, faction="Alliance" },
-        [50463569] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} } -- 58736681
+        [50463569] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58736681
+        [32332876] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 104, 3743), requirements={toy=129929} }, -- Legion Hold
+        [60024837] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 104), requirements={toy=129929} } -- near The Black Temple
         },
     [534] = { -- Tanaan Jungle
         [61004734] = { icon="portal", label=PtoWarspear, note=Ashran, requirements={quest=37935}, faction="Horde" },
         [57446050] = { icon="portal", label=PtoStormshield, note=Ashran, requirements={quest=38445}, faction="Alliance" },
-        [53495838] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} } -- 58684818
+        [53495838] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58684818
+        [49565073] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 100, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
+        [70305453] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 100, 3706), requirements={toy=129929} } -- The Path of Glory (near The Dark Portal)
         },
     [624] = { -- Warspear (Ashran)
         [60705160] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
@@ -592,17 +614,26 @@ DB.points = {
         },
     [543] = { -- Gorgrond
         [58033443] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36886, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 52432296
-        [46683876] = { icon="molemachine", label=GetAreaInfo(6967), requirements={quest=53588, hideQuestName=true} } -- Gorgrond, Blackrock Foundry Overlook
+        [46683876] = { icon="molemachine", label=GetAreaInfo(6967), requirements={quest=53588, hideQuestName=true} }, -- Gorgrond, Blackrock Foundry Overlook
+        [49417366] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3833), requirements={toy=129929} }, -- Razor Ridge
+        [50823143] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 105, 3618), requirements={toy=129929} } -- Gruul's Lair
         },
     [550] = { -- Nagrand
         [32164623] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36906, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 20935290
-        [65750825] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true} } -- Nagrand, Elemental Plateau
+        [65750825] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true} }, -- Nagrand, Elemental Plateau
+        [50355721] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 107), requirements={toy=129929} }, -- near Oshu'gun
+        [71412194] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 107, 3615), requirements={toy=129929} }, -- Throne of the Elements
+        [81240898] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 102, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
+        [88302284] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 102), requirements={toy=129929} } --
         },
     [542] = { -- Spires of Arak
-        [54625163] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} } -- 47817847
+        [54625163] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 47817847
+        [47391245] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108, 3679), requirements={toy=129929} } -- Skettis
         },
     [535] = { -- Talador
-        [55074812] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} } -- 42635724
+        [55074812] = { icon="ogreWaygate", label=OgreWaygate, requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 42635724
+        [50413519] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108) }, -- near Shattrath
+        [57858053] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(101, 108, 3697), requirements={toy=129929} } -- The Bone Wastes
         },
 
 ----------------------------------------------------------------------------------------------MoP----------------------------------------------------------------------------------------------
@@ -747,7 +778,9 @@ DB.points = {
     [100] = { -- Hellfire Peninsula
         [89225101] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [89234946] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [53156489] = { icon="molemachine", label=GetAreaInfo(3538), requirements={quest=53592, hideQuestName=true} } -- Hellfire Peninsula, Honor Hold
+        [53156489] = { icon="molemachine", label=GetAreaInfo(3538), requirements={quest=53592, hideQuestName=true} }, -- Hellfire Peninsula, Honor Hold
+        [54974890] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 534, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
+        [80385160] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 534, 7037), requirements={toy=129929} } -- near The Dark Portal
         },
     [111] = { -- Shattrath City
         [57224827] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -762,20 +795,52 @@ DB.points = {
         [69075190] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [66217784] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true} }, -- Shadowmoon Valley, Fel Pits
         [58415647] = { icon="molemachine", label=GetAreaInfo(3538), requirements={quest=53592, hideQuestName=true} }, -- Hellfire Peninsula, Honor Hold
-        [46251761] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true} } -- Blade's Edge Mountains, Skald
+        [46251761] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true} }, -- Blade's Edge Mountains, Skald
+        [36073617] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 525, 7062), requirements={toy=129929} }, -- The Burning Glacier
+        [38173202] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 525, 6905), requirements={toy=129929} }, -- Gormaul Tower
+        [44322031] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 543, 6892), requirements={toy=129929} }, -- The Pit
+        [42123440] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 543, 6935), requirements={toy=129929} }, -- Razorbloom
+        [34314931] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7255), requirements={toy=129929} }, -- Zangar Sea
+        [39795884] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7385), requirements={toy=129929} }, -- Zangar Shore
+        [28516832] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7151), requirements={toy=129929} }, -- Spirit Woods
+        [34555772] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7280), requirements={toy=129929} }, -- Throne of the Elements
+        [44756245] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
+        [47887328] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 6918), requirements={toy=129929} }, -- Deathweb Hollow
+        [55738205] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7031), requirements={toy=129929} }, -- Skettis
+        [58757723] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 539, 6922), requirements={toy=129929} }, -- Moonflower Valley
+        [69598124] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 539, 6931), requirements={toy=129929} }, -- Path of the Light
+        [58945174] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 534, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
+        [66465254] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 534, 7037), requirements={toy=129929} } -- near The Dark Portal
+        },
+    [102] = { -- Zangarmarsh
+        [49195537] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7255), requirements={toy=129929} }, -- Zangar Sea
+        [68208846] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7385), requirements={toy=129929} } -- Zangar Shore
+        },
+     [107] = { -- Nagrand
+        [41275904] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7151), requirements={toy=129929} }, -- Spirit Woods
+        [60362556] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7280), requirements={toy=129929} } -- Throne of the Elements
         },
     [108] = { -- Terokkar Forest
         [30252350] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
-        [30252351] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" }
+        [30252351] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [35271251] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
+        [45374753] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 6918), requirements={toy=129929} }, -- Deathweb Hollow
+        [70787588] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7031), requirements={toy=129929} } -- Skettis
         },
     [103] = { -- Exodar
         [48306290] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [104] = { -- Shadowmoon Valley
-        [50773530] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true} } -- Shadowmoon Valley, Fel Pits
+        [50773530] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true} }, -- Shadowmoon Valley, Fel Pits
+        [27103336] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 539, 6922), requirements={toy=129929} }, -- Moonflower Valley
+        [61534607] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 539, 6931), requirements={toy=129929} } -- Path of the Light
         },
     [105] = { -- Blade's Edge Mountains
-        [72421764] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true} } -- Blade's Edge Mountains, Skald
+        [72421764] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true} }, -- Blade's Edge Mountains, Skald
+        [39637739] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 525, 7062), requirements={toy=129929} }, -- The Burning Glacier
+        [46406404] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 525, 6905), requirements={toy=129929} }, -- Gormaul Tower
+        [66192633] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 543, 6892), requirements={toy=129929} }, -- The Pit
+        [59117169] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 543, 6935), requirements={toy=129929} } -- Razorbloom
         },
     [97] = { -- Azuremyst Isle
         [20335407] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoDarnassus, note=Teldrassil },

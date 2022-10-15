@@ -35,6 +35,9 @@ L["config_petbattle_portal_desc"] = "Show the Petbattle portal locations."
 L["config_ogreWaygate"] = "Ogre Waygate"
 L["config_ogreWaygate_desc"] = "Show the Ogre Waygat portal locations."
 
+L["config_show_reflectivePortal"] = "Reflective Portal"
+L["config_show_reflectivePortal_desc"] = "Show the Reflective Portal locations."
+
 L["config_boat"] = "Boat"
 L["config_boat_desc"] = "Show the boat locations."
 L["config_boat_alliance"] = "Alliance Boat"
@@ -108,6 +111,7 @@ L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
 L["handler_tooltip_data"] = "RETRIEVING DATA..."
 L["handler_tooltip_quest"] = "Unlocked with quest"
 L["handler_tooltip_rep"] = "Requires reputation with"
+L["handler_tooltip_toy"] = "Requires the toy"
 L["handler_tooltip_requires_level"] = "Requires at least player level"
 L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
 L["handler_tooltip_not_available"] = "currently NOT available"
@@ -180,6 +184,7 @@ L["Portal to Stormshield"] = true
 L["Portal to Vol'mar"] = true
 L["Portal to Lion's watch"] = true
 L["Ogre Waygate"] = true
+L["Reflective Portal"] = true
 
 -------------------------------------------------MoP------------------------------------------------
 
