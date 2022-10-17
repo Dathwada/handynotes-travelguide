@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2022/10/02
+--  Last update: 2022/10/17
 if L then
 L["config_plugin_name"] = "旅行指南"
 L["config_plugin_desc"] = "在世界地图和小地图上显示传送门、飞艇、港口图标。"
@@ -19,22 +19,22 @@ L["config_what_to_display"] = "显示什么？"
 L["config_what_to_display_desc"] = "在这里设置显示哪些类型的图标。"
 
 L["config_portal"] = "传送门"
-L["config_portal_desc"] = "显示传送门位置。"
+L["config_portal_desc"] = "显示传送门的位置。"
 
 L["config_order_hall_portal"] = "职业大厅"
-L["config_order_hall_portal_desc"] = "显示职业大厅传送门。"
+L["config_order_hall_portal_desc"] = "显示职业大厅传送门的位置。"
 
 L["config_warfront_portal"] = "战争前线传送门"
-L["config_warfront_portal_desc"] = "显示战争前线传送门。"
+L["config_warfront_portal_desc"] = "显示战争前线传送门的位置。"
 
 L["config_petbattle_portal"] = "宠物对战传送门"
-L["config_petbattle_portal_desc"] = "显示宠物对战传送门"
+L["config_petbattle_portal_desc"] = "显示宠物对战传送门的位置。"
 
 L["config_ogreWaygate"] = "食人魔传送门"
-L["config_ogreWaygate_desc"] = "显示食人魔传送门"
+L["config_ogreWaygate_desc"] = "显示食人魔传送门的位置。"
 
--- L["config_show_reflectivePortal"] = ""
--- L["config_show_reflectivePortal_desc"] = ""
+L["config_show_reflectivePortal"] = "隐形传送门"
+L["config_show_reflectivePortal_desc"] = "显示隐形传送门的位置。"
 
 L["config_boat"] = "船"
 L["config_boat_desc"] = "显示船的位置。"
@@ -55,6 +55,9 @@ L["config_molemachine_desc"] = "显示钻探机[黑铁矮人]目的地。"
 L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
 
+L["config_remove_AreaPois"] = "删除暴雪在地图上的标注"
+L["config_remove_AreaPois_desc"] = "这将删除暴雪在世界地图上为目的地设置的标注点（POI）。"
+
 L["config_easy_waypoints"] = "简易导航点"
 L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
 L["config_waypoint_dropdown"] = "选择"
@@ -67,7 +70,7 @@ L["config_teleportPlatform"] = "奥利波斯传送平台"
 L["config_teleportPlatform_desc"] = "显示奥利波斯传送平台位置."
 
 L["config_animaGateway"] = "显示心能传送门"
-L["config_animaGateway_desc"] = "显示心能传送门位置。."
+L["config_animaGateway_desc"] = "显示心能传送门位置。"
 
 L["config_others"] = "其它"
 L["config_others_desc"] = "显示所有其它POI。"
@@ -106,7 +109,7 @@ L["handler_tooltip_data"] = "接收数据中..."
 L["handler_tooltip_quest"] = "需要解锁任务"
 L["handler_tooltip_requires_level"] = "需要玩家等级"
 L["handler_tooltip_rep"] = "需要声望"
--- L["handler_tooltip_toy"] = ""
+L["handler_tooltip_toy"] = "需要玩具"
 L["handler_tooltip_TNTIER"] = "旅行网络的第 %s 层."
 L["handler_tooltip_not_available"] = "当前不可用"
 -- L["currently available"] = "目前可用"
@@ -177,7 +180,7 @@ L["Portal to Stormshield"] = "通往暴风之盾"
 L["Portal to Vol'mar"] = "通往沃马尔"
 L["Portal to Lion's watch"] = "通往雄狮岗哨"
 L["Ogre Waygate"] = "食人魔传送门"
--- L["Reflective Portal"] = ""
+L["Reflective Portal"] = "隐形传送门"
 
 -------------------------------------------------MoP------------------------------------------------
 
