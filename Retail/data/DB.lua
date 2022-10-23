@@ -84,6 +84,13 @@ local PtoSuramar = L["Portal to Suramar"]
 local PtoHighmountain = L["Portal to Highmountain"]
 local GEtoTrueshotLodge = L["Great Eagle to Trueshot Lodge"]
 local JtoSkyhold = L["Jump to Skyhold"]
+local PtoDuskwood = L["Portal to Duskwood"]
+local PtoFeralas = L["Portal to Feralas"]
+local PtoGrizzlyHills = L["Portal to Grizzly Hills"]
+local PtoHinterlands = L["Portal to Hinterlands"]
+local PtoMoonglade = L["Portal to Moonglade"]
+local PtoMountHyjal = L["Portal to Mount Hyjal"]
+local PtoDreamgrove = L["Portal to Dreamgrove"]
 local dalaran = GetMapNames(627)
 local azsuna = GetMapNames(630)
 local valsharah = GetMapNames(641)
@@ -91,6 +98,7 @@ local suramar = GetMapNames(680)
 local highmountain = GetMapNames(650)
 local stormheim = GetMapNames(634)
 local brokenshore = GetMapNames(646)
+local valsharahBrokenIsles = GetMapNames(641, 619)
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -501,6 +509,15 @@ DB.points = {
         [56604310] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DRUID" },
         [55502200] = { icon="orderhall", label=PtoEmeraldDreamway, class="DRUID" }
         },
+    [715] = { -- Emerald Dreamway *DRUID*
+        [39656996] = { icon="orderhall", label=PtoDuskwood, note=EasternKingdoms, class="DRUID" },
+        [22553925] = { icon="orderhall", label=PtoFeralas, note=Kalimdor, class="DRUID" },
+        [31742466] = { icon="orderhall", label=PtoGrizzlyHills, note=Northrend, class="DRUID" },
+        [49086355] = { icon="orderhall", label=PtoHinterlands, note=EasternKingdoms, class="DRUID" },
+        [26038178] = { icon="orderhall", label=PtoMoonglade, note=Kalimdor, class="DRUID" },
+        [53015168] = { icon="orderhall", label=PtoMountHyjal, note=Kalimdor, class="DRUID" },
+        [44802362] = { icon="orderhall", label=PtoDreamgrove, class="DRUID" }
+	    },
     [648] = { -- Acherus: The Ebon Hold - Hall of Command *DEATHKNIGHT*
         [24703370] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" }
         },
@@ -692,6 +709,7 @@ DB.points = {
     [198] = { -- Mount Hyjal
         [62602310] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [63492444] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [59072614] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [57187711] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} } -- Mount Hyjal, Throne of Flame
         },
     [207] = { -- Deepholm
@@ -742,6 +760,7 @@ DB.points = {
         [17556489] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [84057266] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" },
         [24364962] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} },
+        [71825238] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [46065889] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} }, -- Dragonblight, Ruby Dragonshrine
         [48541958] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} } -- Icecrown, Argent Tournament Grounds
         },
@@ -756,6 +775,9 @@ DB.points = {
         [59946948] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         [41255344] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [41255345] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
+        },
+    [116] = { -- Grizzly Hills
+        [50362937] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         },
     [117] = { -- Howling Fjord
         [23295769] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
@@ -881,6 +903,9 @@ DB.points = {
         [46612303] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
         [46302282] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
         [50007527] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
+        [41286163] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [54451934] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [55612788] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [50248010] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} }, -- Un'Goro Crater, Fire Plume Ridge
         [50565121] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
         [55493381] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
@@ -961,6 +986,12 @@ DB.points = {
         [50520774] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
         [52885576] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} } -- Un'Goro Crater, Fire Plume Ridge
         },
+    [69] = { -- Feralas
+        [51291076] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        },
+    [80] = { -- Moonglade
+        [67585994] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        },
     [199] = { -- Southern Barrens
         [39110930] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
         [70152440] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
@@ -998,6 +1029,8 @@ DB.points = {
         [49244725] = { icon="portal", requirements={level=50, warfront=11, timetravel={quest=52781, spell=276950}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
         [41003949] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", requirements={quest=27478} },
         [43674008] = { icon="portal", label=PtoSepulcher, note=SilverpineForest, faction="Horde", requirements={quest=27478} },
+        [45647930] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [54353789] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [43077220] = { icon="molemachine", label=GetAreaInfo(6816) }, -- Stormwind
         [46726015] = { icon="molemachine", label=GetAreaInfo(1537) }, -- Ironforge
         [49754018] = { icon="molemachine", label=GetAreaInfo(348), requirements={quest=53585, hideQuestName=true} }, -- The Hinterlands, Aerie Peak
@@ -1080,7 +1113,11 @@ DB.points = {
         [61971280] = { icon="molemachine", label=GetAreaInfo(1438), requirements={quest=53594, hideQuestName=true} } -- Blasted Lands, Nethergarde Keep
         },
     [26] = { -- The Hinterlands
+        [62322271] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [13534680] = { icon="molemachine", label=GetAreaInfo(348), requirements={quest=53585, hideQuestName=true} } -- The Hinterlands, Aerie Peak
+        },
+    [47] = { -- Duskwood
+        [46573587] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         },
     [32] = { -- Searing Gorge
         [25017479] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} } -- Black Rock Mountains, The Masonary
