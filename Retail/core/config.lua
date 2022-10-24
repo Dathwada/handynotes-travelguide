@@ -171,7 +171,7 @@ config.options = {
                 },
                 easy_waypoint = {
                     type = "toggle",
-                    width = 1.3,
+                    width = 1.67,
                     name = L["config_easy_waypoints"],
                     desc = L["config_easy_waypoints_desc"],
                     order = 27,
@@ -184,7 +184,7 @@ config.options = {
                     name = L["config_waypoint_dropdown"],
                     desc = L["config_waypoint_dropdown_desc"],
                     width = 0.7,
-                    order = 28,
+                    order = 27.1,
                 },
                 unhide = {
                     type = "execute",
@@ -198,7 +198,7 @@ config.options = {
                         addon:Refresh()
                         print("TravelGuide: "..L["config_restore_nodes_print"])
                     end,
-                    order = 29,
+                    order = 28,
                 },
             },
             },
@@ -231,7 +231,7 @@ for i, icongroup in ipairs(private.constants.icongroup) do
         desc = L["config_icon_scale_desc"],
         min = 0.25, max = 3, step = 0.01,
         arg = "icon_scale_"..icongroup,
-        width = 1.07,
+        width = 1.19,
         order = i *10 + 1,
     }
 
@@ -241,7 +241,7 @@ for i, icongroup in ipairs(private.constants.icongroup) do
         desc = L["config_icon_alpha_desc"],
         min = 0, max = 1, step = 0.01,
         arg = "icon_alpha_"..icongroup,
-        width = 1.07,
+        width = 1.19,
         order = i *10 + 2,
     }
 end
