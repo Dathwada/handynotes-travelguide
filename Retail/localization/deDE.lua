@@ -176,6 +176,12 @@ L["Portal to Suramar"] = "Portal nach Suramar"
 L["Portal to Highmountain"] = "Portal zum Hochberg"
 L["Great Eagle to Trueshot Lodge"] = "Großer Adler zur Volltrefferhütte"
 L["Jump to Skyhold"] = "Zur Himmelfeste springen"
+L["Portal to Duskwood"] = "Portal in den Dämmerwald"
+L["Portal to Feralas"] = "Portal nach Feralas"
+L["Portal to Grizzly Hills"] = "Portal zu den Grizzly Hügeln"
+L["Portal to Hinterlands"] = "Portal ins Hinterland"
+L["Portal to Moonglade"] = "Portal zur Mondlichtung"
+L["Portal to Dreamgrove"] = "Portal zum Hain der Träume"
 
 -------------------------------------------------WoD------------------------------------------------
 

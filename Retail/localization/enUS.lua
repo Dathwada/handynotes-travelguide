@@ -176,6 +176,12 @@ L["Portal to Suramar"] = true
 L["Portal to Highmountain"] = true
 L["Great Eagle to Trueshot Lodge"] = true
 L["Jump to Skyhold"] = true
+L["Portal to Duskwood"] = true
+L["Portal to Feralas"] = true
+L["Portal to Grizzly Hills"] = true
+L["Portal to Hinterlands"] = true
+L["Portal to Moonglade"] = true
+L["Portal to Dreamgrove"] = true
 
 -------------------------------------------------WoD------------------------------------------------
 

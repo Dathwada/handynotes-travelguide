@@ -172,6 +172,12 @@ L["Portal to Suramar"] = "通往苏拉玛"
 L["Portal to Highmountain"] = "通往至高岭"
 L["Great Eagle to Trueshot Lodge"] = "前往神射手营地的巨鹰"
 L["Jump to Skyhold"] = "前往苍穹要塞，跳！"
+-- L["Portal to Duskwood"] = ""
+-- L["Portal to Feralas"] = ""
+-- L["Portal to Grizzly Hills"] = ""
+-- L["Portal to Hinterlands"] = ""
+-- L["Portal to Moonglade"] = ""
+-- L["Portal to Dreamgrove"] = ""
 
 -------------------------------------------------WoD------------------------------------------------
 
