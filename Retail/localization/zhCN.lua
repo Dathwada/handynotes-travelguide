@@ -99,6 +99,7 @@ L["dev_config_show_prints_desc"] = "在聊天窗口中显示 print() 的信息."
 
 L["handler_context_menu_addon_name"] = "HandyNotes: 旅行指南"
 L["handler_context_menu_add_tomtom"] = "添加到TomTom"
+L['handler_context_menu_add_map_pin'] = "Set map waypoint"
 L["handler_context_menu_hide_node"] = "隐藏图标"
 
 --============================================TOOLTIPS============================================--
@@ -118,6 +119,14 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
+
+--==========================================DRAGONFLIGHT==========================================--
+
+-- L["Portal to Shadowmoon Valley"] = ""
+-- L["Portal to Valdrakken"] = ""
+-- L["Boat to Dragon Isle"] = ""
+-- L["Zeppelin to Dragon Isle"] = ""
+-- L["Teleport to Seat of the Aspects"] = ""
 
 --==========================================SHADOWLANDS===========================================--
 
