@@ -1,5 +1,16 @@
 ## Revision History:
 
+#### v2.12.0 (Oktober 25, 2022)
+-------------------------------
+* Added Dragonflight portals, boats and zeppelins (Dragonflight)
+* Added Emerald Dreamway for Druid by mpolewaczyk [#15](https://github.com/Dathwada/handynotes-travelguide/pull/15)
+* Added new AreaPois (Dragonflight)
+* Updated zhCN by nanjuekaien1 [#14](https://github.com/Dathwada/handynotes-travelguide/pull/14)
+* Updated molemachine coords (Dragonflight)
+* Updated config layout (Dragonflight)
+* Fixed opening the settings panel (Dragonflight)
+* Bump .toc to 100000
+
 #### v2.11.0 (Oktober 15, 2022)
 -------------------------------
 * Added Reflective Portals [#13](https://github.com/Dathwada/handynotes-travelguide/issues/13)
