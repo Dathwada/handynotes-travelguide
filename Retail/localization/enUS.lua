@@ -122,6 +122,14 @@ L["handler_tooltip_not_discovered"] = "not yet discovered"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+--==========================================DRAGONFLIGHT==========================================--
+
+L["Portal to Shadowmoon Valley"] = true
+L["Portal to Valdrakken"] = true
+L["Boat to Dragon Isle"] = true
+L["Zeppelin to Dragon Isle"] = true
+L["Teleport to Seat of the Aspects"] = true
+
 --==========================================SHADOWLANDS===========================================--
 
 L["Portal to Oribos"] = true

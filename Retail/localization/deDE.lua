@@ -122,6 +122,14 @@ L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+--==========================================DRAGONFLIGHT==========================================--
+
+L["Portal to Shadowmoon Valley"] = "Portal ins Schattenmondtal"
+L["Portal to Valdrakken"] = "Portal nach Valdrakken"
+L["Boat to Dragon Isle"] = "Schiff zu den Dracheninseln"
+L["Zeppelin to Dragon Isle"] = "Zeppelin zu den Dracheninseln"
+L["Teleport to Seat of the Aspects"] = "Teleport zum Sitz der Aspekte"
+
 --==========================================SHADOWLANDS===========================================--
 
 L["Portal to Oribos"] = "Portal nach Oribos"
