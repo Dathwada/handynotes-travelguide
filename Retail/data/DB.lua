@@ -484,7 +484,8 @@ DB.points = {
         [33995326] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Azsuna
         [43944460] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Suramar
         [58096766] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} }, -- The Broken Shore, Broken Shore
-        [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} } -- Highmountain, Neltharion's Vault
+        [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
+        [46102532] = { icon="portal", label=PtoOG, note=Durotar }
         },
     [627] = { -- Dalaran Broken Isles
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -511,7 +512,11 @@ DB.points = {
         [62247129] = { icon="portal", label=PtoDala, note=BrokenIsles },
         [34585114] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="HUNTER" }, --quest=40953, ????
         [46115996] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
-        [44667290] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} } -- Highmountain, Neltharion's Vault
+        [44667290] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
+        [46326113] = { icon="portal", label=PtoOG, note=Durotar }
+        },
+    [652] = { -- Thunder Totem
+        [46006386] = { icon="portal", label=PtoOG, note=Durotar }
         },
     [750] = { -- Highmountain - Thunder Totem
         [39834206] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
