@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.12.1 (November 10, 2022)
+-------------------------------
+* Added a missing Portal to OG in Thunder Totem
+* Added TomTom waypoint from info
+* Fixed memory usage when "Remove Blizzard's POIs for destinations" was enabled [CF#54](https://www.curseforge.com/wow/addons/handynotes-travelguide?comment=54)
+
 #### v2.12.0 (Oktober 25, 2022)
 -------------------------------
 * Added Dragonflight portals, boats and zeppelins (Dragonflight)
