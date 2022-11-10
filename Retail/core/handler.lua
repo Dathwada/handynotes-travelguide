@@ -79,8 +79,9 @@ local areaPoisToRemove = {
 ----------------------------------------------------------------------------------------------------
 
 -- This will remove specified AreaPois on the WorldMapFrame
-WorldMapFrame:HookScript ("OnUpdate", function(self)
+local function RemoveAreaPOIs()
     if (not private.db.remove_AreaPois) then return end
+
     for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
         for _, poiID in ipairs(areaPoisToRemove) do
             local poi = C_AreaPoiInfo.GetAreaPOIInfo(WorldMapFrame:GetMapID(), pin.areaPoiID)
@@ -90,6 +91,14 @@ WorldMapFrame:HookScript ("OnUpdate", function(self)
             end
         end
     end
+end
+
+hooksecurefunc(WorldMapFrame, "OnMapChanged", function()
+    RemoveAreaPOIs()
+end)
+
+WorldMapFrame:HookScript("OnShow", function()
+    RemoveAreaPOIs()
 end)
 
 ----------------------------------------------------------------------------------------------------
