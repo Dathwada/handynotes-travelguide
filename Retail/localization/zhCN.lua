@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2022/10/17
+--  Last update: 2022/11/11
 if L then
 L["config_plugin_name"] = "旅行指南"
 L["config_plugin_desc"] = "在世界地图和小地图上显示传送门、飞艇、港口图标。"
@@ -88,8 +88,8 @@ L["dev_config_tab"] = "DEV"
 L["dev_config_force_nodes"] = "强制显示"
 L["dev_config_force_nodes_desc"] = "无论你的职业或阵营, 强制显示所有的点."
 
-L["dev_config_show_prints"] = "显示 print()"
-L["dev_config_show_prints_desc"] = "在聊天窗口中显示 print() 的信息."
+L["dev_config_show_prints"] = "显示标记()"
+L["dev_config_show_prints_desc"] = "在聊天窗口中显示标记() 的信息."
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------HANDLER----------------------------------------------
@@ -99,7 +99,7 @@ L["dev_config_show_prints_desc"] = "在聊天窗口中显示 print() 的信息."
 
 L["handler_context_menu_addon_name"] = "HandyNotes: 旅行指南"
 L["handler_context_menu_add_tomtom"] = "添加到TomTom"
-L['handler_context_menu_add_map_pin'] = "Set map waypoint"
+L['handler_context_menu_add_map_pin'] = "设置航点"
 L["handler_context_menu_hide_node"] = "隐藏图标"
 
 --============================================TOOLTIPS============================================--
@@ -122,10 +122,10 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 
 --==========================================DRAGONFLIGHT==========================================--
 
--- L["Portal to Shadowmoon Valley"] = ""
--- L["Portal to Valdrakken"] = ""
--- L["Boat to Dragon Isle"] = ""
--- L["Zeppelin to Dragon Isle"] = ""
+L["Portal to Shadowmoon Valley"] = "通往影月谷"
+L["Portal to Valdrakken"] = "通往瓦德拉肯的传送门"
+L["Boat to Dragon Isle"] = "前往巨龙群岛的船"
+L["Zeppelin to Dragon Isle"] = "前往巨龙群岛的飞艇"
 -- L["Teleport to Seat of the Aspects"] = ""
 
 --==========================================SHADOWLANDS===========================================--
@@ -156,6 +156,7 @@ L["Boat to Nazmir"] = "前往纳兹米尔的船"
 L["Portal to Nazjatar"] = "通往纳沙塔尔"
 L["Submarine to Mechagon"] = "前往麦卡贡的潜艇"
 L["Portal to Silithus"] = "通往希利苏斯"
+L["Boat to Echo Isles"] = "通往回声群岛的船"
 
 L["Portal to Boralus"] = "伯拉勒斯"
 L["Boat to Boralus"] = "前往伯拉勒斯的船"
@@ -181,12 +182,12 @@ L["Portal to Suramar"] = "通往苏拉玛"
 L["Portal to Highmountain"] = "通往至高岭"
 L["Great Eagle to Trueshot Lodge"] = "前往神射手营地的巨鹰"
 L["Jump to Skyhold"] = "前往苍穹要塞，跳！"
--- L["Portal to Duskwood"] = ""
--- L["Portal to Feralas"] = ""
--- L["Portal to Grizzly Hills"] = ""
--- L["Portal to Hinterlands"] = ""
--- L["Portal to Moonglade"] = ""
--- L["Portal to Dreamgrove"] = ""
+L["Portal to Duskwood"] = "通往暮色森林"
+L["Portal to Feralas"] = "通往菲拉斯"
+L["Portal to Grizzly Hills"] = "通往灰熊丘陵"
+L["Portal to Hinterlands"] = "通往辛特兰"
+L["Portal to Moonglade"] = "通往月光林地"
+L["Portal to Dreamgrove"] = "通往梦境林地"
 
 -------------------------------------------------WoD------------------------------------------------
 
