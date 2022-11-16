@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v2.12.2 (November 16, 2022)
+-------------------------------
+* Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-oribos/pull/17)
+* Bump .toc to 100002
+
 #### v2.12.1 (November 10, 2022)
 -------------------------------
 * Added a missing Portal to OG in Thunder Totem
