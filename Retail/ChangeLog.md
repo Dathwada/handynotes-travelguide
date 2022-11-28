@@ -1,8 +1,13 @@
 ## Revision History:
 
+#### v2.13.0 (November 28, 2022)
+-------------------------------
+* Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-travelguide/pull/18)
+* Removed AceTimer-3.0 lib
+
 #### v2.12.2 (November 16, 2022)
 -------------------------------
-* Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-oribos/pull/17)
+* Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-travelguide/pull/17)
 * Bump .toc to 100002
 
 #### v2.12.1 (November 10, 2022)
