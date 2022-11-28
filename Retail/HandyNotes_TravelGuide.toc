@@ -12,13 +12,8 @@
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideDB
-## X-Embeds: AceTimer-3.0
 ## X-Date: 2022-11-16
 ## X-Category: Map
-
-#@no-lib-strip@
-embeds.xml
-#@end-no-lib-strip@
 
 # LOCALIZATION FILES
 localization\locales.xml
