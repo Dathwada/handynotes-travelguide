@@ -535,6 +535,10 @@ do
             if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
                 return false
             end
+            -- this will check if requirements are fulfilled, when remove_unknown option enabled
+            if (point.requirements and private.db.remove_unknown and not ReqFulfilled(point.requirements)) then
+                return false
+            end
             -- this will check if any node is for specific class
             if (point.class and point.class ~= select(2, UnitClass("player"))) then
                 return false

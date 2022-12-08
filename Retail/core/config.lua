@@ -162,6 +162,13 @@ config.options = {
                     name = "",
                     order = 25,
                 },
+                remove_unknown = {
+                    type = "toggle",
+                    width = "full",
+                    name = L["config_remove_unknown"],
+                    desc = L["config_remove_unknown_desc"],
+                    order = 25.1,
+                },
                 remove_AreaPois = {
                     type = "toggle",
                     width = "full",
