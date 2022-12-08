@@ -57,6 +57,9 @@ L["config_molemachine_desc"] = "Show destinations for the Mole Machine."
 L["config_note"] = "Note"
 L["config_note_desc"] = "Show the node's additional notes when it's available."
 
+L["config_remove_unknown"] = "Remove unknown destinations"
+L["config_remove_unknown_desc"] = "This will hide destinations with unfulfilled requirements on the world map."
+
 L["config_remove_AreaPois"] = "Remove Blizzard's POIs for destinations"
 L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POIs) set by Blizzard for destinations on the world map."
 

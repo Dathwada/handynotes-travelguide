@@ -57,6 +57,9 @@ L["config_molemachine_desc"] = "Zeigt die Position von Zielen der Maulwurfmaschi
 L["config_note"] = "Notizen"
 L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."
 
+L["config_remove_unknown"] = "Entferne unbekannte Reiseziele"
+L["config_remove_unknown_desc"] = "Dadurch werden Reiseziele deren Voraussetzung nicht erfüllt werden von der Weltkarte entfernt."
+
 L["config_remove_AreaPois"] = "Entferne Blizzards Knotenpunkte für Reiseziele"
 L["config_remove_AreaPois_desc"] = "Dadurch werden die von Blizzard festgelegten Points of Interest (POIs) für Reiseziele auf der Weltkarte entfernt."
 

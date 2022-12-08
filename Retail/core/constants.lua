@@ -44,6 +44,7 @@ constants.defaults = {
         show_zeppelin = true,
         show_hzeppelin = true,
         show_note = true,
+        remove_unknown = true,
         remove_AreaPois = true,
         easy_waypoint = true,
         easy_waypoint_dropdown = 1,
