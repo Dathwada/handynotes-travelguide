@@ -178,7 +178,7 @@ config.options = {
                 },
                 easy_waypoint = {
                     type = "toggle",
-                    width = 1.67,
+                    width = 1.57,
                     name = L["config_easy_waypoints"],
                     desc = L["config_easy_waypoints_desc"],
                     order = 27,

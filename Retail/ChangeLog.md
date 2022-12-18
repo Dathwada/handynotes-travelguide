@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.14.0 (December 18, 2022)
+-------------------------------
+* Added the option to hide unknown travel destinations by [agentschmitt](https://github.com/agentschmitt) [PR#20](https://github.com/Dathwada/handynotes-travelguide/pull/20)
+    * this will hide destinations which requirements are not fulfilled (off by default)
+* Updated zhCN by [nanjuekaien1](https://github.com/nanjuekaien1) [PR#19](https://github.com/Dathwada/handynotes-travelguide/pull/19) [PR#21](https://github.com/Dathwada/handynotes-travelguide/pull/21)
+
 #### v2.13.0 (November 28, 2022)
 -------------------------------
 * Updated zhCN by [nanjuekaien1](https://github.com/Dathwada/handynotes-travelguide/pull/18)
