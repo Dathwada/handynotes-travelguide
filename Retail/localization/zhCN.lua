@@ -59,6 +59,9 @@ L["config_molemachine_desc"] = "显示钻探机[黑铁矮人]目的地。"
 L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
 
+L["config_remove_unknown"] = "删除未知的目的地"
+L["config_remove_unknown"] = "这将删除在世界地图上没有满足要求的目的地。"
+  
 L["config_remove_AreaPois"] = "删除暴雪在地图上的标注"
 L["config_remove_AreaPois_desc"] = "这将删除暴雪在世界地图上为目的地设置的标注点（POI）。"
 
