@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v2.14.1 (January 25, 2022)
+-------------------------------
+* Bump .toc to 100005
+
 #### v2.14.0 (December 18, 2022)
 -------------------------------
 * Added the option to hide unknown travel destinations by [agentschmitt](https://github.com/agentschmitt) [PR#20](https://github.com/Dathwada/handynotes-travelguide/pull/20)
