@@ -1,6 +1,11 @@
 ## Revision History:
 
-#### v2.14.1 (January 25, 2022)
+#### v2.14.2 (March 22, 2023)
+-------------------------------
+* Updated ruRU by [Hollicsh](https://github.com/Hollicsh) [PR#25](https://github.com/Dathwada/handynotes-travelguide/pull/25)
+* Bump .toc to 100007
+
+#### v2.14.1 (January 25, 2023)
 -------------------------------
 * Bump .toc to 100005
 
