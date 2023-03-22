@@ -72,7 +72,7 @@ L["config_waypoint_dropdown"] = "Выбор"
 L["config_waypoint_dropdown_desc"] = "Выберите способ создания путевой точки."
 L["Blizzard"] = true
 L["TomTom"] = true
-L["Both"] = Оба
+L["Both"] = "Оба"
 
 L["config_teleportPlatform"] = "Телепортационные платформы в Орибосе"
 L["config_teleportPlatform_desc"] = "Показать расположение телепортационных платформ в Орибосе."
