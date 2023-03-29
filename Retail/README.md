@@ -33,7 +33,7 @@
 * `esMX` - Latin American Spanish (thanks [Irakua](https://www.curseforge.com/members/Irakua) and [dogstryker](https://www.curseforge.com/members/dogstryker)!)
 * `frFR` - French (thanks [shaiandra](https://www.curseforge.com/members/shaiandra)!)
 * `ptBR` - Brazilian Portuguese (thanks [angel333119](https://www.curseforge.com/members/angel333119)!)
-* `ruRU` - Russian (thanks [Golowolom](https://www.curseforge.com/members/golowolom) and [dadec666](https://www.curseforge.com/members/dadec666)!)
+* `ruRU` - Russian (thanks [Golowolom](https://www.curseforge.com/members/golowolom), [dadec666](https://www.curseforge.com/members/dadec666) and [Hollicsh](https://github.com/Hollicsh)!)
 * `zhCN` - Simplified Chinese (thanks [mmk5](https://www.curseforge.com/members/mmk5) and [nanjuekaien1](https://github.com/nanjuekaien1)!)
 * `zhTW` - Traditional Chinese (thanks [lostindark0](https://www.curseforge.com/members/lostindark0)!)
 
