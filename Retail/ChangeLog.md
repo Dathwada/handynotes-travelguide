@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v2.14.3 (May 05, 2023)
+-------------------------------
+* Add IconTexture to .toc
+* Bump .toc to 100100
+
 #### v2.14.2 (March 22, 2023)
 -------------------------------
 * Updated ruRU by [Hollicsh](https://github.com/Hollicsh) [PR#25](https://github.com/Dathwada/handynotes-travelguide/pull/25)
