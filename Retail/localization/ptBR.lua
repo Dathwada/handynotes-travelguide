@@ -84,7 +84,6 @@ L["Orb of translocation"] = "Orbe da Translocação"
 L["Portal to Arathi Highlands"] = "Portal para Planalto Arathi"
 L["Portal to Azsuna"] = "Portal para Azsuna"
 L["Portal to Boralus"] = "Portal para Boralus"
-L["Portal to Badlands"] = true
 L["Portal to Caverns of Time"] = "Portal para Cavernas do Tempo"
 L["Portal to Dalaran"] = "Portal para Dalaran"
 L["Portal to Dalaran Crater"] = "Portal para Cratera de Dalaran"

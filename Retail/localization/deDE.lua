@@ -132,7 +132,9 @@ L["Portal to Valdrakken"] = "Portal nach Valdrakken"
 L["Boat to Dragon Isle"] = "Schiff zu den Dracheninseln"
 L["Zeppelin to Dragon Isle"] = "Zeppelin zu den Dracheninseln"
 L["Teleport to Seat of the Aspects"] = "Teleport zum Sitz der Aspekte"
-L["Portal to Badlands"] = true
+L["Portal to Nazmir"] = "Portal nach Nazmir"
+L["Portal to Tiragarde Sound"] = "Portal zum Tiragardesund"
+L["Portal to Badlands"] = "Portal zum Ödland"
 
 --==========================================SHADOWLANDS===========================================--
 

@@ -61,7 +61,7 @@ L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的
 
 L["config_remove_unknown"] = "删除未知的目的地"
 L["config_remove_unknown"] = "这将删除在世界地图上没有满足要求的目的地。"
-  
+
 L["config_remove_AreaPois"] = "删除暴雪在地图上的标注"
 L["config_remove_AreaPois_desc"] = "这将删除暴雪在世界地图上为目的地设置的标注点（POI）。"
 
@@ -134,6 +134,8 @@ L["Portal to Valdrakken"] = "通往瓦德拉肯的传送门"
 L["Boat to Dragon Isle"] = "前往巨龙群岛的船"
 L["Zeppelin to Dragon Isle"] = "前往巨龙群岛的飞艇"
 L["Teleport to Seat of the Aspects"] = "传送到守护巨龙之座"
+-- L["Portal to Nazmir"] = true
+-- L["Portal to Tiragarde Sound"] = true
 L["Portal to Badlands"] = "通往荒芜之地"
 
 --==========================================SHADOWLANDS===========================================--

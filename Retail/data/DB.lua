@@ -27,6 +27,9 @@ local BtoDI = L["Boat to Dragon Isle"]
 local ZtoDI = L["Zeppelin to Dragon Isle"]
 local WakingShores = GetMapNames(2022)
 local PtoSMV = L["Portal to Shadowmoon Valley"]
+local PtoNazmir = L["Portal to Nazmir"]
+local PtoTiragardeSound = L["Portal to Tiragarde Sound"]
+local PtoBadlands = L["Portal to Badlands"]
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -289,9 +292,9 @@ DB.points = {
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
         [59834172] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }, -- quest=?, level=?
-        [53885502] = { icon="portal", multilabel = {PtoJadeForest, PtoSMV, PtoDala}, multinote = {Pandaria, Draenor, BrokenIsles} },
-	[26104100] = { icon="portal", label=L["Portal to Badlands"] }, -- Portal to Badlands
-        [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
+        [53885502] = { icon="portal", multilabel={PtoNazmir, PtoTiragardeSound, PtoUldum}, multinote={Zandalar, KulTiras, Kalimdor} },
+        [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
+        [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms }
         },
     [2022] = { -- The Waking Shores
         [81692794] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
