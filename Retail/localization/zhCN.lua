@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2022/11/29
+--  Last update: 2023/05/12
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -134,6 +134,7 @@ L["Portal to Valdrakken"] = "通往瓦德拉肯的传送门"
 L["Boat to Dragon Isle"] = "前往巨龙群岛的船"
 L["Zeppelin to Dragon Isle"] = "前往巨龙群岛的飞艇"
 L["Teleport to Seat of the Aspects"] = "传送到守护巨龙之座"
+L["Portal to Badlands"] = "通往荒芜之地"
 
 --==========================================SHADOWLANDS===========================================--
 
