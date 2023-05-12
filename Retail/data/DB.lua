@@ -290,6 +290,7 @@ DB.points = {
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
         [59834172] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }, -- quest=?, level=?
         [53885502] = { icon="portal", multilabel = {PtoJadeForest, PtoSMV, PtoDala}, multinote = {Pandaria, Draenor, BrokenIsles} },
+	[26104100] = { icon="portal", label=L["Portal to Badlands"] }, -- Portal to Badlands
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
         },
     [2022] = { -- The Waking Shores

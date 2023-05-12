@@ -132,6 +132,7 @@ L["Portal to Valdrakken"] = true
 L["Boat to Dragon Isle"] = true
 L["Zeppelin to Dragon Isle"] = true
 L["Teleport to Seat of the Aspects"] = true
+L["Portal to Badlands"] = true
 
 --==========================================SHADOWLANDS===========================================--
 
