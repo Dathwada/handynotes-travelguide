@@ -104,7 +104,7 @@ L["dev_config_show_prints_desc"] = "Show print() messages in the chat window."
 
 L["handler_context_menu_addon_name"] = "HandyNotes: TravelGuide"
 L["handler_context_menu_add_tomtom"] = "Add to TomTom"
-L['handler_context_menu_add_map_pin'] = "Set map waypoint"
+L["handler_context_menu_add_map_pin"] = "Set map waypoint"
 L["handler_context_menu_hide_node"] = "Hide this node"
 
 --============================================TOOLTIPS============================================--
@@ -159,7 +159,7 @@ L["Anima Gateway to Hero's rest"] = true
 L["Portal to Zuldazar"] = true
 L["Boat to Zuldazar"] = true
 L["Return to Zuldazar"] = true
-L["Boat to Vol'Dun"] = true
+L["Boat to Vol'dun"] = true
 L["Boat to Nazmir"] = true
 L["Portal to Nazjatar"] = true
 L["Submarine to Mechagon"] = true
@@ -232,9 +232,9 @@ L["Boat to Howling Fjord"] = true
 L["Boat to Kamagua"] = true
 L["Portal to Howling Fjord"] = true
 L["Boat to Borean Tundra"] = true
-L["Boat to Unu'Pe"] = true
+L["Boat to Unu'pe"] = true
 L["Zeppelin to Borean Tundra"] = true
-L["Boat to Moa'Ki Harbor"] = true
+L["Boat to Moa'ki Harbor"] = true
 L["Waygate to Sholazar Basin"] = true
 
 -------------------------------------------------BC-------------------------------------------------

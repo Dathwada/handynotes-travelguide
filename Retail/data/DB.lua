@@ -60,7 +60,7 @@ local Zuldazar = GetMapNames(875, 862)
 local PtoZuldazar = L["Portal to Zuldazar"]
 local BtoZuldazar = L["Boat to Zuldazar"]
 local returntoZuldazar = L["Return to Zuldazar"]
-local BtoVolDun = L["Boat to Vol'Dun"]
+local BtoVolDun = L["Boat to Vol'dun"]
 local BtoNazmir = L["Boat to Nazmir"]
 local PtoNazjatar = L["Portal to Nazjatar"]
 local StoMechagon = L["Submarine to Mechagon"]
@@ -154,9 +154,9 @@ local ZtoBoreanTundra = L["Zeppelin to Borean Tundra"]
 local BtoBoreanTundra = L["Boat to Borean Tundra"]
 local WarsongHold = GetMapNames(113, nil, 4129)
 local ValianceKeep = GetMapNames(113, nil, 4032)
-local BtoUnuPe = L["Boat to Unu'Pe"]
+local BtoUnuPe = L["Boat to Unu'pe"]
 local Dragonblight = GetMapNames(113, 115)
-local BtoMoaKiHarbor = L["Boat to Moa'Ki Harbor"]
+local BtoMoaKiHarbor = L["Boat to Moa'ki Harbor"]
 local HowlingFjord = GetMapNames(113, 117)
 local PtoHowlingFjord = L["Portal to Howling Fjord"]
 local VengeanceLanding = GetMapNames(113, nil, 4000)
@@ -385,7 +385,7 @@ DB.points = {
     [875] = { -- Zandalar
         [58206200] = { icon="portal", multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multilevel={[4]=50}}, faction="Horde" },
         [56307065] = { icon="boat", label=StoMechagon, note=KulTiras, requirements={quest=55651}, faction="Horde" },
-        [33201921] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }, -- Vol'Dun Barnard "The Smasher" Baysworth
+        [33201921] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }, -- Vol'dun Barnard "The Smasher" Baysworth
         [62492642] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51088}, faction="Alliance" }, -- Nazmir Desha Stormwallow
         [47137856] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51359}, faction="Alliance" }, -- Zuldazar Daria Smithson
         [58287358] = { icon="boat", multilabel={BtoDrustvar, BtoStormsongValley, BtoTiragardeSound}, multinote={KulTiras, KulTiras, KulTiras}, requirements={multiquest={51340, 51532, 51421}}, faction="Horde" },
@@ -407,7 +407,7 @@ DB.points = {
     [863] = { -- Nazmir
         [62054007] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51088}, faction="Alliance" }
         },
-    [864] = { -- Vol'Dun
+    [864] = { -- Vol'dun
         [36683427] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }
         },
     [1165] = { -- Dazar'alor
