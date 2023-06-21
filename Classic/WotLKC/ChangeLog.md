@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v1.4 (June 21, 2023)
+------------------------------
+* Bump .toc to 30402
+
 #### v1.3 (January 20, 2023)
 ------------------------------
 * Update for Ulduar Patch 3.4.1
