@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v3.6 (August 23, 2023)
+-------------------------------
+* Bump .toc to 11404
+* Added TomTom waypoint from info
+* Updated localizations
+
 #### v3.5 (May 31, 2022)
 -------------------------------
 * Bump .toc to 11403
