@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2023/05/12
+--  Last update: 2023/09/17
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -37,8 +37,8 @@ L["config_petbattle_portal_desc"] = "显示宠物对战传送门的位置。"
 L["config_ogreWaygate"] = "食人魔传送门"
 L["config_ogreWaygate_desc"] = "显示食人魔传送门的位置。"
 
-L["config_show_reflectivePortal"] = "隐形传送门"
-L["config_show_reflectivePortal_desc"] = "显示隐形传送门的位置。"
+L["config_show_reflectivePortal"] = "反射传送门"
+L["config_show_reflectivePortal_desc"] = "显示反射传送门的位置，需要玩具：[百变之镜]。"
 
 L["config_boat"] = "船"
 L["config_boat_desc"] = "显示船的位置。"
@@ -206,7 +206,7 @@ L["Portal to Stormshield"] = "通往暴风之盾"
 L["Portal to Vol'mar"] = "通往沃马尔"
 L["Portal to Lion's watch"] = "通往雄狮岗哨"
 L["Ogre Waygate"] = "食人魔传送门"
-L["Reflective Portal"] = "隐形传送门"
+L["Reflective Portal"] = "反射传送门[百变之镜]"
 
 -------------------------------------------------MoP------------------------------------------------
 
