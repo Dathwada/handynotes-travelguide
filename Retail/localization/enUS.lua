@@ -135,6 +135,8 @@ L["Teleport to Seat of the Aspects"] = true
 L["Portal to Nazmir"] = true
 L["Portal to Tiragarde Sound"] = true
 L["Portal to Badlands"] = true
+L["Portal to Emerald Dream"] = true
+L["Portal to Ohn'ahran Plains"] = true
 
 --==========================================SHADOWLANDS===========================================--
 

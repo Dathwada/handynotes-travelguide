@@ -30,6 +30,10 @@ local PtoSMV = L["Portal to Shadowmoon Valley"]
 local PtoNazmir = L["Portal to Nazmir"]
 local PtoTiragardeSound = L["Portal to Tiragarde Sound"]
 local PtoBadlands = L["Portal to Badlands"]
+local PtoEmeraldDream = L["Portal to Emerald Dream"]
+local EmeraldDream = GetMapNames(2200)
+local PtoOhnahranPlains = L["Portal to Ohn'ahran Plains"]
+local DragonIsle = GetMapNames(1978)
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -278,6 +282,9 @@ DB.points = {
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
 
+    [2200] = { -- Emerald Dream
+        [73085242 ] = { icon="portal", label=PtoOhnahranPlains, note=DragonIsle, requirements={quest=76318} }
+        },
     [1978] = { -- Dragon Isles
         -- [56364797] = { icon="portal", multilabel={PtoOG, L["Teleport to Seat of the Aspects"]}, multinote={Durotar}, faction="Horde" },
         -- [56574817] = { icon="portal", multilabel={PtoSW, L["Teleport to Seat of the Aspects"]}, multinote={ElwynnForest}, faction="Alliance" },
@@ -286,8 +293,9 @@ DB.points = {
         [59682678] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [59682677] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [59832764] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
-        [59832765] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        [59832765] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         -- [56694766] = { icon="portal", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
+        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318} }
         },
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
@@ -301,6 +309,9 @@ DB.points = {
         [81692795] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [82183069] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [82183068] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        },
+    [2023] = { -- Ohn'ahran Plains
+        [18405234] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318} }
         },
     [2025] = { -- Thaldraszus
         [40895817] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },

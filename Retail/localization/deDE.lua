@@ -135,6 +135,8 @@ L["Teleport to Seat of the Aspects"] = "Teleport zum Sitz der Aspekte"
 L["Portal to Nazmir"] = "Portal nach Nazmir"
 L["Portal to Tiragarde Sound"] = "Portal zum Tiragardesund"
 L["Portal to Badlands"] = "Portal zum Ödland"
+L["Portal to Emerald Dream"] = "Portal zum Smaragdgrünen Traum"
+L["Portal to Ohn'ahran Plains"] = "Portal in die Ebenen von Ohn'ahra"
 
 --==========================================SHADOWLANDS===========================================--
 

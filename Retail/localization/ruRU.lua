@@ -138,6 +138,8 @@ L["Teleport to Seat of the Aspects"] = "Телепорт к Престолу А�
 L["Portal to Nazmir"] = "Портал в Назмир"
 L["Portal to Tiragarde Sound"] = "Портал на Тирагардское поморье"
 L["Portal to Badlands"] = "Портал в Бесплодные земли"
+-- L["Portal to Emerald Dream"] = true
+-- L["Portal to Ohn'ahran Plains"] = true
 
 --==========================================SHADOWLANDS===========================================--
 
