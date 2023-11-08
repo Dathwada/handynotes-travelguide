@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.14.7 (November 08, 2023)
+-------------------------------
+* Bump .toc to 100200
+* Added Portal to Emerald Dream
+* Updated zhCN by [nanjuekaien1](https://github.com/nanjuekaien1)
+
 #### v2.14.6 (September 06, 2023)
 -------------------------------
 * Bump .toc to 100107
