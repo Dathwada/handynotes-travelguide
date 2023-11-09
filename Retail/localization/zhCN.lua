@@ -137,8 +137,8 @@ L["Teleport to Seat of the Aspects"] = "传送到守护巨龙之座"
 L["Portal to Nazmir"] = "通往纳兹米尔的传送门"
 L["Portal to Tiragarde Sound"] = "通往提拉加德海峡的传送门"
 L["Portal to Badlands"] = "通往荒芜之地的传送门"
--- L["Portal to Emerald Dream"] = true
--- L["Portal to Ohn'ahran Plains"] = true
+L["Portal to Emerald Dream"] = "通往翡翠梦境的传送门"
+L["Portal to Ohn'ahran Plains"] = "通往欧恩哈拉平原的传送门"
 
 --==========================================SHADOWLANDS===========================================--
 
