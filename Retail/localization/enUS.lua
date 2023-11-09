@@ -137,6 +137,7 @@ L["Portal to Tiragarde Sound"] = true
 L["Portal to Badlands"] = true
 L["Portal to Emerald Dream"] = true
 L["Portal to Ohn'ahran Plains"] = true
+L["Portal to Central Encampment"] = true
 
 --==========================================SHADOWLANDS===========================================--
 
