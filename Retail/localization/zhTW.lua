@@ -148,4 +148,5 @@ L["Zeppelin to Borean Tundra"] = "到北風凍原的飛艇"
 L["Zeppelin to Orgrimmar"] = "到奧格瑪的飛艇"
 L["Zeppelin to Stranglethorn Vale"] = "到荊棘谷的飛艇"
 L["Zeppelin to Thunder Bluff"] = "到雷霆崖的飛艇"
+-- L["Portal to Central Encampment"] = true  
 end
