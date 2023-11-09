@@ -139,6 +139,7 @@ L["Portal to Tiragarde Sound"] = "通往提拉加德海峡的传送门"
 L["Portal to Badlands"] = "通往荒芜之地的传送门"
 L["Portal to Emerald Dream"] = "通往翡翠梦境的传送门"
 L["Portal to Ohn'ahran Plains"] = "通往欧恩哈拉平原的传送门"
+L["Portal to Central Encampment"] = "通往中心营地的传送门"
 
 --==========================================SHADOWLANDS===========================================--
 
