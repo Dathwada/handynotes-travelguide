@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v2.14.8 (November 11, 2023)
+-------------------------------
+* Added Portal to Central Encampment by [nanjuekaien1](https://github.com/nanjuekaien1) [[PR#33]](https://github.com/Dathwada/handynotes-travelguide/pull/33) [[PR#34]](https://github.com/Dathwada/handynotes-travelguide/pull/34)
+* Updated zhCN by [nanjuekaien1](https://github.com/nanjuekaien1)
+
 #### v2.14.7 (November 08, 2023)
 -------------------------------
 * Bump .toc to 100200
