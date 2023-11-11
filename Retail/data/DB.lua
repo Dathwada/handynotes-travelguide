@@ -295,7 +295,8 @@ DB.points = {
         [59832764] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [59832765] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         -- [56694766] = { icon="portal", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
-        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318} }
+        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318} },
+        [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream } -- TODO find out and add accountwide quest
         },
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
@@ -303,7 +304,7 @@ DB.points = {
         [53885502] = { icon="portal", multilabel={PtoNazmir, PtoTiragardeSound, PtoUldum}, multinote={Zandalar, KulTiras, Kalimdor} },
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
         [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms },
-	[62705741] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream }
+        [62675730] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream } -- TODO find out and add accountwide quest
         },
     [2022] = { -- The Waking Shores
         [81692794] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -321,7 +322,8 @@ DB.points = {
         [49210474] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [49210475] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [49590691] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
-        [49590692] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        [49590692] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
+        [41766093] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream } -- TODO find out and add accountwide quest
         },
 
 ------------------------------------------------------------------------------------------SHADOWLANDS------------------------------------------------------------------------------------------
