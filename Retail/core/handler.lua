@@ -401,7 +401,7 @@ local function closeAllDropdowns()
 end
 
 local function addTomTomWaypoint(button, uMapID, coord)
-    if (IsAddOnLoaded("TomTom")) then
+    if (C_AddOns.IsAddOnLoaded("TomTom")) then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
             title = GetPointInfoByCoord(uMapID, coord),
@@ -443,7 +443,7 @@ do
             }, level)
 
             -- TomTom waypoint menu item
-            if (IsAddOnLoaded("TomTom")) then
+            if (C_AddOns.IsAddOnLoaded("TomTom")) then
                 UIDropDownMenu_AddButton({
                     text = L["handler_context_menu_add_tomtom"],
                     notCheckable = true,
@@ -486,7 +486,7 @@ do
     HL_Dropdown.initialize = generateMenu
 
     function PluginHandler:OnClick(button, down, uMapID, coord)
-        local TomTom = select(2, IsAddOnLoaded('TomTom'))
+        local TomTom = select(2, C_AddOns.IsAddOnLoaded('TomTom'))
         local dropdown = private.db.easy_waypoint_dropdown
 
         if (down or button ~= "RightButton") then return end
