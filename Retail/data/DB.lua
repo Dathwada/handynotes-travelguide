@@ -303,7 +303,7 @@ DB.points = {
         [53885502] = { icon="portal", multilabel={PtoNazmir, PtoTiragardeSound, PtoUldum}, multinote={Zandalar, KulTiras, Kalimdor} },
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
         [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms },
-	[62705741] = { icon="portal", label=L["Portal to Central Encampment"]}
+	[62705741] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream }
         },
     [2022] = { -- The Waking Shores
         [81692794] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
