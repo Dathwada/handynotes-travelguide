@@ -127,17 +127,15 @@ L["handler_tooltip_not_discovered"] = "not yet discovered"
 
 --==========================================DRAGONFLIGHT==========================================--
 
-L["Portal to Shadowmoon Valley"] = true
 L["Portal to Valdrakken"] = true
 L["Boat to Dragon Isle"] = true
 L["Zeppelin to Dragon Isle"] = true
 L["Teleport to Seat of the Aspects"] = true
-L["Portal to Nazmir"] = true
-L["Portal to Tiragarde Sound"] = true
 L["Portal to Badlands"] = true
 L["Portal to Emerald Dream"] = true
 L["Portal to Ohn'ahran Plains"] = true
 L["Portal to Central Encampment"] = true
+L["Portal to The Timeways"] = true
 
 --==========================================SHADOWLANDS===========================================--
 

@@ -129,17 +129,15 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 
 --==========================================DRAGONFLIGHT==========================================--
 
-L["Portal to Shadowmoon Valley"] = "通往影月谷"
 L["Portal to Valdrakken"] = "通往瓦德拉肯的传送门"
 L["Boat to Dragon Isle"] = "前往巨龙群岛的船"
 L["Zeppelin to Dragon Isle"] = "前往巨龙群岛的飞艇"
 L["Teleport to Seat of the Aspects"] = "传送到守护巨龙之座"
-L["Portal to Nazmir"] = "通往纳兹米尔的传送门"
-L["Portal to Tiragarde Sound"] = "通往提拉加德海峡的传送门"
 L["Portal to Badlands"] = "通往荒芜之地的传送门"
 L["Portal to Emerald Dream"] = "通往翡翠梦境的传送门"
 L["Portal to Ohn'ahran Plains"] = "通往欧恩哈拉平原的传送门"
 L["Portal to Central Encampment"] = "通往中心营地的传送门"
+-- L["Portal to The Timeways"] = ""
 
 --==========================================SHADOWLANDS===========================================--
 

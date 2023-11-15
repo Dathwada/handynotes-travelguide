@@ -26,14 +26,12 @@ local Thaldraszus = GetMapNames(1978, 2025)
 local BtoDI = L["Boat to Dragon Isle"]
 local ZtoDI = L["Zeppelin to Dragon Isle"]
 local WakingShores = GetMapNames(2022)
-local PtoSMV = L["Portal to Shadowmoon Valley"]
-local PtoNazmir = L["Portal to Nazmir"]
-local PtoTiragardeSound = L["Portal to Tiragarde Sound"]
 local PtoBadlands = L["Portal to Badlands"]
 local PtoEmeraldDream = L["Portal to Emerald Dream"]
 local EmeraldDream = GetMapNames(2200)
 local PtoOhnahranPlains = L["Portal to Ohn'ahran Plains"]
 local DragonIsle = GetMapNames(1978)
+local PtoTimeways = L["Portal to The Timeways"]
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -211,7 +209,7 @@ local EasternKingdoms = GetMapNames(13)
 local Wetlands = GetMapNames(13, 56)
 local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local PtoStranglethornVale = L["Portal to Stranglethorn Vale"]
-local StranglethornVale = GetMapNames(13, 224)
+-- local StranglethornVale = GetMapNames(13, 224)
 local StranglethornCape = GetMapNames(13, 210)
 local BtoBootyBay = L["Boat to Booty Bay"]
 local GromgolBaseCamp = GetMapNames(13, nil, 117)
@@ -220,8 +218,8 @@ local DustwallowMarsh = GetMapNames(12, 70)
 local BtoTheramore = L["Boat to Theramore Isle"]
 local PtoCavernsofTime = L["Portal to Caverns of Time"]
 local Tanaris = GetMapNames(12, 71)
-local ArathiHighlands = GetMapNames(13, 14)
-local Darkshore = GetMapNames(12, 62)
+-- local ArathiHighlands = GetMapNames(13, 14)
+-- local Darkshore = GetMapNames(12, 62)
 local PtoDalaCrater = L["Portal to Dalaran Crater"]
 local HillsbradFoothills = GetMapNames(13, 25)
 local PtoSepulcher = L["Portal to the Sepulcher"]
@@ -301,7 +299,7 @@ DB.points = {
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
         [59834172] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }, -- quest=?, level=?
-        [53885502] = { icon="portal", multilabel={PtoNazmir, PtoTiragardeSound, PtoUldum}, multinote={Zandalar, KulTiras, Kalimdor} },
+        [53565538] = { icon="portal", label=PtoTimeways },
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
         [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms },
         [62675730] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream } -- TODO find out and add accountwide quest

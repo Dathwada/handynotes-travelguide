@@ -127,17 +127,15 @@ L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 
 --==========================================DRAGONFLIGHT==========================================--
 
-L["Portal to Shadowmoon Valley"] = "Portal ins Schattenmondtal"
 L["Portal to Valdrakken"] = "Portal nach Valdrakken"
 L["Boat to Dragon Isle"] = "Schiff zu den Dracheninseln"
 L["Zeppelin to Dragon Isle"] = "Zeppelin zu den Dracheninseln"
 L["Teleport to Seat of the Aspects"] = "Teleport zum Sitz der Aspekte"
-L["Portal to Nazmir"] = "Portal nach Nazmir"
-L["Portal to Tiragarde Sound"] = "Portal zum Tiragardesund"
 L["Portal to Badlands"] = "Portal zum Ödland"
 L["Portal to Emerald Dream"] = "Portal zum Smaragdgrünen Traum"
 L["Portal to Ohn'ahran Plains"] = "Portal in die Ebenen von Ohn'ahra"
 L["Portal to Central Encampment"] = "Portal zum Zentrallager"
+L["Portal to The Timeways"] = "Portal zu den Zeitwegen"
 
 --==========================================SHADOWLANDS===========================================--
 

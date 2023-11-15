@@ -146,5 +146,4 @@ L["Zeppelin to Borean Tundra"] = "Zepelín a Tundra Boreal"
 L["Zeppelin to Orgrimmar"] = "Zepelín a Orgrimmar"
 L["Zeppelin to Stranglethorn Vale"] = "Zepelín a Vega de Tuercespina"
 L["Zeppelin to Thunder Bluff"] = "Zepelín a Cima del Trueno"
--- L["Portal to Central Encampment"] = true  
 end
