@@ -1,5 +1,14 @@
 ## Revision History:
 
+#### v2.14.9 (November 19, 2023)
+-------------------------------
+* Added Portal to The Timeways in Valdrakken (Season 3)
+    * Removed Season 2 Portals in Valdrakken (Season 2)
+* Added missing Portals in Blasted Lands for Horde and Alliance [Issue#36](https://github.com/Dathwada/handynotes-travelguide/issues/36)
+* Added the Potal to Valdrakken for Alliance
+    * Added requirements for Portal to Valdrakken
+* Updated zhCN by [nanjuekaien1](https://github.com/nanjuekaien1)
+
 #### v2.14.8 (November 11, 2023)
 -------------------------------
 * Added Portal to Central Encampment by [nanjuekaien1](https://github.com/nanjuekaien1) [[PR#33]](https://github.com/Dathwada/handynotes-travelguide/pull/33) [[PR#34]](https://github.com/Dathwada/handynotes-travelguide/pull/34)
