@@ -87,7 +87,7 @@ DB.points = {
         [1411] = { -- Durotar
         [34017850] = { icon="boat", label=BtoBootyBay, note=StranglethornVale },
         [50571265] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
-        [50581265] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance"},
+        [50581265] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         [50821385] = { icon="zeppelin", label=ZtoUC, note=Tirisfal, faction="Horde" },
         [50831385] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" }
         },
@@ -124,7 +124,7 @@ DB.points = {
     [1415] = { -- Eastern Kingdom
         [43839266] = { icon="boat", label=BtoRatchet, note=Barrens },
         [43976740] = { icon="tram", label=DrTtoIF, note=DunMorogh },
-        [49215244] = { icon="tram", label=DrTtoSW, note=ElwynnForest, },
+        [49215244] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         [44702303] = { icon="zeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Horde" },
         [44702304] = { icon="hzeppelin", multilabel={ZtoOG, ZtoStranglethornVale}, multinote={Durotar, GromgolBaseCamp}, faction="Alliance" },
         [44868478] = { icon="zeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
@@ -141,10 +141,10 @@ DB.points = {
         [31582912] = { icon="hzeppelin", label=ZtoUC, note=Tirisfal, faction="Alliance" }
         },
     [1426] = { -- Dun Morogh
-        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest, }
+        [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest }
         },
     [1455] = { -- Ironforge
-        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest, }
+        [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest }
         },
     [1445] = { -- Dustwallow Marsh
         [71625648] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
@@ -157,7 +157,7 @@ DB.points = {
     [1439] = { -- Darkshore
         [33194006] = { icon="boat", label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
         [33194007] = { icon="aboat", label=BtoDarnassus, note=Teldrassil, faction="Horde" },
-        [32404584] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
-        [32404585] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" }
+        [32404380] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
+        [32404381] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" }
         }
 }
