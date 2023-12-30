@@ -1,5 +1,11 @@
 ## Revision History:
 
+
+#### v3.7 (December 30, 2023)
+-------------------------------
+* Adjusted coodinates for the Boat to Menethil Harbor in Darkshore [CF#22](https://legacy.curseforge.com/wow/addons/handynotes-travelguide-classic?comment=22)
+* Bump .toc to 11500
+
 #### v3.6 (August 23, 2023)
 -------------------------------
 * Bump .toc to 11404
@@ -57,7 +63,7 @@
 
 #### v2.1.4 (September 18, 2019)
 --------------------------------
-* fixed error with zhCN.lua (zhCN.lua had the wrong coding. was unicode, after fix UTF-8. sorry for this mistake
+* fixed error with zhCN.lua (zhCN.lua had the wrong coding. was unicode, after fix UTF-8. sorry for this mistake)
 * Added korean (koKR) localization from [blacknib](https://www.curseforge.com/members/blacknib)
 
 #### v2.1.3 (September 17, 2019)
