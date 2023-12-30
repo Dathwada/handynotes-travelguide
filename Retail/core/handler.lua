@@ -52,6 +52,7 @@ local areaPoisToRemove = {
     5892, -- The Jade Forest, Portal to Stormwind City
     6014, -- Stormwind Portal Room
     7340, -- Thaldraszus, Boat to Stormwind
+    7335, -- Stormwind, Boat to Dragon Isle
 
     -- Horde
     5843, -- Drustvar
