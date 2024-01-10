@@ -288,5 +288,5 @@ L["Portal to the Sepulcher"] = "Portal zum Grabmal"
 
 L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
 L["The Masonary"] = "Die Freimaurerei"
-L["inside Blackrock Mountain"] = "innerhalb des Schwarzfels"
+L["inside the Blackrock Mountain"] = "innerhalb des Schwarzfels"
 end

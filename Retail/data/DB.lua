@@ -234,7 +234,7 @@ local PtoMechagon = L["Portal to Mechagon"]
 local PtoGorgrond = L["Portal to Gorgrond"]
 local Draenor = GetMapNames(572)
 local TheMasonary = L["The Masonary"]
-local inBRM = L["inside Blackrock Mountain"]
+local inBRM = L["inside the Blackrock Mountain"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
