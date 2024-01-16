@@ -139,6 +139,8 @@ L["Portal to Badlands"] = "Портал в Бесплодные земли"
 -- L["Portal to Ohn'ahran Plains"] = ""
 -- L["Portal to Central Encampment"] = ""
 -- L["Portal to The Timeways"] = ""
+-- L["Portal to Bel'ameth"] = ""
+-- L["Portal to Feathermoon Stronghold"] = ""
 
 --==========================================SHADOWLANDS===========================================--
 

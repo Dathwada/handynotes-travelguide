@@ -136,6 +136,8 @@ L["Portal to Emerald Dream"] = "Portal zum Smaragdgrünen Traum"
 L["Portal to Ohn'ahran Plains"] = "Portal in die Ebenen von Ohn'ahra"
 L["Portal to Central Encampment"] = "Portal zum Zentrallager"
 L["Portal to The Timeways"] = "Portal zu den Zeitwegen"
+L["Portal to Bel'ameth"] = "Portal nach Bel'ameth"
+L["Portal to Feathermoon Stronghold"] = "Portal zur Mondfederfeste"
 
 --==========================================SHADOWLANDS===========================================--
 

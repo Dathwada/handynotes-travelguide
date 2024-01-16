@@ -136,6 +136,8 @@ L["Portal to Emerald Dream"] = true
 L["Portal to Ohn'ahran Plains"] = true
 L["Portal to Central Encampment"] = true
 L["Portal to The Timeways"] = true
+L["Portal to Bel'ameth"] = true
+L["Portal to Feathermoon Stronghold"] = true
 
 --==========================================SHADOWLANDS===========================================--
 

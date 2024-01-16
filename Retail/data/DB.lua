@@ -32,6 +32,8 @@ local EmeraldDream = GetMapNames(2200)
 local PtoOhnahranPlains = L["Portal to Ohn'ahran Plains"]
 local DragonIsle = GetMapNames(1978)
 local PtoTimeways = L["Portal to The Timeways"]
+local PtoBelameth = L["Portal to Bel'ameth"]
+local Amirdrassil = GetMapNames(1978, 2239)
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -235,6 +237,7 @@ local PtoGorgrond = L["Portal to Gorgrond"]
 local Draenor = GetMapNames(572)
 local TheMasonary = L["The Masonary"]
 local inBRM = L["inside the Blackrock Mountain"]
+local Feralas = GetMapNames(12, 69)
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -280,6 +283,13 @@ DB.points = {
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
 
+    [2239] = { -- Amirdrassil
+        [89633797] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
+        [55466364] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [51391836] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
+        [55316473] = { icon="portal", multilabel={PtoDarkshore, PtoHyjal, PtoValsharah}, multinote={Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
+        [58588498] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
+        },
     [2200] = { -- Emerald Dream
         [73085242 ] = { icon="portal", label=PtoOhnahranPlains, note=DragonIsle, requirements={quest=76318} }
         },
@@ -293,8 +303,11 @@ DB.points = {
         [59832764] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [59832765] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         -- [56694766] = { icon="portal", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
-        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318} },
-        [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream } -- TODO find out and add accountwide quest
+        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
+        [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} }, -- TODO find out and add accountwide quest
+        [24795365] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
+        [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
+        [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
         },
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
@@ -501,7 +514,8 @@ DB.points = {
         [43944460] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }, -- Suramar
         [58096766] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} }, -- The Broken Shore, Broken Shore
         [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
-        [46102532] = { icon="portal", label=PtoOG, note=Durotar }
+        [46102532] = { icon="portal", label=PtoOG, note=Durotar },
+        [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [627] = { -- Dalaran Broken Isles
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -539,7 +553,8 @@ DB.points = {
         },
     [641] = { -- Val'sharah
         [41742385] = { icon="orderhall", multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
-        [54707490] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
+        [54707490] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [54847186] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [680] = { -- Suramar
         [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
@@ -580,7 +595,8 @@ DB.points = {
         [50756608] = { icon="orderhall", label=PtoHinterlands, note=EasternKingdoms, class="DRUID" },
         [25848036] = { icon="orderhall", label=PtoMoonglade, note=Kalimdor, class="DRUID" },
         [53725295] = { icon="orderhall", label=PtoHyjal, note=Kalimdor, class="DRUID" },
-        [45562372] = { icon="orderhall", label=PtoDreamgrove, note=valsharahBrokenIsles, class="DRUID" }
+        [45562372] = { icon="orderhall", label=PtoDreamgrove, note=valsharahBrokenIsles, class="DRUID" },
+        [18995997] = { icon="orderhall", label=PtoBelameth, note=Amirdrassil, class="DRUID" }
 	    },
     [648] = { -- Acherus: The Ebon Hold - Hall of Command *DEATHKNIGHT*
         [24703370] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" }
@@ -976,7 +992,9 @@ DB.points = {
         [62105419] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Horde" },
         [62105420] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Alliance" },
         [59764474] = { icon="zeppelin", label=ZtoDI, note=WakingShores, faction="Horde" },
-        [59764475] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" }
+        [59764475] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
+        [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
+        [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1034,7 +1052,8 @@ DB.points = {
         },
     [62] = { -- Darkshore
         [48023627] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
-        [46243511] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" }
+        [46243511] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
+        [53691871] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [89] = { -- Darnassus
         [44247867] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" }
@@ -1046,16 +1065,17 @@ DB.points = {
         },
     [56] = { -- Wetlands
         [06216261] = { icon="aboat", label=BtoTheramore, note=DustwallowMarsh, faction="Horde" },
-        [06216260] = { icon="aboat", label=BtoTheramore, note=DustwallowMarsh, faction="Alliance" },
+        [06216260] = { icon="boat", label=BtoTheramore, note=DustwallowMarsh, faction="Alliance" },
         [04415718] = { icon="aboat", label=BtoHowlingFjord, note=Valgarde, faction="Horde" },
-        [04415717] = { icon="aboat", label=BtoHowlingFjord, note=Valgarde, faction="Alliance" }
+        [04415717] = { icon="boat", label=BtoHowlingFjord, note=Valgarde, faction="Alliance" }
         },
     [78] = { -- Un'Goro Crater
         [50520774] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
         [52885576] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} } -- Un'Goro Crater, Fire Plume Ridge
         },
     [69] = { -- Feralas
-        [51341058] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
+        [51341058] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [44914274] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [80] = { -- Moonglade
         [68006025] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
@@ -1084,8 +1104,8 @@ DB.points = {
         [45995482] = { icon="boat", multilabel={BtoTheramore, BtoHowlingFjord}, multinote={DustwallowMarsh, Valgarde}, faction="Alliance" },
         [43179373] = { icon="boat", label=BtoRatchet, note=NorthernBarrens },
         [56161316] = { icon="portal", multilabel={PtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
-        [43637155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken},
-                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus},
+        [43637155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoBelameth},
+                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil},
                                     requirements={multiquest={[11]=47186, [17]=60151}, multilevel={[18]=58}}, faction="Alliance" },
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh, faction="Horde" },
         [43863354] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, multilabel={PtoOG, PtoSM, PtoStranglethornVale, PtoHellfirePeninsula, PtoHowlingFjord}, multinote={Durotar, EversongWoods..") ("..Orboftranslocation, GromgolBaseCamp, Outland, VengeanceLanding}, faction="Horde" },
@@ -1120,7 +1140,8 @@ DB.points = {
         [17592554] = { icon="boat", label=BtoBoreanTundra, note=ValianceKeep, faction="Alliance" },
         [23805620] = { icon="portal", label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
         [69403140] = { icon="tram", label=DrTtoIF, note=DunMorogh },
-        [63333734] = { icon="molemachine", label=GetAreaInfo(6816) } -- Stormwind
+        [63333734] = { icon="molemachine", label=GetAreaInfo(6816) }, -- Stormwind
+        [43289760] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
         },
     [499] = { -- Deeprun Tram
         [42554350] = { icon="tram", label=DrTtoIF, note=DunMorogh },
