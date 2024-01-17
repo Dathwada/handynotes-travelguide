@@ -1,5 +1,15 @@
 ## Revision History:
 
+#### v2.15.0 (January 17, 2024)
+-------------------------------
+* Added new Patch 10.2.5 Portals
+* Added level requirements for Portals to Emerald Dream
+* Fixed some localizations
+* Updated localizations
+    * ruRU by [ZamestoTV](https://www.curseforge.com/members/zamestotv)
+    * zhTW by [lostindark0](https://www.curseforge.com/members/lostindark0)
+* Bump .toc to 100205
+
 #### v2.14.9 (November 19, 2023)
 -------------------------------
 * Added Portal to The Timeways in Valdrakken (Season 3)
