@@ -140,6 +140,7 @@ L["Portal to Central Encampment"] = "通往中心营地的传送门"
 L["Portal to The Timeways"] = "通往时间流的传送门"
 L["Portal to Bel'ameth"] = "通往贝拉梅斯的传送门"
 L["Portal to Feathermoon Stronghold"] = "通往羽月要塞的传送门"
+L["Portal to Mount Hyjal"] = "通往海加尔山的传送门"
 
 --==========================================SHADOWLANDS===========================================--
 
