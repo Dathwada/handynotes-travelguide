@@ -138,6 +138,7 @@ L["Portal to Central Encampment"] = true
 L["Portal to The Timeways"] = true
 L["Portal to Bel'ameth"] = true
 L["Portal to Feathermoon Stronghold"] = true
+L["Portal to Mount Hyjal"] = true
 
 --==========================================SHADOWLANDS===========================================--
 
