@@ -33,6 +33,7 @@ local PtoOhnahranPlains = L["Portal to Ohn'ahran Plains"]
 local DragonIsle = GetMapNames(1978)
 local PtoTimeways = L["Portal to The Timeways"]
 local PtoBelameth = L["Portal to Bel'ameth"]
+local PtoMountHyjal = L["Portal to Mount Hyjal"]
 local Amirdrassil = GetMapNames(1978, 2239)
 
 ----------------------------------------------COVENANT----------------------------------------------
@@ -287,7 +288,7 @@ DB.points = {
         [89633797] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
         [55466364] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [51391836] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
-        [55316473] = { icon="portal", multilabel={PtoDarkshore, PtoHyjal, PtoValsharah}, multinote={Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
+        [55316473] = { icon="portal", multilabel={PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
         [58588498] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
         },
     [2200] = { -- Emerald Dream
