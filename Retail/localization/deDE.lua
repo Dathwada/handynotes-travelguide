@@ -138,6 +138,7 @@ L["Portal to Central Encampment"] = "Portal zum Zentrallager"
 L["Portal to The Timeways"] = "Portal zu den Zeitwegen"
 L["Portal to Bel'ameth"] = "Portal nach Bel'ameth"
 L["Portal to Feathermoon Stronghold"] = "Portal zur Mondfederfeste"
+--L["Portal to Mount Hyjal"] = "Portal to Mount Hyjal"
 
 --==========================================SHADOWLANDS===========================================--
 
