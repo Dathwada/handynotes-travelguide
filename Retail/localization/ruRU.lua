@@ -141,6 +141,7 @@ L["Portal to Central Encampment"] = "Портал в центральный ла
 L["Portal to The Timeways"] = "Портал в Потоки Времени"
 -- L["Portal to Bel'ameth"] = ""
 -- L["Portal to Feathermoon Stronghold"] = ""
+-- L["Portal to Mount Hyjal"] = ""  
 
 --==========================================SHADOWLANDS===========================================--
 
