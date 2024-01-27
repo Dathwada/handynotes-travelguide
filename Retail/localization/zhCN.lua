@@ -234,7 +234,7 @@ L["Portal to Hyjal"] = "通往海加尔的传送门"
 ------------------------------------------------WotLK-----------------------------------------------
 
 L["Portal to the Purple Parlor"] = "通往紫色天台的传送门"
-L["Boat to Howling Fjord"] = "前往嚎风峡湾的船"
+L["Boat to Howling Fjord"] = "前往匕鞘湾（嚎风峡湾）的船"
 L["Boat to Kamagua"] = "前往卡玛古（嚎风峡湾）的船"
 L["Portal to Howling Fjord"] = "通往嚎风峡湾的传送门"
 L["Boat to Borean Tundra"] = "前往无畏要塞（北风苔原）的船"
@@ -265,7 +265,7 @@ L["in Undercity Magic Quarter"] = "幽暗城魔法区内部"
 
 L["Zeppelin to Stranglethorn Vale"] = "前往荆棘谷的飞艇"
 L["Portal to Stranglethorn Vale"] = "通往荆棘谷的传送门"
-L["Boat to Booty Bay"] = "前往藏宝海湾的船"
+L["Boat to Booty Bay"] = "前往藏宝海湾（荆棘谷）的船"
 
 L["Portal to Stormwind"] = "通往暴风城的传送门"
 L["Boat to Stormwind"] = "前往暴风城的船"
@@ -284,7 +284,7 @@ L["Portal to Darnassus"] = "通往达纳苏斯的传送门"
 
 L["Boat to Ratchet"] = "前往棘齿城（北贫瘠之地）的船"
 
-L["Boat to Theramore Isle"] = "前往塞拉摩的船"
+L["Boat to Theramore Isle"] = "前往塞拉摩岛（尘泥沼泽）的船"
 
 L["Portal to Caverns of Time"] = "通往时光之穴的传送门"
 
