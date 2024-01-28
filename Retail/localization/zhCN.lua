@@ -145,7 +145,7 @@ L["Portal to Mount Hyjal"] = "通往海加尔山的传送门"
 --==========================================SHADOWLANDS===========================================--
 
 L["Portal to Oribos"] = "通往奥利波斯的传送门"
-L["Waystone to Oribos"] = "通往奥利波斯的道标石"
+L["Waystone to Oribos"] = "前往奥利波斯的道标石"
 L["To Ring of Transference"] = "前往转移之环"
 L["To Ring of Fates"] = "前往命运之环"
 L["Into the Maw"] = "进入噬渊"
