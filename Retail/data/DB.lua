@@ -307,7 +307,7 @@ DB.points = {
         [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
         [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} }, -- TODO find out and add accountwide quest
         [24795365] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
-        [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
+        [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
         [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
         },
     [2112] = { -- Valdrakken
