@@ -231,11 +231,6 @@ local EasternPlaguelands = GetMapNames(13, 23)
 local Westfall = GetMapNames(13, 52)
 local BurningSteppes = GetMapNames(13, 36)
 local WtoUngoroCrater = L["Waygate to Un'Goro Crater"]
-local PtoKarazhan = L["Portal to Karazhan"]
-local DeadwindPass = GetMapNames(13, 42)
-local PtoMechagon = L["Portal to Mechagon"]
-local PtoGorgrond = L["Portal to Gorgrond"]
-local Draenor = GetMapNames(572)
 local TheMasonary = L["The Masonary"]
 local inBRM = L["inside the Blackrock Mountain"]
 local Feralas = GetMapNames(12, 69)
@@ -364,8 +359,7 @@ DB.points = {
         [49506073] = { icon="teleportPlatform", label=RingFates },
         [43375150] = { icon="teleportPlatform", label=RingFates },
         [30702319] = { icon="portal", label=KeepersRespite, note=Korthia, requirements={quest=63665} },
-        [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} },
-        [56267594] = { icon="portal", multilabel={PtoKarazhan, PtoGorgrond, PtoMechagon}, multinote={DeadwindPass, Draenor, KulTiras} }
+        [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} }
         },
     [1536] = { -- Maldraxxus
         [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} }
@@ -789,6 +783,7 @@ DB.points = {
 
     [198] = { -- Mount Hyjal
         [62602310] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [62202200] = { icon="portal", label=PtoBelameth, note=Amirdrassil },
         [63492444] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58992623] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [57187711] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} } -- Mount Hyjal, Throne of Flame
