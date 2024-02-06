@@ -202,7 +202,7 @@ L["Portal to Dreamgrove"] = "通往梦境林地的传送门"
 
 -------------------------------------------------WoD------------------------------------------------
 
-L["Portal to Warspear"] = "通往阿什兰的传送门"
+L["Portal to Warspear"] = "通往战争之矛（阿什兰）的传送门"
 L["Portal to Stormshield"] = "通往暴风之盾（阿什兰）的传送门"
 L["Portal to Vol'mar"] = "通往沃马尔的传送门"
 L["Portal to Lion's watch"] = "通往雄狮岗哨的传送门"
