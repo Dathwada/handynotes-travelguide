@@ -510,7 +510,7 @@ DB.points = {
         [58096766] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} }, -- The Broken Shore, Broken Shore
         [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
         [46102532] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
+        [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
         },
     [627] = { -- Dalaran Broken Isles
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -549,7 +549,7 @@ DB.points = {
     [641] = { -- Val'sharah
         [41742385] = { icon="orderhall", multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
         [54707490] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
-        [54847186] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
+        [54847186] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
         },
     [680] = { -- Suramar
         [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
@@ -783,10 +783,10 @@ DB.points = {
 
     [198] = { -- Mount Hyjal
         [62602310] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [62202200] = { icon="portal", label=PtoBelameth, note=Amirdrassil },
         [63492444] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58992623] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
-        [57187711] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} } -- Mount Hyjal, Throne of Flame
+        [57187711] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
+        [62442272] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
         },
     [207] = { -- Deepholm
         [48515381] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -964,8 +964,8 @@ DB.points = {
         [29922620] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59468340] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59448340] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [56122758] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [56222774] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [56122758] = { icon="portal", multilabel={PtoSW, PtoBelameth}, multinote={ElwynnForest, Amirdrassil}, faction="Alliance" },
+        [56222774] = { icon="portal", multilabel={PtoOG, PtoBelameth}, multinote={Durotar, Amirdrassil}, faction="Horde" },
         [29332713] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoDarnassus, note=Teldrassil },
         [45375437] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [45375436] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
