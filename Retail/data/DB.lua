@@ -973,8 +973,8 @@ DB.points = {
         [58154246] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [42857909] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
         [42847905] = { icon="portal", requirements={level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" },
-        [59414237] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken},
-                                      multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus},
+        [59414237] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, PtoDala, PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken},
+                                      multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus},
                                       requirements={multiquest={[4]=25924, [6]=26798, [10]=46931, [15]=60151}, multilevel={[16]=58}}, faction="Horde" },
         [46612303] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
         [46302282] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
@@ -1001,8 +1001,8 @@ DB.points = {
         [14222575] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [1] = { -- Durotar
-        [48091027] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken},
-                                    multinote={CrystalsongForest, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus},
+        [48091027] = { icon="portal", multilabel={PtoDala, PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken},
+                                    multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus},
                                     requirements={multiquest={[3]=46931, [8]=60151}, multilevel={[9]=58}}, faction="Horde" },
         [45550380] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [45550381] = { icon="zeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
