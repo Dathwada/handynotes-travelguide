@@ -1,5 +1,14 @@
 ## Revision History:
 
+#### v2.16.0 (March 20, 2024)
+-------------------------------
+* Added missing Bel'ameth Portal in Mount Hyjal [[Issue#42]](https://github.com/Dathwada/handynotes-travelguide/issues/42)
+* Added missing Portal to Silvermoon City in Orgrimmar [[Issue#44]](https://github.com/Dathwada/handynotes-travelguide/issues/44)
+* Removed Shadowlands Season 4 Portals in Oribos [[Issue#41]](https://github.com/Dathwada/handynotes-travelguide/issues/41)
+* Updated zhCN.lua [[PR#39]](https://github.com/Dathwada/handynotes-travelguide/pull/39)
+* Fixed Portal to Orgrimmar visibility for Alliance [[Issue#40]](https://github.com/Dathwada/handynotes-travelguide/issues/40)
+* Bump .toc to 100206
+
 #### v2.15.0 (January 17, 2024)
 -------------------------------
 * Added new Patch 10.2.5 Portals
@@ -14,7 +23,7 @@
 -------------------------------
 * Added Portal to The Timeways in Valdrakken (Season 3)
     * Removed Season 2 Portals in Valdrakken (Season 2)
-* Added missing Portals in Blasted Lands for Horde and Alliance [Issue#36](https://github.com/Dathwada/handynotes-travelguide/issues/36)
+* Added missing Portals in Blasted Lands for Horde and Alliance [[Issue#36]](https://github.com/Dathwada/handynotes-travelguide/issues/36)
 * Added the Potal to Valdrakken for Alliance
     * Added requirements for Portal to Valdrakken
 * Updated zhCN by [nanjuekaien1](https://github.com/nanjuekaien1)
