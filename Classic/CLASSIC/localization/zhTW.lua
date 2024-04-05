@@ -1,7 +1,7 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "zhCN", false, true)
+local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)", "zhTW", false, true)
 
 if not L then return end
--- Simplified Chinese translation by swimstiger https://www.curseforge.com/members/swimstiger
+-- Traditional Chinese translation by ...
 if L then
 L["Boat to Auberdine"] = "去奥伯丁的船"
 L["Boat to Booty Bay"] = "去藏宝海湾的船"
@@ -13,8 +13,8 @@ L["config_boat"] = "船"
 L["config_boat_alliance"] = "联盟船"
 L["config_boat_alliance_desc"] = "显示联盟方船的位置"
 L["config_boat_desc"] = "显示船的位置"
-L["config_easy_waypoints"] = "简易导航点"
-L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
+L["config_easy_waypoints"] = "簡易路徑點"
+L["config_easy_waypoints_desc"] = "激活創建簡化的路徑點。\n右鍵點擊設置路徑點，使用CTRL + 右鍵選取更多選項。"
 L["config_easy_waypoints_requires"] = "需要"
 L["config_icon_alpha"] = "图标透明度"
 L["config_icon_alpha_desc"] = "控制图标的透明程度"
@@ -25,9 +25,9 @@ L["config_note_desc"] = "在鼠标提示中显示备注信息"
 L["config_plugin_desc"] = "在世界地图和小地图上显示船和飞艇的位置"
 L["config_restore_nodes"] = "重置隐藏的标记"
 L["config_restore_nodes_desc"] = "重新显示所有你右击并选择“隐藏”的标记"
-L["config_restore_nodes_print"] = "所有隐藏图标已还原"
-L["config_tab_general"] = "通用"
-L["config_tab_scale_alpha"] = "缩放/透明度"
+L["config_restore_nodes_print"] = "已經恢復所有隱藏的節點"
+L["config_tab_general"] = "一般"
+L["config_tab_scale_alpha"] = "縮放 / 透明度"
 L["config_tram"] = "矿道地铁"
 L["config_tram_desc"] = "显示暴风城到铁炉堡的矿道地铁入口位置"
 L["config_what_to_display"] = "要显示哪些图标？"
@@ -39,7 +39,7 @@ L["config_zeppelin_horde_desc"] = "显示部落方飞艇的位置"
 L["Deeprun Tram to Ironforge"] = "去铁炉堡的矿道地铁"
 L["Deeprun Tram to Stormwind"] = "去暴风城的矿道地铁"
 L["handler_context_menu_add_tomtom"] = "添加到TomTom"
-L["handler_context_menu_hide_node"] = "隐藏图标"
+L["handler_context_menu_hide_node"] = "隱藏此節點"
 L["Zeppelin to Orgrimmar"] = "去奥格瑞玛的飞艇"
 L["Zeppelin to Stranglethorn Vale"] = "去荆棘谷的飞艇"
 L["Zeppelin to Undercity"] = "去幽暗城的飞艇"

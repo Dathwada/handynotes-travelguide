@@ -44,6 +44,23 @@ L["Zeppelin to Orgrimmar"] = "Дирижабль в Оргриммар"
 L["Zeppelin to Stranglethorn Vale"] = "Дирижабль в Тернистую долину"
 L["Zeppelin to Undercity"] = "Дирижабль в Подгород"
 
+-- BCC
+L["Boat to Exodar"] = "Корабль в Экзодар"
+L["config_portal"] = "Портал"
+L["config_portal_desc"] = "Показать расположение портала."
+L["Orb of translocation"] = "Сфера транслокации"
+L["Portal to Silvermoon"] = "Портал в Луносвет"
+L["Portal to Undercity"] = "Портал в Подгород"
+L["Shattrath Portal to Darnassus"] = "Шаттратский портал в Дарнас"
+L["Shattrath Portal to Exodar"] = "Шаттратский портал в Экзодар"
+L["Shattrath Portal to Ironforge"] = "Шаттратский портал в Стальгорн"
+L["Shattrath Portal to Isle of Quel'Danas"] = "Портал из Шаттрата на остров Кель'Данас"
+L["Shattrath Portal to Orgrimmar"] = "Шаттратский портал в Оргриммар"
+L["Shattrath Portal to Silvermoon"] = "Шаттратский портал в Луносвет"
+L["Shattrath Portal to Stormwind"] = "Шаттратский портал в Штормград"
+L["Shattrath Portal to Thunder Bluff"] = "Шаттратский портал в Громовой Утес"
+L["Shattrath Portal to Undercity"] = "Шаттратский портал в Подгород"
+
 -- WotLKC
 L["Boat to Borean Tundra"] = "Корабль в Борейскую тундру"
 L["Boat to Howling Fjord"] = "Корабль в Ревущий фьорд"
