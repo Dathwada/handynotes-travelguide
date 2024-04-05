@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v3.8 (April 05, 2024)
+-------------------------------
+* Updated localizations (If you would like to contribute localizations, please visit [Curseforge](https://legacy.curseforge.com/wow/addons/handynotes-travelguide-classic/localization))
+* Bump .toc to 11502
 
 #### v3.7 (December 30, 2023)
 -------------------------------
