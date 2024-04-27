@@ -23,6 +23,7 @@ local portal_red  = private.constants.icon.portal_red
 ----------------------------------------------------------------------------------------------------
 
 local RetrievindData    = L["handler_tooltip_data"]
+local RequiresLevel     = L["handler_tooltip_requires_level"]
 local RequiresQuest     = L["handler_tooltip_quest"]
 -- local RequiresRep    = L["handler_tooltip_rep"]
 
@@ -44,27 +45,60 @@ local function ReqFulfilled(req, ...)
         return standing >= req.reputation[2]
     end
 
+    if (req.multiquest) then
+        for i, quest in pairs(req.multiquest) do
+            if (not IsQuestCompleted(quest)) then return false end
+        end
+    end
+
 	return true
+end
+
+local function RefreshAfter(time)
+    C_Timer.After(time, function() addon:Refresh() end)
 end
 
 -- workaround to prepare the multilabels with and without notes
 -- because the game displays the first line in 14px and
 -- the following lines in 13px with a normal for loop.
-local function PrepareLabel(label, note)
+local function PrepareLabel(label, note, level, quest)
     local t = {}
+
     for i, name in ipairs(label) do
-        if (label and private.db.show_note) then
-            if label[i] and note[i] then
-                t[i] = name.." ("..note[i]..")"
-             else
-            -- if there is no note for this Portal
-                t[i] = name
-            end
-        else
-        -- if the private.db.show_note == false
-            t[i] = name
+        local NOTE = ''
+        local LEVEL = ''
+        local QUEST = ''
+
+        -- set spell name as label
+        if (type(name) == "number") then
+            name = GetSpellInfo(name)
         end
+
+        -- add additional notes
+        if (note and note[i] and private.db.show_note) then
+            NOTE = " ("..note[i]..")"
+        end
+
+        -- add required level information
+        if (level and level[i] and UnitLevel("player") < level[i]) then
+            LEVEL = "\n    |cFFFF0000"..RequiresLevel..": "..level[i].."|r"
+        end
+
+        -- add required quest information
+        if (quest and quest[i] and not IsQuestCompleted(quest[i])) then
+            if (C_QuestLog.GetQuestInfo(quest[i]) ~= nil) then
+                local title = C_QuestLog.GetQuestInfo(quest[i])
+                QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
+            else
+                QUEST = "\n    |cFFFF00FF"..RetrievindData.."|r" -- pink
+                RefreshAfter(1) -- Refresh
+            end
+        end
+
+        -- store everything together
+        t[i] = name..NOTE..LEVEL..QUEST
     end
+
     return table.concat(t, "\n")
 end
 
@@ -129,7 +163,11 @@ local function SetTooltip(tooltip, point)
             tooltip:AddLine(point.label)
         end
         if (point.multilabel) then
-            tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
+            if (pointreq) then
+                tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
+            else
+                tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
+            end
         end
         if (point.note and profile.show_note) then
             tooltip:AddLine("("..point.note..")")
