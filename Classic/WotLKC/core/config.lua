@@ -60,33 +60,21 @@ config.options = {
                     type = "toggle",
                     name = L["config_boat_alliance"],
                     desc = L["config_boat_alliance_desc"],
-                    hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Alliance" then
-                            return true
-                        end
-                    end,
+                    hidden = function() return select(1, UnitFactionGroup("player")) == "Alliance" end,
                     order = 13,
                 },
                 show_zeppelin = {
                     type = "toggle",
                     name = L["config_zeppelin"],
                     desc = L["config_zeppelin_desc"],
-                    hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Alliance" then
-                            return true
-                        end
-                    end,
+                    hidden = function() return select(1, UnitFactionGroup("player")) == "Alliance" end,
                     order = 14,
                 },
                 show_hzeppelin = {
                     type = "toggle",
                     name = L["config_zeppelin_horde"],
                     desc = L["config_zeppelin_horde_desc"],
-                    hidden = function()
-                        if select(1, UnitFactionGroup("player")) == "Horde" then
-                            return true
-                        end
-                    end,
+                    hidden = function() return select(1, UnitFactionGroup("player")) == "Horde" end,
                     order = 15,
                 },
                 show_tram = {
