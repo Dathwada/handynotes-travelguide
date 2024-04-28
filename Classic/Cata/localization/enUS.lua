@@ -72,8 +72,9 @@ L["handler_context_menu_hide_node"] = "Hide this node"
 --============================================TOOLTIPS============================================--
 
 L["handler_tooltip_data"] = "RETRIEVING DATA..."
-L["handler_tooltip_quest"] = "Unlocked with quest"
-L["handler_tooltip_rep"] = "Requires reputation with"
+L["handler_tooltip_requires_quest"] = "Unlocked with quest"
+L["handler_tooltip_requires_reputation"] = "Requires reputation with"
+L["handler_tooltip_requires_level"] = "Requires at least player level"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -105,18 +106,18 @@ L["Portal to Silvermoon"] = true
 L["Portal to Undercity"] = true
 L["Orb of translocation"] = true
 
-L["Shattrath Portal to Thunder Bluff"] = true
 L["Shattrath Portal to Orgrimmar"] = true
-L["Shattrath Portal to Undercity"] = true
-L["Shattrath Portal to Silvermoon"] = true
 
 L["Boat to Exodar"] = true
-L["Shattrath Portal to Exodar"] = true
-L["Shattrath Portal to Darnassus"] = true
 L["Shattrath Portal to Stormwind"] = true
-L["Shattrath Portal to Ironforge"] = true
 
 L["Shattrath Portal to Isle of Quel'Danas"] = true
+
+L["To Caverns of Time"] = true
+L["Speak with Zephyr"] = true
+
+L["Portal to Darnassus"] = true
+L["Portal to Exodar"] = true
 
 L["Portal to Stormwind"] = true
 L["Boat to Stormwind"] = true
@@ -133,4 +134,18 @@ L["Boat to Moa'ki Harbor"] = true
 L["Waygate to Sholazar Basin"] = true
 L["Waygate to Un'Goro Crater"] = true
 L["Portal to Blasted Lands"] = true
+
+L["Dalaran Portal to Caverns of Time"] = true
+
+L["Portal to Deepholm"] = true
+L["Portal to Hyjal"] = true
+L["Portal to Temple of Earth"] = true
+L["Portal to Therazane's Throne"] = true
+L["Portal to Tol Barad"] = true
+L["Portal to Twilight Highlands"] = true
+L["Portal to Uldum"] = true
+L["Portal to Vashj'ir"] = true
+
+L["Portal to Dalaran Crater"] = true
+L["Portal to the Sepulcher"] = true
 end

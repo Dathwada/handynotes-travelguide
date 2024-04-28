@@ -43,7 +43,6 @@ local BtoBootyBay = L["Boat to Booty Bay"]
 local Wetlands = GetMapNames(1415, 1437)
 local BtoMenethilHarbor = L["Boat to Menethil Harbor"]
 
-local StranglethornVale = GetMapNames(1415, 1434)
 local GromgolBaseCamp = GetMapNames(1415)..", "..GetAreaInfo(117)
 local ZtoStranglethornVale = L["Zeppelin to Stranglethorn Vale"]
 local BtoRatchet = L["Boat to Ratchet"]
@@ -54,30 +53,23 @@ local BtoTheramore = L["Boat to Theramore Isle"]
 local Teldrassil = GetMapNames(1414, 1438)
 local BtoDarnassus = L["Boat to Darnassus"]
 
--- local Darkshore = GetMapNames(1414, 1439)
--- local BtoAuberdine = L["Boat to Auberdine"]
-
 local EversongWoods = GetMapNames(1415, 1941)
 local PtoSM = L["Portal to Silvermoon"]
 
 local Mulgore = GetMapNames(1414, 1412)
-local SPtoTB = L["Shattrath Portal to Thunder Bluff"]
 local SPtoOG = L["Shattrath Portal to Orgrimmar"]
-local SPtoUC = L["Shattrath Portal to Undercity"]
-local SPtoSM = L["Shattrath Portal to Silvermoon"]
 
 local AzuremystIsle = GetMapNames(1414, 1943)
 local BtoExodar = L["Boat to Exodar"]
-local SPtoExodar = L["Shattrath Portal to Exodar"]
-local SPtoDarnassus = L["Shattrath Portal to Darnassus"]
 local SPtoSW = L["Shattrath Portal to Stormwind"]
-local SPtoIF = L["Shattrath Portal to Ironforge"]
 
 local SPtoIoQD = L["Shattrath Portal to Isle of Quel'Danas"]
 
+local PtoExodar = L["Portal to Exodar"]
+local PtoDarnassus = L["Portal to Darnassus"]
+
 ------------------------------------------------WotLK-----------------------------------------------
 
-local CrystalsongForest = GetMapNames(113, 127)
 local PtotPurpleParlor = L["Portal to the Purple Parlor"]
 local BoreanTundra = GetMapNames(113, 114)
 local ZtoBoreanTundra = L["Zeppelin to Borean Tundra"]
@@ -102,6 +94,9 @@ local BtoSW = L["Boat to Stormwind"]
 local PtoOG = L["Portal to Orgrimmar"]
 local ZtoHF = L["Zeppelin to Howling Fjord"]
 local PtoBL = L["Portal to Blasted Lands"]
+local DPtoCavernsOfTime = L["Dalaran Portal to Caverns of Time"]
+local ToCavernsofTime = L["To Caverns of Time"]
+local Tanaris = GetMapNames(1414, 1446)
 
 -------------------------------------------------CATA-----------------------------------------------
 
@@ -115,9 +110,12 @@ local PtoHyjal = L["Portal to Hyjal"]
 local PtoTwilightHighlands = L["Portal to Twilight Highlands"]
 local PtoTempleofEarth = L["Portal to Temple of Earth"]
 local PtoTherazanesThrone = L["Portal to Therazane's Throne"]
-
 local StranglethornCape = GetMapNames(1415, 210)
 local NorthernBarrens = GetMapNames(1414, 1413)
+local PtoDalaCrater = L["Portal to Dalaran Crater"]
+local HillsbradFoothills = GetMapNames(1415, 1424)
+local PtoSepulcher = L["Portal to the Sepulcher"]
+local SilverpineForest = GetMapNames(1415, 1421)
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -139,6 +137,15 @@ DB.points = {
             multilabel    = {TABLE},            -- label for multi destination nodes
             note          = ["STRING"],         -- additional destination notes
             multinote     = {TABLE},            -- additional notes for multi destination nodes
+            requirements  = {                   -- additional notes for requirements
+                TABLE FOR:
+                quest         = [ID],           -- additional notes for a required quest
+                multiquest    = {TABLE},        -- additional notes for multi required quests
+                spell         = [ID],           -- additional notes for a required spell
+                level         = [PLAYERLEVEL],  -- additional notes for a required player level
+                multilevel    = {TABLE},        -- additional notes for a multi required player levels
+                reputation    = {ID, standing}, -- additional notes for a required reputation
+            },
             faction       = ["FACTION"],        -- shows only for selected faction
             class         = [CLASS NAME],       -- shows only for selected class
         },
@@ -154,7 +161,7 @@ DB.points = {
         [03221535] = { icon="boat", label=BtoBoreanTundra, note=ValianceKeep, faction="Alliance" },
         [03221534] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [19124614] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" },
-        [31891165] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}}, faction="Alliance" },
+        [31891165] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}, multilevel={85}}, faction="Alliance" },
         },
     [1453] = { -- Stormwind
         [69173073] = { icon="tram", label=DrTtoIF, note=DunMorogh },
@@ -163,7 +170,7 @@ DB.points = {
         [17442547] = { icon="boat", label=BtoBoreanTundra, note=ValianceKeep, faction="Alliance" },
         [17222582] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
         [48988734] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" },
-        [74501844] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}}, faction="Alliance" },
+        [74501844] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}, multilevel={85}}, faction="Alliance" },
         },
     [1456] = { -- Thunderbluff
         [23151351] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
@@ -214,8 +221,8 @@ DB.points = {
         [50007727] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} },
         [57584530] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
         [45625602] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
-        [39551279] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }, -- review
-        [29942698] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }, -- review
+        [39561280] = { icon="portal", multilabel={PtoBL, PtoExodar}, multinote={EasternKingdoms, AzuremystIsle}, faction="Alliance" },
+        [29992703] = { icon="portal", multilabel={PtoBL, PtoDarnassus}, multinote={EasternKingdoms, Teldrassil}, faction="Alliance" },
         [56122958] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [56222973] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
@@ -246,7 +253,11 @@ DB.points = {
         [46885813] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" },
         [60875918] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={quest=27537}, faction="Alliance" },
         [60115603] = { icon="portal", label=PtoOG, note=Durotar, requirements={quest=26798}, faction="Horde" },
-        [43557140] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}}, faction="Alliance" },
+        [43557140] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=27537}, multilevel={85}}, faction="Alliance" },
+        [41003949] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", requirements={quest=27478} },
+        [43674008] = { icon="portal", label=PtoSepulcher, note=SilverpineForest, faction="Horde", requirements={quest=27478} },
+        [35224839] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=85}, faction="Alliance" },
+        [34394957] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=85}, faction="Horde" },
         },
     [1434] = { -- Northern Barrens
         [37015273] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -257,14 +268,14 @@ DB.points = {
     [224] = { -- Stranglethorn Vale
         [36567576] = { icon="boat", label=BtoRatchet, note=Barrens },
         [42253355] = { icon="zeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
-        [42253356] = { icon="zeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Alliance" }
+        [42253356] = { icon="hzeppelin", multilabel={ZtoOG, ZtoUC}, multinote={Durotar, Tirisfal}, faction="Alliance" }
         },
     [210] = { -- Cape of Stranglethorn
         [38706680] = { icon="boat", label=BtoRatchet, note=NorthernBarrens }
         },
     [1426] = { -- Dun Morogh
         [63432936] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
-        [55452221] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
+        [62612036] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
         },
     [1454] = { -- Orgrimmar
         [35466911] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
@@ -277,11 +288,11 @@ DB.points = {
         [45306179] = { icon="zeppelin", label=ZtoBoreanTundra, note=WarsongHold, faction="Horde" },
         [52885242] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         [52885243] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
-        [50103773] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=26798}}, faction="Horde" },
+        [50103773] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=26798}, multilevel={85}}, faction="Horde" },
         },
     [86] = { -- Orgrimmar - The Cleft of Shadow
         [44716789] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
-    },
+        },
     [1455] = { -- Ironforge
         [76985153] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
         [27230704] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
@@ -295,7 +306,7 @@ DB.points = {
         [54939405] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [52068947] = { icon="boat", label=BtoExodar, note=AzuremystIsle, faction="Alliance" },
         [52068948] = { icon="aboat", label=BtoExodar, note=AzuremystIsle, faction="Horde" },
-        [25636392] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" } -- review
+        [29395588] = { icon="portal", multilabel={PtoBL, PtoExodar}, multinote={EasternKingdoms, AzuremystIsle}, faction="Alliance" }
         },
     -- [1439] = { -- Darkshore
     --     [33194006] = { icon="boat", label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
@@ -306,10 +317,16 @@ DB.points = {
     --     [30724097] = { icon="aboat", label=BtoExodar, note=AzuremystIsle, faction="Horde" }
     --     },
     [1457] = { -- Darnassus
-        [40528168] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
+        [44117841] = { icon="portal", multilabel={PtoBL, PtoExodar}, multinote={EasternKingdoms, AzuremystIsle}, faction="Alliance" }
         },
     [1449] = { -- Un'Goro Crater
         [50520774] = { icon="portal", label=WtoSholazarBasin, note=Northrend, requirements={quest=12613} }
+        },
+    [1421] = { -- Silverpine Forest
+        [47254337] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills, faction="Horde", requirements={quest=27478} }
+        },
+    [1424] = { -- Hillsbrad Foothills
+        [30293662] = { icon="portal", label=PtoSepulcher, note=SilverpineForest, faction="Horde", requirements={quest=27478} }
         },
 
 -----------------------------------------------------------BCC-----------------------------------------------------------
@@ -329,32 +346,37 @@ DB.points = {
     [1943] = { -- Azuremyst Isle
         [20355419] = { icon="boat", label=BtoDarnassus, note=Teldrassil, faction="Alliance" },
         [20355420] = { icon="aboat", label=BtoDarnassus, note=Teldrassil, faction="Horde" },
-        [25914587] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
+        [26344629] = { icon="portal", multilabel={PtoBL, PtoDarnassus}, multinote={EasternKingdoms, Teldrassil}, faction="Alliance" }
         },
     [1947] = { -- The Exodar
-        [46226094] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Alliance" }
+        [47886255] = { icon="portal", multilabel={PtoBL, PtoDarnassus}, multinote={EasternKingdoms, Teldrassil}, faction="Alliance" }
         },
     [1955] = { -- Shattrath
-        [52205290] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
-        [55793661] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF}, multinote={Teldrassil, ElwynnForest, DunMorogh, EasternKingdoms}, faction="Alliance" },
-        [59184833] = { icon="portal", label=SPtoSM, note=EversongWoods, faction="Horde" },
-        [59554665] = { icon="portal", label=SPtoExodar, note=AzuremystIsle, faction="Alliance" },
-        [48584203] = { icon="portal", label=SPtoIoQD, note=EasternKingdoms }
-        -- [74803160] = { icon="portal", label=PtoCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } } added in patch 2.4
+        [56814886] = { icon="portal", label=SPtoOG, note=Durotar, faction="Horde" },
+        [57214825] = { icon="portal", label=SPtoSW, note=ElwynnForest, faction="Alliance" },
+        [48584203] = { icon="portal", label=SPtoIoQD, note=EasternKingdoms },
+        [74803160] = { icon="portal", label=ToCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } }
         },
     [1952] = { -- Terokkar Forest
-        [30612399] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
-        [30612398] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" }
+        [30612399] = { icon="portal", multilabel={SPtoOG, SPtoIoQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [30612398] = { icon="portal", multilabel={SPtoSW, SPtoIoQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [35622076] = { icon="portal", label=ToCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } }
         },
     [1944] = { -- Hellfire Peninsula
         [88564769] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [88615281] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [1945] = { -- Outlands
-        [43326601] = { icon="portal", multilabel={SPtoTB, SPtoOG, SPtoUC, SPtoSM, SPtoIoQD}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, EasternKingdoms}, faction="Horde" },
-        [43326600] = { icon="portal", multilabel={SPtoDarnassus, SPtoSW, SPtoIF, SPtoExodar, SPtoIoQD}, multinote={Teldrassil, ElwynnForest, DunMorogh, AzuremystIsle, EasternKingdoms}, faction="Alliance" },
+        [43326601] = { icon="portal", multilabel={SPtoOG, SPtoIoQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [43326600] = { icon="portal", multilabel={SPtoSW, SPtoIoQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [44876501] = { icon="portal", label=ToCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
         [68885138] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [68905289] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        },
+    [1951] = { -- Nagrand
+        [88065172] = { icon="portal", multilabel={SPtoOG, SPtoIoQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [88065173] = { icon="portal", multilabel={SPtoSW, SPtoIoQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [92964857] = { icon="portal", label=ToCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } }
         },
 
 ---------------------------------------------------------WotLKC----------------------------------------------------------
@@ -362,15 +384,17 @@ DB.points = {
     [125] = { -- Dalaran Northrend
         [40086282] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302542] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [25634785] = { icon="portal", label=PtotPurpleParlor }
+        [25974412] = { icon="portal", label=PtotPurpleParlor },
+        [25455155] = { icon="portal", label=DPtoCavernsOfTime, note=Tanaris }
         },
     [127] = { -- Crystalsong Forest
         [26194278] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [31223174] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
+        [31223174] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [22123971] = { icon="portal", label=DPtoCavernsOfTime, note=Tanaris }
         },
     [113] = { -- Northrend
-        [47874119] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [48664124] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [47874119] = { icon="portal", multilabel={PtoSW, DPtoCavernsOfTime}, multinote={ElwynnForest, Tanaris}, faction="Alliance" },
+        [48664124] = { icon="portal", multilabel={PtoOG, DPtoCavernsOfTime}, multinote={Durotar, Tanaris}, faction="Horde" },
         [80768453] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [80768454] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
         [24607066] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },

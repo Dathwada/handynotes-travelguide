@@ -72,8 +72,9 @@ L["handler_context_menu_hide_node"] = "Verstecke diesen Punkt"
 --============================================TOOLTIPS============================================--
 
 L["handler_tooltip_data"] = "DATEN ABRUFEN..."
-L["handler_tooltip_quest"] = "Freigeschaltet mit der Quest"
-L["handler_tooltip_rep"] = "Benötigt Ruf bei"
+L["handler_tooltip_requires_quest"] = "Freigeschaltet mit der Quest"
+L["handler_tooltip_requires_reputation"] = "Benötigt Ruf bei"
+L["handler_tooltip_requires_level"] = "Benötigt min. Spielerlevel"
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -105,18 +106,18 @@ L["Portal to Silvermoon"] = "Portal nach Silbermond"
 L["Portal to Undercity"] = "Portal nach Unterstadt"
 L["Orb of translocation"] = "Translokationskugel"
 
-L["Shattrath Portal to Thunder Bluff"] = "Shattrathportal nach Donnerfels"
 L["Shattrath Portal to Orgrimmar"] = "Shattrathportal nach Orgrimmar"
-L["Shattrath Portal to Undercity"] = "Shattrathportal nach Unterstadt"
-L["Shattrath Portal to Silvermoon"] = "Shattrathportal nach Silbermond"
 
 L["Boat to Exodar"] = "Schiff zur Exodar"
-L["Shattrath Portal to Exodar"] = "Shattrathportal zur Exodar"
-L["Shattrath Portal to Darnassus"] = "Shattrathportal nach Darnassus"
 L["Shattrath Portal to Stormwind"] = "Shattrathportal nach Sturmwind"
-L["Shattrath Portal to Ironforge"] = "Shattrathportal nach Eisenschmiede"
 
 L["Shattrath Portal to Isle of Quel'Danas"] = "Shattrathportal zur Insel von Quel'Danas"
+
+L["To Caverns of Time"] = "Zu den Höhlen der Zeit"
+L["Speak with Zephyr"] = "Sprich mit Zephyr"
+
+L["Portal to Darnassus"] = "Portal nach Darnassus"
+L["Portal to Exodar"] = "Portal zur Exodar"
 
 L["Portal to Stormwind"] = "Portal nach Sturmwind"
 L["Boat to Stormwind"] = "Schiff nach Sturmwind"
@@ -133,4 +134,18 @@ L["Boat to Moa'ki Harbor"] = "Schiff zum Hafen Moa'ki"
 L["Waygate to Sholazar Basin"] = "Tor ins Sholazarbecken"
 L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
 L["Portal to Blasted Lands"] = "Portal zu den Verwüsteten Landen"
+
+L["Dalaran Portal to Caverns of Time"] = "Dalaranportal zu den Höhlen der Zeit"
+
+L["Portal to Deepholm"] = "Portal nach Tiefenheim"
+L["Portal to Hyjal"] = "Portal zum Hyjal"
+L["Portal to Temple of Earth"] = "Portal zum Tempel der Erde"
+L["Portal to Therazane's Throne"] = "Portal zu Therazanes Thron"
+L["Portal to Tol Barad"] = "Portal nach Tol Barad"
+L["Portal to Twilight Highlands"] = "Portal ins Schattenhochland"
+L["Portal to Uldum"] = "Portal nach Uldum"
+L["Portal to Vashj'ir"] = "Portal nach Vashj'ir"
+
+L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
+L["Portal to the Sepulcher"] = "Portal zum Grabmal"
 end

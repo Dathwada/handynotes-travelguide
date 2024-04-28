@@ -24,8 +24,8 @@ local portal_red  = private.constants.icon.portal_red
 
 local RetrievindData    = L["handler_tooltip_data"]
 local RequiresLevel     = L["handler_tooltip_requires_level"]
-local RequiresQuest     = L["handler_tooltip_quest"]
--- local RequiresRep    = L["handler_tooltip_rep"]
+local RequiresQuest     = L["handler_tooltip_requires_quest"]
+local RequiresRep       = L["handler_tooltip_requires_reputation"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------FUNCTIONS---------------------------------------------
@@ -173,9 +173,9 @@ local function SetTooltip(tooltip, point)
             tooltip:AddLine("("..point.note..")")
         end
         if (pointreq) then
-            -- if (pointreq.level and UnitLevel("player") < pointreq.level) then
-            --     tooltip:AddLine(RequiresPlayerLvl..": "..pointreq.level, 1) -- red
-            -- end
+            if (pointreq.level and UnitLevel("player") < pointreq.level) then
+                tooltip:AddLine(RequiresLevel..": "..pointreq.level, 1) -- red
+            end
             if (pointreq.quest and not IsQuestCompleted(pointreq.quest)) then
                 if (C_QuestLog.GetQuestInfo(pointreq.quest) ~= nil) then
                     tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetQuestInfo(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
@@ -185,13 +185,13 @@ local function SetTooltip(tooltip, point)
                     -- print("refreshed")
                 end
             end
-            -- if (pointreq.reputation) then
-            --     local name, _, standing, _, _, value = GetFactionInfoByID(pointreq.reputation[1])
-            --     if (standing < pointreq.reputation[2]) then
-            --         tooltip:AddLine(RequiresRep..": ",1) -- red
-            --         GameTooltip_ShowProgressBar(GameTooltip, 0, 21000, value, name..": "..value.." / 21000")
-            --     end
-            -- end
+            if (pointreq.reputation) then
+                local name, _, standing, _, _, value = GetFactionInfoByID(pointreq.reputation[1])
+                if (standing < pointreq.reputation[2]) then
+                    tooltip:AddLine(RequiresRep..": ",1) -- red
+                    GameTooltip_ShowProgressBar(tooltip, 0, 21000, value, name..": "..value.." / 21000")
+                end
+            end
         end
     else
         tooltip:SetText(UNKNOWN)

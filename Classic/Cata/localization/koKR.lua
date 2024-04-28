@@ -3,7 +3,6 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "koKR", f
 if not L then return end
 -- Korean translation by blacknib https://www.curseforge.com/members/blacknib
 if L then
-L["Boat to Auberdine"] = "아우버다인 방향 배"
 L["Boat to Booty Bay"] = "무법항 방향 배"
 L["Boat to Darnassus"] = "다르나서스 방향 배"
 L["Boat to Menethil Harbor"] = "메네실 항구 방향 배"
@@ -37,6 +36,8 @@ L["Zeppelin to Stranglethorn Vale"] = "가시덤불 골짜기 방향 비행선"
 L["Zeppelin to Undercity"] = "언더시티 방향 비행선"
 
 -- BCC
+
+-- Cata
 
 -- WotLKC
 end
