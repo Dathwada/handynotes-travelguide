@@ -22,7 +22,6 @@ L["config_icon_scale"] = "Размер значков"
 L["config_icon_scale_desc"] = "Изменяет размер значков"
 L["config_note"] = "Заметка "
 L["config_note_desc"] = "Показывать дополнительные заметки к значку, когда они доступны."
-L["config_plugin_desc"] = "Показывает на карте мира и миникарте расположение дирижаблей и кораблей."
 L["config_restore_nodes"] = "Восстановить скрытые значки"
 L["config_restore_nodes_desc"] = "Восстановить все значки, которые были скрыты через контекстное меню."
 L["config_restore_nodes_print"] = "Все скрытые значки были восстановлены"
@@ -43,4 +42,8 @@ L["handler_context_menu_hide_node"] = "Скрыть эту точку"
 L["Zeppelin to Orgrimmar"] = "Дирижабль в Оргриммар"
 L["Zeppelin to Stranglethorn Vale"] = "Дирижабль в Тернистую долину"
 L["Zeppelin to Undercity"] = "Дирижабль в Подгород"
+
+-- Classic
+L["Boat to Auberdine"] = "Корабль в Аубердин"
+L["config_plugin_desc"] = "Показывает на карте мира и миникарте расположение дирижаблей и кораблей."
 end

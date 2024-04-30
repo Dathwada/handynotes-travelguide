@@ -3,7 +3,6 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide (Classic)",
 if not L then return end
 -- Traditional Chinese translation by ...
 if L then
-L["Boat to Auberdine"] = "去奥伯丁的船"
 L["Boat to Booty Bay"] = "去藏宝海湾的船"
 L["Boat to Darnassus"] = "去达纳苏斯的船"
 L["Boat to Menethil Harbor"] = "去米奈希尔港的船"
@@ -22,7 +21,6 @@ L["config_icon_scale"] = "图标缩放"
 L["config_icon_scale_desc"] = "对图标进行缩放"
 L["config_note"] = "备注"
 L["config_note_desc"] = "在鼠标提示中显示备注信息"
-L["config_plugin_desc"] = "在世界地图和小地图上显示船和飞艇的位置"
 L["config_restore_nodes"] = "重置隐藏的标记"
 L["config_restore_nodes_desc"] = "重新显示所有你右击并选择“隐藏”的标记"
 L["config_restore_nodes_print"] = "已經恢復所有隱藏的節點"
@@ -43,4 +41,8 @@ L["handler_context_menu_hide_node"] = "隱藏此節點"
 L["Zeppelin to Orgrimmar"] = "去奥格瑞玛的飞艇"
 L["Zeppelin to Stranglethorn Vale"] = "去荆棘谷的飞艇"
 L["Zeppelin to Undercity"] = "去幽暗城的飞艇"
+
+-- Classic
+L["Boat to Auberdine"] = "去奥伯丁的船"
+L["config_plugin_desc"] = "在世界地图和小地图上显示船和飞艇的位置。"
 end

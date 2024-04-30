@@ -8,7 +8,7 @@ if L then
 ----------------------------------------------------------------------------------------------------
 
 L["config_plugin_name"] = "TravelGuide (Classic)"
-L["config_plugin_desc"] = "Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Worldmap und der Minimap an."
+L["config_plugin_desc"] = "Zeigt die Positionen von Schiffen und Zeppelinen auf der Weltkarte und Minimap an."
 
 L["config_tab_general"] = "Allgemein"
 L["config_tab_scale_alpha"] = "Größe / Transparenz"
@@ -37,7 +37,7 @@ L["config_note"] = "Notizen"
 L["config_note_desc"] = "Zeigt zusätzliche Notizen an, wenn diese verfügbar sind."
 
 L["config_easy_waypoints"] = "Vereinfachte Wegpunkte"
-L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung. \nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
+L["config_easy_waypoints_desc"] = "Aktiviert die vereinfachte Wegpunkterstellung.\nErlaubt es per Rechtsklick einen Wegpunkt zu setzen und per STRG + Rechtsklick mehr Optionen aufzurufen."
 L["config_easy_waypoints_requires"] = "Benötigt"
 
 L["config_restore_nodes"] = "Versteckte Punkte wiederherstellen"

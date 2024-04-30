@@ -37,7 +37,7 @@ L["config_note"] = "Note"
 L["config_note_desc"] = "Show the node's additional notes when it's available."
 
 L["config_easy_waypoints"] = "Easy Waypoints"
-L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation. \nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
+L["config_easy_waypoints_desc"] = "Activates simplified waypoint creation.\nAllows you to set a waypoint by right-clicking and access to more options by CTRL + right-clicking."
 L["config_easy_waypoints_requires"] = "Requires"
 
 L["config_restore_nodes"] = "Restore hidden nodes"
