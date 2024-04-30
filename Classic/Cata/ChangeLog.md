@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v1.6 (April 30, 2024)
+------------------------------
+* Updated nodes for cata
+* Updated localizations
+* Bump .toc to 40400
+
 #### v1.5 (October 12, 2023)
 ------------------------------
 * Bump .toc to 30403
