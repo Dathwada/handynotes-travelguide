@@ -31,10 +31,13 @@ local PtoEmeraldDream = L["Portal to Emerald Dream"]
 local EmeraldDream = GetMapNames(2200)
 local PtoOhnahranPlains = L["Portal to Ohn'ahran Plains"]
 local DragonIsle = GetMapNames(1978)
-local PtoTimeways = L["Portal to The Timeways"]
+-- local PtoTimeways = L["Portal to The Timeways"]
 local PtoBelameth = L["Portal to Bel'ameth"]
 local PtoMountHyjal = L["Portal to Mount Hyjal"]
+local BtoBelanaar = L["Boat to Belanaar"]
 local Amirdrassil = GetMapNames(1978, 2239)
+local BtoStormglen = L["Boat to Stormglen"]
+local Gilneas = GetMapNames(13, 217)
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -284,7 +287,8 @@ DB.points = {
         [55466364] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [51391836] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
         [55316473] = { icon="portal", multilabel={PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
-        [58588498] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
+        [58588498] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [49020100] = { icon="boat", label=BtoStormglen, note=Gilneas }
         },
     [2200] = { -- Emerald Dream
         [73085242 ] = { icon="portal", label=PtoOhnahranPlains, note=DragonIsle, requirements={quest=76318} }
@@ -303,12 +307,13 @@ DB.points = {
         [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} }, -- TODO find out and add accountwide quest
         [24795365] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
         [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
-        [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
+        [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
+        [24415081] = { icon="boat", label=BtoStormglen, note=Gilneas }
         },
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
         [59834172] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }, -- quest=?, level=?
-        [53565538] = { icon="portal", label=PtoTimeways, requirements={level=70} },
+        -- [53565538] = { icon="portal", label=PtoTimeways, requirements={level=70} },
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
         [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms },
         [62675730] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} } -- TODO find out and add accountwide quest
@@ -810,6 +815,9 @@ DB.points = {
         [75255887] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=30}, faction="Alliance" },
         [56277966] = { icon="portal", label=PtoOG, note=Durotar, requirements={level=30}, faction="Horde" }
         },
+    [217] = {
+        [63629649] = { icon="boat", label=BtoBelanaar, note=Amirdrassil }
+        },
 
 ---------------------------------------------------------------------------------------------WotLK---------------------------------------------------------------------------------------------
 
@@ -889,6 +897,7 @@ DB.points = {
     [101] = { -- Outland
         [43886598] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
         [43886599] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [44876501] = { icon="portal", label=PtoCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
         [69075236] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [69075190] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [66217784] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true} }, -- Shadowmoon Valley, Fel Pits
@@ -915,12 +924,16 @@ DB.points = {
         [68208846] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7385), requirements={toy=129929} } -- Zangar Shore
         },
      [107] = { -- Nagrand
+        [88065172] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [88065173] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
+        [92964857] = { icon="portal", label=PtoCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
         [41275904] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7151), requirements={toy=129929} }, -- Spirit Woods
         [60362556] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 550, 7280), requirements={toy=129929} } -- Throne of the Elements
         },
     [108] = { -- Terokkar Forest
         [30252350] = { icon="portal", multilabel={PtoSW, PtoIofQD}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
         [30252351] = { icon="portal", multilabel={PtoOG, PtoIofQD}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
+        [35622076] = { icon="portal", label=PtoCavernsofTime, note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
         [35271251] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
         [45374753] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 6918), requirements={toy=129929} }, -- Deathweb Hollow
         [70787588] = { icon="portal_purple", label=ReflectivePortal, note=GetMapNames(572, 535, 7031), requirements={toy=129929} } -- Skettis
@@ -1123,7 +1136,8 @@ DB.points = {
         [53108129] = { icon="molemachine", label=GetAreaInfo(1438), requirements={quest=53594, hideQuestName=true} }, -- Blasted Lands, Nethergarde Keep
         [46766773] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} }, -- Black Rock Mountains, The Masonary
         [54068459] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={timetravel={quest=66560, spell=290245, turn=true}} },
-        [53508266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true}} }
+        [53508266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true}} },
+        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },

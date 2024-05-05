@@ -139,6 +139,8 @@ L["Portal to The Timeways"] = "Portal zu den Zeitwegen"
 L["Portal to Bel'ameth"] = "Portal nach Bel'ameth"
 L["Portal to Feathermoon Stronghold"] = "Portal zur Mondfederfeste"
 L["Portal to Mount Hyjal"] = "Portal zum Hyjal"
+L["Boat to Belanaar"] = "Schiff nach Belanaar"
+L["Boat to Stormglen"] = "Schiff nach Sturmsiel"
 
 --==========================================SHADOWLANDS===========================================--
 

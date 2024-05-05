@@ -72,7 +72,9 @@ local areaPoisToRemove = {
 
     -- Neutral
     5881, -- The Cape of Stranglethorn, Boat to Ratschet
-    5882 -- Northern Barrens, Boat to Booty Bay
+    5882, -- Northern Barrens, Boat to Booty
+    7944, -- Amirdrassil, Boat to Stormglen
+    7945 -- Gilneas, Boat to Belanaar
 }
 
 ----------------------------------------------------------------------------------------------------

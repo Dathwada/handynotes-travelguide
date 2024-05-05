@@ -142,6 +142,8 @@ L["Portal to The Timeways"] = "Портал в Потоки Времени"
 L["Portal to Bel'ameth"] = "Портал в Бел'амет"
 L["Portal to Feathermoon Stronghold"] = "Портал в Крепость Оперенной Луны"
 L["Portal to Mount Hyjal"] = "Портал на Гору Хиджал"
+-- L["Boat to Belanaar"] = ""
+-- L["Boat to Stormglen"] = ""
 
 --==========================================SHADOWLANDS===========================================--
 
