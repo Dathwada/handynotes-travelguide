@@ -63,11 +63,11 @@ L["config_note_desc"] = "Показать дополнительные заме�
 L["config_remove_unknown"] = "Удалить неизвестные направления"
 L["config_remove_unknown_desc"] = "Это скроет пункты назначения с невыполненными требованиями на карте мира."
 
-L["config_remove_AreaPois"] = "Remove Blizzard's POIs for destinations"
-L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POIs) set by Blizzard for destinations on the world map."
+-- L["config_remove_AreaPois"] = "Remove Blizzard's POIs for destinations"
+-- L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POIs) set by Blizzard for destinations on the world map."
 
 L["config_easy_waypoints"] = "Легкие путевые точки"
-L["config_easy_waypoints_desc"] = "Активирует упрощенное создание путевых точек. \nПозволяет Вам установить путевую точку, щелкнув ПКМ, и получить доступ к дополнительным параметрам, нажав CTRL + ПКМ."
+L["config_easy_waypoints_desc"] = "Активирует упрощенное создание путевых точек.\nПозволяет Вам установить путевую точку, щелкнув ПКМ, и получить доступ к дополнительным параметрам, нажав CTRL + ПКМ."
 L["config_waypoint_dropdown"] = "Выбор"
 L["config_waypoint_dropdown_desc"] = "Выберите способ создания путевой точки."
 L["Blizzard"] = true
@@ -112,14 +112,14 @@ L["handler_context_menu_hide_node"] = "Скрыть этот узел"
 
 --============================================TOOLTIPS============================================--
 
-L["handler_tooltip_requires"] = "Requires"
-L["handler_tooltip_sanctum_feature"] = "a Sanctum Upgrade"
+L["handler_tooltip_requires"] = "Требуется"
+L["handler_tooltip_sanctum_feature"] = "улучшение святилища"
 L["handler_tooltip_data"] = "ИЗВЛЕЧЕНИЕ ДАННЫХ..."
 L["handler_tooltip_quest"] = "Разблокировано с квестом"
 L["handler_tooltip_rep"] = "Требуется репутация с"
 L["handler_tooltip_toy"] = "Требуется игрушка"
 L["handler_tooltip_requires_level"] = "Требуется уровень игрока не ниже"
-L["handler_tooltip_TNTIER"] = "Tier %s of the travel network."
+L["handler_tooltip_TNTIER"] = "%s уровень транспортной сети."
 L["handler_tooltip_not_available"] = "в данный момент НЕдоступно"
 --L["handler_tooltip_available"] = "currently available"
 L["handler_tooltip_not_discovered"] = "еще не обнаружен"
@@ -139,9 +139,9 @@ L["Portal to Emerald Dream"] = "Портал в Изумрудный Сон"
 L["Portal to Ohn'ahran Plains"] = "Портал на Равнины Он'ары"
 L["Portal to Central Encampment"] = "Портал в центральный лагерь"
 L["Portal to The Timeways"] = "Портал в Потоки Времени"
--- L["Portal to Bel'ameth"] = ""
--- L["Portal to Feathermoon Stronghold"] = ""
--- L["Portal to Mount Hyjal"] = ""
+L["Portal to Bel'ameth"] = "Портал в Бел'амет"
+L["Portal to Feathermoon Stronghold"] = "Портал в Крепость Оперенной Луны"
+L["Portal to Mount Hyjal"] = "Портал на Гору Хиджал"
 
 --==========================================SHADOWLANDS===========================================--
 
