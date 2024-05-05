@@ -162,6 +162,11 @@ config.options = {
                     width = "full",
                     name = L["config_remove_AreaPois"],
                     desc = L["config_remove_AreaPois_desc"],
+                    set = function(info, v)
+                        private.db[info[#info]] = v
+                        addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
+		                WorldMapFrame:RefreshAllDataProviders()
+                    end,
                     order = 26,
                 },
                 easy_waypoint = {

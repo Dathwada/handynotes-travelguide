@@ -96,13 +96,16 @@ local function RemoveAreaPOIs()
     end
 end
 
-hooksecurefunc(WorldMapFrame, "OnMapChanged", function()
-    RemoveAreaPOIs()
-end)
-
-WorldMapFrame:HookScript("OnShow", function()
-    RemoveAreaPOIs()
-end)
+do
+    -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
+    for dp in pairs(WorldMapFrame.dataProviders) do
+        if type(dp.GetPinTemplate) == "function" then
+            if dp:GetPinTemplate() == "AreaPOIPinTemplate" then
+                hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
+            end
+        end
+    end
+end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------FUNCTIONS---------------------------------------------
@@ -162,11 +165,11 @@ end
 -- the following lines in 13px with a normal for loop.
 local function Prepare(label, note, level, quest)
     local t = {}
-    local NOTE
-    local LEVEL
-    local QUEST
 
     for i, name in ipairs(label) do
+        local NOTE = ''
+        local LEVEL = ''
+        local QUEST = ''
 
         -- set spell name as label
         if (type(name) == "number") then
@@ -176,28 +179,22 @@ local function Prepare(label, note, level, quest)
         -- add additional notes
         if (note and note[i] and private.db.show_note) then
             NOTE = " ("..note[i]..")"
-        else
-            NOTE = ''
         end
 
         -- add required level information
         if (level and level[i] and UnitLevel("player") < level[i]) then
             LEVEL = "\n    |cFFFF0000"..RequiresPlayerLvl..": "..level[i].."|r"
-        else
-            LEVEL = ''
         end
 
         -- add required quest information
         if (quest and quest[i] and not IsQuestCompleted(quest[i])) then
-            if (C_QuestLog.GetTitleForQuestID(quest[i]) ~= nil) then
-                local title = C_QuestLog.GetTitleForQuestID(quest[i])
+            local title = C_QuestLog.GetTitleForQuestID(quest[i])
+            if (title ~= nil) then
                 QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
             else
                 QUEST = "\n    |cFFFF00FF"..RetrievindData.."|r" -- pink
                 RefreshAfter(1) -- Refresh
             end
-        else
-            QUEST = ''
         end
 
         -- store everything together
