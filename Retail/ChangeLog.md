@@ -1,5 +1,14 @@
 ## Revision History:
 
+#### v2.17.0 (May 07, 2024)
+-------------------------------
+* Added new boat nodes (Amirdrassil <--> Gilneas)
+* Added missing portals in Outland, Nagrand and Terokkar Forest
+* Removed Season 3 Portal in Valdrakken
+* Updated localizations
+* Some minor Background changes
+* Bump .toc to 100207
+
 #### v2.16.0 (March 20, 2024)
 -------------------------------
 * Added missing Bel'ameth Portal in Mount Hyjal [[Issue#42]](https://github.com/Dathwada/handynotes-travelguide/issues/42)
