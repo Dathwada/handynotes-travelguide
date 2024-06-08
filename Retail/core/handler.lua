@@ -143,7 +143,7 @@ local function ReqFulfilled(req, ...)
     end
 
     if (req.reputation) then
-        local _,_,standing = GetFactionInfoByID(req.reputation[1])
+        local _, _, standing = GetFactionInfoByID(req.reputation[1])
         return standing >= req.reputation[2]
     end
 
@@ -313,10 +313,12 @@ local function SetTooltip(tooltip, node)
                 end
             end
             if (nodereq.reputation) then
+                local reqValuesForStandings = {0, 36000, 39000, 42000, 45000, 51000, 63000, 84000}
                 local name, _, standing, _, _, value = GetFactionInfoByID(nodereq.reputation[1])
                 if (standing < nodereq.reputation[2]) then
+                    local reqValue = reqValuesForStandings[nodereq.reputation[2]]
                     tooltip:AddLine(RequiresRep..": ",1) -- red
-                    GameTooltip_ShowProgressBar(GameTooltip, 0, 21000, value, name..": "..value.." / 21000")
+                    GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, name..": "..value.." / "..reqValue)
                 end
             end
             if (nodereq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
