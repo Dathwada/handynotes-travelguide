@@ -326,8 +326,7 @@ do
 end
 
 do
-
-local currentMapID = nil
+    local currentMapID = nil
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
@@ -342,30 +341,32 @@ local currentMapID = nil
         end
         return nil, nil, nil, nil, nil, nil
     end
+
     function PluginHandler:GetNodes2(uMapID, minimap)
         currentMapID = uMapID
         return iter, private.DB.points[uMapID], nil
     end
+
     function private:ShouldShow(coord, point, currentMapID)
-    if not private.db.force_nodes then
-        if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
-            return false
+        if not private.db.force_nodes then
+            if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
+                return false
+            end
+            -- this will check if any node is for specific class
+            if (point.class and point.class ~= select(2, UnitClass("player"))) then
+                return false
+            end
+            -- this will check if any node is for specific faction
+            if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+                return false
+            end
+            if (point.icon == "portal" and not private.db.show_portal) then return false end
+            if (point.icon == "tram" and not private.db.show_tram) then return false end
+            if (point.icon == "boat" and not private.db.show_boat) then return false end
+            if (point.icon == "aboat" and not private.db.show_aboat) then return false end
+            if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
+            if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
         end
-        -- this will check if any node is for specific class
-        if (point.class and point.class ~= select(2, UnitClass("player"))) then
-            return false
-        end
-        -- this will check if any node is for specific faction
-        if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
-            return false
-        end
-        if (point.icon == "portal" and not private.db.show_portal) then return false end
-        if (point.icon == "tram" and not private.db.show_tram) then return false end
-        if (point.icon == "boat" and not private.db.show_boat) then return false end
-        if (point.icon == "aboat" and not private.db.show_aboat) then return false end
-        if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
-        if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
-    end
         return true
     end
 end

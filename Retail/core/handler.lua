@@ -526,10 +526,12 @@ do
         end
         return nil, nil, nil, nil, nil, nil
     end
+
     function PluginHandler:GetNodes2(uMapID, minimap)
         currentMapID = uMapID
         return iter, private.DB.points[uMapID], nil
     end
+
     function private:ShouldShow(coord, point, currentMapID)
         if (not private.db.force_nodes) then
             if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
