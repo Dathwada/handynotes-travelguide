@@ -141,6 +141,8 @@ L["Portal to Feathermoon Stronghold"] = "Portal zur Mondfederfeste"
 L["Portal to Mount Hyjal"] = "Portal zum Hyjal"
 L["Boat to Belanaar"] = "Schiff nach Belanaar"
 L["Boat to Stormglen"] = "Schiff nach Sturmsiel"
+L["Portal to The Nighthold"] = "Portal zur Nachtfestung"
+L["Portal to Shal'Aran"] = "Portal nach Shal'Aran"
 
 --==========================================SHADOWLANDS===========================================--
 

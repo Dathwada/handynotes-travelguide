@@ -115,9 +115,11 @@ local azsuna = GetMapNames(630)
 local valsharah = GetMapNames(641)
 local valsharahBrokenIsles = GetMapNames(619, 641)
 local suramar = GetMapNames(680)
+local Suramar = GetMapNames(619, 680)
 local highmountain = GetMapNames(650)
 local stormheim = GetMapNames(634)
 local brokenshore = GetMapNames(646)
+local Meredil = GetMapNames(680, nil, 7840)
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -515,7 +517,9 @@ DB.points = {
         [58096766] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} }, -- The Broken Shore, Broken Shore
         [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
         [46102532] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
+        [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil },
+        [51345613] = { icon="portal", multilabel={PtoOG, L["Portal to Shal'Aran"]}, multinote={Durotar, Meredil}, faction="Horde" }
+        -- [51485622] = { icon="portal", multilabel={PtoSW, L["Portal to Shal'Aran"]}, multinote={ElwynnForest, Meredil}, faction="Alliance" } -- BUGGED FOR ALLIANCE?
         },
     [627] = { -- Dalaran Broken Isles
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -528,7 +532,9 @@ DB.points = {
         [80176227] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [46644121] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [82135737] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [47582809] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
+        [47582809] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [97173626] = { icon="portal", multilabel={PtoOG, L["Portal to Shal'Aran"]}, multinote={Durotar, Meredil}, faction="Horde" } -- BUGGED FOR ALLIANCE?
+        -- [97203635] = { icon="portal", multilabel={PtoSW, L["Portal to Shal'Aran"]}, multinote={ElwynnForest, Meredil}, faction="Alliance" } -- BUGGED FOR ALLIANCE?
         },
     [634] = { -- Stormheim
         [30084070] = { icon="portal", label=PtoDala, note=BrokenIsles },
@@ -557,7 +563,10 @@ DB.points = {
         [54847186] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
         },
     [680] = { -- Suramar
-        [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" }
+        [33094822] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
+        [58178733] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        -- [58678763] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" } -- BUGGED FOR ALLIANCE?
+        [57988660] = { icon="portal", label=L["Portal to Shal'Aran"], note=Meredil, faction="Horde" } -- BUGGED FOR ALLIANCE?
         },
     [646] = { -- Broken Shore
         [44816132] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
@@ -1003,7 +1012,8 @@ DB.points = {
         [59764474] = { icon="zeppelin", label=ZtoDI, note=WakingShores, faction="Horde" },
         [59764475] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
-        [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
+        [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
+        [57804366] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" }
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1024,7 +1034,8 @@ DB.points = {
         [72337931] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Alliance" },
         [35587972] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
         [56041350] = { icon="zeppelin", label=ZtoDI, note=WakingShores, faction="Horde" },
-        [56041351] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" }
+        [56041351] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
+        [42390602] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" }
         },
     [463] = { -- Echo Isle
         [71713838] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Horde" },
@@ -1041,7 +1052,8 @@ DB.points = {
         [45306178] = { icon="hzeppelin", label=ZtoBoreanTundra, note=WarsongHold, faction="Alliance" },
         [45306179] = { icon="zeppelin", label=ZtoBoreanTundra, note=WarsongHold, faction="Horde" },
         [52885242] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
-        [52885243] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" }
+        [52885243] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
+        [40107681] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" }
         },
     [71] = { -- Tanaris
         [65794954] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },

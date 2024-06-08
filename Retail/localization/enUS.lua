@@ -141,6 +141,8 @@ L["Portal to Feathermoon Stronghold"] = true
 L["Portal to Mount Hyjal"] = true
 L["Boat to Belanaar"] = true
 L["Boat to Stormglen"] = true
+L["Portal to The Nighthold"] = true
+L["Portal to Shal'Aran"] = true
 
 --==========================================SHADOWLANDS===========================================--
 

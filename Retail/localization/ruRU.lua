@@ -144,6 +144,8 @@ L["Portal to Feathermoon Stronghold"] = "Портал в Крепость Опе
 L["Portal to Mount Hyjal"] = "Портал на Гору Хиджал"
 -- L["Boat to Belanaar"] = ""
 -- L["Boat to Stormglen"] = ""
+L["Portal to The Nighthold"] = "Портал в Цитадель Ночи"
+L["Portal to Shal'Aran"] = "Портал в Шал'Аран"
 
 --==========================================SHADOWLANDS===========================================--
 
