@@ -2,9 +2,9 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
+local FOLDER_NAME, ns = ...
 local addon = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
-local L = private.locale
+local L = ns.locale
 
 ----------------------------------------------------------------------------------------------------
 -------------------------------------------DEV CONFIG TAB-------------------------------------------
@@ -15,7 +15,7 @@ local L = private.locale
 -- /reload
 
 local function devmode()
-    private.config.options.args["DEV"] = {
+    ns.config.options.args["DEV"] = {
         type = "group",
         name = L["dev_config_tab"],
 --      desc = L[""],
@@ -61,10 +61,10 @@ end
 
 function addon:debugmsg(msg)
 
-    if private.global.dev and private.db.show_prints then
+    if (ns.global.dev and ns.db.show_prints) then
         print("|CFFFF6666TravelGuide: |r"..msg)
     end
 
 end
 
-private.devmode = devmode
+ns.devmode = devmode

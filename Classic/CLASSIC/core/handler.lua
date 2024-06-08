@@ -2,15 +2,15 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
+local FOLDER_NAME, ns = ...
 
 local addon = LibStub("AceAddon-3.0"):NewAddon(FOLDER_NAME, "AceEvent-3.0")
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local AceDB = LibStub("AceDB-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
-private.locale = L
+ns.locale = L
 
-addon.constants = private.constants
+addon.constants = ns.constants
 
 _G.HandyNotes_TravelGuide = addon
 
@@ -24,15 +24,15 @@ _G.HandyNotes_TravelGuide = addon
 local function PrepareLabel(label, note)
     local t = {}
     for i, name in ipairs(label) do
-        if (label and private.db.show_note) then
-            if label[i] and note[i] then
+        if (label and ns.db.show_note) then
+            if (label[i] and note[i]) then
                 t[i] = name.." ("..note[i]..")"
              else
             -- if there is no note for this Portal
                 t[i] = name
             end
         else
-        -- if the private.db.show_note == false
+        -- if the ns.db.show_note == false
             t[i] = name
         end
     end
@@ -43,61 +43,61 @@ end
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetIcon(point)
-    local icon_key = point.icon
+local function SetIcon(node)
+    local icon_key = node.icon
 
-    if (icon_key and private.constants.icon[icon_key]) then
-        return private.constants.icon[icon_key]
+    if (icon_key and ns.constants.icon[icon_key]) then
+        return ns.constants.icon[icon_key]
     end
 end
 
 local function GetIconScale(icon)
-    if icon == "boat" or icon == "aboat" then
-        return private.db["icon_scale_boat"]
-    elseif icon == "zeppelin" or icon == "hzeppelin" then
-        return private.db["icon_scale_zeppelin"]
+    if (icon == "boat" or icon == "aboat") then
+        return ns.db["icon_scale_boat"]
+    elseif (icon == "zeppelin" or icon == "hzeppelin") then
+        return ns.db["icon_scale_zeppelin"]
     end
 
-    return private.db["icon_scale_"..icon] or private.db["icon_scale_others"]
+    return ns.db["icon_scale_"..icon] or ns.db["icon_scale_others"]
 end
 
 local function GetIconAlpha(icon)
-    if icon == "boat" or icon == "aboat" then
-        return private.db["icon_alpha_boat"]
-    elseif icon == "zeppelin" or icon == "hzeppelin" then
-        return private.db["icon_alpha_zeppelin"]
+    if (icon == "boat" or icon == "aboat") then
+        return ns.db["icon_alpha_boat"]
+    elseif (icon == "zeppelin" or icon == "hzeppelin") then
+        return ns.db["icon_alpha_zeppelin"]
     end
 
-    return private.db["icon_alpha_"..icon] or private.db["icon_alpha_others"]
+    return ns.db["icon_alpha_"..icon] or ns.db["icon_alpha_others"]
 end
 
-local GetPointInfo = function(point)
+local GetNodeInfo = function(node)
     local icon
-    if point then
-        local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or UNKNOWN
-            icon = SetIcon(point)
-        return label, icon, point.icon, point.scale, point.alpha
+    if (node) then
+        local label = node.label or node.multilabel and table.concat(node.multilabel, "\n") or UNKNOWN
+            icon = SetIcon(node)
+        return label, icon, node.icon, node.scale, node.alpha
     end
 end
 
-local GetPointInfoByCoord = function(uMapID, coord)
-    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local GetNodeInfoByCoord = function(uMapID, coord)
+    return GetNodeInfo(ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetTooltip(tooltip, point)
-    if point then
-        if (point.label) then
-            tooltip:AddLine(point.label)
+local function SetTooltip(tooltip, node)
+    if (node) then
+        if (node.label) then
+            tooltip:AddLine(node.label)
         end
-        if (point.multilabel) then
-            tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
+        if (node.multilabel) then
+            tooltip:AddLine(PrepareLabel(node.multilabel, node.multinote))
         end
-        if (point.note and profile.show_note) then
-            tooltip:AddLine("("..point.note..")")
+        if (node.note and profile.show_note) then
+            tooltip:AddLine("("..node.note..")")
         end
     else
         tooltip:SetText(UNKNOWN)
@@ -106,7 +106,7 @@ local function SetTooltip(tooltip, point)
 end
 
 local SetTooltipByCoord = function(tooltip, uMapID, coord)
-    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+    return SetTooltip(tooltip, ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ function PluginHandler:OnEnter(uMapID, coord)
 end
 
 function PluginHandler:OnLeave(uMapID, coord)
-    if self:GetParent() == WorldMapButton then
+    if (self:GetParent() == WorldMapButton) then
         WorldMapTooltip:Hide()
     else
         GameTooltip:Hide()
@@ -135,7 +135,7 @@ function PluginHandler:OnLeave(uMapID, coord)
 end
 
 local function hideNode(button, uMapID, coord)
-    private.hidden[uMapID][coord] = true
+    ns.hidden[uMapID][coord] = true
     addon:Refresh()
 end
 
@@ -144,10 +144,10 @@ local function closeAllDropdowns()
 end
 
 local function addTomTomWaypoint(button, uMapID, coord)
-    if TomTom then
+    if (TomTom) then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = GetPointInfoByCoord(uMapID, coord),
+            title = GetNodeInfoByCoord(uMapID, coord),
             from = L["handler_context_menu_addon_name"],
             persistent = nil,
             minimap = true,
@@ -175,7 +175,7 @@ do
 
 --            UIDropDownMenu_AddButton(spacer, level)
 
-            if TomTom and not profile.easy_waypoint then
+            if (TomTom and not profile.easy_waypoint) then
                 -- Waypoint menu item
                 info = UIDropDownMenu_CreateInfo()
                 info.text = L["handler_context_menu_add_tomtom"]
@@ -224,7 +224,7 @@ do
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         else
-        if profile.easy_waypoint and TomTom then
+        if (profile.easy_waypoint and TomTom) then
             addTomTomWaypoint(button, uMapID, coord)
         end
         end
@@ -234,11 +234,11 @@ end
 do
     local currentMapID = nil
     local function iter(t, prestate)
-        if not t then return nil end
+        if (not t) then return nil end
         local state, value = next(t, prestate)
         while state do
-            if value and private:ShouldShow(state, value, currentMapID) then
-                local _, icon, iconname, scale, alpha = GetPointInfo(value)
+            if (value and ns:ShouldShow(state, value, currentMapID)) then
+                local _, icon, iconname, scale, alpha = GetNodeInfo(value)
                     scale = (scale or 1) * GetIconScale(iconname)
                     alpha = (alpha or 1) * GetIconAlpha(iconname)
                 return state, nil, icon, scale, alpha
@@ -250,28 +250,28 @@ do
 
     function PluginHandler:GetNodes2(uMapID, minimap)
         currentMapID = uMapID
-        return iter, private.DB.points[uMapID], nil
+        return iter, ns.DB.nodes[uMapID], nil
     end
 
-    function private:ShouldShow(coord, point, currentMapID)
-        if not private.db.force_nodes then
-            if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
+    function ns:ShouldShow(coord, node, currentMapID)
+        if (not ns.db.force_nodes) then
+            if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then
                 return false
             end
             -- this will check if any node is for specific class
-            if (point.class and point.class ~= select(2, UnitClass("player"))) then
+            if (node.class and node.class ~= select(2, UnitClass("player"))) then
                 return false
             end
             -- this will check if any node is for specific faction
-            if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+            if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then
                 return false
             end
-            if (point.icon == "portal" and not private.db.show_portal) then return false end
-            if (point.icon == "tram" and not private.db.show_tram) then return false end
-            if (point.icon == "boat" and not private.db.show_boat) then return false end
-            if (point.icon == "aboat" and not private.db.show_aboat) then return false end
-            if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
-            if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
+            if (node.icon == "portal" and not ns.db.show_portal) then return false end
+            if (node.icon == "tram" and not ns.db.show_tram) then return false end
+            if (node.icon == "boat" and not ns.db.show_boat) then return false end
+            if (node.icon == "aboat" and not ns.db.show_aboat) then return false end
+            if (node.icon == "zeppelin" and not ns.db.show_zeppelin) then return false end
+            if (node.icon == "hzeppelin" and not ns.db.show_hzeppelin) then return false end
         end
         return true
     end
@@ -282,22 +282,22 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New("HandyNotes_TravelGuideClassicDB", private.constants.defaults)
+    self.db = AceDB:New("HandyNotes_TravelGuideClassicDB", ns.constants.defaults)
 
     profile = self.db.profile
-    private.db = profile
+    ns.db = profile
 
     global = self.db.global
-    private.global = global
+    ns.global = global
 
-    private.hidden = self.db.char.hidden
+    ns.hidden = self.db.char.hidden
 
-    if private.global.dev then
-        private.devmode()
+    if (ns.global.dev) then
+        ns.devmode()
     end
 
     -- Initialize database with HandyNotes
-    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
+    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, ns.config.options)
 end
 
 function addon:Refresh()
@@ -313,7 +313,7 @@ local frame, events = CreateFrame("Frame"), {};
 function events:ZONE_CHANGED(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after ZONE_CHANGED")
     end
 end
@@ -321,7 +321,7 @@ end
 function events:ZONE_CHANGED_INDOORS(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after ZONE_CHANGED_INDOORS")
     end
 end
@@ -329,7 +329,7 @@ end
 function events:QUEST_FINISHED(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after QUEST_FINISHED")
     end
 end

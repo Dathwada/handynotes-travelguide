@@ -2,15 +2,15 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
-local L = private.locale
+local FOLDER_NAME, ns = ...
+local L = ns.locale
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
 local function GetMapNames(id1, id2)
-    if id1 and id2 then
+    if (id1 and id2) then
         return format("%s, %s", C_Map.GetMapInfo(id1).name, C_Map.GetMapInfo(id2).name)
     end
     return C_Map.GetMapInfo(id1).name
@@ -56,9 +56,9 @@ local BtoAuberdine = L["Boat to Auberdine"]
 
 local DB = {}
 
-private.DB = DB
+ns.DB = DB
 
-DB.points = {
+DB.nodes = {
 -- MAPID from https://wow.gamepedia.com/UiMapID/Classic
 -- or collected with /dump WorldMapFrame:GetMapID()
 

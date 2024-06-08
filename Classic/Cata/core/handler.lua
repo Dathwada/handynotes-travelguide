@@ -2,21 +2,21 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
+local FOLDER_NAME, ns = ...
 
 local addon = LibStub("AceAddon-3.0"):NewAddon(FOLDER_NAME, "AceEvent-3.0")
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local AceDB = LibStub("AceDB-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
-private.locale = L
+ns.locale = L
 
-addon.constants = private.constants
+addon.constants = ns.constants
 
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
-local portal_red  = private.constants.icon.portal_red
+local portal_red  = ns.constants.icon.portal_red
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -75,7 +75,7 @@ local function PrepareLabel(label, note, level, quest)
         end
 
         -- add additional notes
-        if (note and note[i] and private.db.show_note) then
+        if (note and note[i] and ns.db.show_note) then
             NOTE = " ("..note[i]..")"
         end
 
@@ -106,88 +106,88 @@ end
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetIcon(point)
-    local icon_key = point.icon
+local function SetIcon(node)
+    local icon_key = node.icon
 
-    if (icon_key and private.constants.icon[icon_key]) then
-        return private.constants.icon[icon_key]
+    if (icon_key and ns.constants.icon[icon_key]) then
+        return ns.constants.icon[icon_key]
     end
 end
 
 local function GetIconScale(icon)
-    if icon == "boat" or icon == "aboat" then
-        return private.db["icon_scale_boat"]
-    elseif icon == "zeppelin" or icon == "hzeppelin" then
-        return private.db["icon_scale_zeppelin"]
+    if (icon == "boat" or icon == "aboat") then
+        return ns.db["icon_scale_boat"]
+    elseif (icon == "zeppelin" or icon == "hzeppelin") then
+        return ns.db["icon_scale_zeppelin"]
     end
 
-    return private.db["icon_scale_"..icon] or private.db["icon_scale_others"]
+    return ns.db["icon_scale_"..icon] or ns.db["icon_scale_others"]
 end
 
 local function GetIconAlpha(icon)
-    if icon == "boat" or icon == "aboat" then
-        return private.db["icon_alpha_boat"]
-    elseif icon == "zeppelin" or icon == "hzeppelin" then
-        return private.db["icon_alpha_zeppelin"]
+    if (icon == "boat" or icon == "aboat") then
+        return ns.db["icon_alpha_boat"]
+    elseif (icon == "zeppelin" or icon == "hzeppelin") then
+        return ns.db["icon_alpha_zeppelin"]
     end
 
-    return private.db["icon_alpha_"..icon] or private.db["icon_alpha_others"]
+    return ns.db["icon_alpha_"..icon] or ns.db["icon_alpha_others"]
 end
 
-local GetPointInfo = function(point)
+local GetNodeInfo = function(node)
     local icon
 
-    if (point) then
-        local label = point.label or point.multilabel and table.concat(point.multilabel, "\n") or UNKNOWN
-        if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal") and portal_red)
+    if (node) then
+        local label = node.label or node.multilabel and table.concat(node.multilabel, "\n") or UNKNOWN
+        if (node.requirements and not ReqFulfilled(node.requirements)) then
+            icon = ((node.icon == "portal") and portal_red)
         else
-            icon = SetIcon(point)
+            icon = SetIcon(node)
         end
-        return label, icon, point.icon, point.scale, point.alpha
+        return label, icon, node.icon, node.scale, node.alpha
     end
 end
 
-local GetPointInfoByCoord = function(uMapID, coord)
-    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local GetNodeInfoByCoord = function(uMapID, coord)
+    return GetNodeInfo(ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetTooltip(tooltip, point)
-    local pointreq = point.requirements
-    if point then
-        if (point.label) then
-            tooltip:AddLine(point.label)
+local function SetTooltip(tooltip, node)
+    local nodereq = node.requirements
+    if (node) then
+        if (node.label) then
+            tooltip:AddLine(node.label)
         end
-        if (point.multilabel) then
-            if (pointreq) then
-                tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
+        if (node.multilabel) then
+            if (nodereq) then
+                tooltip:AddLine(PrepareLabel(node.multilabel, node.multinote, nodereq.multilevel, nodereq.multiquest))
             else
-                tooltip:AddLine(PrepareLabel(point.multilabel, point.multinote))
+                tooltip:AddLine(PrepareLabel(node.multilabel, node.multinote))
             end
         end
-        if (point.note and profile.show_note) then
-            tooltip:AddLine("("..point.note..")")
+        if (node.note and profile.show_note) then
+            tooltip:AddLine("("..node.note..")")
         end
-        if (pointreq) then
-            if (pointreq.level and UnitLevel("player") < pointreq.level) then
-                tooltip:AddLine(RequiresLevel..": "..pointreq.level, 1) -- red
+        if (nodereq) then
+            if (nodereq.level and UnitLevel("player") < nodereq.level) then
+                tooltip:AddLine(RequiresLevel..": "..nodereq.level, 1) -- red
             end
-            if (pointreq.quest and not IsQuestCompleted(pointreq.quest)) then
-                if (C_QuestLog.GetQuestInfo(pointreq.quest) ~= nil) then
-                    tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetQuestInfo(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
+            if (nodereq.quest and not IsQuestCompleted(nodereq.quest)) then
+                if (C_QuestLog.GetQuestInfo(nodereq.quest) ~= nil) then
+                    tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetQuestInfo(nodereq.quest).."] (ID: "..nodereq.quest..")",1,0,0)
                 else
                     tooltip:AddLine(RetrievindData,1,0,1) -- pink
                     C_Timer.After(1, function() addon:Refresh() end) -- Refresh
                     -- print("refreshed")
                 end
             end
-            if (pointreq.reputation) then
-                local name, _, standing, _, _, value = GetFactionInfoByID(pointreq.reputation[1])
-                if (standing < pointreq.reputation[2]) then
+            if (nodereq.reputation) then
+                local name, _, standing, _, _, value = GetFactionInfoByID(nodereq.reputation[1])
+                if (standing < nodereq.reputation[2]) then
                     tooltip:AddLine(RequiresRep..": ",1) -- red
                     GameTooltip_ShowProgressBar(tooltip, 0, 21000, value, name..": "..value.." / 21000")
                 end
@@ -200,7 +200,7 @@ local function SetTooltip(tooltip, point)
 end
 
 local SetTooltipByCoord = function(tooltip, uMapID, coord)
-    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+    return SetTooltip(tooltip, ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -221,7 +221,7 @@ function PluginHandler:OnEnter(uMapID, coord)
 end
 
 function PluginHandler:OnLeave(uMapID, coord)
-    if self:GetParent() == WorldMapButton then
+    if (self:GetParent() == WorldMapButton) then
         WorldMapTooltip:Hide()
     else
         GameTooltip:Hide()
@@ -229,7 +229,7 @@ function PluginHandler:OnLeave(uMapID, coord)
 end
 
 local function hideNode(button, uMapID, coord)
-    private.hidden[uMapID][coord] = true
+    ns.hidden[uMapID][coord] = true
     addon:Refresh()
 end
 
@@ -238,10 +238,10 @@ local function closeAllDropdowns()
 end
 
 local function addTomTomWaypoint(button, uMapID, coord)
-    if TomTom then
+    if (TomTom) then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = GetPointInfoByCoord(uMapID, coord),
+            title = GetNodeInfoByCoord(uMapID, coord),
             from = L["handler_context_menu_addon_name"],
             persistent = nil,
             minimap = true,
@@ -269,7 +269,7 @@ do
 
 --            UIDropDownMenu_AddButton(spacer, level)
 
-            if TomTom and not profile.easy_waypoint then
+            if (TomTom and not profile.easy_waypoint) then
                 -- Waypoint menu item
                 info = UIDropDownMenu_CreateInfo()
                 info.text = L["handler_context_menu_add_tomtom"]
@@ -318,7 +318,7 @@ do
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         else
-        if profile.easy_waypoint and TomTom then
+        if (profile.easy_waypoint and TomTom) then
             addTomTomWaypoint(button, uMapID, coord)
         end
         end
@@ -328,11 +328,11 @@ end
 do
     local currentMapID = nil
     local function iter(t, prestate)
-        if not t then return nil end
+        if (not t) then return nil end
         local state, value = next(t, prestate)
         while state do
-            if value and private:ShouldShow(state, value, currentMapID) then
-                local _, icon, iconname, scale, alpha = GetPointInfo(value)
+            if (value and ns:ShouldShow(state, value, currentMapID)) then
+                local _, icon, iconname, scale, alpha = GetNodeInfo(value)
                     scale = (scale or 1) * GetIconScale(iconname)
                     alpha = (alpha or 1) * GetIconAlpha(iconname)
                 return state, nil, icon, scale, alpha
@@ -344,28 +344,28 @@ do
 
     function PluginHandler:GetNodes2(uMapID, minimap)
         currentMapID = uMapID
-        return iter, private.DB.points[uMapID], nil
+        return iter, ns.DB.nodes[uMapID], nil
     end
 
-    function private:ShouldShow(coord, point, currentMapID)
-        if not private.db.force_nodes then
-            if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
+    function ns:ShouldShow(coord, node, currentMapID)
+        if (not ns.db.force_nodes) then
+            if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then
                 return false
             end
             -- this will check if any node is for specific class
-            if (point.class and point.class ~= select(2, UnitClass("player"))) then
+            if (node.class and node.class ~= select(2, UnitClass("player"))) then
                 return false
             end
             -- this will check if any node is for specific faction
-            if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+            if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then
                 return false
             end
-            if (point.icon == "portal" and not private.db.show_portal) then return false end
-            if (point.icon == "tram" and not private.db.show_tram) then return false end
-            if (point.icon == "boat" and not private.db.show_boat) then return false end
-            if (point.icon == "aboat" and not private.db.show_aboat) then return false end
-            if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
-            if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
+            if (node.icon == "portal" and not ns.db.show_portal) then return false end
+            if (node.icon == "tram" and not ns.db.show_tram) then return false end
+            if (node.icon == "boat" and not ns.db.show_boat) then return false end
+            if (node.icon == "aboat" and not ns.db.show_aboat) then return false end
+            if (node.icon == "zeppelin" and not ns.db.show_zeppelin) then return false end
+            if (node.icon == "hzeppelin" and not ns.db.show_hzeppelin) then return false end
         end
         return true
     end
@@ -376,22 +376,22 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New("HandyNotes_TravelGuideBCCDB", private.constants.defaults)
+    self.db = AceDB:New("HandyNotes_TravelGuideBCCDB", ns.constants.defaults)
 
     profile = self.db.profile
-    private.db = profile
+    ns.db = profile
 
     global = self.db.global
-    private.global = global
+    ns.global = global
 
-    private.hidden = self.db.char.hidden
+    ns.hidden = self.db.char.hidden
 
-    if private.global.dev then
-        private.devmode()
+    if (ns.global.dev) then
+        ns.devmode()
     end
 
     -- Initialize database with HandyNotes
-    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
+    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, ns.config.options)
 end
 
 function addon:Refresh()
@@ -407,7 +407,7 @@ local frame, events = CreateFrame("Frame"), {};
 function events:ZONE_CHANGED(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after ZONE_CHANGED")
     end
 end
@@ -415,7 +415,7 @@ end
 function events:ZONE_CHANGED_INDOORS(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after ZONE_CHANGED_INDOORS")
     end
 end
@@ -423,7 +423,7 @@ end
 function events:QUEST_FINISHED(...)
     addon:Refresh()
 
-    if private.db.dev and private.db.show_prints then
+    if (ns.db.dev and ns.db.show_prints) then
         print(addon.pluginName..": refreshed after QUEST_FINISHED")
     end
 end

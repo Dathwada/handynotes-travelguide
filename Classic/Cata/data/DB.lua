@@ -2,8 +2,8 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
-local L = private.locale
+local FOLDER_NAME, ns = ...
+local L = ns.locale
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -123,9 +123,9 @@ local SilverpineForest = GetMapNames(1415, 1421)
 
 local DB = {}
 
-private.DB = DB
+ns.DB = DB
 
-DB.points = {
+DB.nodes = {
 -- MAPID from https://wow.gamepedia.com/UiMapID/Classic
 -- or collected with /dump WorldMapFrame:GetMapID()
 

@@ -2,24 +2,24 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
+local FOLDER_NAME, ns = ...
 
 local addon = LibStub("AceAddon-3.0"):NewAddon(FOLDER_NAME, "AceEvent-3.0")
 local AceDB = LibStub("AceDB-3.0")
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local HBD = LibStub('HereBeDragons-2.0')
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
-private.locale = L
+ns.locale = L
 
-addon.constants = private.constants
+addon.constants = ns.constants
 
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
-local portal_red       = private.constants.icon.portal_red
-local BoatX            = private.constants.icon.boat_x
-local molemachineX     = private.constants.icon.molemachine_x
+local portal_red       = ns.constants.icon.portal_red
+local BoatX            = ns.constants.icon.boat_x
+local molemachineX     = ns.constants.icon.molemachine_x
 
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
@@ -83,7 +83,7 @@ local areaPoisToRemove = {
 
 -- This will remove specified AreaPois on the WorldMapFrame
 local function RemoveAreaPOIs()
-    if (not private.db.remove_AreaPois) then return end
+    if (not ns.db.remove_AreaPois) then return end
 
     for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
         for _, poiID in ipairs(areaPoisToRemove) do
@@ -99,8 +99,8 @@ end
 do
     -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
     for dp in pairs(WorldMapFrame.dataProviders) do
-        if type(dp.GetPinTemplate) == "function" then
-            if dp:GetPinTemplate() == "AreaPOIPinTemplate" then
+        if (type(dp.GetPinTemplate) == "function") then
+            if (dp:GetPinTemplate() == "AreaPOIPinTemplate") then
                 hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
             end
         end
@@ -177,7 +177,7 @@ local function Prepare(label, note, level, quest)
         end
 
         -- add additional notes
-        if (note and note[i] and private.db.show_note) then
+        if (note and note[i] and ns.db.show_note) then
             NOTE = " ("..note[i]..")"
         end
 
@@ -208,137 +208,137 @@ end
 ------------------------------------------------ICON------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetIcon(point)
-    local icon_key = point.icon
+local function SetIcon(node)
+    local icon_key = node.icon
 
-    if (icon_key and private.constants.icon[icon_key]) then
-        return private.constants.icon[icon_key]
+    if (icon_key and ns.constants.icon[icon_key]) then
+        return ns.constants.icon[icon_key]
     end
 end
 
 local function GetIconScale(icon)
     if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
-        return private.db["icon_scale_portal"]
+        return ns.db["icon_scale_portal"]
     elseif (icon == "boat" or icon == "aboat") then
-        return private.db["icon_scale_boat"]
+        return ns.db["icon_scale_boat"]
     elseif (icon == "zeppelin" or icon == "hzeppelin") then
-        return private.db["icon_scale_zeppelin"]
+        return ns.db["icon_scale_zeppelin"]
     end
 
-    return private.db["icon_scale_"..icon] or private.db["icon_scale_others"]
+    return ns.db["icon_scale_"..icon] or ns.db["icon_scale_others"]
 end
 
 local function GetIconAlpha(icon)
     if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
-        return private.db["icon_alpha_portal"]
+        return ns.db["icon_alpha_portal"]
     elseif (icon == "boat" or icon == "aboat") then
-        return private.db["icon_alpha_boat"]
+        return ns.db["icon_alpha_boat"]
     elseif (icon == "zeppelin" or icon == "hzeppelin") then
-        return private.db["icon_alpha_zeppelin"]
+        return ns.db["icon_alpha_zeppelin"]
     end
 
-    return private.db["icon_alpha_"..icon] or private.db["icon_alpha_others"]
+    return ns.db["icon_alpha_"..icon] or ns.db["icon_alpha_others"]
 end
 
-local GetPointInfo = function(point)
+local GetNodeInfo = function(node)
     local icon
 
-    if (point) then
-        local label = point.label or point.multilabel and Prepare(point.multilabel) or UNKNOWN
-        if (point.requirements and not ReqFulfilled(point.requirements)) then
-            icon = ((point.icon == "portal" or point.icon == "orderhall" or point.icon == "portal_mixed" or point.icon == "petBattlePortal" or point.icon == "ogreWaygate" or point.icon == "portal_purple") and portal_red)
-            or (point.icon == "boat" and BoatX)
-            or (point.icon == "molemachine" and molemachineX)
+    if (node) then
+        local label = node.label or node.multilabel and Prepare(node.multilabel) or UNKNOWN
+        if (node.requirements and not ReqFulfilled(node.requirements)) then
+            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "portal_mixed" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_red)
+            or (node.icon == "boat" and BoatX)
+            or (node.icon == "molemachine" and molemachineX)
         else
-            icon = SetIcon(point)
+            icon = SetIcon(node)
         end
-        return label, icon, point.icon, point.scale, point.alpha
+        return label, icon, node.icon, node.scale, node.alpha
     end
 end
 
-local GetPointInfoByCoord = function(uMapID, coord)
-    return GetPointInfo(private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+local GetNodeInfoByCoord = function(uMapID, coord)
+    return GetNodeInfo(ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------TOOLTIP-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function SetTooltip(tooltip, point)
-    local pointreq = point.requirements
-    if (point) then
-        if (point.label) then
-            tooltip:AddLine(point.label)
+local function SetTooltip(tooltip, node)
+    local nodereq = node.requirements
+    if (node) then
+        if (node.label) then
+            tooltip:AddLine(node.label)
         end
-        if (point.note and private.db.show_note) then
-            tooltip:AddLine("("..point.note..")")
+        if (node.note and ns.db.show_note) then
+            tooltip:AddLine("("..node.note..")")
         end
-        if (point.multilabel and point.icon ~= "portal_mixed") then
-            if (pointreq) then
-                tooltip:AddLine(Prepare(point.multilabel, point.multinote, pointreq.multilevel, pointreq.multiquest))
+        if (node.multilabel and node.icon ~= "portal_mixed") then
+            if (nodereq) then
+                tooltip:AddLine(Prepare(node.multilabel, node.multinote, nodereq.multilevel, nodereq.multiquest))
             else
-                tooltip:AddLine(Prepare(point.multilabel, point.multinote))
+                tooltip:AddLine(Prepare(node.multilabel, node.multinote))
             end
         end
-        if (point.npc) then
-            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
+        if (node.npc) then
+            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(node.npc))
         end
-        if (point.icon == "portal_mixed") then
-            tooltip:AddDoubleLine(Prepare(point.multilabel, point.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
+        if (node.icon == "portal_mixed") then
+            tooltip:AddDoubleLine(Prepare(node.multilabel, node.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
         end
-        if (pointreq) then
-            if (pointreq.warfront and GetWarfrontState(pointreq.warfront) ~= select(1, UnitFactionGroup("player"))) then
+        if (nodereq) then
+            if (nodereq.warfront and GetWarfrontState(nodereq.warfront) ~= select(1, UnitFactionGroup("player"))) then
                 tooltip:AddLine(notavailable, 1) -- red
             end
-            if (pointreq.level and UnitLevel("player") < pointreq.level) then
-                tooltip:AddLine(RequiresPlayerLvl..": "..pointreq.level, 1) -- red
+            if (nodereq.level and UnitLevel("player") < nodereq.level) then
+                tooltip:AddLine(RequiresPlayerLvl..": "..nodereq.level, 1) -- red
             end
-            if (pointreq.quest and not IsQuestCompleted(pointreq.quest)) then
-                if (not pointreq.hideQuestName) then
-                    if (C_QuestLog.GetTitleForQuestID(pointreq.quest) ~= nil) then
-                        tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(pointreq.quest).."] (ID: "..pointreq.quest..")",1,0,0)
+            if (nodereq.quest and not IsQuestCompleted(nodereq.quest)) then
+                if (not nodereq.hideQuestName) then
+                    if (C_QuestLog.GetTitleForQuestID(nodereq.quest) ~= nil) then
+                        tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(nodereq.quest).."] (ID: "..nodereq.quest..")",1,0,0)
                     else
                         tooltip:AddLine(RetrievindData,1,0,1) -- pink
                         RefreshAfter(1) -- Refresh
                     end
-                elseif (pointreq.item) then -- OgreWaygate
-                    local name = C_Item.GetItemNameByID(pointreq.item[1]) or RetrievindData
-                    local quantity = pointreq.item[2]
+                elseif (nodereq.item) then -- OgreWaygate
+                    local name = C_Item.GetItemNameByID(nodereq.item[1]) or RetrievindData
+                    local quantity = nodereq.item[2]
 
                     if (name == RetrievindData) then RefreshAfter(1) end
 
                     tooltip:AddLine(requires..': '..quantity..'x '..name, 1) -- red
-                elseif (point.icon == "molemachine") then
+                elseif (node.icon == "molemachine") then
                     tooltip:AddLine(L["handler_tooltip_not_discovered"], 1) -- red
                 end
             end
-            if (pointreq.reputation) then
-                local name, _, standing, _, _, value = GetFactionInfoByID(pointreq.reputation[1])
-                if (standing < pointreq.reputation[2]) then
+            if (nodereq.reputation) then
+                local name, _, standing, _, _, value = GetFactionInfoByID(nodereq.reputation[1])
+                if (standing < nodereq.reputation[2]) then
                     tooltip:AddLine(RequiresRep..": ",1) -- red
                     GameTooltip_ShowProgressBar(GameTooltip, 0, 21000, value, name..": "..value.." / 21000")
                 end
             end
-            if (pointreq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
-                local spellName = GetSpellInfo(pointreq.timetravel["spell"])
+            if (nodereq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
+                local spellName = GetSpellInfo(nodereq.timetravel["spell"])
                 if (spellName) then
-                    if (not IsQuestCompleted(pointreq.timetravel["quest"]) and not pointreq.warfront and not pointreq.timetravel["turn"])
-                    or (IsQuestCompleted(pointreq.timetravel["quest"]) and pointreq.warfront and not pointreq.timetravel["turn"])
-                    or (IsQuestCompleted(pointreq.timetravel["quest"]) and not pointreq.warfront and pointreq.timetravel["turn"]) then
+                    if (not IsQuestCompleted(nodereq.timetravel["quest"]) and not nodereq.warfront and not nodereq.timetravel["turn"])
+                    or (IsQuestCompleted(nodereq.timetravel["quest"]) and nodereq.warfront and not nodereq.timetravel["turn"])
+                    or (IsQuestCompleted(nodereq.timetravel["quest"]) and not nodereq.warfront and nodereq.timetravel["turn"]) then
                         tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                     end
                 end
             end
-            if (pointreq.spell) then -- don't show this if the spell is known
-                local spellName = GetSpellInfo(pointreq.spell)
-                local isKnown = IsSpellKnown(pointreq.spell)
+            if (nodereq.spell) then -- don't show this if the spell is known
+                local spellName = GetSpellInfo(nodereq.spell)
+                local isKnown = IsSpellKnown(nodereq.spell)
                 if (spellName and not isKnown) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- red
                 end
             end
-            if (pointreq.toy) then
-                local toyName = GetItemInfo(pointreq.toy) or RetrievindData
-                local isKnown = PlayerHasToy(pointreq.toy)
+            if (nodereq.toy) then
+                local toyName = GetItemInfo(nodereq.toy) or RetrievindData
+                local isKnown = PlayerHasToy(nodereq.toy)
 
                 if (toyName == RetrievindData) then RefreshAfter(1) end
 
@@ -346,8 +346,8 @@ local function SetTooltip(tooltip, point)
                     tooltip:AddLine(RequiresToy..': '..toyName, 1) -- red
                 end
             end
-            if (point.covenant and pointreq.sanctumtalent) then
-                local TALENT = C_Garrison.GetTalentInfo(pointreq.sanctumtalent)
+            if (node.covenant and nodereq.sanctumtalent) then
+                local TALENT = C_Garrison.GetTalentInfo(nodereq.sanctumtalent)
                 if (not TALENT["researched"]) then
                     tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
                     tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
@@ -363,7 +363,7 @@ local function SetTooltip(tooltip, point)
 end
 
 local SetTooltipByCoord = function(tooltip, uMapID, coord)
-    return SetTooltip(tooltip, private.DB.points[uMapID] and private.DB.points[uMapID][coord])
+    return SetTooltip(tooltip, ns.DB.nodes[uMapID] and ns.DB.nodes[uMapID][coord])
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -392,7 +392,7 @@ function PluginHandler:OnLeave(uMapID, coord)
 end
 
 local function hideNode(button, uMapID, coord)
-    private.hidden[uMapID][coord] = true
+    ns.hidden[uMapID][coord] = true
     addon:Refresh()
 end
 
@@ -404,7 +404,7 @@ local function addTomTomWaypoint(button, uMapID, coord)
     if (C_AddOns.IsAddOnLoaded("TomTom")) then
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
-            title = GetPointInfoByCoord(uMapID, coord),
+            title = GetNodeInfoByCoord(uMapID, coord),
             from = L["handler_context_menu_addon_name"],
             persistent = nil,
             minimap = true,
@@ -487,15 +487,15 @@ do
 
     function PluginHandler:OnClick(button, down, uMapID, coord)
         local TomTom = select(2, C_AddOns.IsAddOnLoaded('TomTom'))
-        local dropdown = private.db.easy_waypoint_dropdown
+        local dropdown = ns.db.easy_waypoint_dropdown
 
         if (down or button ~= "RightButton") then return end
 
-        if (button == "RightButton" and not down and not private.db.easy_waypoint) then
+        if (button == "RightButton" and not down and not ns.db.easy_waypoint) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
-        elseif (IsControlKeyDown() and private.db.easy_waypoint) then
+        elseif (IsControlKeyDown() and ns.db.easy_waypoint) then
             currentMapID = uMapID
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
@@ -516,8 +516,8 @@ do
         if (not t) then return nil end
         local state, value = next(t, prestate)
         while state do
-            if (value and private:ShouldShow(state, value, currentMapID)) then
-                local _, icon, iconname, scale, alpha = GetPointInfo(value)
+            if (value and ns:ShouldShow(state, value, currentMapID)) then
+                local _, icon, iconname, scale, alpha = GetNodeInfo(value)
                     scale = (scale or 1) * GetIconScale(iconname)
                     alpha = (alpha or 1) * GetIconAlpha(iconname)
                 return state, nil, icon, scale, alpha
@@ -529,47 +529,47 @@ do
 
     function PluginHandler:GetNodes2(uMapID, minimap)
         currentMapID = uMapID
-        return iter, private.DB.points[uMapID], nil
+        return iter, ns.DB.nodes[uMapID], nil
     end
 
-    function private:ShouldShow(coord, point, currentMapID)
-        if (not private.db.force_nodes) then
-            if (private.hidden[currentMapID] and private.hidden[currentMapID][coord]) then
+    function ns:ShouldShow(coord, node, currentMapID)
+        if (not ns.db.force_nodes) then
+            if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then
                 return false
             end
             -- this will check if requirements are fulfilled, when remove_unknown option enabled
-            if (point.requirements and private.db.remove_unknown and not ReqFulfilled(point.requirements)) then
+            if (node.requirements and ns.db.remove_unknown and not ReqFulfilled(node.requirements)) then
                 return false
             end
             -- this will check if any node is for specific class
-            if (point.class and point.class ~= select(2, UnitClass("player"))) then
+            if (node.class and node.class ~= select(2, UnitClass("player"))) then
                 return false
             end
             -- this will check if any node is for specific faction
-            if (point.faction and point.faction ~= select(1, UnitFactionGroup("player"))) then
+            if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then
                 return false
             end
             -- this will check if any node is for specific covenant
-            if (point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID()) then
+            if (node.covenant and node.covenant ~= C_Covenants.GetActiveCovenantID()) then
                 return false
             end
-            if (point.icon == "portal" and not private.db.show_portal) then return false end
-            if (point.icon == "orderhall" and not private.db.show_orderhall) then return false end
-            if (point.icon == "worderhall" and not private.db.show_orderhall) then return false end
-            if (point.requirements and point.requirements.warfront and not private.db.show_warfront) then return false end
-            if (point.icon == "portal_mixed" and not private.db.show_warfront) then return false end
-            if (point.icon == "petBattlePortal" and not private.db.show_petBattlePortal) then return false end
-            if (point.icon == "ogreWaygate" and not private.db.show_ogreWaygate) then return false end
-            if (point.icon == "portal_purple" and not private.db.show_reflectivePortal) then return false end
-            if (point.icon == "flightMaster" and not private.db.show_orderhall) then return false end
-            if (point.icon == "tram" and not private.db.show_tram) then return false end
-            if (point.icon == "boat" and not private.db.show_boat) then return false end
-            if (point.icon == "aboat" and not private.db.show_aboat) then return false end
-            if (point.icon == "zeppelin" and not private.db.show_zeppelin) then return false end
-            if (point.icon == "hzeppelin" and not private.db.show_hzeppelin) then return false end
-            if (point.icon == "animaGateway" and not private.db.show_animaGateway) then return false end
-            if (point.icon == "teleportPlatform" and not private.db.show_teleportPlatform) then return false end
-            if (point.icon == "molemachine" and (not private.db.show_molemachine or (select(2, UnitRace("player")) ~= "DarkIronDwarf"))) then return false end
+            if (node.icon == "portal" and not ns.db.show_portal) then return false end
+            if (node.icon == "orderhall" and not ns.db.show_orderhall) then return false end
+            if (node.icon == "worderhall" and not ns.db.show_orderhall) then return false end
+            if (node.requirements and node.requirements.warfront and not ns.db.show_warfront) then return false end
+            if (node.icon == "portal_mixed" and not ns.db.show_warfront) then return false end
+            if (node.icon == "petBattlePortal" and not ns.db.show_petBattlePortal) then return false end
+            if (node.icon == "ogreWaygate" and not ns.db.show_ogreWaygate) then return false end
+            if (node.icon == "portal_purple" and not ns.db.show_reflectivePortal) then return false end
+            if (node.icon == "flightMaster" and not ns.db.show_orderhall) then return false end
+            if (node.icon == "tram" and not ns.db.show_tram) then return false end
+            if (node.icon == "boat" and not ns.db.show_boat) then return false end
+            if (node.icon == "aboat" and not ns.db.show_aboat) then return false end
+            if (node.icon == "zeppelin" and not ns.db.show_zeppelin) then return false end
+            if (node.icon == "hzeppelin" and not ns.db.show_hzeppelin) then return false end
+            if (node.icon == "animaGateway" and not ns.db.show_animaGateway) then return false end
+            if (node.icon == "teleportPlatform" and not ns.db.show_teleportPlatform) then return false end
+            if (node.icon == "molemachine" and (not ns.db.show_molemachine or (select(2, UnitRace("player")) ~= "DarkIronDwarf"))) then return false end
         end
         return true
     end
@@ -580,22 +580,22 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New(FOLDER_NAME.."DB", private.constants.defaults)
+    self.db = AceDB:New(FOLDER_NAME.."DB", ns.constants.defaults)
 
     profile = self.db.profile
-    private.db = profile
+    ns.db = profile
 
     global = self.db.global
-    private.global = global
+    ns.global = global
 
-    private.hidden = self.db.char.hidden
+    ns.hidden = self.db.char.hidden
 
-    if (private.global.dev) then
-        private.devmode()
+    if (ns.global.dev) then
+        ns.devmode()
     end
 
     -- Initialize database with HandyNotes
-    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
+    HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, ns.config.options)
 end
 
 function addon:Refresh()

@@ -2,9 +2,9 @@
 ------------------------------------------AddOn NAMESPACE-------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local FOLDER_NAME, private = ...
+local FOLDER_NAME, ns = ...
 local addon = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
-local L = private.locale
+local L = ns.locale
 
 addon.pluginName  = L["config_plugin_name"]
 addon.description = L["config_plugin_desc"]
@@ -14,16 +14,16 @@ addon.description = L["config_plugin_desc"]
 ----------------------------------------------------------------------------------------------------
 
 local config = {}
-private.config = config
+ns.config = config
 
 config.options = {
     type = "group",
     name = addon.pluginName,
     desc = addon.description,
     childGroups = "tab",
-    get = function(info) return private.db[info[#info]] end,
+    get = function(info) return ns.db[info[#info]] end,
     set = function(info, v)
-        private.db[info[#info]] = v
+        ns.db[info[#info]] = v
         addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
     end,
     args = {
@@ -92,7 +92,7 @@ config.options = {
                     type = "toggle",
                     width = "full",
                     name = function()
-                        if TomTom then
+                        if (TomTom) then
                             return L["config_easy_waypoints"]
                         else
                             return L["config_easy_waypoints"].." |cFFFF0000("..L["config_easy_waypoints_requires"].." TomTom)|r"
@@ -108,7 +108,7 @@ config.options = {
                     name = L["config_restore_nodes"],
                     desc = L["config_restore_nodes_desc"],
                     func = function()
-                        for map,coords in pairs(private.hidden) do
+                        for map,coords in pairs(ns.hidden) do
                             wipe(coords)
                         end
                         addon:Refresh()
