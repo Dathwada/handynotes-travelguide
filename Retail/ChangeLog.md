@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.18.0 (July 24, 2024)
+-------------------------------
+* Added missing portals in Dalaran (Broken Isles)
+* Added new TWW portals
+* Updated for TWW API
+* Bump .toc to 110000
+
 #### v2.17.0 (May 07, 2024)
 -------------------------------
 * Added new boat nodes (Amirdrassil <--> Gilneas)
