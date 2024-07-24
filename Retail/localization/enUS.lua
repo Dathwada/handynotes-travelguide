@@ -125,6 +125,12 @@ L["handler_tooltip_not_discovered"] = "not yet discovered"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+-------------------------------------------------TWW------------------------------------------------
+
+L["Portal to Dragonblight"] = true
+L["Portal to Dustwallow Marsh"] = true
+L["Portal to Searing Gorge"] = true
+
 --==========================================DRAGONFLIGHT==========================================--
 
 L["Portal to Valdrakken"] = true
@@ -201,6 +207,8 @@ L["Portal to Grizzly Hills"] = true
 L["Portal to Hinterlands"] = true
 L["Portal to Moonglade"] = true
 L["Portal to Dreamgrove"] = true
+L["Portal to Wyrmrest Temple"] = true
+L["Portal to Karazhan"] = true
 
 -------------------------------------------------WoD------------------------------------------------
 

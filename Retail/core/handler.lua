@@ -11,8 +11,6 @@ local HBD = LibStub('HereBeDragons-2.0')
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
 ns.locale = L
 
-addon.constants = ns.constants
-
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
@@ -74,7 +72,10 @@ local areaPoisToRemove = {
     5881, -- The Cape of Stranglethorn, Boat to Ratschet
     5882, -- Northern Barrens, Boat to Booty
     7944, -- Amirdrassil, Boat to Stormglen
-    7945 -- Gilneas, Boat to Belanaar
+    7945, -- Gilneas, Boat to Belanaar
+    7959, -- Dustwallow Marsh, Portal to Dalaran
+    7960, -- Dragonblight, Portal to Dalaran
+    7961, -- Searing Gorge, Portal to Dalaran
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -143,7 +144,7 @@ local function ReqFulfilled(req, ...)
     end
 
     if (req.reputation) then
-        local _, _, standing = GetFactionInfoByID(req.reputation[1])
+        local standing = C_Reputation.GetFactionDataByID(req.reputation[1]).currentStanding
         return standing >= req.reputation[2]
     end
 
@@ -173,7 +174,7 @@ local function Prepare(label, note, level, quest)
 
         -- set spell name as label
         if (type(name) == "number") then
-            name = GetSpellInfo(name)
+            name = C_Spell.GetSpellInfo(name).name
         end
 
         -- add additional notes
@@ -314,15 +315,16 @@ local function SetTooltip(tooltip, node)
             end
             if (nodereq.reputation) then
                 local reqValuesForStandings = {0, 36000, 39000, 42000, 45000, 51000, 63000, 84000}
-                local name, _, standing, _, _, value = GetFactionInfoByID(nodereq.reputation[1])
-                if (standing < nodereq.reputation[2]) then
+                local faction = C_Reputation.GetFactionDataByID(nodereq.reputation[1])
+                if (faction and faction.reaction < nodereq.reputation[2]) then
                     local reqValue = reqValuesForStandings[nodereq.reputation[2]]
+                    local value = faction.currentStanding
                     tooltip:AddLine(RequiresRep..": ",1) -- red
-                    GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, name..": "..value.." / "..reqValue)
+                    GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, faction.name..": "..value.." / "..reqValue)
                 end
             end
             if (nodereq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
-                local spellName = GetSpellInfo(nodereq.timetravel["spell"])
+                local spellName = C_Spell.GetSpellInfo(nodereq.timetravel["spell"]).name
                 if (spellName) then
                     if (not IsQuestCompleted(nodereq.timetravel["quest"]) and not nodereq.warfront and not nodereq.timetravel["turn"])
                     or (IsQuestCompleted(nodereq.timetravel["quest"]) and nodereq.warfront and not nodereq.timetravel["turn"])
@@ -332,14 +334,14 @@ local function SetTooltip(tooltip, node)
                 end
             end
             if (nodereq.spell) then -- don't show this if the spell is known
-                local spellName = GetSpellInfo(nodereq.spell)
+                local spellName = C_Spell.GetSpellInfo(nodereq.spell).name
                 local isKnown = IsSpellKnown(nodereq.spell)
                 if (spellName and not isKnown) then
                     tooltip:AddLine(requires..': '..spellName, 1) -- red
                 end
             end
             if (nodereq.toy) then
-                local toyName = GetItemInfo(nodereq.toy) or RetrievindData
+                local toyName = C_Item.GetItemInfo(nodereq.toy) or RetrievindData
                 local isKnown = PlayerHasToy(nodereq.toy)
 
                 if (toyName == RetrievindData) then RefreshAfter(1) end

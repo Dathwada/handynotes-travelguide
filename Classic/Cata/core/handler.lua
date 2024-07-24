@@ -10,8 +10,6 @@ local AceDB = LibStub("AceDB-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME)
 ns.locale = L
 
-addon.constants = ns.constants
-
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted

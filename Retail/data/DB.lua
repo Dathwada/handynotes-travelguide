@@ -120,6 +120,8 @@ local highmountain = GetMapNames(650)
 local stormheim = GetMapNames(634)
 local brokenshore = GetMapNames(646)
 local Meredil = GetMapNames(680, nil, 7840)
+local PtoKarazhan = L["Portal to Karazhan"]
+local PtoWyrmrestTemple = L["Portal to Wyrmrest Temple"]
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -239,6 +241,7 @@ local WtoUngoroCrater = L["Waygate to Un'Goro Crater"]
 local TheMasonary = L["The Masonary"]
 local inBRM = L["inside the Blackrock Mountain"]
 local Feralas = GetMapNames(12, 69)
+local DeadwindPass = GetMapNames(13, 42)
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -281,6 +284,23 @@ DB.nodes = {
         },
     },
 ]]
+-----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
+
+    [2274] = { -- Khaz Algar
+        [72392017] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [70961840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [71291790] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        },
+    [2248] = { -- Isle of Dorn
+        [49974297] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [46773901] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [47523789] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        },
+    [2339] = { -- Dornogal
+        [51174334] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [38162723] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [41182266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        },
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
 
@@ -502,7 +522,7 @@ DB.nodes = {
         [30712543] = { icon="orderhall", multilabel={PtoDala, PtoEmeraldDreamway}, multinote={BrokenIsles}, class="DRUID" },
         [63326940] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="DEATHKNIGHT" },
         [45406523] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [46086351] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [46086351] = { icon="portal", multilabel={PtoOG, PtoWyrmrestTemple, PtoDalaCrater, PtoKarazhan}, multinote={Durotar, Dragonblight, HillsbradFoothills, DeadwindPass}, faction="Horde" },
         [33675793] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [33675788] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [52082914] = { icon="portal", label=PtoDala, note=BrokenIsles },
@@ -525,7 +545,16 @@ DB.nodes = {
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [55302400] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58613934] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}} },
-        [72854121] = { icon="flightMaster", label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" } --quest=40953, ????
+        [72854121] = { icon="flightMaster", label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" }, --quest=40953, ????
+        [49254759] = { icon="portal", multilabel={PtoWyrmrestTemple, PtoDalaCrater, PtoKarazhan}, multinote={Dragonblight, HillsbradFoothills, DeadwindPass} }
+        },
+    [629] = { -- Dalaran - Aegwynn's Gallery
+        -- [30698462] = { icon="portal", label=L["Portal to Dragonblight"], note=Northrend }, -- TWW PREPATCH EVENT
+        -- [35848595] = { icon="portal", label=L["Portal to Dustwallow Marsh"], note=Kalimdor }, -- TWW PREPATCH EVENT
+        -- [38997969] = { icon="portal", label=L["Portal to Searing Gorge"], note=EasternKingdoms } -- TWW PREPATCH EVENT
+        [30808431] = { icon="portal", label=PtoWyrmrestTemple, note=Dragonblight },
+        [28717736] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills },
+        [32027144] = { icon="portal", label=PtoKarazhan, note=DeadwindPass }
         },
     [630] = { -- Azsuna
         [46664141] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -861,6 +890,7 @@ DB.nodes = {
         [47797887] = { icon="boat", label=BtoUnuPe, note=BoreanTundra },
         [49847853] = { icon="boat", label=BtoKamagua, note=HowlingFjord },
         [45354992] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} } -- Dragonblight, Ruby Dragonshrine
+        -- [] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [114] = { -- Borean Tundra
         [79015410] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
@@ -1014,6 +1044,7 @@ DB.nodes = {
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [57804366] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" }
+        -- [45995716] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1070,6 +1101,7 @@ DB.nodes = {
     [70] = { -- Dustwallow Marsh
         [71625648] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
         [71625647] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" }
+        -- [45995716] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [62] = { -- Darkshore
         [48023627] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },

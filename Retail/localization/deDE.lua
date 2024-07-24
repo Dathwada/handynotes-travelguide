@@ -125,6 +125,12 @@ L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+-------------------------------------------------TWW------------------------------------------------
+
+L["Portal to Dragonblight"] = "Portal nach Drachenöde"
+L["Portal to Dustwallow Marsh"] = "Portal in die Düstermarschen"
+L["Portal to Searing Gorge"] = "Portal zur Sengenden Schlucht"
+
 --==========================================DRAGONFLIGHT==========================================--
 
 L["Portal to Valdrakken"] = "Portal nach Valdrakken"
@@ -201,6 +207,8 @@ L["Portal to Grizzly Hills"] = "Portal zu den Grizzly Hügeln"
 L["Portal to Hinterlands"] = "Portal ins Hinterland"
 L["Portal to Moonglade"] = "Portal zur Mondlichtung"
 L["Portal to Dreamgrove"] = "Portal zum Hain der Träume"
+L["Portal to Wyrmrest Temple"] = "Portal zum Wyrmruhtempel"
+L["Portal to Karazhan"] = "Portal nach Karazhan"
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -287,7 +295,7 @@ L["Boat to Theramore Isle"] = "Schiff nach Theramore"
 
 L["Portal to Caverns of Time"] = "Portal zu den Höhlen der Zeit"
 
-L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
+L["Portal to Dalaran Crater"] = "Portal zum Dalarankrater"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
 
 L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
