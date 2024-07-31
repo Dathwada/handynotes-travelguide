@@ -546,15 +546,16 @@ DB.nodes = {
         [55302400] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58613934] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}} },
         [72854121] = { icon="flightMaster", label=GEtoTrueshotLodge, note=BrokenIsles..", "..highmountain, class="HUNTER" }, --quest=40953, ????
-        [49254759] = { icon="portal", multilabel={PtoWyrmrestTemple, PtoDalaCrater, PtoKarazhan}, multinote={Dragonblight, HillsbradFoothills, DeadwindPass} }
+        -- [49254759] = { icon="portal", multilabel={PtoWyrmrestTemple, PtoDalaCrater, PtoKarazhan}, multinote={Dragonblight, HillsbradFoothills, DeadwindPass} }
+        [49254759] = { icon="portal", multilabel={L["Portal to Searing Gorge"], L["Portal to Dustwallow Marsh"], L["Portal to Dragonblight"]}, multinote={EasternKingdoms, Kalimdor, Northrend} }
         },
     [629] = { -- Dalaran - Aegwynn's Gallery
-        -- [30698462] = { icon="portal", label=L["Portal to Dragonblight"], note=Northrend }, -- TWW PREPATCH EVENT
-        -- [35848595] = { icon="portal", label=L["Portal to Dustwallow Marsh"], note=Kalimdor }, -- TWW PREPATCH EVENT
-        -- [38997969] = { icon="portal", label=L["Portal to Searing Gorge"], note=EasternKingdoms } -- TWW PREPATCH EVENT
-        [30808431] = { icon="portal", label=PtoWyrmrestTemple, note=Dragonblight },
-        [28717736] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills },
-        [32027144] = { icon="portal", label=PtoKarazhan, note=DeadwindPass }
+        [30698462] = { icon="portal", label=L["Portal to Dragonblight"], note=Northrend }, -- TWW PREPATCH EVENT
+        [35848595] = { icon="portal", label=L["Portal to Dustwallow Marsh"], note=Kalimdor }, -- TWW PREPATCH EVENT
+        [38997969] = { icon="portal", label=L["Portal to Searing Gorge"], note=EasternKingdoms } -- TWW PREPATCH EVENT
+        -- [30808431] = { icon="portal", label=PtoWyrmrestTemple, note=Dragonblight },
+        -- [28717736] = { icon="portal", label=PtoDalaCrater, note=HillsbradFoothills },
+        -- [32027144] = { icon="portal", label=PtoKarazhan, note=DeadwindPass }
         },
     [630] = { -- Azsuna
         [46664141] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -884,13 +885,14 @@ DB.nodes = {
         [24364962] = { icon="portal", label=WtoUngoroCrater, note=Kalimdor, requirements={quest=12613} },
         [71735264] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [46065889] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} }, -- Dragonblight, Ruby Dragonshrine
-        [48541958] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} } -- Icecrown, Argent Tournament Grounds
+        [48541958] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} }, -- Icecrown, Argent Tournament Grounds
+        [50375950] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [115] = { -- Dragonblight
         [47797887] = { icon="boat", label=BtoUnuPe, note=BoreanTundra },
         [49847853] = { icon="boat", label=BtoKamagua, note=HowlingFjord },
-        [45354992] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} } -- Dragonblight, Ruby Dragonshrine
-        -- [] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
+        [45354992] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} }, -- Dragonblight, Ruby Dragonshrine
+        [59825194] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [114] = { -- Borean Tundra
         [79015410] = { icon="boat", label=BtoMoaKiHarbor, note=Dragonblight },
@@ -1043,8 +1045,8 @@ DB.nodes = {
         [59764475] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
-        [57804366] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" }
-        -- [45995716] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
+        [57804366] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, faction="Horde" },
+        [55556662] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1100,8 +1102,8 @@ DB.nodes = {
         },
     [70] = { -- Dustwallow Marsh
         [71625648] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
-        [71625647] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" }
-        -- [45995716] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
+        [71625647] = { icon="boat", label=BtoMenethilHarbor, note=Wetlands, faction="Alliance" },
+        [45745722] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [62] = { -- Darkshore
         [48023627] = { icon="portal", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
@@ -1181,7 +1183,8 @@ DB.nodes = {
         [46766773] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} }, -- Black Rock Mountains, The Masonary
         [54068459] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={timetravel={quest=66560, spell=290245, turn=true}} },
         [53508266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true}} },
-        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil }
+        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil },
+        [47686733] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },
@@ -1272,7 +1275,8 @@ DB.nodes = {
         [46573561] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" }
         },
     [32] = { -- Searing Gorge
-        [25017479] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} } -- Black Rock Mountains, The Masonary
+        [25017479] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} }, -- Black Rock Mountains, The Masonary
+        [41736757] = { icon="portal", label=PtoDala, note=BrokenIsles } -- TWW PREPATCH EVENT
         },
     [35] = { -- Blackrock Mountain
         [33302480] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} } -- Black Rock Mountains, The Masonary
