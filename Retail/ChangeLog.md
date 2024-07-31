@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v2.18.1 (July 31, 2024)
+-------------------------------
+* Added The War Within Pre-Patch Event portals
+* Removed portals in Dalaran (Broken Isles)
+
 #### v2.18.0 (July 24, 2024)
 -------------------------------
 * Added missing portals in Dalaran (Broken Isles)
