@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2024/01/23
+--  Last update: 2024/08/01
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -129,9 +129,9 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 
 -------------------------------------------------TWW------------------------------------------------
 
--- L["Portal to Dragonblight"] = ""
--- L["Portal to Dustwallow Marsh"] = ""
--- L["Portal to Searing Gorge"] = ""
+L["Portal to Dragonblight"] = "通往龙骨荒野的传送门"
+L["Portal to Dustwallow Marsh"] = "通往尘泥沼泽的传送门"
+L["Portal to Searing Gorge"] = "通往灼热峡谷的传送门"
 
 --==========================================DRAGONFLIGHT==========================================--
 
@@ -186,7 +186,7 @@ L["Boat to Drustvar"] = "前往德鲁斯瓦的船"
 L["Boat to Stormsong Valley"] = "前往斯托颂谷地的船"
 L["Boat to Tiragarde Sound"] = "前往提拉加德海峡的船"
 
-L["Portal to Arathi Highlands"] = "前往塞拉摩的传送门"
+L["Portal to Arathi Highlands"] = "通往塞拉摩的传送门"
 L["Portal to Port of Zandalar"] = "通往赞达拉的传送门"
 L["Portal to Darkshore"] = "通往黑海岸的传送门"
 L["Portal to Port of Boralus"] = "通往伯拉勒斯的传送门"
