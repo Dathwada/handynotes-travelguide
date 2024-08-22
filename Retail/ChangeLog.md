@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v2.18.2 (August 22, 2024)
+-------------------------------
+* Added missing portals
+* Bump .toc to 110002
+
 #### v2.18.1 (July 31, 2024)
 -------------------------------
 * Added The War Within Pre-Patch Event portals
