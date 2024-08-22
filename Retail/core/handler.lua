@@ -71,11 +71,14 @@ local areaPoisToRemove = {
     -- Neutral
     5881, -- The Cape of Stranglethorn, Boat to Ratschet
     5882, -- Northern Barrens, Boat to Booty
+    7017, -- Oribos, Portal to Korthia
+    7019, -- Oribos, Portal to Zereth Mortis
+    7020, -- Zereth Mortis, Portalstone to Oribos
     7944, -- Amirdrassil, Boat to Stormglen
     7945, -- Gilneas, Boat to Belanaar
     7959, -- Dustwallow Marsh, Portal to Dalaran
     7960, -- Dragonblight, Portal to Dalaran
-    7961, -- Searing Gorge, Portal to Dalaran
+    7961 -- Searing Gorge, Portal to Dalaran
 }
 
 ----------------------------------------------------------------------------------------------------

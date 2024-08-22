@@ -152,6 +152,9 @@ L["Portal to Mount Hyjal"] = "Портал на Гору Хиджал"
 -- L["Boat to Stormglen"] = ""
 L["Portal to The Nighthold"] = "Портал в Цитадель Ночи"
 L["Portal to Shal'Aran"] = "Портал в Шал'Аран"
+L["Rift to Dalaran"] = "Разлом в Даларан"
+L["Rift to Telogrus"] = "Разлом в Телогрус"
+L["Portal to Thunder Totem"] = "Портал в Громовой Тотем"
 
 --==========================================SHADOWLANDS===========================================--
 

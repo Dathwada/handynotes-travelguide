@@ -149,6 +149,9 @@ L["Boat to Belanaar"] = "Schiff nach Belanaar"
 L["Boat to Stormglen"] = "Schiff nach Sturmsiel"
 L["Portal to The Nighthold"] = "Portal zur Nachtfestung"
 L["Portal to Shal'Aran"] = "Portal nach Shal'Aran"
+L["Rift to Dalaran"] = "Riss nach Dalaran"
+L["Rift to Telogrus"] = "Riss nach Telogrus"
+L["Portal to Thunder Totem"] = "Portal nach Donnertotem"
 
 --==========================================SHADOWLANDS===========================================--
 

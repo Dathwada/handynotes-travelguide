@@ -151,6 +151,9 @@ L["Boat to Belanaar"] = "前往贝拉纳尔（贝拉梅斯）的船"
 L["Boat to Stormglen"] = "前往风谷村（吉尔尼斯）的船"
 L["Portal to The Nighthold"] = "通往暗夜要塞的传送门"
 L["Portal to Shal'Aran"] = "通往沙尔艾兰的传送门"
+-- L["Rift to Dalaran"] = ""
+-- L["Rift to Telogrus"] = ""
+L["Portal to Thunder Totem"] = "通往雷霆图腾的传送门"
 
 --==========================================SHADOWLANDS===========================================--
 

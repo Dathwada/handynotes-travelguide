@@ -149,6 +149,9 @@ L["Boat to Belanaar"] = true
 L["Boat to Stormglen"] = true
 L["Portal to The Nighthold"] = true
 L["Portal to Shal'Aran"] = true
+L["Rift to Dalaran"] = true
+L["Rift to Telogrus"] = true
+L["Portal to Thunder Totem"] = true
 
 --==========================================SHADOWLANDS===========================================--
 
