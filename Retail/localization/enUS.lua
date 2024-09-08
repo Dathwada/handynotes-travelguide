@@ -130,6 +130,10 @@ L["handler_tooltip_not_discovered"] = "not yet discovered"
 L["Portal to Dragonblight"] = true
 L["Portal to Dustwallow Marsh"] = true
 L["Portal to Searing Gorge"] = true
+L["Portal to Dornogal"] = true
+L["Portal to Azj-Kahet"] = true
+L["Elevator to Isle of Dorn"] = true
+L["Elevator to Ringing Deeps"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

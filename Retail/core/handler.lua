@@ -14,6 +14,7 @@ ns.locale = L
 _G.HandyNotes_TravelGuide = addon
 
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
+local IsQuestCompletedOnAccount = C_QuestLog.IsQuestFlaggedCompletedOnAccount
 
 local portal_red       = ns.constants.icon.portal_red
 local BoatX            = ns.constants.icon.boat_x
@@ -78,7 +79,14 @@ local areaPoisToRemove = {
     7945, -- Gilneas, Boat to Belanaar
     7959, -- Dustwallow Marsh, Portal to Dalaran
     7960, -- Dragonblight, Portal to Dalaran
-    7961 -- Searing Gorge, Portal to Dalaran
+    7961, -- Searing Gorge, Portal to Dalaran
+    8001, -- Azj-Kahet, Portal to Azj-Kahet
+    8002, -- Dornogal, Portal to Dornogal
+    8003, -- Dornogal, To Ringing Deeps
+    8004, -- Ringing Deeps, to Isle of Dorn (bottom)
+    8006, -- Isle of Dorn, To Ringing Deeps (bottom)
+    8009, -- Isle of Dorn, To Ringing Deeps (top)
+    8010, -- Ringing Deeps, to Isle of Dorn (middle)
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -134,6 +142,7 @@ end
 -- returns true when all requirements are fulfilled
 local function ReqFulfilled(req, ...)
     if (req.quest and not IsQuestCompleted(req.quest))
+    or (req.accquest and not IsQuestCompletedOnAccount (req.accquest))
     or (req.level and (UnitLevel("player") < req.level))
     or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
     or (req.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
@@ -157,7 +166,7 @@ local function ReqFulfilled(req, ...)
         end
     end
 
-	return true
+    return true
 end
 
 local function RefreshAfter(time)

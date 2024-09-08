@@ -130,6 +130,10 @@ L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 L["Portal to Dragonblight"] = "Portal nach Drachenöde"
 L["Portal to Dustwallow Marsh"] = "Portal in die Düstermarschen"
 L["Portal to Searing Gorge"] = "Portal zur Sengenden Schlucht"
+L["Portal to Dornogal"] = "Portal nach Dornogal"
+L["Portal to Azj-Kahet"] = "Portal nach Azj-Kahet"
+L["Elevator to Isle of Dorn"] = "Aufzug zur Insel von Dorn"
+L["Elevator to Ringing Deeps"] = "Aufzug in die Schallenden Tiefen"
 
 --==========================================DRAGONFLIGHT==========================================--
 

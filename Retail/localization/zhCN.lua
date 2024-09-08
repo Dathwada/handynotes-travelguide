@@ -132,6 +132,10 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 L["Portal to Dragonblight"] = "通往龙骨荒野的传送门"
 L["Portal to Dustwallow Marsh"] = "通往尘泥沼泽的传送门"
 L["Portal to Searing Gorge"] = "通往灼热峡谷的传送门"
+L["Portal to Dornogal"] = "通往多恩诺嘉尔的传送门"
+L["Portal to Azj-Kahet"] = "通往艾基-卡赫特的传送门"
+-- L["Elevator to Isle of Dorn"] = ""
+-- L["Elevator to Ringing Deeps"] = ""
 
 --==========================================DRAGONFLIGHT==========================================--
 

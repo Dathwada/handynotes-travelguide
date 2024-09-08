@@ -165,7 +165,7 @@ config.options = {
                     set = function(info, v)
                         ns.db[info[#info]] = v
                         addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
-		                WorldMapFrame:RefreshAllDataProviders()
+                        WorldMapFrame:RefreshAllDataProviders()
                     end,
                     order = 26,
                 },

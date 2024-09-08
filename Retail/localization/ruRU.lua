@@ -130,9 +130,13 @@ L["handler_tooltip_not_discovered"] = "еще не обнаружен"
 
 -------------------------------------------------TWW------------------------------------------------
 
--- L["Portal to Dragonblight"] = ""
--- L["Portal to Dustwallow Marsh"] = ""
--- L["Portal to Searing Gorge"] = ""
+L["Portal to Dragonblight"] = "Портал на Драконий Погост"
+L["Portal to Dustwallow Marsh"] = "Портал в Пылевые топи"
+L["Portal to Searing Gorge"] = "Портал в Тлеющее ущелье"
+L["Portal to Dornogal"] = "Портал в Дорногал"
+L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
+-- L["Elevator to Isle of Dorn"] = ""
+-- L["Elevator to Ringing Deeps"] = ""
 
 --==========================================DRAGONFLIGHT==========================================--
 
