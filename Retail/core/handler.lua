@@ -596,22 +596,24 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New(FOLDER_NAME.."DB", ns.constants.defaults)
+    self.db = AceDB:New(FOLDER_NAME.."DB", ns.constants.defaults, true)
+    self.db.RegisterCallback(self, "OnProfileChanged", "OnProfileChanged")
+    self.db.RegisterCallback(self, "OnProfileCopied", "OnProfileChanged")
+    self.db.RegisterCallback(self, "OnProfileReset", "OnProfileChanged")
 
-    profile = self.db.profile
-    ns.db = profile
-
-    global = self.db.global
-    ns.global = global
-
+    ns.db = self.db.profile
+    ns.global = self.db.global
     ns.hidden = self.db.char.hidden
-
-    if (ns.global.dev) then
-        ns.devmode()
-    end
 
     -- Initialize database with HandyNotes
     HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, ns.config.options)
+
+    -- Get the option table for profiles
+    ns.config.options.args.profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
+    ns.config.options.args.profiles.order = 2
+
+    -- Get the options table for development
+    if (ns.global.dev) then ns.devmode() end
 end
 
 function addon:Refresh()
@@ -619,6 +621,11 @@ function addon:Refresh()
 end
 
 function addon:OnEnable()
+end
+
+function addon:OnProfileChanged(event, database, newProfileKey)
+    ns.db = database.profile
+    self:Refresh()
 end
 
 ----------------------------------------------EVENTS-----------------------------------------------

@@ -19,7 +19,7 @@ local function devmode()
         type = "group",
         name = L["dev_config_tab"],
 --      desc = L[""],
-        order = 2,
+        order = 3,
         args = {
                 force_nodes = {
                     type = "toggle",
