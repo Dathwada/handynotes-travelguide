@@ -296,7 +296,7 @@ DB.nodes = {
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
 
     [2274] = { -- Khaz Algar
-        [72392017] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [72691965] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [70961840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [71291790] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         -- [54925688] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={accquest=82195} },
@@ -305,13 +305,13 @@ DB.nodes = {
         [73752119] = { icon="portal", label=L["Portal to Azj-Kahet"], note=KhazAlgar, requirements={accquest=78248} }
         },
     [2339] = { -- Dornogal
-        [51174334] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [53963872] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [38162723] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [41182266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [63595278] = { icon="portal", label=L["Portal to Azj-Kahet"], note=KhazAlgar, requirements={accquest=78248} }
         },
     [2248] = { -- Isle of Dorn
-        [49974297] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
+        [50654183] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [46773901] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [47523789] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         -- [67333101] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={accquest=82195} },
@@ -322,6 +322,13 @@ DB.nodes = {
     --     },
     [2255] = { -- Azj-Kahet
         [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={accquest=78248} }
+        },
+    [2266] = { -- Millenia's Threshold
+        [43584988] = { icon="portal", label=PtoDornogal, note=IsleOfDorn },
+        [64534374] = { icon="portal", label=L["Portal to Ardenweald"], note=Shadowlands },
+        [74424709] = { icon="portal", label=L["Portal to Bastion"], note=Shadowlands },
+        [70457272] = { icon="portal", label=L["Portal to Tiragarde Sound"], note=KulTiras },
+        [60576931] = { icon="portal", label=L["Portal to Twilight Highlands"], note=EasternKingdoms }
         },
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------

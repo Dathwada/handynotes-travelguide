@@ -134,6 +134,10 @@ L["Portal to Dornogal"] = true
 L["Portal to Azj-Kahet"] = true
 L["Elevator to Isle of Dorn"] = true
 L["Elevator to Ringing Deeps"] = true
+L["Portal to Ardenweald"] = true
+L["Portal to Bastion"] = true
+L["Portal to Tiragarde Sound"] = true
+L["Portal to Twilight Highlands"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

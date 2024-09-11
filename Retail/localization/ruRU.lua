@@ -137,6 +137,10 @@ L["Portal to Dornogal"] = "Портал в Дорногал"
 L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
 -- L["Elevator to Isle of Dorn"] = ""
 -- L["Elevator to Ringing Deeps"] = ""
+-- L["Portal to Ardenweald"] = ""
+-- L["Portal to Bastion"] = ""
+-- L["Portal to Tiragarde Sound"] = ""
+-- L["Portal to Twilight Highlands"] = ""
 
 --==========================================DRAGONFLIGHT==========================================--
 
