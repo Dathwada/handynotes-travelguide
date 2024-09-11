@@ -1,5 +1,15 @@
 ## Revision History:
 
+#### v2.19.0 (September 11, 2024)
+-------------------------------
+* Added profile management
+    * From now on all characters share a profile.
+    * Characters that were already logged in while this addon was active are still on a profile for that character only, you can change this in the settings under Addons -> HandyNotes -> Plugins -> TravelGuide -> Profile.
+    * Hidden nodes are not (yet) shared between your characters.
+* Added season 1 portals
+* Added new portals in Khaz Algar
+* Removed The War Within Pre-Patch Event portals
+
 #### v2.18.2 (August 22, 2024)
 -------------------------------
 * Added missing portals
