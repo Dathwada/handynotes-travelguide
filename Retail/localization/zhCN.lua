@@ -59,11 +59,11 @@ L["config_molemachine_desc"] = "显示钻探机[黑铁矮人]目的地。"
 L["config_note"] = "图标"
 L["config_note_desc"] = "当图标（船/传送点）可用时，显示相关的注释。"
 
-L["config_remove_unknown"] = "删除未知的目的地"
-L["config_remove_unknown_desc"] = "这将删除在世界地图上没有满足要求的目的地。"
+L["config_remove_unknown"] = "屏蔽未知的目的地标注"
+L["config_remove_unknown_desc"] = "这将屏蔽在世界地图上没有满足要求的目的地标注。"
 
-L["config_remove_AreaPois"] = "删除暴雪在地图上的标注"
-L["config_remove_AreaPois_desc"] = "这将删除暴雪在世界地图上为目的地设置的标注点（POI）。"
+L["config_remove_AreaPois"] = "屏蔽暴雪目的地标注"
+L["config_remove_AreaPois_desc"] = "这将屏蔽暴雪在世界地图上设置的目的地的标注点（POI）。"
 
 L["config_easy_waypoints"] = "简易导航点"
 L["config_easy_waypoints_desc"] = "创建简易导航点。\n右键点击设置导航，CTRL + 右键更多选项。"
