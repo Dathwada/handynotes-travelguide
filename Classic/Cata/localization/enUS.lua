@@ -139,6 +139,7 @@ L["Dalaran Portal to Caverns of Time"] = true
 
 L["Portal to Deepholm"] = true
 L["Portal to Hyjal"] = true
+L["Portal to the Firelands"] = true
 L["Portal to Temple of Earth"] = true
 L["Portal to Therazane's Throne"] = true
 L["Portal to Tol Barad"] = true

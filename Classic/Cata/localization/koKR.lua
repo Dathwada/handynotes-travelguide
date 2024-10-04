@@ -37,6 +37,7 @@ L["Zeppelin to Undercity"] = "언더시티 방향 비행선"
 -- BCC
 
 -- Cata
+L["Portal to the Firelands"] = "불의 땅으로 통하는 차원문"
 
 -- WotLKC
 end

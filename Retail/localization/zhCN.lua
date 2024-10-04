@@ -250,6 +250,7 @@ L["Portal to Tol Barad"] = "通往托尔巴拉德的传送门"
 L["Portal to Uldum"] = "通往奥丹姆的传送门"
 L["Portal to Vashj'ir"] = "通往瓦丝琪尔的传送门"
 L["Portal to Hyjal"] = "通往海加尔的传送门"
+L["Portal to the Firelands"] = "到火焰之地的传送门"
 
 ------------------------------------------------WotLK-----------------------------------------------
 

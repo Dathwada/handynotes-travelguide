@@ -248,6 +248,7 @@ L["Portal to Tol Barad"] = "Portal nach Tol Barad"
 L["Portal to Uldum"] = "Portal nach Uldum"
 L["Portal to Vashj'ir"] = "Portal nach Vashj'ir"
 L["Portal to Hyjal"] = "Portal zum Hyjal"
+L["Portal to the Firelands"] = "Portal in die Feuerlande"
 
 ------------------------------------------------WotLK-----------------------------------------------
 

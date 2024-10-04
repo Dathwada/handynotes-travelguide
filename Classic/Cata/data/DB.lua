@@ -102,6 +102,7 @@ local Tanaris = GetMapNames(1414, 1446)
 
 local Maelstrom = GetMapNames(948)
 local Deepholm = GetMapNames(948, 207)
+local MoltenFront = GetMapNames(1414, 338)
 local PtoTolBarad = L["Portal to Tol Barad"]
 local PtoUldum = L["Portal to Uldum"]
 local PtoDeepholm = L["Portal to Deepholm"]
@@ -435,6 +436,10 @@ DB.nodes = {
     [198] = { -- Mount Hyjal
         [62612313] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [63492444] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [27495639] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} }
+        },
+    [338] = { -- Molten Front
+        [53118370] = { icon="portal", label=PtoHyjal, note=Kalimdor }
         },
     [207] = { -- Deepholm
         [48515381] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },

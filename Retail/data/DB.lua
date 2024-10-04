@@ -157,6 +157,7 @@ local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
 
 local Maelstrom = GetMapNames(948)
 local Deepholm = GetMapNames(948, 207)
+local MoltenFront = GetMapNames(12, 338)
 local PtoTolBarad = L["Portal to Tol Barad"]
 local PtoUldum = L["Portal to Uldum"]
 local PtoDeepholm = L["Portal to Deepholm"]
@@ -859,7 +860,11 @@ DB.nodes = {
         [63492444] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [58992623] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
         [57187711] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
-        [62442272] = { icon="portal", label=PtoBelameth, note=Amirdrassil }
+        [62442272] = { icon="portal", label=PtoBelameth, note=Amirdrassil },
+        [27495639] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} }
+        },
+    [338] = { -- Molten Front
+        [53118370] = { icon="portal", label=PtoHyjal, note=Kalimdor }
         },
     [207] = { -- Deepholm
         [48515381] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -1072,7 +1077,8 @@ DB.nodes = {
         [59764475] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
-        [57724362] = { icon="portal", multilabel={L["Portal to The Nighthold"], L["Portal to Thunder Totem"]}, multinote={Suramar, Highmountain}, faction="Horde" }
+        [57724362] = { icon="portal", multilabel={L["Portal to The Nighthold"], L["Portal to Thunder Totem"]}, multinote={Suramar, Highmountain}, faction="Horde" },
+        [52073142] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} }
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },

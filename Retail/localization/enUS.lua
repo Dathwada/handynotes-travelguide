@@ -248,6 +248,7 @@ L["Portal to Tol Barad"] = true
 L["Portal to Uldum"] = true
 L["Portal to Vashj'ir"] = true
 L["Portal to Hyjal"] = true
+L["Portal to the Firelands"] = true
 
 ------------------------------------------------WotLK-----------------------------------------------
 

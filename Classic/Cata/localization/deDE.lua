@@ -139,6 +139,7 @@ L["Dalaran Portal to Caverns of Time"] = "Dalaranportal zu den Höhlen der Zeit"
 
 L["Portal to Deepholm"] = "Portal nach Tiefenheim"
 L["Portal to Hyjal"] = "Portal zum Hyjal"
+L["Portal to the Firelands"] = "Portal in die Feuerlande"
 L["Portal to Temple of Earth"] = "Portal zum Tempel der Erde"
 L["Portal to Therazane's Throne"] = "Portal zu Therazanes Thron"
 L["Portal to Tol Barad"] = "Portal nach Tol Barad"
