@@ -1,5 +1,13 @@
 ## Revision History:
 
+#### v2.20.0 (October 27, 2024)
+-------------------------------
+* Added Portal to the Firelands [[Issue#53]](https://github.com/Dathwada/handynotes-travelguide/issues/53)
+* Added new mole machines [[PR#54]](https://github.com/Dathwada/handynotes-travelguide/issues/54)
+* Updated portal locations in Tanaris
+* Updated zhCN.lua [[PR#52]](https://github.com/Dathwada/handynotes-travelguide/pull/52)
+* Bump .toc to 110005
+
 #### v2.19.0 (September 11, 2024)
 -------------------------------
 * Added profile management
