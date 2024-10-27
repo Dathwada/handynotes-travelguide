@@ -360,7 +360,10 @@ DB.nodes = {
         [24795365] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
         [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
         [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
-        [24415081] = { icon="boat", label=BtoStormglen, note=Gilneas }
+        [24415081] = { icon="boat", label=BtoStormglen, note=Gilneas },
+        [44223523] = { icon="molemachine", label=GetAreaInfo(14012), requirements={quest=80107, hideQuestName=true} }, -- The Slagmire
+        [65037178] = { icon="molemachine", label=GetAreaInfo(14017), requirements={quest=80108, hideQuestName=true} }, -- Vakthros Summit
+        [87987773] = { icon="molemachine", label=GetAreaInfo(14655), requirements={quest=80109, hideQuestName=true} } -- Obsidian Rest
         },
     [2112] = { -- Valdrakken
         [56603821] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }, -- quest=?, level=?
@@ -374,10 +377,14 @@ DB.nodes = {
         [81692794] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
         [81692795] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [82183069] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
-        [82183068] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        [82183068] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
+        [32365490] = { icon="molemachine", label=GetAreaInfo(14012), requirements={quest=80107, hideQuestName=true} } -- The Slagmire
         },
     [2023] = { -- Ohn'ahran Plains
         [18405234] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} }
+        },
+    [2024] = { -- The Azure Span
+        [80093896] = { icon="molemachine", label=GetAreaInfo(14017), requirements={quest=80108, hideQuestName=true} } -- Vakthros Summit
         },
     [2025] = { -- Thaldraszus
         [40895817] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
@@ -389,6 +396,9 @@ DB.nodes = {
         [49590692] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         [41766093] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} } -- TODO find out and add accountwide quest
         },
+    [2133] = { -- Zaralek Cavern
+        [52732767] = { icon="molemachine", label=GetAreaInfo(14655), requirements={quest=80109, hideQuestName=true} } -- Obsidian Rest
+        },
 
 ------------------------------------------------------------------------------------------SHADOWLANDS------------------------------------------------------------------------------------------
 
@@ -399,7 +409,11 @@ DB.nodes = {
         [62772775] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
         [76015007] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
         [47928153] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
-        [20535087] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
+        [20535087] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        [63392500] = { icon="molemachine", label=GetAreaInfo(13406), requirements={quest=80103, hideQuestName=true} }, -- Valley of a Thousand Legs
+        [17695049] = { icon="molemachine", label=GetAreaInfo(11438), requirements={quest=80104, hideQuestName=true} }, -- Scorched Crypt
+        [72204830] = { icon="molemachine", label=GetAreaInfo(11412), requirements={quest=80105, hideQuestName=true} }, -- The Eternal Forge
+        [53808132] = { icon="molemachine", label=GetAreaInfo(13455), requirements={quest=80106, hideQuestName=true} } -- Soryn's Meadow
         },
     [1670] = { -- Oribos - Ring of Fates
         [20835477] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={quest=60151} },
@@ -419,7 +433,8 @@ DB.nodes = {
         [49562609] = { icon="portal", label=PtoZerethMortis, requirements={quest=64957} }
         },
     [1536] = { -- Maldraxxus
-        [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} }
+        [51147034] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
+        [53495979] = { icon="molemachine", label=GetAreaInfo(13406), requirements={quest=80103, hideQuestName=true} } -- Valley of a Thousand Legs
         },
     [1698] = { -- Seat of the Primus
         [56373149] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} }
@@ -428,19 +443,22 @@ DB.nodes = {
         [55985276] = { icon="animaGateway", label=AGtoHerosrest }, --1 --Blizzard marked
         [46964891] = { icon="animaGateway", label=AGtoHerosrest }, --2 --Blizzard marked
         [52983802] = { icon="animaGateway", label=AGtoHerosrest }, --3 --Blizzard marked
-        [65581959] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} }
+        [65581959] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
+        [51751314] = { icon="molemachine", label=GetAreaInfo(11412), requirements={quest=80105, hideQuestName=true} } -- The Eternal Forge
         },
     [1707] = { -- Elysian Hold
         [48816478] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} }
         },
     [1565] = { -- Ardenweald
-        [46605126] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} }
+        [46605126] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} },
+        [66475055] = { icon="molemachine", label=GetAreaInfo(13455), requirements={quest=80106, hideQuestName=true} } -- Soryn's Meadow
         },
     [1702] = { -- Hearth of the Forest - The Roots
         [59972842] = { icon="portal", label=PtoOribos, covenant=Nightfae, requirements={sanctumtalent=1055} }
         },
     [1525] = { -- Revendreth
-        [32134043] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
+        [32134043] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} },
+        [19923881] = { icon="molemachine", label=GetAreaInfo(11438), requirements={quest=80104, hideQuestName=true} } -- Scorched Crypt
         },
     [1699] = { -- Sinfall Reaches
         [62052630] = { icon="portal", label=PtoOribos, covenant=Venthyr, requirements={sanctumtalent=1049} }
@@ -469,7 +487,9 @@ DB.nodes = {
         [58367208] = { icon="portal_mixed", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Horde" },
         [59285897] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" },
         [58007502] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Horde" },
-        [58007501] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" }
+        [58007501] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" },
+        [51852837] = { icon="molemachine", label=GetAreaInfo(8966), requirements={quest=80099, hideQuestName=true} }, -- Zalamar
+        [45777939] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true} } -- Xibala
         },
     [862] = { -- Zuldazar
         [58304450] = { icon="portal", multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multilevel={[4]=50}}, faction="Horde" },
@@ -479,10 +499,12 @@ DB.nodes = {
         [60073938] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" },
         [40457102] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51359}, faction="Alliance" },
         [58006531] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Horde" },
-        [58006532] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" }
+        [58006532] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" },
+        [38247238] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true} } -- Xibala
         },
     [863] = { -- Nazmir
-        [62054007] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51088}, faction="Alliance" }
+        [62054007] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51088}, faction="Alliance" },
+        [34344515] = { icon="molemachine", label=GetAreaInfo(8966), requirements={quest=80099, hideQuestName=true} } -- Zalamar
         },
     [864] = { -- Vol'dun
         [36683427] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }
@@ -516,7 +538,9 @@ DB.nodes = {
         [60855074] = { icon="portal_mixed", multilabel={PtoArathiHighlands, PtoDarkshore}, multinote={EasternKingdoms, Kalimdor}, requirements={level=50}, faction="Alliance" },
         [58635379] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" },
         [62485111] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
-        [62485112] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        [62485112] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
+        [69257667] = { icon="molemachine", label=GetAreaInfo(9135), requirements={quest=80101, hideQuestName=true} }, -- The Wailing Tideway
+        [59691632] = { icon="molemachine", label=GetAreaInfo(9623), requirements={quest=80102, hideQuestName=true} } -- Tidebreak Summit
         },
     [895] = { -- Tiragarde Sound
         [74302350] = { icon="portal", multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, requirements={multiquest={47186, 47186, 47186, 47186, 54972}, multilevel={[4]=50}}, faction="Alliance" },
@@ -525,14 +549,16 @@ DB.nodes = {
         [69453107] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Alliance" },
         [87845118] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51438}, faction="Horde" },
         [76252633] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
-        [76252634] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" }
+        [76252634] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
+        [88227153] = { icon="molemachine", label=GetAreaInfo(9135), requirements={quest=80101, hideQuestName=true} } -- The Wailing Tideway
         },
     [896] = { -- Drustvar
         [20604334] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51340}, faction="Horde" }
         },
     [942] = { -- Stormsong Valley
         [51902450] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" }, --Stormsong valley 51902450 boat Grok Seahandler
-        [51403370] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" } --Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
+        [51403370] = { icon="boat", label=returntoZuldazar, note=Zandalar, requirements={quest=51696}, faction="Horde" }, --Stormsong Valley 51403370 Flightmaster Muka Stormbreaker
+        [64212944] = { icon="molemachine", label=GetAreaInfo(9623), requirements={quest=80102, hideQuestName=true} } -- Tidebreak Summit
         },
     [1161] = { -- Boralus
         [70401600] = { icon="portal", multilabel={PtoSW, PtoIF, PtoExodar, PtoSilithus, PtoNazjatar}, multinote={ElwynnForest, DunMorogh, AzuremystIsle, Kalimdor}, requirements={multiquest={47186, 47186, 47186, 47186, 54972}, multilevel={[4]=50}}, faction="Alliance" },
@@ -1195,7 +1221,8 @@ DB.nodes = {
         [56161316] = { icon="portal", multilabel={PtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
         [43637155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoBelameth, PtoDornogal},
                                     multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil, IsleOfDorn},
-                                    requirements={multiquest={[11]=47186, [17]=60151}, multilevel={[18]=58}}, faction="Alliance" },
+                                    requirements={multiquest={[11]=47186, [17]=60151}, multilevel={[18]=58}},
+                                    faction="Alliance" },
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh, faction="Horde" },
         [43863354] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, multilabel={PtoOG, PtoSM, PtoStranglethornVale, PtoHellfirePeninsula, PtoHowlingFjord}, multinote={Durotar, EversongWoods..") ("..Orboftranslocation, GromgolBaseCamp, Outland, VengeanceLanding}, faction="Horde" },
         [47835898] = { icon="tram", label=DrTtoSW, note=ElwynnForest },
@@ -1223,7 +1250,8 @@ DB.nodes = {
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, faction="Alliance" },
         [46419032] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
                                     multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
-                                    requirements={multiquest={[3]=47186, [9]=60151}, multilevel={[10]=58}}, faction="Alliance" },
+                                    requirements={multiquest={[3]=47186, [9]=60151}, multilevel={[10]=58}},
+                                    faction="Alliance" },
         [22015670] = { icon="aboat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
         [22015671] = { icon="boat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Alliance" },
         [17592553] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
@@ -1240,7 +1268,8 @@ DB.nodes = {
     [37] = { -- Elwynn Forest
         [17804775] = { icon="portal", multilabel={PtoDala, PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
                                     multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
-                                    requirements={multiquest={[3]=47186, [9]=60151}, multilevel={[10]=58}}, faction="Alliance" },
+                                    requirements={multiquest={[3]=47186, [9]=60151}, multilevel={[10]=58}},
+                                    faction="Alliance" },
         [06003035] = { icon="aboat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
         [06003036] = { icon="boat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Alliance" },
         [03631530] = { icon="aboat", label=BtoBoreanTundra, note=ValianceKeep, faction="Horde" },
@@ -1326,15 +1355,22 @@ DB.nodes = {
         [88124642] = { icon="molemachine", label=GetAreaInfo(348), requirements={quest=53585, hideQuestName=true} }, -- The Hinterlands, Aerie Peak
         [89916842] = { icon="molemachine", label=GetAreaInfo(1438), requirements={quest=53594, hideQuestName=true} }, -- Blasted Lands, Nethergarde Keep
         [86526116] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true} }, -- Black Rock Mountains, The Masonary
-        [25766821] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} }, -- Un'Goro Crater, Fire Plume Ridge
-        [25915454] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
-        [28254631] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
+        [17866821] = { icon="molemachine", label=GetAreaInfo(537), requirements={quest=53591, hideQuestName=true} }, -- Un'Goro Crater, Fire Plume Ridge
+        [18025454] = { icon="molemachine", label=GetAreaInfo(5385), requirements={quest=53600, hideQuestName=true} }, -- Southern Barrens, The Great Divide
+        [20364633] = { icon="molemachine", label=GetAreaInfo(5040), requirements={quest=53601, hideQuestName=true} }, -- Mount Hyjal, Throne of Flame
         [47448610] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true} }, -- Valley of the Four Winds, Stormstout Brewery
         [47757762] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true} }, -- Kun-Lai Summit, One Keg
         [48931729] = { icon="molemachine", label=GetAreaInfo(4168), requirements={quest=53596, hideQuestName=true} }, -- Dragonblight, Ruby Dragonshrine
         [49580743] = { icon="molemachine", label=GetAreaInfo(4658), requirements={quest=53586, hideQuestName=true} }, -- Icecrown, Argent Tournament Grounds
         [61364663] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true} }, -- The Broken Shore, Broken Shore
-        [58493800] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} } -- Highmountain, Neltharion's Vault
+        [58493800] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true} }, -- Highmountain, Neltharion's Vault
+        [54695942] = { icon="molemachine", label=GetAreaInfo(8966), requirements={quest=80099, hideQuestName=true} }, -- Zalamar
+        [53626836] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true} }, -- Xibala
+        [74865326] = { icon="molemachine", label=GetAreaInfo(9135), requirements={quest=80101, hideQuestName=true} }, -- The Wailing Tideway
+        [73214285] = { icon="molemachine", label=GetAreaInfo(9623), requirements={quest=80102, hideQuestName=true} }, -- Tidebreak Summit
+        [75401781] = { icon="molemachine", label=GetAreaInfo(14012), requirements={quest=80107, hideQuestName=true} }, -- The Slagmire
+        [80162617] = { icon="molemachine", label=GetAreaInfo(14017), requirements={quest=80108, hideQuestName=true} }, -- Vakthros Summit
+        [77172118] = { icon="molemachine", label=GetAreaInfo(14655), requirements={quest=80109, hideQuestName=true} } -- Obsidian Rest
         }
     -- https://de.wowhead.com/spell=265225/maulwurfmaschine#english-comments
 
