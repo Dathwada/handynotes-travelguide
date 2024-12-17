@@ -26,12 +26,12 @@ local molemachineX     = ns.constants.icon.molemachine_x
 
 local requires          = L["handler_tooltip_requires"]
 local notavailable      = L["handler_tooltip_not_available"]
---local available       = L["handler_tooltip_available"] -- not in use
+-- local available       = L["handler_tooltip_available"] -- not in use
 local RequiresPlayerLvl = L["handler_tooltip_requires_level"]
 local RequiresQuest     = L["handler_tooltip_quest"]
 local RequiresRep       = L["handler_tooltip_rep"]
 local RequiresToy       = L["handler_tooltip_toy"]
-local RetrievindData    = L["handler_tooltip_data"]
+local RetrievingData    = L["handler_tooltip_data"]
 local sanctum_feature   = L["handler_tooltip_sanctum_feature"]
 local TNRank            = L["handler_tooltip_TNTIER"]
 
@@ -87,6 +87,7 @@ local areaPoisToRemove = {
     8006, -- Isle of Dorn, To Ringing Deeps (bottom)
     8009, -- Isle of Dorn, To Ringing Deeps (top)
     8010, -- Ringing Deeps, to Isle of Dorn (middle)
+    8171 -- Dornogal, Portal to the Timeways
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -130,8 +131,8 @@ end
 
 -- returns true when all requirements are fulfilled
 local function ReqFulfilled(req, ...)
-    if (req.quest and not IsQuestCompleted(req.quest))
-    or (req.accquest and not IsQuestCompletedOnAccount (req.accquest))
+    if (req.quest and not req.accquest and not IsQuestCompleted(req.quest))
+    or (req.quest and req.accquest and not IsQuestCompletedOnAccount(req.quest))
     or (req.level and (UnitLevel("player") < req.level))
     or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
     or (req.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
@@ -194,7 +195,7 @@ local function Prepare(label, note, level, quest)
             if (title ~= nil) then
                 QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
             else
-                QUEST = "\n    |cFFFF00FF"..RetrievindData.."|r" -- pink
+                QUEST = "\n    |cFFFF00FF"..RetrievingData.."|r" -- pink
                 RefreshAfter(1) -- Refresh
             end
         end
@@ -267,103 +268,110 @@ end
 ----------------------------------------------------------------------------------------------------
 
 local function SetTooltip(tooltip, node)
-    local nodereq = node.requirements
-    if (node) then
-        if (node.label) then
-            tooltip:AddLine(node.label)
+    if (not node) then
+        tooltip:SetText(UNKNOWN)
+        tooltip:Show()
+        return
+    end
+
+    local reqs = node.requirements
+    if (node.label) then
+        tooltip:AddLine(node.label)
+    end
+    if (node.note and ns.db.show_note) then
+        tooltip:AddLine("("..node.note..")")
+    end
+    if (node.multilabel and node.icon ~= "portal_mixed") then
+        if (reqs) then
+            tooltip:AddLine(Prepare(node.multilabel, node.multinote, reqs.multilevel, reqs.multiquest))
+        else
+            tooltip:AddLine(Prepare(node.multilabel, node.multinote))
         end
-        if (node.note and ns.db.show_note) then
-            tooltip:AddLine("("..node.note..")")
+    end
+    if (node.npc) then
+        tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(node.npc))
+    end
+    if (node.icon == "portal_mixed") then
+        tooltip:AddDoubleLine(Prepare(node.multilabel, node.multinote), SetWarfrontNote(), nil, nil, nil, 1) -- only the second line is red
+    end
+    if (reqs) then
+        if (reqs.warfront and GetWarfrontState(reqs.warfront) ~= select(1, UnitFactionGroup("player"))) then
+            tooltip:AddLine(notavailable, 1) -- red
         end
-        if (node.multilabel and node.icon ~= "portal_mixed") then
-            if (nodereq) then
-                tooltip:AddLine(Prepare(node.multilabel, node.multinote, nodereq.multilevel, nodereq.multiquest))
-            else
-                tooltip:AddLine(Prepare(node.multilabel, node.multinote))
-            end
+        if (reqs.level and UnitLevel("player") < reqs.level) then
+            tooltip:AddLine(RequiresPlayerLvl..": "..reqs.level, 1) -- red
         end
-        if (node.npc) then
-            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(node.npc))
-        end
-        if (node.icon == "portal_mixed") then
-            tooltip:AddDoubleLine(Prepare(node.multilabel, node.multinote), SetWarfrontNote(), nil,nil,nil,1) -- only the second line is red
-        end
-        if (nodereq) then
-            if (nodereq.warfront and GetWarfrontState(nodereq.warfront) ~= select(1, UnitFactionGroup("player"))) then
-                tooltip:AddLine(notavailable, 1) -- red
-            end
-            if (nodereq.level and UnitLevel("player") < nodereq.level) then
-                tooltip:AddLine(RequiresPlayerLvl..": "..nodereq.level, 1) -- red
-            end
-            if (nodereq.quest and not IsQuestCompleted(nodereq.quest)) then
-                if (not nodereq.hideQuestName) then
-                    if (C_QuestLog.GetTitleForQuestID(nodereq.quest) ~= nil) then
-                        tooltip:AddLine(RequiresQuest..": ["..C_QuestLog.GetTitleForQuestID(nodereq.quest).."] (ID: "..nodereq.quest..")",1,0,0)
+        if (reqs.quest) then
+            local questNotCompleted = (not reqs.accquest and not IsQuestCompleted(reqs.quest))
+            local questNotCompletedOnAccount = (reqs.accquest and not IsQuestCompletedOnAccount(reqs.quest))
+            if (questNotCompleted or questNotCompletedOnAccount) then
+                if (not reqs.hideQuestName) then
+                    local questTitle = C_QuestLog.GetTitleForQuestID(reqs.quest)
+                    if (questTitle) then
+                        tooltip:AddLine(RequiresQuest..": ["..questTitle.."] (ID: "..reqs.quest..")", 1, 0, 0)
                     else
-                        tooltip:AddLine(RetrievindData,1,0,1) -- pink
+                        tooltip:AddLine(RetrievingData, 1, 0, 1) -- pink
                         RefreshAfter(1) -- Refresh
                     end
-                elseif (nodereq.item) then -- OgreWaygate
-                    local name = C_Item.GetItemNameByID(nodereq.item[1]) or RetrievindData
-                    local quantity = nodereq.item[2]
+                elseif (reqs.item) then -- OgreWaygate
+                    local name = C_Item.GetItemNameByID(reqs.item[1]) or RetrievingData
+                    local quantity = reqs.item[2]
+                    if name == RetrievingData then RefreshAfter(1) end
 
-                    if (name == RetrievindData) then RefreshAfter(1) end
-
-                    tooltip:AddLine(requires..': '..quantity..'x '..name, 1) -- red
+                    tooltip:AddLine(requires..": "..quantity.."x "..name, 1) -- red
                 elseif (node.icon == "molemachine") then
                     tooltip:AddLine(L["handler_tooltip_not_discovered"], 1) -- red
                 end
             end
-            if (nodereq.reputation) then
-                local reqValuesForStandings = {0, 36000, 39000, 42000, 45000, 51000, 63000, 84000}
-                local faction = C_Reputation.GetFactionDataByID(nodereq.reputation[1])
-                if (faction and faction.reaction < nodereq.reputation[2]) then
-                    local reqValue = reqValuesForStandings[nodereq.reputation[2]]
-                    local value = faction.currentStanding
-                    tooltip:AddLine(RequiresRep..": ",1) -- red
-                    GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, faction.name..": "..value.." / "..reqValue)
-                end
+        end
+        if (reqs.reputation) then
+            local reqValuesForStandings = {0, 36000, 39000, 42000, 45000, 51000, 63000, 84000}
+            local faction = C_Reputation.GetFactionDataByID(reqs.reputation[1])
+            if (faction and faction.reaction < reqs.reputation[2]) then
+                local reqValue = reqValuesForStandings[reqs.reputation[2]]
+                local value = faction.currentStanding
+                tooltip:AddLine(RequiresRep..": ", 1) -- red
+                GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, faction.name..": "..value.." / "..reqValue)
             end
-            if (nodereq.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
-                local spellName = C_Spell.GetSpellInfo(nodereq.timetravel["spell"]).name
-                if (spellName) then
-                    if (not IsQuestCompleted(nodereq.timetravel["quest"]) and not nodereq.warfront and not nodereq.timetravel["turn"])
-                    or (IsQuestCompleted(nodereq.timetravel["quest"]) and nodereq.warfront and not nodereq.timetravel["turn"])
-                    or (IsQuestCompleted(nodereq.timetravel["quest"]) and not nodereq.warfront and nodereq.timetravel["turn"]) then
-                        tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
-                    end
-                end
-            end
-            if (nodereq.spell) then -- don't show this if the spell is known
-                local spellName = C_Spell.GetSpellInfo(nodereq.spell).name
-                local isKnown = IsSpellKnown(nodereq.spell)
-                if (spellName and not isKnown) then
-                    tooltip:AddLine(requires..': '..spellName, 1) -- red
-                end
-            end
-            if (nodereq.toy) then
-                local toyName = C_Item.GetItemInfo(nodereq.toy) or RetrievindData
-                local isKnown = PlayerHasToy(nodereq.toy)
-
-                if (toyName == RetrievindData) then RefreshAfter(1) end
-
-                if (not isKnown) then
-                    tooltip:AddLine(RequiresToy..': '..toyName, 1) -- red
-                end
-            end
-            if (node.covenant and nodereq.sanctumtalent) then
-                local TALENT = C_Garrison.GetTalentInfo(nodereq.sanctumtalent)
-                if (not TALENT["researched"]) then
-                    tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
-                    tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
-                    tooltip:AddTexture(TALENT["icon"], {margin={right=2}})
-                    tooltip:AddLine("   • "..format(TNRank, TALENT["tier"]+1), 0.6, 0.6, 0.6) -- grey
+        end
+        if (reqs.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
+            local spellName = C_Spell.GetSpellInfo(reqs.timetravel["spell"]).name
+            if (spellName) then
+                local questCompleted = IsQuestCompleted(reqs.timetravel.quest)
+                if (not questCompleted and not reqs.warfront and not reqs.timetravel["turn"])
+                or (questCompleted and reqs.warfront and not reqs.timetravel["turn"])
+                or (questCompleted and not reqs.warfront and reqs.timetravel["turn"]) then
+                    tooltip:AddLine(requires..': '..spellName, 1) -- text red / uncompleted
                 end
             end
         end
-    else
-        tooltip:SetText(UNKNOWN)
+        if (reqs.spell) then -- don't show this if the spell is known
+            local spellName = C_Spell.GetSpellInfo(reqs.spell).name
+            local isKnown = IsSpellKnown(reqs.spell)
+            if (spellName and not isKnown) then
+                tooltip:AddLine(requires..': '..spellName, 1) -- red
+            end
+        end
+        if (reqs.toy) then
+            local toyName = C_Item.GetItemInfo(reqs.toy) or RetrievingData
+            local isKnown = PlayerHasToy(reqs.toy)
+            if (toyName == RetrievingData) then RefreshAfter(1) end
+
+            if (not isKnown) then
+                tooltip:AddLine(RequiresToy..': '..toyName, 1) -- red
+            end
+        end
+        if (node.covenant and reqs.sanctumtalent) then
+            local TALENT = C_Garrison.GetTalentInfo(reqs.sanctumtalent)
+            if (not TALENT["researched"]) then
+                tooltip:AddLine(requires.." "..sanctum_feature..":", 1) -- red
+                tooltip:AddLine(TALENT["name"], 1, 1, 1) -- white
+                tooltip:AddTexture(TALENT["icon"], {margin = {right = 2}})
+                tooltip:AddLine("   • "..format(TNRank, TALENT["tier"] + 1), 0.6, 0.6, 0.6) -- grey
+            end
+        end
     end
+
     tooltip:Show()
 end
 
