@@ -108,17 +108,6 @@ local function RemoveAreaPOIs()
     end
 end
 
-do
-    -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
-    for dp in pairs(WorldMapFrame.dataProviders) do
-        if (type(dp.GetPinTemplate) == "function") then
-            if (dp:GetPinTemplate() == "AreaPOIPinTemplate") then
-                hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
-            end
-        end
-    end
-end
-
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------FUNCTIONS---------------------------------------------
 ----------------------------------------------------------------------------------------------------
@@ -647,6 +636,17 @@ function events:QUEST_FINISHED(...)
     addon:Refresh()
 
     addon:debugmsg("refreshed after QUEST_FINISHED")
+end
+
+function events:PLAYER_LOGIN(...)
+    -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
+    for dp in pairs(WorldMapFrame.dataProviders) do
+        if (type(dp.GetPinTemplate) == "function") then
+            if (dp:GetPinTemplate() == "AreaPOIPinTemplate") then
+                hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
+            end
+        end
+    end
 end
 
 frame:SetScript("OnEvent", function(self, event, ...)
