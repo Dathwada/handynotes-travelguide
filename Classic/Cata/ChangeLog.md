@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v1.7 (October 27, 2024)
+-------------------------------
+* Added Portal to the Firelands [[Issue#53]](https://github.com/Dathwada/handynotes-travelguide/issues/53)
+
 #### v1.6 (April 30, 2024)
 ------------------------------
 * Updated nodes for cata
