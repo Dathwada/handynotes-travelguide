@@ -649,7 +649,7 @@ end
 function events:PLAYER_LOGIN(...)
     -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
     for dp in pairs(WorldMapFrame.dataProviders) do
-        if (type(dp.GetPinTemplate) == "function") then
+        if (not dp.GetPinTemplates and type(dp.GetPinTemplate) == "function") then
             if (dp:GetPinTemplate() == "AreaPOIPinTemplate") then
                 hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
             end
