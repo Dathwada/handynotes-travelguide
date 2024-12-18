@@ -138,6 +138,8 @@ L["Portal to Ardenweald"] = "Portal zum Ardenwald"
 L["Portal to Bastion"] = "Portal zur Bastion"
 L["Portal to Tiragarde Sound"] = "Portal zum Tiragardesund"
 L["Portal to Twilight Highlands"] = "Portal ins Schattenhochland"
+L["Zeppelin to Siren Isle"] = "Zeppelin zur Sireneninsel"
+L["Zeppelin to Dornogal"] = "Zeppelin nach Dornogal"
 
 --==========================================DRAGONFLIGHT==========================================--
 

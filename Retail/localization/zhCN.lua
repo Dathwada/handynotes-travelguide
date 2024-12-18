@@ -140,6 +140,8 @@ L["Portal to Ardenweald"] = "通往炽蓝仙野的传送门"
 L["Portal to Bastion"] = "通往晋升堡垒的传送门"
 L["Portal to Tiragarde Sound"] = "前往提拉加德海峡的传送门"
 L["Portal to Twilight Highlands"] = "通往暮光高地的传送门"
+-- L["Zeppelin to Siren Isle"] = ""
+-- L["Zeppelin to Dornogal"] = ""
 
 --==========================================DRAGONFLIGHT==========================================--
 

@@ -18,6 +18,7 @@ local IsQuestCompletedOnAccount = C_QuestLog.IsQuestFlaggedCompletedOnAccount
 
 local portal_red       = ns.constants.icon.portal_red
 local BoatX            = ns.constants.icon.boat_x
+local ZeppelinX        = ns.constants.icon.zeppelin_x
 local molemachineX     = ns.constants.icon.molemachine_x
 
 ----------------------------------------------------------------------------------------------------
@@ -251,6 +252,7 @@ local GetNodeInfo = function(node)
         if (node.requirements and not ReqFulfilled(node.requirements)) then
             icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "portal_mixed" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_red)
             or (node.icon == "boat" and BoatX)
+            or (node.icon == "zeppelin" and ZeppelinX)
             or (node.icon == "molemachine" and molemachineX)
         else
             icon = SetIcon(node)

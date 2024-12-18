@@ -95,6 +95,7 @@ constants.icon = {
     flightMaster      = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
     zeppelin          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin",
     hzeppelin         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin_horde",
+    zeppelin_x        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\zeppelin_grey_x",
     worderhall        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\warrior",
     teleportPlatform  = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
     animaGateway      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
