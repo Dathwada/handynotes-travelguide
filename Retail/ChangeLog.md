@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.21.0 (December 18, 2024)
+-------------------------------
+* Added zeppelins between Siren Isle and Dornogal
+* Fixed accountquest requirement for nodes
+* Fixed VignetteDataProvider lua error [[Issue#56]](https://github.com/Dathwada/handynotes-travelguide/issues/56)
+* Bump .toc to 110007
+
 #### v2.20.0 (October 27, 2024)
 -------------------------------
 * Added Portal to the Firelands [[Issue#53]](https://github.com/Dathwada/handynotes-travelguide/issues/53)
