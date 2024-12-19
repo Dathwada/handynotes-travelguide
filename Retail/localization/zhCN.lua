@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2024/08/01
+--  Last update: 2024/12/19
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -138,10 +138,10 @@ L["Elevator to Isle of Dorn"] = "通往多恩岛的电梯"
 L["Elevator to Ringing Deeps"] = "通往喧鸣深窟的电梯"
 L["Portal to Ardenweald"] = "通往炽蓝仙野的传送门"
 L["Portal to Bastion"] = "通往晋升堡垒的传送门"
-L["Portal to Tiragarde Sound"] = "前往提拉加德海峡的传送门"
+L["Portal to Tiragarde Sound"] = "通往提拉加德海峡的传送门"
 L["Portal to Twilight Highlands"] = "通往暮光高地的传送门"
--- L["Zeppelin to Siren Isle"] = ""
--- L["Zeppelin to Dornogal"] = ""
+L["Zeppelin to Siren Isle"] = "前往海妖岛的船（飞艇）"
+L["Zeppelin to Dornogal"] = "返回多恩诺嘉尔的船（飞艇）"
 
 --==========================================DRAGONFLIGHT==========================================--
 
