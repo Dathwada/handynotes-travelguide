@@ -88,7 +88,11 @@ local areaPoisToRemove = {
     8006, -- Isle of Dorn, To Ringing Deeps (bottom)
     8009, -- Isle of Dorn, To Ringing Deeps (top)
     8010, -- Ringing Deeps, to Isle of Dorn (middle)
-    8171 -- Dornogal, Portal to the Timeways
+    8171, -- Dornogal, Portal to the Timeways
+    8247, -- Ringing Deeps, Mole Machine to Siren Isle
+    8248, -- Isle of Dorn, Zeppelin to Siren Isle
+    8249, -- Siren Isle, Zeppelin to Dornogal
+    8250, -- Siren Isle, Mole Machine to Gundargaz
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -549,25 +553,12 @@ do
 
     function ns:ShouldShow(coord, node, currentMapID)
         if (not ns.db.force_nodes) then
-            if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then
-                return false
-            end
-            -- this will check if requirements are fulfilled, when remove_unknown option enabled
-            if (node.requirements and ns.db.remove_unknown and not ReqFulfilled(node.requirements)) then
-                return false
-            end
-            -- this will check if any node is for specific class
-            if (node.class and node.class ~= select(2, UnitClass("player"))) then
-                return false
-            end
-            -- this will check if any node is for specific faction
-            if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then
-                return false
-            end
-            -- this will check if any node is for specific covenant
-            if (node.covenant and node.covenant ~= C_Covenants.GetActiveCovenantID()) then
-                return false
-            end
+            if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then return false end
+            if (node.requirements and ns.db.remove_unknown and not ReqFulfilled(node.requirements)) then return false end
+            if (node.class and node.class ~= select(2, UnitClass("player"))) then return false end
+            if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then return false end
+            if (node.race and node.race ~= select(2, UnitRace("player"))) then return false end
+            if (node.covenant and node.covenant ~= C_Covenants.GetActiveCovenantID()) then return false end
             if (node.icon == "portal" and not ns.db.show_portal) then return false end
             if (node.icon == "orderhall" and not ns.db.show_orderhall) then return false end
             if (node.icon == "worderhall" and not ns.db.show_orderhall) then return false end
@@ -584,7 +575,7 @@ do
             if (node.icon == "hzeppelin" and not ns.db.show_hzeppelin) then return false end
             if (node.icon == "animaGateway" and not ns.db.show_animaGateway) then return false end
             if (node.icon == "teleportPlatform" and not ns.db.show_teleportPlatform) then return false end
-            if (node.icon == "molemachine" and (not ns.db.show_molemachine or (select(2, UnitRace("player")) ~= "DarkIronDwarf"))) then return false end
+            if (node.icon == "molemachine" and not ns.db.show_molemachine) then return false end
         end
         return true
     end

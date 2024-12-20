@@ -143,6 +143,8 @@ L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
 -- L["Portal to Twilight Highlands"] = ""
 -- L["Zeppelin to Siren Isle"] = ""
 -- L["Zeppelin to Dornogal"] = ""
+-- L["Mole Machine to Siren Isle"] = ""
+-- L["Mole Machine to Gundargaz"] = ""
 
 --==========================================DRAGONFLIGHT==========================================--
 

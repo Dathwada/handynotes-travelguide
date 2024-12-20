@@ -117,7 +117,6 @@ config.options = {
                     type = "toggle",
                     name = L["config_molemachine"],
                     desc = L["config_molemachine_desc"],
-                    hidden = function() return select(2, UnitRace("player")) ~= "DarkIronDwarf" end,
                     order = 20,
                 },
                 show_note = {

@@ -140,6 +140,8 @@ L["Portal to Tiragarde Sound"] = true
 L["Portal to Twilight Highlands"] = true
 L["Zeppelin to Siren Isle"] = true
 L["Zeppelin to Dornogal"] = true
+L["Mole Machine to Siren Isle"] = true
+L["Mole Machine to Gundargaz"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

@@ -140,6 +140,8 @@ L["Portal to Tiragarde Sound"] = "Portal zum Tiragardesund"
 L["Portal to Twilight Highlands"] = "Portal ins Schattenhochland"
 L["Zeppelin to Siren Isle"] = "Zeppelin zur Sireneninsel"
 L["Zeppelin to Dornogal"] = "Zeppelin nach Dornogal"
+L["Mole Machine to Siren Isle"] = "Maulwurfmaschine zur Sireneninsel"
+L["Mole Machine to Gundargaz"] = "Maulwurfmaschine nach Gundargaz"
 
 --==========================================DRAGONFLIGHT==========================================--
 
