@@ -142,8 +142,8 @@ L["Portal to Tiragarde Sound"] = "通往提拉加德海峡的传送门"
 L["Portal to Twilight Highlands"] = "通往暮光高地的传送门"
 L["Zeppelin to Siren Isle"] = "前往海妖岛的船（飞艇）"
 L["Zeppelin to Dornogal"] = "返回多恩诺嘉尔的船（飞艇）"
--- L["Mole Machine to Siren Isle"] = ""
--- L["Mole Machine to Gundargaz"] = ""
+L["Mole Machine to Siren Isle"] = "前往海妖岛的钻探机"
+L["Mole Machine to Gundargaz"] = "前往​喧鸣深窟的钻探机"
 
 --==========================================DRAGONFLIGHT==========================================--
 
