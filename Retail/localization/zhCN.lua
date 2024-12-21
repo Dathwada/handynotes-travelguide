@@ -201,7 +201,7 @@ L["Boat to Drustvar"] = "前往德鲁斯瓦的船"
 L["Boat to Stormsong Valley"] = "前往斯托颂谷地的船"
 L["Boat to Tiragarde Sound"] = "前往提拉加德海峡的船"
 
-L["Portal to Arathi Highlands"] = "通往塞拉摩的传送门"
+L["Portal to Arathi Highlands"] = "通往阿拉希高地的传送门"
 L["Portal to Port of Zandalar"] = "通往赞达拉的传送门"
 L["Portal to Darkshore"] = "通往黑海岸的传送门"
 L["Portal to Port of Boralus"] = "通往伯拉勒斯的传送门"
