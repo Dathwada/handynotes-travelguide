@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.22.0 (December 27, 2024)
+-------------------------------
+* Added mole machines between Siren Isle and Ringing Deeps [[Issue#60]](https://github.com/Dathwada/handynotes-travelguide/issues/60)
+* Updated zhCN.lua [[PR#59]](https://github.com/Dathwada/handynotes-travelguide/pull/59) [[PR#62]](https://github.com/Dathwada/handynotes-travelguide/pull/62)
+* Added koKR (Thanks [o___o_yes](https://www.curseforge.com/members/o___o_yes))
+
 #### v2.21.0 (December 18, 2024)
 -------------------------------
 * Added zeppelins between Siren Isle and Dornogal
