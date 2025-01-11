@@ -1083,8 +1083,8 @@ DB.nodes = {
         [39401090] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, multilabel={PtoExodar, PtoHellfirePeninsula}, multinote={AzuremystIsle, Outland}, faction="Alliance" },
         [43211616] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoExodar, note=Teldrassil, faction="Horde" },
         [29922620] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [59308350] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [59298344] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [59468340] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [59448340] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [56122758] = { icon="portal", multilabel={PtoSW, PtoBelameth}, multinote={ElwynnForest, Amirdrassil}, faction="Alliance" },
         [56222774] = { icon="portal", multilabel={PtoOG, PtoBelameth}, multinote={Durotar, Amirdrassil}, faction="Horde" },
         [29332713] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoDarnassus, note=Teldrassil },
@@ -1159,12 +1159,12 @@ DB.nodes = {
         -- [53747657] = { icon="portal", label=PtoDala, note=BrokenIsles, faction="Horde" }
         },
     [71] = { -- Tanaris
-        [65044975] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [65075005] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        [65794954] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [65924954] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [74] = { -- Cavern of Time
-        [53272807] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [53473006] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        [58202660] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [59002670] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [81] = { -- Silithus
         [41604520] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
