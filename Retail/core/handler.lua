@@ -136,13 +136,16 @@ end
 
 -- returns true when all requirements are fulfilled
 local function ReqFulfilled(req, ...)
+    local PLAYERLVL = UnitLevel("player")
+    local REQLVL = req.timetravel and req.timetravel.level or 50
+
     if (req.quest and not req.accquest and not IsQuestCompleted(req.quest))
     or (req.quest and req.accquest and not IsQuestCompletedOnAccount(req.quest))
-    or (req.level and (UnitLevel("player") < req.level))
+    or (req.level and (PLAYERLVL < req.level))
     or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
-    or (req.timetravel and UnitLevel("player") >= 50 and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
-    or (req.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(req.timetravel.quest) and req.warfront and not req.timetravel.turn)
-    or (req.timetravel and UnitLevel("player") >= 50 and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
+    or (req.timetravel and PLAYERLVL >= REQLVL and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
+    or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and req.warfront and not req.timetravel.turn)
+    or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
     or (req.warfront and GetWarfrontState(req.warfront) ~= select(1, UnitFactionGroup("player")))
     or (req.spell and not IsSpellKnown(req.spell))
     or (req.toy and not PlayerHasToy(req.toy))
@@ -157,8 +160,16 @@ local function ReqFulfilled(req, ...)
 
     if (req.multiquest) then
         for i, quest in pairs(req.multiquest) do
-            if (not IsQuestCompleted(quest)) then return false end
+            local isAccwide = req.multiaccquest and req.multiaccquest[i]
+            if ((not isAccwide and not IsQuestCompleted(quest)) or (isAccwide and not IsQuestCompletedOnAccount(quest))) then return false end
         end
+    end
+
+    if (req.multilevel) then
+        for i, level in pairs(req.multilevel) do
+            if (PLAYERLVL < level) then return false end
+        end
+
     end
 
     return true
@@ -171,13 +182,15 @@ end
 -- workaround to prepare the multilabels with and without notes
 -- because the game displays the first line in 14px and
 -- the following lines in 13px with a normal for loop.
-local function Prepare(label, note, level, quest)
+local function Prepare(label, note, level, quest, accwide)
     local t = {}
 
     for i, name in ipairs(label) do
         local NOTE = ''
         local LEVEL = ''
         local QUEST = ''
+        local questID = quest and quest[i]
+        local isAccwide = accwide and accwide[i]
 
         -- set spell name as label
         if (type(name) == "number") then
@@ -195,7 +208,7 @@ local function Prepare(label, note, level, quest)
         end
 
         -- add required quest information
-        if (quest and quest[i] and not IsQuestCompleted(quest[i])) then
+        if (questID and ((isAccwide and not IsQuestCompletedOnAccount(questID)) or (not isAccwide and not IsQuestCompleted(questID)))) then
             local title = C_QuestLog.GetTitleForQuestID(quest[i])
             if (title ~= nil) then
                 QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
@@ -289,7 +302,7 @@ local function SetTooltip(tooltip, node)
     end
     if (node.multilabel and node.icon ~= "portal_mixed") then
         if (reqs) then
-            tooltip:AddLine(Prepare(node.multilabel, node.multinote, reqs.multilevel, reqs.multiquest))
+            tooltip:AddLine(Prepare(node.multilabel, node.multinote, reqs.multilevel, reqs.multiquest, reqs.multiaccquest))
         else
             tooltip:AddLine(Prepare(node.multilabel, node.multinote))
         end
@@ -340,7 +353,9 @@ local function SetTooltip(tooltip, node)
                 GameTooltip_ShowProgressBar(GameTooltip, 0, reqValue, value, faction.name..": "..value.." / "..reqValue)
             end
         end
-        if (reqs.timetravel and UnitLevel("player") >= 50) then -- don't show this under level 50
+
+        local REQLVL = reqs.timetravel and reqs.timetravel.level or 50
+        if (reqs.timetravel and UnitLevel("player") >= REQLVL) then
             local spellName = C_Spell.GetSpellInfo(reqs.timetravel["spell"]).name
             if (spellName) then
                 local questCompleted = IsQuestCompleted(reqs.timetravel.quest)
