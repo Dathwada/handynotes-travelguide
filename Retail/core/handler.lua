@@ -81,8 +81,8 @@ local areaPoisToRemove = {
     7959, -- Dustwallow Marsh, Portal to Dalaran
     7960, -- Dragonblight, Portal to Dalaran
     7961, -- Searing Gorge, Portal to Dalaran
-    8001, -- Azj-Kahet, Portal to Azj-Kahet
-    8002, -- Dornogal, Portal to Dornogal
+    8001, -- Dornogal, Portal to Azj-Kahet
+    8002, -- Azj-Kahet, Portal to Dornogal
     8003, -- Dornogal, To Ringing Deeps
     8004, -- Ringing Deeps, to Isle of Dorn (bottom)
     8006, -- Isle of Dorn, To Ringing Deeps (bottom)
@@ -93,6 +93,8 @@ local areaPoisToRemove = {
     8248, -- Isle of Dorn, Zeppelin to Siren Isle
     8249, -- Siren Isle, Zeppelin to Dornogal
     8250, -- Siren Isle, Mole Machine to Gundargaz
+    8230, -- Dornogal, Teleporter to Undermine
+    8231, -- Undermine, Teleporter to Dornogal
 }
 
 ----------------------------------------------------------------------------------------------------

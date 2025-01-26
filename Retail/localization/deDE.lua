@@ -142,6 +142,10 @@ L["Zeppelin to Siren Isle"] = "Zeppelin zur Sireneninsel"
 L["Zeppelin to Dornogal"] = "Zeppelin nach Dornogal"
 L["Mole Machine to Siren Isle"] = "Maulwurfmaschine zur Sireneninsel"
 L["Mole Machine to Gundargaz"] = "Maulwurfmaschine nach Gundargaz"
+L["Rocket Drill to Undermine"] = "Bohrer nach Lorenhall"
+L["Rocket Drill to Ringing Deeps"] = "Bohrer in die schallenden Tiefen"
+L["Teleporter to Undermine"] = "Teleporter nach Lorenhall"
+L["Teleporter to Dornogal"] = "Teleporter nach Dornogal"
 
 --==========================================DRAGONFLIGHT==========================================--
 
