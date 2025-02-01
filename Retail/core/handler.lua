@@ -38,61 +38,61 @@ local TNRank            = L["handler_tooltip_TNTIER"]
 
 local areaPoisToRemove = {
     -- Alliance
-    5846, -- Vol'dun
-    5847, -- Nazmir
-    5848, -- Zuldazar
-    5873, -- Dustwallow Marsh, Boat to Menethil Harbor, Wetlands
-    5874, -- Wetlands, Boat to Theramore Isle, Dustwallow Marsh
-    5875, -- Wetlands, Boat to Daggercap Bay, Howling Fjord
-    5876, -- Howling Fjord, Boat to Menethil Harbor, Wetlands
-    5877, -- Borean Tundra, Boat to Stormwind City
-    5878, -- Stormwind, Boat to Valiance Keep, Borean Tundra
-    5879, -- Stormwind, Boat to Boralus Harbor, Tiragarde Sound
-    5880, -- Tiragarde Sound, Boat to Stormwind City
-    5892, -- The Jade Forest, Portal to Stormwind City
-    6014, -- Stormwind Portal Room
-    7340, -- Thaldraszus, Boat to Stormwind
-    7335, -- Stormwind, Boat to Dragon Isle
+    [5846] = true, -- Vol'dun
+    [5847] = true, -- Nazmir
+    [5848] = true, -- Zuldazar
+    [5873] = true, -- Dustwallow Marsh, Boat to Menethil Harbor, Wetlands
+    [5874] = true, -- Wetlands, Boat to Theramore Isle, Dustwallow Marsh
+    [5875] = true, -- Wetlands, Boat to Daggercap Bay, Howling Fjord
+    [5876] = true, -- Howling Fjord, Boat to Menethil Harbor, Wetlands
+    [5877] = true, -- Borean Tundra, Boat to Stormwind City
+    [5878] = true, -- Stormwind, Boat to Valiance Keep, Borean Tundra
+    [5879] = true, -- Stormwind, Boat to Boralus Harbor, Tiragarde Sound
+    [5880] = true, -- Tiragarde Sound, Boat to Stormwind City
+    [5892] = true, -- The Jade Forest, Portal to Stormwind City
+    [6014] = true, -- Stormwind Portal Room
+    [7340] = true, -- Thaldraszus, Boat to Stormwind
+    [7335] = true, -- Stormwind, Boat to Dragon Isle
 
     -- Horde
-    5843, -- Drustvar
-    5844, -- Tiragarde Sound
-    5845, -- Stormsong Valley
-    5883, -- Northern Stranglethorn, Zeppelin to Orgrimmar
-    5884, -- Orgrimmar, Zeppelin to Grom'gol, Schlingendorntal
-    5885, -- Orgrimmar, Zeppelin to Warsong Hold, Borean Tundra
-    5886, -- Borean Tundra, Zeppelin to Orgrimmar
-    5887, -- Echo Isles, Boat to Dazar'alor, Zuldazar
-    5888, -- Zuldazar, Boat to Echo Isles, Durotar
-    5890, -- The Jade Forest, Portal to Orgrimmar
-    6015, -- Orgrimmar Portal Room
-    6138, -- Mechagon
-    7339, -- Thaldraszus, Zeppelin to Orgrimmar
-    7341, -- Durotar, Zeppelin to the Waking Shores, Dragon Isles
+    [5843] = true, -- Drustvar
+    [5844] = true, -- Tiragarde Sound
+    [5845] = true, -- Stormsong Valley
+    [5883] = true, -- Northern Stranglethorn, Zeppelin to Orgrimmar
+    [5884] = true, -- Orgrimmar, Zeppelin to Grom'gol, Schlingendorntal
+    [5885] = true, -- Orgrimmar, Zeppelin to Warsong Hold, Borean Tundra
+    [5886] = true, -- Borean Tundra, Zeppelin to Orgrimmar
+    [5887] = true, -- Echo Isles, Boat to Dazar'alor, Zuldazar
+    [5888] = true, -- Zuldazar, Boat to Echo Isles, Durotar
+    [5890] = true, -- The Jade Forest, Portal to Orgrimmar
+    [6015] = true, -- Orgrimmar Portal Room
+    [6138] = true, -- Mechagon
+    [7339] = true, -- Thaldraszus, Zeppelin to Orgrimmar
+    [7341] = true, -- Durotar, Zeppelin to the Waking Shores, Dragon Isles
 
     -- Neutral
-    5881, -- The Cape of Stranglethorn, Boat to Ratschet
-    5882, -- Northern Barrens, Boat to Booty
-    7017, -- Oribos, Portal to Korthia
-    7019, -- Oribos, Portal to Zereth Mortis
-    7020, -- Zereth Mortis, Portalstone to Oribos
-    7944, -- Amirdrassil, Boat to Stormglen
-    7945, -- Gilneas, Boat to Belanaar
-    7959, -- Dustwallow Marsh, Portal to Dalaran
-    7960, -- Dragonblight, Portal to Dalaran
-    7961, -- Searing Gorge, Portal to Dalaran
-    8001, -- Azj-Kahet, Portal to Azj-Kahet
-    8002, -- Dornogal, Portal to Dornogal
-    8003, -- Dornogal, To Ringing Deeps
-    8004, -- Ringing Deeps, to Isle of Dorn (bottom)
-    8006, -- Isle of Dorn, To Ringing Deeps (bottom)
-    8009, -- Isle of Dorn, To Ringing Deeps (top)
-    8010, -- Ringing Deeps, to Isle of Dorn (middle)
-    8171, -- Dornogal, Portal to the Timeways
-    8247, -- Ringing Deeps, Mole Machine to Siren Isle
-    8248, -- Isle of Dorn, Zeppelin to Siren Isle
-    8249, -- Siren Isle, Zeppelin to Dornogal
-    8250, -- Siren Isle, Mole Machine to Gundargaz
+    [5881] = true, -- The Cape of Stranglethorn, Boat to Ratschet
+    [5882] = true, -- Northern Barrens, Boat to Booty
+    [7017] = true, -- Oribos, Portal to Korthia
+    [7019] = true, -- Oribos, Portal to Zereth Mortis
+    [7020] = true, -- Zereth Mortis, Portalstone to Oribos
+    [7944] = true, -- Amirdrassil, Boat to Stormglen
+    [7945] = true, -- Gilneas, Boat to Belanaar
+    [7959] = true, -- Dustwallow Marsh, Portal to Dalaran
+    [7960] = true, -- Dragonblight, Portal to Dalaran
+    [7961] = true, -- Searing Gorge, Portal to Dalaran
+    [8001] = true, -- Dornogal, Portal to Azj-Kahet
+    [8002] = true, -- Azj-Kahet, Portal to Dornogal
+    [8003] = true, -- Dornogal, To Ringing Deeps
+    [8004] = true, -- Ringing Deeps, to Isle of Dorn (bottom)
+    [8006] = true, -- Isle of Dorn, To Ringing Deeps (bottom)
+    [8009] = true, -- Isle of Dorn, To Ringing Deeps (top)
+    [8010] = true, -- Ringing Deeps, to Isle of Dorn (middle)
+    [8171] = true, -- Dornogal, Portal to the Timeways
+    [8247] = true, -- Ringing Deeps, Mole Machine to Siren Isle
+    [8248] = true, -- Isle of Dorn, Zeppelin to Siren Isle
+    [8249] = true, -- Siren Isle, Zeppelin to Dornogal
+    [8250] = true, -- Siren Isle, Mole Machine to Gundargaz
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -104,12 +104,10 @@ local function RemoveAreaPOIs()
     if (not ns.db.remove_AreaPois) then return end
 
     for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
-        for _, poiID in ipairs(areaPoisToRemove) do
-            local poi = C_AreaPoiInfo.GetAreaPOIInfo(WorldMapFrame:GetMapID(), pin.areaPoiID)
-            if (poi ~= nil and poi.areaPoiID == poiID) then
-                WorldMapFrame:RemovePin(pin)
-                addon:debugmsg("removed AreaPoi "..poiID.." "..poi.name)
-            end
+        local areaPoiID = pin.poiInfo.areaPoiID
+        if (areaPoisToRemove[areaPoiID]) then
+            WorldMapFrame:RemovePin(pin)
+            addon:debugmsg("removed AreaPOI "..areaPoiID.." "..pin.poiInfo.name)
         end
     end
 end
