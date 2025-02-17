@@ -345,7 +345,7 @@ DB.nodes = {
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
 
     [2239] = { -- Amirdrassil
-        [89633797] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
+        [89633797] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, accquest=true, level=70} },
         [55466364] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [51391836] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
         [55316473] = { icon="portal", multilabel={PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
@@ -353,7 +353,7 @@ DB.nodes = {
         [49020100] = { icon="boat", label=BtoStormglen, note=Gilneas }
         },
     [2200] = { -- Emerald Dream
-        [73085242 ] = { icon="portal", label=PtoOhnahranPlains, note=DragonIsle, requirements={quest=76318} }
+        [73085242] = { icon="portal", label=PtoOhnahranPlains, note=DragonIsle, requirements={quest=76318, accquest=true, level=70} }
         },
     [1978] = { -- Dragon Isles
         -- [56364797] = { icon="portal", multilabel={PtoOG, L["Teleport to Seat of the Aspects"]}, multinote={Durotar}, faction="Horde" },
@@ -365,8 +365,8 @@ DB.nodes = {
         [59832764] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [59832765] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
         -- [56694766] = { icon="portal", label=L["Teleport to Seat of the Aspects"], requirements={level=64} }
-        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} },
-        [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} }, -- TODO find out and add accountwide quest
+        [31055686] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, accquest=true, level=70} },
+        [56724911] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={quest=76326, accquest=true, level=70} },
         [24795365] = { icon="portal", label=L["Portal to Feathermoon Stronghold"], note=Feralas, faction="Alliance" },
         [25466105] = { icon="portal", multilabel={PtoSW, PtoDarkshore, PtoMountHyjal, PtoValsharah}, multinote={ElwynnForest, Kalimdor, Kalimdor, BrokenIsles}, faction="Alliance" },
         [25976454] = { icon="orderhall", label=PtoEmeraldDreamway, note=valsharahBrokenIsles, class="DRUID" },
@@ -381,7 +381,7 @@ DB.nodes = {
         -- [53565538] = { icon="portal", label=PtoTimeways, requirements={level=70} },
         [61963208] = { icon="teleportPlatform", label=L["Teleport to Seat of the Aspects"], requirements={level=64} },
         [26094099] = { icon="portal", label=PtoBadlands, note=EasternKingdoms },
-        [62675730] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} } -- TODO find out and add accountwide quest
+        [62675730] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={quest=76326, accquest=true, level=70} }
         },
     [2022] = { -- The Waking Shores
         [81692794] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -391,7 +391,7 @@ DB.nodes = {
         [32365490] = { icon="molemachine", label=GetAreaInfo(14012), requirements={quest=80107, hideQuestName=true}, race="DarkIronDwarf" } -- The Slagmire
         },
     [2023] = { -- Ohn'ahran Plains
-        [18405234] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, level=70} }
+        [18405234] = { icon="portal", label=PtoEmeraldDream, note=EmeraldDream, requirements={quest=76318, accquest=true, level=70} }
         },
     [2024] = { -- The Azure Span
         [80093896] = { icon="molemachine", label=GetAreaInfo(14017), requirements={quest=80108, hideQuestName=true}, race="DarkIronDwarf" } -- Vakthros Summit
@@ -404,7 +404,7 @@ DB.nodes = {
         [49210475] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [49590691] = { icon="aboat", label=BtoSW, note=ElwynnForest, faction="Horde" },
         [49590692] = { icon="boat", label=BtoSW, note=ElwynnForest, faction="Alliance" },
-        [41766093] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={level=70} } -- TODO find out and add accountwide quest
+        [41766093] = { icon="portal", label=L["Portal to Central Encampment"], note=EmeraldDream, requirements={quest=76326, accquest=true, level=70} }
         },
     [2133] = { -- Zaralek Cavern
         [52732767] = { icon="molemachine", label=GetAreaInfo(14655), requirements={quest=80109, hideQuestName=true}, race="DarkIronDwarf" } -- Obsidian Rest
