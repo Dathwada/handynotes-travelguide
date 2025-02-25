@@ -93,6 +93,8 @@ local areaPoisToRemove = {
     [8248] = true, -- Isle of Dorn, Zeppelin to Siren Isle
     [8249] = true, -- Siren Isle, Zeppelin to Dornogal
     [8250] = true, -- Siren Isle, Mole Machine to Gundargaz
+    [8230] = true, -- Dornogal, Teleporter to Undermine
+    [8231] = true, -- Undermine, Teleporter to Dornogal
 }
 
 ----------------------------------------------------------------------------------------------------

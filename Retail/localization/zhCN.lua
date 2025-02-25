@@ -144,6 +144,10 @@ L["Zeppelin to Siren Isle"] = "前往海妖岛的船（飞艇）"
 L["Zeppelin to Dornogal"] = "返回多恩诺嘉尔的船（飞艇）"
 L["Mole Machine to Siren Isle"] = "前往海妖岛的钻探机"
 L["Mole Machine to Gundargaz"] = "前往冈达加兹的钻探机"
+-- L["Rocket Drill to Undermine"] = ""
+-- L["Rocket Drill to Ringing Deeps"] = ""
+L["Teleporter to Undermine"] = "前往安德麦的传送器"
+L["Teleporter to Dornogal"] = "前往多恩诺嘉尔的传送器"
 
 --==========================================DRAGONFLIGHT==========================================--
 
