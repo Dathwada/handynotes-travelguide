@@ -1,5 +1,12 @@
 ## Revision History:
 
+#### v2.23.1 (February 25, 2025)
+-------------------------------
+* Added new nodes from patch 11.1
+* Added missing nodes in parent and child maps
+* Updated Portal to Emerald Dream and Portal to Central Encampment requirements [[Issue#67]](https://github.com/Dathwada/handynotes-travelguide/issues/67)
+* Bump .toc to 110100
+
 #### v2.23.0 (February 14, 2025)
 -------------------------------
 * Updated Zeppelin to Siren Isle coords
