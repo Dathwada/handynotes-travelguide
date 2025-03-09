@@ -144,6 +144,7 @@ L["Mole Machine to Siren Isle"] = true
 L["Mole Machine to Gundargaz"] = true
 L["Rocket Drill to Undermine"] = true
 L["Rocket Drill to Ringing Deeps"] = true
+L["Rocket Drill to Kaja'Coast"] = true
 L["Teleporter to Undermine"] = true
 L["Teleporter to Dornogal"] = true
 

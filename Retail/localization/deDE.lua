@@ -144,6 +144,7 @@ L["Mole Machine to Siren Isle"] = "Maulwurfmaschine zur Sireneninsel"
 L["Mole Machine to Gundargaz"] = "Maulwurfmaschine nach Gundargaz"
 L["Rocket Drill to Undermine"] = "Raketenbohrer nach Lorenhall"
 L["Rocket Drill to Ringing Deeps"] = "Raketenbohrer in die schallenden Tiefen"
+L["Rocket Drill to Kaja'Coast"] = "Raketenbohrer zur Kaja'Küste"
 L["Teleporter to Undermine"] = "Teleporter nach Lorenhall"
 L["Teleporter to Dornogal"] = "Teleporter nach Dornogal"
 

@@ -146,6 +146,7 @@ L["Mole Machine to Siren Isle"] = "前往海妖岛的钻探机"
 L["Mole Machine to Gundargaz"] = "前往冈达加兹的钻探机"
 L["Rocket Drill to Undermine"] = "搭乘钻机前往安德麦"
 L["Rocket Drill to Ringing Deeps"] = "搭乘钻机前往喧鸣深窟"
+L["Rocket Drill to Kaja'Coast"] = "搭乘钻机前往卡亚海滨"
 L["Teleporter to Undermine"] = "前往安德麦的传送器"
 L["Teleporter to Dornogal"] = "前往多恩诺嘉尔的传送器"
 

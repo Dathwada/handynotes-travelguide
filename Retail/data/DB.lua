@@ -354,6 +354,7 @@ DB.nodes = {
         },
     [2346] = { -- Undermine
         [17295074] = { icon="molemachine", label=L["Rocket Drill to Ringing Deeps"], note=KhazAlgar, requirements={quest=83151, accquest=true} },
+        [18795223] = { icon="molemachine", label=L["Rocket Drill to Kaja'Coast"], note=Zuldazar, requirements={quest=83933, accquest=true} },
         [27825401] = { icon="portal", label=L["Teleporter to Dornogal"], note=IsleOfDorn, requirements={quest=86535, accquest=true} }
         },
 
@@ -514,7 +515,8 @@ DB.nodes = {
         [58007502] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Horde" },
         [58007501] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" },
         [51852837] = { icon="molemachine", label=GetAreaInfo(8966), requirements={quest=80099, hideQuestName=true}, race="DarkIronDwarf" }, -- Zalamar
-        [45777939] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true}, race="DarkIronDwarf" } -- Xibala
+        [45777939] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true}, race="DarkIronDwarf" }, -- Xibala
+        [36056806] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83933, accquest=true} }
         },
     [862] = { -- Zuldazar
         [58304450] = { icon="portal", multilabel={PtoSM, PtoOG, PtoTB, PtoSilithus, PtoNazjatar}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
@@ -525,7 +527,8 @@ DB.nodes = {
         [40457102] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51359}, faction="Alliance" },
         [58006531] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Horde" },
         [58006532] = { icon="boat", label=BtoEchoIsles, note=EchoIsles, faction="Alliance" },
-        [38247238] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true}, race="DarkIronDwarf" } -- Xibala
+        [38247238] = { icon="molemachine", label=GetAreaInfo(8965), requirements={quest=80100, hideQuestName=true}, race="DarkIronDwarf" }, -- Xibala
+        [22555406] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83933, accquest=true} }
         },
     [863] = { -- Nazmir
         [62054007] = { icon="boat", label=returntoBoralus, note=TiragardeSound, requirements={quest=51088}, faction="Alliance" },

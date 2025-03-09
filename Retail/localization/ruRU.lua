@@ -147,6 +147,7 @@ L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
 -- L["Mole Machine to Gundargaz"] = ""
 -- L["Rocket Drill to Undermine"] = ""
 -- L["Rocket Drill to Ringing Deeps"] = ""
+-- L["Rocket Drill to Kaja'Coast"] = ""
 L["Teleporter to Undermine"] = "Телепорт в Нижнюю Шахту"
 L["Teleporter to Dornogal"] = "Телепорт в Дорногал"
 
