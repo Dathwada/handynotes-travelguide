@@ -619,8 +619,9 @@ DB.nodes = {
         [45482973] = { icon="molemachine", label=GetAreaInfo(7806), requirements={quest=53593, hideQuestName=true}, race="DarkIronDwarf" }, -- Highmountain, Neltharion's Vault
         [46102532] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [34593931] = { icon="portal", label=PtoBelameth, note=Amirdrassil },
-        [51345613] = { icon="portal", multilabel={PtoOG, L["Portal to Shal'Aran"]}, multinote={Durotar, Meredil}, faction="Horde" }
+        [51345613] = { icon="portal", multilabel={PtoOG, L["Portal to Shal'Aran"]}, multinote={Durotar, Meredil}, faction="Horde" },
         -- [51485622] = { icon="portal", multilabel={PtoSW, L["Portal to Shal'Aran"]}, multinote={ElwynnForest, Meredil}, faction="Alliance" } -- BUGGED FOR ALLIANCE?
+        [52907051] = { icon="portal", multilabel={PtoHighmountain, PtoAzsuna, PtoValsharah, PtoStormheim, PtoSuramar}, requirements={mageTower=true} }
         },
     [627] = { -- Dalaran Broken Isles
         [39506320] = { icon="portal", label=PtoSW, note=ElwynnForest, requirements={level=10}, faction="Alliance" },
@@ -678,7 +679,8 @@ DB.nodes = {
         },
     [646] = { -- Broken Shore
         [44816132] = { icon="worderhall", label=JtoSkyhold, note=BrokenIsles, class="WARRIOR" },
-        [71694799] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true}, race="DarkIronDwarf" } -- The Broken Shore, Broken Shore
+        [71694799] = { icon="molemachine", label=GetAreaInfo(7543), requirements={quest=53589, hideQuestName=true}, race="DarkIronDwarf" }, -- The Broken Shore, Broken Shore
+        [46326192] = { icon="portal", multilabel={PtoHighmountain, PtoAzsuna, PtoValsharah, PtoStormheim, PtoSuramar}, requirements={mageTower=true} },
         },
     [830] = { -- Krokuun
         [62008694] = { icon="portal", label=PtoDala, note=BrokenIsles }

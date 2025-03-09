@@ -134,6 +134,12 @@ local function SetWarfrontNote()
     return (astate ~= select(1, UnitFactionGroup("player")) and notavailable or " ").."\n"..(dstate ~= select(1, UnitFactionGroup("player")) and notavailable or " ")
 end
 
+local function IsMageTowerActive()
+    local state = C_ContributionCollector.GetState(1) -- Mage Tower
+
+    return state == 3 -- state == 2 ?
+end
+
 -- returns true when all requirements are fulfilled
 local function ReqFulfilled(req, ...)
     local PLAYERLVL = UnitLevel("player")
@@ -147,6 +153,7 @@ local function ReqFulfilled(req, ...)
     or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and req.warfront and not req.timetravel.turn)
     or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
     or (req.warfront and GetWarfrontState(req.warfront) ~= select(1, UnitFactionGroup("player")))
+    or (req.mageTower and not IsMageTowerActive())
     or (req.spell and not IsSpellKnown(req.spell))
     or (req.toy and not PlayerHasToy(req.toy))
     then
@@ -390,6 +397,12 @@ local function SetTooltip(tooltip, node)
                 tooltip:AddTexture(TALENT["icon"], {margin = {right = 2}})
                 tooltip:AddLine("   • "..format(TNRank, TALENT["tier"] + 1), 0.6, 0.6, 0.6) -- grey
             end
+        end
+        if (reqs.mageTower and not IsMageTowerActive()) then
+            local _, percentage = C_ContributionCollector.GetState(1)
+            local formattedPercentage = format("%d%%", math.floor(percentage * 100))
+            local contributionText = format(_G["CONTRIBUTION_POI_TOOLTIP_PERCENTAGE_BUILT"], formattedPercentage)
+            tooltip:AddLine(requires.." ".._G["BROKENSHORE_BUILDING_MAGETOWER"] .. " (" .. contributionText .. ")", 1) -- red
         end
     end
 
