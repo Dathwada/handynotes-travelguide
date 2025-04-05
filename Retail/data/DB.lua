@@ -306,18 +306,18 @@ DB.nodes = {
         -- [80161483] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
         [46877124] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [73752119] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
-        [74851599] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true} },
-        [52435200] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true} },
-        [62946654] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true} },
-        [72522094] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true} }
+        [74851599] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [52435200] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [62946654] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true, level=80} },
+        [72522094] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} }
         },
     [2339] = { -- Dornogal
         [53963872] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [38162723] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [41182266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [63595278] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
-        [73570529] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true} },
-        [52465045] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true} }
+        [73570529] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [52465045] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} }
         },
     [2248] = { -- Isle of Dorn
         [50654183] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
@@ -325,18 +325,18 @@ DB.nodes = {
         [47523789] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         -- [67333101] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
         [53024529] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
-        [55473362] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true} },
-        [50284471] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true} }
+        [55473362] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [50284471] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} }
         },
     [2214] = { -- Ringing Deeps
         -- [53374459] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
         [25418709] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
-        [41873015] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true} },
-        [72957319] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true} }
+        [41873015] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [72957319] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true, level=80} }
         },
     [2215] = { -- Hallowfall
         [70869574] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
-        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true} }
+        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} }
         },
     [2255] = { -- Azj-Kahet
         [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} }
@@ -349,13 +349,13 @@ DB.nodes = {
         [60576931] = { icon="portal", label=L["Portal to Twilight Highlands"], note=EasternKingdoms }
         },
     [2369] = { -- Siren Isle
-        [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true} },
-        [67893859] = { icon="molemachine", label=L["Mole Machine to Gundargaz"], note=RingingDeeps, requirements={quest=84720, accquest=true} }
+        [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true, level=80} },
+        [67893859] = { icon="molemachine", label=L["Mole Machine to Gundargaz"], note=RingingDeeps, requirements={quest=84720, accquest=true, level=80} }
         },
     [2346] = { -- Undermine
-        [17295074] = { icon="molemachine", label=L["Rocket Drill to Ringing Deeps"], note=KhazAlgar, requirements={quest=83151, accquest=true} },
-        [18795223] = { icon="molemachine", label=L["Rocket Drill to Kaja'Coast"], note=Zuldazar, requirements={quest=83933, accquest=true} },
-        [27825401] = { icon="portal", label=L["Teleporter to Dornogal"], note=IsleOfDorn, requirements={quest=86535, accquest=true} }
+        [17295074] = { icon="molemachine", label=L["Rocket Drill to Ringing Deeps"], note=KhazAlgar, requirements={quest=83151, accquest=true, level=80} },
+        [18795223] = { icon="molemachine", label=L["Rocket Drill to Kaja'Coast"], note=Zuldazar, requirements={quest=83933, accquest=true, level=80} },
+        [27825401] = { icon="portal", label=L["Teleporter to Dornogal"], note=IsleOfDorn, requirements={quest=86535, accquest=true, level=80} }
         },
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
