@@ -149,6 +149,8 @@ L["Rocket Drill to Ringing Deeps"] = "搭乘钻机前往喧鸣深窟"
 L["Rocket Drill to Kaja'Coast"] = "搭乘钻机前往卡亚海滨"
 L["Teleporter to Undermine"] = "前往安德麦的传送器"
 L["Teleporter to Dornogal"] = "前往多恩诺嘉尔的传送器"
+L["Portal to Mechagon Island"] = "通往麦卡贡岛的传送门"
+L["Portal to Maldraxxus"] = "通往玛卓克萨斯的传送门"
 
 --==========================================DRAGONFLIGHT==========================================--
 
