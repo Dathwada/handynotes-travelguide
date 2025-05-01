@@ -147,6 +147,8 @@ L["Rocket Drill to Ringing Deeps"] = "Raketenbohrer in die schallenden Tiefen"
 L["Rocket Drill to Kaja'Coast"] = "Raketenbohrer zur Kaja'Küste"
 L["Teleporter to Undermine"] = "Teleporter nach Lorenhall"
 L["Teleporter to Dornogal"] = "Teleporter nach Dornogal"
+L["Portal to Mechagon Island"] = "Portal zur Insel Mechagon"
+L["Portal to Maldraxxus"] = "Portal nach Maldraxxus"
 
 --==========================================DRAGONFLIGHT==========================================--
 

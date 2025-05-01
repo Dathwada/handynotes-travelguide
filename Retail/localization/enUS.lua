@@ -147,6 +147,8 @@ L["Rocket Drill to Ringing Deeps"] = true
 L["Rocket Drill to Kaja'Coast"] = true
 L["Teleporter to Undermine"] = true
 L["Teleporter to Dornogal"] = true
+L["Portal to Mechagon Island"] = true
+L["Portal to Maldraxxus"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 
