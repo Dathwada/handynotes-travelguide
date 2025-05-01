@@ -343,10 +343,11 @@ DB.nodes = {
         },
     [2266] = { -- Millenia's Threshold
         [43584988] = { icon="portal", label=PtoDornogal, note=IsleOfDorn },
-        [64534374] = { icon="portal", label=L["Portal to Ardenweald"], note=Shadowlands },
-        [74424709] = { icon="portal", label=L["Portal to Bastion"], note=Shadowlands },
-        [70457272] = { icon="portal", label=L["Portal to Tiragarde Sound"], note=KulTiras },
-        [60576931] = { icon="portal", label=L["Portal to Twilight Highlands"], note=EasternKingdoms }
+        -- [64534374] = { icon="portal", label=, note= },
+        [74424709] = { icon="portal", label=L["Portal to Mechagon Island"], note=KulTiras },
+        [77356173] = { icon="portal", label=L["Portal to Maldraxxus"], note=Shadowlands },
+        [70457272] = { icon="portal", label=L["Portal to Zuldazar"], note=Zandalar },
+        -- [60576931] = { icon="portal", label=, note= }
         },
     [2369] = { -- Siren Isle
         [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true, level=80} },
