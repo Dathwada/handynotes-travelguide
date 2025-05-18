@@ -1,6 +1,7 @@
 ## Revision History:
 
 #### v2.23.3 (May 01, 2025)
+-------------------------------
 * Added level 80 requirements to Siren Isle and Undermine nodes [[Issue#71]](https://github.com/Dathwada/handynotes-travelguide/issues/71)
 * Added itIT localization
 * Updated frFR localization
@@ -8,6 +9,7 @@
 * Bump .toc to 110105
 
 #### v2.23.2 (March 15, 2025)
+-------------------------------
 * Added Mage Tower Portals [[Issue#66]](https://github.com/Dathwada/handynotes-travelguide/issues/66)
 * Added Rocket Drill to Kaja'Coast [Comment in [PR#69]](https://github.com/Dathwada/handynotes-travelguide/pull/69#issuecomment-2692637140)
 * Updated zhCN [[PR#70]](https://github.com/Dathwada/handynotes-travelguide/pull/70)
