@@ -431,8 +431,8 @@ DB.nodes = {
 ------------------------------------------------------------------------------------------SHADOWLANDS------------------------------------------------------------------------------------------
 
     [1550] = { -- Shadowlands
-        [45665085] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={quest=60151, accquest=true} },
-        [45665054] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={quest=60151, accquest=true} },
+        [45665085] = { icon="portal", multilabel={PtoOG, IntoTheMaw, KeepersRespite, PtoZerethMortis}, multinote={Durotar, nil, Korthia}, faction="Horde", requirements={multiquest={60151, nil, 63665, 64957}, multiaccquest={true}} },
+        [45665054] = { icon="portal", multilabel={PtoSW, IntoTheMaw, KeepersRespite, PtoZerethMortis}, multinote={ElwynnForest, nil, Korthia}, faction="Alliance", requirements={multiquest={60151, nil, 63665, 64957}, multiaccquest={true}} },
         [23411094] = { icon="portal", label=WstoOribos },
         [62772775] = { icon="portal", label=PtoOribos, covenant=Necrolord, requirements={sanctumtalent=1052} },
         [76015007] = { icon="portal", label=PtoOribos, covenant=Kyrian, requirements={sanctumtalent=1058} },
