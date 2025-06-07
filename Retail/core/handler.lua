@@ -17,6 +17,7 @@ local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 local IsQuestCompletedOnAccount = C_QuestLog.IsQuestFlaggedCompletedOnAccount
 
 local portal_red       = ns.constants.icon.portal_red
+local portal_mixed     = ns.constants.icon.portal_mixed
 local BoatX            = ns.constants.icon.boat_x
 local ZeppelinX        = ns.constants.icon.zeppelin_x
 local molemachineX     = ns.constants.icon.molemachine_x
@@ -118,20 +119,13 @@ end
 ----------------------------------------------FUNCTIONS---------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
--- returns the controlling faction
-local function GetWarfrontState(id)
+local function IsWarfrontActive(id)
     -- Battle for Stromgarde 11, Battle for Darkshore 118
     local state = C_ContributionCollector.GetState(id)
+    local controllingFaction = (state == 1 or state == 2) and "Alliance" or "Horde"
+    local playerFaction = UnitFactionGroup("player")
 
-    return (state == 1 or state == 2) and "Alliance" or "Horde"
-end
-
--- returns the note for mixed portals
-local function SetWarfrontNote()
-    local astate = GetWarfrontState(11) -- Battle for Stromgarde
-    local dstate = GetWarfrontState(118) -- Battle for Darkshore
-
-    return (astate ~= select(1, UnitFactionGroup("player")) and notavailable or " ").."\n"..(dstate ~= select(1, UnitFactionGroup("player")) and notavailable or " ")
+    return controllingFaction ~= playerFaction
 end
 
 local function IsMageTowerActive()
@@ -141,45 +135,70 @@ local function IsMageTowerActive()
 end
 
 -- returns true when all requirements are fulfilled
-local function ReqFulfilled(req, ...)
+local function ReqsFulfilled(node)
+    local statusText = 'all'
+    local reqs = node.requirements
     local PLAYERLVL = UnitLevel("player")
-    local REQLVL = req.timetravel and req.timetravel.level or 50
+    local REQLVL = reqs.timetravel and reqs.timetravel.level or 50
 
-    if (req.quest and not req.accquest and not IsQuestCompleted(req.quest))
-    or (req.quest and req.accquest and not IsQuestCompletedOnAccount(req.quest))
-    or (req.level and (PLAYERLVL < req.level))
-    or (req.sanctumtalent and not C_Garrison.GetTalentInfo(req.sanctumtalent).researched)
-    or (req.timetravel and PLAYERLVL >= REQLVL and not IsQuestCompleted(req.timetravel.quest) and not req.warfront and not req.timetravel.turn)
-    or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and req.warfront and not req.timetravel.turn)
-    or (req.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(req.timetravel.quest) and not req.warfront and req.timetravel.turn)
-    or (req.warfront and GetWarfrontState(req.warfront) ~= select(1, UnitFactionGroup("player")))
-    or (req.mageTower and not IsMageTowerActive())
-    or (req.spell and not IsSpellKnown(req.spell))
-    or (req.toy and not PlayerHasToy(req.toy))
+    if (reqs.quest and not reqs.accquest and not IsQuestCompleted(reqs.quest))
+    or (reqs.quest and reqs.accquest and not IsQuestCompletedOnAccount(reqs.quest))
+    or (reqs.level and (PLAYERLVL < reqs.level))
+    or (reqs.sanctumtalent and not C_Garrison.GetTalentInfo(reqs.sanctumtalent).researched)
+    or (reqs.timetravel and PLAYERLVL >= REQLVL and not IsQuestCompleted(reqs.timetravel.quest) and not reqs.warfront and not reqs.timetravel.turn)
+    or (reqs.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(reqs.timetravel.quest) and reqs.warfront and not reqs.timetravel.turn)
+    or (reqs.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(reqs.timetravel.quest) and not reqs.warfront and reqs.timetravel.turn)
+    or (reqs.warfront and IsWarfrontActive(reqs.warfront))
+    or (reqs.mageTower and not IsMageTowerActive())
+    or (reqs.spell and not IsSpellKnown(reqs.spell))
+    or (reqs.toy and not PlayerHasToy(reqs.toy))
     then
-        return false
+        return "none"
     end
 
-    if (req.reputation) then
-        local standing = C_Reputation.GetFactionDataByID(req.reputation[1]).currentStanding
-        return standing >= req.reputation[2]
+    if (reqs.reputation) then
+        local standing = C_Reputation.GetFactionDataByID(reqs.reputation[1]).currentStanding
+        statusText = (standing >= reqs.reputation[2]) and 'all' or 'none'
     end
 
-    if (req.multiquest) then
-        for i, quest in pairs(req.multiquest) do
-            local isAccwide = req.multiaccquest and req.multiaccquest[i]
-            if ((not isAccwide and not IsQuestCompleted(quest)) or (isAccwide and not IsQuestCompletedOnAccount(quest))) then return false end
+    if (node.multilabel) then
+        local checks = { fulfilled = 0 }
+        for i, _ in ipairs(node.multilabel) do
+            checks[i] = {}
+
+            if (reqs.multiquest and reqs.multiquest[i]) then
+                local isAccwide = reqs.multiaccquest and reqs.multiaccquest[i]
+                local quest = reqs.multiquest[i]
+
+                checks[i].quest = ((isAccwide and IsQuestCompletedOnAccount(quest)) or IsQuestCompleted(quest))
+            end
+
+            if (reqs.multilevel and reqs.multilevel[i]) then
+                checks[i].level = (PLAYERLVL >= reqs.multilevel[i])
+            end
+
+            if (reqs.multiwarfront and reqs.multiwarfront[i]) then
+                checks[i].warfront = IsWarfrontActive(reqs.multiwarfront[i])
+            end
+
+            if (checks[i].quest ~= false)
+            and (checks[i].level ~= false)
+            and (checks[i].warfront ~= false)
+            then
+                checks.fulfilled = checks.fulfilled + 1
+            end
+        end
+
+        if checks.fulfilled == #node.multilabel then
+            statusText = "all"
+        elseif checks.fulfilled > 0 then
+            statusText = "some"
+        else
+            statusText = "none"
         end
     end
 
-    if (req.multilevel) then
-        for i, level in pairs(req.multilevel) do
-            if (PLAYERLVL < level) then return false end
-        end
-
-    end
-
-    return true
+    return statusText
 end
 
 local function RefreshAfter(time)
@@ -189,44 +208,54 @@ end
 -- workaround to prepare the multilabels with and without notes
 -- because the game displays the first line in 14px and
 -- the following lines in 13px with a normal for loop.
-local function Prepare(label, note, level, quest, accwide)
+local function Prepare(node, onlyLabels)
     local t = {}
+    local reqs = node.requirements
 
-    for i, name in ipairs(label) do
+    for i, label in ipairs(node.multilabel) do
         local NOTE = ''
         local LEVEL = ''
         local QUEST = ''
-        local questID = quest and quest[i]
-        local isAccwide = accwide and accwide[i]
+        local WARFRONT = ''
 
         -- set spell name as label
-        if (type(name) == "number") then
-            name = C_Spell.GetSpellInfo(name).name
+        if (type(label) == "number") then
+            label = C_Spell.GetSpellInfo(label).name
         end
 
         -- add additional notes
-        if (note and note[i] and ns.db.show_note) then
-            NOTE = " ("..note[i]..")"
+        if (not onlyLabels and node.multinote and node.multinote[i] and ns.db.show_note) then
+            NOTE = " ("..node.multinote[i]..")"
         end
 
-        -- add required level information
-        if (level and level[i] and UnitLevel("player") < level[i]) then
-            LEVEL = "\n    |cFFFF0000"..RequiresPlayerLvl..": "..level[i].."|r"
-        end
+        if (reqs and not onlyLabels) then
 
-        -- add required quest information
-        if (questID and ((isAccwide and not IsQuestCompletedOnAccount(questID)) or (not isAccwide and not IsQuestCompleted(questID)))) then
-            local title = C_QuestLog.GetTitleForQuestID(quest[i])
-            if (title ~= nil) then
-                QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..quest[i]..")|r" -- red
-            else
-                QUEST = "\n    |cFFFF00FF"..RetrievingData.."|r" -- pink
-                RefreshAfter(1) -- Refresh
+            -- add required level information
+            if (reqs.multilevel and reqs.multilevel[i] and UnitLevel("player") < reqs.multilevel[i]) then
+                LEVEL = "\n    |cFFFF0000"..RequiresPlayerLvl..": "..reqs.multilevel[i].."|r"
+            end
+
+            -- add required warfront information
+            if (reqs.multiwarfront and IsWarfrontActive(reqs.multiwarfront[i])) then
+                WARFRONT = "\n    |cFFFF0000"..notavailable.."|r"
+            end
+
+            -- add required quest information
+            local questID = reqs.multiquest and reqs.multiquest[i]
+            local isAccwide = reqs.multiaccquest and reqs.multiaccquest[i]
+            if (questID and ((isAccwide and not IsQuestCompletedOnAccount(questID)) or (not isAccwide and not IsQuestCompleted(questID)))) then
+                local title = C_QuestLog.GetTitleForQuestID(questID)
+                if (title ~= nil) then
+                    QUEST = "\n    |cFFFF0000"..RequiresQuest..": ["..title.."] (ID: "..questID..")|r" -- red
+                else
+                    QUEST = "\n    |cFFFF00FF"..RetrievingData.."|r" -- pink
+                    RefreshAfter(1) -- Refresh
+                end
             end
         end
 
         -- store everything together
-        t[i] = name..NOTE..LEVEL..QUEST
+        t[i] = label..NOTE..LEVEL..QUEST..WARFRONT
     end
 
     return table.concat(t, "\n")
@@ -245,7 +274,7 @@ local function SetIcon(node)
 end
 
 local function GetIconScale(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
+    if (icon == "portal" or icon == "orderhall" or icon == "warfront" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
         return ns.db["icon_scale_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return ns.db["icon_scale_boat"]
@@ -257,7 +286,7 @@ local function GetIconScale(icon)
 end
 
 local function GetIconAlpha(icon)
-    if (icon == "portal" or icon == "orderhall" or icon == "portal_mixed" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
+    if (icon == "portal" or icon == "orderhall" or icon == "warfront" or icon == "petBattlePortal" or icon == "ogreWaygate" or icon == "portal_purple") then
         return ns.db["icon_alpha_portal"]
     elseif (icon == "boat" or icon == "aboat") then
         return ns.db["icon_alpha_boat"]
@@ -272,9 +301,14 @@ local GetNodeInfo = function(node)
     local icon
 
     if (node) then
-        local label = node.label or node.multilabel and Prepare(node.multilabel) or UNKNOWN
-        if (node.requirements and not ReqFulfilled(node.requirements)) then
-            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "portal_mixed" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_red)
+        local label = node.label or node.multilabel and Prepare(node, true) or UNKNOWN
+        if (node.requirements and ReqsFulfilled(node) == 'none') then
+            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_red)
+            or (node.icon == "boat" and BoatX)
+            or (node.icon == "zeppelin" and ZeppelinX)
+            or (node.icon == "molemachine" and molemachineX)
+        elseif (node.requirements and ReqsFulfilled(node) == 'some') then
+            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_mixed)
             or (node.icon == "boat" and BoatX)
             or (node.icon == "zeppelin" and ZeppelinX)
             or (node.icon == "molemachine" and molemachineX)
@@ -307,23 +341,13 @@ local function SetTooltip(tooltip, node)
     if (node.note and ns.db.show_note) then
         tooltip:AddLine("("..node.note..")")
     end
-    if (node.multilabel and node.icon ~= "portal_mixed") then
-        if (reqs) then
-            tooltip:AddLine(Prepare(node.multilabel, node.multinote, reqs.multilevel, reqs.multiquest, reqs.multiaccquest))
-        else
-            tooltip:AddLine(Prepare(node.multilabel, node.multinote))
-        end
+    if (node.multilabel) then
+        tooltip:AddLine(Prepare(node, false))
     end
     if (node.npc) then
         tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(node.npc))
     end
-    if (node.icon == "portal_mixed") then
-        tooltip:AddDoubleLine(Prepare(node.multilabel, node.multinote), SetWarfrontNote(), nil, nil, nil, 1) -- only the second line is red
-    end
     if (reqs) then
-        if (reqs.warfront and GetWarfrontState(reqs.warfront) ~= select(1, UnitFactionGroup("player"))) then
-            tooltip:AddLine(notavailable, 1) -- red
-        end
         if (reqs.level and UnitLevel("player") < reqs.level) then
             tooltip:AddLine(RequiresPlayerLvl..": "..reqs.level, 1) -- red
         end
@@ -349,6 +373,9 @@ local function SetTooltip(tooltip, node)
                     tooltip:AddLine(L["handler_tooltip_not_discovered"], 1) -- red
                 end
             end
+        end
+        if (reqs.warfront and IsWarfrontActive(reqs.warfront)) then
+            tooltip:AddLine(notavailable, 1) -- red
         end
         if (reqs.reputation) then
             local reqValuesForStandings = {0, 36000, 39000, 42000, 45000, 51000, 63000, 84000}
@@ -582,7 +609,7 @@ do
     function ns:ShouldShow(coord, node, currentMapID)
         if (not ns.db.force_nodes) then
             if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then return false end
-            if (node.requirements and ns.db.remove_unknown and not ReqFulfilled(node.requirements)) then return false end
+            if (node.requirements and ns.db.remove_unknown and ReqsFulfilled(node) ~= 'all') then return false end
             if (node.class and node.class ~= select(2, UnitClass("player"))) then return false end
             if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then return false end
             if (node.race and node.race ~= select(2, UnitRace("player"))) then return false end
@@ -590,8 +617,7 @@ do
             if (node.icon == "portal" and not ns.db.show_portal) then return false end
             if (node.icon == "orderhall" and not ns.db.show_orderhall) then return false end
             if (node.icon == "worderhall" and not ns.db.show_orderhall) then return false end
-            if (node.requirements and node.requirements.warfront and not ns.db.show_warfront) then return false end
-            if (node.icon == "portal_mixed" and not ns.db.show_warfront) then return false end
+            if (node.icon == "warfront" and not ns.db.show_warfront) then return false end
             if (node.icon == "petBattlePortal" and not ns.db.show_petBattlePortal) then return false end
             if (node.icon == "ogreWaygate" and not ns.db.show_ogreWaygate) then return false end
             if (node.icon == "portal_purple" and not ns.db.show_reflectivePortal) then return false end

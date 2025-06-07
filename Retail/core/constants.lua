@@ -84,6 +84,7 @@ constants.icon = {
     portal            = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
     orderhall         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
     petBattlePortal   = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
+    warfront          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_blue",
     portal_red        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_red",
     ogreWaygate       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_ogre",
     portal_purple     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\portal_purple",
@@ -100,5 +101,6 @@ constants.icon = {
     teleportPlatform  = "Interface\\MINIMAP\\TempleofKotmogu_ball_cyan",
     animaGateway      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
     molemachine       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine",
-    molemachine_x     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine_grey_x"
+    molemachine_x     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine_grey_x",
+    default           = "Interface\\icons\\inv_misc_questionmark",
 }
