@@ -9,11 +9,11 @@
 ## Notes-zhCN: 在世界地图和小地图上显示船和飞艇的位置。
 ## Notes-zhTW: 在世界地图和小地图上显示船和飞艇的位置。
 ## Author: Dathwada
-## Version: v3.8
+## Version: v3.9
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideClassicDB
-## X-Date: 2024-04-05
+## X-Date: 2025-06-18
 ## X-Category: Map
 
 # LOCALIZATION FILES
