@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.24.0 (June 18, 2025)
+-------------------------------
+* Added portal icon coloring based on requirements [[#75]](https://github.com/Dathwada/handynotes-travelguide/issues/75)
+* Updated zhCN [[PR#73]](https://github.com/Dathwada/handynotes-travelguide/pull/73)
+* Bump .toc to 110107
+
 #### v2.23.3 (May 01, 2025)
 -------------------------------
 * Added level 80 requirements to Siren Isle and Undermine nodes [[Issue#71]](https://github.com/Dathwada/handynotes-travelguide/issues/71)

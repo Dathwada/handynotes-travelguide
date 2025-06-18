@@ -18,11 +18,13 @@
 ![](https://i.imgur.com/PFHnUDr.png) ![](https://i.imgur.com/1tLgu6C.png)
 
 ## Features
+* Support for Blizzard Waypoints.
 * Support for [TomTom](https://www.curseforge.com/wow/addons/tomtom) Waypoints.
 * Easy Waypoint (Set a waypoint by right-clicking a node and access to more options by CTRL + right-clicking)
 * Notes for the portals, zepplins and boats.
 * Level, quest, time travel (i.e. Tirisfal Glades) and sanctum upgrade check.
     * ![](https://i.imgur.com/bOL9btW.png), ![](https://i.imgur.com/PzZ3HAN.png), ![](https://i.imgur.com/S5k5pfG.png) - (Level, quest, time travel or sanctum upgrade requirement are unfulfilled)
+    * ![](https://imgur.com/pOOYNCi.png) - (You have unlocked at least one of several portals at this location)
 
 ![](https://i.imgur.com/Q8NCjkY.png) ![](https://i.imgur.com/0qTTTAj.png) ![](https://i.imgur.com/MlnVJKC.png)
 
