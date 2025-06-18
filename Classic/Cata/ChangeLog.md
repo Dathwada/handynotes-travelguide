@@ -1,5 +1,9 @@
 ## Revision History:
 
+#### v1.8 (June 18, 2025)
+-------------------------------
+* Bump .toc to 40402
+
 #### v1.7 (October 27, 2024)
 -------------------------------
 * Added Portal to the Firelands [[Issue#53]](https://github.com/Dathwada/handynotes-travelguide/issues/53)
