@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v1.9 (July 06, 2025)
+-------------------------------
+* Added MoP nodes
+* Updated DB for MoP map changes
+* Bump .toc to 50500
+
 #### v1.8 (June 18, 2025)
 -------------------------------
 * Bump .toc to 40402
