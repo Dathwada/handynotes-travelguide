@@ -149,4 +149,11 @@ L["Portal to Vashj'ir"] = true
 
 L["Portal to Dalaran Crater"] = true
 L["Portal to the Sepulcher"] = true
+
+L["Portal to Dalaran"] = true
+L["Portal to Shattrath"] = true
+L["Portal to Thunder Bluff"] = true
+L["Portal to Jade Forest"] = true
+L["Portal to Isle of Thunder"] = true
+L["Portal to Shado-Pan Garrison"] = true
 end

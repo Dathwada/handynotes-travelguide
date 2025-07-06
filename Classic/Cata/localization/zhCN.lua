@@ -62,12 +62,21 @@ L["Portal to Dalaran Crater"] = "通往达拉然巨坑的传送门"
 L["Portal to Deepholm"] = "通往深岩之洲的传送门"
 L["Portal to Hyjal"] = "通往海加尔的传送门"
 L["Portal to Temple of Earth"] = "通往大地神殿的传送门"
+L["Portal to the Firelands"] = "到火焰之地的传送门"
 L["Portal to the Sepulcher"] = "通往墓地的传送门"
 L["Portal to Therazane's Throne"] = "通往塞拉赞恩的王座的传送门"
 L["Portal to Tol Barad"] = "通往托尔巴拉德的传送门"
 L["Portal to Twilight Highlands"] = "通往暮光高地的传送门"
 L["Portal to Uldum"] = "通往奥丹姆的传送门"
 L["Portal to Vashj'ir"] = "通往瓦丝琪尔的传送门"
+
+-- MoP
+L["Portal to Dalaran"] = "通往达拉然（晶歌森林）的传送门"
+L["Portal to Isle of Thunder"] = "通往雷神岛的传送门"
+L["Portal to Jade Forest"] = "通往翡翠林的传送门"
+L["Portal to Shado-Pan Garrison"] = "通往影踪卫戍营的传送门"
+L["Portal to Shattrath"] = "通往沙塔斯的传送门"
+L["Portal to Thunder Bluff"] = "通往雷霆崖的传送门"
 
 -- WotLKC
 L["Boat to Borean Tundra"] = "去北风冻原的船"

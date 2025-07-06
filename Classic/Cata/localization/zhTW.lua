@@ -69,6 +69,14 @@ L["Portal to Twilight Highlands"] = "到暮光高地的傳送門"
 L["Portal to Uldum"] = "到奧丹姆的傳送門"
 L["Portal to Vashj'ir"] = "到瓦許伊爾的傳送門"
 
+-- MoP
+L["Portal to Dalaran"] = "到達拉然的傳送門"
+L["Portal to Isle of Thunder"] = "到雷王島的傳送門"
+L["Portal to Jade Forest"] = "到翠玉林的傳送門"
+L["Portal to Shado-Pan Garrison"] = "到影潘要塞的傳送門"
+L["Portal to Shattrath"] = "到撒塔斯的傳送門"
+L["Portal to Thunder Bluff"] = "到雷霆崖的傳送門"
+
 -- WotLKC
 L["Boat to Borean Tundra"] = "去北风冻原的船"
 L["Boat to Howling Fjord"] = "去凛风峡湾的船"

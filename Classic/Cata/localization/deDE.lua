@@ -149,4 +149,11 @@ L["Portal to Vashj'ir"] = "Portal nach Vashj'ir"
 
 L["Portal to Dalaran Crater"] = "Portal zum Dalaran Krater"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
+
+L["Portal to Dalaran"] = "Portal nach Dalaran"
+L["Portal to Shattrath"] = "Portal nach Shattrath"
+L["Portal to Thunder Bluff"] = "Portal nach Donnerfels"
+L["Portal to Jade Forest"] = "Portal zum Jadewald"
+L["Portal to Isle of Thunder"] = "Portal zur Insel des Donners"
+L["Portal to Shado-Pan Garrison"] = "Portal zur Shado-Pan Garnison"
 end

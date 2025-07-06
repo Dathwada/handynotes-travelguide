@@ -62,12 +62,21 @@ L["Portal to Dalaran Crater"] = "Портал в кратер Даларана"
 L["Portal to Deepholm"] = "Портал в Подземье"
 L["Portal to Hyjal"] = "Портал в Хиджал"
 L["Portal to Temple of Earth"] = "Портал в Храм Земли"
+L["Portal to the Firelands"] = "Портал в Огненные Просторы"
 L["Portal to the Sepulcher"] = "Портал в Гробницу"
 L["Portal to Therazane's Throne"] = "Портал к трону Теразан"
 L["Portal to Tol Barad"] = "Портал в Тол Барад"
 L["Portal to Twilight Highlands"] = "Портал в Сумеречное нагорье"
 L["Portal to Uldum"] = "Портал в Ульдум"
 L["Portal to Vashj'ir"] = "Портал в Вайш'ир"
+
+-- MoP
+L["Portal to Dalaran"] = "Портал в Даларан"
+L["Portal to Isle of Thunder"] = "Портал на Остров Грома"
+L["Portal to Jade Forest"] = "Портал в Нефритовый лес"
+L["Portal to Shado-Pan Garrison"] = "Портал в Гарнизон Шадо-Пан"
+L["Portal to Shattrath"] = "Портал в Шаттрат"
+L["Portal to Thunder Bluff"] = "Портал в Громовой Утес"
 
 -- WotLKC
 L["Boat to Borean Tundra"] = "Корабль в Борейскую тундру"

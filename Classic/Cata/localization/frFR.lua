@@ -67,6 +67,14 @@ L["Portal to Twilight Highlands"] = "Portail vers les hautes-terres du Crépuscu
 L["Portal to Uldum"] = "Portail vers Uldum"
 L["Portal to Vashj'ir"] = "Portail vers Vashj'ir"
 
+-- MoP
+L["Portal to Dalaran"] = "Portail vers Dalaran"
+L["Portal to Isle of Thunder"] = "Portail vers I'île du Tonnerre"
+L["Portal to Jade Forest"] = "Portail vers la forêt de Jade"
+L["Portal to Shado-Pan Garrison"] = "Portail vers la garnison des Pandashan"
+L["Portal to Shattrath"] = "Portail vers Shattrath"
+L["Portal to Thunder Bluff"] = "Portail vers les Pitons-du-Tonnerre"
+
 -- WotLKC
 L["Boat to Borean Tundra"] = "Bateau vers la Toundra Boréenne"
 L["Boat to Howling Fjord"] = "Bateau vers le Fjord Hurlant"
