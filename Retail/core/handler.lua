@@ -96,6 +96,13 @@ local areaPoisToRemove = {
     [8250] = true, -- Siren Isle, Mole Machine to Gundargaz
     [8230] = true, -- Dornogal, Teleporter to Undermine
     [8231] = true, -- Undermine, Teleporter to Dornogal
+    [7919] = true, -- Dornogal, Foundation Hall Portal Room
+    [7920] = true, -- Seat of the Aspects, Teleporter to Dornogal
+    [8413] = true, -- Dornogal, Portal to Mechagon Island
+    [8415] = true, -- Dornogal, Portal to Maldraxxus
+    [8416] = true, -- Maldraxxus, Portal to Dornogal
+    [8417] = true, -- Dornogal, Portal to K'aresh
+    [8414] = true, -- Tazavesh, Portal to Dornogal
 }
 
 ----------------------------------------------------------------------------------------------------
