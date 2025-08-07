@@ -1117,8 +1117,8 @@ DB.nodes = {
         [45375436] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [58154245] = { icon="zeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
         [58154246] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
-        [42857909] = { icon="portal", requirements={quest=46931, accquest=true, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
-        [42847905] = { icon="portal", requirements={level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" },
+        [42857909] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
+        [42847905] = { icon="portal", requirements={quest=47186, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" },
         [59414237] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, PtoDala, PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
                                       multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
                                       requirements={multiquest={[4]=25924, [6]=26798, [11]=46931, [16]=60151}, multiaccquest={[6]=true, [11]=true, [16]=true}, multilevel={30, 30, 30, 30, 30, 30, [17]=10}}, faction="Horde" },
@@ -1194,8 +1194,8 @@ DB.nodes = {
         [59002670] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [81] = { -- Silithus
-        [41604520] = { icon="portal", requirements={quest=46931, accquest=true, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
-        [41474479] = { icon="portal", requirements={level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" }
+        [41604520] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
+        [41474479] = { icon="portal", requirements={quest=47186, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" }
         },
     [70] = { -- Dustwallow Marsh
         [71625648] = { icon="aboat", label=BtoMenethilHarbor, note=Wetlands, faction="Horde" },
