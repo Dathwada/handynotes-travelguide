@@ -194,4 +194,5 @@ L["Zeppelin to Dragon Isle"] = "용의 섬으로 가는 비행선"
 L["Zeppelin to Orgrimmar"] = "오그리마로 가는 비행선"
 L["Zeppelin to Stranglethorn Vale"] = "가시덤불 골짜기로 가는 비행선"
 L["Zeppelin to Thunder Bluff"] = "썬더블러프로 가는 비행선"
+L["Revealed Portal to Naxxramas"] = "드러난 낙스라마스로 통하는 차원문"
 end

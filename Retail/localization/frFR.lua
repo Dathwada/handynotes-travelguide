@@ -221,4 +221,5 @@ L["Zeppelin to Orgrimmar"] = "Zeppelin vers Orgrimmar"
 L["Zeppelin to Siren Isle"] = "Zeppelin vers l'Île aux Sirènes"
 L["Zeppelin to Stranglethorn Vale"] = "Zeppelin vers la Vallée de Strangleronce"
 L["Zeppelin to Thunder Bluff"] = "Zeppelin vers les Pitons-du-Tonnerre"
+L["Revealed Portal to Naxxramas"] = "Portail vers Naxxramas révélé"
 end

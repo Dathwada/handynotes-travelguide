@@ -197,4 +197,5 @@ L["Zeppelin to Dragon Isle"] = "到巨龍群島的飛艇"
 L["Zeppelin to Orgrimmar"] = "到奧格瑪的飛艇"
 L["Zeppelin to Stranglethorn Vale"] = "到荊棘谷的飛艇"
 L["Zeppelin to Thunder Bluff"] = "到雷霆崖的飛艇"
+L["Revealed Portal to Naxxramas"] = "顯現的納克薩瑪斯傳送門"
 end
