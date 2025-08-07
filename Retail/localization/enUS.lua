@@ -149,6 +149,7 @@ L["Teleporter to Undermine"] = true
 L["Teleporter to Dornogal"] = true
 L["Portal to Mechagon Island"] = true
 L["Portal to Maldraxxus"] = true
+L["Portal to K'aresh"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

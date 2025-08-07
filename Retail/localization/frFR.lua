@@ -147,6 +147,7 @@ L["Portal to Isle of Quel'Danas"] = "Shattrath, portail pour I'île de Quel'Dana
 L["Portal to Isle of Thunder"] = "Portail vers I'île du Tonnerre"
 L["Portal to Jade Forest"] = "Portail vers la forêt de Jade"
 L["Portal to Karazhan"] = "Portail vers Karazhan"
+L["Portal to K'aresh"] = "Portail vers K’aresh"
 L["Portal to Lion's watch"] = "Portail vers le guet du Lion"
 L["Portal to Maldraxxus"] = "Portail vers Maldraxxus"
 L["Portal to Mechagon"] = "Portail vers Mécagone"

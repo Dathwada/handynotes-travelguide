@@ -149,6 +149,7 @@ L["Teleporter to Undermine"] = "Teleporter nach Lorenhall"
 L["Teleporter to Dornogal"] = "Teleporter nach Dornogal"
 L["Portal to Mechagon Island"] = "Portal zur Insel Mechagon"
 L["Portal to Maldraxxus"] = "Portal nach Maldraxxus"
+L["Portal to K'aresh"] = "Portal nach K'aresh"
 
 --==========================================DRAGONFLIGHT==========================================--
 
