@@ -902,11 +902,15 @@ DB.nodes = {
     [379] = { -- Kun-Lai Summit
         [48534357] = { icon="orderhall", label=PtoOG, note=Durotar, class="MONK", faction="Horde" },
         [48964336] = { icon="orderhall", label=PtoSW, note=ElwynnForest, class="MONK", faction="Alliance" },
-        [57686281] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" } -- Kun-Lai Summit, One Keg
+        [57686281] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" }, -- Kun-Lai Summit, One Keg
+        [85946276] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [63249415] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
         },
     [371] = { -- The Jade Forest
         [28501401] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [46238516] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        [46238516] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
+        [08194216] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [18006135] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
         },
     [504] = { -- Isle of Thunder
         [64707348] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32644}, faction="Alliance" },
