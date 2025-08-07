@@ -312,7 +312,7 @@ DB.nodes = {
         [52435200] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [62946654] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true, level=80} },
         [72522094] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} },
-        [71191790] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, accquest=true, level=80} }
+        [71191790] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, level=80} }
         },
     [2339] = { -- Dornogal
         [53963872] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
@@ -321,7 +321,7 @@ DB.nodes = {
         [63595278] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [73570529] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [52465045] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} },
-        [40302270] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, accquest=true, level=80} }
+        [40302270] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, level=80} }
         },
     [2248] = { -- Isle of Dorn
         [50654183] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
@@ -331,7 +331,7 @@ DB.nodes = {
         [53024529] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [55473362] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [50284471] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} },
-        [47303789] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, accquest=true, level=80} }
+        [47303789] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, level=80} }
         },
     [2214] = { -- Ringing Deeps
         -- [53374459] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
@@ -364,10 +364,10 @@ DB.nodes = {
         [27825401] = { icon="portal", label=L["Teleporter to Dornogal"], note=IsleOfDorn, requirements={quest=86535, accquest=true, level=80} }
         },
     [2472] = { -- Tasavesh
-        [62569433] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, accquest=true, level=80} }
+        [62569433] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} }
     },
     [2371] = { -- K'aresh
-        [69378836] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, accquest=true, level=80} }
+        [69378836] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} }
     },
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
