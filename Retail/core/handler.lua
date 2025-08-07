@@ -125,7 +125,7 @@ local function IsWarfrontActive(id)
     local controllingFaction = (state == 1 or state == 2) and "Alliance" or "Horde"
     local playerFaction = UnitFactionGroup("player")
 
-    return controllingFaction ~= playerFaction
+    return controllingFaction == playerFaction
 end
 
 local function IsMageTowerActive()
@@ -148,7 +148,7 @@ local function ReqsFulfilled(node)
     or (reqs.timetravel and PLAYERLVL >= REQLVL and not IsQuestCompleted(reqs.timetravel.quest) and not reqs.warfront and not reqs.timetravel.turn)
     or (reqs.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(reqs.timetravel.quest) and reqs.warfront and not reqs.timetravel.turn)
     or (reqs.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(reqs.timetravel.quest) and not reqs.warfront and reqs.timetravel.turn)
-    or (reqs.warfront and IsWarfrontActive(reqs.warfront))
+    or (reqs.warfront and not IsWarfrontActive(reqs.warfront))
     or (reqs.mageTower and not IsMageTowerActive())
     or (reqs.spell and not IsSpellKnown(reqs.spell))
     or (reqs.toy and not PlayerHasToy(reqs.toy))
@@ -236,7 +236,7 @@ local function Prepare(node, onlyLabels)
             end
 
             -- add required warfront information
-            if (reqs.multiwarfront and IsWarfrontActive(reqs.multiwarfront[i])) then
+            if (reqs.multiwarfront and not IsWarfrontActive(reqs.multiwarfront[i])) then
                 WARFRONT = "\n    |cFFFF0000"..notavailable.."|r"
             end
 
@@ -374,7 +374,7 @@ local function SetTooltip(tooltip, node)
                 end
             end
         end
-        if (reqs.warfront and IsWarfrontActive(reqs.warfront)) then
+        if (reqs.warfront and not IsWarfrontActive(reqs.warfront)) then
             tooltip:AddLine(notavailable, 1) -- red
         end
         if (reqs.reputation) then
