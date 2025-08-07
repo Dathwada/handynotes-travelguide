@@ -325,4 +325,6 @@ L["Portal to the Sepulcher"] = "Портал в Гробницу"
 L["Waygate to Un'Goro Crater"] = "Врата к кратеру Ун'Горо"
 L["The Masonary"] = "Каменоломня"
 L["inside the Blackrock Mountain"] = "внутри Черной горы"
+
+L["Revealed Portal to Naxxramas"] = "Открытый портал в Наксрамас"
 end

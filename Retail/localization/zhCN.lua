@@ -326,4 +326,6 @@ L["Portal to the Sepulcher"] = "通往墓地的传送门"
 L["Waygate to Un'Goro Crater"] = "通往安戈洛环形山"
 L["The Masonary"] = "石匠区"
 L["inside the Blackrock Mountain"] = "在黑石山内部"
+
+L["Revealed Portal to Naxxramas"] = "显现出的通往纳克萨玛斯的传送门"
 end

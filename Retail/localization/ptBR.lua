@@ -189,4 +189,5 @@ L["Zeppelin to Borean Tundra"] = "Zepelim para Tundra Boreana"
 L["Zeppelin to Orgrimmar"] = "Zepelim para Orgrimmar"
 L["Zeppelin to Stranglethorn Vale"] = "Zepelim para Selva do Espinhaço"
 L["Zeppelin to Thunder Bluff"] = "Zepelim para Penhasco do Trovão"
+L["Revealed Portal to Naxxramas"] = "Portal para Naxxramas revelado"
 end

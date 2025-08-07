@@ -324,4 +324,6 @@ L["Portal to the Sepulcher"] = true
 L["Waygate to Un'Goro Crater"] = true
 L["The Masonary"] = true
 L["inside the Blackrock Mountain"] = true
+
+L["Revealed Portal to Naxxramas"] = true
 end

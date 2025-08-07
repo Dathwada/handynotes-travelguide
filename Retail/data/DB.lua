@@ -253,6 +253,8 @@ local TheMasonary = L["The Masonary"]
 local inBRM = L["inside the Blackrock Mountain"]
 local Feralas = GetMapNames(12, 69)
 local DeadwindPass = GetMapNames(13, 42)
+local Naxxramas = GetMapNames(113, 115, 4234)
+local PtoNaxxramas = L["Revealed Portal to Naxxramas"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -1248,6 +1250,7 @@ DB.nodes = {
         [38736678] = { icon="boat", label=BtoRatchet, note=NorthernBarrens }
         },
     [13] = { -- Eastern Kingdom
+        [53752981] = { icon="portal", label=PtoNaxxramas, note=Naxxramas, requirements={quest=76263, accquest=true} },
         [44058706] = { icon="zeppelin", multilabel={ZtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
         [44058707] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" },
         [41107209] = { icon="aboat", multilabel={BtoBoreanTundra, BtoBoralus, BtoDI}, multinote={ValianceKeep, TiragardeSound, WakingShores}, faction="Horde" },
@@ -1352,6 +1355,7 @@ DB.nodes = {
         [36577574] = { icon="boat", label=BtoRatchet, note=NorthernBarrens }
         },
     [23] = { -- Eastern Plaguelands
+        [35702309] = { icon="portal", label=PtoNaxxramas, note=Naxxramas, requirements={quest=76263, accquest=true} },
         [75234942] = { icon="orderhall", label=PtoDala, note=BrokenIsles, class="PALADIN" }
         },
     [27] = { -- Dun Morogh

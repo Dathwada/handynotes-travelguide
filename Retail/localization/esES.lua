@@ -210,4 +210,5 @@ L["Zeppelin to Dragon Isle"] = "Zepelín a las Islas Dragón"
 L["Zeppelin to Orgrimmar"] = "Zepelín a Orgrimmar"
 L["Zeppelin to Stranglethorn Vale"] = "Zepelín a Vega de Tuercespina"
 L["Zeppelin to Thunder Bluff"] = "Zepelín a Cima del Trueno"
+L["Revealed Portal to Naxxramas"] = "Portal a Naxxramas revelado"
 end
