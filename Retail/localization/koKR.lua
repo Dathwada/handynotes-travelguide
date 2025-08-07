@@ -122,6 +122,7 @@ L["Portal to Isle of Quel'Danas"] = "쿠엘다나스 섬으로 통하는 차원�
 L["Portal to Isle of Thunder"] = "천둥의 섬으로 통하는 차원문"
 L["Portal to Jade Forest"] = "비취 숲으로 통하는 차원문"
 L["Portal to Karazhan"] = "카라잔으로 통하는 차원문"
+L["Portal to K'aresh"] = "크아레쉬로 통하는 차원문"
 L["Portal to Lion's watch"] = "사자의 감시터로 통하는 차원문"
 L["Portal to Maldraxxus"] = "말드락서스로 통하는 차원문"
 L["Portal to Mechagon"] = "메카곤으로 통하는 차원문"

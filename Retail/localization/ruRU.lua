@@ -150,7 +150,7 @@ L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
 -- L["Rocket Drill to Kaja'Coast"] = ""
 L["Teleporter to Undermine"] = "Телепорт в Нижнюю Шахту"
 L["Teleporter to Dornogal"] = "Телепорт в Дорногал"
--- L["Portal to K'aresh"] = ""
+L["Portal to K'aresh"] = "Портал в К'ареш"
 
 --==========================================DRAGONFLIGHT==========================================--
 

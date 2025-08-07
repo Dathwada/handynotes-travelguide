@@ -151,7 +151,7 @@ L["Teleporter to Undermine"] = "前往安德麦的传送器"
 L["Teleporter to Dornogal"] = "前往多恩诺嘉尔的传送器"
 L["Portal to Mechagon Island"] = "通往麦卡贡岛的传送门"
 L["Portal to Maldraxxus"] = "通往玛卓克萨斯的传送门"
--- L["Portal to K'aresh"] = ""
+L["Portal to K'aresh"] = "通往卡雷什的传送门"
 
 --==========================================DRAGONFLIGHT==========================================--
 
