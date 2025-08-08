@@ -150,6 +150,8 @@ L["Teleporter to Dornogal"] = true
 L["Portal to Mechagon Island"] = true
 L["Portal to Maldraxxus"] = true
 L["Portal to K'aresh"] = true
+L["Portal to Tazavesh"] = true
+L["Portal to Revendreth"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

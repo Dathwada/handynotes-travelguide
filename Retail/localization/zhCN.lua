@@ -152,6 +152,8 @@ L["Teleporter to Dornogal"] = "前往多恩诺嘉尔的传送器"
 L["Portal to Mechagon Island"] = "通往麦卡贡岛的传送门"
 L["Portal to Maldraxxus"] = "通往玛卓克萨斯的传送门"
 L["Portal to K'aresh"] = "通往卡雷什的传送门"
+L["Portal to Tazavesh"] = "通往塔扎维什的传送门"
+L["Portal to Revendreth"] = "通往雷文德斯的传送门"
 
 --==========================================DRAGONFLIGHT==========================================--
 

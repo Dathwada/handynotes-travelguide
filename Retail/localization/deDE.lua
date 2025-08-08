@@ -150,6 +150,8 @@ L["Teleporter to Dornogal"] = "Teleporter nach Dornogal"
 L["Portal to Mechagon Island"] = "Portal zur Insel Mechagon"
 L["Portal to Maldraxxus"] = "Portal nach Maldraxxus"
 L["Portal to K'aresh"] = "Portal nach K'aresh"
+L["Portal to Tazavesh"] = "Portal nach Tazavesh"
+L["Portal to Revendreth"] = "Portal nach Revendreth"
 
 --==========================================DRAGONFLIGHT==========================================--
 

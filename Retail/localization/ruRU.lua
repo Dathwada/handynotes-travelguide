@@ -151,6 +151,8 @@ L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
 L["Teleporter to Undermine"] = "Телепорт в Нижнюю Шахту"
 L["Teleporter to Dornogal"] = "Телепорт в Дорногал"
 L["Portal to K'aresh"] = "Портал в К'ареш"
+L["Portal to Tazavesh"] = "Портал на Тазавеш"
+L["Portal to Revendreth"] = "Портал в Ревендрет"
 
 --==========================================DRAGONFLIGHT==========================================--
 

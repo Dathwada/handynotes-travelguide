@@ -351,9 +351,9 @@ DB.nodes = {
     [2266] = { -- Millenia's Threshold
         [43584988] = { icon="portal", label=PtoDornogal, note=IsleOfDorn },
         -- [64534374] = { icon="portal", label=, note= },
-        [74424709] = { icon="portal", label=L["Portal to Mechagon Island"], note=KulTiras },
-        [77356173] = { icon="portal", label=L["Portal to Maldraxxus"], note=Shadowlands },
-        [70457272] = { icon="portal", label=L["Portal to Zuldazar"], note=Zandalar },
+        [74424709] = { icon="portal", label=L["Portal to Tazavesh"], note=Tazavesh },
+        -- [77356173] = { icon="portal", label=, note= },
+        [70457272] = { icon="portal", label=L["Portal to Revendreth"], note=Shadowlands },
         -- [60576931] = { icon="portal", label=, note= }
         },
     [2369] = { -- Siren Isle
