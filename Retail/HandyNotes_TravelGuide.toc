@@ -1,4 +1,4 @@
-## Interface: 110107
+## Interface: 110200
 ## Title: HandyNotes: TravelGuide
 ## Title-ruRU: HandyNotes: Путеводитель
 ## Title-zhCN: HandyNotes: 游览指南
@@ -11,12 +11,12 @@
 ## Notes-zhTW: 在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。
 ## Notes-ruRU: Отображает местоположение портала, дирижабля, корабля и лодки на карте мира и миникарте.
 ## Author: |cFFFF8C00Dathwada EU-Eredar|r
-## Version: v2.24.0
+## Version: v2.24.1
 ## RequiredDeps: HandyNotes
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_TravelGuideDB
 ## IconTexture: Interface\AddOns\HandyNotes_TravelGuide\icons\portal_blue
-## X-Date: 2025-06-18
+## X-Date: 2025-08-08
 ## X-Category: Map
 
 # LOCALIZATION FILES

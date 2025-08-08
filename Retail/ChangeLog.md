@@ -1,5 +1,15 @@
 ## Revision History:
 
+#### v2.24.1 (July 8, 2025)
+-------------------------------
+* Added Patch 11.2 portals
+* Added Revealed Portal to Naxxramas [[PR#78]](https://github.com/Dathwada/handynotes-travelguide/pull/78) (thanks [pepedressingroom](https://github.com/pepedressingroom))
+* Updated M+ season portals
+* Updated localizations
+* Fixed Portal to Boralus requirements [[Issue#77]](https://github.com/Dathwada/handynotes-travelguide/issues/77)
+* Fixed warfront portal coloring
+* Bump .toc to 110200
+
 #### v2.24.0 (June 18, 2025)
 -------------------------------
 * Added portal icon coloring based on requirements [[#75]](https://github.com/Dathwada/handynotes-travelguide/issues/75)
