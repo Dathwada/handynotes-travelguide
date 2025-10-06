@@ -156,4 +156,5 @@ L["Portal to Thunder Bluff"] = true
 L["Portal to Jade Forest"] = true
 L["Portal to Isle of Thunder"] = true
 L["Portal to Shado-Pan Garrison"] = true
+L["Portal to Shan'ze Dao"] = true
 end

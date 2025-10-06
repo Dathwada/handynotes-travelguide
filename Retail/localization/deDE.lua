@@ -250,7 +250,8 @@ L["Reflective Portal"] = "Reflexionsportal"
 L["Portal to Jade Forest"] = "Portal zum Jadewald"
 L["Portal to Pandaria"] = "Portal nach Pandaria"
 L["Portal to Isle of Thunder"] = "Portal zur Insel des Donners"
-L["Portal to Shado-Pan Garrison"] = "Portal zur Shado-Pan Garnison"
+L["Portal to Shado-Pan Garrison"] = "Portal zur Shado-Pan-Garnison"
+L["Portal to Shan'ze Dao"] = "Portal nach Shan'ze Dao"
 L["Portal to Peak of Serenity"] = "Portal zum Gipfel der Ruhe"
 
 -------------------------------------------------CATA-----------------------------------------------

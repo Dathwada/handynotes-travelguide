@@ -492,7 +492,9 @@ DB.nodes = {
         [55215658] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [67816760] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
         [59883557] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
-        [50694785] = { icon="portal", multilabel={PtoTB, PtoOG, PtoUC, PtoSM, PtoShattrath, PtoDalaran}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, TerokkarForest, CrystalsongForest}, faction="Horde" }
+        [50694785] = { icon="portal", multilabel={PtoTB, PtoOG, PtoUC, PtoSM, PtoShattrath, PtoDalaran}, multinote={Mulgore, Durotar, Tirisfal, EversongWoods, TerokkarForest, CrystalsongForest}, faction="Horde" },
+        [28724637] = { icon="portal", label=L["Portal to Shan'ze Dao"], note=TownlongSteppes, requirements={quest=31110} },
+        [21522869] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=31110} }
         },
     [390] = { -- Vale of Eternal Blossoms
         [90876620] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -515,7 +517,9 @@ DB.nodes = {
         },
     [388] = { -- Townlong Steppes
         [49746867] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32681}, faction="Alliance" },
-        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" }
+        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" },
+        [48456988] = { icon="portal", label=L["Portal to Shan'ze Dao"], note=TownlongSteppes, requirements={quest=31110} },
+        [28992212] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=31110} }
         },
     -- [376] = { -- Valley of the Four Winds
     --     },

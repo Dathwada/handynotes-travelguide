@@ -72,6 +72,7 @@ L["Portal to Dalaran"] = "Portail vers Dalaran"
 L["Portal to Isle of Thunder"] = "Portail vers I'île du Tonnerre"
 L["Portal to Jade Forest"] = "Portail vers la forêt de Jade"
 L["Portal to Shado-Pan Garrison"] = "Portail vers la garnison des Pandashan"
+L["Portal to Shan'ze Dao"] = "Portail vers Dao Shan’ze"
 L["Portal to Shattrath"] = "Portail vers Shattrath"
 L["Portal to Thunder Bluff"] = "Portail vers les Pitons-du-Tonnerre"
 

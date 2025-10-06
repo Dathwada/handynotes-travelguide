@@ -75,6 +75,7 @@ L["Portal to Dalaran"] = "Портал в Даларан"
 L["Portal to Isle of Thunder"] = "Портал на Остров Грома"
 L["Portal to Jade Forest"] = "Портал в Нефритовый лес"
 L["Portal to Shado-Pan Garrison"] = "Портал в Гарнизон Шадо-Пан"
+L["Portal to Shan'ze Dao"] = "Портал на Шань'цзэ Дао"
 L["Portal to Shattrath"] = "Портал в Шаттрат"
 L["Portal to Thunder Bluff"] = "Портал в Громовой Утес"
 

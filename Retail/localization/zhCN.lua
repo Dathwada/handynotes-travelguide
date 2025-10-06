@@ -253,6 +253,7 @@ L["Portal to Jade Forest"] = "通往翡翠林的传送门"
 L["Portal to Pandaria"] = "通往潘达利亚的传送门"
 L["Portal to Isle of Thunder"] = "通往雷神岛的传送门"
 L["Portal to Shado-Pan Garrison"] = "通往影踪卫戍营的传送门"
+L["Portal to Shan'ze Dao"] = "通往山泽岛的传送门"
 L["Portal to Peak of Serenity"] = "通往晴日峰（昆莱山）的传送门"
 
 -------------------------------------------------CATA-----------------------------------------------

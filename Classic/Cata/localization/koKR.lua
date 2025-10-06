@@ -44,6 +44,7 @@ L["Portal to Dalaran"] = "달라란으로 통하는 차원문"
 L["Portal to Isle of Thunder"] = "천둥의 섬으로 통하는 차원문"
 L["Portal to Jade Forest"] = "비취 숲으로 통하는 차원문"
 L["Portal to Shado-Pan Garrison"] = "음영파 주둔지로 통하는 차원문"
+L["Portal to Shan'ze Dao"] = "샨쩌 다오로 통하는 차원문"
 L["Portal to Shattrath"] = "샤트라스로 통하는 차원문"
 L["Portal to Thunder Bluff"] = "썬더 블러프로 통하는 차원문"
 

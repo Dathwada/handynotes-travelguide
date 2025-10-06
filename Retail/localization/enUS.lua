@@ -251,6 +251,7 @@ L["Portal to Jade Forest"] = true
 L["Portal to Pandaria"] = true
 L["Portal to Isle of Thunder"] = true
 L["Portal to Shado-Pan Garrison"] = true
+L["Portal to Shan'ze Dao"] = true
 L["Portal to Peak of Serenity"] = true
 
 -------------------------------------------------CATA-----------------------------------------------

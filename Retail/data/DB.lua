@@ -887,7 +887,9 @@ DB.nodes = {
         [44792782] = { icon="orderhall", label=PtoOG, note=Durotar, class="MONK", faction="Horde" },
         [44972774] = { icon="orderhall", label=PtoSW, note=ElwynnForest, class="MONK", faction="Alliance" },
         [47117259] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true}, race="DarkIronDwarf" }, -- Valley of the Four Winds, Stormstout Brewery
-        [48483559] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" } -- Kun-Lai Summit, One Keg
+        [48483559] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" }, -- Kun-Lai Summit, One Keg
+        [28724637] = { icon="portal", label=L["Portal to Shan'ze Dao"], note=TownlongSteppes, requirements={quest=31110} },
+        [21522869] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=31110} }
         },
     [390] = { -- Vale of Eternal Blossoms
         [90876620] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
@@ -905,7 +907,9 @@ DB.nodes = {
         },
     [388] = { -- Townlong Steppes
         [49746867] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32681}, faction="Alliance" },
-        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" }
+        [50607340] = { icon="portal", label=PtoIofT, note=Pandaria, requirements={quest=32680}, faction="Horde" },
+        [48456988] = { icon="portal", label=L["Portal to Shan'ze Dao"], note=TownlongSteppes, requirements={quest=31110} },
+        [28992212] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=31110} }
         },
     [376] = { -- Valley of the Four Winds
         [31517359] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true}, race="DarkIronDwarf" } -- Valley of the Four Winds, Stormstout Brewery

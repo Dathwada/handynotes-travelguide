@@ -75,6 +75,7 @@ L["Portal to Dalaran"] = "通往达拉然（晶歌森林）的传送门"
 L["Portal to Isle of Thunder"] = "通往雷神岛的传送门"
 L["Portal to Jade Forest"] = "通往翡翠林的传送门"
 L["Portal to Shado-Pan Garrison"] = "通往影踪卫戍营的传送门"
+L["Portal to Shan'ze Dao"] = "通往山泽岛的传送门"
 L["Portal to Shattrath"] = "通往沙塔斯的传送门"
 L["Portal to Thunder Bluff"] = "通往雷霆崖的传送门"
 
