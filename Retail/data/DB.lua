@@ -23,6 +23,7 @@ local GetAreaInfo = C_Map.GetAreaInfo
 
 local KhazAlgar = GetMapNames(2274)
 local IsleOfDorn = GetMapNames(2274, 2248)
+local Dornogal = GetMapNames(2274, 2248, 14771)
 local RingingDeeps = GetMapNames(2274, 2214)
 -- local AzjKahet = GetMapNames(2274, 2255)
 local WeaversLair = GetMapNames(2274, nil, 14755)
@@ -194,7 +195,6 @@ local WtoSholazarBasin = L["Waygate to Sholazar Basin"]
 
 local AzuremystIsle = GetMapNames(12, 97)
 local PtoExodar = L["Portal to Exodar"]
-local inExodar = L["in Exodar"]
 local Outland = GetMapNames(101)
 local PtoHellfirePeninsula = L["Portal to Hellfire Peninsula"]
 local PtoIofQD = L["Portal to Isle of Quel'Danas"]
@@ -251,7 +251,6 @@ local Westfall = GetMapNames(13, 52)
 local BurningSteppes = GetMapNames(13, 36)
 local WtoUngoroCrater = L["Waygate to Un'Goro Crater"]
 local TheMasonary = L["The Masonary"]
-local inBRM = L["inside the Blackrock Mountain"]
 local Feralas = GetMapNames(12, 69)
 local DeadwindPass = GetMapNames(13, 42)
 local Naxxramas = GetMapNames(113, 115, 4234)
@@ -366,10 +365,12 @@ DB.nodes = {
         [27825401] = { icon="portal", label=L["Teleporter to Dornogal"], note=IsleOfDorn, requirements={quest=86535, accquest=true, level=80} }
         },
     [2472] = { -- Tasavesh
-        [62569433] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} }
+        [62569433] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} },
+        [49501982] = { icon="portal", label=L["Delver's Headquarters"], note=Dornogal, requirements={level=80} } -- quest?
     },
     [2371] = { -- K'aresh
-        [69378836] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} }
+        [69378836] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=84957, level=80} },
+        [66497192] = { icon="portal", label=L["Delver's Headquarters"], note=Dornogal, requirements={level=80} } -- quest?
     },
 
 ------------------------------------------------------------------------------------------DRAGONFLIGHT-----------------------------------------------------------------------------------------
@@ -1102,7 +1103,7 @@ DB.nodes = {
         },
     [97] = { -- Azuremyst Isle
         [20335407] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=PtoDarnassus, note=Teldrassil },
-        [26364616] = { icon="portal", label=PtoSW, note=ElwynnForest..")\n("..inExodar.."", faction="Alliance" }
+        [26364616] = { icon="portal", label=PtoSW, note=ElwynnForest..")\n("..L["in Exodar"].."", faction="Alliance" }
         },
     [110] = { -- Silvermoon City
         [49401510] = { icon="portal", label=PtoUC, note=Tirisfal..")\n("..Orboftranslocation.."", faction="Horde" },
@@ -1398,7 +1399,7 @@ DB.nodes = {
         [33302480] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
         },
     [36] = { -- Burning Steppes
-        [13211081] = { icon="molemachine", label=TheMasonary, note=inBRM, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
+        [13211081] = { icon="molemachine", label=TheMasonary, note=L["inside the Blackrock Mountain"], requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
         },
     [1186] = { -- Blackrock Depths
         [61432434] = { icon="molemachine", label=DUNGEON_FLOOR_BLACKROCKDEPTHS2, race="DarkIronDwarf" }, -- Shadowforge City

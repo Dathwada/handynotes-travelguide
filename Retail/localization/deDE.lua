@@ -152,6 +152,7 @@ L["Portal to Maldraxxus"] = "Portal nach Maldraxxus"
 L["Portal to K'aresh"] = "Portal nach K'aresh"
 L["Portal to Tazavesh"] = "Portal nach Tazavesh"
 L["Portal to Revendreth"] = "Portal nach Revendreth"
+L["Delver's Headquarters"] = "Tiefenforscherhauptquartier"
 
 --==========================================DRAGONFLIGHT==========================================--
 

@@ -153,6 +153,7 @@ L["Teleporter to Dornogal"] = "Телепорт в Дорногал"
 L["Portal to K'aresh"] = "Портал в К'ареш"
 L["Portal to Tazavesh"] = "Портал на Тазавеш"
 L["Portal to Revendreth"] = "Портал в Ревендрет"
+L["Delver's Headquarters"] = "Штаб исследователей"
 
 --==========================================DRAGONFLIGHT==========================================--
 
