@@ -131,7 +131,7 @@ local TownlongSteppes = GetMapNames(424, 388)
 local PtoIofT = L["Portal to Isle of Thunder"]
 local PtoSPG = L["Portal to Shado-Pan Garrison"]
 local PtoTB = L["Portal to Thunder Bluff"]
--- local PtoJadeForest = L["Portal to Jade Forest"]
+local PtoJadeForest = L["Portal to Jade Forest"]
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------DATABASE----------------------------------------------
@@ -197,7 +197,8 @@ DB.nodes = {
         [35587974] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
         [45550380] = { icon="hzeppelin", multilabel={ZtoTB, ZtoUC, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, Tirisfal, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [45550381] = { icon="zeppelin", multilabel={ZtoTB, ZtoUC, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, Tirisfal, GromgolBaseCamp, WarsongHold}, faction="Horde" },
-        [40860349] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" }
+        [40860349] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
+        -- [] = { icon="portal", label=PtoJadeForest, note=Pandaria, faction="Horde", requirements={quest=31853} } -- PLAYER IS NOT ON THE MAP
         },
     [7] = { -- Mulgore
         [35392133] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde"},
@@ -240,7 +241,8 @@ DB.nodes = {
         [39561280] = { icon="portal", multilabel={PtoBL, PtoExodar}, multinote={EasternKingdoms, AzuremystIsle}, faction="Alliance" },
         [29992703] = { icon="portal", multilabel={PtoBL, PtoDarnassus}, multinote={EasternKingdoms, Teldrassil}, faction="Alliance" },
         [56122958] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        [56222973] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
+        [56222973] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
+        [59164395] = { icon="portal", label=PtoJadeForest, note=Pandaria, faction="Horde", requirements={quest=31853} }
         },
     [10] = { -- The Barrens
         [70427342] = { icon="boat", label=BtoBootyBay, note=StranglethornCape },
@@ -305,6 +307,7 @@ DB.nodes = {
         [52885242] = { icon="hzeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Alliance" },
         [52885243] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
         [50103773] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[2]=28112, [3]=27123, [4]=25924, [5]=25316, [6]=26798}, multilevel={85}}, faction="Horde" },
+        [68774035] = { icon="portal", label=PtoJadeForest, note=Pandaria, faction="Horde", requirements={quest=31853} }
         },
     [86] = { -- Orgrimmar - The Cleft of Shadow
         [44716789] = { icon="portal", label=PtoBL, note=EasternKingdoms, faction="Horde" },
