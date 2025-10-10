@@ -11,7 +11,7 @@ if L then
 ----------------------------------------------------------------------------------------------------
 
 L["config_plugin_name"] = "Путеводитель"
-L["config_plugin_desc"] = "Отображает местоположение портала, дирижабля, корабля и лодки на карте мира и миникарте."
+L["config_plugin_desc"] = "Отображает местоположение порталов, дирижаблей, кораблей и лодок на карте мира и миникарте."
 
 L["config_tab_general"] = "Общие настройки"
 L["config_tab_scale_alpha"] = "Масштаб / Прозрачность"
@@ -66,10 +66,10 @@ L["config_remove_unknown_desc"] = "Это скроет пункты назнач
 -- L["config_remove_AreaPois"] = "Remove Blizzard's POIs for destinations"
 -- L["config_remove_AreaPois_desc"] = "This will remove the Points of Interest (POIs) set by Blizzard for destinations on the world map."
 
-L["config_easy_waypoints"] = "Легкие путевые точки"
-L["config_easy_waypoints_desc"] = "Активирует упрощенное создание путевых точек.\nПозволяет Вам установить путевую точку, щелкнув ПКМ, и получить доступ к дополнительным параметрам, нажав CTRL + ПКМ."
+L["config_easy_waypoints"] = "Легкие точки маршрута"
+L["config_easy_waypoints_desc"] = "Активирует упрощенное создание точек маршрута.\nПозволяет Вам установить путевую точку, щелкнув ПКМ, и получить доступ к дополнительным параметрам, нажав CTRL + ПКМ."
 L["config_waypoint_dropdown"] = "Выбор"
-L["config_waypoint_dropdown_desc"] = "Выберите способ создания путевой точки."
+L["config_waypoint_dropdown_desc"] = "Выберите способ создания точки маршрута."
 L["Blizzard"] = true
 L["TomTom"] = true
 L["Both"] = "Оба"
@@ -91,7 +91,7 @@ L["config_restore_nodes_print"] = "Все скрытые узлы восстан
 -------------------------------------------------DEV------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["dev_config_tab"] = "DEV"
+L["dev_config_tab"] = "РАЗРАБОТКА"
 
 L["dev_config_force_nodes"] = "Силовые узлы"
 L["dev_config_force_nodes_desc"] = "Принудительно отображать все узлы независимо от класса, фракции или ковенанта."
@@ -107,7 +107,7 @@ L["dev_config_show_prints_desc"] = "Показывать сообщения prin
 
 L["handler_context_menu_addon_name"] = "HandyNotes: Путеводитель"
 L["handler_context_menu_add_tomtom"] = "Добавить в TomTom"
-L["handler_context_menu_add_map_pin"] = "Установить путевую точку на карте"
+L["handler_context_menu_add_map_pin"] = "Установить на карте точку маршрута"
 L["handler_context_menu_hide_node"] = "Скрыть этот узел"
 
 --============================================TOOLTIPS============================================--
@@ -121,7 +121,7 @@ L["handler_tooltip_toy"] = "Требуется игрушка"
 L["handler_tooltip_requires_level"] = "Требуется уровень игрока не ниже"
 L["handler_tooltip_TNTIER"] = "%s уровень транспортной сети."
 L["handler_tooltip_not_available"] = "в данный момент НЕдоступно"
---L["handler_tooltip_available"] = "currently available"
+L["handler_tooltip_available"] = "в настоящее время доступно"
 L["handler_tooltip_not_discovered"] = "еще не обнаружен"
 
 ----------------------------------------------------------------------------------------------------
@@ -130,24 +130,24 @@ L["handler_tooltip_not_discovered"] = "еще не обнаружен"
 
 -------------------------------------------------TWW------------------------------------------------
 
-L["Portal to Dragonblight"] = "Портал на Драконий Погост"
+L["Portal to Dragonblight"] = "Портал в Драконий Погост"
 L["Portal to Dustwallow Marsh"] = "Портал в Пылевые топи"
 L["Portal to Searing Gorge"] = "Портал в Тлеющее ущелье"
 L["Portal to Dornogal"] = "Портал в Дорногал"
 L["Portal to Azj-Kahet"] = "Портал в Аз-Кахет"
--- L["Elevator to Isle of Dorn"] = ""
--- L["Elevator to Ringing Deeps"] = ""
--- L["Portal to Ardenweald"] = ""
--- L["Portal to Bastion"] = ""
--- L["Portal to Tiragarde Sound"] = ""
--- L["Portal to Twilight Highlands"] = ""
--- L["Zeppelin to Siren Isle"] = ""
--- L["Zeppelin to Dornogal"] = ""
--- L["Mole Machine to Siren Isle"] = ""
--- L["Mole Machine to Gundargaz"] = ""
--- L["Rocket Drill to Undermine"] = ""
--- L["Rocket Drill to Ringing Deeps"] = ""
--- L["Rocket Drill to Kaja'Coast"] = ""
+L["Elevator to Isle of Dorn"] = ""
+L["Elevator to Ringing Deeps"] = ""
+L["Portal to Ardenweald"] = "Портал в Арденвельд"
+L["Portal to Bastion"] = "Портал в Бастион"
+L["Portal to Tiragarde Sound"] = "Портал в Тирагардское поморье"
+L["Portal to Twilight Highlands"] = "Портал в Сумеречное нагорье"
+L["Zeppelin to Siren Isle"] = "Дирижабль на Остров Сирен"
+L["Zeppelin to Dornogal"] = "Дирижабль в Дорногал"
+L["Mole Machine to Siren Isle"] = "Буровая установка на Остров Сирен"
+L["Mole Machine to Gundargaz"] = "Буровая установка в Гундаргаз"
+L["Rocket Drill to Undermine"] = "Ракетный бур в Нижнюю Шахту"
+L["Rocket Drill to Ringing Deeps"] = "Ракетный бур в Гулкие глубины"
+L["Rocket Drill to Kaja'Coast"] = "Ракетный бур в Каджа-кост"
 L["Teleporter to Undermine"] = "Телепорт в Нижнюю Шахту"
 L["Teleporter to Dornogal"] = "Телепорт в Дорногал"
 L["Portal to K'aresh"] = "Портал в К'ареш"
@@ -169,8 +169,8 @@ L["Portal to The Timeways"] = "Портал в Потоки Времени"
 L["Portal to Bel'ameth"] = "Портал в Бел'амет"
 L["Portal to Feathermoon Stronghold"] = "Портал в Крепость Оперенной Луны"
 L["Portal to Mount Hyjal"] = "Портал на Гору Хиджал"
--- L["Boat to Belanaar"] = ""
--- L["Boat to Stormglen"] = ""
+L["Boat to Belanaar"] = "Корабль в Беланаар"
+L["Boat to Stormglen"] = "Корабль в Грозовой Перевал"
 L["Portal to The Nighthold"] = "Портал в Цитадель Ночи"
 L["Portal to Shal'Aran"] = "Портал в Шал'Аран"
 L["Rift to Dalaran"] = "Разлом в Даларан"
