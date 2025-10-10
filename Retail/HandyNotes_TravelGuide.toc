@@ -1,4 +1,4 @@
-## Interface: 110200
+## Interface: 110205
 ## Title: HandyNotes: TravelGuide
 ## Title-ruRU: HandyNotes: Путеводитель
 ## Title-zhCN: HandyNotes: 游览指南
@@ -9,7 +9,7 @@
 ## Notes-ptBR: Mostra a localização de portais, zepelins e navios no Mapa-múndi e minimapa.
 ## Notes-zhCN: 在世界地图和小地图上显示传送门、飞艇、港口图标。
 ## Notes-zhTW: 在世界地圖和小地圖上顯示傳送門，飛艇和船隻位置。
-## Notes-ruRU: Отображает местоположение портала, дирижабля, корабля и лодки на карте мира и миникарте.
+## Notes-ruRU: Отображает местоположение порталов, дирижаблей, кораблей и лодок на карте мира и миникарте.
 ## Author: |cFFFF8C00Dathwada EU-Eredar|r
 ## Version: v2.24.1
 ## RequiredDeps: HandyNotes
