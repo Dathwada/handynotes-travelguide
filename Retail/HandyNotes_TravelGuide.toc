@@ -1,4 +1,4 @@
-## Interface: 110205
+## Interface: 110205, 110207
 ## Title: HandyNotes: TravelGuide
 ## Title-ruRU: HandyNotes: Путеводитель
 ## Title-zhCN: HandyNotes: 游览指南
