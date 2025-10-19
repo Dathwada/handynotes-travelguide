@@ -1,4 +1,4 @@
-## Interface: 50501
+## Interface: 50501, 50502
 ## Title: HandyNotes: TravelGuide
 ## Notes: Displays the portal, zeppelin and boat locations on the world map and minimap.
 ## Notes-deDE: Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Weltkarte und Minimap an.
