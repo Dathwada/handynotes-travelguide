@@ -154,6 +154,8 @@ L["Portal to K'aresh"] = "Портал в К'ареш"
 L["Portal to Tazavesh"] = "Портал на Тазавеш"
 L["Portal to Revendreth"] = "Портал в Ревендрет"
 L["Delver's Headquarters"] = "Штаб исследователей"
+L["Portal to Founder's Point"] = "Портал в лагерь Основателя"
+L["Portal to Razorwind Shores"] = "Портал на берега Колючего Ветра"
 
 --==========================================DRAGONFLIGHT==========================================--
 

@@ -153,6 +153,8 @@ L["Portal to K'aresh"] = true
 L["Portal to Tazavesh"] = true
 L["Portal to Revendreth"] = true
 L["Delver's Headquarters"] = true
+L["Portal to Founder's Point"] = true
+L["Portal to Razorwind Shores"] = true
 
 --==========================================DRAGONFLIGHT==========================================--
 

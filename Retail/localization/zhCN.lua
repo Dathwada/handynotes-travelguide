@@ -155,6 +155,8 @@ L["Portal to K'aresh"] = "通往卡雷什的传送门"
 L["Portal to Tazavesh"] = "通往塔扎维什的传送门"
 L["Portal to Revendreth"] = "通往雷文德斯的传送门"
 L["Delver's Headquarters"] = "地下堡行者总部"
+L["Portal to Founder's Point"] = "通往创始者之角的传送门"
+L["Portal to Razorwind Shores"] = "通往烈风海岸的传送门"
 
 --==========================================DRAGONFLIGHT==========================================--
 

@@ -54,6 +54,7 @@ local areaPoisToRemove = {
     [6014] = true, -- Stormwind Portal Room
     [7340] = true, -- Thaldraszus, Boat to Stormwind
     [7335] = true, -- Stormwind, Boat to Dragon Isle
+    [8530] = true, -- Founder's Point, Portal to Stormwind
 
     -- Horde
     [5843] = true, -- Drustvar
@@ -70,6 +71,7 @@ local areaPoisToRemove = {
     [6138] = true, -- Mechagon
     [7339] = true, -- Thaldraszus, Zeppelin to Orgrimmar
     [7341] = true, -- Durotar, Zeppelin to the Waking Shores, Dragon Isles
+    [8529] = true, -- Razorwind Shores, Portal to Orgrimmar
 
     -- Neutral
     [5881] = true, -- The Cape of Stranglethorn, Boat to Ratschet
