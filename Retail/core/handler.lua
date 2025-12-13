@@ -16,12 +16,6 @@ _G.HandyNotes_TravelGuide = addon
 local IsQuestCompleted = C_QuestLog.IsQuestFlaggedCompleted
 local IsQuestCompletedOnAccount = C_QuestLog.IsQuestFlaggedCompletedOnAccount
 
-local portal_red       = ns.constants.icon.portal_red
-local portal_mixed     = ns.constants.icon.portal_mixed
-local BoatX            = ns.constants.icon.boat_x
-local ZeppelinX        = ns.constants.icon.zeppelin_x
-local molemachineX     = ns.constants.icon.molemachine_x
-
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
@@ -86,7 +80,7 @@ local areaPoisToRemove = {
     [7961] = true, -- Searing Gorge, Portal to Dalaran
     [8001] = true, -- Dornogal, Portal to Azj-Kahet
     [8002] = true, -- Azj-Kahet, Portal to Dornogal
-    [8003] = true, -- Dornogal, To Ringing Deeps
+    -- [8003] = true, -- Dornogal, To Ringing Deeps
     [8004] = true, -- Ringing Deeps, to Isle of Dorn (bottom)
     [8006] = true, -- Isle of Dorn, To Ringing Deeps (bottom)
     [8009] = true, -- Isle of Dorn, To Ringing Deeps (top)
@@ -111,17 +105,16 @@ local areaPoisToRemove = {
 ---------------------------------------------HookScript---------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
--- This will remove specified AreaPois on the WorldMapFrame
-local function RemoveAreaPOIs()
-    if (not ns.db.remove_AreaPois) then return end
+local function HookPinMixin(mixin)
+    if (not mixin) then return end
 
-    for pin in WorldMapFrame:EnumeratePinsByTemplate("AreaPOIPinTemplate") do
-        local areaPoiID = pin.poiInfo.areaPoiID
-        if (areaPoisToRemove[areaPoiID]) then
-            WorldMapFrame:RemovePin(pin)
-            addon:debugmsg("removed AreaPOI "..areaPoiID.." "..pin.poiInfo.name)
+    hooksecurefunc(mixin, "OnAcquired", function(self, poiInfo)
+        if (not ns.db.remove_AreaPois) then return end
+        if (poiInfo and poiInfo.areaPoiID and areaPoisToRemove[poiInfo.areaPoiID]) then
+            self:Hide()
+            addon:debugmsg(format("removed %s (%s)", poiInfo.areaPoiID, poiInfo.name or "??"))
         end
-    end
+    end)
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -311,16 +304,19 @@ local GetNodeInfo = function(node)
 
     if (node) then
         local label = node.label or node.multilabel and Prepare(node, true) or UNKNOWN
+        local icons = ns.constants.icon
         if (node.requirements and ReqsFulfilled(node) == 'none') then
-            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_red)
-            or (node.icon == "boat" and BoatX)
-            or (node.icon == "zeppelin" and ZeppelinX)
-            or (node.icon == "molemachine" and molemachineX)
+            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and icons.portal_red)
+            or (node.icon == "boat" and icons.BoatX)
+            or (node.icon == "zeppelin" and icons.ZeppelinX)
+            or (node.icon == "molemachine" and icons.molemachineX)
+            or (node.icon == "elevator" and icons.elevator_x)
         elseif (node.requirements and ReqsFulfilled(node) == 'some') then
-            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and portal_mixed)
-            or (node.icon == "boat" and BoatX)
-            or (node.icon == "zeppelin" and ZeppelinX)
-            or (node.icon == "molemachine" and molemachineX)
+            icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and icons.portal_mixed)
+            or (node.icon == "boat" and icons.BoatX)
+            or (node.icon == "zeppelin" and icons.ZeppelinX)
+            or (node.icon == "molemachine" and icons.molemachineX)
+            or (node.icon == "elevator" and icons.elevator_x)
         else
             icon = SetIcon(node)
         end
@@ -703,14 +699,8 @@ function events:QUEST_FINISHED(...)
 end
 
 function events:PLAYER_LOGIN(...)
-    -- Hook the RefreshAllData() function of the "AreaPOIPinTemplate" data provider
-    for dp in pairs(WorldMapFrame.dataProviders) do
-        if (not dp.GetPinTemplates and type(dp.GetPinTemplate) == "function") then
-            if (dp:GetPinTemplate() == "AreaPOIPinTemplate") then
-                hooksecurefunc(dp, "RefreshAllData", RemoveAreaPOIs)
-            end
-        end
-    end
+    HookPinMixin(AreaPOIPinMixin)
+    HookPinMixin(MapLinkPinMixin)
 end
 
 frame:SetScript("OnEvent", function(self, event, ...)

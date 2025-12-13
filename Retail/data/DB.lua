@@ -311,8 +311,10 @@ DB.nodes = {
         [72691965] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [70961840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [71291790] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        -- [54925688] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
-        -- [80161483] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [54905688] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [80161483] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [59096780] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} },
+        [66753350] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=84220} },
         [46877124] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [73752119] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [74851599] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
@@ -334,24 +336,28 @@ DB.nodes = {
         [50654183] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [46773901] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [47523789] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        -- [67333101] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [67333101] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [37387288] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=84220} },
         [53024529] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [55473362] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [50284471] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} },
         [47303789] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, level=80} }
         },
     [2214] = { -- Ringing Deeps
-        -- [53374459] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
+        [49184459] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [61557690] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} },
         [25418709] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [41873015] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [72957319] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true, level=80} }
         },
     [2215] = { -- Hallowfall
         [70869574] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
-        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} }
+        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [91515879] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
         },
     [2255] = { -- Azj-Kahet
-        [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} }
+        [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
+        [95393090] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} }
         },
     [2266] = { -- Millenia's Threshold
         [43584988] = { icon="portal", label=PtoDornogal, note=IsleOfDorn },

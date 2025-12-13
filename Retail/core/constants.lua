@@ -102,5 +102,7 @@ constants.icon = {
     animaGateway      = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\platform",
     molemachine       = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine",
     molemachine_x     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine_grey_x",
+    elevator          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\elevator",
+    elevator_x        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\elevator_x",
     default           = "Interface\\icons\\inv_misc_questionmark",
 }
