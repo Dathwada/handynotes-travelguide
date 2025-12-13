@@ -157,7 +157,7 @@ local function ReqsFulfilled(node)
     or (reqs.timetravel and PLAYERLVL >= REQLVL and IsQuestCompleted(reqs.timetravel.quest) and not reqs.warfront and reqs.timetravel.turn)
     or (reqs.warfront and not IsWarfrontActive(reqs.warfront))
     or (reqs.mageTower and not IsMageTowerActive())
-    or (reqs.spell and not IsSpellKnown(reqs.spell))
+    or (reqs.spell and not C_SpellBook.IsSpellInSpellBook(reqs.spell))
     or (reqs.toy and not PlayerHasToy(reqs.toy))
     then
         return "none"
@@ -409,7 +409,7 @@ local function SetTooltip(tooltip, node)
         end
         if (reqs.spell) then -- don't show this if the spell is known
             local spellName = C_Spell.GetSpellInfo(reqs.spell).name
-            local isKnown = IsSpellKnown(reqs.spell)
+            local isKnown = C_SpellBook.IsSpellInSpellBook(reqs.spell)
             if (spellName and not isKnown) then
                 tooltip:AddLine(requires..': '..spellName, 1) -- red
             end
