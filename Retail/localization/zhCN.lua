@@ -257,6 +257,9 @@ L["Portal to Isle of Thunder"] = "通往雷神岛的传送门"
 L["Portal to Shado-Pan Garrison"] = "通往影踪卫戍营的传送门"
 L["Portal to Shan'ze Dao"] = "通往山泽岛的传送门"
 L["Portal to Peak of Serenity"] = "通往晴日峰（昆莱山）的传送门"
+-- L["Hot Air Balloon to Orgrimmar"] = ""
+-- L["Hot Air Balloon to Stormwind"] = ""
+-- L["Hot Air Balloon to Wandering Isle"] = ""
 
 -------------------------------------------------CATA-----------------------------------------------
 

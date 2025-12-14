@@ -104,5 +104,7 @@ constants.icon = {
     molemachine_x     = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\molemachine_grey_x",
     elevator          = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\elevator",
     elevator_x        = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\elevator_x",
+    balloon           = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\balloon",
+    balloon_x         = "Interface\\AddOns\\"..FOLDER_NAME.."\\icons\\balloon_x",
     default           = "Interface\\icons\\inv_misc_questionmark",
 }

@@ -155,6 +155,7 @@ local PtoSPG = L["Portal to Shado-Pan Garrison"]
 local PtoJadeForest = L["Portal to Jade Forest"]
 local KunLaiSummit = GetMapNames(424, 379)
 local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
+local WuSong = GetMapNames(2366, nil, 5835)
 
 -------------------------------------------------CATA-----------------------------------------------
 
@@ -943,6 +944,10 @@ DB.nodes = {
         [64707348] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32644}, faction="Alliance" },
         [33213269] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32212}, faction="Horde" }
         },
+    [2366] = {
+        [49452484] = { icon="balloon", label=L["Hot Air Balloon to Orgrimmar"], note=Durotar, faction="Horde", requirements={quest=92030, accquest=true} },
+        [49452485] = { icon="balloon", label=L["Hot Air Balloon to Stormwind"], note=ElwynnForest, faction="Alliance", requirements={quest=92030, accquest=true} }
+        },
 
 ---------------------------------------------------------------------------------------------CATA----------------------------------------------------------------------------------------------
 
@@ -1169,7 +1174,8 @@ DB.nodes = {
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [57724362] = { icon="portal", multilabel={L["Portal to The Nighthold"], L["Portal to Thunder Totem"]}, multinote={Suramar, Highmountain}, requirements={multilevel={10, 10}}, faction="Horde" },
-        [52073142] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} }
+        [52073142] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} },
+        [59254187] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Horde", requirements={quest=92030, accquest=true} }
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1213,6 +1219,7 @@ DB.nodes = {
         [38587589] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, requirements={level=10}, faction="Horde" },
         [38157528] = { icon="portal", label=L["Portal to Thunder Totem"], note=Highmountain, requirements={level=10}, faction="Horde" },
         -- [53747657] = { icon="portal", label=PtoDala, note=BrokenIsles, faction="Horde" }
+        [70823886] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Horde", requirements={quest=92030, accquest=true} }
         },
     [71] = { -- Tanaris
         [65794954] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
@@ -1315,7 +1322,8 @@ DB.nodes = {
         [46766773] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" }, -- Black Rock Mountains, The Masonary
         [54068459] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={timetravel={quest=66560, spell=290245, turn=true, level=10}, level=10} },
         [53508266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true, level=10}, level=10} },
-        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil }
+        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil },
+        [43307134] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
@@ -1330,7 +1338,8 @@ DB.nodes = {
         [23805620] = { icon="portal", label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
         [69403140] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [63333734] = { icon="molemachine", label=GetAreaInfo(6816), race="DarkIronDwarf" }, -- Stormwind
-        [43289760] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
+        [43289760] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
+        [68671706] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [499] = { -- Deeprun Tram
         [42554350] = { icon="tram", label=DrTtoIF, note=DunMorogh },
@@ -1349,7 +1358,8 @@ DB.nodes = {
         [31801155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
         [29251812] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [26292111] = { icon="molemachine", label=GetAreaInfo(6816), race="DarkIronDwarf" }, -- Stormwind
-        [46726015] = { icon="molemachine", label=GetAreaInfo(1537), race="DarkIronDwarf" } -- Ironforge
+        [46726015] = { icon="molemachine", label=GetAreaInfo(1537), race="DarkIronDwarf" }, -- Ironforge
+        [28971097] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [90] = { -- Undercity
         [85301700] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}, level=10}, label=PtoHellfirePeninsula, note=Outland, faction="Horde" }

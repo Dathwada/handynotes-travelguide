@@ -311,12 +311,14 @@ local GetNodeInfo = function(node)
             or (node.icon == "zeppelin" and icons.ZeppelinX)
             or (node.icon == "molemachine" and icons.molemachineX)
             or (node.icon == "elevator" and icons.elevator_x)
+            or (node.icon == "balloon" and icons.balloon_x)
         elseif (node.requirements and ReqsFulfilled(node) == 'some') then
             icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and icons.portal_mixed)
             or (node.icon == "boat" and icons.BoatX)
             or (node.icon == "zeppelin" and icons.ZeppelinX)
             or (node.icon == "molemachine" and icons.molemachineX)
             or (node.icon == "elevator" and icons.elevator_x)
+            or (node.icon == "balloon" and icons.balloon_x)
         else
             icon = SetIcon(node)
         end

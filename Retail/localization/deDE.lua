@@ -255,6 +255,9 @@ L["Portal to Isle of Thunder"] = "Portal zur Insel des Donners"
 L["Portal to Shado-Pan Garrison"] = "Portal zur Shado-Pan-Garnison"
 L["Portal to Shan'ze Dao"] = "Portal nach Shan'ze Dao"
 L["Portal to Peak of Serenity"] = "Portal zum Gipfel der Ruhe"
+L["Hot Air Balloon to Orgrimmar"] = "Heißluftballon nach Orgrimmar"
+L["Hot Air Balloon to Stormwind"] = "Heißluftballon nach Sturmwind"
+L["Hot Air Balloon to Wandering Isle"] = "Heißluftballon zur Wandernden Insel"
 
 -------------------------------------------------CATA-----------------------------------------------
 

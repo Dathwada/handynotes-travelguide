@@ -255,6 +255,9 @@ L["Portal to Isle of Thunder"] = true
 L["Portal to Shado-Pan Garrison"] = true
 L["Portal to Shan'ze Dao"] = true
 L["Portal to Peak of Serenity"] = true
+L["Hot Air Balloon to Orgrimmar"] = true
+L["Hot Air Balloon to Stormwind"] = true
+L["Hot Air Balloon to Wandering Isle"] = true
 
 -------------------------------------------------CATA-----------------------------------------------
 
