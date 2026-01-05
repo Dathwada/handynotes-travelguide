@@ -221,7 +221,7 @@ L["Portal to Port of Boralus"] = "通往伯拉勒斯的传送门"
 
 L["Portal to Stormheim"] = "通往风暴峡湾的传送门"
 L["Portal to Helheim"] = "通往冥狱深渊的传送门"
-L["Portal to Dalaran"] = "通往达拉然（晶歌森林）的传送门"
+L["Portal to Dalaran"] = "通往达拉然的传送门"
 L["Portal to Azsuna"] = "通往阿苏纳的传送门"
 L["Portal to Val'sharah"] = "通往瓦尔莎拉的传送门"
 L["Portal to Emerald Dreamway"] = "通往翡翠梦境的传送门"
