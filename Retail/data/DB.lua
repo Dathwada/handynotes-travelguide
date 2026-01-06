@@ -1403,7 +1403,7 @@ DB.nodes = {
         [33302480] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
         },
     [36] = { -- Burning Steppes
-        [13211081] = { icon="molemachine", label=TheMasonary, note=inBRM, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
+        [13211081] = { icon="molemachine", label=TheMasonary, note=L["inside the Blackrock Mountain"], requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" } -- Black Rock Mountains, The Masonary
         },
     [1186] = { -- Blackrock Depths
         [61432434] = { icon="molemachine", label=DUNGEON_FLOOR_BLACKROCKDEPTHS2, race="DarkIronDwarf" }, -- Shadowforge City
