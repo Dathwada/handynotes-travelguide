@@ -325,6 +325,7 @@ L["Portal to Caverns of Time"] = true
 
 L["Portal to Dalaran Crater"] = true
 L["Portal to the Sepulcher"] = true
+L["Portal to Dalaran, Crystalsong Forest"] = true
 
 L["Waygate to Un'Goro Crater"] = true
 L["The Masonary"] = true
