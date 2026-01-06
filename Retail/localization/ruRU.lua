@@ -326,6 +326,7 @@ L["Portal to Caverns of Time"] = "Портал в Пещеры Времени"
 
 L["Portal to Dalaran Crater"] = "Портал в кратер Даларана"
 L["Portal to the Sepulcher"] = "Портал в Гробницу"
+L["Portal to Dalaran, Crystalsong Forest"] = "Портал в Даларан над лесом Хрустальной Песни"  
 
 L["Waygate to Un'Goro Crater"] = "Врата к кратеру Ун'Горо"
 L["The Masonary"] = "Каменоломня"
