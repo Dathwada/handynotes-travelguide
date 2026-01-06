@@ -327,6 +327,7 @@ L["Portal to Caverns of Time"] = "通往时光之穴的传送门"
 
 L["Portal to Dalaran Crater"] = "通往达拉然巨坑的传送门"
 L["Portal to the Sepulcher"] = "通往墓地的传送门"
+L["Portal to Dalaran, Crystalsong Forest"] = "通往达拉然（晶歌森林）的传送门"
 
 L["Waygate to Un'Goro Crater"] = "通往安戈洛环形山"
 L["The Masonary"] = "石匠区"
