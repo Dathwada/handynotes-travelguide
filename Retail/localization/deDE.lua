@@ -325,6 +325,7 @@ L["Portal to Caverns of Time"] = "Portal zu den Höhlen der Zeit"
 
 L["Portal to Dalaran Crater"] = "Portal zum Dalarankrater"
 L["Portal to the Sepulcher"] = "Portal zum Grabmal"
+--L["Portal to Dalaran, Crystalsong Forest"] = "Portal to Dalaran, Crystalsong Forest"
 
 L["Waygate to Un'Goro Crater"] = "Tor zum Krater von Un'Goro"
 L["The Masonary"] = "Die Freimaurerei"
