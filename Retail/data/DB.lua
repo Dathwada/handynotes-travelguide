@@ -155,6 +155,7 @@ local PtoSPG = L["Portal to Shado-Pan Garrison"]
 local PtoJadeForest = L["Portal to Jade Forest"]
 local KunLaiSummit = GetMapNames(424, 379)
 local PtoPeakofSerenity = L["Portal to Peak of Serenity"]
+local WuSong = GetMapNames(2366, nil, 5835)
 
 -------------------------------------------------CATA-----------------------------------------------
 
@@ -301,12 +302,20 @@ DB.nodes = {
 ]]
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
 
+    [2352] = { -- Founder's Point (Alliance Neighborhood)
+        [57422661] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" }
+        },
+    [2351] = { -- Razorwind Shores (Horde Neighborhood)
+        [53924937] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" }
+        },
     [2274] = { -- Khaz Algar
         [72691965] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [70961840] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [71291790] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        -- [54925688] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
-        -- [80161483] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [54905688] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [80161483] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [59096780] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} },
+        [66753350] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=84220} },
         [46877124] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [73752119] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [74851599] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
@@ -328,24 +337,28 @@ DB.nodes = {
         [50654183] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
         [46773901] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
         [47523789] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance" },
-        -- [67333101] = { icon="portal", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [67333101] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [37387288] = { icon="elevator", label=L["Elevator to Ringing Deeps"], note=KhazAlgar, requirements={quest=84220} },
         [53024529] = { icon="portal", label=L["Portal to Azj-Kahet"], note=WeaversLair, requirements={quest=78248, accquest=true} },
         [55473362] = { icon="zeppelin", label=L["Zeppelin to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [50284471] = { icon="portal", label=L["Teleporter to Undermine"], note=RingingDeeps, requirements={quest=86535, accquest=true, level=80} },
         [47303789] = { icon="portal", label=L["Portal to K'aresh"], note=Tazavesh, requirements={quest=84957, level=80} }
         },
     [2214] = { -- Ringing Deeps
-        -- [53374459] = { icon="portal", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
+        [49184459] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} },
+        [61557690] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} },
         [25418709] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [41873015] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
         [72957319] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83151, accquest=true, level=80} }
         },
     [2215] = { -- Hallowfall
         [70869574] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
-        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} }
+        [85164624] = { icon="molemachine", label=L["Mole Machine to Siren Isle"], requirements={quest=84720, accquest=true, level=80} },
+        [91515879] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=82195, accquest=true} }
         },
     [2255] = { -- Azj-Kahet
-        [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} }
+        [57494159] = { icon="portal", label=PtoDornogal, note=IsleOfDorn, requirements={quest=78248, accquest=true} },
+        [95393090] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} }
         },
     [2266] = { -- Millenia's Threshold
         [43584988] = { icon="portal", label=PtoDornogal, note=IsleOfDorn },
@@ -931,6 +944,10 @@ DB.nodes = {
         [64707348] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32644}, faction="Alliance" },
         [33213269] = { icon="portal", label=PtoSPG, note=TownlongSteppes, requirements={quest=32212}, faction="Horde" }
         },
+    [2366] = {
+        [49452484] = { icon="balloon", label=L["Hot Air Balloon to Orgrimmar"], note=Durotar, faction="Horde", requirements={quest=92030, accquest=true} },
+        [49452485] = { icon="balloon", label=L["Hot Air Balloon to Stormwind"], note=ElwynnForest, faction="Alliance", requirements={quest=92030, accquest=true} }
+        },
 
 ---------------------------------------------------------------------------------------------CATA----------------------------------------------------------------------------------------------
 
@@ -1138,8 +1155,8 @@ DB.nodes = {
         [58154246] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [42857909] = { icon="portal", requirements={quest=46931, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoZuldazar, note=Zandalar, faction="Horde" },
         [42847905] = { icon="portal", requirements={quest=47186, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=PtoBoralus, note=TiragardeSound, faction="Alliance" },
-        [59414237] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
-                                      multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
+        [59414237] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, PtoUC, L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal, L["Portal to Razorwind Shores"]},
+                                      multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor},
                                       requirements={multiquest={[4]=25924, [6]=26798, [11]=46931, [16]=60151}, multiaccquest={[6]=true, [11]=true, [16]=true}, multilevel={30, 30, 30, 30, 30, 30, [17]=10}}, faction="Horde" },
         [46612303] = { icon="warfront", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofBoralus, note=TiragardeSound, faction="Alliance" },
         [46302282] = { icon="warfront", requirements={level=50, warfront=118, timetravel={quest=54411, spell=290245}}, label=PtoPortofZandalar, note=Zuldazar, faction="Horde" },
@@ -1157,7 +1174,8 @@ DB.nodes = {
         [40076789] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [47611994] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
         [57724362] = { icon="portal", multilabel={L["Portal to The Nighthold"], L["Portal to Thunder Totem"]}, multinote={Suramar, Highmountain}, requirements={multilevel={10, 10}}, faction="Horde" },
-        [52073142] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} }
+        [52073142] = { icon="portal", label=L["Portal to the Firelands"], note=MoltenFront, requirements={quest=29201} },
+        [59254187] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Horde", requirements={quest=92030, accquest=true} }
         },
     [7] = { -- Mulgore
         [33692368] = { icon="zeppelin", label=ZtoOG, note=Durotar, faction="Horde" },
@@ -1168,8 +1186,8 @@ DB.nodes = {
         [14222575] = { icon="hzeppelin", label=ZtoOG, note=Durotar, faction="Alliance" }
         },
     [1] = { -- Durotar
-        [48091027] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
-                                    multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
+        [48091027] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal, L["Portal to Razorwind Shores"]},
+                                    multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor},
                                     requirements={multiquest={[4]=46931, [9]=60151}, multiaccquest={[4]=true, [9]=true}, multilevel={[10]=10}}, faction="Horde" },
         [45550380] = { icon="hzeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Alliance" },
         [45550381] = { icon="zeppelin", multilabel={ZtoTB, ZtoStranglethornVale, ZtoBoreanTundra}, multinote={Mulgore, GromgolBaseCamp, WarsongHold}, faction="Horde" },
@@ -1180,14 +1198,14 @@ DB.nodes = {
         [56041350] = { icon="zeppelin", label=ZtoDI, note=WakingShores, faction="Horde" },
         [56041351] = { icon="hzeppelin", label=ZtoDI, note=WakingShores, faction="Alliance" },
         [41890572] = { icon="portal", multilabel={L["Portal to The Nighthold"], L["Portal to Thunder Totem"]}, multinote={Suramar, Highmountain}, requirements={multilevel={10, 10}}, faction="Horde" },
-        -- [46880595] = { icon="portal", label=L["Portal to Dalaran, Crystalsong Forest"], note=BrokenIsles, faction="Horde" }
+        -- [46880595] = { icon="portal", label=PtoDala, note=BrokenIsles, faction="Horde" }
         },
     [463] = { -- Echo Isle
         [71713838] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Horde" },
         [71713839] = { icon="boat", label=BtoZuldazar, note=Zandalar, faction="Alliance" }
         },
     [85] = { -- Orgrimmar
-        [57438972] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal}, multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn}, requirements={multiquest={[4]=46931, [9]=60151}, multiaccquest={[4]=true, [9]=true}, multilevel={[10]=10}}, faction="Horde" },
+        [57438972] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoSM, PtoJadeForest, PtoZuldazar, PtoAzsuna, PtoWarspear, PtoShattrath, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal, L["Portal to Razorwind Shores"]}, multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor}, requirements={multiquest={[4]=46931, [9]=60151}, multiaccquest={[4]=true, [9]=true}, multilevel={[10]=10}}, faction="Horde" },
         [50725559] = { icon="portal", label=PtoUC, note=Tirisfal, faction="Horde" },
         [42866518] = { icon="zeppelin", label=ZtoTB, note=Mulgore, faction="Horde" },
         [42866517] = { icon="hzeppelin", label=ZtoTB, note=Mulgore, faction="Alliance" },
@@ -1200,7 +1218,8 @@ DB.nodes = {
         [52885243] = { icon="zeppelin", label=ZtoStranglethornVale, note=GromgolBaseCamp, faction="Horde" },
         [38587589] = { icon="portal", label=L["Portal to The Nighthold"], note=Suramar, requirements={level=10}, faction="Horde" },
         [38157528] = { icon="portal", label=L["Portal to Thunder Totem"], note=Highmountain, requirements={level=10}, faction="Horde" },
-        -- [53747657] = { icon="portal", label=L["Portal to Dalaran, Crystalsong Forest"], note=BrokenIsles, faction="Horde" }
+        -- [53747657] = { icon="portal", label=PtoDala, note=BrokenIsles, faction="Horde" }
+        [70823886] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Horde", requirements={quest=92030, accquest=true} }
         },
     [71] = { -- Tanaris
         [65794954] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde" },
@@ -1278,8 +1297,8 @@ DB.nodes = {
         [45995482] = { icon="boat", multilabel={BtoTheramore, BtoHowlingFjord}, multinote={DustwallowMarsh, Valgarde}, faction="Alliance" },
         [43179373] = { icon="boat", label=BtoRatchet, note=NorthernBarrens },
         [56161316] = { icon="portal", multilabel={PtoOG, PtoUC}, multinote={Durotar, Tirisfal}, faction="Horde" },
-        [43637155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoBelameth, PtoDornogal},
-                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil, IsleOfDorn},
+        [43637155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands, DrTtoIF, PtoDarnassus, L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoBelameth, PtoDornogal, L["Portal to Founder's Point"]},
+                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil, IsleOfDorn, EasternKingdoms},
                                     requirements={multiquest={[4]=14482, [6]=26798, [11]=47186, [17]=60151}, multiaccquest={[6]=true, [11]=true, [17]=true}, multilevel={1, 30, 30, 30, 30, 30, [18]=10}},
                                     faction="Alliance" },
         [43337195] = { icon="tram", label=DrTtoIF, note=DunMorogh, faction="Horde" },
@@ -1303,12 +1322,13 @@ DB.nodes = {
         [46766773] = { icon="molemachine", label=TheMasonary, requirements={quest=53587, hideQuestName=true}, race="DarkIronDwarf" }, -- Black Rock Mountains, The Masonary
         [54068459] = { icon="portal", label=PtoOG, note=Durotar, faction="Horde", requirements={timetravel={quest=66560, spell=290245, turn=true, level=10}, level=10} },
         [53508266] = { icon="portal", label=PtoSW, note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true, level=10}, level=10} },
-        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil }
+        [41075058] = { icon="boat", label=BtoBelanaar, note=Amirdrassil },
+        [43307134] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
-        [46419032] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
+        [46419032] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal, L["Portal to Founder's Point"]},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms},
                                     requirements={multiquest={[3]=47186, [9]=60151}, multiaccquest={[3]=true, [9]=true}, multilevel={[10]=10}},
                                     faction="Alliance" },
         [22015670] = { icon="aboat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
@@ -1318,15 +1338,16 @@ DB.nodes = {
         [23805620] = { icon="portal", label=PtoDarnassus, note=Teldrassil, faction="Alliance" },
         [69403140] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [63333734] = { icon="molemachine", label=GetAreaInfo(6816), race="DarkIronDwarf" }, -- Stormwind
-        [43289760] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" }
+        [43289760] = { icon="portal", label=PtoBelameth, note=Amirdrassil, faction="Alliance" },
+        [68671706] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [499] = { -- Deeprun Tram
         [42554350] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [42556750] = { icon="tram", label=DrTtoIF, note=DunMorogh }
         },
     [37] = { -- Elwynn Forest
-        [17804775] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn},
+        [17804775] = { icon="portal", multilabel={L["Portal to Dalaran, Crystalsong Forest"], PtoJadeForest, PtoBoralus, PtoAzsuna, PtoStormshield, PtoShattrath, PtoExodar, PtoCavernsofTime, PtoOribos, PtoValdrakken, PtoDornogal, L["Portal to Founder's Point"]},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms},
                                     requirements={multiquest={[3]=47186, [9]=60151}, multiaccquest={[3]=true, [9]=true}, multilevel={[10]=10}},
                                     faction="Alliance" },
         [06003035] = { icon="aboat", multilabel={BtoBoralus, BtoDI}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
@@ -1337,7 +1358,8 @@ DB.nodes = {
         [31801155] = { icon="portal", multilabel={PtoTolBarad, PtoUldum, PtoDeepholm, PtoVashjir, PtoHyjal, PtoTwilightHighlands}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
         [29251812] = { icon="tram", label=DrTtoIF, note=DunMorogh },
         [26292111] = { icon="molemachine", label=GetAreaInfo(6816), race="DarkIronDwarf" }, -- Stormwind
-        [46726015] = { icon="molemachine", label=GetAreaInfo(1537), race="DarkIronDwarf" } -- Ironforge
+        [46726015] = { icon="molemachine", label=GetAreaInfo(1537), race="DarkIronDwarf" }, -- Ironforge
+        [28971097] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
     [90] = { -- Undercity
         [85301700] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}, level=10}, label=PtoHellfirePeninsula, note=Outland, faction="Horde" }
