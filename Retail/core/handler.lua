@@ -315,16 +315,16 @@ local GetNodeInfo = function(node)
         local icons = ns.constants.icon
         if (node.requirements and ReqsFulfilled(node) == 'none') then
             icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and icons.portal_red)
-            or (node.icon == "boat" and icons.BoatX)
-            or (node.icon == "zeppelin" and icons.ZeppelinX)
-            or (node.icon == "molemachine" and icons.molemachineX)
+            or (node.icon == "boat" and icons.boat_x)
+            or (node.icon == "zeppelin" and icons.zeppelin_x)
+            or (node.icon == "molemachine" and icons.molemachine_x)
             or (node.icon == "elevator" and icons.elevator_x)
             or (node.icon == "balloon" and icons.balloon_x)
         elseif (node.requirements and ReqsFulfilled(node) == 'some') then
             icon = ((node.icon == "portal" or node.icon == "orderhall" or node.icon == "warfront" or node.icon == "petBattlePortal" or node.icon == "ogreWaygate" or node.icon == "portal_purple") and icons.portal_mixed)
-            or (node.icon == "boat" and icons.BoatX)
-            or (node.icon == "zeppelin" and icons.ZeppelinX)
-            or (node.icon == "molemachine" and icons.molemachineX)
+            or (node.icon == "boat" and icons.boat_x)
+            or (node.icon == "zeppelin" and icons.zeppelin_x)
+            or (node.icon == "molemachine" and icons.molemachine_x)
             or (node.icon == "elevator" and icons.elevator_x)
             or (node.icon == "balloon" and icons.balloon_x)
         else
