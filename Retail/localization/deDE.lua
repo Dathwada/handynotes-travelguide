@@ -292,6 +292,7 @@ L["Portal to Exodar"] = "Portal zur Exodar"
 L["in Exodar"] = true
 L["Boat to Exodar"] = "Schiff zur Exodar"
 L["Speak with Zephyr"] = "Sprich mit Zephyr"
+L["Teleport to the Dark Portal"] = "Teleport zum Dunklen Portal"
 
 -----------------------------------------------VANILLA----------------------------------------------
 

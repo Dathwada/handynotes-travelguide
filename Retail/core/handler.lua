@@ -207,6 +207,10 @@ local function RefreshAfter(time)
     C_Timer.After(time, function() addon:Refresh() end)
 end
 
+local function GetNoteFromTimetravelQuest(quest, note1, note2)
+    return C_QuestLog.IsQuestFlaggedCompleted(quest) and note1 or note2
+end
+
 -- workaround to prepare the multilabels with and without notes
 -- because the game displays the first line in 14px and
 -- the following lines in 13px with a normal for loop.
@@ -227,7 +231,11 @@ local function Prepare(node, onlyLabels)
 
         -- add additional notes
         if (not onlyLabels and node.multinote and node.multinote[i] and ns.db.show_note) then
-            NOTE = " ("..node.multinote[i]..")"
+            local note = type(node.multinote[i]) == "table"
+                        and GetNoteFromTimetravelQuest(node.multinote[i][1], node.multinote[i][2], node.multinote[i][3])
+                        or node.multinote[i]
+
+            NOTE = " ("..note..")"
         end
 
         if (reqs and not onlyLabels) then
@@ -346,7 +354,10 @@ local function SetTooltip(tooltip, node)
         tooltip:AddLine(node.label)
     end
     if (node.note and ns.db.show_note) then
-        tooltip:AddLine("("..node.note..")")
+        local note = type(node.note) == "table"
+                    and GetNoteFromTimetravelQuest(node.note[1], node.note[2], node.note[3])
+                    or node.note
+        tooltip:AddLine("("..note..")")
     end
     if (node.multilabel) then
         tooltip:AddLine(Prepare(node, false))

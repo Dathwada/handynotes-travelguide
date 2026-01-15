@@ -294,6 +294,7 @@ L["Portal to Exodar"] = "通往埃索达的传送门"
 L["in Exodar"] = "埃索达内部"
 L["Boat to Exodar"] = "前往埃索达的船"
 L["Speak with Zephyr"] = "和塞菲尔对话-传送"
+-- L["Teleport to the Dark Portal"] = ""
 
 -----------------------------------------------VANILLA----------------------------------------------
 

@@ -292,6 +292,7 @@ L["Portal to Exodar"] = true
 L["in Exodar"] = true
 L["Boat to Exodar"] = true
 L["Speak with Zephyr"] = true
+L["Teleport to the Dark Portal"] = true
 
 -----------------------------------------------VANILLA----------------------------------------------
 
