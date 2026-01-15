@@ -256,9 +256,9 @@ L["Portal to Isle of Thunder"] = "Портал на Остров Грома"
 L["Portal to Shado-Pan Garrison"] = "Портал в Гарнизон Шадо-Пан"
 L["Portal to Shan'ze Dao"] = "Портал на Шань'цзэ Дао"
 L["Portal to Peak of Serenity"]= "Портал на Вершину Кунь-Лай"
--- L["Hot Air Balloon to Orgrimmar"] = ""
--- L["Hot Air Balloon to Stormwind"] = ""
--- L["Hot Air Balloon to Wandering Isle"] = ""
+L["Hot Air Balloon to Orgrimmar"] = "Воздушный шар в Оргриммар"
+L["Hot Air Balloon to Stormwind"] = "Воздушный шар в Штормград"
+L["Hot Air Balloon to Wandering Isle"] = "Воздушный шар на Скитающийся остров"
 
 -------------------------------------------------CATA-----------------------------------------------
 
