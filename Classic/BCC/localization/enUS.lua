@@ -1,5 +1,5 @@
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
-local L = AceLocale:NewLocale("HandyNotes_TravelGuide (BCC)", "enUS", true, true)
+local L = AceLocale:NewLocale("HandyNotes_TravelGuide", "enUS", true, true)
 
 -- https://www.curseforge.com/members/dathwada
 if L then
@@ -7,7 +7,7 @@ if L then
 -----------------------------------------------CONFIG-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-L["config_plugin_name"] = "TravelGuide (BCC)"
+L["config_plugin_name"] = "TravelGuide"
 L["config_plugin_desc"] = "Shows the portal, zeppelin and boat locations on the World Map and the MiniMap."
 
 L["config_tab_general"] = "General"

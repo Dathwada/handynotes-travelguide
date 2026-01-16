@@ -148,6 +148,7 @@ local function addTomTomWaypoint(button, uMapID, coord)
         local x, y = HandyNotes:getXY(coord)
         TomTom:AddWaypoint(uMapID, x, y, {
             title = GetPointInfoByCoord(uMapID, coord),
+            from = L["handler_context_menu_addon_name"],
             persistent = nil,
             minimap = true,
             world = true
@@ -280,7 +281,7 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function addon:OnInitialize()
-    self.db = AceDB:New("HandyNotes_TravelGuideBCCDB", private.constants.defaults)
+    self.db = AceDB:New("HandyNotes_TravelGuideDB", private.constants.defaults)
 
     profile = self.db.profile
     private.db = profile

@@ -47,20 +47,13 @@ constants.defaults = {
 ----------------------------------------------------------------------------------------------------
 ------------------------------------------------ICONS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
-local left, right, top, bottom = GetObjectIconTextureCoords(4772) --MagePortalAlliance
-local left2, right2, top2, bottom2 = GetObjectIconTextureCoords(4773) --MagePortalHorde
 
 constants.icon = {
-    portal = {
-        icon = [[Interface\MINIMAP\OBJECTICONSATLAS]],
-        tCoordLeft = left,
-        tCoordRight = right,
-        tCoordTop = top,
-        tCoordBottom = bottom,
-    },
-    boat            = "Interface\\AddOns\\HandyNotes_TravelGuide (BCC)\\icons\\boat",
-    aboat           = "Interface\\AddOns\\HandyNotes_TravelGuide (BCC)\\icons\\boat_alliance",
-    tram            = "Interface\\AddOns\\HandyNotes_TravelGuide (BCC)\\icons\\tram",
-    zeppelin        = "Interface\\AddOns\\HandyNotes_TravelGuide (BCC)\\icons\\zeppelin",
-    hzeppelin       = "Interface\\AddOns\\HandyNotes_TravelGuide (BCC)\\icons\\zeppelin_horde",
+    portal          = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\portal_blue",
+    portal_red      = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\portal_red",
+    boat            = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\boat",
+    aboat           = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\boat_alliance",
+    tram            = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\tram",
+    zeppelin        = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\zeppelin",
+    hzeppelin       = "Interface\\AddOns\\HandyNotes_TravelGuide\\icons\\zeppelin_horde",
 }

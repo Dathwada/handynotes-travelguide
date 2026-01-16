@@ -118,7 +118,7 @@ config.options = {
                             wipe(coords)
                         end
                         addon:Refresh()
-                        print("TravelGuide (BCC): "..L["config_restore_nodes_print"])
+                        print("TravelGuide: "..L["config_restore_nodes_print"])
                     end,
                     order = 20,
                 },
