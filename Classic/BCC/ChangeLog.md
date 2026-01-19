@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v3.5 (January 19, 2026)
+------------------------------
+* Renamed from TravelGuide (BCC) to TravelGuide
+* Added icons for portal (blue nad red)
+* Updated .toc to 20505
+
 #### v3.4 (May 31, 2022)
 ------------------------------
 * Updated .toc to 20504
