@@ -1,5 +1,10 @@
 ## Revision History:
 
+#### v1.10 (January 19, 2026)
+* Added missing portals [[Issue#80]](https://github.com/Dathwada/handynotes-travelguide/issues/80) [[Issue#81]](https://github.com/Dathwada/handynotes-travelguide/issues/81)
+* Updated ruRU [[PR#83]](https://github.com/Dathwada/handynotes-travelguide/issues/83)
+* Bump .toc to 50503
+
 #### v1.9 (July 06, 2025)
 -------------------------------
 * Added MoP nodes
