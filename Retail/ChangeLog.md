@@ -1,5 +1,17 @@
 ## Revision History:
 
+#### v2.25.0 (January 21, 2026)
+-------------------------------
+* Added patch 12.0 portals
+* Added neighborhood portals
+* Added elevators between Isle of Dorn and The Ringing Deeps [[Issue#47]](https://github.com/Dathwada/handynotes-travelguide/issues/47)
+* Added Portal to Shan'ze Dao [[Issue#80]](https://github.com/Dathwada/handynotes-travelguide/issues/80)
+* Added Delver's Headquarters [[Issue#82]](https://github.com/Dathwada/handynotes-travelguide/issues/82)
+* Added Hot Air Balloons [[Issue#84]](https://github.com/Dathwada/handynotes-travelguide/issues/84)
+* Added teleport to the Dark Portal [[Issue#85]](https://github.com/Dathwada/handynotes-travelguide/issues/85)
+* Updated localizations frFR, itIT, koKR, zhTW, zhCN, ruRU [[PR#83]](https://github.com/Dathwada/handynotes-travelguide/pull/83) [[PR#87]](https://github.com/Dathwada/handynotes-travelguide/pull/87)
+* Bump .toc to 120000
+
 #### v2.24.1 (July 8, 2025)
 -------------------------------
 * Added Patch 11.2 portals
