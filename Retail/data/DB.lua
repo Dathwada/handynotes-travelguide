@@ -244,11 +244,11 @@ DB.nodes = {
 
     [2352] = { -- Founder's Point (Alliance Neighborhood)
         [57422661] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
-        [54285587] = { icon="portal", label=L["Portal to Loamm"], note=ZaralekCavern, faction="Alliance" } -- No portal back?
+        -- [54285587] = { icon="portal", label=L["Portal to Loamm"], note=ZaralekCavern, faction="Alliance" } -- No portal back? -- was not there yet
         },
     [2351] = { -- Razorwind Shores (Horde Neighborhood)
         [53924937] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
-        [54285587] = { icon="portal", label=L["Portal to Kun-Lai Summit"], note=Pandaria, faction="Horde" }
+        -- [54285587] = { icon="portal", label=L["Portal to Kun-Lai Summit"], note=Pandaria, faction="Horde" } -- was not there yet
         },
     [2274] = { -- Khaz Algar
         [72691965] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
