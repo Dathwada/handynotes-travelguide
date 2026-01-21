@@ -53,7 +53,11 @@ local function devmode()
 
     SLASH_TG1 = "/tg"
     SlashCmdList["TG"] = function(msg)
-        Settings.OpenToCategory('HandyNotes')
+        for _, category in ipairs(SettingsPanel:GetAllCategories()) do
+            if category:GetName() == "HandyNotes" then
+                Settings.OpenToCategory(category:GetID())
+            end
+        end
         LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', 'TravelGuide')
     end
 

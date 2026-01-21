@@ -299,7 +299,7 @@ L["Speak with Zephyr"] = "Поговорите с Зефиром"
 
 L["Boat to Menethil Harbor"] = "Корабль в Гавань Менетилов"
 
-L["Portal to Silvermoon"] = "Портал в Луносвет"
+L["Portal to Silvermoon (Burning Crusade)"] = "Портал в Луносвет"
 
 L["Portal to Undercity"] = "Портал в Подгород"
 L["Orb of translocation"] = "Сфера транслокации"

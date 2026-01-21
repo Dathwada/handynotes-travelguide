@@ -125,6 +125,15 @@ L["handler_tooltip_not_discovered"] = "noch nicht entdeckt"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+----------------------------------------------MIDNIGHT----------------------------------------------
+
+L["Eversong Rootway"] = "Immersangwurzelpfad"
+L["Harandar Rootway"] = "Harandarwurzelpfad"
+L["Portal to Harandar"] = "Portal nach Harandar"
+L["Rootway to Harandar"] = "Wurzelpfad nach Harandar"
+L["Portal to Voidstorm"] = "Portal nach Leerensturm"
+L["Portal to Silvermoon City"] = "Portal nach Silbermond"
+
 -------------------------------------------------TWW------------------------------------------------
 
 L["Portal to Dragonblight"] = "Portal nach Drachenöde"
@@ -298,7 +307,7 @@ L["Teleport to the Dark Portal"] = "Teleport zum Dunklen Portal"
 
 L["Boat to Menethil Harbor"] = "Schiff zum Hafen von Menethil"
 
-L["Portal to Silvermoon"] = "Portal nach Silbermond"
+L["Portal to Silvermoon (Burning Crusade)"] = "Portal nach Silbermond (Burning Crusade)"
 
 L["Portal to Undercity"] = "Portal nach Unterstadt"
 L["Orb of translocation"] = "Translokationskugel"

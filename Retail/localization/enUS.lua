@@ -125,6 +125,15 @@ L["handler_tooltip_not_discovered"] = "not yet discovered"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+----------------------------------------------MIDNIGHT----------------------------------------------
+
+L["Eversong Rootway"] = true
+L["Harandar Rootway"] = true
+L["Portal to Harandar"] = true
+L["Rootway to Harandar"] = true
+L["Portal to Voidstorm"] = true
+L["Portal to Silvermoon City"] = true
+
 -------------------------------------------------TWW------------------------------------------------
 
 L["Portal to Dragonblight"] = true
@@ -298,7 +307,7 @@ L["Teleport to the Dark Portal"] = true
 
 L["Boat to Menethil Harbor"] = true
 
-L["Portal to Silvermoon"] = true
+L["Portal to Silvermoon (Burning Crusade)"] = true
 
 L["Portal to Undercity"] = true
 L["Orb of translocation"] = true

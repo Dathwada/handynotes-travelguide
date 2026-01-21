@@ -49,6 +49,7 @@ local areaPoisToRemove = {
     [7340] = true, -- Thaldraszus, Boat to Stormwind
     [7335] = true, -- Stormwind, Boat to Dragon Isle
     [8530] = true, -- Founder's Point, Portal to Stormwind
+    [8310] = true, -- Silvermoon City, Portal to Stormwind
 
     -- Horde
     [5843] = true, -- Drustvar
@@ -66,6 +67,7 @@ local areaPoisToRemove = {
     [7339] = true, -- Thaldraszus, Zeppelin to Orgrimmar
     [7341] = true, -- Durotar, Zeppelin to the Waking Shores, Dragon Isles
     [8529] = true, -- Razorwind Shores, Portal to Orgrimmar
+    [8309] = true, -- Silvermoon City, Portal to Orgrimmar
 
     -- Neutral
     [5881] = true, -- The Cape of Stranglethorn, Boat to Ratschet
@@ -99,6 +101,16 @@ local areaPoisToRemove = {
     [8416] = true, -- Maldraxxus, Portal to Dornogal
     [8417] = true, -- Dornogal, Portal to K'aresh
     [8414] = true, -- Tazavesh, Portal to Dornogal
+    [8545] = true, -- Silvermoon City, Portalchamber
+    [8307] = true, -- Silvermoon City, Portal to Voidsturm
+    [8308] = true, -- Silvermoon City, Wurzelpfad nach Harandar
+    [8479] = true, -- Eversong Woods, Harandar Rootway
+    [8477] = true, -- Harandar, Eversong Rootway
+    [8640] = true, -- Harandar (The Den), Portal to Voidstorm
+    [8478] = true, -- Harandar (The Den), Eversong Rootway
+    [8641] = true, -- Voidstorm (The Howling Ridge), Portal to Harandar
+    [8642] = true, -- Voidstorm (The Howling Ridge), Portal to Silvermoon City
+    [8643] = true, -- Voidstorm, Portal to Silvermoon City
 }
 
 ----------------------------------------------------------------------------------------------------

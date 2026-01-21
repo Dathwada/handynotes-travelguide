@@ -9,24 +9,31 @@ local L = ns.locale
 -----------------------------------------------LOCALS-----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-local function GetMapNames(id1, id2, id3)
-    local name1 = id1 and C_Map.GetMapInfo(id1).name or ''
-    local name2 = id2 and ", " .. C_Map.GetMapInfo(id2).name or ''
-    local name3 = id3 and ", " .. C_Map.GetAreaInfo(id3) or ''
+local function GetMapNames(mapID1, mapID2, mapID3, areaID)
+    local name1 = mapID1 and C_Map.GetMapInfo(mapID1).name or ''
+    local name2 = mapID2 and ", " .. C_Map.GetMapInfo(mapID2).name or ''
+    local name3 = mapID3 and ", " .. C_Map.GetMapInfo(mapID3).name or ''
+    local name4 = areaID and ", " .. C_Map.GetAreaInfo(areaID) or ''
 
-    return format("%s%s%s", name1, name2, name3)
+    return format("%s%s%s%s", name1, name2, name3, name4)
 end
 
 local GetAreaInfo = C_Map.GetAreaInfo
+
+----------------------------------------------MIDNIGHT----------------------------------------------
+
+local QuelThalas = GetMapNames(13, 2537)
+local SilvermoonCity = GetMapNames(13, 2537, 2393)
+local EversongWoodsNew = GetMapNames(13, 2537, 2395)
 
 -------------------------------------------THE WAR WITHIN-------------------------------------------
 
 local KhazAlgar = GetMapNames(2274)
 local IsleOfDorn = GetMapNames(2274, 2248)
-local Dornogal = GetMapNames(2274, 2248, 14771)
+local Dornogal = GetMapNames(2274, 2248, 2339)
 local RingingDeeps = GetMapNames(2274, 2214)
 -- local AzjKahet = GetMapNames(2274, 2255)
-local WeaversLair = GetMapNames(2274, nil, 14755)
+local WeaversLair = GetMapNames(2274, nil, nil, 14755)
 local Tazavesh = GetMapNames(2371, 2472)
 
 --------------------------------------------DRAGONFLIGHT--------------------------------------------
@@ -37,6 +44,7 @@ local EmeraldDream = GetMapNames(2200)
 local DragonIsle = GetMapNames(1978)
 local Amirdrassil = GetMapNames(1978, 2239)
 local Gilneas = GetMapNames(13, 217)
+local ZaralekCavern = GetMapNames(1978, 2133)
 
 ----------------------------------------------COVENANT----------------------------------------------
 
@@ -76,7 +84,7 @@ local SuramarOnly = GetMapNames(680)
 local Highmountain = GetMapNames(619, 650)
 local HighmountainOnly = GetMapNames(650)
 local BrokenShore = GetMapNames(646)
-local Meredil = GetMapNames(680, nil, 7840)
+local Meredil = GetMapNames(680, nil, nil, 7840)
 
 -------------------------------------------------WoD------------------------------------------------
 
@@ -88,7 +96,7 @@ local TanaanJungle = GetMapNames(572, 534)
 local Pandaria = GetMapNames(424)
 local TownlongSteppes = GetMapNames(424, 388)
 local KunLaiSummit = GetMapNames(424, 379)
-local WuSong = GetMapNames(2366, nil, 5835)
+local WuSong = GetMapNames(2366, nil, nil, 5835)
 
 -------------------------------------------------CATA-----------------------------------------------
 
@@ -100,12 +108,12 @@ local MoltenFront = GetMapNames(12, 338)
 
 local CrystalsongForest = GetMapNames(113, 127)
 local BoreanTundra = GetMapNames(113, 114)
-local WarsongHold = GetMapNames(113, nil, 4129)
-local ValianceKeep = GetMapNames(113, nil, 4032)
+local WarsongHold = GetMapNames(113, nil, nil, 4129)
+local ValianceKeep = GetMapNames(113, nil, nil, 4032)
 local Dragonblight = GetMapNames(113, 115)
 local HowlingFjord = GetMapNames(113, 117)
-local VengeanceLanding = GetMapNames(113, nil, 4000)
-local Valgarde = GetMapNames(113, nil, 3981)
+local VengeanceLanding = GetMapNames(113, nil, nil, 4000)
+local Valgarde = GetMapNames(113, nil, nil, 3981)
 local Northrend = GetMapNames(113)
 
 -------------------------------------------------BC-------------------------------------------------
@@ -129,7 +137,7 @@ local EasternKingdoms = GetMapNames(13)
 local Wetlands = GetMapNames(13, 56)
 -- local StranglethornVale = GetMapNames(13, 224)
 local StranglethornCape = GetMapNames(13, 210)
-local GromgolBaseCamp = GetMapNames(13, nil, 117)
+local GromgolBaseCamp = GetMapNames(13, nil, nil, 117)
 local Kalimdor = GetMapNames(12)
 local DustwallowMarsh = GetMapNames(12, 70)
 local Tanaris = GetMapNames(12, 71)
@@ -142,7 +150,7 @@ local Westfall = GetMapNames(13, 52)
 local BurningSteppes = GetMapNames(13, 36)
 local Feralas = GetMapNames(12, 69)
 local DeadwindPass = GetMapNames(13, 42)
-local Naxxramas = GetMapNames(113, 115, 4234)
+local Naxxramas = GetMapNames(113, 115, nil, 4234)
 local BlastedLands = GetMapNames(13, 17)
 
 ----------------------------------------------------------------------------------------------------
@@ -188,13 +196,59 @@ DB.nodes = {
         },
     },
 ]]
+--------------------------------------------------------------------------------------------MIDNIGHT-------------------------------------------------------------------------------------------
+
+    [2537] = { -- Quel'Thalas
+        [28233816] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [28313803] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [25463866] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
+        [23745112] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
+        [25163833] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [26383690] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
+        [26058749] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
+        },
+    [2395] = { -- Eversong Woods
+        [52502567] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [52642546] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [47962650] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
+        [45134693] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
+        [47472596] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [49472361] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} }
+        },
+    [2393] = { -- Silvermoon
+        [52176522] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [52626452] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [36946798] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
+        [35286619] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [42005831] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} }
+        },
+    [2437] = { -- Zul'Aman
+        [09188084] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
+        },
+    [2413] = { -- Harandar
+        [75885483] = { icon="portal", label=L["Eversong Rootway"], note=QuelThalas, requirements={quest=86899} },
+        [53365541] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86898} }, -- check quest
+        [53005571] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=99999} }, -- check quest
+        },
+    [2576] = { -- The Den
+        [64717099] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86898} }, -- check quest
+        [61777347] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=99999} }, -- check quest
+        },
+    [2405] = { -- Voidstorm
+        [33956067] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=99999} },  -- check quest
+        [51567028] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=86549} },  -- check quest
+        [51717040] = { icon="portal", label=L["Portal to Harandar"], note=QuelThalas, requirements={quest=99999} },  -- check quest
+        },
+
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
 
     [2352] = { -- Founder's Point (Alliance Neighborhood)
-        [57422661] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" }
+        [57422661] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [54285587] = { icon="portal", label=L["Portal to Loamm"], note=ZaralekCavern, faction="Alliance" } -- No portal back?
         },
     [2351] = { -- Razorwind Shores (Horde Neighborhood)
-        [53924937] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" }
+        [53924937] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [54285587] = { icon="portal", label=L["Portal to Kun-Lai Summit"], note=Pandaria, faction="Horde" }
         },
     [2274] = { -- Khaz Algar
         [72691965] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=80} },
@@ -420,7 +474,7 @@ DB.nodes = {
 ----------------------------------------------------------------------------------------------BfA----------------------------------------------------------------------------------------------
 
     [875] = { -- Zandalar
-        [58206200] = { icon="portal", multilabel={L["Portal to Silvermoon"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
+        [58206200] = { icon="portal", multilabel={L["Portal to Silvermoon City"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoodsNew, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
         [56307065] = { icon="boat", label=L["Submarine to Mechagon"], note=KulTiras, requirements={quest=55651}, faction="Horde" },
         [33201921] = { icon="boat", label=L["Return to Boralus"], note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }, -- Vol'dun Barnard "The Smasher" Baysworth
         [62492642] = { icon="boat", label=L["Return to Boralus"], note=TiragardeSound, requirements={quest=51088}, faction="Alliance" }, -- Nazmir Desha Stormwallow
@@ -435,7 +489,7 @@ DB.nodes = {
         [36056806] = { icon="molemachine", label=L["Rocket Drill to Undermine"], requirements={quest=83933, accquest=true, level=80} }
         },
     [862] = { -- Zuldazar
-        [58304450] = { icon="portal", multilabel={L["Portal to Silvermoon"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
+        [58304450] = { icon="portal", multilabel={L["Portal to Silvermoon City"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoodsNew, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
         [55255824] = { icon="boat", label=L["Submarine to Mechagon"], note=KulTiras, requirements={quest=55651}, faction="Horde" },
         [58456298] = { icon="boat", multilabel={L["Boat to Drustvar"], L["Boat to Stormsong Valley"], L["Boat to Tiragarde Sound"]}, multinote={KulTiras, KulTiras, KulTiras}, requirements={multiquest={51340, 51532, 51421}}, faction="Horde" },
         [58596055] = { icon="warfront", multilabel={L["Portal to Arathi Highlands"], L["Portal to Darkshore"]}, multinote={EasternKingdoms, Kalimdor}, requirements={multilevel={50, 50}, multiwarfront={11, 118}}, faction="Horde" },
@@ -454,13 +508,13 @@ DB.nodes = {
         [36683427] = { icon="boat", label=L["Return to Boralus"], note=TiragardeSound, requirements={quest=51229}, faction="Alliance" }
         },
     [1165] = { -- Dazar'alor
-        [51004600] = { icon="portal", multilabel={L["Portal to Silvermoon"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoods, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
+        [51004600] = { icon="portal", multilabel={L["Portal to Silvermoon City"], L["Portal to Orgrimmar"], L["Portal to Thunder Bluff"], L["Portal to Silithus"], L["Portal to Nazjatar"]}, multinote={EversongWoodsNew, Durotar, Mulgore, Kalimdor}, requirements={multiquest={[2]=46931, [4]=46931, [5]=55053}, multiaccquest={[2]=true}, multilevel={10, 10, 10, 50, 50}}, faction="Horde" },
         [41808760] = { icon="boat", label=L["Submarine to Mechagon"], note=KulTiras, requirements={quest=55651}, faction="Horde" },
         [51859453] = { icon="warfront", multilabel={L["Portal to Arathi Highlands"], L["Portal to Darkshore"]}, multinote={EasternKingdoms, Kalimdor}, requirements={multilevel={50, 50}, multiwarfront={11, 118}}, faction="Horde" },
         [56323090] = { icon="petBattlePortal", multilabel={244506, 244502, 286079, 301941, 314215}, multinote={NorthernBarrens, Westfall, DunMorogh, EasternPlaguelands, BurningSteppes}, requirements={multiquest={45423, 46291, 54185, 56491, 58457}}, faction="Horde" }
         },
     [1163] = { -- Dazar'alor - The Great Seal
-        [73706210] = { icon="portal", label=L["Portal to Silvermoon"], note=EversongWoods, requirements={level=10}, faction="Horde" },
+        [73706210] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew, requirements={level=10}, faction="Horde" },
         [73706980] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, requirements={quest=46931, accquest=true, level=10}, faction="Horde" },
         [73707730] = { icon="portal", label=L["Portal to Thunder Bluff"], note=Mulgore, requirements={level=10}, faction="Horde" },
         [73708530] = { icon="portal", label=L["Portal to Silithus"], note=Kalimdor, requirements={quest=46931, level=50}, faction="Horde" },
@@ -697,21 +751,21 @@ DB.nodes = {
         [42635724] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- Talador
         [48352451] = { icon="molemachine", label=GetAreaInfo(6967), requirements={quest=53588, hideQuestName=true}, race="DarkIronDwarf" }, -- Gorgrond, Blackrock Foundry Overlook
         [29324342] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true}, race="DarkIronDwarf" }, -- Nagrand, Elemental Plateau
-        [26703144] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
-        [30923558] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
-        [53396476] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104, 3743), requirements={toy=129929} }, -- Legion Hold
+        [26703144] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [30923558] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [53396476] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104, nil, 3743), requirements={toy=129929} }, -- Legion Hold
         [61557054] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104), requirements={toy=129929} }, -- near The Black Temple
-        [49333706] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3833), requirements={toy=129929} }, -- Razor Ridge
-        [49842188] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3618), requirements={toy=129929} }, -- Gruul's Lair
+        [49333706] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3833), requirements={toy=129929} }, -- Razor Ridge
+        [49842188] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3618), requirements={toy=129929} }, -- Gruul's Lair
         [25475564] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107), requirements={toy=129929} }, -- near Oshu'gun
-        [30734684] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107, 3615), requirements={toy=129929} }, -- Throne of the Elements
-        [33184361] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
+        [30734684] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107, nil, 3615), requirements={toy=129929} }, -- Throne of the Elements
+        [33184361] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102, nil, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
         [34944706] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102), requirements={toy=129929} }, --
-        [45896803] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, 3679), requirements={toy=129929} }, -- Skettis
-        [57774641] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
-        [62564729] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, 3706), requirements={toy=129929} }, -- The Path of Glory (near The Dark Portal)
+        [45896803] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, nil, 3679), requirements={toy=129929} }, -- Skettis
+        [57774641] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, nil, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
+        [62564729] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, nil, 3706), requirements={toy=129929} }, -- The Path of Glory (near The Dark Portal)
         [41415385] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108), requirements={toy=129929} }, -- near Shattrath
-        [43366574] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, 3697), requirements={toy=129929} } -- The Bone Wastes
+        [43366574] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, nil, 3697), requirements={toy=129929} } -- The Bone Wastes
         },
     [588] = { -- Ashran
         [43921380] = { icon="portal", multilabel={L["Portal to Orgrimmar"], L["Portal to Vol'mar"]}, multinote={Durotar, TanaanJungle}, requirements={multiquest={[2]=37935}}, faction="Horde" },
@@ -723,8 +777,8 @@ DB.nodes = {
     [525] = { -- Frostfire Ridge
         [51496593] = { icon="portal", label=L["Portal to Warspear"], note=Ashran, requirements={quest=36614}, faction="Horde" },
         [59544752] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36904, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 36843203
-        [21814531] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
-        [37536071] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3824), requirements={toy=129929} } -- Bloodmaul Ravine
+        [21814531] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3824), requirements={toy=129929} }, -- Bloodmaul Ravine
+        [37536071] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3824), requirements={toy=129929} } -- Bloodmaul Ravine
         },
     [582] = { -- Lunarfall (Garrison)
         [70102750] = { icon="portal", label=L["Portal to Stormshield"], note=Ashran, requirements={quest=36615}, faction="Alliance" }
@@ -732,15 +786,15 @@ DB.nodes = {
     [539] = { -- Shadowmoon Valley
         [32871553] = { icon="portal", label=L["Portal to Stormshield"], note=Ashran, requirements={quest=36615}, faction="Alliance" },
         [50463569] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36903, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58736681
-        [32332876] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104, 3743), requirements={toy=129929} }, -- Legion Hold
+        [32332876] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104, nil, 3743), requirements={toy=129929} }, -- Legion Hold
         [60024837] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 104), requirements={toy=129929} } -- near The Black Temple
         },
     [534] = { -- Tanaan Jungle
         [61004734] = { icon="portal", label=L["Portal to Warspear"], note=Ashran, requirements={quest=37935}, faction="Horde" },
         [57446050] = { icon="portal", label=L["Portal to Stormshield"], note=Ashran, requirements={quest=38445}, faction="Alliance" },
         [53495838] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=39497, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 58684818
-        [49565073] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
-        [70305453] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, 3706), requirements={toy=129929} } -- The Path of Glory (near The Dark Portal)
+        [49565073] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, nil, 3545), requirements={toy=129929} }, -- The Path of Glory (near Hellfire Citadel)
+        [70305453] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 100, nil, 3706), requirements={toy=129929} } -- The Path of Glory (near The Dark Portal)
         },
     [624] = { -- Warspear (Ashran)
         [60705160] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
@@ -753,25 +807,25 @@ DB.nodes = {
     [543] = { -- Gorgrond
         [58033443] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36886, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 52432296
         [46683876] = { icon="molemachine", label=GetAreaInfo(6967), requirements={quest=53588, hideQuestName=true}, race="DarkIronDwarf" }, -- Gorgrond, Blackrock Foundry Overlook
-        [49417366] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3833), requirements={toy=129929} }, -- Razor Ridge
-        [50823143] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, 3618), requirements={toy=129929} } -- Gruul's Lair
+        [49417366] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3833), requirements={toy=129929} }, -- Razor Ridge
+        [50823143] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 105, nil, 3618), requirements={toy=129929} } -- Gruul's Lair
         },
     [550] = { -- Nagrand
         [32164623] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36906, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 20935290
         [65750825] = { icon="molemachine", label=GetAreaInfo(3636), requirements={quest=53590, hideQuestName=true}, race="DarkIronDwarf" }, -- Nagrand, Elemental Plateau
         [50355721] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107), requirements={toy=129929} }, -- near Oshu'gun
-        [71412194] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107, 3615), requirements={toy=129929} }, -- Throne of the Elements
-        [81240898] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
+        [71412194] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 107, nil, 3615), requirements={toy=129929} }, -- Throne of the Elements
+        [81240898] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102, nil, 3720), requirements={toy=129929} }, -- Twin Spire Ruins
         [88302284] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 102), requirements={toy=129929} } --
         },
     [542] = { -- Spires of Arak
         [54625163] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36885, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 47817847
-        [47391245] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, 3679), requirements={toy=129929} } -- Skettis
+        [47391245] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, nil, 3679), requirements={toy=129929} } -- Skettis
         },
     [535] = { -- Talador
         [55074812] = { icon="ogreWaygate", label=L["Ogre Waygate"], requirements={quest=36905, item={117491, 25}, hideQuestName=true, spell=178777} }, -- 42635724
         [50413519] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108) }, -- near Shattrath
-        [57858053] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, 3697), requirements={toy=129929} } -- The Bone Wastes
+        [57858053] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(101, 108, nil, 3697), requirements={toy=129929} } -- The Bone Wastes
         },
 
 ----------------------------------------------------------------------------------------------MoP----------------------------------------------------------------------------------------------
@@ -790,7 +844,8 @@ DB.nodes = {
         [47117259] = { icon="molemachine", label=GetAreaInfo(5963), requirements={quest=53598, hideQuestName=true}, race="DarkIronDwarf" }, -- Valley of the Four Winds, Stormstout Brewery
         [48483559] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" }, -- Kun-Lai Summit, One Keg
         [28724637] = { icon="portal", label=L["Portal to Shan'ze Dao"], note=TownlongSteppes, requirements={quest=31110} },
-        [21522869] = { icon="portal", label=L["Portal to Shado-Pan Garrison"], note=TownlongSteppes, requirements={quest=31110} }
+        [21522869] = { icon="portal", label=L["Portal to Shado-Pan Garrison"], note=TownlongSteppes, requirements={quest=31110} },
+        [48843496] = { icon="portal", label=L["Portal to Razorwind Shores"], note=Durotar, faction="Horde" }
         },
     [390] = { -- Vale of Eternal Blossoms
         [90876620] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
@@ -820,13 +875,15 @@ DB.nodes = {
         [48964336] = { icon="orderhall", label=L["Portal to Stormwind"], note=ElwynnForest, class="MONK", faction="Alliance" },
         [57686281] = { icon="molemachine", label=GetAreaInfo(6085), requirements={quest=53595, hideQuestName=true}, race="DarkIronDwarf" }, -- Kun-Lai Summit, One Keg
         [85946276] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
-        [63249415] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" }
+        [63249415] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [58566125] = { icon="portal", label=L["Portal to Razorwind Shores"], note=Durotar, faction="Horde" }
         },
     [371] = { -- The Jade Forest
         [28501401] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [46238516] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
         [08194216] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
-        [18006135] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" }
+        [18006135] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [03971266] = { icon="portal", label=L["Portal to Razorwind Shores"], note=Durotar, faction="Horde" }
         },
     [504] = { -- Isle of Thunder
         [64707348] = { icon="portal", label=L["Portal to Shado-Pan Garrison"], note=TownlongSteppes, requirements={quest=32644}, faction="Alliance" },
@@ -942,8 +999,8 @@ DB.nodes = {
         [89225101] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
         [89234946] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [53156489] = { icon="molemachine", label=GetAreaInfo(3538), requirements={quest=53592, hideQuestName=true}, race="DarkIronDwarf" }, -- Hellfire Peninsula, Honor Hold
-        [54974890] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
-        [80385160] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, 7037), requirements={toy=129929} } -- near The Dark Portal
+        [54974890] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, nil, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
+        [80385160] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, nil, 7037), requirements={toy=129929} } -- near The Dark Portal
         },
     [111] = { -- Shattrath City
         [57224827] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
@@ -960,55 +1017,55 @@ DB.nodes = {
         [66217784] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true}, race="DarkIronDwarf" }, -- Shadowmoon Valley, Fel Pits
         [58415647] = { icon="molemachine", label=GetAreaInfo(3538), requirements={quest=53592, hideQuestName=true}, race="DarkIronDwarf" }, -- Hellfire Peninsula, Honor Hold
         [46251761] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true}, race="DarkIronDwarf" }, -- Blade's Edge Mountains, Skald
-        [36073617] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, 7062), requirements={toy=129929} }, -- The Burning Glacier
-        [38173202] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, 6905), requirements={toy=129929} }, -- Gormaul Tower
-        [44322031] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, 6892), requirements={toy=129929} }, -- The Pit
-        [42123440] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, 6935), requirements={toy=129929} }, -- Razorbloom
-        [34314931] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7255), requirements={toy=129929} }, -- Zangar Sea
-        [39795884] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7385), requirements={toy=129929} }, -- Zangar Shore
-        [28516832] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7151), requirements={toy=129929} }, -- Spirit Woods
-        [34555772] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7280), requirements={toy=129929} }, -- Throne of the Elements
-        [44756245] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
-        [47887328] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 6918), requirements={toy=129929} }, -- Deathweb Hollow
-        [55738205] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 7031), requirements={toy=129929} }, -- Skettis
-        [58757723] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, 6922), requirements={toy=129929} }, -- Moonflower Valley
-        [69598124] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, 6931), requirements={toy=129929} }, -- Path of the Light
-        [58945174] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
-        [66465254] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, 7037), requirements={toy=129929} } -- near The Dark Portal
+        [36073617] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, nil, 7062), requirements={toy=129929} }, -- The Burning Glacier
+        [38173202] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, nil, 6905), requirements={toy=129929} }, -- Gormaul Tower
+        [44322031] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, nil, 6892), requirements={toy=129929} }, -- The Pit
+        [42123440] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, nil, 6935), requirements={toy=129929} }, -- Razorbloom
+        [34314931] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7255), requirements={toy=129929} }, -- Zangar Sea
+        [39795884] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7385), requirements={toy=129929} }, -- Zangar Shore
+        [28516832] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7151), requirements={toy=129929} }, -- Spirit Woods
+        [34555772] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7280), requirements={toy=129929} }, -- Throne of the Elements
+        [44756245] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
+        [47887328] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 6918), requirements={toy=129929} }, -- Deathweb Hollow
+        [55738205] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 7031), requirements={toy=129929} }, -- Skettis
+        [58757723] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, nil, 6922), requirements={toy=129929} }, -- Moonflower Valley
+        [69598124] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, nil, 6931), requirements={toy=129929} }, -- Path of the Light
+        [58945174] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, nil, 7716), requirements={toy=129929} }, -- near Hellfire Citadel
+        [66465254] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 534, nil, 7037), requirements={toy=129929} } -- near The Dark Portal
         },
     [102] = { -- Zangarmarsh
-        [49195537] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7255), requirements={toy=129929} }, -- Zangar Sea
-        [68208846] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7385), requirements={toy=129929} } -- Zangar Shore
+        [49195537] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7255), requirements={toy=129929} }, -- Zangar Sea
+        [68208846] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7385), requirements={toy=129929} } -- Zangar Shore
         },
      [107] = { -- Nagrand
         [88065172] = { icon="portal", multilabel={L["Portal to Orgrimmar"], L["Portal to Isle of Quel'Danas"]}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
         [88065173] = { icon="portal", multilabel={L["Portal to Stormwind"], L["Portal to Isle of Quel'Danas"]}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
         [92964857] = { icon="portal", label=L["Portal to Caverns of Time"], note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
-        [41275904] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7151), requirements={toy=129929} }, -- Spirit Woods
-        [60362556] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, 7280), requirements={toy=129929} } -- Throne of the Elements
+        [41275904] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7151), requirements={toy=129929} }, -- Spirit Woods
+        [60362556] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 550, nil, 7280), requirements={toy=129929} } -- Throne of the Elements
         },
     [108] = { -- Terokkar Forest
         [30252350] = { icon="portal", multilabel={L["Portal to Stormwind"], L["Portal to Isle of Quel'Danas"]}, multinote={ElwynnForest, EasternKingdoms}, faction="Alliance" },
         [30252351] = { icon="portal", multilabel={L["Portal to Orgrimmar"], L["Portal to Isle of Quel'Danas"]}, multinote={Durotar, EasternKingdoms}, faction="Horde" },
         [35622076] = { icon="portal", label=L["Portal to Caverns of Time"], note=Tanaris..")\n("..L["Speak with Zephyr"], requirements={reputation={989,7} } },
-        [35271251] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
-        [45374753] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 6918), requirements={toy=129929} }, -- Deathweb Hollow
-        [70787588] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, 7031), requirements={toy=129929} } -- Skettis
+        [35271251] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 7141), requirements={toy=129929} }, -- Arch of Sha'tar
+        [45374753] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 6918), requirements={toy=129929} }, -- Deathweb Hollow
+        [70787588] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 535, nil, 7031), requirements={toy=129929} } -- Skettis
         },
     [103] = { -- Exodar
         [48306290] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" }
         },
     [104] = { -- Shadowmoon Valley
         [50773530] = { icon="molemachine", label=GetAreaInfo(3747), requirements={quest=53599, hideQuestName=true}, race="DarkIronDwarf" }, -- Shadowmoon Valley, Fel Pits
-        [27103336] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, 6922), requirements={toy=129929} }, -- Moonflower Valley
-        [61534607] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, 6931), requirements={toy=129929} } -- Path of the Light
+        [27103336] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, nil, 6922), requirements={toy=129929} }, -- Moonflower Valley
+        [61534607] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 539, nil, 6931), requirements={toy=129929} } -- Path of the Light
         },
     [105] = { -- Blade's Edge Mountains
         [72421764] = { icon="molemachine", label=GetAreaInfo(3866), requirements={quest=53597, hideQuestName=true}, race="DarkIronDwarf" }, -- Blade's Edge Mountains, Skald
-        [39637739] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, 7062), requirements={toy=129929} }, -- The Burning Glacier
-        [46406404] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, 6905), requirements={toy=129929} }, -- Gormaul Tower
-        [66192633] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, 6892), requirements={toy=129929} }, -- The Pit
-        [59117169] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, 6935), requirements={toy=129929} } -- Razorbloom
+        [39637739] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, nil, 7062), requirements={toy=129929} }, -- The Burning Glacier
+        [46406404] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 525, nil, 6905), requirements={toy=129929} }, -- Gormaul Tower
+        [66192633] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, nil, 6892), requirements={toy=129929} }, -- The Pit
+        [59117169] = { icon="portal_purple", label=L["Reflective Portal"], note=GetMapNames(572, 543, nil, 6935), requirements={toy=129929} } -- Razorbloom
         },
     [97] = { -- Azuremyst Isle
         [20335407] = { icon="portal", requirements={timetravel={quest=54411, spell=290245}}, label=L["Portal to Darnassus"], note=Teldrassil },
@@ -1045,8 +1102,8 @@ DB.nodes = {
         [42847905] = { icon="portal", requirements={quest=47186, level=50, timetravel={quest=50659, spell=255152, turn=true}}, label=L["Portal to Boralus"], note=TiragardeSound, faction="Alliance" },
         [59414237] = {
             icon="portal",
-            multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"], L["Portal to Undercity"], L["Portal to Dalaran"], L["Portal to Silvermoon"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"]},
-            multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands}, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor},
+            multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"], L["Portal to Undercity"], L["Portal to Dalaran"], L["Portal to Silvermoon (Burning Crusade)"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"], L["Portal to Silvermoon City"]},
+            multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, Tirisfal, CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands}, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor, EversongWoodsNew},
             requirements={multiquest={[4]=25924, [6]=26798, [11]=46931, [17]=60151}, multiaccquest={[6]=true, [11]=true, [17]=true}, multilevel={30, 30, 30, 30, 30, 30, [18]=10}},
             faction="Horde"
         },
@@ -1080,8 +1137,8 @@ DB.nodes = {
     [1] = { -- Durotar
         [48091027] = {
             icon="portal",
-            multilabel={L["Portal to Dalaran"], L["Portal to Silvermoon"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"]},
-            multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands}, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor},
+            multilabel={L["Portal to Dalaran"], L["Portal to Silvermoon (Burning Crusade)"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"],  L["Portal to Silvermoon City"]},
+            multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands}, TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor, EversongWoodsNew},
             requirements={multiquest={[4]=46931, [10]=60151}, multiaccquest={[4]=true, [10]=true}, multilevel={[11]=10}},
             faction="Horde"
         },
@@ -1103,8 +1160,8 @@ DB.nodes = {
     [85] = { -- Orgrimmar
         [57438972] = {
             icon="portal",
-            multilabel={L["Portal to Dalaran"], L["Portal to Silvermoon"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"]},
-            multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands},TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor},
+            multilabel={L["Portal to Dalaran"], L["Portal to Silvermoon (Burning Crusade)"], L["Portal to Jade Forest"], L["Portal to Zuldazar"], L["Portal to Azsuna"], L["Portal to Warspear"], L["Teleport to the Dark Portal"], L["Portal to Shattrath"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Razorwind Shores"],  L["Portal to Silvermoon City"]},
+            multinote={CrystalsongForest, EversongWoods, Pandaria, Zandalar, BrokenIsles, Ashran, {66560, HellfirePeninsula, BlastedLands},TerokkarForest, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, Kalimdor, EversongWoodsNew},
             requirements={multiquest={[4]=46931, [10]=60151}, multiaccquest={[4]=true, [10]=true}, multilevel={[11]=10}},
             faction="Horde"
         },
@@ -1198,13 +1255,13 @@ DB.nodes = {
         [45995488] = { icon="aboat", multilabel={L["Boat to Theramore Isle"], L["Boat to Howling Fjord"]}, multinote={DustwallowMarsh, Valgarde}, faction="Horde" },
         [45995482] = { icon="boat", multilabel={L["Boat to Theramore Isle"], L["Boat to Howling Fjord"]}, multinote={DustwallowMarsh, Valgarde}, faction="Alliance" },
         [43179373] = { icon="boat", label=L["Boat to Ratchet"], note=NorthernBarrens },
-        [56161316] = { icon="portal", multilabel={L["Portal to Orgrimmar"], L["Portal to Undercity"]}, multinote={Durotar, Tirisfal}, faction="Horde" },
-        [43637155] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"], L["Deeprun Tram to Ironforge"], L["Portal to Darnassus"], L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Bel'ameth"], L["Portal to Dornogal"], L["Portal to Founder's Point"]},
-                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil, IsleOfDorn, EasternKingdoms},
+        -- [56161316] = { icon="portal", multilabel={L["Portal to Orgrimmar"], L["Portal to Undercity"]}, multinote={Durotar, Tirisfal}, faction="Horde" }, -- OLD SM
+        [43637155] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"], L["Deeprun Tram to Ironforge"], L["Portal to Darnassus"], L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Bel'ameth"], L["Portal to Dornogal"], L["Portal to Founder's Point"], L["Portal to Silvermoon City"]},
+                                    multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms, DunMorogh, Teldrassil, CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, Amirdrassil, IsleOfDorn, EasternKingdoms, EversongWoodsNew},
                                     requirements={multiquest={[4]=14482, [6]=26798, [11]=47186, [17]=60151}, multiaccquest={[6]=true, [11]=true, [17]=true}, multilevel={1, 30, 30, 30, 30, 30, [18]=10}},
                                     faction="Alliance" },
         [43337195] = { icon="tram", label=L["Deeprun Tram to Ironforge"], note=DunMorogh, faction="Horde" },
-        [43863354] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}, multilevel={[4]=10}}, multilabel={L["Portal to Orgrimmar"], L["Portal to Silvermoon"], L["Portal to Stranglethorn Vale"], L["Portal to Hellfire Peninsula"], L["Portal to Howling Fjord"]}, multinote={Durotar, EversongWoods..") ("..L["Orb of translocation"], GromgolBaseCamp, Outland, VengeanceLanding}, faction="Horde" },
+        [43863354] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}, multilevel={[4]=10}}, multilabel={L["Portal to Orgrimmar"], L["Portal to Silvermoon (Burning Crusade)"], L["Portal to Stranglethorn Vale"], L["Portal to Hellfire Peninsula"], L["Portal to Howling Fjord"]}, multinote={Durotar, EversongWoods..") ("..L["Orb of translocation"], GromgolBaseCamp, Outland, VengeanceLanding}, faction="Horde" },
         [47835898] = { icon="tram", label=L["Deeprun Tram to Stormwind"], note=ElwynnForest },
         [60875918] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, requirements={quest=27537}, faction="Alliance" },
         [35224839] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, requirements={level=30}, faction="Alliance" },
@@ -1226,12 +1283,18 @@ DB.nodes = {
         [53508266] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance", requirements={timetravel={quest=66560, spell=290245, turn=true, level=10}, level=10} },
         [41075058] = { icon="boat", label=L["Boat to Belanaar"], note=Amirdrassil },
         [42467434] = { icon="portal", label=L["Teleport to the Dark Portal"], note={66560, HellfirePeninsula, BlastedLands}, faction="Alliance" },
-        [43307134] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
+        [43307134] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} },
+        [56380966] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
+        [56410961] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
+        [55330985] = { icon="portal", multilabel={L["Rootway to Harandar"], L["Portal to Voidstorm"]}, multinote={QuelThalas, QuelThalas}, requirements={multiquest={86898, 86549}} },
+        [55680918] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
+        [54681457] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
+        [55552836] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"]}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
-        [46419032] = { icon="portal", multilabel={L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Founder's Point"]},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms},
+        [46419032] = { icon="portal", multilabel={L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Founder's Point"], L["Portal to Silvermoon City"]},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms, EversongWoodsNew},
                                     requirements={multiquest={[3]=47186, [9]=60151}, multiaccquest={[3]=true, [9]=true}, multilevel={[10]=10}},
                                     faction="Alliance" },
         [22015670] = { icon="aboat", multilabel={L["Boat to Boralus"], L["Boat to Dragon Isle"]}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
@@ -1250,8 +1313,8 @@ DB.nodes = {
         [42556750] = { icon="tram", label=L["Deeprun Tram to Ironforge"], note=DunMorogh }
         },
     [37] = { -- Elwynn Forest
-        [17804775] = { icon="portal", multilabel={L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Founder's Point"]},
-                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms},
+        [17804775] = { icon="portal", multilabel={L["Portal to Dalaran"], L["Portal to Jade Forest"], L["Portal to Boralus"], L["Portal to Azsuna"], L["Portal to Stormshield"], L["Portal to Shattrath"], L["Portal to Exodar"], L["Portal to Caverns of Time"], L["Portal to Oribos"], L["Portal to Valdrakken"], L["Portal to Dornogal"], L["Portal to Founder's Point"], L["Portal to Silvermoon City"]},
+                                    multinote={CrystalsongForest, Pandaria, TiragardeSound, BrokenIsles, Ashran, TerokkarForest, AzuremystIsle, Tanaris, Shadowlands, Thaldraszus, IsleOfDorn, EasternKingdoms, EversongWoodsNew},
                                     requirements={multiquest={[3]=47186, [9]=60151}, multiaccquest={[3]=true, [9]=true}, multilevel={[10]=10}},
                                     faction="Alliance" },
         [06003035] = { icon="aboat", multilabel={L["Boat to Boralus"], L["Boat to Dragon Isle"]}, multinote={TiragardeSound, WakingShores}, faction="Horde" },
@@ -1262,7 +1325,6 @@ DB.nodes = {
         [31801155] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"]}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
         [29251812] = { icon="tram", label=L["Deeprun Tram to Ironforge"], note=DunMorogh },
         [26292111] = { icon="molemachine", label=GetAreaInfo(6816), race="DarkIronDwarf" }, -- Stormwind
-        [46726015] = { icon="molemachine", label=GetAreaInfo(1537), race="DarkIronDwarf" }, -- Ironforge
         [19184614] = { icon="portal", label=L["Teleport to the Dark Portal"], note={66560, HellfirePeninsula, BlastedLands}, faction="Alliance" },
         [28971097] = { icon="balloon", label=L["Hot Air Balloon to Wandering Isle"], note=WuSong, faction="Alliance", requirements={quest=92030, accquest=true} }
         },
@@ -1271,13 +1333,13 @@ DB.nodes = {
         },
     [18] = { -- Tirisfal Glades
         [65906865] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}, level=10}, label=L["Portal to Hellfire Peninsula"], note=Outland..")\n("..L["in Undercity Magic Quarter"].."", faction="Horde" },
-        [59416743] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=L["Portal to Silvermoon"], note=EversongWoods..")\n("..L["Orb of translocation"].."", faction="Horde" },
+        [59416743] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=L["Portal to Silvermoon (Burning Crusade)"], note=EversongWoods..")\n("..L["Orb of translocation"].."", faction="Horde" },
         [60735867] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [61885901] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=L["Portal to Stranglethorn Vale"], note=GromgolBaseCamp, faction="Horde" },
         [59085890] = { icon="portal", requirements={timetravel={quest=52758, spell=276824}}, label=L["Portal to Howling Fjord"], note=VengeanceLanding, faction="Horde" }
         },
     [2070] = { -- Tirisfal Glades - Ruins of Lordaeron
-        [59856745] = { icon="portal", requirements={quest=65667}, multilabel={L["Portal to Orgrimmar"], L["Portal to Silvermoon"], L["Portal to Stranglethorn Vale"], L["Portal to Howling Fjord"]}, multinote={Durotar, EversongWoods..") ("..L["Orb of translocation"], GromgolBaseCamp, VengeanceLanding}, faction="Horde" }
+        [59856745] = { icon="portal", requirements={quest=65667}, multilabel={L["Portal to Orgrimmar"], L["Portal to Silvermoon (Burning Crusade)"], L["Portal to Stranglethorn Vale"], L["Portal to Howling Fjord"]}, multinote={Durotar, EversongWoods..") ("..L["Orb of translocation"], GromgolBaseCamp, VengeanceLanding}, faction="Horde" }
         },
     [21] = { -- Silverpine Forest
         [47254337] = { icon="portal", label=L["Portal to Dalaran Crater"], note=HillsbradFoothills, faction="Horde", requirements={quest=27478} }
@@ -1302,7 +1364,8 @@ DB.nodes = {
         },
     [23] = { -- Eastern Plaguelands
         [35702309] = { icon="portal", label=L["Revealed Portal to Naxxramas"], note=Naxxramas, requirements={quest=76263, accquest=true} },
-        [75234942] = { icon="orderhall", label=L["Portal to Dalaran"], note=BrokenIsles, class="PALADIN" }
+        [75234942] = { icon="orderhall", label=L["Portal to Dalaran"], note=BrokenIsles, class="PALADIN" },
+        [53970849] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
         },
     [27] = { -- Dun Morogh
         [70452731] = { icon="tram", label=L["Deeprun Tram to Stormwind"], note=ElwynnForest },

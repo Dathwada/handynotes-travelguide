@@ -300,7 +300,7 @@ L["Speak with Zephyr"] = "和塞菲尔对话-传送"
 
 L["Boat to Menethil Harbor"] = "前往米奈希尔港（湿地）的船"
 
-L["Portal to Silvermoon"] = "通往银月城的传送门"
+L["Portal to Silvermoon (Burning Crusade)"] = "通往银月城的传送门"
 
 L["Portal to Undercity"] = "通往幽暗城的传送门"
 L["Orb of translocation"] = "传送宝珠"
