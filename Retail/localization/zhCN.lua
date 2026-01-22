@@ -257,9 +257,9 @@ L["Portal to Isle of Thunder"] = "通往雷神岛的传送门"
 L["Portal to Shado-Pan Garrison"] = "通往影踪卫戍营的传送门"
 L["Portal to Shan'ze Dao"] = "通往山泽岛的传送门"
 L["Portal to Peak of Serenity"] = "通往晴日峰（昆莱山）的传送门"
--- L["Hot Air Balloon to Orgrimmar"] = ""
--- L["Hot Air Balloon to Stormwind"] = ""
--- L["Hot Air Balloon to Wandering Isle"] = ""
+L["Hot Air Balloon to Orgrimmar"] = "到奥格瑞玛的热气球"
+L["Hot Air Balloon to Stormwind"] = "到暴风城的热气球"
+L["Hot Air Balloon to Wandering Isle"] = "到迷踪岛的热气球"
 
 -------------------------------------------------CATA-----------------------------------------------
 
@@ -294,7 +294,7 @@ L["Portal to Exodar"] = "通往埃索达的传送门"
 L["in Exodar"] = "埃索达内部"
 L["Boat to Exodar"] = "前往埃索达的船"
 L["Speak with Zephyr"] = "和塞菲尔对话-传送"
--- L["Teleport to the Dark Portal"] = ""
+L["Teleport to the Dark Portal"] = "传送到黑暗之门"
 
 -----------------------------------------------VANILLA----------------------------------------------
 
