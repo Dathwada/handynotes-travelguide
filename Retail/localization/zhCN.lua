@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2024/12/19
+--  Last update: 2026/02/07
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -127,6 +127,15 @@ L["handler_tooltip_not_discovered"] = "尚未发现"
 ----------------------------------------------DATABASE----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
+----------------------------------------------MIDNIGHT----------------------------------------------
+
+L["Eversong Rootway"] = "永歌林根之路"
+L["Harandar Rootway"] = "哈籁恩达尔林根之路"
+L["Portal to Harandar"] = "通往哈籁恩达尔的传送门"
+L["Rootway to Harandar"] = "通往哈籁恩达尔的林根之路"
+L["Portal to Voidstorm"] = "通往虚影风暴的传送门"
+L["Portal to Silvermoon City"] = "通往银月城的传送门"
+  
 -------------------------------------------------TWW------------------------------------------------
 
 L["Portal to Dragonblight"] = "通往龙骨荒野的传送门"
@@ -300,7 +309,7 @@ L["Teleport to the Dark Portal"] = "传送到黑暗之门"
 
 L["Boat to Menethil Harbor"] = "前往米奈希尔港（湿地）的船"
 
-L["Portal to Silvermoon (Burning Crusade)"] = "通往银月城的传送门"
+L["Portal to Silvermoon (Burning Crusade)"] = "通往银月城的传送门（燃烧的远征）"
 
 L["Portal to Undercity"] = "通往幽暗城的传送门"
 L["Orb of translocation"] = "传送宝珠"
