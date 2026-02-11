@@ -3,7 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_TravelGuide", "zhCN", f
 if not L then return end
 -- Simplified Chinese translation by mmk5 ( https://www.curseforge.com/members/mmk5 )
 --  zhCN client: (NGA-男爵凯恩)
---  Last update: 2026/02/07
+--  Last update: 2026/02/12
 if L then
 ----------------------------------------------------------------------------------------------------
 -----------------------------------------------CONFIG-----------------------------------------------
@@ -135,7 +135,7 @@ L["Portal to Harandar"] = "通往哈籁恩达尔的传送门"
 L["Rootway to Harandar"] = "通往哈籁恩达尔的林根之路"
 L["Portal to Voidstorm"] = "通往虚影风暴的传送门"
 L["Portal to Silvermoon City"] = "通往银月城的传送门"
--- L["Portal to Ghostlands"] = ""
+L["Portal to Ghostlands"] = "通往幽魂之地的传送门"
 
 -------------------------------------------------TWW------------------------------------------------
 
