@@ -131,9 +131,10 @@ L["Eversong Rootway"] = "Immersangwurzelpfad"
 L["Harandar Rootway"] = "Harandarwurzelpfad"
 L["Portal to Harandar"] = "Portal nach Harandar"
 L["Rootway to Harandar"] = "Wurzelpfad nach Harandar"
-L["Portal to Voidstorm"] = "Portal nach Leerensturm"
+L["Portal to Voidstorm"] = "Portal zum Leerensturm"
 L["Portal to Silvermoon City"] = "Portal nach Silbermond"
 L["Portal to Ghostlands"] = "Portal in die Geisterlande"
+L["Teleporter to Isle of Quel'Danas"] = "Teleporter zur Insel von Quel'Danas"
 
 -------------------------------------------------TWW------------------------------------------------
 

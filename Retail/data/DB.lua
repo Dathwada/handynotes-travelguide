@@ -162,7 +162,7 @@ ns.DB = DB
 
 DB.nodes = {
 --[[ structure:
-    [UiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
+    [UiMapID] = {
         [coord] = {
             icon          = ["STRING"],         -- specific icon for nodes
             label         = ["STRING"],         -- label for singel destination nodes
@@ -172,7 +172,7 @@ DB.nodes = {
             requirements  = {                   -- additional notes for requirements
                 TABLE FOR:
                 quest         = [ID],           -- additional notes for a required quest
-                accquest      = boolean         -- if the quest unlock is account wide
+                accquest      = [BOOLEAN]       -- if the quest unlock is account wide
                 item          = {ID, QUANTITY}  -- additional notes for a required item with quantity
                 hideQuestName = [BOOLEAN],      -- hides quest name for a required quest
                 multiquest    = {TABLE},        -- additional notes for multi required quests
@@ -184,15 +184,16 @@ DB.nodes = {
                 warfront      = [ID],           -- additional notes for warfront nodes
                 multiwarfront = {TABLE},        -- additional notes for multi warfront nodes
                 timetravel    = {               -- additional requirement for nodes
-                TABLE FOR:
+                    TABLE FOR:
                     quest = [ID],               -- hidden quest id to track the timezone from Zidormi
                     spell = [ID],               -- time travel spell id
                     turn = [BOOLEAN]            -- to turn the timezone in Sillithus
                 },
             },
-            faction       = ["FACTION"],        -- shows only for selected faction
-            class         = [CLASS NAME],       -- shows only for selected class
-            covenant      = [COVENAT NAME],     -- shows only for selected covenant
+            faction        = ["FACTION"],        -- shows only for selected faction
+            class          = [CLASS NAME],       -- shows only for selected class
+            covenant       = [COVENAT NAME],     -- shows only for selected covenant
+            hideAfterQuest = [ID],               -- hides the node if this ques is completed
         },
     },
 ]]
@@ -201,43 +202,50 @@ DB.nodes = {
     [2537] = { -- Quel'Thalas
         [28233816] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [28313803] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
-        [25463866] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
-        [23745112] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
-        [25163833] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [25463866] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898, accquest=true} },
+        [23745112] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
+        [25163833] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549, accquest=true} },
+        [26901667] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522} },
         [26383690] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
         [26058749] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
         },
     [2395] = { -- Eversong Woods
         [52502567] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [52642546] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
-        [47962650] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
-        [45134693] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
-        [47472596] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [47962650] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898, accquest=true} },
+        [45134693] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
+        [47472596] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549, accquest=true} },
         [49472361] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} }
         },
     [2393] = { -- Silvermoon
         [52176522] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
         [52626452] = { icon="portal", label=L["Portal to Stormwind"], note=ElwynnForest, faction="Alliance" },
-        [36946798] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898} }, -- check quest
-        [35286619] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549} }, -- check quest
+        [36946798] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898, accquest=true} },
+        [35286619] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549, accquest=true} },
         [42005831] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} }
         },
+    [2424] = { -- Isle of Quel'Danas
+        [51915638] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522} }
+        },
     [2437] = { -- Zul'Aman
+        [05181812] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
         [09188084] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
         },
     [2413] = { -- Harandar
-        [75885483] = { icon="portal", label=L["Eversong Rootway"], note=QuelThalas, requirements={quest=86899} },
-        [53365541] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86898} }, -- check quest
-        [53005571] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=99999} }, -- check quest
+        [75885483] = { icon="portal", label=L["Eversong Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
+        [53365541] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86883, accquest=true} },
+        [53005571] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522, accquest=true} },
         },
     [2576] = { -- The Den
-        [64717099] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86898} }, -- check quest
-        [61777347] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=99999} }, -- check quest
+        [64717099] = { icon="portal", label=L["Eversong Rootway"], note=SilvermoonCity, requirements={quest=86883, accquest=true} },
+        [61777347] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522, accquest=true} },
         },
     [2405] = { -- Voidstorm
-        [33956067] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=99999} },  -- check quest
-        [51567028] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=86549} },  -- check quest
-        [51717040] = { icon="portal", label=L["Portal to Harandar"], note=QuelThalas, requirements={quest=99999} },  -- check quest
+        [33956067] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew, requirements={quest=86549, accquest=true} },
+        [51567028] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew, requirements={quest=86510, accquest=true} },
+        [51717040] = { icon="portal", label=L["Portal to Harandar"], note=QuelThalas, requirements={quest=86522, accquest=true} },
+        [45426376] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522} },
+        [45866442] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522} }
         },
 
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------

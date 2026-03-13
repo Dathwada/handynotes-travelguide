@@ -134,6 +134,7 @@ L["Rootway to Harandar"] = true
 L["Portal to Voidstorm"] = true
 L["Portal to Silvermoon City"] = true
 L["Portal to Ghostlands"] = true
+L["Teleporter to Isle of Quel'Danas"] = true
 
 -------------------------------------------------TWW------------------------------------------------
 

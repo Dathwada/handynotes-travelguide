@@ -136,6 +136,7 @@ L["Rootway to Harandar"] = "通往哈籁恩达尔的林根之路"
 L["Portal to Voidstorm"] = "通往虚影风暴的传送门"
 L["Portal to Silvermoon City"] = "通往银月城的传送门"
 L["Portal to Ghostlands"] = "通往幽魂之地的传送门"
+-- L["Teleporter to Isle of Quel'Danas"] = ""
 
 -------------------------------------------------TWW------------------------------------------------
 

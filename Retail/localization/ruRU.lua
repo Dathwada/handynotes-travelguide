@@ -304,6 +304,7 @@ L["in Exodar"] = "в Экзодар"
 L["Boat to Exodar"] = "Корабль в Экзодар"
 L["Speak with Zephyr"] = "Поговорите с Зефиром"
 -- L["Teleport to the Dark Portal"] = ""
+-- L["Teleporter to Isle of Quel'Danas"] = ""
 
 -----------------------------------------------VANILLA----------------------------------------------
 

@@ -107,7 +107,8 @@ local areaPoisToRemove = {
     [8479] = true, -- Eversong Woods, Harandar Rootway
     [8477] = true, -- Harandar, Eversong Rootway
     [8640] = true, -- Harandar (The Den), Portal to Voidstorm
-    [8478] = true, -- Harandar (The Den), Eversong Rootway
+    [8478] = true, -- Harandar, Eversong Rootway
+    [8784] = true, -- Harandar (The Den), Eversong Rootway
     [8641] = true, -- Voidstorm (The Howling Ridge), Portal to Harandar
     [8642] = true, -- Voidstorm (The Howling Ridge), Portal to Silvermoon City
     [8643] = true, -- Voidstorm, Portal to Silvermoon City
@@ -640,6 +641,7 @@ do
         if (not ns.db.force_nodes) then
             if (ns.hidden[currentMapID] and ns.hidden[currentMapID][coord]) then return false end
             if (node.requirements and ns.db.remove_unknown and ReqsFulfilled(node) ~= 'all') then return false end
+            if (node.hideAfterQuest and IsQuestCompleted(node.hideAfterQuest)) then return false end
             if (node.class and node.class ~= select(2, UnitClass("player"))) then return false end
             if (node.faction and node.faction ~= select(1, UnitFactionGroup("player"))) then return false end
             if (node.race and node.race ~= select(2, UnitRace("player"))) then return false end
