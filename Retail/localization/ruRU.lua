@@ -130,13 +130,13 @@ L["handler_tooltip_not_discovered"] = "еще не обнаружен"
 
 ----------------------------------------------MIDNIGHT----------------------------------------------
 
--- L["Eversong Rootway"] = ""
--- L["Harandar Rootway"] = ""
--- L["Portal to Harandar"] = ""
--- L["Rootway to Harandar"] = ""
--- L["Portal to Voidstorm"] = ""
--- L["Portal to Silvermoon City"] = ""
--- L["Portal to Ghostlands"] = ""
+L["Eversong Rootway"] = "Корнистый путь в леса Вечной Песни"
+L["Harandar Rootway"] = "Корнистый путь в Харандар"
+L["Portal to Harandar"] = "Портал в Харандар"
+L["Rootway to Harandar"] = "Корнистый путь в Харандар"
+L["Portal to Voidstorm"] = "Портал в Бурю Бездны"
+L["Portal to Silvermoon City"] = "Портал в Луносвет"
+L["Portal to Ghostlands"] = "Портал в Призрачные земли"
 
 -------------------------------------------------TWW------------------------------------------------
 
@@ -303,8 +303,8 @@ L["Portal to Exodar"] = "Портал в Экзодар"
 L["in Exodar"] = "в Экзодар"
 L["Boat to Exodar"] = "Корабль в Экзодар"
 L["Speak with Zephyr"] = "Поговорите с Зефиром"
--- L["Teleport to the Dark Portal"] = ""
--- L["Teleporter to Isle of Quel'Danas"] = ""
+L["Teleport to the Dark Portal"] = "Телепорт к Темному порталу"
+L["Teleporter to Isle of Quel'Danas"] = "Телепорт на Остров Кель'Данас"
 
 -----------------------------------------------VANILLA----------------------------------------------
 
