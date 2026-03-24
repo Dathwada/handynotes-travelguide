@@ -135,6 +135,10 @@ L["Portal to Voidstorm"] = "Portal zum Leerensturm"
 L["Portal to Silvermoon City"] = "Portal nach Silbermond"
 L["Portal to Ghostlands"] = "Portal in die Geisterlande"
 L["Teleporter to Isle of Quel'Danas"] = "Teleporter zur Insel von Quel'Danas"
+L["Portal to Spires of Arak (Skyreach)"] = "Portal zu den Spitzen von Arak (Himmelsnadel)"
+L["Portal to Icecrown Citadel (Pit of Saron)"] = "Portal zur Eiskronenzitadelle (Grube von Saron)"
+L["Portal to Dragon Isles (Algeth'ar Academy)"] = "Portal zu den Dracheninseln (Akademie von Algeth'ar)"
+L["Portal to Eredath (Seat of the Triumvirate)"] = "Portal nach Eredath (Sitz des Triumvirats)"
 
 -------------------------------------------------TWW------------------------------------------------
 

@@ -85,9 +85,11 @@ local Highmountain = GetMapNames(619, 650)
 local HighmountainOnly = GetMapNames(650)
 local BrokenShore = GetMapNames(646)
 local Meredil = GetMapNames(680, nil, nil, 7840)
+local Argus = GetMapNames(619, 905)
 
 -------------------------------------------------WoD------------------------------------------------
 
+local Draenor = GetMapNames(572)
 local Ashran = GetMapNames(572, 588)
 local TanaanJungle = GetMapNames(572, 534)
 
@@ -115,6 +117,7 @@ local HowlingFjord = GetMapNames(113, 117)
 local VengeanceLanding = GetMapNames(113, nil, nil, 4000)
 local Valgarde = GetMapNames(113, nil, nil, 3981)
 local Northrend = GetMapNames(113)
+local Icecrown = GetMapNames(113, 118)
 
 -------------------------------------------------BC-------------------------------------------------
 
@@ -311,12 +314,12 @@ DB.nodes = {
         [95393090] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} }
         },
     [2266] = { -- Millenia's Threshold
-        [43584988] = { icon="portal", label=L["Portal to Dornogal"], note=IsleOfDorn },
-        -- [64534374] = { icon="portal", label=, note= },
-        [74424709] = { icon="portal", label=L["Portal to Tazavesh"], note=Tazavesh },
+        [43584988] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew },
+        [64534374] = { icon="portal", label=L["Portal to Spires of Arak (Skyreach)"], note=Draenor },
+        [74424709] = { icon="portal", label=L["Portal to Icecrown Citadel (Pit of Saron)"], note=Icecrown },
         -- [77356173] = { icon="portal", label=, note= },
-        [70457272] = { icon="portal", label=L["Portal to Revendreth"], note=Shadowlands },
-        -- [60576931] = { icon="portal", label=, note= }
+        [70457272] = { icon="portal", label=L["Portal to Dragon Isles (Algeth'ar Academy)"], note=Thaldraszus },
+        [60576931] = { icon="portal", label=L["Portal to Eredath (Seat of the Triumvirate)"], note=Argus }
         },
     [2369] = { -- Siren Isle
         [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true, level=80} },

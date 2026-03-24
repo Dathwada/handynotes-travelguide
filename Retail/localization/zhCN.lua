@@ -137,6 +137,10 @@ L["Portal to Voidstorm"] = "通往虚影风暴的传送门"
 L["Portal to Silvermoon City"] = "通往银月城的传送门"
 L["Portal to Ghostlands"] = "通往幽魂之地的传送门"
 -- L["Teleporter to Isle of Quel'Danas"] = ""
+L["Portal to Spires of Arak (Skyreach)"] = "通往阿兰卡峰林（通天峰）的传送门"
+L["Portal to Icecrown Citadel (Pit of Saron)"] = "通往冰冠堡垒（萨隆矿坑）的传送门"
+L["Portal to Dragon Isles (Algeth'ar Academy)"] = "通往巨龙群岛（艾杰斯亚学院）的传送门"
+L["Portal to Eredath (Seat of the Triumvirate)"] = "通往艾瑞达斯（执政团之座）的传送门"
 
 -------------------------------------------------TWW------------------------------------------------
 

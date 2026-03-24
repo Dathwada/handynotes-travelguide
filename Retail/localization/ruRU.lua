@@ -137,6 +137,11 @@ L["Rootway to Harandar"] = "Корнистый путь в Харандар"
 L["Portal to Voidstorm"] = "Портал в Бурю Бездны"
 L["Portal to Silvermoon City"] = "Портал в Луносвет"
 L["Portal to Ghostlands"] = "Портал в Призрачные земли"
+-- L["Teleporter to Isle of Quel'Danas"] = ""
+L["Portal to Spires of Arak (Skyreach)"] = "Портал на Пики Арака (Небесный Путь)"
+L["Portal to Icecrown Citadel (Pit of Saron)"] = "Портал в цитадель Ледяной Короны (Яма Сарона)"
+L["Portal to Dragon Isles (Algeth'ar Academy)"] = "Портал на Драконьи острова (Академия Алгет'ар)"
+L["Portal to Eredath (Seat of the Triumvirate)"] = "Портал в Эредат (Престол Триумвирата)"
 
 -------------------------------------------------TWW------------------------------------------------
 
