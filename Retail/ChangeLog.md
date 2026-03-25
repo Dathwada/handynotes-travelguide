@@ -1,5 +1,11 @@
 ## Revision History:
 
+#### v2.25.2 (March 25, 2026)
+-------------------------------
+* Added Midnight Season 1 portals
+* Updated Midnight nodes
+* Updated localizations zhTW, zhCN [[PR#90]](https://github.com/Dathwada/handynotes-travelguide/pull/90), ruRU [[PR#91]](https://github.com/Dathwada/handynotes-travelguide/pull/91)
+
 #### v2.25.1 (February 11, 2026)
 -------------------------------
 * Updated Eastern Kingdom node coords
