@@ -1,4 +1,4 @@
-## Interface: 120001
+## Interface: 120007
 ## Title: HandyNotes: TravelGuide
 ## Title-ruRU: HandyNotes: Путеводитель
 ## Title-zhCN: HandyNotes: 游览指南
