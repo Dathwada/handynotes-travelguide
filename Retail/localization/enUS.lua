@@ -139,6 +139,7 @@ L["Portal to Spires of Arak (Skyreach)"] = true
 L["Portal to Icecrown Citadel (Pit of Saron)"] = true
 L["Portal to Dragon Isles (Algeth'ar Academy)"] = true
 L["Portal to Eredath (Seat of the Triumvirate)"] = true
+L["Portal to Magisters' Terrace"] = true
 
 -------------------------------------------------TWW------------------------------------------------
 
