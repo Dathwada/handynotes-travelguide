@@ -208,7 +208,7 @@ DB.nodes = {
         [25463866] = { icon="portal", label=L["Rootway to Harandar"], note=QuelThalas, requirements={quest=86898, accquest=true} },
         [23745112] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
         [25163833] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549, accquest=true} },
-        [26901667] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522} },
+        [26901667] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 },
         [26383690] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
         [26058749] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
         },
@@ -228,7 +228,7 @@ DB.nodes = {
         [42005831] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} }
         },
     [2424] = { -- Isle of Quel'Danas
-        [51915638] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522} }
+        [51915638] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 }
         },
     [2437] = { -- Zul'Aman
         [05181812] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
@@ -247,8 +247,8 @@ DB.nodes = {
         [33956067] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew, requirements={quest=86549, accquest=true} },
         [51567028] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew, requirements={quest=86510, accquest=true} },
         [51717040] = { icon="portal", label=L["Portal to Harandar"], note=QuelThalas, requirements={quest=86522, accquest=true} },
-        [45426376] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522} },
-        [45866442] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522} }
+        [45426376] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 },
+        [45866442] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 }
         },
 
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
@@ -1300,7 +1300,8 @@ DB.nodes = {
         [56031395] = { icon="portal", multilabel={L["Rootway to Harandar"], L["Portal to Voidstorm"]}, multinote={QuelThalas, QuelThalas}, requirements={multiquest={86898, 86549}} },
         [56371330] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
         [55391857] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899} },
-        [56253207] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" }
+        [56253207] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" },
+        [56570580] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"]}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
