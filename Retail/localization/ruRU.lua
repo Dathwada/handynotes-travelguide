@@ -143,6 +143,8 @@ L["Portal to Icecrown Citadel (Pit of Saron)"] = "Портал в цитадел
 L["Portal to Dragon Isles (Algeth'ar Academy)"] = "Портал на Драконьи острова (Академия Алгет'ар)"
 L["Portal to Eredath (Seat of the Triumvirate)"] = "Портал в Эредат (Престол Триумвирата)"
 L["Portal to Magisters' Terrace"] = "Портал на террасу Магистров"
+L["Portal to the Coiled Isle"] = "Портал на Спиральный остров"
+L["Portal to Astalor's Sanctum"] = "Портал в покои Асталора"
 
 -------------------------------------------------TWW------------------------------------------------
 

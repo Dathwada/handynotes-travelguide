@@ -216,7 +216,9 @@ DB.nodes = {
         [25853518] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
         [34346061] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
         [27463574] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 },
-        [29270891] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} }
+        [29270891] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} },
+        [29093856] = { icon="portal", label=L["Portal to the Coiled Isle"], note=QuelThalas, requirements={quest=96525, accquest=true} },
+        [75346345] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} }
         },
     [2395] = { -- Eversong Woods
         [52502567] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
@@ -227,7 +229,8 @@ DB.nodes = {
         [49472361] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
         [48592080] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
         [62526248] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
-        [51242171] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 }
+        [51242171] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 },
+        [53902634] = { icon="portal", label=L["Portal to the Coiled Isle"], note=QuelThalas, requirements={quest=96525, accquest=true} }
         },
     [2393] = { -- Silvermoon
         [52176522] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
@@ -236,7 +239,8 @@ DB.nodes = {
         [35286619] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86549, accquest=true} },
         [42005831] = { icon="portal", label=L["Portal to The Timeways"], requirements={level=90} },
         [39044887] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
-        [47925194] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 }
+        [47925194] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 },
+        [56876746] = { icon="portal", label=L["Portal to the Coiled Isle"], note=QuelThalas, requirements={quest=96525, accquest=true} }
         },
     [2424] = { -- Isle of Quel'Danas
         [51915638] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 },
@@ -248,7 +252,8 @@ DB.nodes = {
     [2437] = { -- Zul'Aman
         [05181812] = { icon="portal", label=L["Harandar Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
         [09188084] = { icon="portal", label=L["Portal to Ghostlands"], note="Ghostlands" },
-        [23473448] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} }
+        [23473448] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
+        [94173938] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} }
         },
     [2413] = { -- Harandar
         [75885483] = { icon="portal", label=L["Eversong Rootway"], note=QuelThalas, requirements={quest=86899}, hideAfterQuest=86897 },
@@ -266,6 +271,9 @@ DB.nodes = {
         [45426376] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 },
         [45866442] = { icon="portal", label=L["Teleporter to Isle of Quel'Danas"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 }
         },
+    [2512] = { -- Coiled Isle
+        [58174847] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} }
+    },
 
 -----------------------------------------------------------------------------------------THE WAR WITHIN----------------------------------------------------------------------------------------
 
@@ -1321,7 +1329,9 @@ DB.nodes = {
         [59322209] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
         [56171266] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=IsleOfQuelDanas, requirements={quest=96233} },
         [56771287] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 },
-        [57440292] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} }
+        [57440292] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} },
+        [57371392] = { icon="portal", label=L["Portal to the Coiled Isle"], note=QuelThalas, requirements={quest=96525, accquest=true} },
+        [74532315] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} }
         },
     [84] = { -- Stormwind City
         [74481841] = { icon="portal", multilabel={L["Portal to Tol Barad"], L["Portal to Uldum"], L["Portal to Deepholm"], L["Portal to Vashj'ir"], L["Portal to Hyjal"], L["Portal to Twilight Highlands"]}, multinote={EasternKingdoms, Kalimdor, Maelstrom, EasternKingdoms, Kalimdor, EasternKingdoms}, requirements={multiquest={[4]=14482}, multilevel={1, 30, 30, 30, 30, 30}}, faction="Alliance" },
