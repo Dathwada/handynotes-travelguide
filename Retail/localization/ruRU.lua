@@ -145,6 +145,9 @@ L["Portal to Eredath (Seat of the Triumvirate)"] = "Портал в Эредат
 L["Portal to Magisters' Terrace"] = "Портал на террасу Магистров"
 L["Portal to the Coiled Isle"] = "Портал на Спиральный остров"
 L["Portal to Astalor's Sanctum"] = "Портал в покои Асталора"
+L["Portal to Mount Mugamba (Kings' Rest)"] = "Портал на гору Мугамба (Покой Королей)"
+L["Portal to Flashfrost Assault (Ruby Life Pools)"] = "Портал в Натиск Морозной Вспышки (Рубиновые Омуты Жизни)"
+L["Portal to Vol'dun (Temple of Sethraliss)"] = "Портал в Вол'дун (Храм Сетралисс)"
 
 -------------------------------------------------TWW------------------------------------------------
 

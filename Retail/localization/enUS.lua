@@ -142,6 +142,9 @@ L["Portal to Eredath (Seat of the Triumvirate)"] = true
 L["Portal to Magisters' Terrace"] = true
 L["Portal to the Coiled Isle"] = true
 L["Portal to Astalor's Sanctum"] = true
+L["Portal to Mount Mugamba (Kings' Rest)"] = true
+L["Portal to Flashfrost Assault (Ruby Life Pools)"] = true
+L["Portal to Vol'dun (Temple of Sethraliss)"] = true
 
 -------------------------------------------------TWW------------------------------------------------
 

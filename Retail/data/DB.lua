@@ -42,6 +42,7 @@ local Tazavesh = GetMapNames(2371, 2472)
 
 local Thaldraszus = GetMapNames(1978, 2025)
 local WakingShores = GetMapNames(2022)
+local WakingShoresLong = GetMapNames(1978, 2022)
 local EmeraldDream = GetMapNames(2200)
 local DragonIsle = GetMapNames(1978)
 local Amirdrassil = GetMapNames(1978, 2239)
@@ -66,6 +67,7 @@ local Korthia = GetMapNames(1543, 1961)
 
 local Zandalar = GetMapNames(875)
 local Zuldazar = GetMapNames(875, 862)
+local Voldun = GetMapNames(875, 864)
 
 local KulTiras = GetMapNames(876)
 local TiragardeSound = GetMapNames(876, 895)
@@ -338,12 +340,12 @@ DB.nodes = {
         [95393090] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} }
         },
     [2266] = { -- Millenia's Threshold
-        [43584988] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew },
-        [64534374] = { icon="portal", label=L["Portal to Spires of Arak (Skyreach)"], note=Draenor },
-        [74424709] = { icon="portal", label=L["Portal to Icecrown Citadel (Pit of Saron)"], note=Icecrown },
-        -- [77356173] = { icon="portal", label=, note= },
-        [70457272] = { icon="portal", label=L["Portal to Dragon Isles (Algeth'ar Academy)"], note=Thaldraszus },
-        [60576931] = { icon="portal", label=L["Portal to Eredath (Seat of the Triumvirate)"], note=Argus }
+        [38914828] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew },
+        -- [64534374] = { icon="portal", label=L[""], note= },
+        [74424709] = { icon="portal", label=L["Portal to Mount Mugamba (Kings' Rest)"], note=Zuldazar },
+        [77356173] = { icon="portal", label=L["Portal to Flashfrost Assault (Ruby Life Pools)"], note=WakingShoresLong },
+        [70457272] = { icon="portal", label=L["Portal to Vol'dun (Temple of Sethraliss)"], note=Voldun },
+        -- [60576931] = { icon="portal", label=L[""], note= }
         },
     [2369] = { -- Siren Isle
         [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true, level=80} },

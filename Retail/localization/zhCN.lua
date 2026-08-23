@@ -144,6 +144,9 @@ L["Portal to Eredath (Seat of the Triumvirate)"] = "通往艾瑞达斯（执政�
 L["Portal to Magisters' Terrace"] = "通往魔导师平台的传送门"
 -- L["Portal to the Coiled Isle"] = ""
 -- L["Portal to Astalor's Sanctum"] = ""
+L["Portal to Mount Mugamba (Kings' Rest)"] = "通往穆贾巴山的传送门（诸王之眠）"
+L["Portal to Flashfrost Assault (Ruby Life Pools)"] = "通往闪霜战地的传送门（红玉新生法池）"
+L["Portal to Vol'dun (Temple of Sethraliss)"] = "通往沃顿的传送门（塞塔里斯神庙）"
 
 -------------------------------------------------TWW------------------------------------------------
 
