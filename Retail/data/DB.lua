@@ -231,7 +231,8 @@ DB.nodes = {
         [27463574] = { icon="portal", label=L["Portal to Magisters' Terrace"], note=Lycaneum, requirements={quest=96233}, hideAfterQuest=96444 },
         [29270891] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} },
         [29093856] = { icon="portal", label=L["Portal to the Coiled Isle"], note=QuelThalas, requirements={quest=96525, accquest=true} },
-        [75346345] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} }
+        [75346345] = { icon="portal", label=L["Portal to Astalor's Sanctum"], note=SilvermoonCity, requirements={quest=96525, accquest=true} },
+        [27051421] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=90867} }
         },
     [2395] = { -- Eversong Woods
         [52502567] = { icon="portal", label=L["Portal to Orgrimmar"], note=Durotar, faction="Horde" },
@@ -257,7 +258,8 @@ DB.nodes = {
         },
     [2424] = { -- Isle of Quel'Danas
         [51915638] = { icon="portal", label=L["Portal to Voidstorm"], note=QuelThalas, requirements={quest=86522}, hideAfterQuest=88709 },
-        [63341896] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} }
+        [63341896] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} },
+        [52584453] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=90867} }
         },
     [2649] = { -- The Lycaneum
         [55851167] = { icon="portal", label=L["Portal to Silvermoon City"], note=QuelThalas, requirements={quest=96233} }
