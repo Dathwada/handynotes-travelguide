@@ -204,6 +204,17 @@ DB.nodes = {
         },
     },
 ]]
+-----------------------------------------------------------------------------------------SEASON PORTALS----------------------------------------------------------------------------------------
+
+    [2266] = { -- Millenia's Threshold
+        [38914828] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew },
+        -- [64534374] = { icon="portal", label=L[""], note= },
+        [74424709] = { icon="portal", label=L["Portal to Mount Mugamba (Kings' Rest)"], note=Zuldazar },
+        [77356173] = { icon="portal", label=L["Portal to Flashfrost Assault (Ruby Life Pools)"], note=WakingShoresLong },
+        [70457272] = { icon="portal", label=L["Portal to Vol'dun (Temple of Sethraliss)"], note=Voldun },
+        -- [60576931] = { icon="portal", label=L[""], note= }
+        },
+
 --------------------------------------------------------------------------------------------MIDNIGHT-------------------------------------------------------------------------------------------
 
     [2537] = { -- Quel'Thalas
@@ -338,14 +349,6 @@ DB.nodes = {
     [2255] = { -- Azj-Kahet
         [57494159] = { icon="portal", label=L["Portal to Dornogal"], note=IsleOfDorn, requirements={quest=78248, accquest=true} },
         [95393090] = { icon="elevator", label=L["Elevator to Isle of Dorn"], note=KhazAlgar, requirements={quest=84220} }
-        },
-    [2266] = { -- Millenia's Threshold
-        [38914828] = { icon="portal", label=L["Portal to Silvermoon City"], note=EversongWoodsNew },
-        -- [64534374] = { icon="portal", label=L[""], note= },
-        [74424709] = { icon="portal", label=L["Portal to Mount Mugamba (Kings' Rest)"], note=Zuldazar },
-        [77356173] = { icon="portal", label=L["Portal to Flashfrost Assault (Ruby Life Pools)"], note=WakingShoresLong },
-        [70457272] = { icon="portal", label=L["Portal to Vol'dun (Temple of Sethraliss)"], note=Voldun },
-        -- [60576931] = { icon="portal", label=L[""], note= }
         },
     [2369] = { -- Siren Isle
         [70695347] = { icon="zeppelin", label=L["Zeppelin to Dornogal"], note=IsleOfDorn, requirements={quest=84720, accquest=true, level=80} },
