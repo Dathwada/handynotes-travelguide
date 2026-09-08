@@ -1,5 +1,6 @@
 ## Interface: 50504
 ## Title: HandyNotes: TravelGuide
+## Title-ruRU: HandyNotes: Путеводитель по приключениям (Пандария)
 ## Notes: Displays the portal, zeppelin and boat locations on the world map and minimap.
 ## Notes-deDE: Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Weltkarte und Minimap an.
 ## Notes-esES: Mostrar las ubicaciones de los portales, zepelines y barcos en el mapa del mundo y el minimapa.

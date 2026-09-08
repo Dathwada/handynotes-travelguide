@@ -1,6 +1,6 @@
-## Interface: 120007
+## Interface: 120100, 120105
 ## Title: HandyNotes: TravelGuide
-## Title-ruRU: HandyNotes: Путеводитель
+## Title-ruRU: HandyNotes: Путеводитель по приключениям
 ## Title-zhCN: HandyNotes: 游览指南
 ## Notes: Displays the portal, zeppelin and boat locations on the world map and minimap.
 ## Notes-deDE: Zeigt die Positionen von Portalen, Zeppelinen und Schiffen auf der Weltkarte und Minimap an.
