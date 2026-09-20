@@ -1,5 +1,6 @@
-## Interface: 11508
+## Interface: 11509
 ## Title: HandyNotes: TravelGuide (Classic)
+## Title-ruRU: HandyNotes: Путеводитель по приключениям (Классический)
 ## Notes: Shows the boat and zeppelin locations on the World Map and the MiniMap.
 ## Notes-deDE: Zeigt die Positionen von Schiffen und Zeppelinen auf der Weltkarte und Minimap an.
 ## Notes-frFR: Affiche les emplacements des bateaux et des zepplin sur la carte du monde et la mini-carte.
