@@ -1,5 +1,15 @@
 ## Revision History:
 
+#### v2.26.0 (September 20, 2026)
+-------------------------------
+* Added Portal to the Coiled Isle (Prey)
+* Added Midnight Season 2 portals
+* Added Portal to Magisters' Terrace [[Issue#94]](https://github.com/Dathwada/handynotes-travelguide/issues/94)
+* Added Portal to Silvermoon City (Sunwell) [[Issue#95]](https://github.com/Dathwada/handynotes-travelguide/issues/95)
+* Updated the .toc files and locales.xml [[PR#96]](https://github.com/Dathwada/handynotes-travelguide/pull/96)
+* Updated zhCN [[PR#92]](https://github.com/Dathwada/handynotes-travelguide/pull/92)
+* Bump .toc to 120100
+
 #### v2.25.2 (March 25, 2026)
 -------------------------------
 * Added Midnight Season 1 portals
